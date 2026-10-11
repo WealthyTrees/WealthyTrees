@@ -2,7 +2,7 @@
 import json, os, re, sys, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
-OUT = "wealthytrees/data/brief.json"
+OUT =  "data/brief.json"
 MODEL = "claude-haiku-5-5"
 UA = {"User-Agent": "Mozilla/5.0 (WealthyTrees daily brief bot)"}
 FEEDS = {
