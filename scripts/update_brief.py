@@ -41,13 +41,13 @@ def headlines():
                     t = re.sub(r"\s+-\s+[^-]+$", "", t)
                     d = ""
                 else:
-                    d = re.sub(r"<[^>]+>", "", it.findtext("description") or "").strip()[:300]
+                    d = re.sub(r"<[^>]+>", "", it.findtext("description") or "").strip()[:200]
                 key = t.lower()[:60]
                 if t and l and key not in seen:
                     seen.add(key)
                     items.append({"source": src, "title": t, "desc": d, "url": l})
                     count += 1
-                if count >= 10:
+                if count >= 8:
                     break
             print(f"feed ok: {name}: {count} items")
         except Exception as e:
@@ -92,25 +92,27 @@ def ask_llm(prompt):
             data=json.dumps({"contents": [{"parts": [{"text": prompt}]}],
                              "generationConfig": {"responseMimeType": "application/json"}}).encode(),
             headers={"x-goog-api-key": gkey, "content-type": "application/json"})
-        return json.loads(urllib.request.urlopen(req, timeout=120).read())["candidates"][0]["content"]["parts"][0]["text"]
+        return json.loads(urllib.request.urlopen(req, timeout=180).read())["candidates"][0]["content"]["parts"][0]["text"]
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", method="POST",
         data=json.dumps({"model": MODEL, "max_tokens": 2500,
                          "messages": [{"role": "user", "content": prompt}]}).encode(),
         headers={"x-api-key": os.environ.get("ANTHROPIC_API_KEY", ""), "anthropic-version": "2023-06-01",
                  "content-type": "application/json"})
-    return json.loads(urllib.request.urlopen(req, timeout=120).read())["content"][0]["text"]
+    return json.loads(urllib.request.urlopen(req, timeout=180).read())["content"][0]["text"]
 
 def summarize(items):
     body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
     text = None
-    for attempt in range(5):  # retry when the AI service is briefly busy (429/500/503)
+    for attempt in range(5):  # retry on timeouts and busy-service errors
         try:
             text = ask_llm(PROMPT + body)
             break
-        except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 502, 503, 504) and attempt < 4:
+        except Exception as e:
+            code = getattr(e, "code", None)
+            retryable = code in (429, 500, 502, 503, 504) or (code is None and isinstance(e, OSError))
+            if retryable and attempt < 4:
                 wait = 30 * (attempt + 1)
-                print(f"AI service busy ({e.code}); retrying in {wait}s...", file=sys.stderr)
+                print(f"AI call failed ({code or type(e).__name__}); retrying in {wait}s...", file=sys.stderr)
                 time.sleep(wait)
             else:
                 raise
