@@ -1,0 +1,25 @@
+name: Daily brief
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 7:00 AM IST
+  workflow_dispatch:        # lets you run it by hand
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build brief
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/update_brief.py
+      - name: Commit changes
+        run: |
+          git config user.name "wealthytrees-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add wealthytrees/data/brief.json
+          git diff --cached --quiet || (git commit -m "Daily brief" && git push)
