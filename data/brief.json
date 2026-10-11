@@ -1,5 +1,5 @@
 {
- "date": "Sunday, 11 October 2026",
+ "date": "Monday, 12 October 2026, 12:16 AM IST",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -25,56 +25,95 @@
    "name": "USD/INR",
    "value": "96.78",
    "change": 0.47
+  },
+  {
+   "name": "S&P 500",
+   "value": "7,812",
+   "change": 1.15
+  },
+  {
+   "name": "NASDAQ",
+   "value": "27,366",
+   "change": 0.64
+  },
+  {
+   "name": "DOW",
+   "value": "51,655",
+   "change": 0.93
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Foreign Portfolio Investors Withdraw Substantial Capital from Domestic Equities",
-   "summary": "Overseas funds pulled over forty-five thousand crore rupees from domestic shares during the opening six sessions of the month. Rising American sovereign bond yields and elevated energy costs fueled this sustained withdrawal.",
-   "why": "Tracking foreign institutional activity helps beginners understand cross-border capital flows and global drivers affecting domestic share valuations.",
+   "title": "Benchmark Indices Break Multi-Week Slump Boosted by Technology Shares",
+   "summary": "The Nifty and Sensex closed higher after eight straight weeks of declines, lifted by gains in software companies and lower crude costs. The rebound expanded the overall valuation of BSE-listed firms by more than four lakh crore rupees.",
+   "why": "Prolonged market drops ending with broad single-day gains show how shifting energy costs and sector leadership can alter benchmark trajectories.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-monday/articleshow/134869422.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Overseas Funds Pull Significant Capital from Domestic Equities in October",
+   "summary": "Foreign institutional investors withdrew more than ₹45,125 crore from domestic shares over the first six sessions of October. Elevated American debt yields alongside high crude prices continue to trigger global capital outflows from the local market.",
+   "why": "Foreign institutional flows are a critical driver of market liquidity and can significantly affect domestic stock valuations.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/fii-selloff-intensifies-foreign-investors-sell-indian-equities-worth-rs-45000-crore-in-just-6-sessions-what-can-reverse-the-trend/articleshow/134866745.cms"
   },
   {
    "category": "Equity",
-   "title": "Electric Vehicle Manufacturer Finalizes One Thousand Crore Rupee Capital Raise",
-   "summary": "Ola Electric scheduled a rights offering to raise fresh capital by issuing additional shares at twenty-seven rupees each. Current equity holders on the mid-October eligibility cut-off date receive entitlements based on their holdings.",
-   "why": "Rights issues provide an avenue for listed firms to raise capital directly from existing owners without diluting them externally.",
+   "title": "Ola Electric Approves Fresh Fundraise via Rights Offering",
+   "summary": "The electric two-wheeler maker approved a capital raise of up to ₹1,000 crore through an issuance to current investors. Eligible stakeholders holding shares on the specified record date will be offered two rights shares for every qualifying share held.",
+   "why": "A rights offering gives current shareholders the privilege to purchase newly issued shares directly from the company to maintain their ownership percentage.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/ola-electric-rs-1k-cr-rights-issue-check-dates-per-share-price-face-value-premium-record-date-ratio-details-11791723054877.html"
   },
   {
+   "category": "Commodity",
+   "title": "Precious Metals Stabilize Following Easing Dollar and Softer Local Currency",
+   "summary": "Bullion prices rebounded toward the close of the week as the American dollar and Treasury yields softened. A depreciating rupee also offered domestic pricing support for gold and silver contracts.",
+   "why": "Because precious metals trade globally in dollars, currency exchange shifts can cushion or amplify local price movements for Indian buyers.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/should-investors-buy-or-sell-gold-and-silver-this-navratri-week-commodity-outlook-for-precious-metal-traders-11791717184316.html"
+  },
+  {
    "category": "Economy",
-   "title": "Central Bank Creates Dedicated Dollar Facility for State Oil Refiners",
-   "summary": "The Reserve Bank established a targeted exchange conduit providing foreign currency directly to three public fuel marketing enterprises. This mechanism fulfills their daily import requirements to preserve stability across local foreign exchange channels.",
-   "why": "Direct foreign exchange supply prevents high-volume fuel import transactions from triggering sharp fluctuations in the local currency.",
+   "title": "Reserve Bank Sets Up Dedicated Foreign Exchange Facility for Fuel Refiners",
+   "summary": "The monetary regulator opened a special window to supply the complete daily dollar requirements of three state-owned oil marketers. This measure helps fulfill the energy sector's foreign exchange needs directly under current trading conditions.",
+   "why": "Channeling dollar demand from major fuel importers away from the spot market helps central banks limit abrupt currency fluctuations.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63784"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Initiates Open Market Sale of Sovereign Securities",
-   "summary": "The monetary authority scheduled an open market operation auctioning government debt papers valued at twenty-five thousand crore rupees. This intervention was organized after evaluating evolving domestic cash conditions.",
-   "why": "Selling state securities enables the monetary authority to absorb excess money from the banking system to regulate financial liquidity.",
+   "title": "Reserve Bank Plans Open Market Bond Sales Worth ₹25,000 Crore",
+   "summary": "The central bank decided to auction ₹25,000 crore worth of government securities through open market operations. The auction is intended to manage and calibrate prevailing liquidity conditions across the banking system.",
+   "why": "Open market sales absorb excess cash from financial institutions, enabling the central bank to manage short-term borrowing rates.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63779"
   },
   {
-   "category": "Equity",
-   "title": "Major Domestic Benchmarks Halt Multi-Week Downturn via Tech Rally",
-   "summary": "The Nifty and Sensex completed their recent trading week higher, breaking an unbroken two-month succession of weekly declines. Buying support across software technology firms helped propel the wider market rebound.",
-   "why": "Broad index movements illustrate overarching market sentiment and indicate which industry groups are leading cyclical recoveries.",
-   "source": "Telangana Today",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcVBCQVAyU2tTZHNnYnhiQ1V6bmdsWm4tbkRHQlo1UmVwNE15VzJLWXctZkExMjI4MkNDQmU2dHVvRlV6enFvanJoVnRYclRUOE5MNjdJdC02R1VHN1JZOGplQ09OaE8yMTdyaWhZTWp1X0Fmdm1oNGVnaGtKdDJfdFdDNXVUWDg1UXl1NVVjNm1sMWVHS3R1RzNuRlBHdkhKVEd6eQ?oc=5"
+   "category": "US Markets",
+   "title": "Tech Enthusiasm Propels Wall Street Despite Elevated Sovereign Borrowing Rates",
+   "summary": "American equity benchmarks advanced as investor optimism surrounding artificial intelligence countered worries over climbing bond yields. Strength across technology firms helped lift the broader indices.",
+   "why": "Strong earnings and growth narratives in leading sectors can occasionally offset the downward valuation pressure caused by rising interest rates.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSVdLNXRUd1JHdk52SC1nZS1pb2REZHVBYVJjQl9uLUNwUTUydWw3NmYxa3p1ZXFzMWtQYW1tX0NoR29ZSGFGUFg2Mk5QNWg3ZTVzY1dXdFg0LS1IX2FNNDdKd3dHQzZqa3FoWU9UWVhnRzQySTdjWVFVZFdKZEJPYUV3LUZjeDRrNFVFemxJcndxbTZOek9WRjZ3?oc=5"
   },
   {
-   "category": "Commodity",
-   "title": "Precious Metals Trade Within Defined Bands Amid Currency Shifts",
-   "summary": "Gold and silver experienced contained price action as weakness in the home currency lent baseline support to domestic rates. Market watchers noted that overseas rate factors balanced local pricing momentum.",
-   "why": "Because bullion is priced globally in foreign currency, changes in foreign exchange rates directly alter domestic import parity prices.",
-   "source": "NDTV Profit",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnBMdXFYNlQyYTZtSE9ZMEZQUlU2X1ZXLW1QRi15bzhkb2FCaDJvOGJUS3QxY255b09EWjNDQlZkNXo3YWtRMjk2czhZT25PTEY5TFMwY1dzZWRaNV9qU0lveXVJRHZXMHBNMVMxVkk5SzdmQU5RcFpiOWc0TDRPOGUwRzFEZzY4N3hjbzdyWmZfWk94bVZzdG85b1VTWVhGUDNrR2FVbmJwdzVzN2VmdTJVUmZ2UnhjZlppT9IBxAFBVV95cUxQME5IdEJFanpfeE1QV1VuNWdRSVQ1cG1MZlZmQ0JUUGUwU0pFWWduQlh3RDBRNGRkbHVqQmpaN29ud25rQWtRVjVMX0htOW5xdThxMnlmQ0VNOVhlV3NMTzZYMXdsWVpNNUd1UnQyRlEwVEJHN0FCVlNqQVNETy14VEt1T25PLXMtcmRXNUxtUGZqUWJKekRSLVk1Y2ZBMDhGQllNSlhMdWtudVo1X2R4SDVkVEFad1JSSEpTcXdfYUZydnhF?oc=5"
+   "category": "US Markets",
+   "title": "Technology Sector Seen Driving Majority of US Corporate Profit Expansion",
+   "summary": "Projections indicate that artificial intelligence and broader technology firms will generate roughly two-thirds of S&P 500 earnings growth for the third quarter. This underlines the growing reliance of overall corporate profit figures on a specific pocket of firms.",
+   "why": "Heavy concentration of profits in one industry means headline index health may not necessarily reflect broader commercial conditions across all sectors.",
+   "source": "Yahoo Finance UK",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQclpHY3R5aFlRS2Y1bjlwMURtZGhyY2RraTBSWVdmbkFQRjVSUWxLTW9GSnBfNkMzbndfMDNLTUtYTkRDeHBia1JtMTNzaFIyVlFnVEpja0dMVmZyZDVMUWZnQmhSc1NuTXdtNGZOdThzMnYtNWMtQkNkSXRhNVJ1TVVyZ01CdkRj?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Upcoming Inflation Gauges and Bank Disclosures to Test US Trading",
+   "summary": "Market participants face an active week featuring September consumer price data, retail trade numbers, and financial sector earnings reports. These releases provide insight into household spending resilience and lender operating performance.",
+   "why": "Tracking major economic and banking updates helps investors evaluate consumer health and future central bank policy adjustments.",
+   "source": "Investopedia",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMWRaeHVmdURib2x4b01xUHRBcXNMalQ2UUpjQmRpWGxQaTlNS2hkdHRzamczeHdRaVBrcVlBbEF1VEJGcktsMmNEVnd6emtSN1F2YzYzaGl3MVVrRVNVVEF4S21LaE1qZVZSMHI0SDY5aXBTQ0Rra2pKM3V5YkkyVUlEck41RWd0NUdwYzRTUTBhVmtTaktCZC1COG51TjE5VmxkNmxDNFBnUWo1LV9kRXZkaEhoUi04LVVTOVBsbGRVXy12bW1scFlDanFQY1JzLVQtamFjOFNsQzhZSWQtTVo1MGY?oc=5"
   }
  ]
 }
