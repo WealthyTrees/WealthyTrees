@@ -91,3 +91,23 @@ nav a:active{background:rgba(15,138,95,.16)}
  .ticker{font-size:1rem}.btn{padding:1rem 1.4rem}
 }
 @media(prefers-reduced-motion:reduce){nav a::after,.btn,.btn::after,.cardlink::before,.item::before{transition:none}.logo:hover,.btn:hover{transform:none}}
+
+/* ===== v5: desktop pill nav + header Subscribe button ===== */
+@media(min-width:641px){
+ header .wrap{padding-top:1.15rem;padding-bottom:1.15rem}
+ .logo img{width:44px;height:44px}.logo span{font-size:1.65rem}
+ nav{gap:.6rem}
+ nav a{border:1.5px solid var(--line);border-radius:999px;background:var(--paper);padding:.75rem 1.55rem;font-size:1.05rem;transition:transform .18s,border-color .18s,color .18s,background .18s,box-shadow .18s}
+ nav a::after{display:none}
+ nav a[aria-current]{background:var(--ink);color:#fff;border-color:var(--ink)}
+}
+@media(min-width:641px) and (hover:hover){
+ nav a:hover{transform:translateY(-2px);border-color:var(--up);color:var(--up);background:var(--paper);box-shadow:0 6px 14px rgba(15,138,95,.18)}
+ nav a[aria-current]:hover{background:var(--ink);color:#fff}
+}
+nav a:active{transform:scale(.96)}
+nav a.navcta{position:relative;background:var(--up);color:#fff;border-color:var(--up);margin-left:.6rem}
+nav a.navcta::after{display:block;content:"";position:absolute;inset:-5px;height:auto;background:none;border:2px solid var(--up);border-radius:999px;opacity:0;transform:scale(.94);transition:opacity .2s,transform .2s}
+@media(hover:hover){nav a.navcta:hover{background:var(--up);color:#fff;box-shadow:0 8px 18px rgba(15,138,95,.3)}nav a.navcta:hover::after{opacity:1;transform:scale(1)}}
+nav a.navcta:active::after{opacity:1;transform:scale(1)}
+@media(max-width:640px){nav a.navcta{display:none}}
