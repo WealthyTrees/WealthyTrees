@@ -1,8 +1,8 @@
 """Daily WealthyTrees brief: fetch headlines + market numbers, summarize with Claude, write JSON."""
-import json, os, re, sys, urllib.request, urllib.error, xml.etree.ElementTree as ET
+import json, os, re, sys, time, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
-OUT =  "data/brief.json"
+OUT = "data/brief.json"
 MODEL = "claude-haiku-5-5"
 UA = {"User-Agent": "Mozilla/5.0 (WealthyTrees daily brief bot)"}
 FEEDS = {
@@ -81,7 +81,7 @@ Return ONLY a JSON array, no other text.
 HEADLINES:
 """
 
-GEMINI_MODEL = "gemini-3.8-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 
 def ask_llm(prompt):
     gkey = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -102,7 +102,18 @@ def ask_llm(prompt):
 
 def summarize(items):
     body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
-    text = ask_llm(PROMPT + body)
+    text = None
+    for attempt in range(5):  # retry when the AI service is briefly busy (429/500/503)
+        try:
+            text = ask_llm(PROMPT + body)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503, 504) and attempt < 4:
+                wait = 30 * (attempt + 1)
+                print(f"AI service busy ({e.code}); retrying in {wait}s...", file=sys.stderr)
+                time.sleep(wait)
+            else:
+                raise
     text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
     return json.loads(text)
 
