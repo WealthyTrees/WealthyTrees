@@ -1,3 +1,6 @@
-{"date":"Sample brief (replaced daily once automation is set up)","items":[
-{"category":"Equity","title":"Sample: Nifty 50 ends the day flat","summary":"This is placeholder text showing how a daily item will look.","why":"Each item will explain the cause and the concept behind it.","source":"Example","url":"https://www.nseindia.com"},
-{"category":"Commodity","title":"Sample: Gold holds steady","summary":"Another placeholder item for the commodities section.","why":"Gold often moves with the dollar and global interest rates.","source":"Example","url":"https://www.mcxindia.com"}]}
+{"date":"Sample data (replaced daily once automation is live)",
+"ticker":[{"name":"NIFTY 50","value":"24,850","change":0.42},{"name":"SENSEX","value":"81,300","change":0.38},{"name":"GOLD","value":"₹1,15,000","change":-0.21},{"name":"CRUDE","value":"$78.4","change":0.9},{"name":"USD/INR","value":"88.1","change":-0.05}],
+"items":[
+{"category":"Equity","title":"Sample: Nifty 50 edges higher","summary":"Placeholder text showing how a daily item will look.","why":"Each item explains the cause and the concept behind it.","source":"Example","url":"https://www.nseindia.com","spark":[10,12,11,14,13,16,18]},
+{"category":"Commodity","title":"Sample: Gold slips slightly","summary":"Another placeholder item for the commodities section.","why":"Gold often moves with the dollar and global interest rates.","source":"Example","url":"https://www.mcxindia.com","spark":[18,17,18,15,14,15,13]},
+{"category":"Economy","title":"Sample: RBI policy in focus","summary":"Placeholder item about the economy.","why":"Interest rate decisions affect loans, growth, and markets.","source":"Example","url":"https://www.rbi.org.in","spark":[5,6,6,7,7,8,9]}]}
