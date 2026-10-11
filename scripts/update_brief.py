@@ -1,5 +1,5 @@
 """Daily WealthyTrees brief: fetch headlines + market numbers, summarize with Claude, write JSON."""
-import json, os, re, sys, urllib.request, xml.etree.ElementTree as ET
+import json, os, re, sys, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
 OUT = "wealthytrees/data/brief.json"
@@ -81,14 +81,28 @@ Return ONLY a JSON array, no other text.
 HEADLINES:
 """
 
-def summarize(items):
-    body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
+GEMINI_MODEL = "gemini-2.5-flash"
+
+def ask_llm(prompt):
+    gkey = os.environ.get("GEMINI_API_KEY", "").strip()
+    if gkey:  # free option: Google Gemini
+        req = urllib.request.Request(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
+            method="POST",
+            data=json.dumps({"contents": [{"parts": [{"text": prompt}]}],
+                             "generationConfig": {"responseMimeType": "application/json"}}).encode(),
+            headers={"x-goog-api-key": gkey, "content-type": "application/json"})
+        return json.loads(urllib.request.urlopen(req, timeout=120).read())["candidates"][0]["content"]["parts"][0]["text"]
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", method="POST",
         data=json.dumps({"model": MODEL, "max_tokens": 2500,
-                         "messages": [{"role": "user", "content": PROMPT + body}]}).encode(),
-        headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01",
+                         "messages": [{"role": "user", "content": prompt}]}).encode(),
+        headers={"x-api-key": os.environ.get("ANTHROPIC_API_KEY", ""), "anthropic-version": "2023-06-01",
                  "content-type": "application/json"})
-    text = json.loads(urllib.request.urlopen(req, timeout=120).read())["content"][0]["text"]
+    return json.loads(urllib.request.urlopen(req, timeout=120).read())["content"][0]["text"]
+
+def summarize(items):
+    body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
+    text = ask_llm(PROMPT + body)
     text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
     return json.loads(text)
 
@@ -96,7 +110,11 @@ def main():
     items = headlines()
     if len(items) < 5:
         sys.exit("Too few headlines fetched; keeping the previous brief.")
-    picked = summarize(items)
+    print(f"Fetched {len(items)} headlines; asking Claude to summarize...")
+    try:
+        picked = summarize(items)
+    except urllib.error.HTTPError as e:
+        sys.exit(f"AI API error {e.code}: {e.read().decode()[:400]}")
     out = []
     for p in picked:
         n = int(p["n"])
