@@ -81,7 +81,7 @@ Return ONLY a JSON array, no other text.
 HEADLINES:
 """
 
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3.8-flash"
 
 def ask_llm(prompt):
     gkey = os.environ.get("GEMINI_API_KEY", "").strip()
