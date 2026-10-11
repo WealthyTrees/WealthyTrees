@@ -17,10 +17,13 @@ GOOGLE_FEEDS = {  # Google News search feeds: headline + publisher, work from se
     "gn2": GN + "Indian+stock+market+when:1d",
     "gn3": GN + "gold+silver+price+India+when:1d",
     "gn4": GN + "crude+oil+rupee+RBI+when:1d",
+    "gn5": GN + "Wall+Street+S%26P+500+Nasdaq+when:1d",
+    "gn6": GN + "Federal+Reserve+US+economy+markets+when:1d",
 }
 SYMBOLS = [("NIFTY 50", "^NSEI", "{:,.0f}"), ("SENSEX", "^BSESN", "{:,.0f}"),
            ("GOLD $/oz", "GC=F", "{:,.0f}"), ("CRUDE WTI", "CL=F", "${:,.1f}"),
-           ("USD/INR", "USDINR=X", "{:.2f}")]
+           ("USD/INR", "USDINR=X", "{:.2f}"),
+           ("S&P 500", "^GSPC", "{:,.0f}"), ("NASDAQ", "^IXIC", "{:,.0f}"), ("DOW", "^DJI", "{:,.0f}")]
 
 def get(url):
     return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25).read()
@@ -73,8 +76,8 @@ def ticker():
     return out
 
 PROMPT = """You write the daily brief for WealthyTrees, an educational site on Indian markets for students and new investors.
-From the numbered headlines below, pick the 6 to 8 most important for Indian equity, commodity or economy news. Use different sources where possible.
-For each, return JSON with: "n" (the headline number), "category" (Equity, Commodity or Economy), "title" (your own short rewrite, max 12 words), "summary" (1-2 plain-English sentences in your own words), "why" (one sentence on why it matters or the concept behind it).
+From the numbered headlines below, pick the 8 to 10 most important for Indian equity, commodity, economy and US market news. Include at least 2 US items when available. Use different sources where possible.
+For each, return JSON with: "n" (the headline number), "category" (Equity, Commodity, Economy or US Markets), "title" (your own short rewrite, max 12 words), "summary" (1-2 plain-English sentences in your own words), "why" (one sentence on why it matters or the concept behind it).
 Rules: never copy wording from the headlines or descriptions; no buy/sell advice, no tips, no price targets, no predictions; neutral tone; only state facts present in the input.
 Return ONLY a JSON array, no other text.
 
@@ -131,13 +134,13 @@ def main():
     out = []
     for p in picked:
         n = int(p["n"])
-        if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy"):
+        if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy", "US Markets"):
             out.append({"category": p["category"], "title": p["title"], "summary": p["summary"],
                         "why": p["why"], "source": items[n]["source"], "url": items[n]["url"]})
     if len(out) < 3:
         sys.exit("Too few valid items; keeping the previous brief.")
     ist = datetime.now(timezone(timedelta(hours=5, minutes=30)))
-    data = {"date": ist.strftime("%A, %d %B %Y"), "ticker": ticker() or old_ticker(), "items": out}
+    data = {"date": ist.strftime("%A, %d %B %Y, %I:%M %p") + " IST", "ticker": ticker() or old_ticker(), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     print(f"Wrote {len(out)} items, {len(data['ticker'])} ticker entries.")
