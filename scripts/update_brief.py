@@ -11,6 +11,13 @@ FEEDS = {
     "Business Standard": "https://www.business-standard.com/rss/markets-106.rss",
     "RBI": "https://www.rbi.org.in/pressreleases_rss.xml",
 }
+GN = "https://news.google.com/rss/search?hl=en-IN&gl=IN&ceid=IN:en&q="
+GOOGLE_FEEDS = {  # Google News search feeds: headline + publisher, work from servers
+    "gn1": GN + "Sensex+Nifty+when:1d",
+    "gn2": GN + "Indian+stock+market+when:1d",
+    "gn3": GN + "gold+silver+price+India+when:1d",
+    "gn4": GN + "crude+oil+rupee+RBI+when:1d",
+}
 SYMBOLS = [("NIFTY 50", "^NSEI", "{:,.0f}"), ("SENSEX", "^BSESN", "{:,.0f}"),
            ("GOLD $/oz", "GC=F", "{:,.0f}"), ("CRUDE WTI", "CL=F", "${:,.1f}"),
            ("USD/INR", "USDINR=X", "{:.2f}")]
@@ -19,21 +26,39 @@ def get(url):
     return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25).read()
 
 def headlines():
-    items = []
-    for name, url in FEEDS.items():
+    items, seen = [], set()
+    allfeeds = [(n, u, False) for n, u in FEEDS.items()] + [(n, u, True) for n, u in GOOGLE_FEEDS.items()]
+    for name, url, google in allfeeds:
+        count = 0
         try:
             root = ET.fromstring(get(url))
             for it in root.iter("item"):
                 t = (it.findtext("title") or "").strip()
-                d = re.sub(r"<[^>]+>", "", it.findtext("description") or "").strip()[:300]
                 l = (it.findtext("link") or "").strip()
-                if t and l:
-                    items.append({"source": name, "title": t, "desc": d, "url": l})
-                if sum(1 for x in items if x["source"] == name) >= 12:
+                src = name
+                if google:
+                    src = (it.findtext("source") or "Google News").strip()
+                    t = re.sub(r"\s+-\s+[^-]+$", "", t)
+                    d = ""
+                else:
+                    d = re.sub(r"<[^>]+>", "", it.findtext("description") or "").strip()[:300]
+                key = t.lower()[:60]
+                if t and l and key not in seen:
+                    seen.add(key)
+                    items.append({"source": src, "title": t, "desc": d, "url": l})
+                    count += 1
+                if count >= 10:
                     break
+            print(f"feed ok: {name}: {count} items")
         except Exception as e:
             print(f"feed failed: {name}: {e}", file=sys.stderr)
     return items
+
+def old_ticker():
+    try:
+        return json.load(open(OUT, encoding="utf-8")).get("ticker", [])
+    except Exception:
+        return []
 
 def ticker():
     out = []
@@ -81,7 +106,7 @@ def main():
     if len(out) < 3:
         sys.exit("Too few valid items; keeping the previous brief.")
     ist = datetime.now(timezone(timedelta(hours=5, minutes=30)))
-    data = {"date": ist.strftime("%A, %d %B %Y"), "ticker": ticker() or [], "items": out}
+    data = {"date": ist.strftime("%A, %d %B %Y"), "ticker": ticker() or old_ticker(), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     print(f"Wrote {len(out)} items, {len(data['ticker'])} ticker entries.")
