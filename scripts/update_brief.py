@@ -1,0 +1,90 @@
+"""Daily WealthyTrees brief: fetch headlines + market numbers, summarize with Claude, write JSON."""
+import json, os, re, sys, urllib.request, xml.etree.ElementTree as ET
+from datetime import datetime, timezone, timedelta
+
+OUT = "wealthytrees/data/brief.json"
+MODEL = "claude-haiku-5-5"
+UA = {"User-Agent": "Mozilla/5.0 (WealthyTrees daily brief bot)"}
+FEEDS = {
+    "Economic Times": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms",
+    "Mint": "https://www.livemint.com/rss/markets",
+    "Business Standard": "https://www.business-standard.com/rss/markets-106.rss",
+    "RBI": "https://www.rbi.org.in/pressreleases_rss.xml",
+}
+SYMBOLS = [("NIFTY 50", "^NSEI", "{:,.0f}"), ("SENSEX", "^BSESN", "{:,.0f}"),
+           ("GOLD $/oz", "GC=F", "{:,.0f}"), ("CRUDE WTI", "CL=F", "${:,.1f}"),
+           ("USD/INR", "USDINR=X", "{:.2f}")]
+
+def get(url):
+    return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25).read()
+
+def headlines():
+    items = []
+    for name, url in FEEDS.items():
+        try:
+            root = ET.fromstring(get(url))
+            for it in root.iter("item"):
+                t = (it.findtext("title") or "").strip()
+                d = re.sub(r"<[^>]+>", "", it.findtext("description") or "").strip()[:300]
+                l = (it.findtext("link") or "").strip()
+                if t and l:
+                    items.append({"source": name, "title": t, "desc": d, "url": l})
+                if sum(1 for x in items if x["source"] == name) >= 12:
+                    break
+        except Exception as e:
+            print(f"feed failed: {name}: {e}", file=sys.stderr)
+    return items
+
+def ticker():
+    out = []
+    for name, sym, fmt in SYMBOLS:
+        try:
+            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=5d&interval=1d"
+            m = json.loads(get(u))["chart"]["result"][0]["meta"]
+            p, prev = m["regularMarketPrice"], m["chartPreviousClose"]
+            out.append({"name": name, "value": fmt.format(p), "change": round((p - prev) / prev * 100, 2)})
+        except Exception as e:
+            print(f"quote failed: {name}: {e}", file=sys.stderr)
+    return out
+
+PROMPT = """You write the daily brief for WealthyTrees, an educational site on Indian markets for students and new investors.
+From the numbered headlines below, pick the 6 to 8 most important for Indian equity, commodity or economy news. Use different sources where possible.
+For each, return JSON with: "n" (the headline number), "category" (Equity, Commodity or Economy), "title" (your own short rewrite, max 12 words), "summary" (1-2 plain-English sentences in your own words), "why" (one sentence on why it matters or the concept behind it).
+Rules: never copy wording from the headlines or descriptions; no buy/sell advice, no tips, no price targets, no predictions; neutral tone; only state facts present in the input.
+Return ONLY a JSON array, no other text.
+
+HEADLINES:
+"""
+
+def summarize(items):
+    body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
+    req = urllib.request.Request("https://api.anthropic.com/v1/messages", method="POST",
+        data=json.dumps({"model": MODEL, "max_tokens": 2500,
+                         "messages": [{"role": "user", "content": PROMPT + body}]}).encode(),
+        headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01",
+                 "content-type": "application/json"})
+    text = json.loads(urllib.request.urlopen(req, timeout=120).read())["content"][0]["text"]
+    text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
+    return json.loads(text)
+
+def main():
+    items = headlines()
+    if len(items) < 5:
+        sys.exit("Too few headlines fetched; keeping the previous brief.")
+    picked = summarize(items)
+    out = []
+    for p in picked:
+        n = int(p["n"])
+        if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy"):
+            out.append({"category": p["category"], "title": p["title"], "summary": p["summary"],
+                        "why": p["why"], "source": items[n]["source"], "url": items[n]["url"]})
+    if len(out) < 3:
+        sys.exit("Too few valid items; keeping the previous brief.")
+    ist = datetime.now(timezone(timedelta(hours=5, minutes=30)))
+    data = {"date": ist.strftime("%A, %d %B %Y"), "ticker": ticker() or [], "items": out}
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=1)
+    print(f"Wrote {len(out)} items, {len(data['ticker'])} ticker entries.")
+
+if __name__ == "__main__":
+    main()
