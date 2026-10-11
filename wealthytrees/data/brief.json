@@ -1,6 +1,80 @@
-{"date":"Sample data (replaced daily once automation is live)",
-"ticker":[{"name":"NIFTY 50","value":"24,850","change":0.42},{"name":"SENSEX","value":"81,300","change":0.38},{"name":"GOLD","value":"₹1,15,000","change":-0.21},{"name":"CRUDE","value":"$78.4","change":0.9},{"name":"USD/INR","value":"88.1","change":-0.05}],
-"items":[
-{"category":"Equity","title":"Sample: Nifty 50 edges higher","summary":"Placeholder text showing how a daily item will look.","why":"Each item explains the cause and the concept behind it.","source":"Example","url":"https://www.nseindia.com","spark":[10,12,11,14,13,16,18]},
-{"category":"Commodity","title":"Sample: Gold slips slightly","summary":"Another placeholder item for the commodities section.","why":"Gold often moves with the dollar and global interest rates.","source":"Example","url":"https://www.mcxindia.com","spark":[18,17,18,15,14,15,13]},
-{"category":"Economy","title":"Sample: RBI policy in focus","summary":"Placeholder item about the economy.","why":"Interest rate decisions affect loans, growth, and markets.","source":"Example","url":"https://www.rbi.org.in","spark":[5,6,6,7,7,8,9]}]}
+{
+ "date": "Sunday, 11 October 2026",
+ "ticker": [
+  {
+   "name": "NIFTY 50",
+   "value": "22,520",
+   "change": -0.16
+  },
+  {
+   "name": "SENSEX",
+   "value": "72,472",
+   "change": 0.12
+  },
+  {
+   "name": "GOLD $/oz",
+   "value": "4,216",
+   "change": 0.7
+  },
+  {
+   "name": "CRUDE WTI",
+   "value": "$91.8",
+   "change": 2.69
+  },
+  {
+   "name": "USD/INR",
+   "value": "96.78",
+   "change": 0.47
+  }
+ ],
+ "items": [
+  {
+   "category": "Equity",
+   "title": "Overseas Funds Pull Rs 45,000 Crore From Domestic Stocks in October",
+   "summary": "Overseas institutions pulled out over Rs 45,000 crore from domestic shares across the first six trading days of October. Elevated American debt yields and crude costs continued to spur this capital withdrawal.",
+   "why": "Foreign institutional activity strongly influences market liquidity and broader stock valuation trends in emerging economies.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fii-selloff-intensifies-foreign-investors-sell-indian-equities-worth-rs-45000-crore-in-just-6-sessions-what-can-reverse-the-trend/articleshow/134866745.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Reserve Bank Opens Dedicated Dollar Facility for State Oil Refiners",
+   "summary": "India's central bank established a direct currency window providing US dollars to three government-owned fuel retailers. The mechanism aims to satisfy the daily foreign exchange needs of these major importers under current market conditions.",
+   "why": "Supplying dollars directly to key fuel importers prevents heavy open-market purchases that can weaken the domestic currency.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63784"
+  },
+  {
+   "category": "Commodity",
+   "title": "Bullion Rebounds as American Yields Soften and Rupee Depreciates",
+   "summary": "Gold and silver prices rebounded late in the week following declines in the US dollar and Treasury yields. A weaker domestic currency provided additional support to Indian bullion rates amidst geopolitical risks.",
+   "why": "Domestic commodity prices reflect both overseas benchmark movements and fluctuations in the local currency exchange rate.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/should-investors-buy-or-sell-gold-and-silver-this-navratri-week-commodity-outlook-for-precious-metal-traders-11791717184316.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Over 120 Listed Companies Prepare to Unveil Second-Quarter Results",
+   "summary": "Around 129 firms, including key private lenders and software exporters, will post their quarterly financial performance this week. Market participants are reviewing these figures after benchmark indices halted an extended stretch of weekly drops.",
+   "why": "Quarterly earnings reports reveal corporate profitability and help investors evaluate underlying business fundamentals.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/earnings-tracker-hdfc-bank-hcl-tech-wipro-among-129-companies-set-to-report-q2-results-this-week/articleshow/134866148.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Ola Electric Approves Rs 1,000 Crore Capital Raise via Rights Offering",
+   "summary": "Electric two-wheeler maker Ola Electric cleared plans to raise up to Rs 1,000 crore by issuing new equity to existing shareholders. Current holders as of mid-October will receive the option to buy two new shares for every twenty-five owned.",
+   "why": "A rights issue allows a corporation to raise fresh capital directly from existing owners without diluting their relative ownership proportions.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/ola-electric-rs-1k-cr-rights-issue-check-dates-per-share-price-face-value-premium-record-date-ratio-details-11791723054877.html"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Announces Rs 25,000 Crore Government Bond Sale Auction",
+   "summary": "The Reserve Bank will conduct an open market sale of sovereign debt securities worth Rs 25,000 crore. The transaction uses a multiple price structure across several securities to manage prevailing system liquidity.",
+   "why": "Open market operations serve as a key monetary policy tool to calibrate cash balances in the banking framework.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63779"
+  }
+ ]
+}
