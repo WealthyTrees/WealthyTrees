@@ -3,33 +3,33 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,384",
-   "change": -1.72
+   "value": "22,381",
+   "change": -0.62
   },
   {
    "name": "SENSEX",
-   "value": "71,895",
-   "change": -1.6
+   "value": "71,971",
+   "change": -0.69
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,210",
-   "change": 1.66
+   "value": "4,209",
+   "change": -0.18
   },
   {
    "name": "CRUDE WTI",
-   "value": "$91.5",
-   "change": 3.61
+   "value": "$91.2",
+   "change": -0.65
   },
   {
    "name": "USD/INR",
-   "value": "95.78",
-   "change": -0.59
+   "value": "95.76",
+   "change": -1.05
   },
   {
    "name": "S&P 500",
    "value": "7,812",
-   "change": 1.15
+   "change": 0.59
   },
   {
    "name": "NASDAQ",
@@ -39,73 +39,73 @@
   {
    "name": "DOW",
    "value": "51,655",
-   "change": 0.93
+   "change": 0.83
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Tata Consultancy Services Posts Fifteen Percent Jump in Quarterly Earnings",
-   "summary": "The software exporter reported a 15% increase in its quarterly net profit, reaching 13,884 crore rupees. The company also approved an interim payout of 12 rupees per share for its stockholders.",
-   "why": "Quarterly results from benchmark IT firms help investors evaluate operational health and corporate earnings trends across the technology sector.",
+   "title": "Filing Reveals Reliance Owns Part of Jio Alongside Foreign Tech Giants",
+   "summary": "Regulatory filings show that Reliance Industries possesses a 66.43% stake in Jio Platforms. The remaining equity belongs to global tech firms such as Meta and Google, alongside private capital funds.",
+   "why": "Understanding corporate ownership structures helps investors evaluate who benefits when a major subsidiary enters public markets.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo-who-really-owns-jio-platforms-reliance-doesnt-own-100-meta-google-7-others-are-major-shareholders-drhp-data-11791786878913.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Tata Consultancy Services Posts Higher Quarterly Earnings and Announces Payout",
+   "summary": "The technology major recorded a 15% annual increase in consolidated net earnings to 13,884 crore rupees. The board also authorized an interim distribution of 12 rupees per share.",
+   "why": "Quarterly earnings and dividend announcements demonstrate corporate profitability and cash returns directly to shareholders.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/tcs-shares-after-6-rally-in-2-sessions-after-q2-results-what-are-technicals-indicating-for-the-it-major/articleshow/134884849.cms"
   },
   {
    "category": "Equity",
-   "title": "Bonfiglioli Transmissions Schedules Multicorporate Public Offering in Mid-October",
-   "summary": "The manufacturer is raising 2,534 crore rupees through a public share sale with prices fixed between 558 and 586 rupees per share. Anchor investors can place bids starting a day before the subscription window begins.",
-   "why": "Initial public offerings allow expanding enterprises to raise long-term capital directly from public market participants.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/bonfiglioli-transmissions-announces-rs-2534-cr-ipo-price-band-set-at-rs-558-586/sh/articleshow/134884813.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Indian Benchmark Indices Drop Over Foreign Institutional Divestment and Yields",
-   "summary": "Domestic stock benchmarks retreated as the Nifty slipped below 22,400 alongside declines across technology equities. Persistent selling by international funds and increasing sovereign debt yields reduced investor risk appetite.",
-   "why": "Substantial capital withdrawals by global institutional funds can rapidly impact domestic liquidity and equity valuations.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/why-is-market-falling-today-sensex-drops-over-500-points-nifty-below-22400-5-key-factors-driving-market-downturn/articleshow/134884020.cms"
+   "title": "Domestic Equities Surrender Opening Advances Under Sustained Overseas Selling",
+   "summary": "The benchmark Sensex and Nifty gave up initial upward momentum during the trading session. Ongoing divestment by foreign institutional investors contributed to the downward pressure.",
+   "why": "Overseas institutional flows significantly impact domestic market direction because global funds deploy large volumes of capital.",
+   "source": "ETV Bharat",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaDY5d3ZtcGlGNHh1d2RvTW92TnhFTTFleTlrUko0dGVDUjU2a20yZGk4NVB5em5nWFlhMzhmUjZYR2RObDJ2aW5odmJCb1JtRC1fV2VJQUdrNFFhWE12UWNYdFNrVUJYWHptTFlESkE2RDF6SXQyaVZQLU1MTWZobVhzQ3V6dmd5S3djT1FPNHNla21yUm84eWVzRy1UOVZsRlB4VUs1aU1EZ9IBrwFBVV95cUxPVUZtZXV0UnlKWmtwb20tcTc1VnVfaVhYdEtoTl9FMzRxdklmQl9SV2RMVF9lY29zVVIxamxNWkUxbDVHZVVLZGRwOVQzSEFhTC16eERlV1U2c1lNMDFNNFJ0V051TkdUeHFQZE9SbXdIeGpKcmJNUW1kRF9QbEh0RGwwakJoSWIwbVR6QTJCSWVSQ2Y4RllRckNsRlJXUkpIWlF2SEZtQUlPaTMzU0JZ?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Provides Direct Dollar Access for State Fuel Refiners",
-   "summary": "The central monetary authority established a specialized window to fulfill daily foreign currency requirements for state petroleum refiners. The facility was opened after central bank officials reviewed prevailing conditions in foreign exchange operations.",
-   "why": "Fulfilling foreign exchange requirements for essential fuel importers off-market protects the national currency from sharp intraday currency volatility.",
+   "title": "Central Bank Establishes Dedicated Dollar Facility for State Oil Refiners",
+   "summary": "The Reserve Bank of India set up a direct window to satisfy daily foreign currency requirements for three public petroleum marketing firms. This mechanism intends to handle market demand during prevailing conditions.",
+   "why": "Providing foreign exchange directly to large fuel importers prevents massive dollar purchases from straining the open currency market.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63784"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Strengthens Sharply Following Regulatory Steps to Curtail Outflows",
-   "summary": "The local currency appreciated by more than one percent at market open to trade at 95.73 per dollar. The sharp movement followed regulatory actions intended to suppress corporate dollar demand.",
-   "why": "Currency appreciation lowers the cost of imported goods while altering the foreign revenue value of export-focused domestic businesses.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQYmlTQWt1V3V0ZnVrREFRWFN4M1piZllydk1SbGpGRnZvaHJtZ2RLUWNabEdEMUJIaUsyUjQ1Ul9EMmtjTmpkRm52bTdtM1EtR1E2OFlTdndYekVhUTByZ1JKQ0hUV3dIS001MWV3WW9wTjFrSUdYcjM5bGp5MXV5WUdBeFRfVEphNWhScHVscWFydnNEYTZjS29FR3N4b0dWMXVPMGJiSXp1WFZPd0tnNC1KUndfTmU0dHlJUnR5TnRrTzFDeERmeF83WERjYzNyckZFeFhB0gHbAUFVX3lxTFBhWmN4QU1fNTktd2s4b0hXYmVTcGlDTnYyVG9xRm9KWV90cnY2eUVfQ1F2cmx4Zmc3ajBTZnhuSnBiRXI2Y0pWQ2lRbnFScmNVVlNFQVp2aHhORjVQUTd2b2xCYXRWbTZPdkVjb1RxUjVGOHZwQnNUUU9GMnRmNzFtRjUyWjM1R1lMUmFmLUVYTW4xVlpqR2YxRlpsZnFISVZucU5SM01PUzFYYTJVX1hVTFFGaDBhOUZvSnQyNXZ1SklRYWpYTEtFOGxEeXV1SEQwZFk4QTN5WnZiRQ?oc=5"
+   "title": "Indian Currency Rallies One Percent After Central Bank Market Actions",
+   "summary": "The rupee strengthened by one percent following regulatory changes by the monetary authority. Interventions included routing oil-related foreign exchange transactions away from standard channels and increasing hedging costs.",
+   "why": "A rising domestic currency lowers import expenses for developing economies but can reduce overseas revenue for exporters.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQN3Q4Z3VQUzhKYUZNaXdCaXk2YWRvbFA5dVRuYVc4ZGx0YWo1UzlaM2Q5SkxPQXRsR0ZJNFFZT0huXzhEa29iNEd0ajM5cXVoM0ZfaVJ1bjFfcTRqM3NRRGJtSXo2Q1hiZ0NQVk1oZmtkbVJZbFpZWFhobnBhendjaEVIMTBLOHJ1ZUtOcExpaHJwUWVQRVdRN3NuWi1QVDllbGo2Y2xZa2VTYWhWNDN3SEY3Mi1ZRWxxTFB0RnkybkxxMVFq?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metal Rates Ease Across Domestic Markets Before Major Festival",
-   "summary": "Trading prices for physical gold and silver experienced declines leading up to the Dussehra holiday. The softening rates provide updated price points for retail shoppers planning festive bullion acquisitions.",
-   "why": "Bullion trades both as an inflation hedge and as a high-demand consumer commodity during seasonal Indian festivities.",
-   "source": "Upstox",
-   "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPU1oxdExickYzZ3JRd2RDLUFDS3RndEtaY1dhYXFoWEVaQXJNRnA3b21xZ2k4c3VyTGcyZGRDV05jeW55TlRLUFlOSm5MQkc3YjJOMmxZYU1PV2F4N1ZNVDRERUY3X0ZFUTdpZDc2bXI2VFpvQUg4NUlFZkd6TlFodkhfSUxIQ0N0YVlDOFg0dzNlMVNYUklKSnVuWjNQMkdBM2VVQzM5bjJ2em9sNFotWUZ4ejM1WUNIV3NwVHBVdDd2SWpMTEZsbXdIdEl4RWhBMzRlRTJaNmNYZUw2RE5hM3lfdnJ3T0VJcFpWYmdkaEhPOUQxR2dDbHRfUldPZGNnVTRGVA?oc=5"
+   "title": "Precious Metals Decline on Domestic Exchanges Ahead of American Inflation Figures",
+   "summary": "Gold and silver futures declined on the MCX despite soft crude costs and an easing greenback. Market participants paused active trading while awaiting fresh economic releases from the United States.",
+   "why": "Bullion values are sensitive to global monetary policy because higher interest rates generally reduce the appeal of non-yielding commodities.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-prices-fall-rs-1450/10g-silver-down-rs-1400/kg-despite-a-soft-dollar-ahead-of-us-economic-data-time-to-sell/articleshow/134885210.cms"
   },
   {
    "category": "US Markets",
-   "title": "S&P Five Hundred Index Approaches Record High Prior to Economic Updates",
-   "summary": "The primary US equity index traded close to historic peak values while market participants prepared for corporate financial results and inflation reports. Traders monitored the upcoming data releases to assess overall business performance and price pressures.",
-   "why": "Performance in benchmark American indices often dictates broader sentiment and direction across international financial markets.",
+   "title": "American Benchmark Approaches Highs as Market Awaits Results and Macro Data",
+   "summary": "The S&P 500 hovered near historic peak levels while market participants monitored upcoming corporate earnings. Investors are also watching forthcoming inflation prints for indications on economic momentum.",
+   "why": "Broad index movements reflect collective sentiment regarding corporate profit strength and impending borrowing costs in the world's largest economy.",
    "source": "TradingView",
    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQUEZOaXZrbEtxWHhaQjBTRk1IZ0ljM3FuNkUxVW9rZjAwNzYwOW1ONzFJdi1qd2hxbjBSTkhpZXc4cEZkS0gwallFWDVGNnVvVldlWl9YVEJSM21rUWpJTmFRTV81VVh1cW9GLVZmaG1TYk1rTkVHZGdmaGl4YlZIN3NscGVTVTJBTzI0cGV0ZWJrdE1YenMydkhYLXkwdER5MFpJV3R4aVRLNGgwcGNYUGM5Vm5ER0p6VmVvSGdWanJ3MW5VazROM29wM3hTQQ?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Stocks Advance While Ten-Year Government Bond Yields Hit Highs",
-   "summary": "The broad American stock index registered a 1.2% weekly gain while the benchmark ten-year government bond rate reached an annual high. Fixed-income securities faced repricing as benchmark debt yields moved to fifty-two-week peaks.",
-   "why": "Treasury bond yields represent baseline borrowing rates, which directly impact equity discounting models and international capital flows.",
-   "source": "TradingKey",
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa1ZiS1M4WEhxcHJCbFdMbUI4YkF5aHRzelg3QnRYdmZ2SUVOTV9taGJQNTJWUE5OcXJjRTJvdmVyQUxfV1BpaHhhQXg1dUdha3ZUY2E2Ym15eC1aVHJuOWlUWERXUjBvNTdWbzBUdlJPa3lBX0xLbUxoazZ0aFpKV05ydFAwTUo5Zl8xS3l6ZmZEVTJGQXZKRWdZdG5mNHdHSmxfR21ab2NzTXlzVXA3M3hDZWtzVUppYmN1NDZKTFR5NlVNVmpCNUF2UE9jMm1uc2FMU0swR2lmU1E?oc=5"
+   "title": "Banking Earnings and Consumer Numbers Take Center Stage on Wall Street",
+   "summary": "US exchanges face an active period featuring financial sector quarterly performance reports, consumer price metrics, and retail sales statistics. These prints will offer a clearer snapshot of overall economic health.",
+   "why": "Consumer activity and financial firm results provide foundational signals about loan expansion, credit quality, and household spending.",
+   "source": "Investing.com India",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONFdfckhieE9jbVdmTFpkWkw2YzhYN0psa1Y1ZW9aS2RQU1VhQjB2WkpaYlczbTAta2FJY3RiMExCUzJVa3dNUTkwVDZSZFlDSl9QRWxpM3BzeldvVGE5UHZNUTg4YXdCLW5laG9nWjVlM0lkTHlKeGVuc1huUmhOM3hVZGFnVWhPWFc5U1p4dmhQXzc3WUNzaDhQQjM0MWVuemlaSFoyeUkwRDNXS2c?oc=5"
   }
  ]
 }
