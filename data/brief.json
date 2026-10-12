@@ -1,5 +1,5 @@
 {
- "date": "Monday, 12 October 2026, 12:16 AM IST",
+ "date": "Monday, 12 October 2026, 07:14 AM IST",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,216",
-   "change": 0.7
+   "value": "4,234",
+   "change": 1.11
   },
   {
    "name": "CRUDE WTI",
-   "value": "$91.8",
-   "change": 2.69
+   "value": "$90.3",
+   "change": 1.0
   },
   {
    "name": "USD/INR",
    "value": "96.78",
-   "change": 0.47
+   "change": 0.45
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Benchmark Indices Break Multi-Week Slump Boosted by Technology Shares",
-   "summary": "The Nifty and Sensex closed higher after eight straight weeks of declines, lifted by gains in software companies and lower crude costs. The rebound expanded the overall valuation of BSE-listed firms by more than four lakh crore rupees.",
-   "why": "Prolonged market drops ending with broad single-day gains show how shifting energy costs and sector leadership can alter benchmark trajectories.",
+   "title": "Active Week Ahead as Multiple Firms Seek Public Listings",
+   "summary": "Eight companies plan to raise upward of eleven thousand crore rupees this week, spanning six main listings and two smaller business offerings. Zetwork Manufacturing represents the largest planned issue with a five thousand crore rupee goal.",
+   "why": "Initial public offerings allow expanding corporations to secure equity funding from public and institutional financiers.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-monday/articleshow/134869422.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/ipo-rush-eight-issues-to-raise-over-rs-11000-crore-this-week/articleshow/134879783.cms"
   },
   {
    "category": "Equity",
-   "title": "Overseas Funds Pull Significant Capital from Domestic Equities in October",
-   "summary": "Foreign institutional investors withdrew more than ₹45,125 crore from domestic shares over the first six sessions of October. Elevated American debt yields alongside high crude prices continue to trigger global capital outflows from the local market.",
-   "why": "Foreign institutional flows are a critical driver of market liquidity and can significantly affect domestic stock valuations.",
+   "title": "Indian Equities Rebound as Favorable Overseas Trends Support Sentiments",
+   "summary": "Key domestic indexes finished higher following a wave of value purchasing alongside constructive international cues. The upward momentum reflected improving market mood across major benchmark constituents.",
+   "why": "Broad index recoveries indicate renewed participant confidence after periods of sustained selling pressure.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fii-selloff-intensifies-foreign-investors-sell-indian-equities-worth-rs-45000-crore-in-just-6-sessions-what-can-reverse-the-trend/articleshow/134866745.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Ola Electric Approves Fresh Fundraise via Rights Offering",
-   "summary": "The electric two-wheeler maker approved a capital raise of up to ₹1,000 crore through an issuance to current investors. Eligible stakeholders holding shares on the specified record date will be offered two rights shares for every qualifying share held.",
-   "why": "A rights offering gives current shareholders the privilege to purchase newly issued shares directly from the company to maintain their ownership percentage.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/ola-electric-rs-1k-cr-rights-issue-check-dates-per-share-price-face-value-premium-record-date-ratio-details-11791723054877.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Precious Metals Stabilize Following Easing Dollar and Softer Local Currency",
-   "summary": "Bullion prices rebounded toward the close of the week as the American dollar and Treasury yields softened. A depreciating rupee also offered domestic pricing support for gold and silver contracts.",
-   "why": "Because precious metals trade globally in dollars, currency exchange shifts can cushion or amplify local price movements for Indian buyers.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/should-investors-buy-or-sell-gold-and-silver-this-navratri-week-commodity-outlook-for-precious-metal-traders-11791717184316.html"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/stocks-in-news-banks-hcl-technologies-dmart-adani-green-energy-ptc-industries-and-anand-rathi-wealth/articleshow/134879753.cms"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Sets Up Dedicated Foreign Exchange Facility for Fuel Refiners",
-   "summary": "The monetary regulator opened a special window to supply the complete daily dollar requirements of three state-owned oil marketers. This measure helps fulfill the energy sector's foreign exchange needs directly under current trading conditions.",
-   "why": "Channeling dollar demand from major fuel importers away from the spot market helps central banks limit abrupt currency fluctuations.",
+   "title": "Central Bank Establishes Dedicated Dollar Facility for State Refiners",
+   "summary": "The monetary authority created an exclusive mechanism to fulfill daily foreign currency demands for three public sector fuel firms. This initiative seeks to handle ongoing market situations and stabilize foreign exchange transactions.",
+   "why": "Fuel imports generate substantial greenback demand, and routing transactions away from public exchanges reduces sharp domestic currency declines.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63784"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Plans Open Market Bond Sales Worth ₹25,000 Crore",
-   "summary": "The central bank decided to auction ₹25,000 crore worth of government securities through open market operations. The auction is intended to manage and calibrate prevailing liquidity conditions across the banking system.",
-   "why": "Open market sales absorb excess cash from financial institutions, enabling the central bank to manage short-term borrowing rates.",
+   "title": "Reserve Bank to Offload Sovereign Bonds in Liquidity Management Action",
+   "summary": "The banking regulator scheduled an open market auction to offload central debt papers totaling twenty-five thousand crore rupees. The intervention follows an evaluation of ongoing banking cash availability.",
+   "why": "Disposing of government debt papers absorbs surplus cash within commercial lenders to regulate broader money conditions.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63779"
   },
   {
+   "category": "Economy",
+   "title": "Global Asset Manager Anticipates Inflow of Foreign Capital to India",
+   "summary": "Amundi's chief investment officer stated that a prospective halt in American monetary tightening along with sound domestic expansion and debt statistics should attract offshore capital back to local shores.",
+   "why": "Offshore portfolio inflows supply vital capital that bolsters exchange rates and enhances liquidity in emerging equity exchanges.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/amundi-cio-vincent-mortier-fpi-inflows-india-ai-supercycle-11791705637970.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Global Petroleum Values Drop on Hopes of Easing Geopolitical Clashes",
+   "summary": "Worldwide petroleum prices edged downward due to optimism surrounding a potential truce regarding conflict zones that could improve available output.",
+   "why": "Crude pricing directly influences transportation expenses and overall retail goods inflation across net importing nations.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/oil-falls-on-hopes-russia-ukraine-energy-ceasefire-will-boost-supplies-11791766233476.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "American Grain Contracts Drop Following Expanded Crop Inventory Forecasts",
+   "summary": "Agricultural futures traded in Chicago retreated under the weight of seasonal collection activities and upgraded calculations for closing reserves.",
+   "why": "Bumper agricultural harvests and elevated stockpiles generally dampen global staple crop values, affecting food distribution costs.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/chicago-grains-fall-on-us-harvest-pressure-higher-end-stock-estimate-11791767512823.html"
+  },
+  {
    "category": "US Markets",
-   "title": "Tech Enthusiasm Propels Wall Street Despite Elevated Sovereign Borrowing Rates",
-   "summary": "American equity benchmarks advanced as investor optimism surrounding artificial intelligence countered worries over climbing bond yields. Strength across technology firms helped lift the broader indices.",
-   "why": "Strong earnings and growth narratives in leading sectors can occasionally offset the downward valuation pressure caused by rising interest rates.",
+   "title": "American Equities Advance as Technology Enthusiasm Outweighs Debt Yield Concerns",
+   "summary": "United States equities moved higher because rising enthusiasm surrounding machine intelligence developments countered worries regarding elevated fixed-income yields.",
+   "why": "Developments in major foreign equity hubs set overall risk tolerance levels across interconnected international financial centers.",
    "source": "WSJ",
    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSVdLNXRUd1JHdk52SC1nZS1pb2REZHVBYVJjQl9uLUNwUTUydWw3NmYxa3p1ZXFzMWtQYW1tX0NoR29ZSGFGUFg2Mk5QNWg3ZTVzY1dXdFg0LS1IX2FNNDdKd3dHQzZqa3FoWU9UWVhnRzQySTdjWVFVZFdKZEJPYUV3LUZjeDRrNFVFemxJcndxbTZOek9WRjZ3?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Technology Sector Seen Driving Majority of US Corporate Profit Expansion",
-   "summary": "Projections indicate that artificial intelligence and broader technology firms will generate roughly two-thirds of S&P 500 earnings growth for the third quarter. This underlines the growing reliance of overall corporate profit figures on a specific pocket of firms.",
-   "why": "Heavy concentration of profits in one industry means headline index health may not necessarily reflect broader commercial conditions across all sectors.",
-   "source": "Yahoo Finance UK",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQclpHY3R5aFlRS2Y1bjlwMURtZGhyY2RraTBSWVdmbkFQRjVSUWxLTW9GSnBfNkMzbndfMDNLTUtYTkRDeHBia1JtMTNzaFIyVlFnVEpja0dMVmZyZDVMUWZnQmhSc1NuTXdtNGZOdThzMnYtNWMtQkNkSXRhNVJ1TVVyZ01CdkRj?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Upcoming Inflation Gauges and Bank Disclosures to Test US Trading",
-   "summary": "Market participants face an active week featuring September consumer price data, retail trade numbers, and financial sector earnings reports. These releases provide insight into household spending resilience and lender operating performance.",
-   "why": "Tracking major economic and banking updates helps investors evaluate consumer health and future central bank policy adjustments.",
-   "source": "Investopedia",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMWRaeHVmdURib2x4b01xUHRBcXNMalQ2UUpjQmRpWGxQaTlNS2hkdHRzamczeHdRaVBrcVlBbEF1VEJGcktsMmNEVnd6emtSN1F2YzYzaGl3MVVrRVNVVEF4S21LaE1qZVZSMHI0SDY5aXBTQ0Rra2pKM3V5YkkyVUlEck41RWd0NUdwYzRTUTBhVmtTaktCZC1COG51TjE5VmxkNmxDNFBnUWo1LV9kRXZkaEhoUi04LVVTOVBsbGRVXy12bW1scFlDanFQY1JzLVQtamFjOFNsQzhZSWQtTVo1MGY?oc=5"
+   "title": "US Financial Institutions Prepare to Initiate Corporate Reporting Cycle",
+   "summary": "American exchanges experienced muted volumes amid a partial trading break as participants waited for leading national lenders to start releasing quarterly financial results.",
+   "why": "Early quarterly results from prominent financial firms provide clarity regarding commercial lending trends and consumer fiscal health.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-today-asian-shares-cautious-as-earnings-loom-oil-slips/articleshow/134880101.cms"
   }
  ]
 }
