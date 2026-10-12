@@ -7,12 +7,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/style.css?v=7"></head><body>
+<link rel="stylesheet" href="/style.css?v=9"></head><body>
 <header><div class="wrap"><a class="logo" href="/"><img src="/logo.svg" alt=""><span>WealthyTrees</span></a>
 <nav><a href="/">Today</a><a href="/markets.html" aria-current="page">Markets</a><a href="/learn.html">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
 <main class="wrap page wide"><h1>Markets</h1>
 <p>Live charts and a stock screener, with a plain-English guide to reading them. Charts are by TradingView and may be delayed.</p>
-<h2 class="sec">Index charts</h2><div class="chips" id="pick" role="group" aria-label="Choose index"><button class="chip" data-k="Nifty 50" aria-pressed="true">Nifty 50</button><button class="chip" data-k="Sensex" aria-pressed="false">Sensex</button><button class="chip" data-k="Bank Nifty" aria-pressed="false">Bank Nifty</button><button class="chip" data-k="S&amp;P 500" aria-pressed="false">S&amp;P 500</button><button class="chip" data-k="Nasdaq" aria-pressed="false">Nasdaq</button></div><p class="note" id="legend">Loading chart&hellip;</p><div class="widget tall" id="chartbox"></div>
+<h2 class="sec">Index charts</h2><div class="ctl"><span class="lbl">Index</span><div class="chips" id="pick" role="group" aria-label="Choose index"><button class="chip" data-v="Nifty 50" aria-pressed="true">Nifty 50</button><button class="chip" data-v="Sensex" aria-pressed="false">Sensex</button><button class="chip" data-v="Bank Nifty" aria-pressed="false">Bank Nifty</button><button class="chip" data-v="S&amp;P 500" aria-pressed="false">S&amp;P 500</button><button class="chip" data-v="Nasdaq" aria-pressed="false">Nasdaq</button></div></div>
+<div class="ctl"><span class="lbl">Range</span><div class="chips" id="rng" role="group" aria-label="Time range"><button class="chip" data-v="1M" aria-pressed="false">1M</button><button class="chip" data-v="3M" aria-pressed="false">3M</button><button class="chip" data-v="6M" aria-pressed="false">6M</button><button class="chip" data-v="1Y" aria-pressed="true">1Y</button><button class="chip" data-v="2Y" aria-pressed="false">2Y</button></div>
+<span class="lbl">Type</span><div class="chips" id="typ" role="group" aria-label="Chart type"><button class="chip" data-v="Candles" aria-pressed="true">Candles</button><button class="chip" data-v="Line" aria-pressed="false">Line</button><button class="chip" data-v="Area" aria-pressed="false">Area</button></div></div>
+<div class="ctl"><span class="lbl">Indicators</span><div class="chips" id="inds" role="group" aria-label="Indicators"><button class="chip" data-v="SMA20" aria-pressed="false">SMA 20</button><button class="chip" data-v="SMA50" aria-pressed="true">SMA 50</button><button class="chip" data-v="SMA200" aria-pressed="false">SMA 200</button><button class="chip" data-v="EMA20" aria-pressed="false">EMA 20</button><button class="chip" data-v="BB" aria-pressed="false">Bollinger</button><button class="chip" data-v="RSI" aria-pressed="false">RSI</button><button class="chip" data-v="VOL" aria-pressed="true">Volume</button></div></div>
+<p class="note" id="legend">Loading chart&hellip;</p><div class="widget tall" id="chartbox"></div><div class="widget" id="rsibox" hidden style="height:150px;min-height:0;margin-top:.6rem"></div>
+<div class="callout" id="ihelp"><h3>Try the indicators</h3><p>Tap any indicator above to draw it on the chart. A short explanation appears here each time.</p></div>
 <div class="callout"><h3>How to read this chart</h3><ul>
 <li><b>Each candle is one day.</b> The body spans the open and close. The thin lines (wicks) show the day&rsquo;s high and low. Green means it closed above its open; red means below.</li>
 <li><b>Volume bars</b> show how much traded. A big move on low volume is a weaker signal than the same move on high volume.</li>
@@ -29,27 +34,78 @@
 <p class="note">Charts and screener data by TradingView. WealthyTrees does not make buy or sell recommendations. Any automated ratings shown by third-party tools are not our views. Not investment advice.</p></main>
 <div id="nl"></div>
 <footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a></div></footer>
-<script src="/site.js?v=7"></script>
+<script src="/site.js?v=9"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 <script>
 (function(){
-var data=null,key="Nifty 50",chart=null,box=document.getElementById("chartbox");
+var $=function(i){return document.getElementById(i)};
+var mainSeries=null,lastBar=null,liveAt="",defFn=null,LIVE={"Nifty 50":"NIFTY 50","Sensex":"SENSEX","Bank Nifty":"BANK NIFTY","S&P 500":"S&P 500","Nasdaq":"NASDAQ"};
+var data=null,key="Nifty 50",range="1Y",type="Candles",main=null,rsiC=null,guard=false;
+var on={SMA50:true,VOL:true};
+var COUNT={"1M":22,"3M":66,"6M":126,"1Y":252,"2Y":9999};
+var COL={SMA20:"#2a7de1",SMA50:"#e08a00",SMA200:"#8e44ad",EMA20:"#00a3a3",BB:"#7f8c8d"};
+var INFO={
+SMA20:"SMA 20 is the average closing price of the last 20 days. It smooths out daily noise. Price above a rising average is often read as a short-term uptrend.",
+SMA50:"SMA 50 averages the last 50 days, a medium-term view. Many traders watch whether price stays above or below it.",
+SMA200:"SMA 200 averages roughly the last 10 months. It is the classic long-term trend line.",
+EMA20:"EMA 20 is like a 20-day average but gives more weight to recent days, so it reacts faster than an SMA.",
+BB:"Bollinger Bands sit 2 standard deviations around a 20-day average. Wide bands mean high volatility, narrow bands mean calm. Touching a band is not a signal by itself.",
+RSI:"RSI (0 to 100) measures the speed of recent moves. Above 70 is often called overbought and below 30 oversold, but strong trends can stay there for a long time.",
+VOL:"Volume shows how much traded each day. A big move on high volume carries more weight than the same move on low volume."};
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
-function th(){return document.documentElement.getAttribute("data-theme")==="dark"?"dark":"light"}
+function f(x){return Number(x).toLocaleString("en-IN",{maximumFractionDigits:2})}
+function sma(a,n){var o=[],s=0;for(var i=0;i<a.length;i++){s+=a[i].close;if(i>=n)s-=a[i-n].close;if(i>=n-1)o.push({time:a[i].time,value:s/n})}return o}
+function ema(a,n){var k=2/(n+1),o=[],e=null;for(var i=0;i<a.length;i++){e=e===null?a[i].close:a[i].close*k+e*(1-k);if(i>=n-1)o.push({time:a[i].time,value:e})}return o}
+function bb(a,n,m){var u=[],l=[];for(var i=n-1;i<a.length;i++){var s=0,q=0,j;for(j=i-n+1;j<=i;j++)s+=a[j].close;var mean=s/n;for(j=i-n+1;j<=i;j++)q+=Math.pow(a[j].close-mean,2);var sd=Math.sqrt(q/n);u.push({time:a[i].time,value:mean+m*sd});l.push({time:a[i].time,value:mean-m*sd})}return[u,l]}
+function rsi(a,n){var o=[],g=0,l=0;for(var i=1;i<a.length;i++){var d=a[i].close-a[i-1].close,up=d>0?d:0,dn=d<0?-d:0;if(i<=n){g+=up;l+=dn;if(i===n){g/=n;l/=n;o.push({time:a[i].time,value:l===0?100:100-100/(1+g/l)})}}else{g=(g*(n-1)+up)/n;l=(l*(n-1)+dn)/n;o.push({time:a[i].time,value:l===0?100:100-100/(1+g/l)})}}return o}
+function base(el,h){return{width:Math.max(200,el.clientWidth-16),height:h,layout:{background:{color:"transparent"},textColor:css("--mute")},grid:{vertLines:{color:css("--line")},horzLines:{color:css("--line")}},rightPriceScale:{borderColor:css("--line")},timeScale:{borderColor:css("--line")}}}
 function build(){
- box.innerHTML="";var lg=document.getElementById("legend");
- if(!window.LightweightCharts||!data||!data[key]){lg.textContent="Chart data appears after the next update.";return}
- chart=LightweightCharts.createChart(box,{width:box.clientWidth-16,height:box.clientHeight-16,layout:{background:{color:"transparent"},textColor:css("--mute")},grid:{vertLines:{color:css("--line")},horzLines:{color:css("--line")}},rightPriceScale:{borderColor:css("--line")},timeScale:{borderColor:css("--line")}});
- var s=chart.addCandlestickSeries({upColor:"#0f8a5f",downColor:"#d64b3a",borderVisible:false,wickUpColor:"#0f8a5f",wickDownColor:"#d64b3a"});
- s.setData(data[key]);chart.timeScale().fitContent();
- var d=data[key],l=d[d.length-1],p=d[d.length-2],c=(l.close-p.close)/p.close*100;
- lg.textContent=key+": "+l.close.toLocaleString("en-IN")+" ("+(c>=0?"+":"")+c.toFixed(2)+"%) on "+l.time+". Daily candles, last year. Data may be delayed.";
+ if(main){main.remove();main=null}if(rsiC){rsiC.remove();rsiC=null}
+ var lg=$("legend"),bx=$("chartbox"),rb=$("rsibox");bx.innerHTML="";rb.innerHTML="";rb.hidden=!on.RSI;
+ if(!window.LightweightCharts||!data||!data[key]){lg.textContent="Chart data appears after the next update.";rb.hidden=true;return}
+ var d=data[key],n=d.length,hasVol=d.some(function(x){return x.volume>0});
+ main=LightweightCharts.createChart(bx,base(bx,bx.clientHeight-16));
+ var s,lines={};
+ if(type==="Candles"){s=main.addCandlestickSeries({upColor:"#0f8a5f",downColor:"#d64b3a",borderVisible:false,wickUpColor:"#0f8a5f",wickDownColor:"#d64b3a"});s.setData(d)}
+ else if(type==="Line"){s=main.addLineSeries({color:css("--ink"),lineWidth:2});s.setData(d.map(function(x){return{time:x.time,value:x.close}}))}
+ else{s=main.addAreaSeries({lineColor:css("--up"),topColor:"rgba(15,138,95,.35)",bottomColor:"rgba(15,138,95,0)",lineWidth:2});s.setData(d.map(function(x){return{time:x.time,value:x.close}}))}
+ mainSeries=s;lastBar=d[n-1];
+ function line(name,arr,dash){var l=main.addLineSeries({color:COL[name.slice(0,3)==="BB"?"BB":name],lineWidth:name==="SMA200"?3:2,lineStyle:dash?2:0,priceLineVisible:false,lastValueVisible:false,crosshairMarkerVisible:false});l.setData(arr);lines[name]=l}
+ if(on.SMA20)line("SMA20",sma(d,20));if(on.SMA50)line("SMA50",sma(d,50));if(on.SMA200)line("SMA200",sma(d,200));if(on.EMA20)line("EMA20",ema(d,20));
+ if(on.BB){var b=bb(d,20,2);line("BB upper",b[0],true);line("BB lower",b[1],true)}
+ var showVol=on.VOL&&hasVol;
+ main.priceScale("right").applyOptions({scaleMargins:{top:.08,bottom:showVol?.24:.08}});
+ if(showVol){var v=main.addHistogramSeries({priceFormat:{type:"volume"},priceScaleId:"vol",priceLineVisible:false,lastValueVisible:false});v.setData(d.map(function(x){return{time:x.time,value:x.volume,color:x.close>=x.open?"rgba(15,138,95,.4)":"rgba(214,75,58,.4)"}}));main.priceScale("vol").applyOptions({scaleMargins:{top:.82,bottom:0}})}
+ main.timeScale().setVisibleLogicalRange({from:Math.max(0,n-COUNT[range]),to:n+3});
+ if(on.RSI){rsiC=LightweightCharts.createChart(rb,base(rb,134));var r=rsiC.addLineSeries({color:"#8e44ad",lineWidth:2,priceLineVisible:false});r.setData(rsi(d,14));
+  r.createPriceLine({price:70,color:css("--down"),lineWidth:1,lineStyle:2,axisLabelVisible:true,title:"70"});r.createPriceLine({price:30,color:css("--up"),lineWidth:1,lineStyle:2,axisLabelVisible:true,title:"30"});
+  rsiC.priceScale("right").applyOptions({scaleMargins:{top:.1,bottom:.1}});rsiC.timeScale().setVisibleLogicalRange({from:Math.max(0,n-COUNT[range]),to:n+3});
+  main.timeScale().subscribeVisibleLogicalRangeChange(function(x){if(guard||!x||!rsiC)return;guard=true;rsiC.timeScale().setVisibleLogicalRange(x);guard=false});
+  rsiC.timeScale().subscribeVisibleLogicalRangeChange(function(x){if(guard||!x||!main)return;guard=true;main.timeScale().setVisibleLogicalRange(x);guard=false})}
+ var l=d[n-1],p=d[n-2],c=(l.close-p.close)/p.close*100;
+ function def(){lg.textContent=key+": "+f(l.close)+" ("+(c>=0?"+":"")+c.toFixed(2)+"%) on "+l.time+". Data is delayed (end of day). Move your cursor over the chart for details."+(on.VOL&&!hasVol?" Volume is not available for this index.":"")}
+ defFn=def;def();
+ main.subscribeCrosshairMove(function(q){var x=q.time&&q.seriesData.get(s);if(!x){def();return}
+  var t=key+" "+q.time+(x.open!==undefined?"   O "+f(x.open)+"  H "+f(x.high)+"  L "+f(x.low)+"  C "+f(x.close):"   "+f(x.value));
+  Object.keys(lines).forEach(function(k){var y=q.seriesData.get(lines[k]);if(y)t+="   "+k+" "+f(y.value)});lg.textContent=t});
 }
-function screener(){var b=document.getElementById("scrbox");b.innerHTML='<div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div></div>';var s=document.createElement("script");s.src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js";s.async=true;s.text=JSON.stringify({width:"100%",height:560,defaultColumn:"valuation",defaultScreen:"most_capitalized",market:"india",showToolbar:false,colorTheme:th(),locale:"en"});b.firstChild.appendChild(s)}
-document.getElementById("pick").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;key=b.dataset.k;this.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});build()});
+function group(id,cb){$(id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cb(b,this)})}
+group("pick",function(b,g){key=b.dataset.v;g.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});build()});
+group("rng",function(b,g){range=b.dataset.v;g.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});build()});
+group("typ",function(b,g){type=b.dataset.v;g.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});build()});
+group("inds",function(b){var k=b.dataset.v;on[k]=!on[k];b.setAttribute("aria-pressed",on[k]);$("ihelp").innerHTML="<h3>"+b.textContent+"</h3><p>"+INFO[k]+"</p><p class=\"note\">Indicators describe the past. They are not buy or sell signals.</p>";build()});
+function screener(){var b=$("scrbox");b.innerHTML='<div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div></div>';var s=document.createElement("script");s.src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js";s.async=true;s.text=JSON.stringify({width:"100%",height:560,defaultColumn:"valuation",defaultScreen:"most_capitalized",market:"india",showToolbar:false,colorTheme:document.documentElement.getAttribute("data-theme")==="dark"?"dark":"light",locale:"en"});b.firstChild.appendChild(s)}
 window.addEventListener("themechange",function(){build();screener()});
-window.addEventListener("resize",function(){if(chart)chart.applyOptions({width:box.clientWidth-16})});
+window.addEventListener("resize",function(){if(main)main.applyOptions({width:Math.max(200,$("chartbox").clientWidth-16)});if(rsiC)rsiC.applyOptions({width:Math.max(200,$("rsibox").clientWidth-16)})});
 fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then(function(j){data=j;build()}).catch(function(){build()});
+function live(){if(document.hidden||!mainSeries||!lastBar)return;fetch("/api/quotes").then(function(r){return r.json()}).then(function(j){var q=j.quotes&&j.quotes[LIVE[key]];if(!q||!q.price)return;
+ var day=new Date((q.time+(q.off||0))*1000).toISOString().slice(0,10);if(day<lastBar.time)return;
+ liveAt=new Date().toLocaleTimeString("en-IN",{timeZone:"Asia/Kolkata",hour:"2-digit",minute:"2-digit"})+" IST";
+ if(day>lastBar.time){data[key].push({time:day,open:q.price,high:q.high||q.price,low:q.low||q.price,close:q.price,volume:0});build();return}
+ lastBar.close=q.price;lastBar.high=Math.max(lastBar.high,q.high||q.price);lastBar.low=Math.min(lastBar.low,q.low||q.price);
+ mainSeries.update(type==="Candles"?{time:lastBar.time,open:lastBar.open,high:lastBar.high,low:lastBar.low,close:lastBar.close}:{time:lastBar.time,value:lastBar.close});
+ if(defFn)defFn()}).catch(function(){})}
+setInterval(live,60000);setTimeout(live,3000);
 screener();
 })();
 </script>

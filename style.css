@@ -153,3 +153,11 @@ nav{margin-left:auto}
 @media(max-width:640px){.clockbox{position:absolute;right:3.8rem;top:.55rem;margin:0}.clock{height:40px;padding:0 .8rem}.cz{display:none}
  .cpop{position:fixed;left:1rem;right:1rem;top:4.4rem;width:auto}}
 @media(prefers-reduced-motion:reduce){.dot.open{animation:none}.clock{transition:none}}
+
+/* ===== v8: chart controls ===== */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.6rem;margin:0 0 .6rem}
+.ctl .chips{margin:0}.lbl{font-size:.85rem;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+#legend{min-height:1.5em;font-variant-numeric:tabular-nums}
+@media(max-width:640px){.ctl{gap:.4rem .9rem}.chip{padding:.45rem .9rem}}
+
+.track i{font-style:normal;margin-right:.1rem}
