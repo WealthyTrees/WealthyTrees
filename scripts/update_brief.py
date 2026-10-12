@@ -67,7 +67,7 @@ def ticker():
     out = []
     for name, sym, fmt in SYMBOLS:
         try:
-            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=5d&interval=1d"
+            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=1d&interval=1d"
             m = json.loads(get(u))["chart"]["result"][0]["meta"]
             p, prev = m["regularMarketPrice"], m["chartPreviousClose"]
             out.append({"name": name, "value": fmt.format(p), "change": round((p - prev) / prev * 100, 2)})
@@ -95,14 +95,14 @@ def chart_data():
         out = {}
     for name, sym in CHARTS.items():
         try:
-            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=1y&interval=1d"
+            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=2y&interval=1d"
             r = json.loads(get(u))["chart"]["result"][0]
             q, off, rows = r["indicators"]["quote"][0], r["meta"].get("gmtoffset", 0), {}
-            for t, o, h, l, c in zip(r["timestamp"], q["open"], q["high"], q["low"], q["close"]):
+            for t, o, h, l, c, vol in zip(r["timestamp"], q["open"], q["high"], q["low"], q["close"], q.get("volume") or [0] * len(r["timestamp"])):
                 if None in (o, h, l, c):
                     continue
                 d = datetime.fromtimestamp(t + off, timezone.utc).strftime("%Y-%m-%d")
-                rows[d] = {"time": d, "open": round(o, 2), "high": round(h, 2), "low": round(l, 2), "close": round(c, 2)}
+                rows[d] = {"time": d, "open": round(o, 2), "high": round(h, 2), "low": round(l, 2), "close": round(c, 2), "volume": int(vol or 0)}
             if len(rows) > 20:
                 out[name] = [rows[k] for k in sorted(rows)]
                 print(f"chart ok: {name}: {len(rows)} days")
