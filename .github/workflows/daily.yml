@@ -25,8 +25,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/update_brief.py
       - name: Commit changes
+        if: always()
         run: |
           git config user.name "wealthytrees-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/brief.json
+          git add data/brief.json data/charts.json
           git diff --cached --quiet || (git commit -m "Brief update" && git pull --rebase && git push)
