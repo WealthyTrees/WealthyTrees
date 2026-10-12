@@ -11,7 +11,7 @@
 <header><div class="wrap"><a class="logo" href="/"><img src="/logo.svg" alt=""><span>WealthyTrees</span></a>
 <nav><a href="/">Today</a><a href="/markets.html" aria-current="page">Markets</a><a href="/learn.html">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
 <main class="wrap page wide"><h1>Markets</h1>
-<p>Live charts and a stock screener, with a plain-English guide to reading them. Charts are by TradingView and may be delayed.</p>
+<p>Interactive index charts and a stock screener, with a plain-English guide to reading them. Prices refresh about every minute where available and may be delayed by up to 15 minutes.</p>
 <h2 class="sec">Index charts</h2><div class="ctl"><span class="lbl">Index</span><div class="chips" id="pick" role="group" aria-label="Choose index"><button class="chip" data-v="Nifty 50" aria-pressed="true">Nifty 50</button><button class="chip" data-v="Sensex" aria-pressed="false">Sensex</button><button class="chip" data-v="Bank Nifty" aria-pressed="false">Bank Nifty</button><button class="chip" data-v="S&amp;P 500" aria-pressed="false">S&amp;P 500</button><button class="chip" data-v="Nasdaq" aria-pressed="false">Nasdaq</button></div></div>
 <div class="ctl"><span class="lbl">Range</span><div class="chips" id="rng" role="group" aria-label="Time range"><button class="chip" data-v="1M" aria-pressed="false">1M</button><button class="chip" data-v="3M" aria-pressed="false">3M</button><button class="chip" data-v="6M" aria-pressed="false">6M</button><button class="chip" data-v="1Y" aria-pressed="true">1Y</button><button class="chip" data-v="2Y" aria-pressed="false">2Y</button></div>
 <span class="lbl">Type</span><div class="chips" id="typ" role="group" aria-label="Chart type"><button class="chip" data-v="Candles" aria-pressed="true">Candles</button><button class="chip" data-v="Line" aria-pressed="false">Line</button><button class="chip" data-v="Area" aria-pressed="false">Area</button></div></div>
@@ -22,7 +22,7 @@
 <li><b>Each candle is one day.</b> The body spans the open and close. The thin lines (wicks) show the day&rsquo;s high and low. Green means it closed above its open; red means below.</li>
 <li><b>Volume bars</b> show how much traded. A big move on low volume is a weaker signal than the same move on high volume.</li>
 <li><b>Trend:</b> a series of higher highs and higher lows is an uptrend. Lower highs and lower lows is a downtrend.</li>
-<li><b>Try it:</b> use the symbol box to switch to a stock you know, then change the interval from daily to weekly and notice how the picture calms down.</li>
+<li><b>Try it:</b> pick 3M, switch on SMA 50 and RSI, then move your cursor over the chart to see each day&rsquo;s open, high, low and close.</li>
 <li><b>Remember:</b> charts describe the past. They do not predict the future.</li></ul></div>
 <h2 class="sec">Stock screener</h2><div class="widget" id="scrbox"></div>
 <div class="callout"><h3>How to read the screener</h3><ul>
@@ -31,7 +31,7 @@
 <li><b>Change %</b> shows today&rsquo;s move. One day says little. Look at weeks and months.</li>
 <li><b>Sort, then ask why.</b> If a stock tops the list, find the news behind it before drawing conclusions.</li>
 <li>Next step: the <a href="/learn-2.html">Reading a company</a> lesson shows how to go beneath the numbers.</li></ul></div>
-<p class="note">Charts and screener data by TradingView. WealthyTrees does not make buy or sell recommendations. Any automated ratings shown by third-party tools are not our views. Not investment advice.</p></main>
+<p class="note">Screener by TradingView. Index charts use Yahoo Finance data and may be delayed. WealthyTrees does not make buy or sell recommendations. Any automated ratings shown by third-party tools are not our views. Not investment advice.</p></main>
 <div id="nl"></div>
 <footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a></div></footer>
 <script src="/site.js?v=9"></script>
@@ -83,7 +83,7 @@ function build(){
   main.timeScale().subscribeVisibleLogicalRangeChange(function(x){if(guard||!x||!rsiC)return;guard=true;rsiC.timeScale().setVisibleLogicalRange(x);guard=false});
   rsiC.timeScale().subscribeVisibleLogicalRangeChange(function(x){if(guard||!x||!main)return;guard=true;main.timeScale().setVisibleLogicalRange(x);guard=false})}
  var l=d[n-1],p=d[n-2],c=(l.close-p.close)/p.close*100;
- function def(){lg.textContent=key+": "+f(l.close)+" ("+(c>=0?"+":"")+c.toFixed(2)+"%) on "+l.time+". Data is delayed (end of day). Move your cursor over the chart for details."+(on.VOL&&!hasVol?" Volume is not available for this index.":"")}
+ function def(){lg.textContent=key+": "+f(l.close)+" ("+(c>=0?"+":"")+c.toFixed(2)+"%) on "+l.time+". "+(liveAt?"Live as of "+liveAt+". ":"Refreshes about every minute. ")+"Source may be delayed. Hover for details."+(on.VOL&&!hasVol?" Volume is not available for this index.":"")}
  defFn=def;def();
  main.subscribeCrosshairMove(function(q){var x=q.time&&q.seriesData.get(s);if(!x){def();return}
   var t=key+" "+q.time+(x.open!==undefined?"   O "+f(x.open)+"  H "+f(x.high)+"  L "+f(x.low)+"  C "+f(x.close):"   "+f(x.value));
