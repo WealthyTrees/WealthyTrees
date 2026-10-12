@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,199",
-   "change": -0.4
+   "value": "4,191",
+   "change": -0.6
   },
   {
    "name": "CRUDE WTI",
-   "value": "$92.9",
-   "change": 1.16
+   "value": "$93.7",
+   "change": 1.97
   },
   {
    "name": "USD/INR",
@@ -28,84 +28,92 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,812",
-   "change": 0.59
+   "value": "7,811",
+   "change": -0.01
   },
   {
    "name": "NASDAQ",
-   "value": "27,366",
-   "change": 0.64
+   "value": "27,294",
+   "change": -0.26
   },
   {
    "name": "DOW",
-   "value": "51,655",
-   "change": 0.83
+   "value": "51,902",
+   "change": 0.48
   }
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "Central Bank Creates Dedicated Currency Facility for Petroleum Companies",
-   "summary": "The Reserve Bank of India introduced an exclusive channel allowing state-owned fuel refiners to fulfill their daily foreign exchange needs. This measure satisfies energy import obligations without placing immediate strain on regular currency trading desks.",
-   "why": "Separating massive corporate energy purchases from routine currency dealings prevents sudden dollar demand from sharply weakening the local currency.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63784"
-  },
-  {
-   "category": "Economy",
-   "title": "Policy Revisions Seek to Widen Overseas Investment in Sovereign Debt",
-   "summary": "New regulatory adjustments were introduced to encourage greater cross-border participation in central government securities. The initiative seeks to bring more international capital into domestic sovereign bonds.",
-   "why": "Broadening external investment in government debt helps finance state borrowing and enhances bond market depth.",
-   "source": "Press Information Bureau",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9lUDRBaE03QUhlNGJpR2xmUDBPejBuaXc0MUt3emJEeDlENmxVQy1EdUdVa3VRb0RRTEJyRlROVGZ0ZlZYcjEtUnB4RDAxS0p1MzVvUG4xd3lSbks4WXVLRHo3ZkxSSHRTaVYxc0pmMXhNbjNnLXhN?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Equities Pull Back Following Central Bank Actions and Price Concerns",
-   "summary": "Indian shares surrendered initial morning gains as participants assessed central bank policy steps and upcoming cost-of-living data. Profit-taking across major counters pulled the broader market lower by the close.",
-   "why": "Markets often experience selling pressure and caution when investors recalibrate expectations ahead of macroeconomic inflation data.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQenFsbDRhbVJGa21YRV9MV1BuQkhlUGNYVzlhUU5nMmR6NWdnd19ZaU1IWkYwVExZbVVJUWNoR3RNNnlodEpiTUJVelRKQ1I0SUJRQzFlNjl3cUszd0lpbW5KR3BFNnJDUkU5ZGpaRHdUdFFxODJOYmJ3TGp4S2NPMV8tRHdLVk8zTzktaS1Sa1kyUS1EZlNuaDQtN1Rwdmo4dGhIbVM0NUM3ZElSNExNZw?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Multiple Companies Prepare for Mid-October Initial Public Offerings",
-   "summary": "Four diverse enterprises are opening their public subscription windows across several business sectors in the middle of October. Institutional anchor investors will participate first, followed by broader bidding across varied issue sizes.",
-   "why": "Initial public offerings allow expanding corporations to tap public capital while providing retail participants new opportunities to invest in diverse industries.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/ipo-gmp-bonfiglioli-vs-tonbo-vs-sahajanand-medical-vs-zetwerk-dates-price-band-key-details-11791797199572.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Manufacturer Approves Integration of Defence and Clean Power Subsidiaries",
-   "summary": "Goodluck India sanctioned the structural combination of its defense engineering and renewable power units into the main enterprise. The internal consolidation is intended to unify specialized business segments under one operational umbrella.",
-   "why": "Corporate mergers can improve operating efficiency by reducing management overlap and pooling balance-sheet resources across related business units.",
+   "category": "US Markets",
+   "title": "Wall Street Finishes Mixed as Tech Drops Counter Energy Gains",
+   "summary": "American equity benchmarks experienced fractional declines as weakness across technology firms counterbalanced gains in energy and communications. Investors maintained caution while awaiting upcoming corporate earnings reports.",
+   "why": "Sector rotation demonstrates how strengths in one industry can counterbalance declines in another across broad market indices.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/goodluck-india-shares-surge-17-as-merger-expands-defence-arm-to-join-firm-along-with-green-energy-unit/articleshow/134888841.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-steady-at-open-as-oil-jumps-ahead-of-key-earnings/articleshow/134894878.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Dow Jones Advances While Nasdaq Declines in Divergent Trading Session",
+   "summary": "United States stock gauges traded close to all-time highs with contrasting results across indexes. The Dow Jones recorded gains whereas the tech-heavy Nasdaq slipped.",
+   "why": "Discrepancies among major indexes highlight how differing weightings in industrial and technology shares produce varying returns.",
+   "source": "6abc Philadelphia",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXA0TGhZbEtEU2JBQkZocXpDeFlvSklUeHlURkpmV2tTQlc3dmR4ekMwUW5ROHl0dkstSWtRbkVoZ0l3cnY5VXRhaGcxR1JHYzRlaHVkOXBQMFNMMzJIRDZGQmxvNm9TT3hrb0Y2UzRUbS1ObGtXSDh3RU93cmRPbjJobnZubmVvejhob1YtX1dsLVp2QnBxa0dXNXhzZmVhczlZcHhFV19FbjFMODhCemxBQjJObVZrekNZdW13TS1CVGxyZ2fSAcsBQVVfeXFMT09fZTFLZVk2Wkluc3BjTnN6bDI2eGtrR2VBb3g1M0dHLWlXYzR1WEpYeFkzTlZzZXB0dENhSHp1QUk5c1NxMm55YXI0LVdNX2I1SVFYWTljVlVPWExQMGVRWW1CcjFjSkJ4RTFKdnNnWGhyOFp0Yk1iXzlqc1NFZ0lOLXBvbGhSbmcwQnp5MEszNTFCZkwyU20xT2pZRzA4MlcyM2tkY0pReDctSjNEUG9Fc0lhSHRyYzBNWXpNb2xIbTdlTzZ0MHFkR1k?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Sovereign Borrowing Costs Surge Following Central Bank Cash Absorption",
+   "summary": "Yields on the benchmark 10-year government paper reached three-year highs after policy actions drained system cash. The government bond market witnessed its steepest single-day slump in six months.",
+   "why": "Bond yields rise when prices decline, directly influencing the overall cost of capital across the domestic financial system.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-benchmark-bond-posts-worst-day-in-six-months-on-rbi-measures/articleshow/134893334.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Strengthens Sharply Following Regulatory Steps to Halt Speculation",
+   "summary": "The domestic currency gained 95 paise to touch its strongest quotation in six months against the dollar. The rally occurred after the monetary authority intervened to curtail speculative trading activity.",
+   "why": "Exchange rate stability protects import costs and reduces foreign exchange volatility for businesses across the country.",
+   "source": "The Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRkNsVzQzY24wRVhwMTJSdlVKd2pMVmZkWUdSQ3BwWFREZnFuZUh6RUdZcHhkRGJGU2NPb2xYSXBocjFwYzlYcWZndE5zN3hMRnZORUVtazZuWGwyWXNqdmd3Q0JWcGNNRkFLeFFxb2RKLURnME9WSzNWUEpuU0h2dGVuVHcwamtvREdRbjFZblBXZXpuWHlfN2QtbVZ3c2pDcllXcDVreEhIM1V6NS13LUN1QlBkV1ZBWTlNWk1B0gHEAUFVX3lxTE1XZUVzN0xwWDRmb2d5VXZqN05IenVVNlptdGdscDRfSkFOSTFZVkg2akVNTWJYVklzR1gxWVVSa0d3eU5vdnNEb2NXOGZtTExhSlFpYnFoNkJIa2V3dDU5cFhpSmgySkw5UHA5MS1vQk5fb1hjR2VIMS1tNFcwSXFEbWR6YU91NDVMbkdsaWdqSFItZC02SnVZMDZSRjVTcjgxM0lldTh0UGwwUFdOZWhTWG1zU2JWeDJNX3pxV1lWb3hHaWU?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Creates Dollar Mechanism to Assist Domestic Fuel Importers",
+   "summary": "A dedicated foreign currency window from the Reserve Bank could handle ten to twelve billion dollars in monthly petroleum procurement needs. This measure aims to reduce pressure on the local currency from oil purchases.",
+   "why": "Targeted foreign exchange facilities keep massive commercial dollar purchases from disrupting open market currency trading.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOajZ2SDNFckJWRmladTVuZk5ReDgwMXRzaG1wVUxkbzRpVV9yOVNiVzZWNXRENzByNjBVaFd6a3hMUnRlQmUzTVVmNWpHa29vcFF6cFVBOEc5V3gzSUJuMlotaWNsbEM1bTNyNDFtZmpkNkhya1Qxb2IxRGxZYW1Cd3FRWWk0WFdnbXY2QXV5bVZtLWRXUmFJRm9JaEtEM09FWG4xZFl1dGtHbTZiVnJvT3JHbHN1SHJhUks2NG5yY0hCVkhPNExUNnQwTmJRYVh0dWNhUGdpdy1VbUczLXdjYXFkc0NpMzFHN1RSUlZEbTJKMlBmNk1wRlRJVkNrTnZMQnE5Q2Roc9IBjAJBVV95cUxNeDRMZVZhd1c3akdDUE5xbUk3WktoTXpqTjczSE55UEE1QzVEeXVORUZCbHpQVG5VTGYxQXlWMkhWWkFBZXQxV3h3X2p3SU0zVE5oR290dG9zbTdtZ2Vobkk2UkpHazQ1MllpTEZrLU9mN3R5YW45bExZcXNxLWpRd1JicVpCMkx1cE5WM013T2NrWndMa2ZGcDZUbUcxdEZMb2tXbThRbFMyVGJ3Unk2VC1peFlpSDVXR0tNcHg4aHJYMk1naGF2Z1BmSzdycklSWGFiMkdKRlZ6RjZkVlQxUWo5UDdTd0pBSk5ONllFQnc0ZjlCUHlKaENtYzNYTWVzZ0luOVgyQmFoRm91?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Domestic Bullion Rates Ease Prior to Major Autumn Celebrations",
-   "summary": "Prices for physical gold and silver dropped across domestic retail counters leading up to the Dussehra holiday. The price dip arrives during a customary period when households traditionally step up purchases of precious metals.",
-   "why": "Jewelry demand tends to rise around key Indian holidays, making short-term commodity price movements relevant for retail consumer budgets.",
+   "title": "Domestic Bullion Rates Soften Prior to Upcoming Festival Period",
+   "summary": "Market prices for gold and silver moved downward across India ahead of Dussehra festivities. Buyers observed softening quotations during a customary high-demand shopping calendar.",
+   "why": "Precious metal prices fluctuate based on international benchmarks and currency movements even during traditional festive consumption periods.",
    "source": "Upstox",
    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPU1oxdExickYzZ3JRd2RDLUFDS3RndEtaY1dhYXFoWEVaQXJNRnA3b21xZ2k4c3VyTGcyZGRDV05jeW55TlRLUFlOSm5MQkc3YjJOMmxZYU1PV2F4N1ZNVDRERUY3X0ZFUTdpZDc2bXI2VFpvQUg4NUlFZkd6TlFodkhfSUxIQ0N0YVlDOFg0dzNlMVNYUklKSnVuWjNQMkdBM2VVQzM5bjJ2em9sNFotWUZ4ejM1WUNIV3NwVHBVdDd2SWpMTEZsbXdIdEl4RWhBMzRlRTJaNmNYZUw2RE5hM3lfdnJ3T0VJcFpWYmdkaEhPOUQxR2dDbHRfUldPZGNnVTRGVA?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "American Index Futures Gain as Lower Fuel Costs Support Sentiment",
-   "summary": "Futures tracking major United States benchmark indices climbed while crude values pulled back ahead of corporate reporting cycles. Investors turned their focus to quarterly company scorecards as trading commenced.",
-   "why": "Falling energy expenses help lower operating costs across corporations, often offering support to broader market sentiment.",
-   "source": "AOL.com",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE01RGxZckM0SUFkU2c3N0xCam5UalNwdE8zR3RPT2I5TldVWHE5VjZpbGF1UVNlVEFJN3RwUVViSkZKLWQtdUhneE8yQVlweERuUTZaRUFsVGJrNDY4TllTdWxMcDJaRUFGMzZlNzA5aFhjOFRDaVB3?oc=5"
+   "category": "Equity",
+   "title": "Smaller Company Funds Secure Massive Share of September Mutual Fund Allocations",
+   "summary": "Mid-cap and small-cap investment portfolios collected forty-four percent of all fresh retail equity contributions in September. These significant subscriptions continued despite broader market pullbacks during the month.",
+   "why": "Monitoring retail flows into smaller capitalization tiers indicates where public participation and liquidity concentrations are developing.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/smallcap-mid-cap-funds-grab-44-of-equity-mf-inflows-in-september-11791809100380.html"
   },
   {
-   "category": "US Markets",
-   "title": "S&P 500 Climbs Despite Government Bond Yields Reaching Annual Peak",
-   "summary": "The leading American equity benchmark finished the week up over one percent even as sovereign ten-year borrowing yields scaled yearly highs. Stocks managed to advance despite parallel increases in fixed-income returns.",
-   "why": "Higher sovereign bond yields usually challenge equities by making risk-free investments more appealing, making simultaneous equity gains noteworthy.",
-   "source": "TradingKey",
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa1ZiS1M4WEhxcHJCbFdMbUI4YkF5aHRzelg3QnRYdmZ2SUVOTV9taGJQNTJWUE5OcXJjRTJvdmVyQUxfV1BpaHhhQXg1dUdha3ZUY2E2Ym15eC1aVHJuOWlUWERXUjBvNTdWbzBUdlJPa3lBX0xLbUxoazZ0aFpKV05ydFAwTUo5Zl8xS3l6ZmZEVTJGQXZKRWdZdG5mNHdHSmxfR21ab2NzTXlzVXA3M3hDZWtzVUppYmN1NDZKTFR5NlVNVmpCNUF2UE9jMm1uc2FMU0swR2lmU1E?oc=5"
+   "category": "Equity",
+   "title": "HCL Technologies Expands Revenue Alongside Higher Artificial Intelligence Business",
+   "summary": "The information technology enterprise posted quarterly revenue of 35,620 crore rupees, marking an 11.5 percent expansion from the previous year. New contract wins touched 3.3 billion dollars while advanced artificial intelligence revenue climbed 78 percent.",
+   "why": "Corporate financial reports provide fundamental evidence on whether modern enterprise spending and service lines are sustaining business growth.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/hcl-tech-q2-report-card-rupee-boost-record-deal-wins-hiring-rebound-and-ai-boom-despite-odds-key-numbers-decoded-11791813821287.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Sahajanand Medical Technologies Establishes Valuation Range for Initial Public Offering",
+   "summary": "The medical device firm set a subscription bracket between 327 and 344 rupees per share for its 475.48 crore rupee offering. The public float will run from October 15 to October 19 entirely via secondary share sales.",
+   "why": "Initial public offerings allow private shareholders to monetize stakes while providing public market investors access to new industry niches.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/sahajanand-medical-technologies-sets-ipo-price-band-at-rs-327-344-per-share-issue-opens-on-oct-15/articleshow/134893237.cms"
   }
  ]
 }
