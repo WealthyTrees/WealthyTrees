@@ -35,6 +35,22 @@ function parse(xml, cat) {
   return out.slice(0, 12);
 }
 
+// Keep the feed true to "no tips, no predictions": drop trading calls, price-target chatter,
+// foreign-script items, and cap repetitive city rate-card items.
+const TIPS = [
+  /\b(buy|sell)\b.{0,40}\b(SL|stop[- ]?loss|TGT|target)\b/i,
+  /\b(SL|TGT)\s*\d/i,
+  /\b(stocks? to (buy|sell|watch)|top picks?|stock picks?|buy or sell|should you (buy|sell)|multibagger|target price)\b/i,
+  /\bpredictions?\b/i,
+  /\bkedia advisory\b/i,
+  /\b(resistance|support)\s+(near|at|around|zone)\b/i,
+];
+const RATECARD = /\b(gold|silver)\b.*\b(rates?|prices?)\b.*\btoday\b|\b(rates?|prices?) today\b/i;
+function noisy(x) {
+  if (/[^\u0000-\u024F\u2000-\u20FF]/.test(x.title)) return true;
+  return TIPS.some((re) => re.test(x.title));
+}
+
 export async function getHeadlines() {
   const all = [];
   await Promise.all(FEEDS.map(async ([cat, q]) => {
@@ -44,10 +60,13 @@ export async function getHeadlines() {
     } catch (e) {}
   }));
   const seen = new Set(), cutoff = Date.now() - 36 * 3600 * 1000;
-  return all.filter((x) => x.t > cutoff).sort((a, b) => b.t - a.t).filter((x) => {
+  let rate = 0;
+  return all.filter((x) => x.t > cutoff && !noisy(x)).sort((a, b) => b.t - a.t).filter((x) => {
     const k = x.title.toLowerCase().slice(0, 70);
     if (seen.has(k)) return false;
-    seen.add(k); return true;
+    seen.add(k);
+    if (RATECARD.test(x.title) && ++rate > 3) return false;
+    return true;
   }).slice(0, 40);
 }
 
