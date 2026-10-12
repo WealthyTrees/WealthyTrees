@@ -136,3 +136,20 @@ nav{margin-left:auto}
 .chip:active{transform:scale(.96)}.chip[aria-pressed=true]{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
 @media(max-width:640px){.theme{position:absolute;right:1.2rem;top:.55rem;margin:0}.tbtn{width:40px;height:40px}nav{margin-left:0}}
 @media(prefers-reduced-motion:reduce){.tbtn,.chip{transition:none}.tbtn:hover{transform:none}}
+
+/* ===== v7: live clock ===== */
+.clockbox{position:relative;margin-left:.8rem}
+.clock{display:flex;align-items:center;gap:.5rem;height:46px;padding:0 1.1rem;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);font:inherit;font-weight:600;font-variant-numeric:tabular-nums;cursor:pointer;transition:border-color .18s,box-shadow .18s,transform .18s;-webkit-tap-highlight-color:transparent}
+@media(hover:hover){.clock:hover{border-color:var(--up);transform:translateY(-2px);box-shadow:0 6px 14px rgba(15,138,95,.18)}}
+.clock:active{transform:scale(.97)}
+.cz{color:var(--mute);font-size:.8rem;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mute);flex:none}
+.dot.open{background:var(--up);animation:pulse 1.6s infinite}.dot.pre{background:var(--gold)}.dot.closed{background:var(--down)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(15,138,95,.5)}100%{box-shadow:0 0 0 8px rgba(15,138,95,0)}}
+.cpop{position:absolute;right:0;top:calc(100% + .5rem);width:21rem;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;box-shadow:0 14px 34px rgba(0,0,0,.2);z-index:70;font-size:.92rem}
+.cpop[hidden]{display:none}.cpop h4{margin:0 0 .6rem;font:700 1.05rem Fraunces,Georgia,serif}
+.cpop .row{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.cpop .cs{margin:.7rem 0 .4rem;font-weight:700;color:var(--up)}.cpop small{color:var(--mute);line-height:1.45;display:block}
+@media(max-width:640px){.clockbox{position:absolute;right:3.8rem;top:.55rem;margin:0}.clock{height:40px;padding:0 .8rem}.cz{display:none}
+ .cpop{position:fixed;left:1rem;right:1rem;top:4.4rem;width:auto}}
+@media(prefers-reduced-motion:reduce){.dot.open{animation:none}.clock{transition:none}}
