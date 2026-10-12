@@ -1,5 +1,5 @@
 {
- "date": "Monday, 12 October 2026",
+ "date": "Tuesday, 13 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,191",
-   "change": -0.6
+   "value": "4,193",
+   "change": -0.55
   },
   {
    "name": "CRUDE WTI",
-   "value": "$93.7",
-   "change": 1.97
+   "value": "$94.3",
+   "change": 2.66
   },
   {
    "name": "USD/INR",
@@ -28,92 +28,92 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,811",
-   "change": -0.01
+   "value": "7,800",
+   "change": -0.15
   },
   {
    "name": "NASDAQ",
-   "value": "27,294",
-   "change": -0.26
+   "value": "27,236",
+   "change": -0.48
   },
   {
    "name": "DOW",
-   "value": "51,902",
-   "change": 0.48
+   "value": "51,832",
+   "change": 0.34
   }
  ],
  "items": [
   {
    "category": "US Markets",
-   "title": "Wall Street Finishes Mixed as Tech Drops Counter Energy Gains",
-   "summary": "American equity benchmarks experienced fractional declines as weakness across technology firms counterbalanced gains in energy and communications. Investors maintained caution while awaiting upcoming corporate earnings reports.",
-   "why": "Sector rotation demonstrates how strengths in one industry can counterbalance declines in another across broad market indices.",
+   "title": "US Lenders Slide Toward Correction as Quarterly Results Approach",
+   "summary": "Shares of major American banks declined toward correction levels prior to scheduled quarterly disclosures. Investors are monitoring household financial health against a backdrop of higher borrowing costs and elevated government debt yields.",
+   "why": "Bank earnings indicate whether elevated interest rates are creating financial strain for consumers and businesses.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-steady-at-open-as-oil-jumps-ahead-of-key-earnings/articleshow/134894878.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-bank-stocks-near-correction-as-earnings-loom-consumer-outlook-in-focus/articleshow/134900177.cms"
   },
   {
    "category": "US Markets",
-   "title": "Dow Jones Advances While Nasdaq Declines in Divergent Trading Session",
-   "summary": "United States stock gauges traded close to all-time highs with contrasting results across indexes. The Dow Jones recorded gains whereas the tech-heavy Nasdaq slipped.",
-   "why": "Discrepancies among major indexes highlight how differing weightings in industrial and technology shares produce varying returns.",
-   "source": "6abc Philadelphia",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXA0TGhZbEtEU2JBQkZocXpDeFlvSklUeHlURkpmV2tTQlc3dmR4ekMwUW5ROHl0dkstSWtRbkVoZ0l3cnY5VXRhaGcxR1JHYzRlaHVkOXBQMFNMMzJIRDZGQmxvNm9TT3hrb0Y2UzRUbS1ObGtXSDh3RU93cmRPbjJobnZubmVvejhob1YtX1dsLVp2QnBxa0dXNXhzZmVhczlZcHhFV19FbjFMODhCemxBQjJObVZrekNZdW13TS1CVGxyZ2fSAcsBQVVfeXFMT09fZTFLZVk2Wkluc3BjTnN6bDI2eGtrR2VBb3g1M0dHLWlXYzR1WEpYeFkzTlZzZXB0dENhSHp1QUk5c1NxMm55YXI0LVdNX2I1SVFYWTljVlVPWExQMGVRWW1CcjFjSkJ4RTFKdnNnWGhyOFp0Yk1iXzlqc1NFZ0lOLXBvbGhSbmcwQnp5MEszNTFCZkwyU20xT2pZRzA4MlcyM2tkY0pReDctSjNEUG9Fc0lhSHRyYzBNWXpNb2xIbTdlTzZ0MHFkR1k?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Sovereign Borrowing Costs Surge Following Central Bank Cash Absorption",
-   "summary": "Yields on the benchmark 10-year government paper reached three-year highs after policy actions drained system cash. The government bond market witnessed its steepest single-day slump in six months.",
-   "why": "Bond yields rise when prices decline, directly influencing the overall cost of capital across the domestic financial system.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-benchmark-bond-posts-worst-day-in-six-months-on-rbi-measures/articleshow/134893334.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Rupee Strengthens Sharply Following Regulatory Steps to Halt Speculation",
-   "summary": "The domestic currency gained 95 paise to touch its strongest quotation in six months against the dollar. The rally occurred after the monetary authority intervened to curtail speculative trading activity.",
-   "why": "Exchange rate stability protects import costs and reduces foreign exchange volatility for businesses across the country.",
-   "source": "The Indian Express",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRkNsVzQzY24wRVhwMTJSdlVKd2pMVmZkWUdSQ3BwWFREZnFuZUh6RUdZcHhkRGJGU2NPb2xYSXBocjFwYzlYcWZndE5zN3hMRnZORUVtazZuWGwyWXNqdmd3Q0JWcGNNRkFLeFFxb2RKLURnME9WSzNWUEpuU0h2dGVuVHcwamtvREdRbjFZblBXZXpuWHlfN2QtbVZ3c2pDcllXcDVreEhIM1V6NS13LUN1QlBkV1ZBWTlNWk1B0gHEAUFVX3lxTE1XZUVzN0xwWDRmb2d5VXZqN05IenVVNlptdGdscDRfSkFOSTFZVkg2akVNTWJYVklzR1gxWVVSa0d3eU5vdnNEb2NXOGZtTExhSlFpYnFoNkJIa2V3dDU5cFhpSmgySkw5UHA5MS1vQk5fb1hjR2VIMS1tNFcwSXFEbWR6YU91NDVMbkdsaWdqSFItZC02SnVZMDZSRjVTcjgxM0lldTh0UGwwUFdOZWhTWG1zU2JWeDJNX3pxV1lWb3hHaWU?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Central Bank Creates Dollar Mechanism to Assist Domestic Fuel Importers",
-   "summary": "A dedicated foreign currency window from the Reserve Bank could handle ten to twelve billion dollars in monthly petroleum procurement needs. This measure aims to reduce pressure on the local currency from oil purchases.",
-   "why": "Targeted foreign exchange facilities keep massive commercial dollar purchases from disrupting open market currency trading.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOajZ2SDNFckJWRmladTVuZk5ReDgwMXRzaG1wVUxkbzRpVV9yOVNiVzZWNXRENzByNjBVaFd6a3hMUnRlQmUzTVVmNWpHa29vcFF6cFVBOEc5V3gzSUJuMlotaWNsbEM1bTNyNDFtZmpkNkhya1Qxb2IxRGxZYW1Cd3FRWWk0WFdnbXY2QXV5bVZtLWRXUmFJRm9JaEtEM09FWG4xZFl1dGtHbTZiVnJvT3JHbHN1SHJhUks2NG5yY0hCVkhPNExUNnQwTmJRYVh0dWNhUGdpdy1VbUczLXdjYXFkc0NpMzFHN1RSUlZEbTJKMlBmNk1wRlRJVkNrTnZMQnE5Q2Roc9IBjAJBVV95cUxNeDRMZVZhd1c3akdDUE5xbUk3WktoTXpqTjczSE55UEE1QzVEeXVORUZCbHpQVG5VTGYxQXlWMkhWWkFBZXQxV3h3X2p3SU0zVE5oR290dG9zbTdtZ2Vobkk2UkpHazQ1MllpTEZrLU9mN3R5YW45bExZcXNxLWpRd1JicVpCMkx1cE5WM013T2NrWndMa2ZGcDZUbUcxdEZMb2tXbThRbFMyVGJ3Unk2VC1peFlpSDVXR0tNcHg4aHJYMk1naGF2Z1BmSzdycklSWGFiMkdKRlZ6RjZkVlQxUWo5UDdTd0pBSk5ONllFQnc0ZjlCUHlKaENtYzNYTWVzZ0luOVgyQmFoRm91?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Domestic Bullion Rates Soften Prior to Upcoming Festival Period",
-   "summary": "Market prices for gold and silver moved downward across India ahead of Dussehra festivities. Buyers observed softening quotations during a customary high-demand shopping calendar.",
-   "why": "Precious metal prices fluctuate based on international benchmarks and currency movements even during traditional festive consumption periods.",
-   "source": "Upstox",
-   "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPU1oxdExickYzZ3JRd2RDLUFDS3RndEtaY1dhYXFoWEVaQXJNRnA3b21xZ2k4c3VyTGcyZGRDV05jeW55TlRLUFlOSm5MQkc3YjJOMmxZYU1PV2F4N1ZNVDRERUY3X0ZFUTdpZDc2bXI2VFpvQUg4NUlFZkd6TlFodkhfSUxIQ0N0YVlDOFg0dzNlMVNYUklKSnVuWjNQMkdBM2VVQzM5bjJ2em9sNFotWUZ4ejM1WUNIV3NwVHBVdDd2SWpMTEZsbXdIdEl4RWhBMzRlRTJaNmNYZUw2RE5hM3lfdnJ3T0VJcFpWYmdkaEhPOUQxR2dDbHRfUldPZGNnVTRGVA?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Smaller Company Funds Secure Massive Share of September Mutual Fund Allocations",
-   "summary": "Mid-cap and small-cap investment portfolios collected forty-four percent of all fresh retail equity contributions in September. These significant subscriptions continued despite broader market pullbacks during the month.",
-   "why": "Monitoring retail flows into smaller capitalization tiers indicates where public participation and liquidity concentrations are developing.",
+   "title": "Global Chip Producers Fall Following Chinese Memory Maker's Expansion",
+   "summary": "Equities of technology firms including Nvidia, Micron, and SK Hynix dropped as much as five percent. The decline followed reports that Chinese manufacturer CXMT intends to introduce alternative server memory hardware before 2026 concludes.",
+   "why": "The emergence of new international competitors in memory chips can impact the pricing power and future sales of established producers.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/smallcap-mid-cap-funds-grab-44-of-equity-mf-inflows-in-september-11791809100380.html"
+   "url": "https://www.livemint.com/market/stock-market-news/nvidia-micron-sk-hynix-shares-slump-up-to-5-as-chinas-cxmt-steps-up-challenge-to-global-chipmakers-what-it-means-11791819024051.html"
   },
   {
    "category": "Equity",
-   "title": "HCL Technologies Expands Revenue Alongside Higher Artificial Intelligence Business",
-   "summary": "The information technology enterprise posted quarterly revenue of 35,620 crore rupees, marking an 11.5 percent expansion from the previous year. New contract wins touched 3.3 billion dollars while advanced artificial intelligence revenue climbed 78 percent.",
-   "why": "Corporate financial reports provide fundamental evidence on whether modern enterprise spending and service lines are sustaining business growth.",
+   "title": "Regulator Clears Initial Public Offering for Indian Gas Exchange",
+   "summary": "The capital markets regulator has permitted Indian Gas Exchange to proceed with a public share sale. The offering will be carried out entirely as a divestment by its promoter entity, Indian Energy Exchange.",
+   "why": "An offer for sale enables a parent corporation to offload part of its ownership stake directly to public market investors.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/indian-gas-exchange-secures-sebis-nod-to-float-ipo/articleshow/134897335.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "HCLTech Logs Revenue Growth Driven by High Artificial Intelligence Demand",
+   "summary": "The information technology company reported September-quarter revenue of 35,620 crore rupees, representing an annual increase of 11.5 percent. New contract commitments climbed to 3.3 billion dollars, accompanied by a 78 percent yearly surge in advanced artificial intelligence work.",
+   "why": "Quarterly figures from major IT firms show how rapidly enterprises are adopting novel technological infrastructure.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/hcl-tech-q2-report-card-rupee-boost-record-deal-wins-hiring-rebound-and-ai-boom-despite-odds-key-numbers-decoded-11791813821287.html"
   },
   {
-   "category": "Equity",
-   "title": "Sahajanand Medical Technologies Establishes Valuation Range for Initial Public Offering",
-   "summary": "The medical device firm set a subscription bracket between 327 and 344 rupees per share for its 475.48 crore rupee offering. The public float will run from October 15 to October 19 entirely via secondary share sales.",
-   "why": "Initial public offerings allow private shareholders to monetize stakes while providing public market investors access to new industry niches.",
+   "category": "Commodity",
+   "title": "Tanker Equities Reach Highs as Sea Route Tensions Increase Freight",
+   "summary": "Maritime transport companies surged to peak levels following disruptions in Middle Eastern navigational channels. These logistical obstacles pushed up charter rates for ocean vessels and elevated petroleum shipment fees.",
+   "why": "Chokepoints along global shipping corridors directly impact international energy transit expenses and shipping business revenues.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/global-shipping-stocks-hit-records-torm-hafnia-rally-as-hormuz-disruptions-lift-freight-rates-11791823083918.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold Prices Retreat Following Gains in Domestic Currency",
+   "summary": "Domestic gold values declined by 1,400 rupees during trade. A strengthening rupee made imported bullion less expensive to acquire in Indian currency.",
+   "why": "Since gold is traded globally in dollars, currency appreciation reduces the landed rupee price of imported precious metals.",
+   "source": "Rediff MoneyWiz",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdm1XU3dnOU5TajNvaTlHeEJKRGk5ZFJJV1k1cDh4cE9LTEFiRmgtSnA2bjZuRXhrcXBWNElpcUFGeTQyZm9Pa3FRWFU3UDk2cy1Hb3pTMHZiMUJ4azZ3Nlh2bkwxYVgyZWRlV0g0aFBQMmt2VE95UkIyZ1hBTHRVcWNZQXBjR2tDMTkzMWEybl95TlkzSWNBVlZNQVdfTVRtbWxEbks0SXTSAa4BQVVfeXFMT1JnTkswZGFkc1IxWG5CSkVMdHVHRUJQYUFueVZaN2ZmcEZIRk1BWlk0clhlQVJyZVN6Nk1GT3d6WURHU2ptWmxOaVRaV3hjbVNobldEWC1VUkZ3d0QzYmI3UzVBeldjbnZXUk14UWIzcWVNdUZtYUtoYTZBSV9Ya3ptSS1pQVBtX1lmUVhnUnFDTXZPQjBjZDh0T2JMWUw5M1FxMDVZcF80NW01LXBn?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "State Bank Analysts Propose Scrapping Long-Term Stock Gains Tax",
+   "summary": "Economists associated with State Bank of India have advocated removing the levy on extended equity holdings. They suggest this measure could support domestic share buying during an environment of heavy foreign portfolio selling.",
+   "why": "Altering investment tax structures can change the after-tax returns of holding equities for extended durations.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/sahajanand-medical-technologies-sets-ipo-price-band-at-rs-327-344-per-share-issue-opens-on-oct-15/articleshow/134893237.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sbi-economists-call-for-scrapping-ltcg-tax-on-equities/articleshow/134897107.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Schedules Short-Term Liquidity Absorption Through Variable Repo",
+   "summary": "The Reserve Bank of India scheduled an overnight variable rate reverse repo auction for October 13. The action was initiated after assessing prevailing cash circumstances across the banking sector.",
+   "why": "Reverse repo mechanisms assist monetary authorities in managing surplus cash reserves and keeping overnight lending rates aligned with policy goals.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63793"
+  },
+  {
+   "category": "Economy",
+   "title": "Rupee Rebounds Sharply While Benchmark Government Bond Yields Approach Peaks",
+   "summary": "The Indian currency posted its largest single-day rise in several months following regulatory steps by the central bank. Concurrently, sovereign bond yields reached near 7.4 percent, matching levels unseen since March 2023.",
+   "why": "Regulatory actions can curb currency volatility, while bond yield movements indicate evolving debt market expectations regarding interest rates and borrowing costs.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdG4yQVdMei1yS2pBZy1UQnhmbmlMREdzQlJaNXRFd3pudGNLTmNYSF91bVo5eVAyaUtwNWFWeFhNRTlGR0FRWWZPM0hzQUdWRE9kbnZLcXR4M3JzSTVDX2xnWFo1U01pUmFVWlF1RGI1UThsVWh5T2p0ME1UU2daOUdxYzVRbWxHZjlYTGtyMzRpNWZMTE9zOTBzZUxodTlnZDgwTzAzWEJid1NaSjB6S2JrU1gtVWl1Qi0zZGVzOV9saWdpNUJqbm9vZWlzWkJYNjVHSDJrLTE2OXY3NlhTdGtR0gHvAUFVX3lxTE9tcllBNmxFbGhOWDVtampCWUFYYkw1TGFYNm5NMENzc1lJQjV2ZFlmQ0tlclluNXFMbFk3eFNnT0xDQTU2Um5kV2RLSURobEphNm5xaFZfbVVmeW5ld0pUQ0NZc2RwN280NjIzRTk3eGEtYlBhTVFmakVaQ1JSV2pBSnBNRXVlLWhycHpNcUdONEJoQjhiV3d3T2ttLWlhZzRqWWlxVVBTRDdsZVB0YTlMNGJyTUpwMVFHOTRKb3UzNEM1RjJlUHBOLTd2WTZyWlU1OVN1LTRObFJqUWxwSFMtTnhMZEd1YWZ4OTNndnVJ?oc=5"
   }
  ]
 }
