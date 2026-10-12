@@ -84,6 +84,34 @@ Return ONLY a JSON array, no other text.
 HEADLINES:
 """
 
+CHARTS = {"Nifty 50": "^NSEI", "Sensex": "^BSESN", "Bank Nifty": "^NSEBANK", "S&P 500": "^GSPC", "Nasdaq": "^IXIC"}
+CHARTS_OUT = "data/charts.json"
+
+def chart_data():
+    """One year of daily candles per index, saved for the site's own chart."""
+    try:
+        out = json.load(open(CHARTS_OUT, encoding="utf-8"))
+    except Exception:
+        out = {}
+    for name, sym in CHARTS.items():
+        try:
+            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=1y&interval=1d"
+            r = json.loads(get(u))["chart"]["result"][0]
+            q, off, rows = r["indicators"]["quote"][0], r["meta"].get("gmtoffset", 0), {}
+            for t, o, h, l, c in zip(r["timestamp"], q["open"], q["high"], q["low"], q["close"]):
+                if None in (o, h, l, c):
+                    continue
+                d = datetime.fromtimestamp(t + off, timezone.utc).strftime("%Y-%m-%d")
+                rows[d] = {"time": d, "open": round(o, 2), "high": round(h, 2), "low": round(l, 2), "close": round(c, 2)}
+            if len(rows) > 20:
+                out[name] = [rows[k] for k in sorted(rows)]
+                print(f"chart ok: {name}: {len(rows)} days")
+        except Exception as e:
+            print(f"chart failed: {name}: {e}", file=sys.stderr)
+    if out:
+        with open(CHARTS_OUT, "w", encoding="utf-8") as f:
+            json.dump(out, f, separators=(",", ":"))
+
 GEMINI_MODEL = "gemini-3.8-flash"
 
 def ask_llm(prompt):
@@ -123,6 +151,7 @@ def summarize(items):
     return json.loads(text)
 
 def main():
+    chart_data()
     items = headlines()
     if len(items) < 5:
         sys.exit("Too few headlines fetched; keeping the previous brief.")
@@ -140,7 +169,7 @@ def main():
     if len(out) < 3:
         sys.exit("Too few valid items; keeping the previous brief.")
     ist = datetime.now(timezone(timedelta(hours=5, minutes=30)))
-    data = {"date": ist.strftime("%A, %d %B %Y, %I:%M %p") + " IST", "ticker": ticker() or old_ticker(), "items": out}
+    data = {"date": ist.strftime("%A, %d %B %Y"), "ticker": ticker() or old_ticker(), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     print(f"Wrote {len(out)} items, {len(data['ticker'])} ticker entries.")
