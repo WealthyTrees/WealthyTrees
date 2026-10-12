@@ -31,3 +31,28 @@ function refresh(){if(document.hidden)return;
       e.querySelector('.v').textContent=fmt(n,q.price);const c=e.querySelector('.c');
       c.className='c '+(ch>=0?'up':'dn');c.textContent=(ch>=0?'▲ ':'▼ ')+Math.abs(ch).toFixed(2)+'%'})})}).catch(()=>{})}
 setInterval(refresh,60000);setTimeout(refresh,2500);
+
+/* Newsroom: tabs + Live Wire */
+const tabs=[['t-live','p-live'],['t-brief','p-brief']];
+tabs.forEach(([t,p])=>$(t).addEventListener('click',()=>{tabs.forEach(([t2,p2])=>{const on=t2===t;$(t2).setAttribute('aria-selected',on);$(p2).hidden=!on})}));
+let wire=[],wcat='All';
+const ago=ms=>{const m=Math.round((Date.now()-ms)/60000);return m<1?'just now':m<60?m+' min ago':m<1440?Math.floor(m/60)+' h ago':'yesterday'};
+function drawWire(){
+  const cats=['All',...new Set(wire.map(x=>x.cat))],bar=$('lw-cats');
+  if(bar.children.length!==cats.length){bar.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.className='chip';b.textContent=c;b.setAttribute('aria-pressed',c===wcat);b.onclick=()=>{wcat=c;bar.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));drawWire()};bar.append(b)})}
+  const ol=$('wire');ol.innerHTML='';
+  wire.filter(x=>wcat==='All'||x.cat===wcat).slice(0,25).forEach((x,i)=>{
+    const li=document.createElement('li');li.style.animationDelay=(i*25)+'ms';
+    const w=document.createElement('span');w.className='when';w.textContent=ago(x.t);
+    const a=document.createElement('a');a.href=x.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=x.title;
+    const m=document.createElement('span');m.className='meta';
+    const c=document.createElement('span');c.className='pill';c.textContent=x.cat;
+    const s=document.createElement('span');s.textContent=x.source;m.append(c,s);
+    if(Date.now()-x.t<1800000){const n=document.createElement('span');n.className='pill new';n.textContent='NEW';m.prepend(n)}
+    const d=document.createElement('div');d.append(a,m);li.append(w,d);ol.append(li)});
+}
+function loadWire(){if(document.hidden)return;
+  fetch('/api/headlines').then(r=>r.json()).then(j=>{wire=j.items||[];
+    $('lw-note').textContent=wire.length?'Auto-updates every few minutes. Headlines link to the original publishers.':'No headlines right now. Please check back soon.';drawWire()})
+  .catch(()=>{$('lw-note').textContent='Live headlines are unavailable right now. See Today\u2019s brief.'})}
+loadWire();setInterval(loadWire,180000);setInterval(()=>{if(wire.length&&!document.hidden)drawWire()},60000);

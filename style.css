@@ -161,3 +161,22 @@ nav{margin-left:auto}
 @media(max-width:640px){.ctl{gap:.4rem .9rem}.chip{padding:.45rem .9rem}}
 
 .track i{font-style:normal;margin-right:.1rem}
+
+/* ===== v10: newsroom tabs + live wire ===== */
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1rem}
+.tab{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);padding:.7rem 1.4rem;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;transition:transform .18s,border-color .18s,background .18s;-webkit-tap-highlight-color:transparent}
+@media(hover:hover){.tab:hover{transform:translateY(-2px);border-color:var(--up)}}
+.tab:active{transform:scale(.96)}.tab[aria-selected=true]{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
+.pulse{width:9px;height:9px;border-radius:50%;background:var(--down);animation:pulse2 1.4s infinite}
+@keyframes pulse2{0%{box-shadow:0 0 0 0 rgba(214,75,58,.55)}100%{box-shadow:0 0 0 8px rgba(214,75,58,0)}}
+.wire{list-style:none;margin:0;padding:0}
+.wire li{display:grid;grid-template-columns:6.5rem 1fr;gap:.2rem 1rem;padding:.9rem .4rem;border-bottom:1px solid var(--line);align-items:baseline;animation:rise .4s ease both;transition:background .2s}
+@media(hover:hover){.wire li:hover{background:rgba(127,127,127,.08)}}
+.when{color:var(--mute);font-size:.88rem;font-variant-numeric:tabular-nums}
+.wire a{color:var(--ink);text-decoration:none;font-weight:600;line-height:1.4}.wire a:hover{color:var(--up);text-decoration:underline}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem .6rem;align-items:center;font-size:.82rem;color:var(--mute);margin-top:.25rem}
+.pill{font-size:.72rem;font-weight:700;padding:.1rem .55rem;border-radius:999px;border:1px solid var(--line)}
+.pill.new{background:var(--up);color:var(--on-up);border-color:var(--up)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:640px){.wire li{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.pulse,.wire li{animation:none}.tab{transition:none}}

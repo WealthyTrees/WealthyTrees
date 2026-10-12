@@ -7,19 +7,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/style.css?v=9"></head><body>
+<link rel="stylesheet" href="/style.css?v=10"></head><body>
 <header><div class="wrap"><a class="logo" href="/"><img src="/logo.svg" alt=""><span>WealthyTrees</span></a>
 <nav><a href="/" aria-current="page">Today</a><a href="/markets.html">Markets</a><a href="/learn.html">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
 <div class="ticker" aria-label="Market snapshot"><div class="track" id="track"></div></div>
 <main class="wrap"><section class="hero"><div><span class="date" id="date">Loading&hellip;</span>
 <h1>Markets, simplified. Daily.</h1>
 <p>The day&rsquo;s stock and commodity news in short, clear summaries. What happened, why it matters, and the concept behind it.</p>
-<div class="cta"><a class="btn" href="#brief">Read today&rsquo;s brief</a><a class="btn ghost" href="/learn.html">Start learning</a></div></div>
+<div class="cta"><a class="btn" href="#brief">Read the latest news</a><a class="btn ghost" href="/learn.html">Start learning</a></div></div>
 <svg viewBox="0 0 64 64" role="img" aria-label="WealthyTrees logo: a tree made of candlesticks"><g class="c" style="--d:.1s"><line x1="12" y1="28" x2="12" y2="45" stroke="#0F8A5F" stroke-width="1.6"/><rect x="9" y="32" width="6" height="10" fill="#0F8A5F"/></g><g class="c" style="--d:.25s"><line x1="22" y1="16" x2="22" y2="44" stroke="#0F8A5F" stroke-width="1.6"/><rect x="19" y="22" width="6" height="18" fill="#0F8A5F"/></g><g class="c" style="--d:.4s"><line x1="32" y1="4" x2="32" y2="44" stroke="#0F8A5F" stroke-width="1.6"/><rect x="29" y="10" width="6" height="28" fill="#0F8A5F"/></g><g class="c" style="--d:.55s"><line x1="42" y1="12" x2="42" y2="44" stroke="#D64B3A" stroke-width="1.6"/><rect x="39" y="18" width="6" height="22" fill="#D64B3A"/></g><g class="c" style="--d:.7s"><line x1="52" y1="26" x2="52" y2="45" stroke="#0F8A5F" stroke-width="1.6"/><rect x="49" y="30" width="6" height="12" fill="#0F8A5F"/></g><rect x="29" y="44" width="6" height="16" class="trunk"/><rect x="22" y="58" width="20" height="3" class="trunk"/></svg></section>
 <div class="feat"><a class="cardlink" href="/markets.html"><h3>Live markets</h3><p>Charts and a screener, with a guide to reading them.</p></a><a class="cardlink" href="/learn.html"><h3>Learn</h3><p>A short course on companies, ratios and charts.</p></a><a class="cardlink" href="/about.html"><h3>No hype</h3><p>No tips, no predictions. What happened, and why.</p></a></div>
-<h2 class="sec" id="brief">Today&rsquo;s brief</h2><div class="grid" id="grid"></div></main>
+<h2 class="sec" id="brief">Newsroom</h2>
+<div class="tabs" role="tablist" aria-label="Newsroom"><button class="tab" role="tab" id="t-live" aria-selected="true" aria-controls="p-live"><span class="pulse"></span>Live Wire</button><button class="tab" role="tab" id="t-brief" aria-selected="false" aria-controls="p-brief">Today&rsquo;s brief</button></div>
+<section id="p-live" role="tabpanel" aria-labelledby="t-live"><div class="chips" id="lw-cats" role="group" aria-label="Filter headlines"></div><p class="note" id="lw-note">Loading the latest headlines&hellip;</p><ol class="wire" id="wire"></ol></section>
+<section id="p-brief" role="tabpanel" aria-labelledby="t-brief" hidden><div class="grid" id="grid"></div></section></main>
 <div id="nl"></div>
 <footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a></div></footer>
-<script src="/app.js?v=9"></script>
-<script src="/site.js?v=9"></script>
+<script src="/app.js?v=10"></script>
+<script src="/site.js?v=10"></script>
 </body></html>
