@@ -3,23 +3,23 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,381",
-   "change": -0.62
+   "value": "22,363",
+   "change": -0.7
   },
   {
    "name": "SENSEX",
-   "value": "71,971",
-   "change": -0.69
+   "value": "71,925",
+   "change": -0.76
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,209",
-   "change": -0.18
+   "value": "4,199",
+   "change": -0.4
   },
   {
    "name": "CRUDE WTI",
-   "value": "$91.2",
-   "change": -0.65
+   "value": "$92.9",
+   "change": 1.16
   },
   {
    "name": "USD/INR",
@@ -44,68 +44,68 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Filing Reveals Reliance Owns Part of Jio Alongside Foreign Tech Giants",
-   "summary": "Regulatory filings show that Reliance Industries possesses a 66.43% stake in Jio Platforms. The remaining equity belongs to global tech firms such as Meta and Google, alongside private capital funds.",
-   "why": "Understanding corporate ownership structures helps investors evaluate who benefits when a major subsidiary enters public markets.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo-who-really-owns-jio-platforms-reliance-doesnt-own-100-meta-google-7-others-are-major-shareholders-drhp-data-11791786878913.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Tata Consultancy Services Posts Higher Quarterly Earnings and Announces Payout",
-   "summary": "The technology major recorded a 15% annual increase in consolidated net earnings to 13,884 crore rupees. The board also authorized an interim distribution of 12 rupees per share.",
-   "why": "Quarterly earnings and dividend announcements demonstrate corporate profitability and cash returns directly to shareholders.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/tcs-shares-after-6-rally-in-2-sessions-after-q2-results-what-are-technicals-indicating-for-the-it-major/articleshow/134884849.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Equities Surrender Opening Advances Under Sustained Overseas Selling",
-   "summary": "The benchmark Sensex and Nifty gave up initial upward momentum during the trading session. Ongoing divestment by foreign institutional investors contributed to the downward pressure.",
-   "why": "Overseas institutional flows significantly impact domestic market direction because global funds deploy large volumes of capital.",
-   "source": "ETV Bharat",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaDY5d3ZtcGlGNHh1d2RvTW92TnhFTTFleTlrUko0dGVDUjU2a20yZGk4NVB5em5nWFlhMzhmUjZYR2RObDJ2aW5odmJCb1JtRC1fV2VJQUdrNFFhWE12UWNYdFNrVUJYWHptTFlESkE2RDF6SXQyaVZQLU1MTWZobVhzQ3V6dmd5S3djT1FPNHNla21yUm84eWVzRy1UOVZsRlB4VUs1aU1EZ9IBrwFBVV95cUxPVUZtZXV0UnlKWmtwb20tcTc1VnVfaVhYdEtoTl9FMzRxdklmQl9SV2RMVF9lY29zVVIxamxNWkUxbDVHZVVLZGRwOVQzSEFhTC16eERlV1U2c1lNMDFNNFJ0V051TkdUeHFQZE9SbXdIeGpKcmJNUW1kRF9QbEh0RGwwakJoSWIwbVR6QTJCSWVSQ2Y4RllRckNsRlJXUkpIWlF2SEZtQUlPaTMzU0JZ?oc=5"
-  },
-  {
    "category": "Economy",
-   "title": "Central Bank Establishes Dedicated Dollar Facility for State Oil Refiners",
-   "summary": "The Reserve Bank of India set up a direct window to satisfy daily foreign currency requirements for three public petroleum marketing firms. This mechanism intends to handle market demand during prevailing conditions.",
-   "why": "Providing foreign exchange directly to large fuel importers prevents massive dollar purchases from straining the open currency market.",
+   "title": "Central Bank Creates Dedicated Currency Facility for Petroleum Companies",
+   "summary": "The Reserve Bank of India introduced an exclusive channel allowing state-owned fuel refiners to fulfill their daily foreign exchange needs. This measure satisfies energy import obligations without placing immediate strain on regular currency trading desks.",
+   "why": "Separating massive corporate energy purchases from routine currency dealings prevents sudden dollar demand from sharply weakening the local currency.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63784"
   },
   {
    "category": "Economy",
-   "title": "Indian Currency Rallies One Percent After Central Bank Market Actions",
-   "summary": "The rupee strengthened by one percent following regulatory changes by the monetary authority. Interventions included routing oil-related foreign exchange transactions away from standard channels and increasing hedging costs.",
-   "why": "A rising domestic currency lowers import expenses for developing economies but can reduce overseas revenue for exporters.",
+   "title": "Policy Revisions Seek to Widen Overseas Investment in Sovereign Debt",
+   "summary": "New regulatory adjustments were introduced to encourage greater cross-border participation in central government securities. The initiative seeks to bring more international capital into domestic sovereign bonds.",
+   "why": "Broadening external investment in government debt helps finance state borrowing and enhances bond market depth.",
+   "source": "Press Information Bureau",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9lUDRBaE03QUhlNGJpR2xmUDBPejBuaXc0MUt3emJEeDlENmxVQy1EdUdVa3VRb0RRTEJyRlROVGZ0ZlZYcjEtUnB4RDAxS0p1MzVvUG4xd3lSbks4WXVLRHo3ZkxSSHRTaVYxc0pmMXhNbjNnLXhN?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Domestic Equities Pull Back Following Central Bank Actions and Price Concerns",
+   "summary": "Indian shares surrendered initial morning gains as participants assessed central bank policy steps and upcoming cost-of-living data. Profit-taking across major counters pulled the broader market lower by the close.",
+   "why": "Markets often experience selling pressure and caution when investors recalibrate expectations ahead of macroeconomic inflation data.",
    "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQN3Q4Z3VQUzhKYUZNaXdCaXk2YWRvbFA5dVRuYVc4ZGx0YWo1UzlaM2Q5SkxPQXRsR0ZJNFFZT0huXzhEa29iNEd0ajM5cXVoM0ZfaVJ1bjFfcTRqM3NRRGJtSXo2Q1hiZ0NQVk1oZmtkbVJZbFpZWFhobnBhendjaEVIMTBLOHJ1ZUtOcExpaHJwUWVQRVdRN3NuWi1QVDllbGo2Y2xZa2VTYWhWNDN3SEY3Mi1ZRWxxTFB0RnkybkxxMVFq?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQenFsbDRhbVJGa21YRV9MV1BuQkhlUGNYVzlhUU5nMmR6NWdnd19ZaU1IWkYwVExZbVVJUWNoR3RNNnlodEpiTUJVelRKQ1I0SUJRQzFlNjl3cUszd0lpbW5KR3BFNnJDUkU5ZGpaRHdUdFFxODJOYmJ3TGp4S2NPMV8tRHdLVk8zTzktaS1Sa1kyUS1EZlNuaDQtN1Rwdmo4dGhIbVM0NUM3ZElSNExNZw?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Multiple Companies Prepare for Mid-October Initial Public Offerings",
+   "summary": "Four diverse enterprises are opening their public subscription windows across several business sectors in the middle of October. Institutional anchor investors will participate first, followed by broader bidding across varied issue sizes.",
+   "why": "Initial public offerings allow expanding corporations to tap public capital while providing retail participants new opportunities to invest in diverse industries.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo/ipo-gmp-bonfiglioli-vs-tonbo-vs-sahajanand-medical-vs-zetwerk-dates-price-band-key-details-11791797199572.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Manufacturer Approves Integration of Defence and Clean Power Subsidiaries",
+   "summary": "Goodluck India sanctioned the structural combination of its defense engineering and renewable power units into the main enterprise. The internal consolidation is intended to unify specialized business segments under one operational umbrella.",
+   "why": "Corporate mergers can improve operating efficiency by reducing management overlap and pooling balance-sheet resources across related business units.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/goodluck-india-shares-surge-17-as-merger-expands-defence-arm-to-join-firm-along-with-green-energy-unit/articleshow/134888841.cms"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Decline on Domestic Exchanges Ahead of American Inflation Figures",
-   "summary": "Gold and silver futures declined on the MCX despite soft crude costs and an easing greenback. Market participants paused active trading while awaiting fresh economic releases from the United States.",
-   "why": "Bullion values are sensitive to global monetary policy because higher interest rates generally reduce the appeal of non-yielding commodities.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-prices-fall-rs-1450/10g-silver-down-rs-1400/kg-despite-a-soft-dollar-ahead-of-us-economic-data-time-to-sell/articleshow/134885210.cms"
+   "title": "Domestic Bullion Rates Ease Prior to Major Autumn Celebrations",
+   "summary": "Prices for physical gold and silver dropped across domestic retail counters leading up to the Dussehra holiday. The price dip arrives during a customary period when households traditionally step up purchases of precious metals.",
+   "why": "Jewelry demand tends to rise around key Indian holidays, making short-term commodity price movements relevant for retail consumer budgets.",
+   "source": "Upstox",
+   "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPU1oxdExickYzZ3JRd2RDLUFDS3RndEtaY1dhYXFoWEVaQXJNRnA3b21xZ2k4c3VyTGcyZGRDV05jeW55TlRLUFlOSm5MQkc3YjJOMmxZYU1PV2F4N1ZNVDRERUY3X0ZFUTdpZDc2bXI2VFpvQUg4NUlFZkd6TlFodkhfSUxIQ0N0YVlDOFg0dzNlMVNYUklKSnVuWjNQMkdBM2VVQzM5bjJ2em9sNFotWUZ4ejM1WUNIV3NwVHBVdDd2SWpMTEZsbXdIdEl4RWhBMzRlRTJaNmNYZUw2RE5hM3lfdnJ3T0VJcFpWYmdkaEhPOUQxR2dDbHRfUldPZGNnVTRGVA?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "American Benchmark Approaches Highs as Market Awaits Results and Macro Data",
-   "summary": "The S&P 500 hovered near historic peak levels while market participants monitored upcoming corporate earnings. Investors are also watching forthcoming inflation prints for indications on economic momentum.",
-   "why": "Broad index movements reflect collective sentiment regarding corporate profit strength and impending borrowing costs in the world's largest economy.",
-   "source": "TradingView",
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQUEZOaXZrbEtxWHhaQjBTRk1IZ0ljM3FuNkUxVW9rZjAwNzYwOW1ONzFJdi1qd2hxbjBSTkhpZXc4cEZkS0gwallFWDVGNnVvVldlWl9YVEJSM21rUWpJTmFRTV81VVh1cW9GLVZmaG1TYk1rTkVHZGdmaGl4YlZIN3NscGVTVTJBTzI0cGV0ZWJrdE1YenMydkhYLXkwdER5MFpJV3R4aVRLNGgwcGNYUGM5Vm5ER0p6VmVvSGdWanJ3MW5VazROM29wM3hTQQ?oc=5"
+   "title": "American Index Futures Gain as Lower Fuel Costs Support Sentiment",
+   "summary": "Futures tracking major United States benchmark indices climbed while crude values pulled back ahead of corporate reporting cycles. Investors turned their focus to quarterly company scorecards as trading commenced.",
+   "why": "Falling energy expenses help lower operating costs across corporations, often offering support to broader market sentiment.",
+   "source": "AOL.com",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE01RGxZckM0SUFkU2c3N0xCam5UalNwdE8zR3RPT2I5TldVWHE5VjZpbGF1UVNlVEFJN3RwUVViSkZKLWQtdUhneE8yQVlweERuUTZaRUFsVGJrNDY4TllTdWxMcDJaRUFGMzZlNzA5aFhjOFRDaVB3?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Banking Earnings and Consumer Numbers Take Center Stage on Wall Street",
-   "summary": "US exchanges face an active period featuring financial sector quarterly performance reports, consumer price metrics, and retail sales statistics. These prints will offer a clearer snapshot of overall economic health.",
-   "why": "Consumer activity and financial firm results provide foundational signals about loan expansion, credit quality, and household spending.",
-   "source": "Investing.com India",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONFdfckhieE9jbVdmTFpkWkw2YzhYN0psa1Y1ZW9aS2RQU1VhQjB2WkpaYlczbTAta2FJY3RiMExCUzJVa3dNUTkwVDZSZFlDSl9QRWxpM3BzeldvVGE5UHZNUTg4YXdCLW5laG9nWjVlM0lkTHlKeGVuc1huUmhOM3hVZGFnVWhPWFc5U1p4dmhQXzc3WUNzaDhQQjM0MWVuemlaSFoyeUkwRDNXS2c?oc=5"
+   "title": "S&P 500 Climbs Despite Government Bond Yields Reaching Annual Peak",
+   "summary": "The leading American equity benchmark finished the week up over one percent even as sovereign ten-year borrowing yields scaled yearly highs. Stocks managed to advance despite parallel increases in fixed-income returns.",
+   "why": "Higher sovereign bond yields usually challenge equities by making risk-free investments more appealing, making simultaneous equity gains noteworthy.",
+   "source": "TradingKey",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa1ZiS1M4WEhxcHJCbFdMbUI4YkF5aHRzelg3QnRYdmZ2SUVOTV9taGJQNTJWUE5OcXJjRTJvdmVyQUxfV1BpaHhhQXg1dUdha3ZUY2E2Ym15eC1aVHJuOWlUWERXUjBvNTdWbzBUdlJPa3lBX0xLbUxoazZ0aFpKV05ydFAwTUo5Zl8xS3l6ZmZEVTJGQXZKRWdZdG5mNHdHSmxfR21ab2NzTXlzVXA3M3hDZWtzVUppYmN1NDZKTFR5NlVNVmpCNUF2UE9jMm1uc2FMU0swR2lmU1E?oc=5"
   }
  ]
 }
