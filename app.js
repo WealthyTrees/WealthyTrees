@@ -33,7 +33,7 @@ function refresh(){if(document.hidden)return;
 setInterval(refresh,60000);setTimeout(refresh,2500);
 
 /* Newsroom: tabs + Live Wire */
-const tabs=[['t-live','p-live'],['t-brief','p-brief']];
+const tabs=[['t-live','p-live'],['t-reads','p-reads'],['t-brief','p-brief']];
 tabs.forEach(([t,p])=>$(t).addEventListener('click',()=>{tabs.forEach(([t2,p2])=>{const on=t2===t;$(t2).setAttribute('aria-selected',on);$(p2).hidden=!on})}));
 let wire=[],wcat='All';
 const ago=ms=>{const m=Math.round((Date.now()-ms)/60000);return m<1?'just now':m<60?m+' min ago':m<1440?Math.floor(m/60)+' h ago':'yesterday'};
