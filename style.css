@@ -272,3 +272,11 @@ nav{margin-left:auto}
 .sp-simple[hidden]{display:none}
 .sp-quote strong{font-size:1.05rem}
 @media(prefers-reduced-motion:reduce){.pill.live{animation:none}}
+
+/* v15: mobile hero */
+@media(max-width:760px){
+.hero{gap:1rem;padding-top:1.2rem;text-align:center}
+.hero svg{max-width:min(58vw,230px);order:-1;justify-self:center;margin:0 auto;padding:1rem;border-radius:28px;background:radial-gradient(circle at 50% 45%,rgba(62,207,142,.16),transparent 70%)}
+.hero h1{font-size:clamp(2rem,9vw,2.6rem)}
+.hero p{margin-left:auto;margin-right:auto}
+}

@@ -1,4 +1,4 @@
-/* WealthyTrees Daily Edition v3: Instagram-Stories-style tab inside the Newsroom. No prices. Uses Sprout's stories (/api/pulse). */
+/* WealthyTrees Daily Edition v4: Instagram-Stories-style tab inside the Newsroom. No prices. Uses Sprout's stories (/api/pulse). */
 (function () {
   "use strict";
   var tabs = document.querySelector('.tabs[aria-label="Newsroom"]') || document.querySelector(".tabs"), live = document.getElementById("p-live");
@@ -43,7 +43,7 @@
       if (x.summary) s.append(el("p", "sum", x.summary));
       if (x.simple) { var ex = el("div", "ex wd"); ex.append(el("b", "", "In simple words"), el("span", "", x.simple)); if (x.term && x.meaning) ex.append(el("small", "", x.term + " \u00B7 " + x.meaning)); s.append(ex); }
       var sb = el("div", "foot"), seen = 0;
-      (x.sources || []).forEach(function (sc) { if (sc && safe(sc.url) && seen < 3) { sb.append(link((seen ? sc.name : "Read full story at " + sc.name) + " \u2197", sc.url)); if (!seen) sb.lastChild.className = "go main"; seen++; } });
+      (x.sources || []).forEach(function (sc) { if (sc && safe(sc.url) && seen < 1) { sb.append(link((seen ? sc.name : "Read full story at " + sc.name) + " \u2197", sc.url)); if (!seen) sb.lastChild.className = "go main"; seen++; } });
       if (!seen) sb.append(el("small", "", "Source link not available"));
       s.append(sb); slides.push(s);
     });

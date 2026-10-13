@@ -32,6 +32,6 @@ function refresh(){if(document.hidden)return;
       c.className='c '+(ch>=0?'up':'dn');c.textContent=(ch>=0?'▲ ':'▼ ')+Math.abs(ch).toFixed(2)+'%'})})}).catch(()=>{})}
 setInterval(refresh,60000);setTimeout(refresh,2500);
 
-/* Newsroom: tabs (Live Wire lives in wire.js, Quick Reads in reads.js) */
-const tabs=[['t-live','p-live'],['t-reads','p-reads'],['t-brief','p-brief']];
+/* Newsroom: tabs (Live Wire lives in wire.js) */
+const tabs=[['t-live','p-live'],['t-brief','p-brief']];
 tabs.forEach(([t,p])=>$(t).addEventListener('click',()=>{tabs.forEach(([t2,p2])=>{const on=t2===t;$(t2).setAttribute('aria-selected',on);$(p2).hidden=!on})}));
