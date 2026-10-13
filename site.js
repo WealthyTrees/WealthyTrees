@@ -1,7 +1,7 @@
 /* WealthyTrees site.js v19: theme bar (under header), IST clock + market status, newsletter box, design + Daily Edition loaders */
 (function () {
   "use strict";
-  var BD = "YOUR_BUTTONDOWN_USERNAME"; /* <- put your Buttondown username between the quotes */
+  var BD = "arorapriyansh"; /* <- put your Buttondown username between the quotes */
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   var wrap = document.querySelector("header .wrap");
 
