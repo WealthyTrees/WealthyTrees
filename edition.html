@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Edition | WealthyTrees</title>
+<meta name="description" content="The WealthyTrees Daily Edition: today's market and economy stories as a flip-through newspaper. Short, plain-English, no tips.">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=19"><link rel="stylesheet" href="/edition.css?v=1"></head><body>
+<header><div class="wrap"><a class="logo" href="/"><img src="/logo.svg" alt=""><span>WealthyTrees</span></a>
+<nav><a href="/">Today</a><a href="/edition.html" aria-current="page">Edition</a><a href="/markets.html">Markets</a><a href="/learn.html">Learn</a><a href="/about.html">About</a><a class="navcta" href="#nl">Subscribe</a></nav></div></header>
+<div class="press" id="press" role="status" aria-label="Printing today's edition"><div class="roll"></div><p>Printing today&rsquo;s edition&hellip;</p><div class="bar"><i></i></div></div>
+<main class="ed wrap" id="ed">
+  <div class="ed-top"><p>Swipe, use the edges, or press &larr; &rarr; to turn pages.</p><button class="chip" id="flat" type="button" aria-pressed="false">Switch to scroll view</button></div>
+  <div class="tilt" id="tilt">
+    <div class="book" id="book" role="region" aria-roledescription="newspaper" aria-label="WealthyTrees Daily Edition"></div>
+    <button class="edge l" id="edge-l" type="button" aria-label="Previous page" tabindex="-1">&lsaquo;</button>
+    <button class="edge r" id="edge-r" type="button" aria-label="Next page" tabindex="-1">&rsaquo;</button>
+  </div>
+  <div class="ed-nav"><button class="btn ghost" id="prev" type="button">&larr; Back</button><div class="dots" id="dots"></div><button class="btn" id="next" type="button">Next &rarr;</button></div>
+  <p class="sr" id="live" aria-live="polite" style="position:absolute;left:-9999px"></p>
+  <noscript><p>The Daily Edition needs JavaScript. Please read the stories on the <a href="/">home page</a>.</p></noscript>
+</main>
+<div id="nl"></div>
+<footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a></div></footer>
+<script src="/site.js?v=19"></script><script src="/edition.js?v=1"></script>
+</body></html>
