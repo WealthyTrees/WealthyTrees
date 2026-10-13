@@ -3,6 +3,7 @@
 // removes tips, predictions, price-update cards and live blogs, and caches for 5 minutes.
 // getHeadlines() is also used by /api/pulse. No AI is used here.
 //
+// v19: added RBI and PIB direct feeds, Google News gets 9s, lifestyle/routine items filtered.
 // v18b: removed Business Standard and Financial Express feeds (they answered 403 'blocked'; their stories still arrive via Google News).
 // v18: publishers first, Google News last and only twice, at most 5 requests at once, a 12-second overall limit,
 // and the last good list is kept in storage so one bad moment cannot empty the page.
@@ -20,6 +21,9 @@ const FEEDS = [
   { cat: "Economy", url: "https://www.livemint.com/rss/economy", name: "Mint Economy" },
   { cat: "Markets", url: "https://www.thehindubusinessline.com/markets/feeder/default.rss", name: "BusinessLine Markets" },
   { cat: "Economy", url: "https://www.thehindubusinessline.com/economy/feeder/default.rss", name: "BusinessLine Economy" },
+  // Official sources (RBI and PIB): policy news straight from the source.
+  { cat: "Economy", url: "https://www.rbi.org.in/pressreleases_rss.xml", name: "RBI Press Releases" },
+  { cat: "Economy", url: "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3", name: "PIB Press Releases" },
   // Google News last and only twice: it often answers "busy" to servers, and slow answers must not block the rest.
   gn("Economy", "RBI+repo+rate+inflation+India+economy"), gn("Global", "Federal+Reserve+US+tariffs+crude+oil+markets"),
 ];
@@ -39,6 +43,7 @@ const NAMES = {
   "economictimes.indiatimes.com": "Economic Times", "livemint.com": "Livemint", "business-standard.com": "Business Standard",
   "thehindubusinessline.com": "BusinessLine", "financialexpress.com": "Financial Express", "thehindu.com": "The Hindu",
   "moneycontrol.com": "Moneycontrol", "ndtvprofit.com": "NDTV Profit",
+  "rbi.org.in": "RBI", "pib.gov.in": "PIB",
 };
 
 // Not news we want: trading calls, predictions, daily price/rate cards, live blogs, stock-tip lists.
@@ -49,6 +54,9 @@ const NOISE = [
   /\bpredictions?\b/i, /\bkedia advisory\b/i, /\b(resistance|support)\s+(near|at|around|zone)\b/i,
   /\b(rates?|prices?)\s+today\b/i, /\b(gold|silver)\b.{0,30}\b(rates?|prices?)\b.{0,40}\b(today|live|delhi|mumbai|kolkata|chennai)\b/i,
   /\blive\b/i, /\bhoroscope\b/i,
+  // lifestyle and routine items that are not market or economy news
+  /\b(husbands?|wives|wife|spouses?|celebrity|bollywood|cricket|IPL|wedding|recipes?|vacation)\b/i,
+  /\b(money market operations|auction results?|reference rate|weekly statistical|T-?bills? auction)\b/i,
 ];
 
 // Used only when the AI is off: a rough "does this matter" score.
@@ -92,10 +100,10 @@ function parse(xml, cat) {
   return out.slice(0, 15);
 }
 
-const CONCURRENCY = 5, FEED_MS = 5000, TOTAL_MS = 12000, LAST = "headlines:last";
+const CONCURRENCY = 5, FEED_MS = 5000, GN_MS = 9000, TOTAL_MS = 12000, LAST = "headlines:last";
 
 async function pullFeed(f, t00) {
-  const t0 = Date.now(), ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), FEED_MS);
+  const t0 = Date.now(), ctl = new AbortController(), ms_ = f.name.startsWith("Google") ? GN_MS : FEED_MS, timer = setTimeout(() => ctl.abort(), ms_);
   const rep = { feed: f.name, status: 0, items: 0, waitedMs: t0 - t00, ms: 0, error: "" };
   let items = [];
   try {
@@ -106,7 +114,7 @@ async function pullFeed(f, t00) {
     });
     rep.status = r.status;
     if (r.ok) { items = parse(await r.text(), f.cat); rep.items = items.length; }
-  } catch (e) { rep.error = e && e.name === "AbortError" ? "timed out (" + FEED_MS / 1000 + "s)" : String((e && e.message) || e).slice(0, 80); }
+  } catch (e) { rep.error = e && e.name === "AbortError" ? "timed out (" + ms_ / 1000 + "s)" : String((e && e.message) || e).slice(0, 80); }
   finally { clearTimeout(timer); }
   rep.ms = Date.now() - t0;
   return { items, rep };
