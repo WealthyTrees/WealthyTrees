@@ -1,7 +1,7 @@
-/* WealthyTrees site.js v18: theme bar (under header), IST clock + market status, newsletter box, design + Daily Edition loaders */
+/* WealthyTrees site.js v19: theme bar (under header), IST clock + market status, newsletter box, design + Daily Edition loaders */
 (function () {
   "use strict";
-  var BD = "arorapriyansh"; /* <- put your Buttondown username between the quotes */
+  var BD = "YOUR_BUTTONDOWN_USERNAME"; /* <- put your Buttondown username between the quotes */
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   var wrap = document.querySelector("header .wrap");
 
@@ -64,12 +64,12 @@
 })();
 
 (function () {
-  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/design.css?v=2"; document.head.appendChild(l);
+  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/design.css?v=3"; document.head.appendChild(l);
   var s = document.createElement("script"); s.src = "/design.js?v=2"; s.defer = true; document.body.appendChild(s);
 })();
 
 (function () {
   if (!document.getElementById("p-live")) return;
-  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/edition.css?v=4"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/edition.js?v=4"; s.defer = true; document.body.appendChild(s);
+  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/edition.css?v=5"; document.head.appendChild(l);
+  var s = document.createElement("script"); s.src = "/edition.js?v=5"; s.defer = true; document.body.appendChild(s);
 })();

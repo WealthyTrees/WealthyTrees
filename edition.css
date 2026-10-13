@@ -38,3 +38,15 @@
 .go.main{display:inline-block;background:#3ecf8e;color:#08241a;border-radius:99px;padding:.6rem 1.1rem;font-weight:700}
 .sl.on>*:nth-child(6){animation-delay:.6s}
 .sl .ex.wd{display:grid}
+
+/* v5: content always fits the card (top-aligned, safe centering, line limits) */
+.story{height:min(86vh,44rem);height:min(86dvh,44rem);min-height:30rem}
+.sl{justify-content:flex-start;gap:.65rem;padding:4.2rem 1.3rem 1.3rem;overflow:hidden}
+.sl>:first-child{margin-top:auto}.sl>:last-child{margin-bottom:auto}
+.hk{font-size:clamp(1.45rem,6vw,1.9rem);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.sum{font-size:1rem;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.big{font-size:clamp(1.35rem,5.5vw,1.75rem);display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.ex.wd span{font-size:.98rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.ex.wd small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.toc li{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-height:700px){.story{height:min(92vh,44rem);min-height:26rem}.hk{font-size:1.4rem}.sum{-webkit-line-clamp:4}.ex.wd span{-webkit-line-clamp:3}}

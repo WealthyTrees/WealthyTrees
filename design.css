@@ -67,3 +67,6 @@ h2.sec.in::after{width:100%}
 @media(hover:hover){.tseg button:hover{transform:translateY(-1px);border-color:var(--up)}}
 .tseg button::after{content:none!important}
 @media(max-width:640px){.themebar .wrap{justify-content:center}}
+
+/* v3: stop the hero glow from making phones scroll sideways */
+html,body{overflow-x:clip}
