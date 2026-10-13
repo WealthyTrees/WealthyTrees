@@ -1,0 +1,55 @@
+/* WealthyTrees design layer v1 (Phase 1). Motion is off for people who ask for reduced motion. */
+:root{--ease:cubic-bezier(.22,.8,.24,1)}
+html{scroll-behavior:smooth}
+header{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 86%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 24px rgba(0,0,0,.10)}
+.wt-prog{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--up),#8be0b8);transform:scaleX(0);transform-origin:0 50%;z-index:90;pointer-events:none}
+.ticker{-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+
+/* hero */
+.hero{position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-2rem -50vw 0;z-index:-1;margin:auto;
+ background:radial-gradient(40rem 22rem at 78% 40%,color-mix(in srgb,var(--up) 22%,transparent),transparent 70%),radial-gradient(30rem 18rem at 10% 0%,color-mix(in srgb,var(--gold) 14%,transparent),transparent 70%);
+ animation:wtglow 14s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:-2rem -50vw 0;z-index:-1;margin:auto;opacity:.5;
+ background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;
+ -webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 60% 40%,#000,transparent 70%)}
+@keyframes wtglow{to{transform:translate3d(2%,3%,0) scale(1.06)}}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(.6em);animation:wtw .7s var(--ease) forwards;animation-delay:calc(var(--i)*90ms + 120ms)}
+@keyframes wtw{to{opacity:1;transform:none}}
+.hero h1 .hl{position:relative;color:var(--up)}
+.hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:-.04em;height:.09em;border-radius:9px;background:var(--up);transform:scaleX(0);transform-origin:0 50%;animation:wtu .9s var(--ease) 1s forwards}
+@keyframes wtu{to{transform:scaleX(1)}}
+.hero .date,.hero p,.hero .cta{opacity:0;animation:wtf .8s var(--ease) forwards}
+.hero .date{animation-delay:.05s}.hero p{animation-delay:.55s}.hero .cta{animation-delay:.75s}
+@keyframes wtf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero svg{animation:wtfloat 7s ease-in-out infinite;filter:drop-shadow(0 18px 28px color-mix(in srgb,var(--up) 25%,transparent))}
+@keyframes wtfloat{50%{transform:translateY(-8px)}}
+
+/* buttons */
+.btn{position:relative;overflow:hidden;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%)}
+@media(hover:hover){.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.18)}.btn:hover::after{transform:translateX(120%);transition:transform .7s var(--ease)}}
+.btn:active{transform:scale(.97)}
+
+/* cards */
+.cardlink{position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.cardlink::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--up),transparent);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease)}
+@media(hover:hover){.cardlink:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(0,0,0,.14);border-color:var(--up)}.cardlink:hover::before{transform:scaleX(1)}}
+h2.sec{position:relative;display:inline-block}
+h2.sec::after{content:"";display:block;height:3px;width:2.2rem;margin-top:.45rem;border-radius:9px;background:var(--up);transition:width .6s var(--ease)}
+h2.sec.in::after{width:100%}
+
+/* scroll reveal: only hides things once JS is running */
+.js-rv .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--r,0)*90ms)}
+.js-rv .rv.in{opacity:1;transform:none}
+
+@media(max-width:640px){.hero::after{background-size:34px 34px}.hero svg{animation-duration:9s}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .hero::before,.hero svg{animation:none}
+ .hero h1 .w,.hero .date,.hero p,.hero .cta{animation:none;opacity:1;transform:none}
+ .hero h1 .hl::after{animation:none;transform:scaleX(1)}
+ .js-rv .rv{opacity:1;transform:none;transition:none}
+ .btn,.cardlink,.btn::after{transition:none}
+}

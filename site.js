@@ -1,7 +1,7 @@
-/* WealthyTrees site.js v15: theme button, IST clock + market status, newsletter box, Daily Edition loader */
+/* WealthyTrees site.js v17: theme button, IST clock + market status, newsletter box, Daily Edition loader */
 (function () {
   "use strict";
-  var BD = "arorapriyansh"; /* <- put your Buttondown username between the quotes */
+  var BD = "YOUR_BUTTONDOWN_USERNAME"; /* <- put your Buttondown username between the quotes */
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   var wrap = document.querySelector("header .wrap");
 
@@ -46,7 +46,7 @@
       }
     }
     tick(); setInterval(tick, 1000);
-    wrap.append(cw, tw);
+    wrap.append(cw); document.body.append(tw);
   }
 
   /* ---- Newsletter box (Buttondown) ---- */
@@ -58,6 +58,11 @@
       '<input type="email" name="email" placeholder="Your email" aria-label="Email address" required><button class="btn" type="submit">Subscribe</button></form>' +
       '<small>Free. Unsubscribe anytime. Education only, not investment advice.</small></div>';
   }
+})();
+
+(function () {
+  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/design.css?v=1"; document.head.appendChild(l);
+  var s = document.createElement("script"); s.src = "/design.js?v=1"; s.defer = true; document.body.appendChild(s);
 })();
 
 (function () {
