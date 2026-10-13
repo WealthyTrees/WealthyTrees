@@ -1,10 +1,10 @@
 {
- "date": "Tuesday, 13 October 2026",
+ "date": "Wednesday, 14 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,363",
-   "change": -0.7
+   "value": "22,722",
+   "change": 0.89
   },
   {
    "name": "SENSEX",
@@ -13,99 +13,107 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,206",
-   "change": 0.38
+   "value": "4,183",
+   "change": -0.18
   },
   {
    "name": "CRUDE WTI",
-   "value": "$91.8",
-   "change": -2.12
+   "value": "$94.4",
+   "change": 0.69
   },
   {
    "name": "USD/INR",
-   "value": "95.28",
-   "change": -0.5
+   "value": "95.27",
+   "change": -0.51
   },
   {
    "name": "S&P 500",
-   "value": "7,807",
-   "change": -0.06
+   "value": "7,803",
+   "change": -0.05
   },
   {
    "name": "NASDAQ",
-   "value": "27,246",
-   "change": -0.44
+   "value": "27,193",
+   "change": -0.19
   },
   {
    "name": "DOW",
-   "value": "51,851",
-   "change": 0.38
+   "value": "51,722",
+   "change": -0.25
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Indian Equities Advance After Minister Comments on Investment Tax Revisions",
-   "summary": "The benchmark Sensex advanced sharply after the finance minister addressed potential discussions surrounding investment tax structures. The statements provided relief to domestic market participants across trading floors.",
-   "why": "Tax policies on capital gains directly influence post-tax investment returns and affect broader participation in equity markets.",
+   "title": "Indian and British Exchanges Partner to Expand Cross-Border Investment Routes",
+   "summary": "NSE IFSC and the London Stock Exchange inked a preliminary pact to examine joint product rollouts and cross-listings. The initiative aims to connect international investors in Gujarat's financial hub with London's trading venue.",
+   "why": "Cross-border exchange agreements simplify the process for domestic enterprises to access foreign capital.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fm-sitharamans-ltcg-tax-remarks-lift-sensex-by-900-points-can-markets-read-hope-of-review/articleshow/134913862.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Major Indian Indices Climb Sharply Led by Information Technology Companies",
-   "summary": "The Sensex added over 1,100 points while the Nifty finished above 22,700 during the trading session. Gains across major technology firms helped spearhead the broad recovery in domestic benchmarks.",
-   "why": "Heavyweight sectors like information technology carry significant index weight, heavily dictating the overall market direction.",
-   "source": "DD News",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQU5lZUF0cDJFdWtHTGRiN1JDak1IMnNiMnJXVmdlaHJ0ODRSSDVWcDk2SlMydTNFTDhvWmJLOFFMZnM3Mkd2R1RvSnBxeFJzV2tjZEJfYnhHbDhwRk0yNWNMajZBcjZValVMZ2NydlRMQ3pvTDg4bXByV3RfNGhlM19Gd19NWEtsOFJaUlhZZ2FObS1qNG1uTGJwYmp4a0pROExJaF83NThLUURnTHRj?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Technology and Energy Shares Retreat Following Worldwide Artificial Intelligence Selloff",
-   "summary": "Multiple Indian businesses tied to artificial intelligence declined by up to five percent amid a broader international pullback in tech equities. A sharp slump in Asian peers such as South Korea prompted investors to re-examine valuations.",
-   "why": "Global sectoral trends frequently cause correlated price swings in domestic stocks operating in similar emerging industries.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/hitachi-energy-e2e-networks-anant-raj-other-ai-linked-stocks-slide-up-to-5-as-global-ai-rout-hits-indian-markets/articleshow/134913521.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nseix-london-stock-exchange-sign-pact-to-deepen-india-uk-market-links/articleshow/134923014.cms"
   },
   {
    "category": "Economy",
-   "title": "Indian Currency Strengthens Following Central Bank Intervention in Foreign Exchange",
-   "summary": "The rupee gained 82 paise to reach 94.96 against the American dollar. Interventions by the central banking authority helped anchor the domestic currency and facilitate its recovery.",
-   "why": "A stable currency curbs imported inflation and reduces foreign exchange risks for companies holding external debt.",
-   "source": "National Herald",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPdE9DcmI2bmpSQUkwU0daXzNNYnFnVXc4ZVF1Y0ZrTGI0M0JHZVdUV2dwZUdXcEEwY01FR1B2bnNndF9PQnBTSUpLY0VMWWNuUExfa2dGemIyOXo3WWhvT1l3YzBXUjc0N0dmcjZCSzJSc20yMldCaXI3ZEpva0Naa0djNmVjVlVEcl9vZ0Ewd2ZRdnh6ZVRlcDNQeXJfcy1RLWZVdm9iX0h1Z08yS0RCbm9zZzdaejg2NWU2Qkd0bDFTVXFfdlhYRktvNNIBywFBVV95cUxPdE9DcmI2bmpSQUkwU0daXzNNYnFnVXc4ZVF1Y0ZrTGI0M0JHZVdUV2dwZUdXcEEwY01FR1B2bnNndF9PQnBTSUpLY0VMWWNuUExfa2dGemIyOXo3WWhvT1l3YzBXUjc0N0dmcjZCSzJSc20yMldCaXI3ZEpva0Naa0djNmVjVlVEcl9vZ0Ewd2ZRdnh6ZVRlcDNQeXJfcy1RLWZVdm9iX0h1Z08yS0RCbm9zZzdaejg2NWU2Qkd0bDFTVXFfdlhYRktvNA?oc=5"
+   "title": "Market Watchdog Considers Stricter Oversight on Corporate Capital Deployment",
+   "summary": "The Securities and Exchange Board of India released a discussion paper seeking public input on tracking public offering funds. The suggested revisions focus on strengthening disclosure norms for how corporations spend money raised from investors.",
+   "why": "Independent tracking of capital utilization ensures that public firms honor their declared business objectives.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-proposes-review-of-framework-for-monitoring-utilization-of-issue-proceeds/articleshow/134922472.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "American Lenders Report Robust Quarterly Income Amid Ongoing Inflationary Concerns",
+   "summary": "Leading United States banking institutions recorded improved quarterly earnings driven by active retail activity, trading gains, and technological spending. Banking leaders nevertheless pointed to continuing consumer price pressures and borrowing costs as near-term risks.",
+   "why": "Bank earnings reflect general economic strength because financial institutions rely heavily on consumer activity and commercial borrowing.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-banks-post-strong-profits-but-inflation-and-rate-risks-cloud-outlook/articleshow/134920643.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Precious Metals Rangebound Before Key American Inflation Readings",
+   "summary": "Gold held steady with minimal movement as global market participants awaited newly scheduled United States consumer price numbers. Traders also remained watchful for scheduled commentary from official speakers.",
+   "why": "Inflation statistics shape expectations around interest rate adjustments, which directly influence non-yielding assets like bullion.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/gold-subdued-ahead-of-us-inflation-data-warsh-remarks-11791916268630.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Finance Ministry to Review Feedback on Investment Levies and Transaction Taxes",
+   "summary": "Finance Minister Nirmala Sitharaman announced openness to evaluate representations from market participants concerning equity levies and trading charges. Both domestic and global market participants had submitted inquiries regarding equal treatment across various investment categories.",
+   "why": "Tax structures influence trading costs and play a critical role in portfolio returns.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/stocks-jump-as-sitharaman-says-government-will-hear-investors-on-ltcg-tax-11791898497182.html"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Conducts Overnight Operation to Absorb Surplus Banking System Funds",
-   "summary": "The central bank accepted bids worth 71,580 crore rupees in its one-day variable rate reverse repo auction. The auction had an announced notified borrowing size of 1,50,000 crore rupees.",
-   "why": "Reverse repo operations enable monetary authorities to regulate short-term liquidity and maintain control over interbank lending rates.",
+   "title": "Central Bank Absorbs Banking Liquidity Through Daily Reverse Repo Mechanism",
+   "summary": "The Reserve Bank of India finalized a one-day auction, taking in over seventy-one thousand crore rupees from financial institutions. The accepted volume fell below the initial target set at one point five lakh crore rupees.",
+   "why": "Reverse repo transactions allow the monetary authority to manage surplus cash and stabilize interbank lending rates.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63795"
   },
   {
-   "category": "Commodity",
-   "title": "Gold and Silver Trade Steady as Participants Monitor Forthcoming Macroeconomic Releases",
-   "summary": "Bullion prices displayed subdued movement as traders waited for new inflation figures from the United States. Market participants are reviewing the forthcoming data for clues regarding future monetary decisions.",
-   "why": "Precious metals provide no yield, making their prices sensitive to shifts in benchmark interest rate expectations.",
-   "source": "Livemint",
-   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQaGpIWU90b0RfMjJORXNiSnh0Tjl3SEpxMUZiNUs4d0cyaXNIZ2JCV1JKMnRpU3BnVVBwUUV3UHY3V0NobFhpdUNnS0FhY0JMamxTMkkyY29RNjF5T2xGSEItMGtyYXgzeFRtVkRUNDEydThzMFV4UEd4V0Z6VEtMZzBLVjJlNUxRV1VrTXNja1o5cHliMUpUZl9GdHZaRXdmRjRJOHFhejFKY0hvbGNCTHBMR2h2VzE2SDZjbmwtZjJEeGczdHMxSmZRcURGMmFFVDhCaFEycFJreWVyMFRfckhCU1VLQ0hkODhmSzhDdWlaRTQtQ0hiMldxTWszdkdlRzg2UHUwRWHSAY4CQVVfeXFMTTFzQzNpS3NUcnFHZHBiS3NkZWN4Q2V5cFBHN01mRFN0U2hiLTBTajUzU1ZmaTFrZWpkeEtQd1Z1a05EcTVCZ2EyLUJ4NTBUV0U4V0pXWk5fZDhPTlFsOVlVN0toSFJCZ0laUjhxZkgtYjJFSVJXcTZkYlg0eVYzQU9jN0JNX3E4OEdlM0puS3BVZGlKcl9TS1I0eXE5alF4amhDRUQ1OEw3eGVTbE41SnlDUDhyTDNHdnFaRXlVdHJ0N0ZSQ2xMQ2lWbktrbzJ3VmhXUVVpUE5mNlJCcUNpV3dZbU9vYnBYaEJSVldvTFJXc3BRNkdBdDhoSktPYzlFQ0tJU2lXQXB1SEpYMmJR?oc=5"
+   "category": "Equity",
+   "title": "Domestic Benchmarks Advance Sharply Pushed by Rebound Across Technology Equities",
+   "summary": "The Sensex climbed past eleven hundred points while the Nifty finished above the 22,700 threshold. Software services shares served as the primary catalyst behind the broad-based domestic upward movement.",
+   "why": "Movements in large-cap sectors like technology exert substantial weight on overall index trajectory.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQU5lZUF0cDJFdWtHTGRiN1JDak1IMnNiMnJXVmdlaHJ0ODRSSDVWcDk2SlMydTNFTDhvWmJLOFFMZnM3Mkd2R1RvSnBxeFJzV2tjZEJfYnhHbDhwRk0yNWNMajZBcjZValVMZ2NydlRMQ3pvTDg4bXByV3RfNGhlM19Gd19NWEtsOFJaUlhZZ2FObS1qNG1uTGJwYmp4a0pROExJaF83NThLUURnTHRj?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Strengthens Substantially Following Interventions by Central Banking Authorities",
+   "summary": "The domestic currency gained 1.8 percent across two trading days following regulatory measures by the central bank. These supportive steps halted recent pressure against the foreign exchange market.",
+   "why": "Central banks intervene in currency markets to smooth volatility and protect domestic economic stability.",
+   "source": "Fortune India",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSzVQbVJMMVlMVkE3VGEwWTgycHBiQm5GdlFxTlNWZ2RVMjVKT09yWTFKdUgzMUxHUWlhQ244N3JBczE2UVJReE5YT3Q2RHIzNVBGMFVPcU14Zy1fRTJUdS1ub3lsU0pleHhWejFxNkJwZFpMQ05DOE5IMVZfTHBpU2VLWWFBTzcwSW0wckNHbmU1SXYtTm1MeEN6S19LTWpFN3VEOGFYUUlHU1pwbEHSAbsBQVVfeXFMTU1zXzJ1cVctVTlsYnFqMUhYbHpnbl9MVTg4QzJydU9NaFQxZGJBcDIyclZPZ2U3bDVEMExzQjdqTHBYLXYwN1RnR29wbVdxSGhUcFNtcHl4S2trbHZ3ZjU0dWdlMHRSZVFzWlhEOGh0UldsM1ZYbm5PbTduV1htWEdLTV9RSHQ3RDBORGJiRW5IMG9OWTU0QllUbzZpTFEwd1NzODhCOTM4ZEZielFUVjZlYW1IUU9zSFNYTQ?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Tech-Focused Wall Street Gauge Slips While Petroleum Prices Climb",
-   "summary": "The Nasdaq moved lower as participants prepared for upcoming quarterly financial results and fresh economic prints. Meanwhile, crude oil prices experienced an upward advance.",
-   "why": "Higher energy prices can feed into broader inflationary trends, impacting corporate expenses and central bank interest rate policies.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOck00LVRZX0lQNUw5SGlYU09FOWw1dUVTNjZTQ0p6YklVVUlRSms1eVZRcDd6VjRySF9rOEptM3Nrd19mSURMa1dmbTdIOE1VZjJKdThIR0tabGRTdjBiX0JCWkVndjJFNkZrT0w4NzZ2VWVibjlyeVZHRmszeXRraWRfT0p2SDhSQnFTY3QycG05eHpjQVVLYk9yRF9UYzZ0VmZ6Sw?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "American Index Futures Diverge Amid Cautious Sentiment on Artificial Intelligence Spending",
-   "summary": "Futures contracts for major United States indices showed mixed movement as market participants parsed banking sector earnings and weak luxury numbers. Growing scrutiny over heavy capital allocation in artificial intelligence also influenced trading activity.",
-   "why": "Index futures provide an early indicator of market sentiment and anticipated opening trends on Wall Street.",
-   "source": "Yahoo Finance UK",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQU29jZVc4WTVzendlcmQ4OXJVaTRRSEtYZWRlZzlSRHQydV95M1gxNHd6RnlsUzdiYldvWGtyc2FoM3pFWENPaVpqOGpLVlVvX0E5RDN1a2JxUzFLeWZMc0RtaElvalhNRmlNYnRtbUtKTERLU2RRNkNGVUVFZHBielQ0RHZhUQ?oc=5"
+   "title": "American Indices Diverge as Industrial Shares Gain While Chipmakers Decline",
+   "summary": "The Dow Jones Industrial Average added 369 points while the technology-heavy Nasdaq closed lower during the trading session. Losses among semiconductor and memory hardware companies weighed on the broader tech group.",
+   "why": "Divergence between indices highlights differing performance across heavy industry and high-growth technology segments.",
+   "source": "NDTV Profit",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWkplTG9rTy1wclNzWVdjd1QtZnpYTl9Tb2E4QlFmVHBxVXdYOGN1bkNHZkY0MlFLQmlJX0laTU1SUU9rT3dGazlXejhKSWRWTHBBaldOWE41bUZMWDlKT3FzSTNyYlFFV29laEppUEdTcWJRLXRNa2ZPeVBKV25SOGt0eEtGYVN4NFRuVGdzSUg3dzhZVHFsaWxqTnVwVGoxU3ZVNFFxNVZiRXN4YlZhM3B4eFdSSW16d3IzMmtIa9IBxwFBVV95cUxQU2RDMFlOaUdoaXE2N2l0QVNveUZOMURXV3pPMlZva2RFRmNoQTZLQVJ4aUttb2RhQzBsMnF2MTEzaGRobnZWM2VJalgwQzlQTzVXd3dfMXFRTDRIRms4M1k0ZGxLNENudVVVTmJHa2FkeWJyZjVqYnA1Qm1pWGx0MnhzcWhwU2N0TnRKNE40cEptODJiTnlrdFhCLUVfSndnWmlPYzdPaXVrRk12WU11NUI4Z3RLMUZhbjVUZkpudWtkaWpZZ3VF?oc=5"
   }
  ]
 }
