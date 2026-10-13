@@ -5,7 +5,7 @@
   if (!ol || !bar) return;
   ol.className = "chat";
 
-  var stories = [], topic = "All", seen = {}, firstDraw = true, open = {}, loaded = false;
+  var stories = [], topic = "All", seen = {}, firstDraw = true, open = {}, xp = {}, loaded = false;
 
   function face(m) {
     var mouth = m === "up" ? "M13 25q7 7 14 0" : "M14 26q6 3 12 0";
@@ -24,10 +24,22 @@
 
   var intro = el("div", "sp-row sp-intro");
   intro.innerHTML = '<span class="sp-av">' + face("up") + "</span>";
-  var im = el("div", "sp-main"), ib = el("div", "sp-bub");
-  ib.append(el("p", "sp-say", "Hi, I\u2019m Sprout \uD83C\uDF31 I pick the stories that matter for the markets and the economy, then explain each one simply."));
-  im.append(ib); intro.append(im);
-  ol.before(intro);
+  var im = el("div", "sp-main"), imeta = el("div", "sp-meta"), ib = el("div", "sp-bub"), say = el("p", "sp-say");
+  imeta.append(el("b", "", "Sprout"), el("span", "pill live", "\u25CF LIVE"));
+  ib.append(say); im.append(imeta, ib); intro.append(im); ol.before(intro);
+  var typed = "", born = Date.now();
+  function dots() { say.innerHTML = '<span class="dots3" role="status" aria-label="Sprout is typing"><i></i><i></i><i></i></span>'; }
+  function typeOut(text, instant) {
+    if (typed === text) return; typed = text;
+    if (instant || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { say.textContent = text; return; }
+    say.textContent = ""; var i = 0, step = Math.max(12, Math.min(28, 1500 / text.length));
+    (function nx() { say.textContent = text.slice(0, ++i); if (i < text.length && typed === text) setTimeout(nx, step); })();
+  }
+  function introSay(lead, instant) {
+    var text = "Sprout here, live from the newsroom. " + (lead || "Here\u2019s what\u2019s moving the markets and why it matters.");
+    if (instant) typeOut(text, true); else setTimeout(function () { typeOut(text); }, Math.max(0, 900 - (Date.now() - born)));
+  }
+  dots();
 
   function skeleton() {
     ol.innerHTML = "";
@@ -35,7 +47,7 @@
       var li = el("li", "sp-row sp-skel"); li.innerHTML = '<span class="sp-av">' + face("calm") + "</span>";
       var m = el("div", "sp-main"), b = el("div", "sp-bub");
       b.innerHTML = '<span class="sk" style="width:35%"></span><span class="sk" style="width:92%"></span><span class="sk" style="width:78%"></span>';
-      if (i === 0) { b.setAttribute("role", "status"); b.append(el("span", "sp-ty", "Sprout is reading today\u2019s news\u2026")); }
+      if (i === 0) { b.setAttribute("role", "status"); b.append(el("span", "sp-ty", "Sprout is pulling the latest\u2026")); }
       m.append(b); li.append(m); ol.append(li);
     }
   }
@@ -50,23 +62,27 @@
     if (hot) meta.append(el("span", "pill new", "NEW"));
     meta.append(el("span", "pill", s.topic || "News"));
     var bub = el("div", "sp-bub" + (hot ? " hot" : ""));
-    var q = el("div", "sp-quote"); q.append(el("span", "", (s.sources && s.sources[0] ? s.sources[0].name : "") + (s.sources && s.sources.length > 1 ? " + " + (s.sources.length - 1) + " more" : "")), el("strong", "", s.title)); bub.append(q);
-    var hasAI = !!s.summary;
-    if (hasAI) {
-      bub.append(el("p", "sp-sum", s.summary));
-      var sm = el("div", "sp-simple"); sm.append(el("b", "", "In simple words"), el("span", "", s.simple)); bub.append(sm);
-      if (s.term && s.meaning) { var tp = el("p", "sp-term"); tp.append(el("b", "", s.term), document.createTextNode(" \u00B7 " + s.meaning)); bub.append(tp); }
-    }
-    var det = el("div", "sp-links");
-    (s.sources || []).forEach(function (src) {
+    var hasAI = !!s.summary, srcs = s.sources || [];
+    var q = el("div", "sp-quote");
+    q.append(el("span", "", (srcs[0] ? srcs[0].name : "") + (srcs.length > 1 ? " + " + (srcs.length - 1) + " more" : "")), el("strong", "", s.hook || s.title));
+    bub.append(q);
+    if (hasAI) bub.append(el("p", "sp-sum", s.summary));
+    var det = el("div", "sp-links"); det.hidden = hasAI && !open[id];
+    if (hasAI && s.hook) det.append(el("p", "sp-orig", s.title));
+    srcs.forEach(function (src) {
       if (!safe(src.url)) return;
       var a = el("a", "sp-go", "Read at " + src.name + " \u2197"); a.href = src.url; a.target = "_blank"; a.rel = "noopener noreferrer"; det.append(a);
     });
     if (hasAI) {
-      det.hidden = !open[id];
-      var btn = el("button", "sp-more", open[id] ? "Hide sources \u25B4" : "Sources \u25BE"); btn.type = "button"; btn.setAttribute("aria-expanded", String(!!open[id]));
-      btn.onclick = function () { var on = det.hidden; det.hidden = !on; open[id] = on; btn.setAttribute("aria-expanded", String(on)); btn.textContent = on ? "Hide sources \u25B4" : "Sources \u25BE"; };
-      bub.append(btn, det);
+      var acts = el("div", "sp-acts");
+      var sm = el("div", "sp-simple"); sm.hidden = !xp[id];
+      sm.append(el("b", "", "Explain simply"), el("span", "", s.simple));
+      if (s.term && s.meaning) { var tp = el("p", "sp-term"); tp.append(el("b", "", s.term), document.createTextNode(" \u00B7 " + s.meaning)); sm.append(tp); }
+      var b1 = el("button", "sp-more", xp[id] ? "Hide \u25B4" : "Explain simply \u25BE"); b1.type = "button"; b1.setAttribute("aria-expanded", String(!!xp[id]));
+      b1.onclick = function () { var on = sm.hidden; sm.hidden = !on; xp[id] = on; b1.setAttribute("aria-expanded", String(on)); b1.textContent = on ? "Hide \u25B4" : "Explain simply \u25BE"; };
+      var b2 = el("button", "sp-more", open[id] ? "Hide sources \u25B4" : "Sources \u25BE"); b2.type = "button"; b2.setAttribute("aria-expanded", String(!!open[id]));
+      b2.onclick = function () { var on = det.hidden; det.hidden = !on; open[id] = on; b2.setAttribute("aria-expanded", String(on)); b2.textContent = on ? "Hide sources \u25B4" : "Sources \u25BE"; };
+      acts.append(b1, b2); bub.append(acts, sm, det);
     } else bub.append(det);
     main.append(meta, bub); li.append(main);
     return li;
@@ -91,11 +107,12 @@
     firstDraw = false;
   }
 
-  function apply(j) {
+  function apply(j, instant) {
     stories = j.stories || []; loaded = true;
     note.textContent = !stories.length ? "No major stories right now. Please check back soon."
-      : j.ai ? "Sprout picks stories from established news outlets. Summaries are AI-written from the headlines alone, so they can be wrong. Check the source. For learning only, not investment advice."
-             : "Showing key headlines from established news outlets. Each links to the original publisher.";
+      : j.ai ? "Sprout writes these from headlines only, so double-check the source. Learning only, not investment advice."
+             : "Key headlines from established outlets. Each links to the original publisher.";
+    introSay(j.ai ? j.lead : "", instant);
     draw();
   }
   function plain() {
@@ -106,8 +123,13 @@
   function load() {
     if (document.hidden && loaded) return;
     fetch("/api/pulse").then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function (j) { if (!j.stories) throw 0; apply(j); })
-      .catch(function () { plain().catch(function () { if (!loaded) { ol.innerHTML = ""; note.textContent = "Live headlines are unavailable right now. See Today\u2019s brief."; } }); });
+      .then(function (j) {
+        if (!j.stories) throw 0;
+        if (j.ai) { try { localStorage.setItem("wt-pulse", JSON.stringify({ at: Date.now(), j: j })); } catch (e) {} }
+        apply(j, loaded && !!stories.length && JSON.stringify(j.lead || "") === lastLead);
+        lastLead = JSON.stringify(j.lead || "");
+      })
+      .catch(function () { plain().catch(function () { if (!loaded) { ol.innerHTML = ""; typeOut("Sprout here. The newsroom feed is down for a moment. Try Today\u2019s brief.", true); note.textContent = ""; } }); });
   }
   function tick() {
     Array.prototype.forEach.call(ol.querySelectorAll("time"), function (t) { t.textContent = ago(+t.dataset.t); });
@@ -115,8 +137,13 @@
       var t = p.parentNode.querySelector("time"); if (t && Date.now() - +t.dataset.t >= 1800000) p.remove();
     });
   }
+  var lastLead = "";
   note.textContent = "";
-  skeleton(); load();
+  var cached = null;
+  try { cached = JSON.parse(localStorage.getItem("wt-pulse") || "null"); } catch (e) {}
+  if (cached && cached.j && cached.j.stories && Date.now() - cached.at < 6 * 3600e3) { apply(cached.j, true); lastLead = JSON.stringify(cached.j.lead || ""); }
+  else skeleton();
+  load();
   setInterval(load, 180000);
   setInterval(function () { if (!document.hidden) tick(); }, 60000);
 })();

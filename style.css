@@ -262,3 +262,13 @@ nav{margin-left:auto}
 .sp-skel .sp-bub::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(127,127,127,.16) 50%,transparent 70%);transform:translateX(-100%);animation:shim 1.4s infinite}
 @keyframes shim{to{transform:translateX(100%)}}
 @media(prefers-reduced-motion:reduce){.sp-skel .sp-bub::after{animation:none}}
+
+/* ===== v14: reporter intro, shorter cards ===== */
+.pill.live{background:var(--down);color:#fff;border-color:var(--down);animation:livepulse 1.6s infinite}
+@keyframes livepulse{0%,100%{opacity:1}50%{opacity:.7}}
+.sp-intro .sp-say{min-height:1.5em}
+.sp-acts{display:flex;flex-wrap:wrap;gap:.2rem 1.2rem}
+.sp-orig{margin:0 0 .3rem;font-size:.85rem;color:var(--mute);line-height:1.4}
+.sp-simple[hidden]{display:none}
+.sp-quote strong{font-size:1.05rem}
+@media(prefers-reduced-motion:reduce){.pill.live{animation:none}}
