@@ -80,3 +80,10 @@ header.sm .clock{height:34px;padding:0 .8rem}
 @media(max-width:640px){header.sm .wrap{padding-top:.35rem;padding-bottom:.3rem}header.sm .clockbox{top:.3rem}header.sm .clock{height:32px}}
 @media(prefers-reduced-motion:reduce){header .wrap,.logo img,.logo span,.clock{transition:none}}
 @media(min-width:641px){header.sm nav a{padding:.4rem 1.1rem;font-size:.95rem}header.sm nav a.navcta{margin-left:.3rem}nav a{transition:padding .25s ease,font-size .25s ease,transform .18s,border-color .18s,color .18s,background .18s,box-shadow .18s}}
+
+/* v21: inner pages (About, Learn, Markets): animated page title */
+.page>h1.pt{position:relative;display:inline-block;animation:wtf .7s var(--ease) both}
+.page>h1.pt::after{content:"";position:absolute;left:0;bottom:-.18em;width:100%;height:.09em;border-radius:9px;background:var(--up);transform:scaleX(0);transform-origin:0 50%;animation:wtu .9s var(--ease) .35s forwards}
+.page .learn,.page .callout{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+@media(hover:hover){.page .learn:hover,.page .callout:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(15,138,95,.14);border-color:var(--up)}}
+@media(prefers-reduced-motion:reduce){.page>h1.pt,.page>h1.pt::after{animation:none}.page>h1.pt::after{transform:scaleX(1)}.page .learn,.page .callout{transition:none}}

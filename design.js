@@ -15,6 +15,8 @@
     });
   }
 
+  var pt = document.querySelector(".page > h1"); if (pt) pt.classList.add("pt");
+
   var bar = document.createElement("div"); bar.className = "wt-prog"; bar.setAttribute("aria-hidden", "true"); document.body.append(bar);
   var hd = document.querySelector("header"), tk = false;
   function onScroll() {
@@ -28,7 +30,7 @@
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
   if (rm || !("IntersectionObserver" in window)) return;
-  var t = document.querySelectorAll("main h2.sec, .feat .cardlink, main .card, main .lesson, .nl .wrap");
+  var t = document.querySelectorAll("main h2.sec, .feat .cardlink, main .card, main .lesson, .nl .wrap, .page h2, .page .callout, .page .learn, .page .cardlink");
   if (!t.length) return;
   de.classList.add("js-rv");
   var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
