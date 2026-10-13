@@ -1,33 +1,34 @@
-/* WealthyTrees site.js v17: theme button, IST clock + market status, newsletter box, Daily Edition loader */
+/* WealthyTrees site.js v18: theme bar (under header), IST clock + market status, newsletter box, design + Daily Edition loaders */
 (function () {
   "use strict";
-  var BD ="arorapriyansh"; /* <- put your Buttondown username between the quotes */
+  var BD = "YOUR_BUTTONDOWN_USERNAME"; /* <- put your Buttondown username between the quotes */
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   var wrap = document.querySelector("header .wrap");
 
-  /* ---- Theme button (Light / Dark / Paper) ---- */
+  /* ---- Theme bar: a slim row right under the header (not floating) ---- */
   var TH = [["light", "Light", "#fbfaf6"], ["dark", "Dark", "#15211b"], ["sepia", "Paper", "#f3ecdd"]];
   function setTheme(t) { document.documentElement.setAttribute("data-theme", t); try { localStorage.setItem("wt-theme", t); } catch (e) {} }
   function curTheme() { return document.documentElement.getAttribute("data-theme") || "light"; }
-  if (wrap) {
-    var tw = el("div", "theme"), tb = el("button", "tbtn"); tb.type = "button"; tb.setAttribute("aria-label", "Change theme"); tb.setAttribute("aria-haspopup", "true"); tb.setAttribute("aria-expanded", "false");
-    tb.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>';
-    var tm = el("div", "tmenu"); tm.hidden = true;
+  var anchor = document.querySelector(".ticker") || document.querySelector("header");
+  if (anchor) {
+    var bar = el("div", "themebar"), bw = el("div", "wrap"), grp = el("div", "tseg"); grp.setAttribute("role", "group"); grp.setAttribute("aria-label", "Theme");
+    bw.append(el("span", "tlabel", "Theme")); bw.append(grp); bar.append(bw);
+    function paint() { grp.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.t === curTheme())); }); }
     TH.forEach(function (t) {
       var b = el("button"); b.type = "button"; b.dataset.t = t[0]; var sw = el("span", "sw"); sw.style.background = t[2]; b.append(sw, document.createTextNode(t[1]));
-      b.onclick = function () { setTheme(t[0]); paint(); tm.hidden = true; tb.setAttribute("aria-expanded", "false"); }; tm.append(b);
+      b.onclick = function () { setTheme(t[0]); paint(); }; grp.append(b);
     });
-    function paint() { tm.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.t === curTheme())); }); }
-    tb.onclick = function (e) { e.stopPropagation(); paint(); cp.hidden = true; tm.hidden = !tm.hidden; tb.setAttribute("aria-expanded", String(!tm.hidden)); };
-    tw.append(tb, tm);
+    paint(); anchor.after(bar);
+  }
 
-    /* ---- IST clock + market status ---- */
+  if (wrap) {
+  /* ---- IST clock + market status ---- */
     var cw = el("div", "clockbox"), cb = el("button", "clock"); cb.type = "button"; cb.setAttribute("aria-label", "India time and market status");
     var dot = el("span", "dot closed"), ct = el("span", "ct"), cz = el("span", "cz", "IST"); cb.append(dot, ct, cz);
     var cp = el("div", "cpop"); cp.hidden = true; cw.append(cb, cp);
-    cb.onclick = function (e) { e.stopPropagation(); tm.hidden = true; cp.hidden = !cp.hidden; };
-    document.addEventListener("click", function (e) { if (!tw.contains(e.target)) tm.hidden = true; if (!cw.contains(e.target)) cp.hidden = true; });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { tm.hidden = true; cp.hidden = true; } });
+    cb.onclick = function (e) { e.stopPropagation(); cp.hidden = !cp.hidden; };
+    document.addEventListener("click", function (e) { if (!cw.contains(e.target)) cp.hidden = true; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") cp.hidden = true; });
     var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     function ist() { var p = {}; new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23" }).formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; }); return { d: DAYS.indexOf(p.weekday), h: +p.hour, m: +p.minute, s: p.second }; }
     function hm(h, m) { return h * 60 + m; }
@@ -46,23 +47,25 @@
       }
     }
     tick(); setInterval(tick, 1000);
-    wrap.append(cw); document.body.append(tw);
+    wrap.append(cw);
   }
 
-  /* ---- Newsletter box (Buttondown) ---- */
+  /* ---- Newsletter box (Buttondown). Always shown; the form switches on once a username is set. ---- */
   var nl = document.getElementById("nl");
-  if (nl && BD && BD.indexOf("YOUR_") !== 0) {
+  if (nl) {
+    var on = BD && BD.indexOf("YOUR_") !== 0, u = encodeURIComponent(BD);
     nl.className = "nl";
     nl.innerHTML = '<div class="wrap"><h2>Get the daily brief</h2><p>One short, clear email a day. Learning only, no tips.</p>' +
-      '<form action="https://buttondown.com/api/emails/embed-subscribe/' + encodeURIComponent(BD) + '" method="post" target="popupwindow" onsubmit="window.open(\'https://buttondown.com/' + encodeURIComponent(BD) + '\',\'popupwindow\')">' +
-      '<input type="email" name="email" placeholder="Your email" aria-label="Email address" required><button class="btn" type="submit">Subscribe</button></form>' +
+      (on ? '<form action="https://buttondown.com/api/emails/embed-subscribe/' + u + '" method="post" target="popupwindow" onsubmit="window.open(\'https://buttondown.com/' + u + '\',\'popupwindow\')">' +
+        '<input type="email" name="email" placeholder="Your email" aria-label="Email address" required><button class="btn" type="submit">Subscribe</button></form>'
+        : '<p><strong>The newsletter opens soon.</strong></p>') +
       '<small>Free. Unsubscribe anytime. Education only, not investment advice.</small></div>';
   }
 })();
 
 (function () {
-  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/design.css?v=1"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/design.js?v=1"; s.defer = true; document.body.appendChild(s);
+  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/design.css?v=2"; document.head.appendChild(l);
+  var s = document.createElement("script"); s.src = "/design.js?v=2"; s.defer = true; document.body.appendChild(s);
 })();
 
 (function () {

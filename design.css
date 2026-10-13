@@ -8,10 +8,10 @@ header.sc{box-shadow:0 8px 24px rgba(0,0,0,.10)}
 
 /* hero */
 .hero{position:relative;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:-2rem -50vw 0;z-index:-1;margin:auto;
+.hero::before{content:"";pointer-events:none;position:absolute;inset:0 -50vw 0;z-index:-1;margin:auto;
  background:radial-gradient(40rem 22rem at 78% 40%,color-mix(in srgb,var(--up) 22%,transparent),transparent 70%),radial-gradient(30rem 18rem at 10% 0%,color-mix(in srgb,var(--gold) 14%,transparent),transparent 70%);
  animation:wtglow 14s ease-in-out infinite alternate}
-.hero::after{content:"";position:absolute;inset:-2rem -50vw 0;z-index:-1;margin:auto;opacity:.5;
+.hero::after{content:"";pointer-events:none;position:absolute;inset:0 -50vw 0;z-index:-1;margin:auto;opacity:.5;
  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;
  -webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 60% 40%,#000,transparent 70%)}
 @keyframes wtglow{to{transform:translate3d(2%,3%,0) scale(1.06)}}
@@ -23,7 +23,7 @@ header.sc{box-shadow:0 8px 24px rgba(0,0,0,.10)}
 .hero .date,.hero p,.hero .cta{opacity:0;animation:wtf .8s var(--ease) forwards}
 .hero .date{animation-delay:.05s}.hero p{animation-delay:.55s}.hero .cta{animation-delay:.75s}
 @keyframes wtf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.hero svg{animation:wtfloat 7s ease-in-out infinite;filter:drop-shadow(0 18px 28px color-mix(in srgb,var(--up) 25%,transparent))}
+.hero svg,.hero .herotree{animation:wtfloat 7s ease-in-out infinite;filter:drop-shadow(0 18px 28px color-mix(in srgb,var(--up) 25%,transparent))}
 @keyframes wtfloat{50%{transform:translateY(-8px)}}
 
 /* buttons */
@@ -44,12 +44,26 @@ h2.sec.in::after{width:100%}
 .js-rv .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--r,0)*90ms)}
 .js-rv .rv.in{opacity:1;transform:none}
 
-@media(max-width:640px){.hero::after{background-size:34px 34px}.hero svg{animation-duration:9s}}
+@media(max-width:640px){.hero::after{background-size:34px 34px}.hero .herotree{animation-duration:9s}}
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
- .hero::before,.hero svg{animation:none}
+ .hero::before,.hero svg,.hero .herotree{animation:none}
  .hero h1 .w,.hero .date,.hero p,.hero .cta{animation:none;opacity:1;transform:none}
  .hero h1 .hl::after{animation:none;transform:scaleX(1)}
  .js-rv .rv{opacity:1;transform:none;transition:none}
  .btn,.cardlink,.btn::after{transition:none}
 }
+
+.hero .herotree{width:100%;max-width:320px;height:auto;justify-self:center}
+@media(max-width:760px){.hero .herotree{max-width:min(62vw,250px);order:-1;margin:0 auto}}
+/* theme bar under the header */
+.themebar{position:relative;z-index:5;border-bottom:1px solid var(--line);background:var(--bg)}
+.themebar .wrap{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;padding-top:.35rem;padding-bottom:.35rem}
+.tlabel{font-size:.75rem;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.tseg{display:inline-flex;gap:.3rem}
+.tseg button{display:inline-flex;align-items:center;gap:.4rem;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:.2rem .7rem .2rem .3rem;font:inherit;font-size:.8rem;cursor:pointer;transition:border-color .2s,transform .2s}
+.tseg button .sw{width:16px;height:16px}
+.tseg button[aria-pressed=true]{border-color:var(--up);font-weight:700}
+@media(hover:hover){.tseg button:hover{transform:translateY(-1px);border-color:var(--up)}}
+.tseg button::after{content:none!important}
+@media(max-width:640px){.themebar .wrap{justify-content:center}}
