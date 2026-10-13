@@ -31,3 +31,10 @@
 .tz{position:absolute;z-index:5;top:64px;bottom:90px;width:34%;border:0;background:none;cursor:pointer}.tz.l{left:0}.tz.r{right:0}
 .ednote{margin:0;max-width:25rem;text-align:center;color:var(--mute);font-size:.82rem}
 @media(prefers-reduced-motion:reduce){.story,.sl,.sl>*{animation:none!important;transition:none!important}.sl>*{opacity:1;transform:none}}
+
+/* v3: links above tap zones, readable source button, more stagger */
+.foot{position:relative;z-index:7}
+.go{position:relative;z-index:7}
+.go.main{display:inline-block;background:#3ecf8e;color:#08241a;border-radius:99px;padding:.6rem 1.1rem;font-weight:700}
+.sl.on>*:nth-child(6){animation-delay:.6s}
+.sl .ex.wd{display:grid}
