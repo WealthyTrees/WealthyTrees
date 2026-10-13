@@ -22,7 +22,7 @@
     requestAnimationFrame(function () {
       var h = de.scrollHeight - innerHeight, y = window.pageYOffset || de.scrollTop;
       bar.style.transform = "scaleX(" + (h > 0 ? Math.min(1, y / h) : 0) + ")";
-      if (hd) hd.classList.toggle("sc", y > 8); tk = false;
+      if (hd) { hd.classList.toggle("sc", y > 8); if (y > 90) hd.classList.add("sm"); else if (y < 30) hd.classList.remove("sm"); } tk = false;
     });
   }
   addEventListener("scroll", onScroll, { passive: true }); onScroll();

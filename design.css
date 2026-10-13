@@ -70,3 +70,13 @@ h2.sec.in::after{width:100%}
 
 /* v3: stop the hero glow from making phones scroll sideways */
 html,body{overflow-x:clip}
+
+/* v20: slim header while scrolling (class .sm, set in design.js) */
+header .wrap,.logo img,.logo span,.clock{transition:padding .25s ease,width .25s ease,height .25s ease,font-size .25s ease}
+header.sm .wrap{padding-top:.4rem;padding-bottom:.4rem}
+header.sm .logo img{width:30px;height:30px}
+header.sm .logo span{font-size:1.2rem}
+header.sm .clock{height:34px;padding:0 .8rem}
+@media(max-width:640px){header.sm .wrap{padding-top:.35rem;padding-bottom:.3rem}header.sm .clockbox{top:.3rem}header.sm .clock{height:32px}}
+@media(prefers-reduced-motion:reduce){header .wrap,.logo img,.logo span,.clock{transition:none}}
+@media(min-width:641px){header.sm nav a{padding:.4rem 1.1rem;font-size:.95rem}header.sm nav a.navcta{margin-left:.3rem}nav a{transition:padding .25s ease,font-size .25s ease,transform .18s,border-color .18s,color .18s,background .18s,box-shadow .18s}}
