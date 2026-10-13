@@ -3,6 +3,9 @@
 // removes tips, predictions, price-update cards and live blogs, and caches for 5 minutes.
 // getHeadlines() is also used by /api/pulse. No AI is used here.
 //
+// v18b: removed Business Standard and Financial Express feeds (they answered 403 'blocked'; their stories still arrive via Google News).
+// v18: publishers first, Google News last and only twice, at most 5 requests at once, a 12-second overall limit,
+// and the last good list is kept in storage so one bad moment cannot empty the page.
 // v17: more reliable. It now reads the publishers' own news feeds AND Google News, gives every
 // feed a 7-second limit so one slow feed cannot hang the page, and has a check page:
 //   /api/headlines?debug=1  shows which feeds worked, how many headlines each gave, and why any were dropped.
@@ -10,21 +13,15 @@ const GN = "https://news.google.com/rss/search?hl=en-IN&gl=IN&ceid=IN:en&q=";
 const gn = (cat, q) => ({ cat, url: GN + q + "+when:1d", name: "Google News: " + q.replace(/\+/g, " ") });
 
 const FEEDS = [
-  // Google News searches (links go through Google, source name comes from the feed)
-  gn("Markets", "Sensex+Nifty"), gn("Markets", "Indian+stock+market+FII"),
-  gn("Economy", "RBI+monetary+policy+repo+rate"), gn("Economy", "India+inflation+GDP+economy"),
-  gn("Commodities", "crude+oil+OPEC+supply"),
-  gn("Global", "Federal+Reserve+interest+rates"), gn("Global", "US+tariffs+trade+India"),
-  // Publishers' own feeds (direct links). If one of these ever stops working, the others still carry the page.
+  // Publishers' own feeds first (direct links). If one stops working, the others still carry the page.
   { cat: "Markets", url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms", name: "ET Markets" },
   { cat: "Economy", url: "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms", name: "ET Economy" },
   { cat: "Markets", url: "https://www.livemint.com/rss/markets", name: "Mint Markets" },
   { cat: "Economy", url: "https://www.livemint.com/rss/economy", name: "Mint Economy" },
-  { cat: "Markets", url: "https://www.business-standard.com/rss/markets-106.rss", name: "Business Standard Markets" },
-  { cat: "Economy", url: "https://www.business-standard.com/rss/economy-policy-102.rss", name: "Business Standard Economy" },
   { cat: "Markets", url: "https://www.thehindubusinessline.com/markets/feeder/default.rss", name: "BusinessLine Markets" },
   { cat: "Economy", url: "https://www.thehindubusinessline.com/economy/feeder/default.rss", name: "BusinessLine Economy" },
-  { cat: "Markets", url: "https://www.financialexpress.com/market/feed/", name: "Financial Express Market" },
+  // Google News last and only twice: it often answers "busy" to servers, and slow answers must not block the rest.
+  gn("Economy", "RBI+repo+rate+inflation+India+economy"), gn("Global", "Federal+Reserve+US+tariffs+crude+oil+markets"),
 ];
 
 // Only these publishers are shown. Edit this list to add or remove an outlet.
@@ -95,9 +92,11 @@ function parse(xml, cat) {
   return out.slice(0, 15);
 }
 
-async function pullFeed(f) {
-  const t0 = Date.now(), ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 7000);
-  const rep = { feed: f.name, status: 0, items: 0, ms: 0, error: "" };
+const CONCURRENCY = 5, FEED_MS = 5000, TOTAL_MS = 12000, LAST = "headlines:last";
+
+async function pullFeed(f, t00) {
+  const t0 = Date.now(), ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), FEED_MS);
+  const rep = { feed: f.name, status: 0, items: 0, waitedMs: t0 - t00, ms: 0, error: "" };
   let items = [];
   try {
     const r = await fetch(f.url, {
@@ -107,16 +106,30 @@ async function pullFeed(f) {
     });
     rep.status = r.status;
     if (r.ok) { items = parse(await r.text(), f.cat); rep.items = items.length; }
-  } catch (e) { rep.error = e && e.name === "AbortError" ? "timed out (7s)" : String((e && e.message) || e).slice(0, 80); }
+  } catch (e) { rep.error = e && e.name === "AbortError" ? "timed out (" + FEED_MS / 1000 + "s)" : String((e && e.message) || e).slice(0, 80); }
   finally { clearTimeout(timer); }
   rep.ms = Date.now() - t0;
   return { items, rep };
 }
 
-export async function getHeadlines(report) {
-  const pulled = await Promise.all(FEEDS.map(pullFeed));
-  const all = [];
-  pulled.forEach((p) => all.push(...p.items));
+// Runs the feeds a few at a time and returns whatever has arrived by the overall time limit.
+async function pullAll() {
+  const t00 = Date.now(), results = [];
+  let next = 0;
+  const worker = async () => {
+    while (next < FEEDS.length) {
+      const f = FEEDS[next++];
+      results.push(await pullFeed(f, t00));
+    }
+  };
+  const workers = Array.from({ length: CONCURRENCY }, worker);
+  await Promise.race([Promise.all(workers), new Promise((r) => setTimeout(r, TOTAL_MS))]);
+  const done = results.slice();
+  const missing = FEEDS.length - done.length;
+  return { done, missing };
+}
+
+function filterList(all, report) {
   const seen = new Set(), cutoff = Date.now() - 30 * 3600 * 1000;
   const drop = { tooOld: 0, notTrusted: 0, oddCharacters: 0, noise: 0, duplicate: 0 };
   const kept = [];
@@ -129,8 +142,32 @@ export async function getHeadlines(report) {
     if (seen.has(k)) { drop.duplicate++; continue; }
     seen.add(k); kept.push(x);
   }
-  const list = kept.slice(0, 45).map((x) => Object.assign(x, { score: KEYS.reduce((n, [re, w]) => n + (re.test(x.title) ? w : 0), 0) }));
-  if (report) { report.feeds = pulled.map((p) => p.rep); report.readFromFeeds = all.length; report.dropped = drop; report.kept = list.length; report.newest = list[0] ? list[0].title : null; }
+  if (report) report.dropped = drop;
+  return kept.slice(0, 45).map((x) => Object.assign(x, { score: KEYS.reduce((n, [re, w]) => n + (re.test(x.title) ? w : 0), 0) }));
+}
+
+// getHeadlines(report?, env?): env (optional) lets it remember the last good list in storage.
+export async function getHeadlines(report, env) {
+  const kv = env && env.PULSE;
+  const { done, missing } = await pullAll();
+  const all = [];
+  done.forEach((p) => all.push(...p.items));
+  let list = filterList(all, report);
+  let usedSaved = false;
+  if (kv && list.length >= 5) {
+    try { await kv.put(LAST, JSON.stringify(list), { expirationTtl: 86400 }); } catch (e) {}
+  } else if (kv && list.length < 3) {
+    try {   // feeds had a bad moment: fall back to the last good list (still limited to the last 30 hours)
+      const saved = JSON.parse((await kv.get(LAST)) || "[]");
+      const cutoff = Date.now() - 30 * 3600 * 1000;
+      const fallback = Array.isArray(saved) ? saved.filter((x) => x && x.t > cutoff) : [];
+      if (fallback.length > list.length) { list = fallback; usedSaved = true; }
+    } catch (e) {}
+  }
+  if (report) {
+    report.feeds = done.map((p) => p.rep); report.feedsNotFinished = missing; report.readFromFeeds = all.length;
+    report.kept = list.length; report.usedSavedList = usedSaved; report.newest = list[0] ? list[0].title : null;
+  }
   return list;
 }
 
@@ -138,10 +175,10 @@ export async function onRequestGet(ctx) {
   const debug = ctx && ctx.request && new URL(ctx.request.url).searchParams.get("debug");
   if (debug) {
     const report = {};
-    await getHeadlines(report);
+    await getHeadlines(report, ctx.env);
     return new Response(JSON.stringify(report, null, 1), { headers: { "content-type": "application/json", "cache-control": "no-store" } });
   }
-  const items = (await getHeadlines()).slice(0, 25);
+  const items = (await getHeadlines(null, ctx && ctx.env)).slice(0, 25);
   return new Response(JSON.stringify({ items, fetched: Date.now() }), {
     headers: { "content-type": "application/json", "cache-control": "public, max-age=120, s-maxage=300" },
   });
