@@ -120,16 +120,26 @@
       apply({ ai: false, stories: (j.items || []).slice(0, 8).map(function (x) { return { id: x.id, t: x.t, title: x.title, topic: x.cat, sources: [{ name: x.source, url: x.url }] }; }) });
     });
   }
+  var tries = 0;
   function load() {
     if (document.hidden && loaded) return;
     fetch("/api/pulse").then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (j) {
         if (!j.stories) throw 0;
+        tries = 0;
         if (j.ai) { try { localStorage.setItem("wt-pulse", JSON.stringify({ at: Date.now(), j: j })); } catch (e) {} }
         apply(j, loaded && !!stories.length && JSON.stringify(j.lead || "") === lastLead);
         lastLead = JSON.stringify(j.lead || "");
       })
-      .catch(function () { plain().catch(function () { if (!loaded) { ol.innerHTML = ""; typeOut("Sprout here. The newsroom feed is down for a moment. Try Today\u2019s brief.", true); note.textContent = ""; } }); });
+      .catch(function () {
+        // v20: never replace a good Sprout list with the plain one. Keep what is on screen, else use the last saved AI list (up to 24h), else the plain list. Then try again soon.
+        var c = null; try { c = JSON.parse(localStorage.getItem("wt-pulse") || "null"); } catch (e) {}
+        if (!(loaded && stories.length && stories[0].summary)) {
+          if (c && c.j && c.j.stories && c.j.stories.length && Date.now() - c.at < 24 * 3600e3) apply(c.j, true);
+          else if (tries >= 1) plain().catch(function () { if (!loaded) { ol.innerHTML = ""; typeOut("Sprout here. The newsroom feed is down for a moment. Try Today\u2019s brief.", true); note.textContent = ""; } });
+        }
+        if (tries++ < 3) setTimeout(load, 4000 * tries);
+      });
   }
   function tick() {
     Array.prototype.forEach.call(ol.querySelectorAll("time"), function (t) { t.textContent = ago(+t.dataset.t); });
