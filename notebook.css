@@ -72,8 +72,7 @@ a.ccard:active{transform:scale(.99)}
 .oprog{max-width:42rem;margin:0 0 1.1rem}.oprog p{margin:0 0 .3rem;font-weight:600}.oprog b{color:var(--up);font-size:1.15rem}
 @media(prefers-reduced-motion:reduce){.qopt.bad{animation:none}}
 
-/* v5: legal notices stand out */
-p.legal{max-width:42rem;margin:1.2rem 0;padding:.75rem 1rem;border:2px solid var(--down);border-left-width:9px;border-radius:8px;background:color-mix(in srgb,var(--down) 8%,var(--paper));font-weight:700;font-size:.97rem;line-height:1.45;color:var(--ink);transform:none}
-p.legal b:first-child{font-family:Inter,system-ui,sans-serif;font-size:.95rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--down);margin-right:.35rem}
-p.legal b:first-child::before{content:"\26A0\FE0F  "}
+/* v6: one calm disclaimer at the end of each module */
+p.legal{max-width:42rem;margin:1.6rem 0 .6rem;padding:.7rem 1rem;border:1.5px solid var(--line);border-left:6px solid var(--gold);border-radius:8px;background:color-mix(in srgb,var(--gold) 9%,var(--paper));font-weight:600;font-size:.92rem;line-height:1.5;color:var(--ink);transform:none}
+p.legal b:first-child{font-family:Inter,system-ui,sans-serif;font-size:.9rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-right:.35rem}
 footer .wrap{font-weight:700;color:var(--ink)}
