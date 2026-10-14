@@ -337,3 +337,5 @@ nav{margin-left:auto}
 .tk .c.up{background:rgba(61,220,151,.15);color:#3ddc97}.tk .c.dn{background:rgba(255,107,91,.16);color:#ff7b6b}
 @media(max-width:640px){.tk-label{padding:0 .7rem}.tk-label span{display:none}.tk{padding:.55rem 1rem}}
 @media(prefers-reduced-motion:reduce){.nse .track{animation:none}.tk-view{overflow-x:auto}.ticker.live .tk-dot{animation:none}}
+
+a.tk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover b{text-decoration:underline}
