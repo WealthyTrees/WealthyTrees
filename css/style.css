@@ -320,3 +320,20 @@ nav{margin-left:auto}
 @keyframes splive{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45}}
 @media(max-width:640px){.sp-av svg{width:40px;height:40px}}
 @media(prefers-reduced-motion:reduce){.sp-eye,.sp-cap,.sp-wave,.sp-live{animation:none}.sp-pu{transition:none}}
+
+/* NSE-style market bar */
+.ticker.nse{display:flex;align-items:stretch;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.08);-webkit-mask-image:none;mask-image:none}
+.tk-label{flex:none;display:flex;align-items:center;gap:.55rem;padding:0 1rem;background:#08130f;color:#fff;font-weight:700;font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;border-right:2px solid var(--up);white-space:nowrap;position:relative;z-index:2}
+.tk-label span{color:#8fd9b8;font-weight:600;letter-spacing:.05em}
+.tk-dot{width:8px;height:8px;border-radius:50%;background:#7b8c85}
+.ticker.live .tk-dot{background:#3ddc97;box-shadow:0 0 0 0 rgba(61,220,151,.6);animation:tkp 1.6s ease-out infinite}
+@keyframes tkp{to{box-shadow:0 0 0 8px rgba(61,220,151,0)}}
+.tk-view{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.nse .track{display:inline-flex;gap:0;padding:0;animation:slide var(--dur,40s) linear infinite}
+.tk{display:inline-flex;align-items:center;gap:.6rem;padding:.62rem 1.4rem;border-right:1px solid rgba(255,255,255,.1);white-space:nowrap}
+.tk b{margin:0;color:#9db5a9;font-weight:600;font-size:.76rem;letter-spacing:.06em}
+.tk .v{font-style:normal;color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+.tk .c{font-weight:600;font-variant-numeric:tabular-nums;padding:.1rem .5rem;border-radius:5px}
+.tk .c.up{background:rgba(61,220,151,.15);color:#3ddc97}.tk .c.dn{background:rgba(255,107,91,.16);color:#ff7b6b}
+@media(max-width:640px){.tk-label{padding:0 .7rem}.tk-label span{display:none}.tk{padding:.55rem 1rem}}
+@media(prefers-reduced-motion:reduce){.nse .track{animation:none}.tk-view{overflow-x:auto}.ticker.live .tk-dot{animation:none}}
