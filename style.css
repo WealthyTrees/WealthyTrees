@@ -292,3 +292,31 @@ nav{margin-left:auto}
 @media(hover:hover){.tseg button:hover{transform:translateY(-1px);border-color:var(--up)}}
 .tseg button::after{content:none!important}
 @media(max-width:640px){.themebar .wrap{justify-content:center}}
+
+/* v24: every Sprout card glows softly (not only new ones) */
+.sp-bub{border-color:color-mix(in srgb,var(--up) 45%,var(--line));box-shadow:0 0 0 3px color-mix(in srgb,var(--up) 9%,transparent),0 0 16px color-mix(in srgb,var(--up) 18%,transparent);animation:spglow 4.5s ease-in-out infinite alternate}
+.sp-row:nth-child(2n) .sp-bub{animation-delay:-1.5s}.sp-row:nth-child(3n) .sp-bub{animation-delay:-3s}
+.sp-bub:hover{animation:none;border-color:var(--up);box-shadow:0 0 0 4px color-mix(in srgb,var(--up) 16%,transparent),0 0 26px color-mix(in srgb,var(--up) 32%,transparent)}
+.sp-av{box-shadow:0 0 0 3px color-mix(in srgb,var(--up) 12%,transparent),0 0 14px color-mix(in srgb,var(--up) 25%,transparent)}
+@keyframes spglow{to{box-shadow:0 0 0 4px color-mix(in srgb,var(--up) 15%,transparent),0 0 26px color-mix(in srgb,var(--up) 30%,transparent)}}
+@media(prefers-reduced-motion:reduce){.sp-bub{animation:none}}
+.clock,.clock .ct{white-space:nowrap}
+
+/* v25: Reporter Sprout */
+.sp-av{overflow:visible;position:relative}.sp-av svg{width:46px;height:46px;overflow:visible}
+.sp-cp{fill:#1f3d31;stroke:#e0b04f;stroke-width:.7;stroke-linejoin:round}
+.sp-mh{stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
+.sp-wave{stroke:#e0b04f;stroke-width:1.1;stroke-linecap:round;animation:spwave 2.4s ease-in-out infinite}
+.sp-bd{fill:var(--paper);stroke:var(--up);stroke-width:1}
+.sp-ic{fill:none;stroke:var(--ink);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.sp-bar{fill:var(--up)}.sp-live{fill:#d64b3a;animation:splive 1.4s ease-in-out infinite}
+.sp-pu{transform:translate(calc(var(--ex,0)*1.1px),calc(var(--ey,0)*.9px));transition:transform .15s ease-out}
+.sp-eye{transform-box:fill-box;transform-origin:center;animation:spblink 5.5s infinite}
+.sp-row:nth-child(2n) .sp-eye{animation-delay:-1.7s}.sp-row:nth-child(3n) .sp-eye{animation-delay:-3.4s}
+.sp-cap{transform-origin:24px 22px;animation:spnod 6s ease-in-out infinite}
+@keyframes spblink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+@keyframes spnod{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes spwave{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes splive{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45}}
+@media(max-width:640px){.sp-av svg{width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){.sp-eye,.sp-cap,.sp-wave,.sp-live{animation:none}.sp-pu{transition:none}}

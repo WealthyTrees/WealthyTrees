@@ -7,14 +7,49 @@
 
   var stories = [], topic = "All", seen = {}, firstDraw = true, open = {}, xp = {}, loaded = false;
 
-  function face(m) {
-    var mouth = m === "up" ? "M13 25q7 7 14 0" : "M14 26q6 3 12 0";
-    return '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><line x1="20" y1="2" x2="20" y2="11" stroke="#e0b04f" stroke-width="1.6"/>' +
-      '<rect x="16.5" y="4.5" width="7" height="6" rx="1" fill="#e0b04f"/><circle cx="20" cy="24" r="15" class="sp-body"/>' +
-      '<circle cx="14.5" cy="21" r="3.4" fill="#fff"/><circle cx="25.5" cy="21" r="3.4" fill="#fff"/>' +
-      '<circle cx="15" cy="21.4" r="1.6" fill="#0e1f1a"/><circle cx="26" cy="21.4" r="1.6" fill="#0e1f1a"/>' +
-      '<path d="' + mouth + '" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>';
+  // v21 Reporter Sprout: press cap, mic, eyes that blink and follow the cursor, mood mouth, and a badge for the topic.
+  function moodOf(s) {
+    var t = ((s.hook || "") + " " + (s.title || "")).toLowerCase();
+    var dn = /\b(fall|falls|fell|drop|drops|dropped|slump|slumps|crash|plunge|plunges|tumble|tumbles|slide|slides|sink|sinks|declin\w*|weak\w*|loss|losses|worr\w*|fear\w*|slip|slips|dip|dips|curbs?)\b/.test(t);
+    var up = /\b(rise|rises|rose|surge|surges|jump|jumps|gain|gains|rally|rallies|climb|climbs|record|soar|soars|lift|lifts|strong\w*|boost\w*|higher|up)\b/.test(t);
+    return up && !dn ? "up" : dn && !up ? "down" : "calm";
   }
+  function badge(topic) {
+    var c = '<circle class="sp-bd" cx="39" cy="40" r="7.2"/>', g;
+    if (topic === "live") g = '<circle class="sp-live" cx="39" cy="40" r="3"/>';
+    else if (topic === "Markets") g = '<rect class="sp-bar" x="35.4" y="41.6" width="2" height="3"/><rect class="sp-bar" x="38" y="39.4" width="2" height="5.2"/><rect class="sp-bar" x="40.6" y="36.8" width="2" height="7.8"/>';
+    else if (topic === "Commodities") g = '<path d="M39 34.6Q43.2 38.6 41.5 42Q40.6 44.8 39 44.8Q36 44.8 36.5 41.6Q37 40.2 38 39.2Q38 37 39 34.6Z" fill="#e8641e"/><path d="M39 40.6Q40.6 42 39.8 43.6Q39 44.4 38.3 43.6Q37.6 42.4 39 40.6Z" fill="#ffd45e"/>';
+    else if (topic === "Global") g = '<circle class="sp-ic" cx="39" cy="40" r="3.6"/><ellipse class="sp-ic" cx="39" cy="40" rx="1.5" ry="3.6"/><path class="sp-ic" d="M35.4 40H42.6"/>';
+    else if (topic === "Policy") g = '<path class="sp-ic" d="M35.6 38.2L39 35.8L42.4 38.2Z"/><path class="sp-ic" d="M36.6 39.8V43.2M39 39.8V43.2M41.4 39.8V43.2M35.6 44.4H42.4"/>';
+    else if (topic === "Economy") g = '<text x="39" y="43.2" text-anchor="middle" font-size="9" font-weight="700" fill="#a8741a" font-family="Inter,system-ui,sans-serif">&#8377;</text>';
+    else if (topic) g = '<rect class="sp-ic" x="35.6" y="36.6" width="6.8" height="7.2" rx="1"/><path class="sp-ic" d="M37.2 39.2H40.8M37.2 41.2H40.8"/>';
+    else return "";
+    return '<g class="sp-badge">' + c + g + '</g>';
+  }
+  function face(m, topic) {
+    var mouth = m === "up" ? "M18 34q6 6.5 12 0" : m === "down" ? "M19 37q5 -4.5 10 0" : "M19.5 35.4q4.5 2.4 9 0";
+    return '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">' +
+      '<circle cx="24" cy="27" r="14" class="sp-body"/>' +
+      '<g class="sp-eye"><circle cx="18.6" cy="27.6" r="3.5" fill="#fff"/><circle class="sp-pu" cx="18.8" cy="27.9" r="1.7" fill="#0e1f1a"/></g>' +
+      '<g class="sp-eye"><circle cx="29.4" cy="27.6" r="3.5" fill="#fff"/><circle class="sp-pu" cx="29.6" cy="27.9" r="1.7" fill="#0e1f1a"/></g>' +
+      '<path d="' + mouth + '" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>' +
+      '<g class="sp-cap"><path d="M12.2 20.6Q12 9.4 24 9.4Q36 9.4 35.8 20.6Z" class="sp-cp"/><path d="M10 20.4Q24 25 38 20.4L38 22.4Q24 27 10 22.4Z" class="sp-cp"/><rect x="12.4" y="16.6" width="23.2" height="2.2" fill="#e0b04f"/><path d="M24 11.2L24.9 13.1L27 13.3L25.4 14.6L25.9 16.6L24 15.5L22.1 16.6L22.6 14.6L21 13.3L23.1 13.1Z" fill="#e0b04f"/></g>' +
+      '<g class="sp-mic"><path d="M8.6 38.2L5.4 45.2" class="sp-mh"/><circle cx="9.4" cy="36.2" r="3.3" fill="#e0b04f"/><path class="sp-wave" d="M4.6 33.4q-1.8 2.8 0 5.6M2.4 32q-3 4.2 0 8.4" fill="none"/></g>' +
+      badge(topic) + '</svg>';
+  }
+  // eyes follow the cursor (only on devices with a mouse)
+  (function () {
+    if (!window.matchMedia || !matchMedia("(hover:hover)").matches) return;
+    var raf = 0, mx = 0, my = 0, de = document.documentElement;
+    addEventListener("mousemove", function (e) {
+      mx = e.clientX; my = e.clientY;
+      if (!raf) raf = requestAnimationFrame(function () {
+        raf = 0;
+        de.style.setProperty("--ex", ((mx / innerWidth) * 2 - 1).toFixed(2));
+        de.style.setProperty("--ey", ((my / innerHeight) * 2 - 1).toFixed(2));
+      });
+    }, { passive: true });
+  })();
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
   function ago(ms) {
     var m = Math.round((Date.now() - ms) / 60000);
@@ -23,7 +58,7 @@
   var safe = function (u) { return /^https?:\/\//i.test(u || ""); };
 
   var intro = el("div", "sp-row sp-intro");
-  intro.innerHTML = '<span class="sp-av">' + face("up") + "</span>";
+  intro.innerHTML = '<span class="sp-av">' + face("up", "live") + "</span>";
   var im = el("div", "sp-main"), imeta = el("div", "sp-meta"), ib = el("div", "sp-bub"), say = el("p", "sp-say");
   imeta.append(el("b", "", "Sprout"), el("span", "pill live", "\u25CF LIVE"));
   ib.append(say); im.append(imeta, ib); intro.append(im); ol.before(intro);
@@ -44,7 +79,7 @@
   function skeleton() {
     ol.innerHTML = "";
     for (var i = 0; i < 3; i++) {
-      var li = el("li", "sp-row sp-skel"); li.innerHTML = '<span class="sp-av">' + face("calm") + "</span>";
+      var li = el("li", "sp-row sp-skel"); li.innerHTML = '<span class="sp-av">' + face("calm", "") + "</span>";
       var m = el("div", "sp-main"), b = el("div", "sp-bub");
       b.innerHTML = '<span class="sk" style="width:35%"></span><span class="sk" style="width:92%"></span><span class="sk" style="width:78%"></span>';
       if (i === 0) { b.setAttribute("role", "status"); b.append(el("span", "sp-ty", "Sprout is pulling the latest\u2026")); }
@@ -55,7 +90,7 @@
   function row(s, idx, fresh) {
     var id = s.id, li = el("li", "sp-row" + (fresh ? " pop" : ""));
     if (fresh) li.style.animationDelay = Math.min(idx, 8) * 60 + "ms";
-    var av = el("span", "sp-av"); av.innerHTML = face("calm"); li.append(av);
+    var av = el("span", "sp-av"); av.innerHTML = face(moodOf(s), s.topic || "News"); li.append(av);
     var main = el("div", "sp-main"), meta = el("div", "sp-meta"), tm = el("time", "", ago(s.t)); tm.dataset.t = s.t;
     meta.append(el("b", "", "Sprout"), tm);
     var hot = Date.now() - s.t < 1800000;
