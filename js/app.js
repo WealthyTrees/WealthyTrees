@@ -4,8 +4,7 @@ const p=v.map((y,i)=>(i*w/(v.length-1)).toFixed(1)+','+(h-4-(y-mn)/r*(h-8)).toFi
 return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${p}" fill="none" stroke="${up?'#0f8a5f':'#d64b3a'}" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`}
 fetch('/data/brief.json').then(r=>r.json()).then(d=>{
   $('date').textContent=d.date.replace(/,\s*\d{1,2}:\d{2}\s*[AP]M IST$/,'');
-  const t=d.ticker.map(x=>`<span data-n="${x.name}"><b>${x.name}</b><i class="v">${x.value}</i> <span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');
-  $('track').innerHTML=t+t;
+  if(!window.__tkLive){const t=d.ticker.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;}
   const cats=['All',...new Set(d.items.map(i=>i.category))];
   if(cats.length>2){const bar=document.createElement('div');bar.className='chips';bar.setAttribute('role','group');
     cats.forEach(c=>{const b=document.createElement('button');b.className='chip';b.textContent=c;b.setAttribute('aria-pressed',c==='All');
@@ -22,15 +21,30 @@ fetch('/data/brief.json').then(r=>r.json()).then(d=>{
   });
 }).catch(()=>{$('date').textContent='Brief unavailable. Please check back soon.'});
 
-const FMT={'CRUDE WTI':v=>'$'+v.toFixed(1),'USD/INR':v=>v.toFixed(2)};
-const fmt=(n,v)=>(FMT[n]||(x=>x.toLocaleString('en-US',{maximumFractionDigits:0})))(v);
-function refresh(){if(document.hidden)return;
-  fetch('/api/quotes').then(r=>r.json()).then(j=>{Object.entries(j.quotes||{}).forEach(([n,q])=>{
-    if(!q.price||!q.prev)return;const ch=(q.price-q.prev)/q.prev*100;
-    document.querySelectorAll('#track [data-n]').forEach(e=>{if(e.dataset.n!==n)return;
-      e.querySelector('.v').textContent=fmt(n,q.price);const c=e.querySelector('.c');
-      c.className='c '+(ch>=0?'up':'dn');c.textContent=(ch>=0?'▲ ':'▼ ')+Math.abs(ch).toFixed(2)+'%'})})}).catch(()=>{})}
-setInterval(refresh,60000);setTimeout(refresh,2500);
+/* Market bar (NSE style). Shows one group by time of day, in IST:
+   India indices 6:00 AM to 3:30 PM, commodities from 3:30 PM until the US market opens, US indices from the US open until 6:00 AM. */
+const GRP={IN:['NIFTY 50','SENSEX','BANK NIFTY','NIFTY IT','NIFTY AUTO','NIFTY FMCG','NIFTY PHARMA','NIFTY METAL','INDIA VIX'],
+  CM:['GOLD $/oz','SILVER $/oz','CRUDE WTI','BRENT','NATURAL GAS','COPPER','USD/INR'],
+  US:['S&P 500','NASDAQ','DOW','RUSSELL 2000','VIX']};
+function tzp(tz){const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:tz,weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+  return{wk:p.weekday==='Sat'||p.weekday==='Sun',m:(+p.hour)*60+(+p.minute)}}
+function phase(){const i=tzp('Asia/Kolkata'),e=tzp('America/New_York');
+  if(!e.wk&&e.m>=570&&e.m<960)return{g:'US',n:'US markets',s:'LIVE',live:1};
+  if(i.wk)return{g:'IN',n:'India',s:'LAST CLOSE'};
+  if(i.m>=360&&i.m<930)return i.m>=555?{g:'IN',n:'India',s:'LIVE',live:1}:{g:'IN',n:'India',s:'PRE-OPEN'};
+  if(i.m>=930)return{g:'CM',n:'Commodities',s:'FUTURES',live:1};
+  return{g:'US',n:'US markets',s:'LAST CLOSE'}}
+const FM={'CRUDE WTI':2,'BRENT':2,'GOLD $/oz':2,'SILVER $/oz':2,'NATURAL GAS':3,'COPPER':3,'USD/INR':2};
+const fmt=(n,v,g)=>v.toLocaleString(g==='IN'?'en-IN':'en-US',{minimumFractionDigits:FM[n]||2,maximumFractionDigits:FM[n]||2});
+let QS={};
+function tkRender(){const ph=phase(),names=GRP[ph.g].filter(n=>QS[n]&&QS[n].price&&QS[n].prev);if(!names.length)return;
+  window.__tkLive=1;const tk=$('ticker');tk.classList.toggle('live',!!ph.live);$('tkname').textContent=ph.n;$('tkstat').textContent=ph.s;
+  const h=names.map(n=>{const q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;
+    return `<span class="tk" data-n="${n}"><b>${n}</b><i class="v">${fmt(n,q.price,ph.g)}</i><span class="c ${up?'up':'dn'}">${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)</span></span>`}).join('');
+  const t=$('track');t.innerHTML=h+h;t.style.setProperty('--dur',Math.max(32,names.length*7)+'s')}
+function refresh(){if(document.hidden&&window.__tkLive)return;
+  fetch('/api/quotes').then(r=>r.json()).then(j=>{QS=j.quotes||{};tkRender()}).catch(()=>{})}
+setInterval(refresh,60000);refresh();
 
 /* Newsroom: tabs (Live Wire lives in wire.js) */
 const tabs=[['t-live','p-live'],['t-brief','p-brief']];
