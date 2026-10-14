@@ -26,10 +26,13 @@
     o.addEventListener("click", leave); document.addEventListener("keydown", function (e) { if (e.key === "Escape" || e.key === "Enter") leave(); });
     setTimeout(leave, 1900);
   }
+  // Any link to the Learn page (any spelling) plays the intro. Runs first (capture) so nothing else can stop it.
+  var LEARN = /^(https?:\/\/(www\.)?wealthytrees\.online)?\/?learn(\.html)?\/?(#.*)?$/i;
   document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest('a[href="/learn.html"], a[href="learn.html"]');
-    if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === "_blank") return;
+    if (!LEARN.test(a.getAttribute("href") || "")) return;
     if (/^\/learn(\.html|\/|$)/.test(location.pathname) || rm) return;
     e.preventDefault(); go();
-  });
+  }, true);
 })();

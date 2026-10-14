@@ -75,5 +75,5 @@
 })();
 
 (function () {
-  var s = document.createElement("script"); s.src = "/js/intro.js?v=1"; s.defer = true; document.body.appendChild(s);
+  var s = document.createElement("script"); s.src = "/js/intro.js?v=3"; s.defer = true; document.body.appendChild(s);
 })();
