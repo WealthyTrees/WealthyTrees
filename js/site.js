@@ -73,3 +73,7 @@
   var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/edition.css?v=5"; document.head.appendChild(l);
   var s = document.createElement("script"); s.src = "/js/edition.js?v=5"; s.defer = true; document.body.appendChild(s);
 })();
+
+(function () {
+  var s = document.createElement("script"); s.src = "/js/intro.js?v=1"; s.defer = true; document.body.appendChild(s);
+})();
