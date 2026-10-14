@@ -28,3 +28,25 @@
 @media(max-width:640px){.article{padding:1rem .9rem 1.5rem 2.3rem}.article::before{left:1.6rem}.article::after{left:.35rem;width:12px}.article h2{font-size:1.9rem}}
 @media(prefers-reduced-motion:reduce){.article>p:first-of-type a{transition:none}.js-nb .dgm .wd,.js-nb .dgm .wf{transition:none}}
 .js-nb .dgm.done .wd{stroke-dasharray:none;transition:none}
+
+/* Learn index: course page with lesson-thumbnail cards */
+.clead{max-width:42rem;font-size:1.05rem}
+.cstats{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0 1.1rem}.cstats span{font-size:.85rem;font-weight:600;padding:.25rem .75rem;border:1.5px dashed var(--line);border-radius:999px;color:var(--mute)}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.3rem;margin:1.6rem 0 2.5rem}
+.ccard{position:relative;display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none;transition:transform .25s,box-shadow .25s,border-color .25s}
+@media(hover:hover){a.ccard:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 16px 32px rgba(15,138,95,.2);border-color:var(--up)}}
+a.ccard:active{transform:scale(.99)}
+.cthumb.dgm{position:relative;margin:0;max-width:none;aspect-ratio:16/9;background-color:var(--bg);background-image:repeating-linear-gradient(transparent 0 21px,color-mix(in srgb,var(--up) 14%,transparent) 21px 22px);border-bottom:1px solid var(--line)}
+.cthumb.dgm svg{position:absolute;inset:0;width:100%;height:100%}
+.cthumb::before{content:"";position:absolute;top:-5px;left:50%;width:74px;height:18px;transform:translateX(-50%) rotate(-3deg);background:color-mix(in srgb,var(--gold) 45%,transparent);z-index:2}
+.cnum,.cchip,.cplay,.cribbon{position:absolute;z-index:3}
+.cnum{top:.45rem;left:.8rem;font-family:Caveat,"Segoe Print",cursive;font-weight:700;font-size:1.5rem;color:var(--up)}
+.cchip{left:.8rem;bottom:.55rem;background:var(--deep);color:#fff;font-size:.72rem;font-weight:600;padding:.18rem .6rem;border-radius:999px}
+.cplay{right:.8rem;bottom:.55rem;width:40px;height:40px;border-radius:50%;background:var(--up);box-shadow:0 4px 12px rgba(15,138,95,.35);transition:transform .2s}
+.cplay::after{content:"";position:absolute;left:16px;top:11px;border-left:15px solid var(--on-up);border-top:9px solid transparent;border-bottom:9px solid transparent}
+@media(hover:hover){a.ccard:hover .cplay{transform:scale(1.12)}}
+.cbody{padding:.85rem 1.1rem 1.1rem}.cbody h3{margin:0 0 .25rem;font-size:1.15rem}.cbody p{margin:0 0 .7rem;color:var(--mute);font-size:.93rem}
+.cprog{height:6px;border-radius:9px;background:var(--line);overflow:hidden}.cprog i{display:block;height:100%;width:var(--p,0%);background:var(--up);transition:width .6s}
+.cstate{display:flex;justify-content:space-between;font-size:.82rem;margin-top:.4rem;color:var(--mute)}.cgo{color:var(--up);font-weight:700}
+.ccard.soon{opacity:.75;filter:saturate(.75)}.cribbon{top:.55rem;right:-2.2rem;transform:rotate(35deg);background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem 2.6rem}
+@media(prefers-reduced-motion:reduce){.ccard,.cprog i{transition:none}}
