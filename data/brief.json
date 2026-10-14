@@ -13,107 +13,115 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,183",
-   "change": -0.18
+   "value": "4,171",
+   "change": -0.16
   },
   {
    "name": "CRUDE WTI",
-   "value": "$94.4",
-   "change": 0.69
+   "value": "$95.4",
+   "change": 1.3
   },
   {
    "name": "USD/INR",
-   "value": "95.27",
-   "change": -0.51
+   "value": "95.28",
+   "change": 0.0
   },
   {
    "name": "S&P 500",
-   "value": "7,803",
-   "change": -0.05
+   "value": "7,805",
+   "change": -0.08
   },
   {
    "name": "NASDAQ",
-   "value": "27,193",
-   "change": -0.19
+   "value": "27,204",
+   "change": -0.15
   },
   {
    "name": "DOW",
-   "value": "51,722",
-   "change": -0.25
+   "value": "51,670",
+   "change": 0.03
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Indian and British Exchanges Partner to Expand Cross-Border Investment Routes",
-   "summary": "NSE IFSC and the London Stock Exchange inked a preliminary pact to examine joint product rollouts and cross-listings. The initiative aims to connect international investors in Gujarat's financial hub with London's trading venue.",
-   "why": "Cross-border exchange agreements simplify the process for domestic enterprises to access foreign capital.",
+   "category": "Economy",
+   "title": "Rising Bond Yields May Dampen Indian Bank Net Profit Growth",
+   "summary": "Nifty 50 banking firms are projected to record an 11.5% increase in net interest income during the second quarter, while bottom-line growth is anticipated to slow to roughly 10%. Higher yields on fixed-income securities are creating portfolio pressures that offset underlying operational gains.",
+   "why": "When market yields increase, the price of existing bonds declines, forcing banks to mark down their treasury holdings.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nseix-london-stock-exchange-sign-pact-to-deepen-india-uk-market-links/articleshow/134923014.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/hardening-bond-yields-to-weigh-on-bank-profits-in-september-quarter/articleshow/134929613.cms"
   },
   {
    "category": "Economy",
-   "title": "Market Watchdog Considers Stricter Oversight on Corporate Capital Deployment",
-   "summary": "The Securities and Exchange Board of India released a discussion paper seeking public input on tracking public offering funds. The suggested revisions focus on strengthening disclosure norms for how corporations spend money raised from investors.",
-   "why": "Independent tracking of capital utilization ensures that public firms honor their declared business objectives.",
+   "title": "Rupee Strengthens Following Stricter Reserve Requirements for Currency Derivatives",
+   "summary": "The domestic currency gained ground versus the greenback as financial institutions adapted to new central bank guidelines. Lenders are now obliged to maintain a 20% cash buffer against specific foreign exchange derivative contracts.",
+   "why": "Regulatory curbs on derivative leverage can deter speculative trades and enhance domestic exchange-rate stability.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-proposes-review-of-framework-for-monitoring-utilization-of-issue-proceeds/articleshow/134922472.cms"
+   "url": "https://economictimes.indiatimes.com/markets/forex/rbi-curbs-on-forex-trades-strengthen-rupee/articleshow/134929595.cms"
   },
   {
-   "category": "US Markets",
-   "title": "American Lenders Report Robust Quarterly Income Amid Ongoing Inflationary Concerns",
-   "summary": "Leading United States banking institutions recorded improved quarterly earnings driven by active retail activity, trading gains, and technological spending. Banking leaders nevertheless pointed to continuing consumer price pressures and borrowing costs as near-term risks.",
-   "why": "Bank earnings reflect general economic strength because financial institutions rely heavily on consumer activity and commercial borrowing.",
+   "category": "Equity",
+   "title": "Information Technology Index Jumps Sharply Driven by Strong Sector Earnings",
+   "summary": "The Nifty IT basket expanded by 5.2%, registering its sharpest single-session advance in nearly a year and a half. This broad rally across technology shares was triggered by robust quarterly results declared by HCL Technologies.",
+   "why": "Quarterly earnings updates offer crucial insight into sector demand, frequently setting market direction for industry peers.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-banks-post-strong-profits-but-inflation-and-rate-risks-cloud-outlook/articleshow/134920643.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/mood-swing-ai-hits-a-bump-indian-it-stocks-get-a-jump/articleshow/134929451.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Regulator Proposes Penalties for Listed Companies Failing to Assist Monitors",
+   "summary": "The market regulator has suggested imposing a ₹50,000 fine for every instance where a public corporation fails to assist monitoring agencies. Under the framework, oversight agencies would also receive clearance to submit non-compliance findings directly to bourses.",
+   "why": "Strict oversight mechanisms ensure that capital raised from public shareholders is utilized transparently and strictly as stated in offer documents.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-proposes-rs-50000-fine-for-firms-not-cooperating-with-monitors/articleshow/134929434.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Drop in Derivative Volumes Threatens Revenue Run Rate for Brokerages",
+   "summary": "Index options trading activity recorded a 27% sequential contraction in average daily premium volume during the second quarter. The cooling in speculative market participation is expected to compress fee collections across brokerage platforms.",
+   "why": "Brokerage firms rely heavily on high options trading volumes to generate transaction charges and sustain profitability.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stockbrokers-brace-for-slower-revenue-growth-amid-weaker-trading-activity-11791868624384.html"
+  },
+  {
+   "category": "Economy",
+   "title": "Monthly Systematic Investment Plan Allocations Touch Fresh Record High",
+   "summary": "Retail investors allocated an unprecedented ₹32,490 crore through periodic mutual fund plans during the month of September. Even though the absolute deployment touched a fresh peak, the percentage pace of month-on-month expansion showed signs of moderation.",
+   "why": "SIP trends illustrate the financialization of household savings and domestic institutional liquidity support in the stock market.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/market-volatility-puts-lump-sum-investing-in-focus-as-sip-growth-slows-11791868570894.html"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Rangebound Before Key American Inflation Readings",
-   "summary": "Gold held steady with minimal movement as global market participants awaited newly scheduled United States consumer price numbers. Traders also remained watchful for scheduled commentary from official speakers.",
-   "why": "Inflation statistics shape expectations around interest rate adjustments, which directly influence non-yielding assets like bullion.",
+   "title": "Crude Oil Pauses After Multi-Day Run as Traders Take Profits",
+   "summary": "Petroleum values flattened following three consecutive sessions of price increases as market participants liquidated profitable positions. Prices remained underpinned, however, by continuing supply uncertainties across Eastern Europe and the Middle East.",
+   "why": "Because India imports most of its energy needs, shifts in crude benchmarks directly impact inflation and trade deficits.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-subdued-ahead-of-us-inflation-data-warsh-remarks-11791916268630.html"
+   "url": "https://www.livemint.com/market/oil-rally-peters-out-with-mideast-russia-tensions-in-focus-11791922935224.html"
   },
   {
-   "category": "Equity",
-   "title": "Finance Ministry to Review Feedback on Investment Levies and Transaction Taxes",
-   "summary": "Finance Minister Nirmala Sitharaman announced openness to evaluate representations from market participants concerning equity levies and trading charges. Both domestic and global market participants had submitted inquiries regarding equal treatment across various investment categories.",
-   "why": "Tax structures influence trading costs and play a critical role in portfolio returns.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/stocks-jump-as-sitharaman-says-government-will-hear-investors-on-ltcg-tax-11791898497182.html"
-  },
-  {
-   "category": "Economy",
-   "title": "Central Bank Absorbs Banking Liquidity Through Daily Reverse Repo Mechanism",
-   "summary": "The Reserve Bank of India finalized a one-day auction, taking in over seventy-one thousand crore rupees from financial institutions. The accepted volume fell below the initial target set at one point five lakh crore rupees.",
-   "why": "Reverse repo transactions allow the monetary authority to manage surplus cash and stabilize interbank lending rates.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63795"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Benchmarks Advance Sharply Pushed by Rebound Across Technology Equities",
-   "summary": "The Sensex climbed past eleven hundred points while the Nifty finished above the 22,700 threshold. Software services shares served as the primary catalyst behind the broad-based domestic upward movement.",
-   "why": "Movements in large-cap sectors like technology exert substantial weight on overall index trajectory.",
-   "source": "DD News",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQU5lZUF0cDJFdWtHTGRiN1JDak1IMnNiMnJXVmdlaHJ0ODRSSDVWcDk2SlMydTNFTDhvWmJLOFFMZnM3Mkd2R1RvSnBxeFJzV2tjZEJfYnhHbDhwRk0yNWNMajZBcjZValVMZ2NydlRMQ3pvTDg4bXByV3RfNGhlM19Gd19NWEtsOFJaUlhZZ2FObS1qNG1uTGJwYmp4a0pROExJaF83NThLUURnTHRj?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Rupee Strengthens Substantially Following Interventions by Central Banking Authorities",
-   "summary": "The domestic currency gained 1.8 percent across two trading days following regulatory measures by the central bank. These supportive steps halted recent pressure against the foreign exchange market.",
-   "why": "Central banks intervene in currency markets to smooth volatility and protect domestic economic stability.",
-   "source": "Fortune India",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSzVQbVJMMVlMVkE3VGEwWTgycHBiQm5GdlFxTlNWZ2RVMjVKT09yWTFKdUgzMUxHUWlhQ244N3JBczE2UVJReE5YT3Q2RHIzNVBGMFVPcU14Zy1fRTJUdS1ub3lsU0pleHhWejFxNkJwZFpMQ05DOE5IMVZfTHBpU2VLWWFBTzcwSW0wckNHbmU1SXYtTm1MeEN6S19LTWpFN3VEOGFYUUlHU1pwbEHSAbsBQVVfeXFMTU1zXzJ1cVctVTlsYnFqMUhYbHpnbl9MVTg4QzJydU9NaFQxZGJBcDIyclZPZ2U3bDVEMExzQjdqTHBYLXYwN1RnR29wbVdxSGhUcFNtcHl4S2trbHZ3ZjU0dWdlMHRSZVFzWlhEOGh0UldsM1ZYbm5PbTduV1htWEdLTV9RSHQ3RDBORGJiRW5IMG9OWTU0QllUbzZpTFEwd1NzODhCOTM4ZEZielFUVjZlYW1IUU9zSFNYTQ?oc=5"
+   "category": "Commodity",
+   "title": "Gold and Silver Consolidate Ahead of Crucial American Inflation Data",
+   "summary": "Spot values for yellow and white metals remained muted as participants refrained from placing aggressive bets. Investors are closely monitoring imminent consumer price figures to gauge future interest rate moves in the United States.",
+   "why": "Precious metals bear no yield, making their relative appeal sensitive to changes in global borrowing costs and inflation prints.",
+   "source": "Livemint",
+   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQaGpIWU90b0RfMjJORXNiSnh0Tjl3SEpxMUZiNUs4d0cyaXNIZ2JCV1JKMnRpU3BnVVBwUUV3UHY3V0NobFhpdUNnS0FhY0JMamxTMkkyY29RNjF5T2xGSEItMGtyYXgzeFRtVkRUNDEydThzMFV4UEd4V0Z6VEtMZzBLVjJlNUxRV1VrTXNja1o5cHliMUpUZl9GdHZaRXdmRjRJOHFhejFKY0hvbGNCTHBMR2h2VzE2SDZjbmwtZjJEeGczdHMxSmZRcURGMmFFVDhCaFEycFJreWVyMFRfckhCU1VLQ0hkODhmSzhDdWlaRTQtQ0hiMldxTWszdkdlRzg2UHUwRWHSAY4CQVVfeXFMTTFzQzNpS3NUcnFHZHBiS3NkZWN4Q2V5cFBHN01mRFN0U2hiLTBTajUzU1ZmaTFrZWpkeEtQd1Z1a05EcTVCZ2EyLUJ4NTBUV0U4V0pXWk5fZDhPTlFsOVlVN0toSFJCZ0laUjhxZkgtYjJFSVJXcTZkYlg0eVYzQU9jN0JNX3E4OEdlM0puS3BVZGlKcl9TS1I0eXE5alF4amhDRUQ1OEw3eGVTbE41SnlDUDhyTDNHdnFaRXlVdHJ0N0ZSQ2xMQ2lWbktrbzJ3VmhXUVVpUE5mNlJCcUNpV3dZbU9vYnBYaEJSVldvTFJXc3BRNkdBdDhoSktPYzlFQ0tJU2lXQXB1SEpYMmJR?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "American Indices Diverge as Industrial Shares Gain While Chipmakers Decline",
-   "summary": "The Dow Jones Industrial Average added 369 points while the technology-heavy Nasdaq closed lower during the trading session. Losses among semiconductor and memory hardware companies weighed on the broader tech group.",
-   "why": "Divergence between indices highlights differing performance across heavy industry and high-growth technology segments.",
-   "source": "NDTV Profit",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWkplTG9rTy1wclNzWVdjd1QtZnpYTl9Tb2E4QlFmVHBxVXdYOGN1bkNHZkY0MlFLQmlJX0laTU1SUU9rT3dGazlXejhKSWRWTHBBaldOWE41bUZMWDlKT3FzSTNyYlFFV29laEppUEdTcWJRLXRNa2ZPeVBKV25SOGt0eEtGYVN4NFRuVGdzSUg3dzhZVHFsaWxqTnVwVGoxU3ZVNFFxNVZiRXN4YlZhM3B4eFdSSW16d3IzMmtIa9IBxwFBVV95cUxQU2RDMFlOaUdoaXE2N2l0QVNveUZOMURXV3pPMlZva2RFRmNoQTZLQVJ4aUttb2RhQzBsMnF2MTEzaGRobnZWM2VJalgwQzlQTzVXd3dfMXFRTDRIRms4M1k0ZGxLNENudVVVTmJHa2FkeWJyZjVqYnA1Qm1pWGx0MnhzcWhwU2N0TnRKNE40cEptODJiTnlrdFhCLUVfSndnWmlPYzdPaXVrRk12WU11NUI4Z3RLMUZhbjVUZkpudWtkaWpZZ3VF?oc=5"
+   "title": "American Tech Shares Decline as Banking Results and Semiconductors Weigh",
+   "summary": "The tech-dominated Nasdaq index finished lower due to selling pressure across microchip manufacturers. The pullback occurred alongside the kickoff of corporate financial statements from major US banking institutions.",
+   "why": "US semiconductor trends frequently dictate sentiment for international hardware and IT services sectors.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkNncVkwQU9JeFhSRFFWQ1FhcW5SUk5hY1hQMkpocmdCRlZ5b04zOGJnZ184T1lONDh1cUQwZFY3RVJxUmJzZDhpUWZ0RlhsUGluV3hoVG1TV2JWNEZtUS12R1Z0VURRQmt3SjkyUU44UkZTcmF1RnFaTm9POE9LYW5TWjY3el9jNzQwV1lOVkhaOGFDTE9Wc1NrM0RYTzJ5UFM4eF92UWV3LW03SHJ1U1I5cHF4eDNFS1liNw?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Greenback Softens as Investors Assess Federal Reserve Interest Rate Outlook",
+   "summary": "The US currency lost traction across major pairs prior to the release of domestic consumer inflation statistics. Traders adjusted currency exposure while awaiting fresh guidance on the future path of Federal Reserve benchmark lending rates.",
+   "why": "Movements in the US dollar index influence cross-border capital flows, emerging market currencies, and foreign portfolio allocations.",
+   "source": "Global Banking & Finance Review",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUkp2U20wVVdYc3ZZWUFxc2k3emFKWWlKT2x6cjNKQkNZb09UaEJfcG95WE9BSXo1NEM1clRtaXlfelJWVFJwOTBjblRkUF9KZW9fWl92UGtPTzByUkJZUWNHU282U3ZWQW9BNlZGbkpqcDFRRnE1aEVzZTdQU3JzVnZWbXYxV2RHdmRxaFBPdUQ?oc=5"
   }
  ]
 }
