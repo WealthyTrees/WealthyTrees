@@ -17,14 +17,16 @@
   // 2) Learn page: progress bars and the Start / Continue button
   var cards = document.querySelectorAll("a.ccard[data-mod]");
   if (cards.length) {
-    var next = 0, anyDone = false;
+    var next = 0, anyDone = false, sum = 0;
     cards.forEach(function (c) {
-      var n = +c.dataset.mod, p = get(n);
+      var n = +c.dataset.mod, p = get(n); sum += p;
       c.style.setProperty("--p", p + "%");
       c.querySelector(".cst").textContent = p >= 100 ? "Done \u2713" : p > 0 ? p + "% read" : "Not started";
       c.querySelector(".cgo").textContent = p >= 100 ? "Review \u2192" : p > 0 ? "Continue \u2192" : "Start lesson \u2192";
       if (p >= 100) anyDone = true; else if (!next) next = n;
     });
+    var op = Math.round(sum / document.querySelectorAll(".ccard").length), ot = document.getElementById("opct"), ob = document.getElementById("obar");
+    if (ot) { ot.textContent = op + "%"; ob.style.width = op + "%"; }
     var b = document.getElementById("cont");
     if (b) {
       if (!next) { b.textContent = "Review Module 1"; b.href = "/learn-1.html"; }

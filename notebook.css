@@ -50,3 +50,24 @@ a.ccard:active{transform:scale(.99)}
 .cstate{display:flex;justify-content:space-between;font-size:.82rem;margin-top:.4rem;color:var(--mute)}.cgo{color:var(--up);font-weight:700}
 .ccard.soon{opacity:.75;filter:saturate(.75)}.cribbon{top:.55rem;right:-2.2rem;transform:rotate(35deg);background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem 2.6rem}
 @media(prefers-reduced-motion:reduce){.ccard,.cprog i{transition:none}}
+
+/* v3: captions and the closing note in handwriting */
+.article .dgm .cap,.article p.cap{font-family:Caveat,"Segoe Print",cursive;font-size:1.25rem;font-weight:600;color:var(--mute)}
+
+/* v4: diagrams sit in a taped graph-paper box; interactive quiz; overall progress */
+.article .dgm{position:relative;margin:1.6rem 0 1rem;padding:1.1rem 1rem .5rem;max-width:42rem;background-color:var(--bg);background-image:linear-gradient(color-mix(in srgb,var(--up) 9%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--up) 9%,transparent) 1px,transparent 1px);background-size:22px 22px;border:2px solid color-mix(in srgb,var(--ink) 55%,transparent);border-radius:14px;box-shadow:3px 5px 0 color-mix(in srgb,var(--ink) 14%,transparent)}
+.article .dgm::before{content:"";position:absolute;top:-9px;left:50%;width:74px;height:18px;transform:translateX(-50%) rotate(-2deg);background:color-mix(in srgb,var(--gold) 50%,transparent)}
+.article .dgm .cap{margin:.2rem 0 .4rem;text-align:center}
+.quiz{position:relative;margin:2.2rem 0 1rem;padding:1.1rem 1.2rem 1.3rem;max-width:42rem;border:2px dashed var(--up);border-radius:14px;background:color-mix(in srgb,var(--up) 7%,var(--paper))}
+.quiz h3{margin:0 0 .2rem;font-family:Caveat,"Segoe Print",cursive;font-size:2rem}
+.qdots{display:flex;gap:.4rem;margin:.2rem 0 .8rem}.qdots i{width:26px;height:7px;border-radius:9px;background:var(--line)}.qdots i.on{background:var(--gold)}.qdots i.ok{background:var(--up)}.qdots i.bad{background:var(--down)}
+.qq{font-weight:600;margin:.2rem 0 .6rem}
+.qopt{display:block;width:100%;text-align:left;margin:.45rem 0;padding:.65rem .95rem;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;cursor:pointer;transition:transform .15s,border-color .15s,background .15s}
+.qopt:not(:disabled):hover{border-color:var(--up);transform:translateX(4px)}.qopt:disabled{cursor:default}
+.qopt.ok{background:color-mix(in srgb,var(--up) 22%,var(--paper));border-color:var(--up);font-weight:600}
+.qopt.bad{background:color-mix(in srgb,var(--down) 18%,var(--paper));border-color:var(--down);animation:qshake .4s}
+@keyframes qshake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.qfb{margin:.7rem 0 .5rem;font-family:Caveat,"Segoe Print",cursive;font-size:1.4rem;font-weight:700;line-height:1.25}
+.qres{text-align:center;padding:.6rem 0}.qres b{display:block;font-family:Caveat,"Segoe Print",cursive;font-size:3rem;color:var(--up)}
+.oprog{max-width:42rem;margin:0 0 1.1rem}.oprog p{margin:0 0 .3rem;font-weight:600}.oprog b{color:var(--up);font-size:1.15rem}
+@media(prefers-reduced-motion:reduce){.qopt.bad{animation:none}}
