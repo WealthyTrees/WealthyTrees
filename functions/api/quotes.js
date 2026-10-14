@@ -4,7 +4,9 @@
 const SYMS = {
   "NIFTY 50": "^NSEI", "SENSEX": "^BSESN", "BANK NIFTY": "^NSEBANK",
   "GOLD $/oz": "GC=F", "CRUDE WTI": "CL=F", "USD/INR": "USDINR=X",
-  "S&P 500": "^GSPC", "NASDAQ": "^IXIC", "DOW": "^DJI",
+  "S&P 500": "^GSPC", "NASDAQ": "^IXIC", "DOW": "^DJI", "RUSSELL 2000": "^RUT", "VIX": "^VIX",
+  "NIFTY IT": "^CNXIT", "NIFTY AUTO": "^CNXAUTO", "NIFTY FMCG": "^CNXFMCG", "NIFTY PHARMA": "^CNXPHARMA", "NIFTY METAL": "^CNXMETAL", "INDIA VIX": "^INDIAVIX",
+  "SILVER $/oz": "SI=F", "BRENT": "BZ=F", "NATURAL GAS": "NG=F", "COPPER": "HG=F",
 };
 
 async function fetchQuote(sym) {
