@@ -27,7 +27,7 @@
     setTimeout(leave, 1900);
   }
   document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest('header nav a[href="/learn.html"]');
+    var a = e.target.closest && e.target.closest('a[href="/learn.html"], a[href="learn.html"]');
     if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     if (/^\/learn(\.html|\/|$)/.test(location.pathname) || rm) return;
     e.preventDefault(); go();
