@@ -2,6 +2,15 @@
 (function () {
   var de = document.documentElement, KEY = "wt-learn-";
   function get(n) { try { return +localStorage.getItem(KEY + n) || 0; } catch (e) { return 0; } }
+  // A module is complete only when it is read to the end AND all 3 lab tasks are ticked AND the quiz is finished.
+  function prog(n) {
+    var read = Math.min(100, get(n)), lab = 0, qd = false;
+    try { var o = JSON.parse(localStorage.getItem("wt-lab-" + n) || "{}"); for (var k in o) if (o[k]) lab++; qd = !!localStorage.getItem("wt-quizdone-" + n); } catch (e) {}
+    lab = Math.min(3, lab);
+    var done = read >= 100 && lab >= 3 && qd;
+    return { read: read, lab: lab, qd: qd, done: done, pct: done ? 100 : Math.min(99, Math.round(read * 0.4 + lab * 10 + (qd ? 30 : 0))) };
+  }
+  window.WTP = prog;
   // 1) Module pages: remember how far down the reader got (saved only in their own browser)
   var m = location.pathname.match(/module-(\d+)/), art = document.querySelector(".article");
   if (m && art) {
@@ -10,7 +19,7 @@
       tk = false;
       var p = Math.round(100 * (window.pageYOffset + innerHeight) / de.scrollHeight);
       if (p >= 94) p = 100;
-      if (p > best) { best = p; try { localStorage.setItem(KEY + m[1], String(p)); } catch (e) {} }
+      if (p > best) { best = p; try { localStorage.setItem(KEY + m[1], String(p)); } catch (e) {} if (p === 100) window.dispatchEvent(new Event("wt-progress")); }
     };
     addEventListener("scroll", function () { if (!tk) { tk = true; requestAnimationFrame(up); } }, { passive: true });
   }
@@ -19,18 +28,18 @@
   if (cards.length) {
     var next = 0, anyDone = false, sum = 0;
     cards.forEach(function (c) {
-      var n = +c.dataset.mod, p = get(n); sum += p;
+      var n = +c.dataset.mod, P = prog(n), p = P.pct; sum += p;
       c.style.setProperty("--p", p + "%");
-      c.querySelector(".cst").textContent = p >= 100 ? "Done \u2713" : p > 0 ? p + "% read" : "Not started";
-      c.querySelector(".cgo").textContent = p >= 100 ? "Review \u2192" : p > 0 ? "Continue \u2192" : "Start lesson \u2192";
-      if (p >= 100) anyDone = true; else if (!next) next = n;
+      c.querySelector(".cst").textContent = P.done ? "Done \u2713" : p > 0 ? p + "% done" : "Not started";
+      c.querySelector(".cgo").textContent = P.done ? "Review \u2192" : p > 0 ? "Continue \u2192" : "Start lesson \u2192";
+      if (P.done) anyDone = true; else if (!next) next = n;
     });
     var op = Math.round(sum / document.querySelectorAll(".ccard").length), ot = document.getElementById("opct"), ob = document.getElementById("obar");
     if (ot) { ot.textContent = op + "%"; ob.style.width = op + "%"; }
     var b = document.getElementById("cont");
     if (b) {
       if (!next) { b.textContent = "Review Module 1"; b.href = "/learn/module-1.html"; }
-      else { b.href = "/learn/module-" + next + ".html"; b.textContent = get(next) > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
+      else { b.href = "/learn/module-" + next + ".html"; b.textContent = prog(next).pct > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
     }
   }
   // 3) Diagrams draw themselves when scrolled into view; thumbnails replay on hover or tap
@@ -63,5 +72,17 @@
     b.checked = !!saved[b.dataset.i];
     b.addEventListener("change", function () { saved[b.dataset.i] = b.checked; try { localStorage.setItem(k, JSON.stringify(saved)); } catch (e) {} paint(); });
   });
+  var strip = document.createElement("div"); strip.className = "mdone";
+  strip.innerHTML = '<span data-k="read">Read</span><span data-k="lab">Lab</span><span data-k="quiz">Quiz</span><p class="mdone-msg"></p>';
+  lab.insertBefore(strip, lab.querySelector(".mpath"));
+  function strp() {
+    var P = window.WTP(lab.dataset.lab), sp = strip.querySelectorAll("span");
+    sp[0].className = P.read >= 100 ? "ok" : ""; sp[0].textContent = (P.read >= 100 ? "\u2713 " : "") + "Read to the end";
+    sp[1].className = P.lab >= 3 ? "ok" : ""; sp[1].textContent = (P.lab >= 3 ? "\u2713 " : "") + "Lab " + P.lab + "/3";
+    sp[2].className = P.qd ? "ok" : ""; sp[2].textContent = (P.qd ? "\u2713 " : "") + "Quiz";
+    strip.querySelector(".mdone-msg").textContent = P.done ? "Module complete. Great work!" : "Finish all three to complete this module.";
+  }
+  boxes.forEach(function (b) { b.addEventListener("change", strp); });
+  window.addEventListener("wt-progress", strp); strp();
   paint();
 })();

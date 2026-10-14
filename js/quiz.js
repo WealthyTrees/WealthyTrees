@@ -12,7 +12,7 @@ function pick(n){var q=Q[i],bs=box.querySelectorAll(".qopt"),ok=n==q.a,fb=box.qu
 bs[q.a].classList.add("ok");if(!ok)bs[n].classList.add("bad");res[i]=ok?"ok":"bad";if(ok){sc++;boom(70)}
 fb.textContent=(ok?"Correct! ":"Not quite. The answer is: "+q.o[q.a]+". ")+q.e;box.querySelector(".qdots").outerHTML=dots();
 var b=document.createElement("button");b.type="button";b.className="btn";b.textContent=i<Q.length-1?"Next question \u2192":"See my score";b.onclick=function(){i++;i<Q.length?show():end()};box.appendChild(b)}
-function end(){var best=0;try{best=+localStorage.getItem("wt-quiz-"+mod)||0;if(sc>best){best=sc;localStorage.setItem("wt-quiz-"+mod,String(sc))}}catch(e){}
+function end(){var best=0;try{best=+localStorage.getItem("wt-quiz-"+mod)||0;if(sc>best){best=sc;localStorage.setItem("wt-quiz-"+mod,String(sc))}}catch(e){}try{localStorage.setItem("wt-quizdone-"+mod,"1")}catch(e){}window.dispatchEvent(new Event("wt-progress"));
 var m=sc==Q.length?"Perfect! You nailed it.":sc>=2?"Great work. Almost there.":"Good start. Read the lessons again and retry.";if(sc>=2)boom(sc==Q.length?220:100);
 box.innerHTML="<h3>Quick quiz</h3>"+dots()+'<div class="qres"><b>'+sc+" / "+Q.length+"</b>"+m+"<br><small>Best score: "+best+" / "+Q.length+"</small></div>";
 var b=document.createElement("button");b.type="button";b.className="btn";b.textContent="Try again";b.onclick=function(){i=0;sc=0;res=[];show()};box.appendChild(b)}
