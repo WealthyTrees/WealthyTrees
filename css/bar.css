@@ -1,0 +1,15 @@
+/* WealthyTrees bar.css v1: NSE-style market bar, one separate box per index */
+.ticker.nse{border-bottom:0;align-items:center}
+.ticker.nse .tk-view{padding:.5rem 0}
+.nse .track{gap:0;padding:0 .3rem}
+.nse .track .tk{display:inline-flex;flex-direction:column;align-items:flex-start;gap:.12rem;min-width:170px;margin:0 .35rem;padding:.5rem .9rem;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.02));color:#fff;text-decoration:none;transition:transform .15s,border-color .15s,box-shadow .15s}
+.nse .track .tk.u{border-color:rgba(61,220,151,.42)}.nse .track .tk.d{border-color:rgba(255,123,107,.42)}
+.nse .track a.tk{cursor:pointer}
+.nse .track a.tk:hover{transform:translateY(-2px);border-color:#3ddc97;box-shadow:0 6px 16px rgba(0,0,0,.4),0 0 14px rgba(61,220,151,.28)}
+.nse .track a.tk:focus{outline:none}.nse .track a.tk:focus-visible{outline:2px solid #e0b04f;outline-offset:2px}
+.nse .track .tk,.nse .track .tk *{text-decoration:none!important}
+.nse .track .tk b{font-size:.7rem;color:#9db5a9;letter-spacing:.07em}
+.nse .track .tk .v{font-size:1.08rem;color:#fff}
+.nse .track .tk .c{padding:0;background:none;font-size:.82rem}
+.nse .track .tk .c.up{color:#3ddc97}.nse .track .tk .c.dn{color:#ff7b6b}
+@media(max-width:640px){.nse .track .tk{min-width:148px;padding:.45rem .75rem}}
