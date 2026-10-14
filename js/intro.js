@@ -3,7 +3,7 @@
   var rm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   var st = document.createElement("style");
   st.textContent = ".wt-intro{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;text-align:center;cursor:pointer;opacity:0;transition:opacity .35s;background-color:var(--paper,#fffdf6);background-image:repeating-linear-gradient(transparent 0 33px,color-mix(in srgb,var(--up,#0f8a5f) 14%,transparent) 33px 34px)}"
-    + ".wt-intro.on{opacity:1}.wt-intro.out{opacity:0}.wt-intro::before{content:'';position:absolute;top:0;bottom:0;left:max(2.2rem,8vw);width:2px;background:color-mix(in srgb,var(--down,#c8452f) 55%,transparent)}"
+    + ".wt-intro.on{opacity:1}.wt-intro.out{opacity:0;transition:opacity .9s .15s}.wt-intro::before{content:'';position:absolute;top:0;bottom:0;left:max(2.2rem,8vw);width:2px;background:color-mix(in srgb,var(--down,#c8452f) 55%,transparent)}"
     + ".wt-intro img{width:120px;height:120px;transform:scale(.3);opacity:0;animation:wti-grow .9s .1s cubic-bezier(.2,1.3,.4,1) forwards,wti-glow 1.6s .9s ease-in-out infinite}"
     + ".wt-intro h2{font-family:Caveat,'Segoe Print','Comic Sans MS',cursive;font-size:clamp(2.2rem,7vw,3.4rem);margin:.6rem 0 .2rem;min-height:1.3em;color:var(--ink,#16231d)}"
     + ".wt-intro h2 i{display:inline-block;width:3px;height:.9em;background:var(--up,#0f8a5f);margin-left:3px;vertical-align:-.1em;animation:wti-blink .7s steps(1) infinite}"
@@ -22,7 +22,18 @@
     document.body.appendChild(o); requestAnimationFrame(function () { o.classList.add("on"); });
     var t = "Let's learn the markets", n = 0, sp = o.querySelector("h2 span"), done = false;
     var ty = setInterval(function () { sp.textContent = t.slice(0, ++n); if (n >= t.length) clearInterval(ty); }, 55);
-    function leave() { if (done) return; done = true; clearInterval(ty); o.classList.add("out"); setTimeout(function () { location.href = "/learn.html"; }, 200); }
+    function scatter() {
+      var im = o.querySelector("img"), r = im.getBoundingClientRect(), c = document.createElement("canvas"), x = c.getContext("2d"), w = c.width = innerWidth, h = c.height = innerHeight, P = [], t0 = performance.now(), N = 90;
+      c.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:100000"; document.body.appendChild(c);
+      for (var i = 0; i < N; i++) { var a = Math.random() * 6.283, v = 4 + Math.random() * 11; P.push({ x: r.left + r.width / 2, y: r.top + r.height / 2, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 4, s: 14 + Math.random() * 18, k: i % 3, rot: Math.random() * 6, vr: (Math.random() - .5) * .3 }); }
+      (function f(now) { var t = (now - t0) / 1000; x.clearRect(0, 0, w, h);
+        P.forEach(function (p) { p.x += p.vx; p.y += p.vy; p.vy += .32; p.vx *= .995; p.rot += p.vr; x.save(); x.globalAlpha = Math.max(0, Math.min(1, (1.15 - t) / .45)); x.translate(p.x, p.y); x.rotate(p.rot);
+          if (p.k === 0) { var g = x.createRadialGradient(-p.s / 5, -p.s / 5, 1, 0, 0, p.s / 2); g.addColorStop(0, "#fff3b0"); g.addColorStop(1, "#e0a82e"); x.fillStyle = g; x.beginPath(); x.arc(0, 0, p.s / 2, 0, 6.283); x.fill(); x.strokeStyle = "#a8741a"; x.lineWidth = 2; x.stroke(); x.fillStyle = "#8a5a10"; x.font = "700 " + p.s * .6 + "px Inter,sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText("\u20B9", 0, 1); }
+          else { x.fillStyle = p.k === 1 ? "#e0a82e" : "#0f8a5f"; x.font = "700 " + p.s * 1.3 + "px Inter,sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText("\u20B9", 0, 0); }
+          x.restore(); });
+        t < 1.2 ? requestAnimationFrame(f) : c.remove(); })(t0);
+    }
+    function leave() { if (done) return; done = true; clearInterval(ty); o.classList.add("out"); o.querySelector("div").style.cssText += ";opacity:0;transition:opacity .25s"; scatter(); setTimeout(function () { location.href = "/learn.html"; }, 1000); }
     o.addEventListener("click", leave); document.addEventListener("keydown", function (e) { if (e.key === "Escape" || e.key === "Enter") leave(); });
     setTimeout(leave, 1900);
   }

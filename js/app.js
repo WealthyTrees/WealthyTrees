@@ -34,17 +34,18 @@ function phase(){const i=tzp('Asia/Kolkata'),e=tzp('America/New_York');
   if(i.m>=360&&i.m<930)return i.m>=555?{g:'IN',n:'India',s:'LIVE',live:1}:{g:'IN',n:'India',s:'PRE-OPEN'};
   if(i.m>=930)return{g:'CM',n:'Commodities',s:'FUTURES',live:1};
   return{g:'US',n:'US markets',s:'LAST CLOSE'}}
+const CMAP={'NIFTY 50':'Nifty 50','SENSEX':'Sensex','BANK NIFTY':'Bank Nifty','S&P 500':'S&P 500','NASDAQ':'Nasdaq'};
 const FM={'CRUDE WTI':2,'BRENT':2,'GOLD $/oz':2,'SILVER $/oz':2,'NATURAL GAS':3,'COPPER':3,'USD/INR':2};
 const fmt=(n,v,g)=>v.toLocaleString(g==='IN'?'en-IN':'en-US',{minimumFractionDigits:FM[n]||2,maximumFractionDigits:FM[n]||2});
 let QS={};
-function tkRender(){const ph=phase(),names=GRP[ph.g].filter(n=>QS[n]&&QS[n].price&&QS[n].prev);if(!names.length)return;
+function tkRender(){const ph=phase();if(ph.g==='IN'&&window.WT_HOL){const H=WT_HOL.today();if(H&&H.kind==='closed'){ph.s='HOLIDAY · '+H.name;ph.live=0}else if(H&&H.kind==='muhurat'){ph.s='MUHURAT DAY';ph.live=0}}const names=GRP[ph.g].filter(n=>QS[n]&&QS[n].price&&QS[n].prev);if(!names.length)return;
   window.__tkLive=1;const tk=$('ticker');tk.classList.toggle('live',!!ph.live);$('tkname').textContent=ph.n;$('tkstat').textContent=ph.s;
   const h=names.map(n=>{const q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;
-    return `<span class="tk" data-n="${n}"><b>${n}</b><i class="v">${fmt(n,q.price,ph.g)}</i><span class="c ${up?'up':'dn'}">${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)</span></span>`}).join('');
+    const ck=CMAP[n],tg=ck?'a':'span',hr=ck?` href="/markets.html?i=${encodeURIComponent(ck)}#charts" title="Open ${ck} chart"`:'';return `<${tg} class="tk" data-n="${n}"${hr}><b>${n}</b><i class="v">${fmt(n,q.price,ph.g)}</i><span class="c ${up?'up':'dn'}">${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)</span></${tg}>`}).join('');
   const t=$('track');t.innerHTML=h+h;t.style.setProperty('--dur',Math.max(32,names.length*7)+'s')}
 function refresh(){if(document.hidden&&window.__tkLive)return;
   fetch('/api/quotes').then(r=>r.json()).then(j=>{QS=j.quotes||{};tkRender()}).catch(()=>{})}
-setInterval(refresh,60000);refresh();
+setInterval(refresh,60000);refresh();window.addEventListener('wt-holidays',()=>{if(Object.keys(QS).length)tkRender()});
 
 /* Newsroom: tabs (Live Wire lives in wire.js) */
 const tabs=[['t-live','p-live'],['t-brief','p-brief']];
