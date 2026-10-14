@@ -1,6 +1,6 @@
 /* WealthyTrees quiz.js v1: interactive 3-question quiz with confetti and score */
 (function(){var box=document.getElementById("quiz"),d=document.getElementById("qdata");if(!box||!d)return;
-var Q=JSON.parse(d.textContent),i=0,sc=0,res=[],mod=(location.pathname.match(/learn-(\d+)/)||[])[1],rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var Q=JSON.parse(d.textContent),i=0,sc=0,res=[],mod=(location.pathname.match(/module-(\d+)/)||[])[1],rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
 function boom(n){if(rm)return;var c=document.createElement("canvas"),x=c.getContext("2d"),w=c.width=innerWidth,h=c.height=innerHeight,k=["#0f8a5f","#e0a82e","#c8452f","#2f6fdb","#9b59b6"],P=[],t=0;
 c.style.cssText="position:fixed;inset:0;pointer-events:none;z-index:9999";document.body.appendChild(c);
 for(var j=0;j<n;j++)P.push({x:w/2,y:h*.6,vx:(Math.random()-.5)*14,vy:-Math.random()*14-4,s:5+Math.random()*6,c:k[j%5],r:Math.random()*6});

@@ -3,7 +3,7 @@
   var de = document.documentElement, KEY = "wt-learn-";
   function get(n) { try { return +localStorage.getItem(KEY + n) || 0; } catch (e) { return 0; } }
   // 1) Module pages: remember how far down the reader got (saved only in their own browser)
-  var m = location.pathname.match(/learn-(\d+)/), art = document.querySelector(".article");
+  var m = location.pathname.match(/module-(\d+)/), art = document.querySelector(".article");
   if (m && art) {
     var best = get(m[1]), tk = false;
     var up = function () {
@@ -29,8 +29,8 @@
     if (ot) { ot.textContent = op + "%"; ob.style.width = op + "%"; }
     var b = document.getElementById("cont");
     if (b) {
-      if (!next) { b.textContent = "Review Module 1"; b.href = "/learn-1.html"; }
-      else { b.href = "/learn-" + next + ".html"; b.textContent = get(next) > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
+      if (!next) { b.textContent = "Review Module 1"; b.href = "/learn/module-1.html"; }
+      else { b.href = "/learn/module-" + next + ".html"; b.textContent = get(next) > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
     }
   }
   // 3) Diagrams draw themselves when scrolled into view; thumbnails replay on hover or tap
