@@ -84,7 +84,37 @@ Return ONLY a JSON array, no other text.
 HEADLINES:
 """
 
-CHARTS = {"Nifty 50": "^NSEI", "Sensex": "^BSESN", "Bank Nifty": "^NSEBANK", "S&P 500": "^GSPC", "Nasdaq": "^IXIC"}
+CHARTS = {
+    "Nifty 50": "^NSEI",
+    "Sensex": "^BSESN",
+    "Bank Nifty": "^NSEBANK",
+    "Nifty IT": "^CNXIT",
+    "Nifty Auto": "^CNXAUTO",
+    "Nifty FMCG": "^CNXFMCG",
+    "Nifty Pharma": "^CNXPHARMA",
+    "Nifty Metal": "^CNXMETAL",
+    "India VIX": "^INDIAVIX",
+    "S&P 500": "^GSPC",
+    "Nasdaq": "^IXIC",
+    "Dow": "^DJI",
+    "Russell 2000": "^RUT",
+    "VIX": "^VIX",
+    "Gold": "GC=F",
+    "Silver": "SI=F",
+    "Crude WTI": "CL=F",
+    "Brent": "BZ=F",
+    "Natural Gas": "NG=F",
+    "Copper": "HG=F",
+    "USD/INR": "USDINR=X",
+    "Nifty Financial Services": "^CNXFIN",
+    "Nifty Realty": "^CNXREALTY",
+    "Nifty PSU Bank": "^CNXPSUBANK",
+    "Nifty Energy": "^CNXENERGY",
+    "Nifty Media": "^CNXMEDIA",
+    "Nifty Infra": "^CNXINFRA",
+    "Nifty Midcap": "^CNXMIDCAP",
+    "Nifty Smallcap": "^CNXSC",
+}
 CHARTS_OUT = "data/charts.json"
 
 def chart_data():
