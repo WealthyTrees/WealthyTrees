@@ -47,3 +47,21 @@
     c.addEventListener("mouseenter", re); c.addEventListener("touchstart", re, { passive: true });
   });
 })();
+
+/* Practice lab: tick boxes are remembered in the visitor's own browser */
+(function () {
+  var lab = document.querySelector(".lab"); if (!lab) return;
+  var k = "wt-lab-" + lab.dataset.lab, saved = {};
+  try { saved = JSON.parse(localStorage.getItem(k) || "{}"); } catch (e) {}
+  var boxes = lab.querySelectorAll("input[type=checkbox]"), cnt = lab.querySelector(".lab-cnt");
+  function paint() {
+    var n = 0; boxes.forEach(function (b) { if (b.checked) n++; b.closest("li").classList.toggle("ok", b.checked); });
+    cnt.textContent = n === boxes.length ? "All done \u2713 Great work" : n + " of " + boxes.length + " done";
+    lab.classList.toggle("all", n === boxes.length);
+  }
+  boxes.forEach(function (b) {
+    b.checked = !!saved[b.dataset.i];
+    b.addEventListener("change", function () { saved[b.dataset.i] = b.checked; try { localStorage.setItem(k, JSON.stringify(saved)); } catch (e) {} paint(); });
+  });
+  paint();
+})();
