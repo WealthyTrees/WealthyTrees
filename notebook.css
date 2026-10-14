@@ -1,0 +1,30 @@
+/* WealthyTrees notebook.css v1: Learn modules look like a handwritten study notebook */
+.article{position:relative;margin-top:1rem;margin-bottom:2rem;padding:1.4rem 1.4rem 2rem 3.4rem;background-color:var(--paper);background-image:repeating-linear-gradient(transparent 0 26px,color-mix(in srgb,var(--up) 14%,transparent) 26px 27px);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.article::before{content:"";position:absolute;top:0;bottom:0;left:2.6rem;width:2px;background:color-mix(in srgb,var(--down) 55%,transparent)}
+.article::after{content:"";position:absolute;top:1.2rem;bottom:1.2rem;left:.8rem;width:14px;background:radial-gradient(circle at 7px 7px,var(--bg) 0 5px,color-mix(in srgb,var(--ink) 25%,transparent) 5.5px 7px,transparent 7.5px) 0 0/14px 38px repeat-y}
+.article>*{position:relative;z-index:1}
+.article a{color:var(--up);text-decoration-thickness:2px;text-underline-offset:3px}
+.article>p:first-of-type{margin-top:0}
+.article>p:first-of-type a{display:inline-flex;align-items:center;gap:.3rem;padding:.35rem .95rem;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-weight:600;font-size:.95rem;text-decoration:none;transition:border-color .2s,transform .2s,color .2s}
+.article>p:first-of-type a:hover{border-color:var(--up);color:var(--up);transform:translateX(-3px)}
+.article h2{font-family:Caveat,"Segoe Print","Comic Sans MS",cursive;font-size:2.15rem;font-weight:700;letter-spacing:0;display:inline-block;margin:2.2rem 0 .4rem;padding:0 .35rem;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--gold) 38%,transparent) 58% 92%,transparent 92%);transform:rotate(-.6deg)}
+.article p b:first-child{font-family:Caveat,"Segoe Print",cursive;font-size:1.3rem;font-weight:700;color:var(--up);margin-right:.15rem}
+.article p.trap{max-width:40rem;background:#fff1a6;color:#3a3000;padding:.7rem 1rem .8rem;margin:1rem 0;border-radius:3px;transform:rotate(-.7deg);box-shadow:2px 5px 10px rgba(0,0,0,.18)}
+.article p.trap b:first-child{color:#a2380f}
+.article p.trap b:first-child::before{content:"\26A0\FE0F  "}
+.article .callout{border:2px dashed var(--up);border-left-width:2px;background:color-mix(in srgb,var(--up) 7%,var(--paper));transform:rotate(.3deg)}
+.article .callout h3{font-family:Caveat,"Segoe Print",cursive;font-size:1.8rem;font-weight:700;letter-spacing:0}
+.article ul{max-width:42rem}
+.dgm{margin:1rem 0 .4rem;color:var(--ink);max-width:42rem}
+.dgm svg{width:100%;height:auto;display:block;overflow:visible}
+.dgm .hw{font-family:Caveat,"Segoe Print",cursive;font-weight:700;fill:currentColor}
+.dgm .wk{filter:url(#rough)}
+.dgm .wd{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.dgm .cap{font-size:.85rem;color:var(--mute);margin:.1rem 0 0}
+.js-nb .dgm .wd{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.5s ease}
+.js-nb .dgm .wf{opacity:0;transition:opacity .8s ease .9s}
+.js-nb .dgm.in .wd{stroke-dashoffset:0}
+.js-nb .dgm.in .wf{opacity:1}
+@media(max-width:640px){.article{padding:1rem .9rem 1.5rem 2.3rem}.article::before{left:1.6rem}.article::after{left:.35rem;width:12px}.article h2{font-size:1.9rem}}
+@media(prefers-reduced-motion:reduce){.article>p:first-of-type a{transition:none}.js-nb .dgm .wd,.js-nb .dgm .wf{transition:none}}
+.js-nb .dgm.done .wd{stroke-dasharray:none;transition:none}
