@@ -1,0 +1,143 @@
+{
+ "updated": "2026-10-15T05:09:16+00:00",
+ "charts": {
+  "Nifty 50": {
+   "yahoo": "ok",
+   "rows": 496
+  },
+  "Sensex": {
+   "yahoo": "ok",
+   "rows": 495
+  },
+  "Bank Nifty": {
+   "yahoo": "ok",
+   "rows": 495
+  },
+  "Nifty IT": {
+   "yahoo": "ok",
+   "rows": 495
+  },
+  "Nifty Auto": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty FMCG": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Pharma": {
+   "yahoo": "ok",
+   "rows": 494
+  },
+  "Nifty Metal": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "India VIX": {
+   "yahoo": "ok",
+   "rows": 493
+  },
+  "S&P 500": {
+   "yahoo": "ok",
+   "rows": 501
+  },
+  "Nasdaq": {
+   "yahoo": "ok",
+   "rows": 501
+  },
+  "Dow": {
+   "yahoo": "ok",
+   "rows": 501
+  },
+  "Russell 2000": {
+   "yahoo": "ok",
+   "rows": 501
+  },
+  "VIX": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "Gold": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "Silver": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "Crude WTI": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "Brent": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "Natural Gas": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "Copper": {
+   "yahoo": "ok",
+   "rows": 504
+  },
+  "USD/INR": {
+   "yahoo": "ok",
+   "rows": 518
+  },
+  "Nifty Financial Services": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Realty": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty PSU Bank": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Energy": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Media": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Infra": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Midcap": {
+   "yahoo": "HTTP Error 404: Not Found",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  },
+  "Nifty Smallcap": {
+   "yahoo": "only 1 rows",
+   "nse": "HTTP Error 403: Forbidden",
+   "niftyindices": "Expecting value: line 1 column 2 (char 1)",
+   "rows": 0
+  }
+ }
+}

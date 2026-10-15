@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,895",
-   "change": 1.21
+   "value": "22,912",
+   "change": 1.28
   },
   {
    "name": "SENSEX",
-   "value": "73,624",
-   "change": 1.16
+   "value": "73,733",
+   "change": 1.31
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,167",
-   "change": 1.43
+   "value": "4,166",
+   "change": 1.42
   },
   {
    "name": "CRUDE WTI",
-   "value": "$93.9",
-   "change": -1.27
+   "value": "$94.0",
+   "change": -1.11
   },
   {
    "name": "USD/INR",
-   "value": "94.91",
-   "change": -0.24
+   "value": "94.94",
+   "change": -0.22
   },
   {
    "name": "S&P 500",
@@ -45,67 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Indian Indices Bounce Back Led by Financial and Tech Shares",
-   "summary": "Domestic stock benchmarks recovered from recent losses during Thursday trade. Gains were driven primarily by firm participation across software and banking counters.",
-   "why": "Headline equity indices reflect broad investor sentiment and indicate which key business sectors are driving capital movements.",
+   "title": "Reliance Jio Sets Price Band for Record Initial Public Offering",
+   "summary": "Reliance Jio established its share sale corridor between 1,065 and 1,119 rupees per share. The transaction places the company's valuation at roughly 10.3 lakh crore rupees, representing India's largest equity market debut.",
+   "why": "An initial public offering lets private entities secure funds from public markets while giving investors an official benchmark valuation for the business.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/why-is-market-rising-today-sensex-gains-over-700-pts-nifty-above-22800-4-major-factors-behind-the-surge/articleshow/134957331.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/reliance-jio-ipo-at-rs-10-lakh-crore-valuation-what-analysts-see-in-the-price-band/articleshow/134957545.cms"
   },
   {
    "category": "Equity",
-   "title": "Government Moves to Offload Controlling Stake in IDBI Bank",
-   "summary": "Authorities approved selling a 60.72 percent holding in the lender to Canadian firm Fairfax Financial Holdings for 52,877 crore rupees. The transaction impacts public holdings and draws focus to associated state entities.",
-   "why": "Divestments transfer state ownership to institutional investors, altering corporate management structures and capital allocation.",
+   "title": "Indian Benchmark Indices Rebound Over One Percent in Broad Rally",
+   "summary": "The Sensex climbed past 1,000 points to touch 73,799, while the Nifty 50 advanced toward 22,920. Both premier indexes recovered from earlier losses with daily advances exceeding 1.3 percent.",
+   "why": "Benchmark indices monitor broad market momentum and provide a collective snapshot of investor sentiment across key corporate sectors.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/why-is-stock-market-up-today-sensex-jumps-800-points-nifty-nears-22-850-top-3-reasons-explained-11792038542724.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Fairfax Acquires Majority Holding in IDBI Bank for Multi-Crore Valuation",
+   "summary": "The Indian central government finalized an agreement to offload a 60.72 percent stake in IDBI Bank to Fairfax Financial Holdings. The divestment agreement is priced at 52,877 crore rupees.",
+   "why": "Strategic stake sales reduce government exposure in commercial lenders while opening public sector institutions to external private capital.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/idbi-bank-stake-sale-how-52-877-crore-fairfax-deal-will-impact-lic-idbi-share-price-today-11792032963718.html"
   },
   {
-   "category": "Economy",
-   "title": "Reserve Bank Plans Short-Term Liquidity Absorption Auction",
-   "summary": "The central banking authority scheduled an overnight variable rate reverse repo operation. This measure responds to an assessment of prevailing cash conditions in the domestic banking system.",
-   "why": "Reverse repo auctions allow the central bank to absorb surplus cash from commercial lenders to maintain stability in short-term interest rates.",
+   "category": "Commodity",
+   "title": "Reserve Bank Establishes Early Cashout Rates for Sovereign Gold Series",
+   "summary": "The central monetary authority set terms for the early encashment of its 2019-20 Series V bullion-linked issuance. Bondholders become eligible for premature redemption after completing five years from the original launch date.",
+   "why": "Sovereign Gold Bonds offer people an avenue to track yellow metal valuations without handling the security risks of tangible bullion.",
    "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63805"
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63807"
   },
   {
    "category": "Commodity",
-   "title": "International Gold and Silver Prices Advance on COMEX",
-   "summary": "Global bullion contracts recorded upward momentum, with values increasing by as much as 1.4 percent. The advance marks renewed activity across precious metals trading.",
-   "why": "Gold and silver are widely tracked as traditional stores of value and indicators of shifts in international commodity demand.",
+   "title": "Global Gold and Silver Futures Advance on New York Exchange",
+   "summary": "Precious metals registered upward movements on COMEX, posting daily gains reaching up to 1.4 percent. Both silver and gold contracts traded higher amid shifting global market conditions.",
+   "why": "Commodity futures allow market participants to observe real-time international pricing dynamics driven by international monetary developments.",
    "source": "CNBC TV18",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOa1pTVGlWSkc0YVhhWFhYcUhrcnJCU2dDb3duM0dnZDJLRW1lWkNSM3I1Z2pMMlJzaUhOQ014OHpfaW01ZkpZaXNKZXp4STJCQ3lweGN4c29TTWxhVU9TcFZja0FYUDRfeGFKa0gzNTJ0Y3k0V3llYVAxU2p3SUJHVnBzZWNhblFjU1U1SU9fcDhoQllEVnJvSXRTVmJSUHlMNDVaTzhKLUMwQ0lJb0s4NG9XaTVuZ9IBuwFBVV95cUxNci1KeU1QOW5VcnItZzhPR3Q0YVcwUzlxY3ZIa1BOZ2pDdDhsTmR5ZHh1M0VVUzZ5YUxuQXEwQ19iOE1zWnQ4QjRQSk41OV9YaWxMQ1dYXzJ0dWdwX1V1bV9sNU5RX21laTVPMWJwS1hnMkFfbzhVTksyblVFbE12d2lvT0ZVZlQ0WGVSSFFjZS1HTzR3eFZrSnR3RzBhRDh3M2VGTnhScFY0SEpRR3hEN3A0NGlpdlloMHFN?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Currency Strengthens Against the Greenback at Close",
-   "summary": "The rupee recorded an appreciation of 19 paise during trading. It settled at 95.17 per American dollar at the end of the session.",
-   "why": "Currency valuation changes influence national import expenses, foreign investment returns, and domestic inflation levels.",
-   "source": "Deccan Herald",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRkVXNlBFUWZKczhRS1NabVVTU0p2VjBSMkxnZHB2Y3ZuajYwcGw1V240ODJTcVpzWHZvbFhrR0w3MTdiMVk1TmN0dHRFQUNBMVlMaERJbU1FLWZBcTI3eHRvM0R1XzhmbVVodE1qRERFWENZV2d6eHZQMkpvc0lTM19jWWdrYTRZSnNnQ2pkSHkwLWhpbm9mbjE2WmJkMmNNektacGpwNFZBeGhvbWxqVTZZSmxBdi1qNjRrSGxIV1Q?oc=5"
+   "title": "Domestic Currency Strengthens as Central Bank Curbs Foreign Exchange Demand",
+   "summary": "The rupee gained ground to finish at 95.15 per dollar, extending its recent positive streak. Gains followed active regulatory interventions by monetary authorities aimed at curbing foreign currency pressure.",
+   "why": "Central bank foreign currency management prevents rapid exchange rate depreciations that could inflate import bills.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYkp6bkstZWcxRGtNcG9uYy1WWWpHY0p1cmxYeEFCQXZWRktGZ2taSFV1M0xZNU8zdXR2clF1eW90ZWJ3aGp2U09HbDl6THRzdW56Z1cxU0lFdWQtcmlsNEpjaHhUUzJaRm4weWZWaERfSWNrRzhCakdHczVEd1lOU0h2VVJvdGlKUXJWLW5FTWRCY1VZZTBOWkVtS2lweHhiM2p2eGxyTEJsbzVXTGNKQ1NCeVpjUmRGcVFseTBsSmdvcFk1clZpWS0zSkIwNTTSAdQBQVVfeXFMTmpvRlRrZ1QxNlRBOElKNldnanlSX1drVDQ0TXB3MHE0cG40cnhSZTdOQ2laUl9IbnBaNWtMYnU1UzJzZGZWa0pCYUF6Sm9vbDY4MFczZ2ZJSlltN2txWERhQVVaWkxZWlQyai1JcV9ZWlktaEVRS1JzeEdkN2VEaFVSdi1xdWhJSDMtU21MMGZsWWU5Nk1BVGxKN3kwSDNka0w2cmNaeHJRX2pYd0d5N3lxcTFHRGc2U1YzZHU2bGNVY3U2WkNtNzRkQmQ3d0N2NGNYaXI?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Higher Inflation Print Drags Down Tech-Heavy US Index",
-   "summary": "The Nasdaq index dropped substantially at the close of trading. Market participants reacted to elevated consumer price metrics that heightened expectations of further borrowing cost increases.",
-   "why": "Technology businesses often experience valuation compression when rising interest rates diminish the discounted present value of anticipated future earnings.",
+   "title": "American Technology Shares Slump Following Higher Consumer Price Data",
+   "summary": "The Nasdaq closed with substantial losses as elevated inflation figures spurred worries about prospective central bank borrowing costs. Weakness was centered in technology shares after the broader market reacted to the macro data.",
+   "why": "Elevated interest rates lower the discounted value of expected earnings, often putting downward pressure on growth-oriented technology businesses.",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMDkzb0Zhb0ExSzhlSnR6c25HbzdpY2g1djVFZ1R4eVktaWtCZ2gya1lEdHpzcHlEM1VITE1Pdlc1MmlDclhQQmxOWC13NXdXZjhPOEYtUnc3bm80eThIZ0lEam8tN0hXV3kxNnhob3g5OHFxNHd5VzJsTks4SzlJR0JRVE5LZ2JMbXhYNFhvOC1yTUJ5bWFEN0JWTFdpaFkxN2c?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "American Price Growth Quickens to Annual Rate of 3.7 Percent",
-   "summary": "Consumer price increases in the United States accelerated to reach 3.7 percent. The higher metric creates additional policy challenges for central bankers managing borrowing costs.",
-   "why": "Persistent inflation pressures influence monetary policy decisions that set global interest rate benchmarks and drive cross-border capital flows.",
+   "title": "United States Annual Inflation Accelerates to Three Point Seven Percent",
+   "summary": "Consumer price gains in the United States quickened to an annualized rate of 3.7 percent. The rising price trend adds complications for the Federal Reserve regarding its forthcoming benchmark lending rate decisions.",
+   "why": "Inflation metrics are the principal signal watched by central banks to assess whether borrowing costs should be tightened or eased.",
    "source": "Businesskorea",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yQWZ5SDRHYmwxQUE1eDZwclFfVEZuYkFralRuWHFyWHY2am5heEswb29PeEY2Y2JCNUN5bzV6NXllaWRRMWZtTFVUUnBEY2NqRjdkZktwQVJ2Q0FyNWplT0ZIM3pEZlpld0k1LTBJQWtjV1J5?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Federal Reserve Report Details Uneven Expansion and Stable Employment",
-   "summary": "The central bank's periodic Beige Book described varying regional expansion across the American economy. The assessment noted consistent hiring conditions alongside moderate pressures on consumer pricing.",
-   "why": "The Beige Book provides qualitative economic insights that help policymakers gauge ground-level business conditions across diverse federal districts.",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPem5MRG9nVnRYaXZyRTJGYjl2bm9jMktIYk54MjNVMVRCWTlYYm5zSlN4eWJKQk43c2hoUWNJay1paldXdzB6cjVTWlZwQXVDaXBqOXVPcFRoS3N6UWVoaEJFUjgwZGhVbTYzVjhTNEZrNV9Va0dJdVVOYUI0QU43UFAxZWs3VG1pb0FBVg?oc=5"
   }
  ]
 }
