@@ -149,7 +149,10 @@ document.querySelectorAll("#inds input").forEach(function(i){i.checked=!!on[i.va
 /* ---------- live prices ---------- */
 function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){return r.json()}).then(function(j){var Q=j.quotes||{};
  Object.keys(LIVE).forEach(function(k){var q=Q[LIVE[k]];if(!q||!q.price)return;liveQ[k]={price:q.price,prev:q.prev,day:new Date((q.time+(q.off||0))*1000).toISOString().slice(0,10)}});
- Object.keys(liveQ).forEach(function(k){var d=data&&data[k];if(d&&d.length&&Math.abs(d[d.length-1].close/liveQ[k].price-1)>.35){delete data[k];tried[k]=1;if(k===key){mainSeries=null;lastBar=null;build()}}});
+ Object.keys(liveQ).forEach(function(k){var d=data&&data[k],z=liveQ[k];if(!(d&&d.length&&Math.abs(d[d.length-1].close/z.price-1)>.35))return;var lc=d[d.length-1].close;
+  /* chart and live price disagree: if the quote's own previous close matches the chart, the quote is the odd one out, so ignore it and keep the chart; otherwise the chart is stale, so reload it */
+  if(z.prev&&Math.abs(lc/z.prev-1)<.35){delete liveQ[k];return}
+  delete data[k];if(k===key){mainSeries=null;lastBar=null;build()}});
  var q=Q[LIVE[key]];if(q&&q.price&&mainSeries&&lastBar){var day=liveQ[key].day;
   if(day===lastBar.time){lastBar.close=q.price;lastBar.high=Math.max(lastBar.high,q.high||q.price);lastBar.low=Math.min(lastBar.low,q.low||q.price);mainSeries.update(type==="Candles"?{time:lastBar.time,open:lastBar.open,high:lastBar.high,low:lastBar.low,close:lastBar.close}:{time:lastBar.time,value:lastBar.close})}}
  drawTiles();drawHead()}).catch(function(){})}
