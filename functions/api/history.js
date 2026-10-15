@@ -26,6 +26,7 @@ export async function onRequestGet({ request }) {
       if (seen[d]) return; seen[d] = 1;
       rows.push({ time: d, open: +o.toFixed(2), high: +h.toFixed(2), low: +l.toFixed(2), close: +c.toFixed(2), volume: Math.round((q.volume && q.volume[i]) || 0) });
     });
+    if (rows.length < 30) return J({ error: "not enough data", rows: rows.length, sym }, 502, 60);
     return J(rows);
   } catch (e) {
     return J({ error: "failed", sym, detail: debug ? String(e) : undefined }, 502, 60);
