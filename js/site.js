@@ -74,9 +74,6 @@
   var s = document.createElement("script"); s.src = "/js/edition.js?v=5"; s.defer = true; document.body.appendChild(s);
 })();
 
-(function () {
-  var s = document.createElement("script"); s.src = "/js/intro.js?v=4"; s.defer = true; document.body.appendChild(s);
-})();
 
 (function () {
   function add(n, cb) { var s = document.createElement("script"); s.src = "/js/" + n + ".js?v=1"; s.onload = s.onerror = cb || null; document.body.appendChild(s); }
