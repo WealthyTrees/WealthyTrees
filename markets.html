@@ -5,9 +5,9 @@
 <meta name="description" content="Daily Indian stock and commodity market news, summarized in plain English. Pure learning, no hype, no tips.">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/css/style.css?v=10"><link rel="stylesheet" href="/css/markets.css?v=2"></head><body>
+<link rel="stylesheet" href="/css/style.css?v=10"><link rel="stylesheet" href="/css/markets.css?v=3"></head><body>
 <header><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" alt=""><span>WealthyTrees</span></a>
 <nav><a href="/">Today</a><a href="/markets.html" aria-current="page">Markets</a><a href="/learn.html">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
 <main class="wrap page wide"><h1>Markets</h1>
@@ -38,12 +38,15 @@
   <div class="mk-about" id="about"></div>
   <div class="callout" id="ihelp"><h3>Try the indicators</h3><p>Open the Indicators menu above the chart and tick one. A short explanation appears here each time.</p></div>
 </div>
+<section class="nbk">
 <div class="callout"><h3>Draw on the chart</h3><ul>
 <li><b>Support</b> is a price level where falls have often stopped. <b>Resistance</b> is a level where rises have often stalled. Use the horizontal line to mark them.</li>
 <li><b>Trend line:</b> connect two lows in an uptrend, or two highs in a downtrend.</li>
 <li><b>Zone:</b> shade an area where price kept turning back. Zones are more realistic than single lines.</li>
 <li>Drawings stay while you switch range or chart type. They clear when you leave the page. This is practice, not advice.</li></ul></div>
-<div class="callout"><h3>How to read a zone</h3><ul>
+<div class="callout"><h3>How to read a zone</h3><svg class="mkd" viewBox="0 0 360 150" role="img" aria-label="Price bounces twice in a support zone, breaks above it and comes back to retest it"><rect class="mkz" x="12" y="98" width="336" height="24" rx="3"/><text class="mkw" x="18" y="115">support zone</text><polyline class="mkp" pathLength="1" points="10,30 60,108 100,48 150,110 200,44 245,66 285,106 335,28"/><text class="mkw" x="40" y="140">touch 1</text><text class="mkw" x="130" y="140">touch 2</text><text class="mkw" x="262" y="140">retest</text><text class="mkw" x="200" y="30">price</text></svg>
+<p class="mkc">Price bounces off the zone twice, then comes back to test it.</p>
+<ul>
 <li><b>Find it:</b> look for 2 or more places where price turned in the same area. Draw the box around the wicks and bodies, not one exact price.</li>
 <li><b>Touches:</b> the more times price reacted there, the more traders are watching it. It is still not a guarantee.</li>
 <li><b>Above or below:</b> a zone under price is support, a zone above is resistance. If price closes clearly through it, the zone may flip its role.</li>
@@ -55,14 +58,18 @@
 <li><b>Trend:</b> higher highs and higher lows is an uptrend. Lower highs and lower lows is a downtrend.</li>
 <li><b>Try it:</b> pick 3M, tick SMA 50 and RSI, then move your cursor over the chart.</li>
 <li><b>Remember:</b> charts describe the past. They do not predict the future.</li></ul></div>
+</section>
 <h2 class="sec">Stock screener</h2><div class="widget" id="scrbox"></div>
+<section class="nbk">
 <div class="callout"><h3>How to read the screener</h3><ul>
 <li><b>Market cap</b> is the company&rsquo;s total value. It tells you size, not quality.</li>
 <li><b>P/E</b> is price divided by earnings. Compare it with companies in the same sector, never across sectors.</li>
 <li><b>Change %</b> shows today&rsquo;s move. One day says little. Look at weeks and months.</li>
 <li><b>Sort, then ask why.</b> If a stock tops the list, find the news behind it before drawing conclusions.</li>
 <li>Next step: the <a href="/learn/module-2.html">Reading a company</a> lesson shows how to go beneath the numbers.</li></ul></div>
+</section>
 <p class="note">Screener by TradingView. Index charts use Yahoo Finance data and may be delayed. WealthyTrees does not make buy or sell recommendations. Any automated ratings shown by third-party providers are educational only.</p>
+</main>
 <div id="nl"></div>
 <footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a></div></footer>
 <script src="/js/site.js?v=10"></script>
