@@ -57,7 +57,7 @@ function base(el,h){return{width:Math.max(200,el.clientWidth),height:h,layout:{b
 /* numbers for a key: last price and change % (uses live quote when present) */
 function stat(k){var d=data&&data[k];if(!d||d.length<2){var z=liveQ[k];return z&&z.price&&z.prev?{price:z.price,chg:(z.price-z.prev)/z.prev*100}:null}var n=d.length,l=d[n-1],p=d[n-2],price=l.close,pc=p.close,q=liveQ[k];
  if(q&&q.price){price=q.price;if(q.day>l.time)pc=l.close}
- return{price:price,chg:(price-pc)/pc*100}}
+ var c=(price-pc)/pc*100;if(q&&q.prev&&Math.abs(c)>20)c=(price-q.prev)/q.prev*100;return{price:price,chg:c}}
 /* ---------- tabs and tiles ---------- */
 function drawTabs(){var h="";Object.keys(GROUPS).forEach(function(g){h+='<button class="mk-tab" role="tab" data-g="'+g+'" aria-selected="'+(g===group)+'">'+(g==="India"?'<i class="fl fl-in"></i>':g==="US"?'<i class="fl fl-us"></i>':g==="Commodities"?"\uD83D\uDEE2\uFE0F ":"\uD83D\uDCB1 ")+g+'</button>'});$("tabs").innerHTML=h}
 function drawTiles(){var h="";GROUPS[group].forEach(function(sec){var t="";sec[1].forEach(function(k){
@@ -149,10 +149,11 @@ document.querySelectorAll("#inds input").forEach(function(i){i.checked=!!on[i.va
 /* ---------- live prices ---------- */
 function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){return r.json()}).then(function(j){var Q=j.quotes||{};
  Object.keys(LIVE).forEach(function(k){var q=Q[LIVE[k]];if(!q||!q.price)return;liveQ[k]={price:q.price,prev:q.prev,day:new Date((q.time+(q.off||0))*1000).toISOString().slice(0,10)}});
+ Object.keys(liveQ).forEach(function(k){var d=data&&data[k];if(d&&d.length&&Math.abs(d[d.length-1].close/liveQ[k].price-1)>.35){delete data[k];tried[k]=1;if(k===key){mainSeries=null;lastBar=null;build()}}});
  var q=Q[LIVE[key]];if(q&&q.price&&mainSeries&&lastBar){var day=liveQ[key].day;
   if(day===lastBar.time){lastBar.close=q.price;lastBar.high=Math.max(lastBar.high,q.high||q.price);lastBar.low=Math.min(lastBar.low,q.low||q.price);mainSeries.update(type==="Candles"?{time:lastBar.time,open:lastBar.open,high:lastBar.high,low:lastBar.low,close:lastBar.close}:{time:lastBar.time,value:lastBar.close})}}
  drawTiles();drawHead()}).catch(function(){})}
-setInterval(live,60000);setTimeout(live,3000);
+setInterval(live,60000);setTimeout(live,3000);document.addEventListener("visibilitychange",function(){if(!document.hidden)live()});window.addEventListener("online",live);
 /* ---------- start ---------- */
 drawTabs();initDraw();
 fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then(function(j){data=j;Object.keys(data).forEach(function(k){data[k]=clean(data[k],k)})}).catch(function(){data={}}).then(function(){drawTiles();build()});
