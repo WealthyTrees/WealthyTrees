@@ -24,6 +24,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/update_brief.py
+      - name: Check chart data (keeps last good file if bad)
+        run: python scripts/validate_data.py || { echo "::warning::charts.json failed the check, keeping the last good file"; git checkout -- data/charts.json; }
       - name: Commit changes
         if: always()
         run: |
