@@ -1,5 +1,5 @@
 """Daily WealthyTrees brief: fetch headlines + market numbers, summarize with Claude, write JSON."""
-import json, os, re, sys, time, urllib.request, urllib.error, xml.etree.ElementTree as ET
+import json, os, re, sys, time, gzip, http.cookiejar, urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
 OUT = "data/brief.json"
@@ -177,31 +177,80 @@ def niftyindices_rows(idx):
         raise RuntimeError(f"only {len(rows)} rows")
     return rows
 
+def nse_open():
+    """A browser-like session for nseindia.com (it needs the cookies from its own pages first)."""
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    op.addheaders = [("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"), ("Accept-Language", "en-US,en;q=0.9"), ("Accept-Encoding", "gzip")]
+    for u in ("https://www.nseindia.com/", "https://www.nseindia.com/reports-indices-historical-index-data"):
+        op.open(u, timeout=30).read()
+    return op
+
+def nse_json(op, url):
+    req = urllib.request.Request(url, headers={"Accept": "application/json, text/plain, */*", "Referer": "https://www.nseindia.com/reports-indices-historical-index-data", "X-Requested-With": "XMLHttpRequest"})
+    r = op.open(req, timeout=40)
+    b = r.read()
+    if r.headers.get("Content-Encoding") == "gzip":
+        b = gzip.decompress(b)
+    return json.loads(b)
+
+def nse_rows(op, idx):
+    """NSE's own index history API, two one-year requests."""
+    rows, end = {}, datetime.now().date()
+    for k in range(2):
+        e = end - timedelta(days=365 * k)
+        st = e - timedelta(days=364)
+        j = nse_json(op, "https://www.nseindia.com/api/historical/indicesHistory?indexType=" + urllib.parse.quote(idx) + "&from=" + st.strftime("%d-%m-%Y") + "&to=" + e.strftime("%d-%m-%Y"))
+        for x in j["data"]["indexCloseOnlineRecords"]:
+            try:
+                d = (x.get("TIMESTAMP") or "")[:10] or datetime.strptime(x["EOD_TIMESTAMP"], "%d-%b-%Y").strftime("%Y-%m-%d")
+                o, h, l, c = [float(x[f]) for f in ("EOD_OPEN_INDEX_VAL", "EOD_HIGH_INDEX_VAL", "EOD_LOW_INDEX_VAL", "EOD_CLOSE_INDEX_VAL")]
+                rows[d] = {"time": d, "open": o, "high": h, "low": l, "close": c, "volume": 0}
+            except Exception:
+                continue
+    if len(rows) <= 20:
+        raise RuntimeError(f"only {len(rows)} rows")
+    return rows
+
 def chart_data():
-    """Two years of daily candles per index, saved for the site's own chart."""
+    """Two years of daily candles per index, saved for the site's own chart. Also writes data/chart_status.json (why each chart worked or failed)."""
     try:
         out = json.load(open(CHARTS_OUT, encoding="utf-8"))
     except Exception:
         out = {}
+    status, op = {}, None
     for name, sym in CHARTS.items():
-        rows = None
+        rows, st = None, {}
         try:
-            rows = yahoo_rows(sym)
+            rows = yahoo_rows(sym); st["yahoo"] = "ok"
         except Exception as e:
+            st["yahoo"] = str(e)[:120]
             print(f"chart failed (yahoo): {name}: {e}", file=sys.stderr)
-            if name in NIFTY_IDX:
-                try:
-                    rows = niftyindices_rows(NIFTY_IDX[name])
-                except Exception as e2:
-                    print(f"chart failed (niftyindices): {name}: {e2}", file=sys.stderr)
+        if not rows and name in NIFTY_IDX:
+            try:
+                if op is None:
+                    op = nse_open()
+                rows = nse_rows(op, NIFTY_IDX[name]); st["nse"] = "ok"
+            except Exception as e:
+                st["nse"] = str(e)[:120]
+                print(f"chart failed (nseindia): {name}: {e}", file=sys.stderr)
+        if not rows and name in NIFTY_IDX:
+            try:
+                rows = niftyindices_rows(NIFTY_IDX[name]); st["niftyindices"] = "ok"
+            except Exception as e:
+                st["niftyindices"] = str(e)[:120]
+                print(f"chart failed (niftyindices): {name}: {e}", file=sys.stderr)
         if rows:
             out[name] = clean_rows([rows[k] for k in sorted(rows)], name)
             print(f"chart ok: {name}: {len(rows)} days")
         elif name in out:
             out[name] = clean_rows(out[name], name)
+        st["rows"] = len(out.get(name, []))
+        status[name] = st
     if out:
         with open(CHARTS_OUT, "w", encoding="utf-8") as f:
             json.dump(out, f, separators=(",", ":"))
+    with open("data/chart_status.json", "w", encoding="utf-8") as f:
+        json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "charts": status}, f, indent=1)
 
 GEMINI_MODEL = "gemini-3.8-flash"
 
