@@ -135,7 +135,7 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){a.tryb,a.tryb::after{transition:none}}
 
 /* Learn index: 3 level cards, side by side */
-.page.lw{max-width:68rem}.crumb{margin:0}.crumb a{color:var(--up);font-weight:700;text-decoration:none}
+.page.lw{max-width:68rem}.crumb{margin:0}
 .lvls{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.6rem .6rem 1.2rem;margin:.6rem -.6rem 1.5rem}
 @media(max-width:700px){.lvls{grid-auto-columns:82%}}
 .lvl{scroll-snap-align:start;position:relative;display:flex;flex-direction:column;padding:1.1rem 1.2rem;background:var(--paper);border:1.5px dashed var(--line);border-radius:14px;color:var(--ink);text-decoration:none}
@@ -146,10 +146,16 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 .lvl.live{border:2px solid var(--up);transition:transform .25s}
 @media(hover:hover){a.lvl:hover{transform:translateY(-4px)}}
 .lvact{margin-top:auto;padding-top:.6rem}
-.lvgo{display:inline-flex;align-items:center;gap:.4rem;border:2px solid var(--up);border-radius:10px;padding:.35rem 1.1rem;font-weight:700}
-.lvgo::after{content:"\2192";color:var(--up)}
-.lvmore{color:var(--up);font-weight:700;text-decoration:none}.lvmore:hover{text-decoration:underline}
 [data-theme=dark] .lvl.live{box-shadow:0 0 0 1px color-mix(in srgb,var(--up) 30%,transparent),0 0 24px color-mix(in srgb,var(--up) 30%,transparent)}
 [data-theme=dark] .oprog{box-shadow:none}
 @media(prefers-reduced-motion:reduce){.lvl.live{transition:none}}
 .lw .course-grid{margin-top:3rem}#cont{position:relative;z-index:1}
+.lvl.live h2{margin-top:2rem}
+/* Site button: filled, use for every link that acts like a button */
+.fbtn{display:inline-flex;align-items:center;gap:.45rem;background:var(--up);color:var(--paper);border:2px solid var(--up);border-radius:10px;padding:.5rem 1.25rem;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.fbtn.alt{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
+.fbtn.go::after{content:"\2192"}
+@media(hover:hover){.fbtn:hover{transform:translate(-1px,-2px);box-shadow:4px 4px 0 color-mix(in srgb,var(--up) 55%,transparent)}}
+.fbtn:active{transform:translate(1px,1px);box-shadow:none}
+@media(prefers-reduced-motion:reduce){.fbtn{transition:none}}
+[data-theme=dark] .fbtn.alt{background:var(--paper);color:var(--ink);border-color:var(--up)}
