@@ -2,8 +2,8 @@
 (function(){
 var $=function(i){return document.getElementById(i)};
 var GROUPS={
-"India":[["Broad indices",["Nifty 50","Sensex","Bank Nifty","Nifty Midcap","Nifty Smallcap"]],["Sectors",["Nifty IT","Nifty Auto","Nifty FMCG","Nifty Pharma","Nifty Metal","Nifty Financial Services","Nifty Realty","Nifty PSU Bank","Nifty Energy","Nifty Media","Nifty Infra"]],["Fear gauge",["India VIX"]]],
-"US":[["Stock indices",["S&P 500","Nasdaq","Dow","Russell 2000"]],["Fear gauge",["VIX"]]],
+"India":[["Broad indices",["Nifty 50","Sensex","Bank Nifty"]],["Sectors",["Nifty IT","Nifty Pharma","Nifty Auto","Nifty Metal"]],["Fear gauge",["India VIX"]]],
+"US":[["Stock indices",["S&P 500","Nasdaq","Dow"]]],
 "Commodities":[["Metals",["Gold","Silver","Copper"]],["Energy",["Crude WTI","Brent","Natural Gas"]]],
 "Currency":[["Currency pair",["USD/INR"]]]};
 var EXTRA={"Nifty Financial Services":1,"Nifty Realty":1,"Nifty PSU Bank":1,"Nifty Energy":1,"Nifty Media":1,"Nifty Infra":1,"Nifty Midcap":1,"Nifty Smallcap":1};
@@ -15,10 +15,10 @@ var A={ // about: [flag, country, one-line meaning]
 "Nifty Midcap":["🇮🇳","India","Medium-sized Indian companies. Usually moves more than the big Nifty 50 companies."],
 "Nifty Smallcap":["🇮🇳","India","Smaller Indian companies. Often rises and falls faster, and carries more risk."],
 "Nifty IT":["🇮🇳","India","Indian software and IT services companies such as TCS and Infosys. Sensitive to the US economy and the rupee."],
-"Nifty Auto":["🇮🇳","India","Car, two-wheeler and auto-parts makers. Reflects how much people are buying vehicles."],
+"Nifty Auto":["🇮🇳","India","Car, two-wheeler and auto-parts makers. Reflects how much people are buying vehicles. (If the index has no history, the chart may use a tracking ETF, so levels can differ.)"],
 "Nifty FMCG":["🇮🇳","India","Everyday goods like soap, biscuits and tea (fast-moving consumer goods). Usually steadier than other sectors."],
 "Nifty Pharma":["🇮🇳","India","Medicine and healthcare makers. Many earn a large share of their money from exports."],
-"Nifty Metal":["🇮🇳","India","Steel, aluminium, copper and mining companies. Follows global metal prices."],
+"Nifty Metal":["🇮🇳","India","Steel, aluminium, copper and mining companies. Follows global metal prices. (If the index has no history, the chart may use a tracking ETF, so levels can differ.)"],
 "Nifty Financial Services":["🇮🇳","India","Banks, insurers and other lenders in one index. A broader finance view than Bank Nifty."],
 "Nifty Realty":["🇮🇳","India","Real-estate developers. Sensitive to home-loan interest rates."],
 "Nifty PSU Bank":["🇮🇳","India","Government-owned banks such as SBI and Bank of Baroda."],
