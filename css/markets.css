@@ -13,12 +13,12 @@
 @media(hover:hover){.mk-tile:hover{transform:translateY(-2px);border-color:var(--up);box-shadow:0 4px 14px rgba(0,0,0,.15)}}
 .mk-tile[aria-pressed=true]{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
 [data-theme=dark] .mk-tile[aria-pressed=true]{box-shadow:0 0 0 2px var(--up),0 0 16px rgba(62,207,142,.35)}
-.mk-card{margin-top:1.1rem;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.mk-card{margin-top:1.1rem;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:visible;box-shadow:0 6px 22px rgba(0,0,0,.06)}
 .mk-head{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.2rem;padding:.8rem 1rem;border-bottom:1px solid var(--line)}
 .mk-title{font-size:1.15rem;font-weight:700;margin:0}.mk-flag{margin-right:.35rem}
 .mk-price{font-size:1.5rem;font-weight:700}.mk-chg{font-weight:700}.mk-chg.up{color:var(--up)}.mk-chg.dn{color:var(--down)}
 .mk-bar{margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:visible}.seg button:first-child{border-radius:7px 0 0 7px}.seg button:last-child{border-radius:0 7px 7px 0}
 .seg button{border:0;background:none;color:var(--mute);font:inherit;font-size:.82rem;font-weight:700;padding:.35rem .6rem;cursor:pointer}
 .seg button+button{border-left:1px solid var(--line)}.seg button:hover{color:var(--ink)}
 .seg button[aria-pressed=true]{background:var(--btn);color:var(--btn-fg)}
@@ -42,3 +42,29 @@
 .mk-about h3{margin:0 0 .3rem;font-size:1rem}.mk-about p{margin:.2rem 0}.mk-about .big{font-size:1.8rem;line-height:1}
 @media(max-width:640px){.mk-bar{margin-left:0}.mk-stage{height:360px}.mk-tiles{grid-template-columns:repeat(2,1fr)}}
 @media(prefers-reduced-motion:reduce){.mk-tile{transition:none}.mk-tile:hover{transform:none}}
+
+/* v2: pill tabs, CSS flags, tooltips, labelled tools, indicator explanations */
+.mk-tabs{flex-wrap:wrap;overflow:visible;border:0;gap:.5rem;margin:1rem 0}
+.mk-tab{display:inline-flex;align-items:center;padding:.5rem 1.1rem;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);margin:0;transition:border-color .15s,transform .15s}
+.mk-tab:hover{border-color:var(--up);transform:translateY(-1px)}
+.mk-tab[aria-selected=true]{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
+.fl{display:inline-block;width:22px;height:15px;border-radius:3px;margin-right:.4rem;vertical-align:-2px;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.fl-in{background:radial-gradient(circle at 50% 50%,#1a3a8a 0 2px,transparent 2.6px),linear-gradient(#ff9933 0 33.3%,#fff 33.3% 66.6%,#138808 66.6%)}
+.fl-us{background:linear-gradient(#3c3b6e,#3c3b6e) 0 0/10px 8px no-repeat,repeating-linear-gradient(#b22234 0 1.15px,#fff 1.15px 2.3px)}
+.mk-flag .fl{margin-right:.35rem}
+[data-tip]{position:relative}
+[data-tip]::after{content:attr(data-tip);position:absolute;z-index:60;top:calc(100% + 8px);left:50%;transform:translateX(-50%);width:max-content;max-width:230px;padding:.45rem .65rem;border-radius:8px;background:#16231d;color:#fff;font:600 .78rem/1.35 Inter,system-ui,sans-serif;text-align:left;white-space:normal;box-shadow:0 8px 22px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .12s}
+.mk-tools [data-tip]::after{top:50%;left:calc(100% + 10px);transform:translateY(-50%)}
+#typ [data-tip]::after,#rng [data-tip]::after{left:auto;right:0;transform:none}
+[data-tip]:hover::after,[data-tip]:focus-visible::after,[data-tip].tip-on::after{opacity:1}
+.mk-tools button{width:52px;height:auto;padding:.35rem 0;flex-direction:column;gap:2px}
+.mk-tools .tl{font-size:.62rem;font-weight:700;line-height:1}
+.dd-menu{min-width:270px;max-width:86vw}
+.ind-tip{margin:.35rem .2rem .1rem;padding:.55rem .65rem;border-left:4px solid var(--up);border-radius:6px;background:var(--bg);font-size:.8rem;line-height:1.4;min-height:3.4em}
+.ind-tip b{display:block;margin-bottom:.15rem}
+#ihelp{display:none}
+.mk-tile{border-radius:12px;transition:transform .15s,box-shadow .15s}
+@media(hover:hover){.mk-tile:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.12)}}
+[data-theme=dark] .mk-card{box-shadow:0 0 22px color-mix(in srgb,var(--up) 20%,transparent)}
+[data-theme=dark] .mk-tile[aria-pressed=true]{box-shadow:0 0 16px color-mix(in srgb,var(--up) 40%,transparent)}
+@media(max-width:640px){.mk-tools button{width:42px}.mk-tools .tl{display:none}.mk-tab{padding:.45rem .9rem}}
