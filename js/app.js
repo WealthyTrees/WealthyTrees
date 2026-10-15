@@ -23,9 +23,9 @@ fetch('/data/brief.json').then(r=>r.json()).then(d=>{
 
 /* Market bar (NSE style). Shows one group by time of day, in IST:
    India indices 6:00 AM to 3:30 PM, commodities from 3:30 PM until the US market opens, US indices from the US open until 6:00 AM. */
-const GRP={IN:['NIFTY 50','SENSEX','BANK NIFTY','NIFTY IT','NIFTY AUTO','NIFTY FMCG','NIFTY PHARMA','NIFTY METAL','INDIA VIX'],
+const GRP={IN:['NIFTY 50','SENSEX','BANK NIFTY','NIFTY IT','NIFTY PHARMA','NIFTY AUTO','NIFTY METAL','INDIA VIX'],
   CM:['GOLD $/oz','SILVER $/oz','CRUDE WTI','BRENT','NATURAL GAS','COPPER','USD/INR'],
-  US:['S&P 500','NASDAQ','DOW','RUSSELL 2000','VIX']};
+  US:['S&P 500','NASDAQ','DOW']};
 function tzp(tz){const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:tz,weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));
   return{wk:p.weekday==='Sat'||p.weekday==='Sun',m:(+p.hour)*60+(+p.minute)}}
 function phase(){const i=tzp('Asia/Kolkata'),e=tzp('America/New_York');
