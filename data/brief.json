@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,623",
-   "change": 1.16
+   "value": "22,895",
+   "change": 1.21
   },
   {
    "name": "SENSEX",
-   "value": "72,782",
-   "change": 1.19
+   "value": "73,624",
+   "change": 1.16
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,160",
-   "change": 1.27
+   "value": "4,167",
+   "change": 1.43
   },
   {
    "name": "CRUDE WTI",
-   "value": "$94.3",
-   "change": -0.87
+   "value": "$93.9",
+   "change": -1.27
   },
   {
    "name": "USD/INR",
-   "value": "95.14",
-   "change": 0.0
+   "value": "94.91",
+   "change": -0.24
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Regulator Considers Relaxing Listing Norms for Smaller Enterprises",
-   "summary": "The capital markets watchdog is considering reducing listing expenses and decreasing minimum investment sizes for small and medium enterprise public listings. This move aims to ease market entry and fund access for emerging companies.",
-   "why": "Lower entry barriers enable young businesses to access public equity while expanding participation avenues for retail investors.",
+   "title": "Indian Indices Bounce Back Led by Financial and Tech Shares",
+   "summary": "Domestic stock benchmarks recovered from recent losses during Thursday trade. Gains were driven primarily by firm participation across software and banking counters.",
+   "why": "Headline equity indices reflect broad investor sentiment and indicate which key business sectors are driving capital movements.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/sebi-plans-to-ease-many-sme-ipo-rules-lower-application-amount/articleshow/134954790.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/why-is-market-rising-today-sensex-gains-over-700-pts-nifty-above-22800-4-major-factors-behind-the-surge/articleshow/134957331.cms"
   },
   {
    "category": "Equity",
-   "title": "Market Watchdog Evaluates Blended Pricing to Tame Derivatives Expiry Swings",
-   "summary": "The securities regulator is reviewing a blended price mechanism to mitigate sharp market fluctuations on contracts settlement days. The proposal follows feedback from market players concerning liquidity strain during the auction process.",
-   "why": "Settlement price models directly affect execution costs and stability of options and futures contracts during expiry.",
+   "title": "Government Moves to Offload Controlling Stake in IDBI Bank",
+   "summary": "Authorities approved selling a 60.72 percent holding in the lender to Canadian firm Fairfax Financial Holdings for 52,877 crore rupees. The transaction impacts public holdings and draws focus to associated state entities.",
+   "why": "Divestments transfer state ownership to institutional investors, altering corporate management structures and capital allocation.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/sebi-likely-to-adopt-blended-pricing-framework-to-curb-expiry-day-volatility-in-derivatives-11791958588445.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Equities Decline Following Foreign Fund Sales and Rising Energy Costs",
-   "summary": "Indian stock benchmarks finished down as international funds sold holdings and elevated petroleum prices dampened buying interest. Market sentiment turned cautious amid broad institutional outflows.",
-   "why": "Tracking foreign institutional flows helps beginner investors understand institutional sentiment and its impact on domestic shares.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUDFseEc5cVpDQ2FOSndESDFUc3N6VnVMY0c0bS14N2taUmU3cU9CY09HeEVvX014STdGY1pwY05aWXVTemoycUFEbzFLeFdVa2JIZ1Nwc1BUZGxkSXEyeXJvVW5VdFBtM0E3MXVpWll5R3pKU3FMajQzODBYZjhuM1V5cDdOQmlwRmxwWUhkZ2R5a0RKM2YtaU91UkVMYUJsYVJmQVBOU1lra2R6YkZ0bXdn?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Copper Prices Slip as Labor Accord Reached at Top Mine",
-   "summary": "Red metal prices dropped after workers and management reached an agreement at BHP's Escondida deposit in Chile, averting a potential work stoppage. The settlement alleviated immediate supply bottleneck worries in industrial metals.",
-   "why": "Supply disruptions at major extraction sites quickly alter global raw material availability and influence metal pricing.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/copper-edges-lower-after-world-s-biggest-mine-averts-strike-11792019456152.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Strengthening Domestic Currency Puts Downward Pressure on Bullion Rates",
-   "summary": "Indian gold rates retreated as recent appreciation in the local currency reduced the landed cost of precious metals. The firmer domestic exchange rate directly softened local bullion prices.",
-   "why": "Because precious metals are priced internationally in greenbacks, domestic currency movements strongly sway local prices.",
-   "source": "Rediff MoneyWiz",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeEhCMmJCNi1lTmRZNjE1eDBIaEJtcENNTmZhazBRRGFaS3F0RXRBb19sZWNkUU5ETHBVdkxYOUVMZmQydkMxQk1wT3k1TVotZThlUDVVNGRkV2JLdS1HOEJyQm9iOEtydk9XVUg3RFFlNUpycDRxeVlPUEhRSFpDSXJaY0dfdUtQVWVBWlp2QTN0LUFzTzJIRlB4YkJRdUhpZFlDR3VHN1Rtd1nSAasBQVVfeXFMTXhIQjJiQjYtZU5kWTYxNXgwSGhCbXBDTU5mYWswUURhWktxdEV0QW9fbGVjZFFORExwVXZMWDlFTGZkMnZDMUJNcE95NU1aLWU4ZVA1VTRkZFdiS3UtRzhCckJvYjhLcnZPV1VIN0RRZTVKcnA0cXlZT1BIUUhaQ0lyWmNHX3VLUFVlQVpadkEzdC1Bc08ySEZQeGJCUXVIaWRZQ0d1RzdUbXdZ?oc=5"
+   "url": "https://www.livemint.com/market/stock-market-news/idbi-bank-stake-sale-how-52-877-crore-fairfax-deal-will-impact-lic-idbi-share-price-today-11792032963718.html"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Finishes at 95.15 on Central Bank Dollar Interventions",
-   "summary": "The domestic currency ended at 95.15 against the American dollar, continuing its multi-day advance. Regulatory curbs on foreign currency demand supported the exchange rate.",
-   "why": "Central bank interventions manage currency volatility to prevent excessive imported inflation and trade imbalances.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYkp6bkstZWcxRGtNcG9uYy1WWWpHY0p1cmxYeEFCQXZWRktGZ2taSFV1M0xZNU8zdXR2clF1eW90ZWJ3aGp2U09HbDl6THRzdW56Z1cxU0lFdWQtcmlsNEpjaHhUUzJaRm4weWZWaERfSWNrRzhCakdHczVEd1lOU0h2VVJvdGlKUXJWLW5FTWRCY1VZZTBOWkVtS2lweHhiM2p2eGxyTEJsbzVXTGNKQ1NCeVpjUmRGcVFseTBsSmdvcFk1clZpWS0zSkIwNTTSAdQBQVVfeXFMTmpvRlRrZ1QxNlRBOElKNldnanlSX1drVDQ0TXB3MHE0cG40cnhSZTdOQ2laUl9IbnBaNWtMYnU1UzJzZGZWa0pCYUF6Sm9vbDY4MFczZ2ZJSlltN2txWERhQVVaWkxZWlQyai1JcV9ZWlktaEVRS1JzeEdkN2VEaFVSdi1xdWhJSDMtU21MMGZsWWU5Nk1BVGxKN3kwSDNka0w2cmNaeHJRX2pYd0d5N3lxcTFHRGc2U1YzZHU2bGNVY3U2WkNtNzRkQmQ3d0N2NGNYaXI?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Central Bank Announces Reverse Repo Operation to Absorb System Liquidity",
-   "summary": "The Reserve Bank of India announced an overnight variable rate reverse repo auction to manage banking system funds. The operation reflects ongoing monitoring of short-term cash balances in the financial sector.",
-   "why": "Reverse repo auctions are primary tools used by central banks to drain surplus cash from commercial lenders.",
+   "title": "Reserve Bank Plans Short-Term Liquidity Absorption Auction",
+   "summary": "The central banking authority scheduled an overnight variable rate reverse repo operation. This measure responds to an assessment of prevailing cash conditions in the domestic banking system.",
+   "why": "Reverse repo auctions allow the central bank to absorb surplus cash from commercial lenders to maintain stability in short-term interest rates.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63805"
   },
   {
+   "category": "Commodity",
+   "title": "International Gold and Silver Prices Advance on COMEX",
+   "summary": "Global bullion contracts recorded upward momentum, with values increasing by as much as 1.4 percent. The advance marks renewed activity across precious metals trading.",
+   "why": "Gold and silver are widely tracked as traditional stores of value and indicators of shifts in international commodity demand.",
+   "source": "CNBC TV18",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOa1pTVGlWSkc0YVhhWFhYcUhrcnJCU2dDb3duM0dnZDJLRW1lWkNSM3I1Z2pMMlJzaUhOQ014OHpfaW01ZkpZaXNKZXp4STJCQ3lweGN4c29TTWxhVU9TcFZja0FYUDRfeGFKa0gzNTJ0Y3k0V3llYVAxU2p3SUJHVnBzZWNhblFjU1U1SU9fcDhoQllEVnJvSXRTVmJSUHlMNDVaTzhKLUMwQ0lJb0s4NG9XaTVuZ9IBuwFBVV95cUxNci1KeU1QOW5VcnItZzhPR3Q0YVcwUzlxY3ZIa1BOZ2pDdDhsTmR5ZHh1M0VVUzZ5YUxuQXEwQ19iOE1zWnQ4QjRQSk41OV9YaWxMQ1dYXzJ0dWdwX1V1bV9sNU5RX21laTVPMWJwS1hnMkFfbzhVTksyblVFbE12d2lvT0ZVZlQ0WGVSSFFjZS1HTzR3eFZrSnR3RzBhRDh3M2VGTnhScFY0SEpRR3hEN3A0NGlpdlloMHFN?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Currency Strengthens Against the Greenback at Close",
+   "summary": "The rupee recorded an appreciation of 19 paise during trading. It settled at 95.17 per American dollar at the end of the session.",
+   "why": "Currency valuation changes influence national import expenses, foreign investment returns, and domestic inflation levels.",
+   "source": "Deccan Herald",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRkVXNlBFUWZKczhRS1NabVVTU0p2VjBSMkxnZHB2Y3ZuajYwcGw1V240ODJTcVpzWHZvbFhrR0w3MTdiMVk1TmN0dHRFQUNBMVlMaERJbU1FLWZBcTI3eHRvM0R1XzhmbVVodE1qRERFWENZV2d6eHZQMkpvc0lTM19jWWdrYTRZSnNnQ2pkSHkwLWhpbm9mbjE2WmJkMmNNektacGpwNFZBeGhvbWxqVTZZSmxBdi1qNjRrSGxIV1Q?oc=5"
+  },
+  {
    "category": "US Markets",
-   "title": "Nasdaq Tumbles as Strong Inflation Sparks Interest Rate Anxieties",
-   "summary": "Technology-heavy American equities suffered sharp declines following higher-than-expected inflation metrics. The elevated readings prompted investor concern over tighter Federal Reserve monetary policy.",
-   "why": "Growth companies and technology stocks are particularly sensitive to elevated borrowing costs because higher interest rates lower the discounted value of future profits.",
+   "title": "Higher Inflation Print Drags Down Tech-Heavy US Index",
+   "summary": "The Nasdaq index dropped substantially at the close of trading. Market participants reacted to elevated consumer price metrics that heightened expectations of further borrowing cost increases.",
+   "why": "Technology businesses often experience valuation compression when rising interest rates diminish the discounted present value of anticipated future earnings.",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMDkzb0Zhb0ExSzhlSnR6c25HbzdpY2g1djVFZ1R4eVktaWtCZ2gya1lEdHpzcHlEM1VITE1Pdlc1MmlDclhQQmxOWC13NXdXZjhPOEYtUnc3bm80eThIZ0lEam8tN0hXV3kxNnhob3g5OHFxNHd5VzJsTks4SzlJR0JRVE5LZ2JMbXhYNFhvOC1yTUJ5bWFEN0JWTFdpaFkxN2c?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Federal Reserve Official Bowman Expresses Patience on Future Borrowing Costs",
-   "summary": "Fed Governor Michelle Bowman stated that there is no pressing requirement to lift benchmark interest rates immediately. Her perspective provides insight into deliberations within the American central bank's policy committee.",
-   "why": "Statements by monetary policymakers give investors critical clues regarding the future trajectory of global borrowing costs.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQU09CQmZrcVFTWkNJR0luVWVQRzMyRDR1SVdxUEFvTGZyNkVIcDVDa19fYUJ6WF9iRFYweWhvdVlJM3ZYR3lSaExzbktjeV9HdER6NjZ3V19iT0QyOHA4V3psYVJHVTdOR2RqdkQ1akNWNmxxVzdiTjZzLTdOOGRScWhXOXBzMW9ldjBoZWxOT2UxUXVTZGhEWkZ6RlZ6UHZJaF9XamtRRFhJT0Q2U01WYVdReUdoeE9EUmtUYXVBYzNadU81UjZfNTFENlo5RV92cHBnSlR3ODYxckJjMnY4bl8xa2FMZ9IB3wFBVV95cUxQUUo4WlVhOV9ZR3MxMHk0eTMwQkVVc1BlNncyZHFLRFVSelM1WjEtSUw3azZiMTVTTmtrVk8zLVVfNUlZcElBQzd6ZmVLLVNJSGJMSzdKRjQ5TElNeVRDUVI1aVZWZmUxd1d6MnFvQk1QdGRfQXN4RjdzOENxUGtsMWhucFdzVTc5cVlmWktsYVdKLXRiMFYxSDVSVVJDNkJMTGs5MTIxX1UyZ2c2OUt1T052V3liRjdSOS1Ray1sUVVFcEVMWEVEaUJOUHZDeFl4dTRaeUJCX0c3VVZlRk9N?oc=5"
+   "title": "American Price Growth Quickens to Annual Rate of 3.7 Percent",
+   "summary": "Consumer price increases in the United States accelerated to reach 3.7 percent. The higher metric creates additional policy challenges for central bankers managing borrowing costs.",
+   "why": "Persistent inflation pressures influence monetary policy decisions that set global interest rate benchmarks and drive cross-border capital flows.",
+   "source": "Businesskorea",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yQWZ5SDRHYmwxQUE1eDZwclFfVEZuYkFralRuWHFyWHY2am5heEswb29PeEY2Y2JCNUN5bzV6NXllaWRRMWZtTFVUUnBEY2NqRjdkZktwQVJ2Q0FyNWplT0ZIM3pEZlpld0k1LTBJQWtjV1J5?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Federal Reserve Report Details Uneven Expansion and Stable Employment",
+   "summary": "The central bank's periodic Beige Book described varying regional expansion across the American economy. The assessment noted consistent hiring conditions alongside moderate pressures on consumer pricing.",
+   "why": "The Beige Book provides qualitative economic insights that help policymakers gauge ground-level business conditions across diverse federal districts.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPem5MRG9nVnRYaXZyRTJGYjl2bm9jMktIYk54MjNVMVRCWTlYYm5zSlN4eWJKQk43c2hoUWNJay1paldXdzB6cjVTWlZwQXVDaXBqOXVPcFRoS3N6UWVoaEJFUjgwZGhVbTYzVjhTNEZrNV9Va0dJdVVOYUI0QU43UFAxZWs3VG1pb0FBVg?oc=5"
   }
  ]
 }
