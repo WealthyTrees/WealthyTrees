@@ -122,3 +122,10 @@ button.tryb{cursor:pointer;font-family:inherit;margin:0}
 .zgr h3{margin:.2rem 0}.zgs{color:var(--up);letter-spacing:.1em;margin-left:.3rem}
 .zgn{margin:.2rem 0}.zgl{list-style:none;padding:0!important;margin:.4rem 0 .8rem!important}.zgl li{margin:.15rem 0}
 .zgl li.ok{color:var(--up)}.zgl li.no{color:var(--ink)}
+
+.sqs{color:var(--up);letter-spacing:.1em;font-size:1.8rem;margin-left:.4rem}.sqn{margin:0 0 .3rem}
+.sql{list-style:none;padding:0!important;margin:.3rem 0 0!important}.sql li{display:flex;gap:.7rem;align-items:flex-start;margin:.1rem 0}
+.sql a{color:var(--up);font-weight:700;white-space:nowrap}.sql li.ok span{opacity:.6;text-decoration:line-through}
+.sqb{flex:none;width:1.5rem;height:1.5rem;margin-top:.15rem;border:2px solid var(--up);border-radius:6px;background:var(--paper);cursor:pointer;padding:0;position:relative}
+.sqb[aria-pressed=true]::after{content:"\2713";position:absolute;inset:-.25rem 0 0 .1rem;color:var(--up);font-size:1.5rem;font-weight:700;line-height:1.5rem}
+.sqb:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
