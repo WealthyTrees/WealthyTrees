@@ -117,15 +117,30 @@ CHARTS = {
 }
 CHARTS_OUT = "data/charts.json"
 
-def chart_data():
-    """One year of daily candles per index, saved for the site's own chart."""
-    try:
-        out = json.load(open(CHARTS_OUT, encoding="utf-8"))
-    except Exception:
-        out = {}
-    for name, sym in CHARTS.items():
+NIFTY_IDX = {"Nifty Auto": "NIFTY AUTO", "Nifty FMCG": "NIFTY FMCG", "Nifty Metal": "NIFTY METAL", "Nifty Financial Services": "NIFTY FINANCIAL SERVICES", "Nifty Realty": "NIFTY REALTY", "Nifty PSU Bank": "NIFTY PSU BANK", "Nifty Energy": "NIFTY ENERGY", "Nifty Media": "NIFTY MEDIA", "Nifty Infra": "NIFTY INFRASTRUCTURE", "Nifty Midcap": "NIFTY MIDCAP 100", "Nifty Smallcap": "NIFTY SMLCAP 100"}
+
+def clean_rows(rows, name):
+    """Drop impossible rows and clamp wicks that Yahoo sometimes reports far outside the real range."""
+    thr = 0.015 if name == "USD/INR" else (0.12 if name in ("India VIX", "VIX", "Gold", "Silver", "Crude WTI", "Brent", "Natural Gas", "Copper") else 0.035)
+    out, pc = [], None
+    for r in rows:
+        if min(r["open"], r["high"], r["low"], r["close"]) <= 0:
+            continue
+        lo_ref = min(r["open"], r["close"], pc if pc else r["close"])
+        hi_ref = max(r["open"], r["close"], pc if pc else r["close"])
+        if r["low"] < lo_ref * (1 - thr):
+            r["low"] = round(lo_ref * 0.998, 2)
+        if r["high"] > hi_ref * (1 + thr):
+            r["high"] = round(hi_ref * 1.002, 2)
+        out.append(r)
+        pc = r["close"]
+    return out
+
+def yahoo_rows(sym):
+    last = None
+    for host, rg in (("query1", "2y"), ("query2", "2y"), ("query1", "1y")):
         try:
-            u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=2y&interval=1d"
+            u = f"https://{host}.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range={rg}&interval=1d"
             r = json.loads(get(u))["chart"]["result"][0]
             q, off, rows = r["indicators"]["quote"][0], r["meta"].get("gmtoffset", 0), {}
             for t, o, h, l, c, vol in zip(r["timestamp"], q["open"], q["high"], q["low"], q["close"], q.get("volume") or [0] * len(r["timestamp"])):
@@ -134,10 +149,56 @@ def chart_data():
                 d = datetime.fromtimestamp(t + off, timezone.utc).strftime("%Y-%m-%d")
                 rows[d] = {"time": d, "open": round(o, 2), "high": round(h, 2), "low": round(l, 2), "close": round(c, 2), "volume": int(vol or 0)}
             if len(rows) > 20:
-                out[name] = [rows[k] for k in sorted(rows)]
-                print(f"chart ok: {name}: {len(rows)} days")
+                return rows
+            last = f"only {len(rows)} rows"
         except Exception as e:
-            print(f"chart failed: {name}: {e}", file=sys.stderr)
+            last = e
+    raise RuntimeError(last)
+
+def niftyindices_rows(idx):
+    """Fallback: NSE's own index history (niftyindices.com), two one-year requests."""
+    rows, end = {}, datetime.now().date()
+    for k in range(2):
+        e = end - timedelta(days=365 * k)
+        st = e - timedelta(days=364)
+        cinfo = json.dumps({"name": idx, "startDate": st.strftime("%d-%b-%Y"), "endDate": e.strftime("%d-%b-%Y"), "indexName": idx})
+        req = urllib.request.Request("https://www.niftyindices.com/Backpage.aspx/getHistoricaldatatabletoString",
+            data=json.dumps({"cinfo": cinfo}).encode(),
+            headers={"Content-Type": "application/json; charset=UTF-8", "User-Agent": "Mozilla/5.0", "Referer": "https://www.niftyindices.com/reports/historical-data", "X-Requested-With": "XMLHttpRequest"})
+        res = json.loads(json.loads(urllib.request.urlopen(req, timeout=40).read())["d"])
+        for x in res:
+            try:
+                d = datetime.strptime(x["HistoricalDate"].strip(), "%d %b %Y").strftime("%Y-%m-%d")
+                o, h, l, c = [float(str(x[f]).replace(",", "")) for f in ("OPEN", "HIGH", "LOW", "CLOSE")]
+                rows[d] = {"time": d, "open": o, "high": h, "low": l, "close": c, "volume": 0}
+            except Exception:
+                continue
+    if len(rows) <= 20:
+        raise RuntimeError(f"only {len(rows)} rows")
+    return rows
+
+def chart_data():
+    """Two years of daily candles per index, saved for the site's own chart."""
+    try:
+        out = json.load(open(CHARTS_OUT, encoding="utf-8"))
+    except Exception:
+        out = {}
+    for name, sym in CHARTS.items():
+        rows = None
+        try:
+            rows = yahoo_rows(sym)
+        except Exception as e:
+            print(f"chart failed (yahoo): {name}: {e}", file=sys.stderr)
+            if name in NIFTY_IDX:
+                try:
+                    rows = niftyindices_rows(NIFTY_IDX[name])
+                except Exception as e2:
+                    print(f"chart failed (niftyindices): {name}: {e2}", file=sys.stderr)
+        if rows:
+            out[name] = clean_rows([rows[k] for k in sorted(rows)], name)
+            print(f"chart ok: {name}: {len(rows)} days")
+        elif name in out:
+            out[name] = clean_rows(out[name], name)
     if out:
         with open(CHARTS_OUT, "w", encoding="utf-8") as f:
             json.dump(out, f, separators=(",", ":"))
