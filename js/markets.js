@@ -61,7 +61,7 @@ function stat(k){var d=data&&data[k];if(!d||d.length<2)return null;var n=d.lengt
 /* ---------- tabs and tiles ---------- */
 function drawTabs(){var h="";Object.keys(GROUPS).forEach(function(g){h+='<button class="mk-tab" role="tab" data-g="'+g+'" aria-selected="'+(g===group)+'">'+(g==="India"?'<i class="fl fl-in"></i>':g==="US"?'<i class="fl fl-us"></i>':g==="Commodities"?"\uD83D\uDEE2\uFE0F ":"\uD83D\uDCB1 ")+g+'</button>'});$("tabs").innerHTML=h}
 function drawTiles(){var h="";GROUPS[group].forEach(function(sec){var t="";sec[1].forEach(function(k){
-  if(EXTRA[k]&&data&&!data[k])return;var s=stat(k),cls=s?(s.chg>=0?"u":"d"):"",a=s?Math.min(32,10+Math.abs(s.chg)*9):10;
+  if(data&&Object.keys(data).length&&!data[k])return;var s=stat(k),cls=s?(s.chg>=0?"u":"d"):"",a=s?Math.min(32,10+Math.abs(s.chg)*9):10;
   t+='<button class="mk-tile '+cls+'" data-k="'+esc(k)+'" aria-pressed="'+(k===key)+'" style="--a:'+a.toFixed(0)+'%"><b>'+esc(k)+'</b><span class="p">'+(s?f(s.price):"&mdash;")+'</span><span class="c">'+(s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"%":"")+'</span></button>'});
  if(t)h+='<div class="mk-sec">'+sec[0]+'</div><div class="mk-tiles">'+t+'</div>'});$("tiles").innerHTML=h}
 function drawHead(){var a=A[key]||["","",""],s=stat(key);
