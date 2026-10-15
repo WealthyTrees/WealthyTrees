@@ -68,3 +68,24 @@
 [data-theme=dark] .mk-card{box-shadow:0 0 22px color-mix(in srgb,var(--up) 20%,transparent)}
 [data-theme=dark] .mk-tile[aria-pressed=true]{box-shadow:0 0 16px color-mix(in srgb,var(--up) 40%,transparent)}
 @media(max-width:640px){.mk-tools button{width:42px}.mk-tools .tl{display:none}.mk-tab{padding:.45rem .9rem}}
+
+/* Notebook-style notes (v3) */
+.nbk{position:relative;margin:1.6rem 0;padding:1.1rem 1.2rem 1.4rem 3.2rem;border-radius:6px;border:1px solid var(--line);background-color:var(--paper);background-image:repeating-linear-gradient(transparent 0 1.74rem,color-mix(in srgb,var(--up) 14%,transparent) 1.74rem 1.8rem);overflow:hidden}
+.nbk::before{content:"";position:absolute;top:0;bottom:0;left:2.3rem;width:2px;background:color-mix(in srgb,var(--down) 55%,transparent)}
+.nbk::after{content:"";position:absolute;top:1.1rem;bottom:1.1rem;left:.7rem;width:12px;background:radial-gradient(circle at 6px 6px,var(--bg) 0 4.5px,color-mix(in srgb,var(--mute) 40%,transparent) 5px 6px,transparent 6.5px) 0 0/12px 2.2rem repeat-y}
+.nbk .callout{position:relative;z-index:1;background:none;border:0;padding:0;margin:0 0 1.3rem}
+.nbk .callout:last-child{margin-bottom:0}
+.nbk .callout h3{display:inline-block;margin:0 0 .4rem;padding:0 .3rem;font-family:Caveat,"Segoe Print","Comic Sans MS",cursive;font-size:2rem;font-weight:700;letter-spacing:0;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--up) 30%,transparent) 58% 92%,transparent 92%)}
+.nbk .callout ul{margin:.2rem 0 0;padding-left:1.1rem}
+.nbk .callout li{margin:.35rem 0}
+.nbk .callout li b:first-child{font-family:Caveat,"Segoe Print",cursive;font-size:1.3rem;color:var(--up)}
+.nbk a{color:var(--up);text-decoration-thickness:2px;text-underline-offset:3px}
+.mkd{display:block;width:100%;max-width:440px;height:auto;margin:.2rem 0 0;color:var(--ink);background:color-mix(in srgb,var(--paper) 70%,transparent);border:2px solid var(--ink);border-radius:8px}
+.mkd .mkz{fill:color-mix(in srgb,var(--up) 22%,transparent);stroke:var(--up);stroke-width:2}
+.mkd .mkp{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:mkdraw 7s ease-in-out infinite}
+.mkd .mkw{font-family:Caveat,"Segoe Print","Comic Sans MS",cursive;font-size:17px;font-weight:700;fill:currentColor}
+.mkc{font-family:Caveat,"Segoe Print",cursive;font-size:1.25rem;font-weight:600;color:var(--mute);margin:.2rem 0 .6rem}
+@keyframes mkdraw{0%{stroke-dashoffset:1}60%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+@media(prefers-reduced-motion:reduce){.mkd .mkp{animation:none}}
+[data-theme=dark] .nbk{box-shadow:0 0 18px color-mix(in srgb,var(--up) 14%,transparent)}
+@media(max-width:600px){.nbk{padding:.9rem .8rem 1.2rem 2.4rem}.nbk::before{left:1.7rem}.nbk::after{left:.4rem}.nbk .callout h3{font-size:1.7rem}}
