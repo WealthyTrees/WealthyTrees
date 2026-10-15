@@ -108,7 +108,7 @@ footer .wrap{font-weight:700;color:var(--ink)}
 
 /* v8: Learn section glows in dark mode */
 [data-theme=dark] .course-grid{position:relative;isolation:isolate}
-[data-theme=dark] .course-grid::before{content:"";position:absolute;inset:-50px -30px;z-index:-1;pointer-events:none;background:radial-gradient(55% 45% at 18% 12%,rgba(62,207,142,.20),transparent 70%),radial-gradient(45% 40% at 88% 88%,rgba(224,176,79,.12),transparent 70%)}
+[data-theme=dark] .course-grid::before{content:"";position:absolute;inset:-50px -30px;z-index:-1;pointer-events:none;background:radial-gradient(34% 28% at 35% 28%,rgba(62,207,142,.20),transparent 70%),radial-gradient(30% 26% at 68% 78%,rgba(224,176,79,.12),transparent 70%)}
 [data-theme=dark] .course-grid .ccard{background:linear-gradient(155deg,color-mix(in srgb,var(--up) 24%,var(--paper)),var(--paper) 64%);border:1.5px solid color-mix(in srgb,var(--up) 75%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--up) 30%,transparent),0 0 24px color-mix(in srgb,var(--up) 38%,transparent),0 0 60px color-mix(in srgb,var(--up) 18%,transparent),inset 0 0 30px color-mix(in srgb,var(--up) 14%,transparent);animation:ccglow 3.4s ease-in-out infinite}
 @keyframes ccglow{50%{box-shadow:0 0 0 1px color-mix(in srgb,var(--up) 45%,transparent),0 0 34px color-mix(in srgb,var(--up) 58%,transparent),0 0 80px color-mix(in srgb,var(--up) 28%,transparent),inset 0 0 36px color-mix(in srgb,var(--up) 22%,transparent)}}
 @media(hover:hover){[data-theme=dark] .course-grid a.ccard:hover{animation:none;box-shadow:0 0 0 1px color-mix(in srgb,var(--up) 65%,transparent),0 0 36px color-mix(in srgb,var(--up) 65%,transparent),0 0 90px color-mix(in srgb,var(--up) 32%,transparent),inset 0 0 40px color-mix(in srgb,var(--up) 24%,transparent)}}
@@ -134,19 +134,22 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 [data-theme=dark] a.tryb:active{box-shadow:0 0 8px var(--up)}
 @media(prefers-reduced-motion:reduce){a.tryb,a.tryb::after{transition:none}}
 
-/* Learn index: 3 level cards */
-.lvls{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:1.2rem 0 1.5rem}
-.lvl{position:relative;display:flex;flex-direction:column;padding:1.1rem 1.2rem;background:var(--paper);border:1.5px dashed var(--line);border-radius:14px}
-.lvl h2{font-family:'Caveat',cursive;font-size:2rem;line-height:1.1;margin:.5rem 0 .3rem}.lvl p{margin:0 0 .4rem}
-.lvl .cstats{margin:.5rem 0}.lvl .oprog{margin:.2rem 0 .6rem}
+/* Learn index: 3 level cards, side by side */
+.page.lw{max-width:68rem}.crumb{margin:0}.crumb a{color:var(--up);font-weight:700;text-decoration:none}
+.lvls{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.6rem .6rem 1.2rem;margin:.6rem -.6rem 1.5rem}
+@media(max-width:700px){.lvls{grid-auto-columns:82%}}
+.lvl{scroll-snap-align:start;position:relative;display:flex;flex-direction:column;padding:1.1rem 1.2rem;background:var(--paper);border:1.5px dashed var(--line);border-radius:14px;color:var(--ink);text-decoration:none}
+.lvl h2{font-family:'Caveat',cursive;font-size:2.1rem;line-height:1.1;margin:.5rem 0 .3rem}.lvl p{margin:0 0 .4rem}
+.lvl .cstats{margin:.5rem 0}.lvp{margin:.2rem 0 .6rem}.lvp span{font-weight:600}.lvp b{color:var(--up);font-size:1.1rem}.lvp .cprog{margin-top:.3rem}
 .lvtag{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.15rem .6rem;border-radius:999px;background:var(--up);color:var(--paper)}
 .lvl.lock{opacity:.85}.lvl.lock .lvtag{background:var(--gold)}
-.lvl.live{border:2px solid var(--up);border-style:solid}
-.lvact{margin-top:auto!important;padding-top:.6rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
-.lvgo{display:inline-flex;align-items:center;gap:.4rem;background:var(--paper);color:var(--ink);border:2px solid var(--up);border-radius:10px;padding:.35rem 1.1rem;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}
-@media(hover:hover){.lvgo:hover{transform:translate(-1px,-2px);box-shadow:5px 5px 0 color-mix(in srgb,var(--up) 60%,transparent)}}
+.lvl.live{border:2px solid var(--up);transition:transform .25s}
+@media(hover:hover){a.lvl:hover{transform:translateY(-4px)}}
+.lvact{margin-top:auto;padding-top:.6rem}
+.lvgo{display:inline-flex;align-items:center;gap:.4rem;border:2px solid var(--up);border-radius:10px;padding:.35rem 1.1rem;font-weight:700}
+.lvgo::after{content:"\2192";color:var(--up)}
 .lvmore{color:var(--up);font-weight:700;text-decoration:none}.lvmore:hover{text-decoration:underline}
 [data-theme=dark] .lvl.live{box-shadow:0 0 0 1px color-mix(in srgb,var(--up) 30%,transparent),0 0 24px color-mix(in srgb,var(--up) 30%,transparent)}
-@media(prefers-reduced-motion:reduce){.lvgo{transition:none}}
-.lvl.live{grid-column:1/-1}.lvl.live .oprog{max-width:none}
-[data-theme=dark] .lvl .oprog{box-shadow:none}
+[data-theme=dark] .oprog{box-shadow:none}
+@media(prefers-reduced-motion:reduce){.lvl.live{transition:none}}
+.lw .course-grid{margin-top:3rem}#cont{position:relative;z-index:1}
