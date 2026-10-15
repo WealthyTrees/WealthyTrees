@@ -85,39 +85,18 @@ HEADLINES:
 """
 
 CHARTS = {
-    "Nifty 50": "^NSEI",
-    "Sensex": "^BSESN",
-    "Bank Nifty": "^NSEBANK",
-    "Nifty IT": "^CNXIT",
-    "Nifty Auto": "^CNXAUTO",
-    "Nifty FMCG": "^CNXFMCG",
-    "Nifty Pharma": "^CNXPHARMA",
-    "Nifty Metal": "^CNXMETAL",
+    "Nifty 50": "^NSEI", "Sensex": "^BSESN", "Bank Nifty": "^NSEBANK",
+    "Nifty IT": "^CNXIT", "Nifty Pharma": "^CNXPHARMA", "Nifty Auto": "^CNXAUTO", "Nifty Metal": "^CNXMETAL",
     "India VIX": "^INDIAVIX",
-    "S&P 500": "^GSPC",
-    "Nasdaq": "^IXIC",
-    "Dow": "^DJI",
-    "Russell 2000": "^RUT",
-    "VIX": "^VIX",
-    "Gold": "GC=F",
-    "Silver": "SI=F",
-    "Crude WTI": "CL=F",
-    "Brent": "BZ=F",
-    "Natural Gas": "NG=F",
-    "Copper": "HG=F",
+    "S&P 500": "^GSPC", "Nasdaq": "^IXIC", "Dow": "^DJI",
+    "Gold": "GC=F", "Silver": "SI=F", "Crude WTI": "CL=F", "Brent": "BZ=F", "Natural Gas": "NG=F", "Copper": "HG=F",
     "USD/INR": "USDINR=X",
-    "Nifty Financial Services": "^CNXFIN",
-    "Nifty Realty": "^CNXREALTY",
-    "Nifty PSU Bank": "^CNXPSUBANK",
-    "Nifty Energy": "^CNXENERGY",
-    "Nifty Media": "^CNXMEDIA",
-    "Nifty Infra": "^CNXINFRA",
-    "Nifty Midcap": "^CNXMIDCAP",
-    "Nifty Smallcap": "^CNXSC",
 }
+# Yahoo has no history for some Nifty sectors and NSE blocks GitHub servers, so fall back to a tracking ETF (first that works).
+ETF_FALLBACK = {"Nifty Auto": ["AUTOBEES.NS", "AUTOIETF.NS"], "Nifty Metal": ["METALIETF.NS", "METALBEES.NS"]}
 CHARTS_OUT = "data/charts.json"
 
-NIFTY_IDX = {"Nifty Auto": "NIFTY AUTO", "Nifty FMCG": "NIFTY FMCG", "Nifty Metal": "NIFTY METAL", "Nifty Financial Services": "NIFTY FINANCIAL SERVICES", "Nifty Realty": "NIFTY REALTY", "Nifty PSU Bank": "NIFTY PSU BANK", "Nifty Energy": "NIFTY ENERGY", "Nifty Media": "NIFTY MEDIA", "Nifty Infra": "NIFTY INFRASTRUCTURE", "Nifty Midcap": "NIFTY MIDCAP 100", "Nifty Smallcap": "NIFTY SMLCAP 100"}
+NIFTY_IDX = {"Nifty Auto": "NIFTY AUTO", "Nifty Metal": "NIFTY METAL"}
 
 def clean_rows(rows, name):
     """Drop impossible rows and clamp wicks that Yahoo sometimes reports far outside the real range."""
@@ -225,20 +204,11 @@ def chart_data():
         except Exception as e:
             st["yahoo"] = str(e)[:120]
             print(f"chart failed (yahoo): {name}: {e}", file=sys.stderr)
-        if not rows and name in NIFTY_IDX:
+        for etf in ([] if rows else ETF_FALLBACK.get(name, [])):
             try:
-                if op is None:
-                    op = nse_open()
-                rows = nse_rows(op, NIFTY_IDX[name]); st["nse"] = "ok"
+                rows = yahoo_rows(etf); st["etf"] = etf + " ok"; break
             except Exception as e:
-                st["nse"] = str(e)[:120]
-                print(f"chart failed (nseindia): {name}: {e}", file=sys.stderr)
-        if not rows and name in NIFTY_IDX:
-            try:
-                rows = niftyindices_rows(NIFTY_IDX[name]); st["niftyindices"] = "ok"
-            except Exception as e:
-                st["niftyindices"] = str(e)[:120]
-                print(f"chart failed (niftyindices): {name}: {e}", file=sys.stderr)
+                st["etf"] = (etf + ": " + str(e))[:120]
         if rows:
             out[name] = clean_rows([rows[k] for k in sorted(rows)], name)
             print(f"chart ok: {name}: {len(rows)} days")
@@ -252,18 +222,31 @@ def chart_data():
     with open("data/chart_status.json", "w", encoding="utf-8") as f:
         json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "charts": status}, f, indent=1)
 
-GEMINI_MODEL = "gemini-3.8-flash"
+GEMINI_MODELS = ["gemini-3.8-flash", "gemini-2.5-flash", "gemini-2.5-flash-lite"]  # each model has its own free quota
+
+def ask_gemini(prompt, model, gkey):
+    req = urllib.request.Request(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        method="POST",
+        data=json.dumps({"contents": [{"parts": [{"text": prompt}]}],
+                         "generationConfig": {"responseMimeType": "application/json"}}).encode(),
+        headers={"x-goog-api-key": gkey, "content-type": "application/json"})
+    return json.loads(urllib.request.urlopen(req, timeout=180).read())["candidates"][0]["content"]["parts"][0]["text"]
 
 def ask_llm(prompt):
     gkey = os.environ.get("GEMINI_API_KEY", "").strip()
-    if gkey:  # free option: Google Gemini
-        req = urllib.request.Request(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
-            method="POST",
-            data=json.dumps({"contents": [{"parts": [{"text": prompt}]}],
-                             "generationConfig": {"responseMimeType": "application/json"}}).encode(),
-            headers={"x-goog-api-key": gkey, "content-type": "application/json"})
-        return json.loads(urllib.request.urlopen(req, timeout=180).read())["candidates"][0]["content"]["parts"][0]["text"]
+    last = None
+    if gkey:
+        for model in GEMINI_MODELS:  # quota hit (429) or model missing (404): try the next model at once
+            try:
+                return ask_gemini(prompt, model, gkey)
+            except urllib.error.HTTPError as e:
+                last = e
+                print(f"Gemini {model} failed: HTTP {e.code}", file=sys.stderr)
+                if e.code not in (404, 429, 500, 502, 503, 504):
+                    raise
+        if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
+            raise last
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", method="POST",
         data=json.dumps({"model": MODEL, "max_tokens": 2500,
                          "messages": [{"role": "user", "content": prompt}]}).encode(),
@@ -274,15 +257,15 @@ def ask_llm(prompt):
 def summarize(items):
     body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
     text = None
-    for attempt in range(5):  # retry on timeouts and busy-service errors
+    for attempt in range(2):  # retry on timeouts and busy-service errors
         try:
             text = ask_llm(PROMPT + body)
             break
         except Exception as e:
             code = getattr(e, "code", None)
-            retryable = code in (429, 500, 502, 503, 504) or (code is None and isinstance(e, OSError))
-            if retryable and attempt < 4:
-                wait = 30 * (attempt + 1)
+            retryable = code in (500, 502, 503, 504) or (code is None and isinstance(e, OSError))
+            if retryable and attempt < 1:
+                wait = 20
                 print(f"AI call failed ({code or type(e).__name__}); retrying in {wait}s...", file=sys.stderr)
                 time.sleep(wait)
             else:
@@ -290,29 +273,43 @@ def summarize(items):
     text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
     return json.loads(text)
 
+def keep_old(msg):
+    print(msg + " Keeping the previous brief.", file=sys.stderr)  # job still passes; charts and ticker were already saved
+
 def main():
     chart_data()
+    try:
+        d = json.load(open(OUT, encoding="utf-8"))
+    except Exception:
+        d = {"items": []}
+    d["ticker"] = ticker() or d.get("ticker", [])
+    def save():
+        with open(OUT, "w", encoding="utf-8") as f:
+            json.dump(d, f, ensure_ascii=False, indent=1)
+    save()
     items = headlines()
     if len(items) < 5:
-        sys.exit("Too few headlines fetched; keeping the previous brief.")
-    print(f"Fetched {len(items)} headlines; asking Claude to summarize...")
+        return keep_old("Too few headlines.")
+    print(f"Fetched {len(items)} headlines; asking AI to summarize...")
     try:
         picked = summarize(items)
-    except urllib.error.HTTPError as e:
-        sys.exit(f"AI API error {e.code}: {e.read().decode()[:400]}")
+    except Exception as e:
+        return keep_old(f"AI summary failed ({type(e).__name__}: {str(e)[:200]}).")
     out = []
     for p in picked:
-        n = int(p["n"])
-        if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy", "US Markets"):
-            out.append({"category": p["category"], "title": p["title"], "summary": p["summary"],
-                        "why": p["why"], "source": items[n]["source"], "url": items[n]["url"]})
+        try:
+            n = int(p["n"])
+            if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy", "US Markets"):
+                out.append({"category": p["category"], "title": p["title"], "summary": p["summary"],
+                            "why": p["why"], "source": items[n]["source"], "url": items[n]["url"]})
+        except Exception:
+            continue
     if len(out) < 3:
-        sys.exit("Too few valid items; keeping the previous brief.")
+        return keep_old("Too few valid items.")
     ist = datetime.now(timezone(timedelta(hours=5, minutes=30)))
-    data = {"date": ist.strftime("%A, %d %B %Y"), "ticker": ticker() or old_ticker(), "items": out}
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=1)
-    print(f"Wrote {len(out)} items, {len(data['ticker'])} ticker entries.")
+    d["date"] = ist.strftime("%A, %d %B %Y"); d["items"] = out
+    save()
+    print(f"Wrote {len(out)} items, {len(d['ticker'])} ticker entries.")
 
 if __name__ == "__main__":
     main()
