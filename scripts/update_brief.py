@@ -98,6 +98,19 @@ CHARTS_OUT = "data/charts.json"
 
 NIFTY_IDX = {"Nifty Auto": "NIFTY AUTO", "Nifty Metal": "NIFTY METAL"}
 
+def live_price(sym):
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('^','%5E')}?range=1d&interval=1d"
+    return float(json.loads(get(u))["chart"]["result"][0]["meta"]["regularMarketPrice"])
+
+def scale_to_index(rows, sym):
+    """ETF prices are on a different scale from the index, so rescale them to the index level (shape stays the same)."""
+    last = rows[max(rows)]["close"]
+    f = live_price(sym) / last
+    for r in rows.values():
+        for k in ("open", "high", "low", "close"):
+            r[k] = round(r[k] * f, 2)
+    return rows
+
 def clean_rows(rows, name):
     """Drop impossible rows and clamp wicks that Yahoo sometimes reports far outside the real range."""
     thr = 0.015 if name == "USD/INR" else (0.12 if name in ("India VIX", "VIX", "Gold", "Silver", "Crude WTI", "Brent", "Natural Gas", "Copper") else 0.035)
@@ -206,14 +219,20 @@ def chart_data():
             print(f"chart failed (yahoo): {name}: {e}", file=sys.stderr)
         for etf in ([] if rows else ETF_FALLBACK.get(name, [])):
             try:
-                rows = yahoo_rows(etf); st["etf"] = etf + " ok"; break
+                rows = scale_to_index(yahoo_rows(etf), sym); st["etf"] = etf + " ok (scaled)"; break
             except Exception as e:
                 st["etf"] = (etf + ": " + str(e))[:120]
         if rows:
             out[name] = clean_rows([rows[k] for k in sorted(rows)], name)
             print(f"chart ok: {name}: {len(rows)} days")
         elif name in out:
-            out[name] = clean_rows(out[name], name)
+            try:  # drop old rows whose level is far from the live index (for example old unscaled ETF data)
+                if name in ETF_FALLBACK and abs(out[name][-1]["close"] / live_price(sym) - 1) > 0.35:
+                    del out[name]; st["dropped"] = "old data far from live level"
+            except Exception:
+                pass
+            if name in out:
+                out[name] = clean_rows(out[name], name)
         st["rows"] = len(out.get(name, []))
         status[name] = st
     if out:
