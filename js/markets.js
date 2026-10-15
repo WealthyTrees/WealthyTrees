@@ -46,6 +46,8 @@ var data=null,key="Nifty 50",group="India",range="1Y",type="Candles",on={SMA50:t
 (function(){var q=new URLSearchParams(location.search).get("i");if(q&&LIVE[q]){key=q;for(var g in GROUPS)GROUPS[g].forEach(function(s){if(s[1].indexOf(q)>-1)group=g})}})();
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
 function f(x){return Number(x).toLocaleString("en-IN",{maximumFractionDigits:2})}
+function FL(e){return e==="\uD83C\uDDEE\uD83C\uDDF3"?'<i class="fl fl-in"></i>':e==="\uD83C\uDDFA\uD83C\uDDF8"?'<i class="fl fl-us"></i>':e}
+function clean(rows,k){if(!rows)return rows;var thr=k==="USD/INR"?.015:/VIX|Gold|Silver|Crude|Brent|Natural|Copper/.test(k)?.12:.035,o=[],pc=null;rows.forEach(function(r){if(Math.min(r.open,r.high,r.low,r.close)<=0)return;var c=Object.assign({},r),lo=Math.min(c.open,c.close,pc||c.close),hi=Math.max(c.open,c.close,pc||c.close);if(c.low<lo*(1-thr))c.low=lo*.998;if(c.high>hi*(1+thr))c.high=hi*1.002;o.push(c);pc=c.close});return o}
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 function sma(a,n){var o=[],s=0;for(var i=0;i<a.length;i++){s+=a[i].close;if(i>=n)s-=a[i-n].close;if(i>=n-1)o.push({time:a[i].time,value:s/n})}return o}
 function ema(a,n){var k=2/(n+1),o=[],e=null;for(var i=0;i<a.length;i++){e=e===null?a[i].close:a[i].close*k+e*(1-k);if(i>=n-1)o.push({time:a[i].time,value:e})}return o}
@@ -57,21 +59,21 @@ function stat(k){var d=data&&data[k];if(!d||d.length<2)return null;var n=d.lengt
  if(q&&q.price){price=q.price;if(q.day>l.time)pc=l.close}
  return{price:price,chg:(price-pc)/pc*100}}
 /* ---------- tabs and tiles ---------- */
-function drawTabs(){var h="";Object.keys(GROUPS).forEach(function(g){h+='<button class="mk-tab" role="tab" data-g="'+g+'" aria-selected="'+(g===group)+'">'+(g==="India"?"🇮🇳 ":g==="US"?"🇺🇸 ":g==="Commodities"?"🛢️ ":"💱 ")+g+'</button>'});$("tabs").innerHTML=h}
+function drawTabs(){var h="";Object.keys(GROUPS).forEach(function(g){h+='<button class="mk-tab" role="tab" data-g="'+g+'" aria-selected="'+(g===group)+'">'+(g==="India"?'<i class="fl fl-in"></i>':g==="US"?'<i class="fl fl-us"></i>':g==="Commodities"?"\uD83D\uDEE2\uFE0F ":"\uD83D\uDCB1 ")+g+'</button>'});$("tabs").innerHTML=h}
 function drawTiles(){var h="";GROUPS[group].forEach(function(sec){var t="";sec[1].forEach(function(k){
   if(EXTRA[k]&&data&&!data[k])return;var s=stat(k),cls=s?(s.chg>=0?"u":"d"):"",a=s?Math.min(32,10+Math.abs(s.chg)*9):10;
   t+='<button class="mk-tile '+cls+'" data-k="'+esc(k)+'" aria-pressed="'+(k===key)+'" style="--a:'+a.toFixed(0)+'%"><b>'+esc(k)+'</b><span class="p">'+(s?f(s.price):"&mdash;")+'</span><span class="c">'+(s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"%":"")+'</span></button>'});
  if(t)h+='<div class="mk-sec">'+sec[0]+'</div><div class="mk-tiles">'+t+'</div>'});$("tiles").innerHTML=h}
 function drawHead(){var a=A[key]||["","",""],s=stat(key);
- $("ttl").innerHTML='<span class="mk-flag">'+a[0]+'</span>'+esc(key);
+ $("ttl").innerHTML='<span class="mk-flag">'+FL(a[0])+'</span>'+esc(key);
  $("prc").textContent=s?f(s.price):"";var c=$("chg");c.className="mk-chg "+(s&&s.chg>=0?"up":"dn");c.textContent=s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"% today":"";
- $("about").innerHTML='<div class="big">'+a[0]+'</div><div><h3>About '+esc(key)+': '+esc(a[1])+'</h3><p>'+esc(a[2])+'</p><p class="note">Charts show the past. They do not predict the future.</p></div>'}
+ $("about").innerHTML='<div class="big">'+FL(a[0])+'</div><div><h3>About '+esc(key)+': '+esc(a[1])+'</h3><p>'+esc(a[2])+'</p><p class="note">Charts show the past. They do not predict the future.</p></div>'}
 /* ---------- chart ---------- */
 function build(){
  if(main){main.remove();main=null}if(rsiC){rsiC.remove();rsiC=null}mainSeries=null;
  var lg=$("legend"),bx=$("chartbox"),rb=$("rsibox");bx.innerHTML="";rb.innerHTML="";rb.hidden=!on.RSI;drawHead();redraw();
  if(!data){lg.textContent="Chart data appears after the next update.";rb.hidden=true;return}
- if(!data[key]){rb.hidden=true;if(!tried[key]){tried[key]=1;lg.textContent="Loading "+key+" chart…";fetch("/api/history?n="+encodeURIComponent(key)).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(rows){if(rows&&rows.length)data[key]=rows;drawTiles();build()}).catch(function(){build()})}else lg.textContent="The "+key+" chart is added by the daily data update. Please check again after the next update.";return}
+ if(!data[key]){rb.hidden=true;if(!tried[key]){tried[key]=1;lg.textContent="Loading "+key+" chart…";fetch("/api/history?n="+encodeURIComponent(key)).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(rows){if(rows&&rows.length)data[key]=clean(rows,key);drawTiles();build()}).catch(function(){build()})}else lg.textContent="The "+key+" chart is added by the daily data update. Please check again after the next update.";return}
  if(!window.LightweightCharts){lg.textContent="The chart library did not load. Please refresh the page.";rb.hidden=true;return}
  var d=data[key],n=d.length,hasVol=d.some(function(x){return x.volume>0});
  main=LightweightCharts.createChart(bx,base(bx,bx.clientHeight));
@@ -153,6 +155,15 @@ function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){
 setInterval(live,60000);setTimeout(live,3000);
 /* ---------- start ---------- */
 drawTabs();initDraw();
-fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then(function(j){data=j}).catch(function(){data={}}).then(function(){drawTiles();build()});
+fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then(function(j){data=j;Object.keys(data).forEach(function(k){data[k]=clean(data[k],k)})}).catch(function(){data={}}).then(function(){drawTiles();build()});
+/* ---------- tooltips and indicator explanations ---------- */
+(function(){
+ var TIPS={cursor:"Cursor: move and zoom the chart.",h:"Horizontal line: marks support (below the price) or resistance (above it). Click once on the chart.",t:"Trend line: click a start point, then an end point.",r:"Zone: click two corners to shade a price area.",x:"Eraser: click a drawing to delete it."},LAB={cursor:"Cursor",h:"Line",t:"Trend",r:"Zone",x:"Erase",clr:"Clear"};
+ document.querySelectorAll("#tools button").forEach(function(b){var k=b.dataset.t||b.id;b.dataset.tip=TIPS[k]||"Clear all drawings on this chart.";b.removeAttribute("title");b.insertAdjacentHTML("beforeend",'<span class="tl">'+(LAB[k]||"Clear")+"</span>")});
+ document.querySelectorAll("#chartcard .mk-bar [title]").forEach(function(b){b.dataset.tip=b.getAttribute("title");b.removeAttribute("title")});
+ var m=$("inds");m.insertAdjacentHTML("beforeend",'<div class="ind-tip" id="indtip">Hover or tap an indicator to see what it means.</div>');
+ m.querySelectorAll("label").forEach(function(l){var show=function(){$("indtip").innerHTML="<b>"+esc(l.textContent.trim())+"</b> "+esc(INFO[l.querySelector("input").value]||"")};l.addEventListener("mouseenter",show);l.addEventListener("focusin",show);l.addEventListener("click",show)});
+ document.addEventListener("click",function(e){var t=e.target.closest("[data-tip]");if(!t)return;t.classList.add("tip-on");setTimeout(function(){t.classList.remove("tip-on")},2600)});
+})();
 screener();
 })();
