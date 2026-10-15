@@ -1,111 +1,119 @@
 {
- "date": "Wednesday, 14 October 2026",
+ "date": "Thursday, 15 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,610",
-   "change": 1.1
+   "value": "22,623",
+   "change": 1.16
   },
   {
    "name": "SENSEX",
-   "value": "72,822",
-   "change": 1.25
+   "value": "72,782",
+   "change": 1.19
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,165",
-   "change": -0.3
+   "value": "4,160",
+   "change": 1.27
   },
   {
    "name": "CRUDE WTI",
-   "value": "$94.5",
-   "change": 0.42
+   "value": "$94.3",
+   "change": -0.87
   },
   {
    "name": "USD/INR",
-   "value": "95.09",
-   "change": -0.2
+   "value": "95.14",
+   "change": 0.0
   },
   {
    "name": "S&P 500",
-   "value": "7,805",
-   "change": -0.02
+   "value": "7,719",
+   "change": -1.11
   },
   {
    "name": "NASDAQ",
-   "value": "27,204",
-   "change": -0.15
+   "value": "26,693",
+   "change": -1.88
   },
   {
    "name": "DOW",
-   "value": "51,670",
-   "change": -0.35
+   "value": "51,621",
+   "change": -0.09
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "State-Owned Engineering Firm BHEL Posts Substantial Quarterly Earnings Expansion",
-   "summary": "Bharat Heavy Electricals recorded a 120.1 percent annual increase in second-quarter net earnings to 810 crore rupees, compared with 368 crore rupees in the prior period. Top-line revenue concurrently grew by 24 percent.",
-   "why": "Corporate financial results provide investors with verifiable evidence regarding industrial demand and operational efficiency across public sector enterprises.",
+   "title": "Regulator Considers Relaxing Listing Norms for Smaller Enterprises",
+   "summary": "The capital markets watchdog is considering reducing listing expenses and decreasing minimum investment sizes for small and medium enterprise public listings. This move aims to ease market entry and fund access for emerging companies.",
+   "why": "Lower entry barriers enable young businesses to access public equity while expanding participation avenues for retail investors.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/bhel-q2-results-net-profit-skyrockets-120-yoy-to-rs-810-crore-revenue-rises-24/articleshow/134936902.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/sebi-plans-to-ease-many-sme-ipo-rules-lower-application-amount/articleshow/134954790.cms"
   },
   {
    "category": "Equity",
-   "title": "Tata Consultancy Services Reports Higher Second-Quarter Earnings and Growing Artificial Intelligence Business",
-   "summary": "Tata Consultancy Services generated higher profit and revenue during its second quarter, highlighted by 3.1 billion dollars in annualized artificial intelligence bookings. Market analysts expressed mixed opinions regarding future expansion rates and profitability.",
-   "why": "Quarterly performance from leading software exporters indicates enterprise technology spending trends worldwide.",
+   "title": "Market Watchdog Evaluates Blended Pricing to Tame Derivatives Expiry Swings",
+   "summary": "The securities regulator is reviewing a blended price mechanism to mitigate sharp market fluctuations on contracts settlement days. The proposal follows feedback from market players concerning liquidity strain during the auction process.",
+   "why": "Settlement price models directly affect execution costs and stability of options and futures contracts during expiry.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/tcs-share-price-rebounds-14-from-september-low-can-the-rally-extend-further-11791959658391.html"
+   "url": "https://www.livemint.com/market/sebi-likely-to-adopt-blended-pricing-framework-to-curb-expiry-day-volatility-in-derivatives-11791958588445.html"
   },
   {
-   "category": "Economy",
-   "title": "Reserve Bank Conducts Short-Term Reverse Repo to Absorb Excess Banking System Funds",
-   "summary": "The Reserve Bank of India accepted 25,533 crore rupees worth of bids in an overnight liquidity operation. The auction was conducted against an announced target size of 50,000 crore rupees.",
-   "why": "Reverse repo operations enable monetary authorities to manage surplus cash within commercial banks, anchoring interbank lending rates.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63802"
-  },
-  {
-   "category": "Economy",
-   "title": "Central Bank Forex Steps Drive Indian Rupee to Over One-Month Peak",
-   "summary": "Official policy steps taken to curb foreign exchange pressure propelled the Indian rupee to its strongest valuation in more than thirty days.",
-   "why": "A firmer domestic currency helps restrain import expenses and supports confidence among global asset allocators.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOT3ZuZzRYRlp0aXpINXJMN01WOXdQTG9VSnpHMk56Y2RTdjZZWjMxWDhfNndjb2hFdzBFeGNrQUQ2Q2ZNREcxM2toRURlTGI1Rzg5dUNCM25PQnhPZzJKMG1Sby13RDFGWDBwemx6MTc4azhUV0FuVnM4REFsR3BBd1NQd1ZWQjRIVWxNaTFUYklLX25WV0k4dzFfS2lKelVRUHMydkNmZEkyTnRseWRsQ0I4SUZYZjZOdFVwdkZNNkJrZ251by1mODFFZjhBUkUxRGQ1NmY2QdIB3AFBVV95cUxQRklacWlybFdpUUlRZUN6RmQ5dnlSQUN5TGFfLVNHX3A0dkNqa2M1dVlGTDJlUGZVUTUweUVEcmkxRjlnZE0wLS1FaFlmMEV1WWtPWFFETS1wQmduMDg3Vll6Q0ZTUVp4RllWRG5FV3hTV09VRDVORWx1T2FxbTdHS29TWGVKM0JwcTVYQkpGa056SDVKa3c0WmM2ZGRLTGYyQjBMazR6cEFTRkRmYXdzbFFBLTF1Y2lxbGdabDROM3hCRUdOV1hSRFYtUnFaQkRyRTVZQW5pcmwtSWV2?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Precious Metals Weaken as Gold and Silver Extend Multi-Session Drop",
-   "summary": "Retail gold experienced a decline of 3,000 rupees per 10 grams over three straight days. Silver rates also witnessed downward movement across domestic centers.",
-   "why": "Bullion prices reflect shifting consumer appetite during festival windows and broader macroeconomic investment preferences.",
-   "source": "Bhaskar English",
-   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWVlLb2xSQXN3R3o3eEpTa0lEeDBTaXVLS3pZaUI3ZU5FQldlZkVEQnpOVVBHMUpJRG9adzRDM2t6eGNqcTIzODVDTGR4bkZ1MXdNSG0zVk5jcjZKMEJBa0haYVdIaDlXUVJSTUFsdTM3VjZMRGx1a1dNSWRqRk9rZVVoQXlsOHJIeFJtOWJxdWNHbVVoM0lqc2RNOWVGdWhQMnfSAacBQVVfeXFMTTRkTkFJd1IwN2ZoR0k1SW15NGNMcnVPNTJMc1MxeXVrZlVTYkpOc0Vkc3ZFYWRjN3pxQUVhODNlcEdPUG5ZX29EYkRSN21kUzBaVGlPQ25uaXFkdEstOTlQMG9ZQUwxQkVFUWItSXBUUU9zZVl5OEg3R2I5M2U5Znl3SnptS21vUGtvZHJQZmh1NS1OOGtTMWRxVkk4T0c5LWhCV21JeEk?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Crude Values Advance While Global Financial Participants Watch American Inflation Prints",
-   "summary": "Crude petroleum posted strong gains even as international financial markets paused ahead of vital United States consumer price measurements.",
-   "why": "Energy cost fluctuations heavily affect global shipping expenses and central bank inflation benchmarks.",
-   "source": "Yeni Şafak English",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQLVhycmlqaENlaVRzYllncHR1d0c0N2N4LUo5RXdZOHp5T0FvSkV2N084RURnMHU3LWdMZWRESEVHdVBpR3ZVaHlMY1o1NHBtTnJqeVhKSWkzUjJ5emRsa2ZIbWphNWhEdm1iRFV2X0VybGlLYUlIeG5qUTl3WUtDMzNHak90MFNfbFFhWFQzUQ?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Technology Shares Retreat and Lenders Announce Results as Wall Street Weakens",
-   "summary": "The Nasdaq Composite ended in negative territory as semiconductor producers declined alongside the arrival of initial corporate statements from banking firms.",
-   "why": "Trends across major overseas indexes influence institutional risk tolerance and portfolio allocations globally.",
+   "category": "Equity",
+   "title": "Domestic Equities Decline Following Foreign Fund Sales and Rising Energy Costs",
+   "summary": "Indian stock benchmarks finished down as international funds sold holdings and elevated petroleum prices dampened buying interest. Market sentiment turned cautious amid broad institutional outflows.",
+   "why": "Tracking foreign institutional flows helps beginner investors understand institutional sentiment and its impact on domestic shares.",
    "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkNncVkwQU9JeFhSRFFWQ1FhcW5SUk5hY1hQMkpocmdCRlZ5b04zOGJnZ184T1lONDh1cUQwZFY3RVJxUmJzZDhpUWZ0RlhsUGluV3hoVG1TV2JWNEZtUS12R1Z0VURRQmt3SjkyUU44UkZTcmF1RnFaTm9POE9LYW5TWjY3el9jNzQwV1lOVkhaOGFDTE9Wc1NrM0RYTzJ5UFM4eF92UWV3LW03SHJ1U1I5cHF4eDNFS1liNw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUDFseEc5cVpDQ2FOSndESDFUc3N6VnVMY0c0bS14N2taUmU3cU9CY09HeEVvX014STdGY1pwY05aWXVTemoycUFEbzFLeFdVa2JIZ1Nwc1BUZGxkSXEyeXJvVW5VdFBtM0E3MXVpWll5R3pKU3FMajQzODBYZjhuM1V5cDdOQmlwRmxwWUhkZ2R5a0RKM2YtaU91UkVMYUJsYVJmQVBOU1lra2R6YkZ0bXdn?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Copper Prices Slip as Labor Accord Reached at Top Mine",
+   "summary": "Red metal prices dropped after workers and management reached an agreement at BHP's Escondida deposit in Chile, averting a potential work stoppage. The settlement alleviated immediate supply bottleneck worries in industrial metals.",
+   "why": "Supply disruptions at major extraction sites quickly alter global raw material availability and influence metal pricing.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/copper-edges-lower-after-world-s-biggest-mine-averts-strike-11792019456152.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Strengthening Domestic Currency Puts Downward Pressure on Bullion Rates",
+   "summary": "Indian gold rates retreated as recent appreciation in the local currency reduced the landed cost of precious metals. The firmer domestic exchange rate directly softened local bullion prices.",
+   "why": "Because precious metals are priced internationally in greenbacks, domestic currency movements strongly sway local prices.",
+   "source": "Rediff MoneyWiz",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeEhCMmJCNi1lTmRZNjE1eDBIaEJtcENNTmZhazBRRGFaS3F0RXRBb19sZWNkUU5ETHBVdkxYOUVMZmQydkMxQk1wT3k1TVotZThlUDVVNGRkV2JLdS1HOEJyQm9iOEtydk9XVUg3RFFlNUpycDRxeVlPUEhRSFpDSXJaY0dfdUtQVWVBWlp2QTN0LUFzTzJIRlB4YkJRdUhpZFlDR3VHN1Rtd1nSAasBQVVfeXFMTXhIQjJiQjYtZU5kWTYxNXgwSGhCbXBDTU5mYWswUURhWktxdEV0QW9fbGVjZFFORExwVXZMWDlFTGZkMnZDMUJNcE95NU1aLWU4ZVA1VTRkZFdiS3UtRzhCckJvYjhLcnZPV1VIN0RRZTVKcnA0cXlZT1BIUUhaQ0lyWmNHX3VLUFVlQVpadkEzdC1Bc08ySEZQeGJCUXVIaWRZQ0d1RzdUbXdZ?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Finishes at 95.15 on Central Bank Dollar Interventions",
+   "summary": "The domestic currency ended at 95.15 against the American dollar, continuing its multi-day advance. Regulatory curbs on foreign currency demand supported the exchange rate.",
+   "why": "Central bank interventions manage currency volatility to prevent excessive imported inflation and trade imbalances.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYkp6bkstZWcxRGtNcG9uYy1WWWpHY0p1cmxYeEFCQXZWRktGZ2taSFV1M0xZNU8zdXR2clF1eW90ZWJ3aGp2U09HbDl6THRzdW56Z1cxU0lFdWQtcmlsNEpjaHhUUzJaRm4weWZWaERfSWNrRzhCakdHczVEd1lOU0h2VVJvdGlKUXJWLW5FTWRCY1VZZTBOWkVtS2lweHhiM2p2eGxyTEJsbzVXTGNKQ1NCeVpjUmRGcVFseTBsSmdvcFk1clZpWS0zSkIwNTTSAdQBQVVfeXFMTmpvRlRrZ1QxNlRBOElKNldnanlSX1drVDQ0TXB3MHE0cG40cnhSZTdOQ2laUl9IbnBaNWtMYnU1UzJzZGZWa0pCYUF6Sm9vbDY4MFczZ2ZJSlltN2txWERhQVVaWkxZWlQyai1JcV9ZWlktaEVRS1JzeEdkN2VEaFVSdi1xdWhJSDMtU21MMGZsWWU5Nk1BVGxKN3kwSDNka0w2cmNaeHJRX2pYd0d5N3lxcTFHRGc2U1YzZHU2bGNVY3U2WkNtNzRkQmQ3d0N2NGNYaXI?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Announces Reverse Repo Operation to Absorb System Liquidity",
+   "summary": "The Reserve Bank of India announced an overnight variable rate reverse repo auction to manage banking system funds. The operation reflects ongoing monitoring of short-term cash balances in the financial sector.",
+   "why": "Reverse repo auctions are primary tools used by central banks to drain surplus cash from commercial lenders.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63805"
   },
   {
    "category": "US Markets",
-   "title": "Federal Reserve Official Indicates Potential Need for Additional Monetary Tightening",
-   "summary": "Policymaker John Williams stated that another benchmark interest rate hike by the United States central bank could prove necessary.",
-   "why": "Changes in American borrowing rates affect currency valuations and foreign institutional investments in emerging economies.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSW1RS05MdnMwMjY4RW1VR0dhSkw0dUpSdkp6NFBFcllqMTdmcVpqZkZhbEx3ZWZSMnR3UVYzbTZVUEZkUVFOUWxMWFpzZDZ0SkxZOTBnYVVJNWFMTGZkd3IxaFBobG1JV2tmSm8yQTVqNm5rSDhwMEpPbVBQejFWM0VzR2ZOMmJ6YU5RR0RyeHF4LUZBb3ZfQkJpczVKd01yRFBpcXV1UWh3ZC11ajM4VjdjdHZxaFlfMFpTRmxEOTV0RWNG?oc=5"
+   "title": "Nasdaq Tumbles as Strong Inflation Sparks Interest Rate Anxieties",
+   "summary": "Technology-heavy American equities suffered sharp declines following higher-than-expected inflation metrics. The elevated readings prompted investor concern over tighter Federal Reserve monetary policy.",
+   "why": "Growth companies and technology stocks are particularly sensitive to elevated borrowing costs because higher interest rates lower the discounted value of future profits.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMDkzb0Zhb0ExSzhlSnR6c25HbzdpY2g1djVFZ1R4eVktaWtCZ2gya1lEdHpzcHlEM1VITE1Pdlc1MmlDclhQQmxOWC13NXdXZjhPOEYtUnc3bm80eThIZ0lEam8tN0hXV3kxNnhob3g5OHFxNHd5VzJsTks4SzlJR0JRVE5LZ2JMbXhYNFhvOC1yTUJ5bWFEN0JWTFdpaFkxN2c?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Federal Reserve Official Bowman Expresses Patience on Future Borrowing Costs",
+   "summary": "Fed Governor Michelle Bowman stated that there is no pressing requirement to lift benchmark interest rates immediately. Her perspective provides insight into deliberations within the American central bank's policy committee.",
+   "why": "Statements by monetary policymakers give investors critical clues regarding the future trajectory of global borrowing costs.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQU09CQmZrcVFTWkNJR0luVWVQRzMyRDR1SVdxUEFvTGZyNkVIcDVDa19fYUJ6WF9iRFYweWhvdVlJM3ZYR3lSaExzbktjeV9HdER6NjZ3V19iT0QyOHA4V3psYVJHVTdOR2RqdkQ1akNWNmxxVzdiTjZzLTdOOGRScWhXOXBzMW9ldjBoZWxOT2UxUXVTZGhEWkZ6RlZ6UHZJaF9XamtRRFhJT0Q2U01WYVdReUdoeE9EUmtUYXVBYzNadU81UjZfNTFENlo5RV92cHBnSlR3ODYxckJjMnY4bl8xa2FMZ9IB3wFBVV95cUxQUUo4WlVhOV9ZR3MxMHk0eTMwQkVVc1BlNncyZHFLRFVSelM1WjEtSUw3azZiMTVTTmtrVk8zLVVfNUlZcElBQzd6ZmVLLVNJSGJMSzdKRjQ5TElNeVRDUVI1aVZWZmUxd1d6MnFvQk1QdGRfQXN4RjdzOENxUGtsMWhucFdzVTc5cVlmWktsYVdKLXRiMFYxSDVSVVJDNkJMTGs5MTIxX1UyZ2c2OUt1T052V3liRjdSOS1Ray1sUVVFcEVMWEVEaUJOUHZDeFl4dTRaeUJCX0c3VVZlRk9N?oc=5"
   }
  ]
 }
