@@ -89,11 +89,11 @@
 @keyframes nbin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .nbn{margin:.8rem 0 0;font-size:1.15rem;color:var(--mute)}
 .nbb{margin:.7rem 0 .2rem}
-a.tryb{display:inline-flex;align-items:center;gap:.5rem;background:var(--paper);color:var(--ink);border:2px solid var(--up);border-radius:10px;padding:.35rem 1.1rem;font-family:inherit;font-size:1.3rem;font-weight:700;line-height:1.3;text-decoration:none;box-shadow:3px 3px 0 color-mix(in srgb,var(--up) 45%,transparent);transition:transform .15s,box-shadow .15s}
-a.tryb::after{content:"\2192";color:var(--up);transition:transform .15s}
-@media(hover:hover){a.tryb:hover{transform:translate(-1px,-2px);box-shadow:5px 5px 0 color-mix(in srgb,var(--up) 60%,transparent)}a.tryb:hover::after{transform:translateX(4px)}}
-a.tryb:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--up)}
-a.tryb:focus-visible,.nbt button:focus-visible{outline:3px solid var(--up);outline-offset:3px}
+.tryb{display:inline-flex;align-items:center;gap:.5rem;background:var(--paper);color:var(--ink);border:2px solid var(--up);border-radius:10px;padding:.35rem 1.1rem;font-family:inherit;font-size:1.3rem;font-weight:700;line-height:1.3;text-decoration:none;box-shadow:3px 3px 0 color-mix(in srgb,var(--up) 45%,transparent);transition:transform .15s,box-shadow .15s}
+.tryb::after{content:"\2192";color:var(--up);transition:transform .15s}
+@media(hover:hover){.tryb:hover{transform:translate(-1px,-2px);box-shadow:5px 5px 0 color-mix(in srgb,var(--up) 60%,transparent)}.tryb:hover::after{transform:translateX(4px)}}
+.tryb:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--up)}
+.tryb:focus-visible,.nbt button:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 .mkd{display:block;width:100%;max-width:460px;height:auto;margin:.3rem 0 .4rem;color:var(--ink);background:color-mix(in srgb,var(--paper) 70%,transparent);border:2px solid var(--ink);border-radius:8px}
 .mkd .mkz{fill:color-mix(in srgb,var(--up) 22%,transparent);stroke:var(--up);stroke-width:2}
 .mkd .mkb{fill:color-mix(in srgb,var(--up) 18%,transparent);stroke:var(--ink);stroke-width:2.5}
@@ -107,5 +107,18 @@ a.tryb:focus-visible,.nbt button:focus-visible{outline:3px solid var(--up);outli
 @keyframes mkdraw{0%{stroke-dashoffset:1}60%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
 @media(prefers-reduced-motion:reduce){.mkd .mkp,.nbs{animation:none}}
 [data-theme=dark] .nbk{box-shadow:0 0 18px color-mix(in srgb,var(--up) 14%,transparent)}
-[data-theme=dark] a.tryb{box-shadow:0 0 14px color-mix(in srgb,var(--up) 35%,transparent)}
+[data-theme=dark] .tryb{box-shadow:0 0 14px color-mix(in srgb,var(--up) 35%,transparent)}
 @media(max-width:600px){.nbk{padding:.9rem .8rem 1.1rem 2.4rem;font-size:1.3rem}.nbk::before{left:1.7rem}.nbk::after{left:.4rem}.nbk .nbh{font-size:2rem}}
+
+/* Zone Practice game */
+.zg .nbh{margin-bottom:.2rem}
+.zgc{margin:.5rem 0;border:2px solid var(--ink);border-radius:8px;background:var(--paper);overflow:hidden;line-height:0}
+.zgc canvas{display:block;cursor:crosshair}
+.zgb{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+button.tryb{cursor:pointer;font-family:inherit;margin:0}
+.tryb.plain::after{content:none}
+.tryb[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none;transform:none}
+.zgr{margin:.8rem 0 .2rem;padding:.6rem 1rem 1rem;border:2px solid var(--up);border-radius:12px;background:color-mix(in srgb,var(--up) 8%,var(--paper))}
+.zgr h3{margin:.2rem 0}.zgs{color:var(--up);letter-spacing:.1em;margin-left:.3rem}
+.zgn{margin:.2rem 0}.zgl{list-style:none;padding:0!important;margin:.4rem 0 .8rem!important}.zgl li{margin:.15rem 0}
+.zgl li.ok{color:var(--up)}.zgl li.no{color:var(--ink)}
