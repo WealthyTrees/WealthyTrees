@@ -119,3 +119,17 @@ footer .wrap{font-weight:700;color:var(--ink)}
 [data-theme=dark] .cstats span,[data-theme=dark] .oprog{box-shadow:0 0 12px color-mix(in srgb,var(--up) 22%,transparent)}
 [data-theme=dark] main.page>h1{text-shadow:0 0 24px rgba(62,207,142,.5)}
 @media(prefers-reduced-motion:reduce){[data-theme=dark] .course-grid .ccard{animation:none}}
+
+/* Try it live (Learn modules to Markets) */
+.try{margin:1.6rem 0;padding:.9rem 1.2rem 1.1rem;border:2px dashed color-mix(in srgb,var(--up) 55%,var(--line));border-radius:14px;background:color-mix(in srgb,var(--up) 4%,var(--paper))}
+.try h2{margin-top:.1rem}
+.try p{margin:.3rem 0}
+a.tryb{display:inline-flex;align-items:center;gap:.5rem;background:var(--paper);color:var(--ink);border:2px solid var(--up);border-radius:10px;padding:.5rem 1.2rem;font-family:Caveat,"Segoe Print","Comic Sans MS",cursive;font-size:1.45rem;font-weight:700;line-height:1.2;text-decoration:none;box-shadow:3px 3px 0 color-mix(in srgb,var(--up) 45%,transparent);transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent}
+a.tryb::after{content:"\2192";color:var(--up);transition:transform .15s}
+@media(hover:hover){a.tryb:hover{transform:translate(-1px,-2px);box-shadow:5px 5px 0 color-mix(in srgb,var(--up) 60%,transparent)}a.tryb:hover::after{transform:translateX(4px)}}
+a.tryb:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--up)}
+a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
+[data-theme=dark] a.tryb{box-shadow:0 0 14px color-mix(in srgb,var(--up) 35%,transparent)}
+@media(hover:hover){[data-theme=dark] a.tryb:hover{box-shadow:0 0 22px color-mix(in srgb,var(--up) 60%,transparent)}}
+[data-theme=dark] a.tryb:active{box-shadow:0 0 8px var(--up)}
+@media(prefers-reduced-motion:reduce){a.tryb,a.tryb::after{transition:none}}
