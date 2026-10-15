@@ -55,13 +55,13 @@ function bb(a,n,m){var u=[],l=[];for(var i=n-1;i<a.length;i++){var s=0,q=0,j;for
 function rsi(a,n){var o=[],g=0,l=0;for(var i=1;i<a.length;i++){var d=a[i].close-a[i-1].close,up=d>0?d:0,dn=d<0?-d:0;if(i<=n){g+=up;l+=dn;if(i===n){g/=n;l/=n;o.push({time:a[i].time,value:l===0?100:100-100/(1+g/l)})}}else{g=(g*(n-1)+up)/n;l=(l*(n-1)+dn)/n;o.push({time:a[i].time,value:l===0?100:100-100/(1+g/l)})}}return o}
 function base(el,h){return{width:Math.max(200,el.clientWidth),height:h,layout:{background:{color:"transparent"},textColor:css("--mute")},grid:{vertLines:{color:css("--line")},horzLines:{color:css("--line")}},rightPriceScale:{borderColor:css("--line")},timeScale:{borderColor:css("--line")}}}
 /* numbers for a key: last price and change % (uses live quote when present) */
-function stat(k){var d=data&&data[k];if(!d||d.length<2)return null;var n=d.length,l=d[n-1],p=d[n-2],price=l.close,pc=p.close,q=liveQ[k];
+function stat(k){var d=data&&data[k];if(!d||d.length<2){var z=liveQ[k];return z&&z.price&&z.prev?{price:z.price,chg:(z.price-z.prev)/z.prev*100}:null}var n=d.length,l=d[n-1],p=d[n-2],price=l.close,pc=p.close,q=liveQ[k];
  if(q&&q.price){price=q.price;if(q.day>l.time)pc=l.close}
  return{price:price,chg:(price-pc)/pc*100}}
 /* ---------- tabs and tiles ---------- */
 function drawTabs(){var h="";Object.keys(GROUPS).forEach(function(g){h+='<button class="mk-tab" role="tab" data-g="'+g+'" aria-selected="'+(g===group)+'">'+(g==="India"?'<i class="fl fl-in"></i>':g==="US"?'<i class="fl fl-us"></i>':g==="Commodities"?"\uD83D\uDEE2\uFE0F ":"\uD83D\uDCB1 ")+g+'</button>'});$("tabs").innerHTML=h}
 function drawTiles(){var h="";GROUPS[group].forEach(function(sec){var t="";sec[1].forEach(function(k){
-  if(data&&Object.keys(data).length&&!data[k])return;var s=stat(k),cls=s?(s.chg>=0?"u":"d"):"",a=s?Math.min(32,10+Math.abs(s.chg)*9):10;
+  if(data&&Object.keys(data).length&&!data[k]&&!liveQ[k])return;var s=stat(k),cls=s?(s.chg>=0?"u":"d"):"",a=s?Math.min(32,10+Math.abs(s.chg)*9):10;
   t+='<button class="mk-tile '+cls+'" data-k="'+esc(k)+'" aria-pressed="'+(k===key)+'" style="--a:'+a.toFixed(0)+'%"><b>'+esc(k)+'</b><span class="p">'+(s?f(s.price):"&mdash;")+'</span><span class="c">'+(s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"%":"")+'</span></button>'});
  if(t)h+='<div class="mk-sec">'+sec[0]+'</div><div class="mk-tiles">'+t+'</div>'});$("tiles").innerHTML=h}
 function drawHead(){var a=A[key]||["","",""],s=stat(key);
@@ -73,7 +73,7 @@ function build(){
  if(main){main.remove();main=null}if(rsiC){rsiC.remove();rsiC=null}mainSeries=null;
  var lg=$("legend"),bx=$("chartbox"),rb=$("rsibox");bx.innerHTML="";rb.innerHTML="";rb.hidden=!on.RSI;drawHead();redraw();
  if(!data){lg.textContent="Chart data appears after the next update.";rb.hidden=true;return}
- if(!data[key]){rb.hidden=true;if(!tried[key]){tried[key]=1;lg.textContent="Loading "+key+" chart…";fetch("/api/history?n="+encodeURIComponent(key)).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(rows){if(rows&&rows.length)data[key]=clean(rows,key);drawTiles();build()}).catch(function(){build()})}else lg.textContent="The "+key+" chart is added by the daily data update. Please check again after the next update.";return}
+ if(!data[key]){rb.hidden=true;if(!tried[key]){tried[key]=1;lg.textContent="Loading "+key+" chart…";fetch("/api/history?n="+encodeURIComponent(key)).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(rows){if(rows&&rows.length>=30)data[key]=clean(rows,key);drawTiles();build()}).catch(function(){build()})}else lg.textContent="The "+key+" chart is added by the daily data update. Please check again after the next update.";return}
  if(!window.LightweightCharts){lg.textContent="The chart library did not load. Please refresh the page.";rb.hidden=true;return}
  var d=data[key],n=d.length,hasVol=d.some(function(x){return x.volume>0});
  main=LightweightCharts.createChart(bx,base(bx,bx.clientHeight));
@@ -148,7 +148,7 @@ window.addEventListener("resize",function(){if(main)main.applyOptions({width:Mat
 document.querySelectorAll("#inds input").forEach(function(i){i.checked=!!on[i.value]});
 /* ---------- live prices ---------- */
 function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){return r.json()}).then(function(j){var Q=j.quotes||{};
- Object.keys(LIVE).forEach(function(k){var q=Q[LIVE[k]];if(!q||!q.price)return;liveQ[k]={price:q.price,day:new Date((q.time+(q.off||0))*1000).toISOString().slice(0,10)}});
+ Object.keys(LIVE).forEach(function(k){var q=Q[LIVE[k]];if(!q||!q.price)return;liveQ[k]={price:q.price,prev:q.prev,day:new Date((q.time+(q.off||0))*1000).toISOString().slice(0,10)}});
  var q=Q[LIVE[key]];if(q&&q.price&&mainSeries&&lastBar){var day=liveQ[key].day;
   if(day===lastBar.time){lastBar.close=q.price;lastBar.high=Math.max(lastBar.high,q.high||q.price);lastBar.low=Math.min(lastBar.low,q.low||q.price);mainSeries.update(type==="Candles"?{time:lastBar.time,open:lastBar.open,high:lastBar.high,low:lastBar.low,close:lastBar.close}:{time:lastBar.time,value:lastBar.close})}}
  drawTiles();drawHead()}).catch(function(){})}
