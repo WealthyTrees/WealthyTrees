@@ -13,7 +13,7 @@
   window.WTP = prog;
   var lb = document.getElementById("lvbar");
   if (lb) { var t = 0; for (var i = 1; i <= 6; i++) t += prog(i).pct;
-    var bp = Math.round(t / 6), ap = Math.round((t + prog("i1").pct) / 18);
+    var bp = Math.round(t / 6), ap = Math.round((t + prog("i1").pct + prog("i2").pct) / 18);
     lb.style.width = bp + "%"; document.getElementById("lvpct").textContent = bp + "%";
     document.getElementById("obar").style.width = ap + "%"; document.getElementById("opct").textContent = ap + "%"; }
   // 1) Module pages: remember how far down the reader got (saved only in their own browser)
