@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,207",
-   "change": 0.88
+   "value": "4,179",
+   "change": 0.2
   },
   {
    "name": "CRUDE WTI",
-   "value": "$95.5",
-   "change": -1.04
+   "value": "$99.2",
+   "change": 2.81
   },
   {
    "name": "USD/INR",
@@ -28,18 +28,18 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,720",
-   "change": -0.31
+   "value": "7,649",
+   "change": -1.23
   },
   {
    "name": "NASDAQ",
-   "value": "26,416",
-   "change": -1.11
+   "value": "26,118",
+   "change": -2.23
   },
   {
    "name": "DOW",
-   "value": "52,352",
-   "change": 0.33
+   "value": "51,902",
+   "change": -0.53
   }
  ],
  "items": [
