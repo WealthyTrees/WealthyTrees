@@ -13,7 +13,7 @@
   window.WTP = prog;
   var lb = document.getElementById("lvbar");
   if (lb) { var t = 0; for (var i = 1; i <= 6; i++) t += prog(i).pct;
-    var bp = Math.round(t / 6), ap = Math.round(t / 18);
+    var bp = Math.round(t / 6), ap = Math.round((t + prog("i1").pct) / 18);
     lb.style.width = bp + "%"; document.getElementById("lvpct").textContent = bp + "%";
     document.getElementById("obar").style.width = ap + "%"; document.getElementById("opct").textContent = ap + "%"; }
   // 1) Module pages: remember how far down the reader got (saved only in their own browser)
@@ -33,18 +33,19 @@
   if (cards.length) {
     var next = 0, anyDone = false, sum = 0;
     cards.forEach(function (c) {
-      var n = +c.dataset.mod, P = prog(n), p = P.pct; sum += p;
+      var n = c.dataset.mod, P = prog(n), p = P.pct; sum += p;
       c.style.setProperty("--p", p + "%");
       c.querySelector(".cst").textContent = P.done ? "Done \u2713" : p > 0 ? p + "% done" : "Not started";
       c.querySelector(".cgo").textContent = P.done ? "Review \u2192" : p > 0 ? "Continue \u2192" : "Start lesson \u2192";
-      if (P.done) anyDone = true; else if (!next) next = n;
+      if (P.done) anyDone = true; else if (!next) next = c;
     });
     var op = Math.round(sum / document.querySelectorAll(".ccard").length), ot = document.getElementById("opct"), ob = document.getElementById("obar");
     if (ot) { ot.textContent = op + "%"; ob.style.width = op + "%"; }
     var b = document.getElementById("cont");
     if (b) {
-      if (!next) { b.textContent = "Review Module 1"; b.href = "/learn/beginner/module-1.html"; }
-      else { b.href = "/learn/beginner/module-" + next + ".html"; b.textContent = prog(next).pct > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
+      var num = function (c) { return c.dataset.mod.replace(/\D/g, ""); };
+      if (!next) { b.textContent = "Review Module 1"; b.href = cards[0].getAttribute("href"); }
+      else { b.href = next.getAttribute("href"); b.textContent = prog(next.dataset.mod).pct > 0 ? "Continue Module " + num(next) : anyDone ? "Next: Module " + num(next) : "Start here"; }
     }
   }
   // 3) Diagrams draw themselves when scrolled into view; thumbnails replay on hover or tap

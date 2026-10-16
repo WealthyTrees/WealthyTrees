@@ -161,3 +161,6 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 [data-theme=dark] .fbtn.alt{background:var(--paper);color:var(--ink);border-color:var(--up)}
 .ccard .can{font-size:.88rem;margin:.5rem 0 0}.ccard .can b{color:var(--up)}
 .ccard.soon .cchip{left:auto;right:.8rem;bottom:auto;top:.55rem}
+.lvrow{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.article a.fbtn{color:var(--paper);text-decoration:none}.article a.fbtn.alt{color:var(--btn-fg)}
+[data-theme=dark] .article a.fbtn.alt{color:var(--ink)}
