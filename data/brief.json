@@ -1,30 +1,30 @@
 {
- "date": "Thursday, 15 October 2026",
+ "date": "Friday, 16 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,997",
-   "change": 1.21
+   "value": "23,146",
+   "change": 2.31
   },
   {
    "name": "SENSEX",
-   "value": "74,316",
-   "change": 1.76
+   "value": "74,729",
+   "change": 2.68
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,171",
-   "change": 0.02
+   "value": "4,195",
+   "change": 0.61
   },
   {
    "name": "CRUDE WTI",
-   "value": "$96.2",
-   "change": -0.32
+   "value": "$95.9",
+   "change": -0.58
   },
   {
    "name": "USD/INR",
-   "value": "95.05",
-   "change": 0.0
+   "value": "94.96",
+   "change": -0.09
   },
   {
    "name": "S&P 500",
@@ -44,76 +44,76 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Technology and Financial Shares Propel Domestic Equity Indices Upward",
-   "summary": "Indian shares advanced substantially on gains in software and banking enterprises. However, persistent American consumer price pressures restrained additional market progress.",
-   "why": "Sector movements in major banking and technology firms heavily dictate the overall direction of domestic market indices.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWDJqYmxJdGtiS3VzMHY0aFVac2x4X3k3cnlsSjFaQ1RvX1hvblpYU3RBYi12Vk8yYm1LMDVBOFR4SmtiQkVvVTBYYVNzdlJ0bFFacjVLS3VtcDlFVmc4czJhZk5BLTRjVldKcE5OWXZjSHRJb2lyVUVxR3J6aGdMUUoxbWlMazdENDc1bjJqenhqeXo4V040THNNMGNPdmYyamdlcVBWUEc1cS1OOW80SjZrcw?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Global and Local Institutions Seek Allocations in Jio Anchor Offering",
-   "summary": "Overseas asset managers and sovereign wealth funds have placed bids for the anchor allocation in Jio's upcoming listing. Around fifteen Indian mutual fund houses are likewise competing for a portion of the institutional allotment.",
-   "why": "Anchor allocations reveal institutional demand and provide novice investors with insight into institutional backing prior to an initial share sale.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/blackrock-adia-norges-seek-anchor-slots-in-jio-s-3-2-bn-ipo-11792059501690.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Yes Bank Equity Drops Substantially Following Apex Court Decision",
-   "summary": "Lender shares dropped by one-tenth after the top court invalidated an earlier debt cancellation involving high-risk bonds. The judicial decision addressed tier-one securities worth several thousand crore rupees.",
-   "why": "Court verdicts impacting bank liabilities directly influence balance sheet health and can cause sudden shifts in common equity pricing.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/sharp-and-immediate-fall-yes-bank-share-price-crash-10-after-sc-ruling-on-rs-8-415-crore-at-1-bond-writeoff-11792055327036.html"
-  },
-  {
    "category": "Economy",
-   "title": "Indian Currency Strengthens for Fourth Session as Petroleum and Greenback Soften",
-   "summary": "The domestic rupee gained ground against the United States dollar, marking a four-day sequence of positive closes. The rise was supported by a combination of retreating petroleum costs and firmer equity performance.",
-   "why": "Exchange rates impact the broader economy because a stronger domestic currency lowers import bills for vital commodities like crude petroleum.",
+   "title": "Domestic Currency Records Strongest Weekly Advance in Several Months",
+   "summary": "The Indian currency appreciated by two percent over the past week following regulatory interventions aimed at curbing downward volatility. Market observers note that enduring stability will depend on broader economic conditions.",
+   "why": "Exchange rate shifts directly affect the cost of national imports and foreign investment flows.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-extends-winning-streak-as-dollar-oil-ease-and-stocks-rally/articleshow/134965552.cms"
+   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-posts-best-week-in-seven-months-fundamentals-key-for-lasting-turnaround/articleshow/134991672.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Benchmark Indices Finish Higher Supported by Information Technology Sector",
+   "summary": "Major Indian equity gauges advanced during Friday trade, with the Nifty breaching the 23,100 threshold. Technology companies served as the primary driver behind the broader market upswing.",
+   "why": "Index levels reflect overall market sentiment and serve as performance benchmarks for equity investors.",
+   "source": "APAC Media",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOGdqRkVQd1I1bmlUSGJqM2tpeC1CT1N5a3ptNll5RnJ1OEJuUy1oUlozVk1jbHFndUNsczhfWWpQenloWmhBTVRnZzF0SjNDbnBjQ1JvZTJvenA0ZzdZUEs0X2tzQTVUX2FONHdrbW5ObWJOWTRoVWRlX2VKQXVFSFhmSHozaXc?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Tech Mahindra Shares Advance Following Payout and Bonus Equity Announcement",
+   "summary": "Shares of the information technology firm climbed up to eight percent during daily trading. The rally occurred after corporate declarations regarding investor dividends and additional share issuances.",
+   "why": "Corporate actions like dividends and bonus issues distribute profits and expand an investor's share count without extra cost.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/tech-mahindra-dividend-bonus-share-2026-double-delight-for-investors-this-diwali-should-you-buy-ahead-of-record-date-11792139485359.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Silver Leads Annual Precious Metal Returns Ahead of Gold and Platinum",
+   "summary": "Over a twelve-month span, domestic silver values climbed roughly forty-seven percent. This outpaced gains recorded by gold and platinum, which rose twenty-six percent and ten and a half percent respectively.",
+   "why": "Comparing asset returns helps investors understand how industrial usage and inflation hedging influence metal prices differently.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/commodities/gold-vs-silver-vs-platinum-which-metal-saw-biggest-rally-since-last-dussehra-experts-explain-outlook-11792142307625.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "September Precious Metal Inflows Contract Steeply",
+   "summary": "India witnessed an eighty-one percent drop in inbound gold deliveries during September. Incoming shipments of silver also contracted by nearly half over the same period.",
+   "why": "Import volumes provide insight into consumer appetite, domestic jewelry manufacturing activity, and the national trade balance.",
+   "source": "India Today",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWWZ0ZE9va2JWQlRKU0hIVmNyZ2F6a0VGUFU2RTVoSHE0MkFMSHB1YnZyUWdwaVNEaW1ZR1ctQkdNQnBVQ2xHZU5ITXdqbE0yYU1xN0JmQThTclA2MG5qZnpaOUVZc0RpOUREVm9HcEF0YjBaYVFPaGJXS2UtWDRsTEt6bmlPN0JVaVZWSFJicFkwM0F2SEQ4LVpyXzIzLTBia0hnNTV4T0g5RTN0RmhWdGxmbXpla2FER18wc2hha0NMd9IBwgFBVV95cUxNWWZ0ZE9va2JWQlRKU0hIVmNyZ2F6a0VGUFU2RTVoSHE0MkFMSHB1YnZyUWdwaVNEaW1ZR1ctQkdNQnBVQ2xHZU5ITXdqbE0yYU1xN0JmQThTclA2MG5qZnpaOUVZc0RpOUREVm9HcEF0YjBaYVFPaGJXS2UtWDRsTEt6bmlPN0JVaVZWSFJicFkwM0F2SEQ4LVpyXzIzLTBia0hnNTV4T0g5RTN0RmhWdGxmbXpla2FER18wc2hha0NMdw?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Regulator Examines Digital Payment Levies Following Stockbroker Feedback",
-   "summary": "Market authorities conferred on proposed merchant discount charges applied to retail electronic transactions exceeding specified thresholds. Under the proposal, transfers above two thousand rupees incur percentage fees with fixed maximum caps on larger sums.",
-   "why": "Transaction fee adjustments can alter operational expenses for discount brokerages and affect retail account funding practices.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/sebi-discusses-new-upi-merchant-charges-with-npci-as-brokers-flag-cost-concerns-11792054937378.html"
+   "title": "Currency Support Actions Constrain Banking Cash Balances and Elevate Yields",
+   "summary": "The central bank's efforts to shield the domestic currency have absorbed cash from the financial system. Consequently, available market liquidity has decreased while bond interest rates have climbed.",
+   "why": "When central banks sell foreign reserves to support a currency, domestic money supply shrinks, raising borrowing costs across the economy.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZVMxeW1tQXVxdkxySTZBaVEzVHJHc1BwV1M5QWI4dmRvSGdnZl9NOGNjWEx0WWEwclpvMEQ5RTQxMzJUenRBRTZQSng4ZmQ3c1hrdEs1ZURMQmhZaGdBN0JnRkRSdDZ6M0JmUUlPZjBlT244NV9Pc2VoMXlPZVlORUhGM1E5Um1HT1VZbUJFRXA0RVdXSWgxZTVENFFNZFJuWllNUDFIdDNBMF9QcDZuQXBLeTFNR1I4blVQbklvTHUzOHdrc21uNWlTZXF0bi1WM1HSAdcBQVVfeXFMTkE5MS1CeGl3MVZOaWpKeXBUb3czdHREQVBtUm9PU1JlNUdQX0hSdjYxVExLSTQzTVlia0V4YXZGQmpnU25pUEhxQjY5ZEhEcjJQcmQ3Z00zZkRCaEpBOW5mMGFKY2tYTmNzXzdUOVEweVJLQ0psa245MV9LM2N6RVJqdlhVU1ZsMloxVGRjcC1rSFZVX2pIVmVaYWY1MTY3aHI2bjZuUTlEbnRkVXotaUd3akNtbnpIWXhQVFAxODdXN1RGMkZUQWc2OGkyY040TmNjMmVkZ2M?oc=5"
   },
   {
-   "category": "Commodity",
-   "title": "Central Bank Establishes Early Exit Value for Sovereign Gold Notes",
-   "summary": "The monetary authority published premature exit terms for a specific government gold bond tranche originating in 2019. Bondholders can liquidate their holdings before the standard maturity based on current official guidelines.",
-   "why": "Sovereign gold bonds offer investors gold price exposure along with periodic interest, alongside designated early liquidity windows.",
+   "category": "Economy",
+   "title": "Regional Administrations Plan Debt Issuance of Twenty-Four Thousand Crore",
+   "summary": "Several state governments intend to raise funds by auctioning sovereign securities. The combined borrowing program amounts to an aggregate face value of 24,400 crore rupees.",
+   "why": "State government bonds represent sovereign borrowing instruments used to finance public infrastructure and regional expenditure.",
    "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63807"
-  },
-  {
-   "category": "Commodity",
-   "title": "Precious Metals Register Notable Pullback Over Five Consecutive Trading Days",
-   "summary": "Domestic prices for gold and silver recorded steep multi-day declines across Indian centers. Yellow metal quotes dropped substantially per ten-gram unit while silver posted sharper contractions per kilogram.",
-   "why": "Precious metals operate as traditional portfolio hedges, with their market values reacting to macroeconomic sentiment and liquidity shifts.",
-   "source": "Bhaskar English",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRlJBc1VIaDlnU05uc0swMVdYdWpGV3NEU281Z0U2RVRLV2huS09PZFJFX2FsZGNYLU9HYXBWVTNyWk1kMzFTLWZOS1ZtWlBvSHlqOENxc2xKM09yVTJNMzhTajljd2ljbEJRVFJuQVpHcUZYZm1wTEIzSlVaU3JLLTN1YWZKSGpVOENicHlBNkZNWnE0dmc0RTM0T092cXlkSlpFaWJrVHp3S0dOYTI2ZHlmSjVwQdIBuwFBVV95cUxPdFQyMmZhUzVaOHFMdVZLTUwxU2Fnd1VtZ25rT1JNNVdZQXo4SGI1ZTRvdEpDVmRqdFVDYnB2a0N5UFhZQXNyU3E0RUhDY0JMVG50dXVyRGNqOEhDeHVJcTBQRjctNHhocUVpWXhFU1loOVd5U0xKNzRDSXRCeE5PYldPbVNoaTBDWXV5dVp6Sy1NQWlfX25vUVZHU2pYN3VlcmUwVmhpQ3FvYWx5ZmI2anJ6OEtVQTZJUHZv?oc=5"
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63814"
   },
   {
    "category": "US Markets",
-   "title": "Tech Stocks Lead Wall Street Decline After Resilient American Inflation",
-   "summary": "The technology-dominated Nasdaq index registered a steep contraction following stronger-than-expected price pressure data. The numbers heightened apprehension among market participants concerning potential future policy rate increases.",
-   "why": "Valuations of fast-growing technology companies are particularly sensitive to rate expectations, as higher yields reduce the discounted value of future cash flows.",
+   "title": "Broad American Equities Rise Amid Sector Rotation Toward Healthcare",
+   "summary": "The benchmark S&P 500 settled with gains as market participants reallocated capital into healthcare companies. This move coincided with a shift away from artificial intelligence holdings.",
+   "why": "Sector rotation illustrates how institutional capital migrates between high-growth technology and defensive industries as market conditions evolve.",
    "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMDkzb0Zhb0ExSzhlSnR6c25HbzdpY2g1djVFZ1R4eVktaWtCZ2gya1lEdHpzcHlEM1VITE1Pdlc1MmlDclhQQmxOWC13NXdXZjhPOEYtUnc3bm80eThIZ0lEam8tN0hXV3kxNnhob3g5OHFxNHd5VzJsTks4SzlJR0JRVE5LZ2JMbXhYNFhvOC1yTUJ5bWFEN0JWTFdpaFkxN2c?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZTRob0s4X3hCYkZQZzFfeUxuU1ZlN0tPT2hvelcwcW9QdU9yeVN1ZUZfR253ZUNoN3NjUlRHbG9aS0wzMmVGLUpNOVcyTUlHOWo3WERDX1psTXlmWGthb0JPN19GMGxnT2pkYkRWQ0R1THEyODhoWnZTd1NIQjdZbm5fLXNYb0M2c1g2YU02TENSSi1xSFZMQzRuUTc?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "United States Annual Inflation Accelerates to 3.7 Percent",
-   "summary": "American consumer price inflation quickened to three point seven percent, intensifying the challenges confronting the Federal Reserve. The quickening pace complicates central bank decisions regarding future monetary adjustments.",
-   "why": "Inflation in major global economies determines international benchmark interest rates, influencing emerging market fund flows and currency stability.",
-   "source": "Businesskorea",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yQWZ5SDRHYmwxQUE1eDZwclFfVEZuYkFralRuWHFyWHY2am5heEswb29PeEY2Y2JCNUN5bzV6NXllaWRRMWZtTFVUUnBEY2NqRjdkZktwQVJ2Q0FyNWplT0ZIM3pEZlpld0k1LTBJQWtjV1J5?oc=5"
+   "title": "Federal Reserve Official Comments Heighten Anticipation of Unchanged Rates",
+   "summary": "Market projections for a pause in US monetary policy strengthened following public commentary by policymaker Kevin Warsh. Investors increasingly look toward the October meeting with expectations of steady benchmark borrowing costs.",
+   "why": "Federal Reserve policy decisions dictate global capital costs and heavily sway foreign institutional investment into emerging markets.",
+   "source": "Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdHZhMDY1QkVFRU1NQ0c1NkxlNzR2cDR4NEgwbVFMSkQ3RzFSNlFYT1Q0d1BzOWpRUGtLcTg1YUk0UkxOc2tKWENkTGxkRWc5SFAwWDFMS3JxdXJfWUIyNmwzR1Z0T3B5SmF0R2hjc0lDdXppV0wzQmw2bHh0a0FZS1BsUXVJdkdyZF9YcWIxMlZ3RnMwOVZ0YlFDeHdFWE5nTXdSdlQwb2NfZw?oc=5"
   }
  ]
 }
