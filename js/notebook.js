@@ -17,14 +17,14 @@
     lb.style.width = bp + "%"; document.getElementById("lvpct").textContent = bp + "%";
     document.getElementById("obar").style.width = ap + "%"; document.getElementById("opct").textContent = ap + "%"; }
   // 1) Module pages: remember how far down the reader got (saved only in their own browser)
-  var m = location.pathname.match(/module-(\d+)/), art = document.querySelector(".article");
+  var m = location.pathname.match(/module-(\d+)/), art = document.querySelector(".article"), lv = (location.pathname.match(/\/(intermediate|advanced)\//) || [])[1], mid = m && (lv ? lv.charAt(0) + m[1] : m[1]);
   if (m && art) {
-    var best = get(m[1]), tk = false;
+    var best = get(mid), tk = false;
     var up = function () {
       tk = false;
       var p = Math.round(100 * (window.pageYOffset + innerHeight) / de.scrollHeight);
       if (p >= 94) p = 100;
-      if (p > best) { best = p; try { localStorage.setItem(KEY + m[1], String(p)); } catch (e) {} if (p === 100) window.dispatchEvent(new Event("wt-progress")); }
+      if (p > best) { best = p; try { localStorage.setItem(KEY + mid, String(p)); } catch (e) {} if (p === 100) window.dispatchEvent(new Event("wt-progress")); }
     };
     addEventListener("scroll", function () { if (!tk) { tk = true; requestAnimationFrame(up); } }, { passive: true });
   }
@@ -43,8 +43,8 @@
     if (ot) { ot.textContent = op + "%"; ob.style.width = op + "%"; }
     var b = document.getElementById("cont");
     if (b) {
-      if (!next) { b.textContent = "Review Module 1"; b.href = "/learn/module-1.html"; }
-      else { b.href = "/learn/module-" + next + ".html"; b.textContent = prog(next).pct > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
+      if (!next) { b.textContent = "Review Module 1"; b.href = "/learn/beginner/module-1.html"; }
+      else { b.href = "/learn/beginner/module-" + next + ".html"; b.textContent = prog(next).pct > 0 ? "Continue Module " + next : anyDone ? "Next: Module " + next : "Start here"; }
     }
   }
   // 3) Diagrams draw themselves when scrolled into view; thumbnails replay on hover or tap
