@@ -5,8 +5,8 @@
 .article>*{position:relative;z-index:1}
 .article a{color:var(--up);text-decoration-thickness:2px;text-underline-offset:3px}
 .article>p:first-of-type{margin-top:0}
-.article>p:first-of-type a{display:inline-flex;align-items:center;gap:.3rem;padding:.35rem .95rem;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-weight:600;font-size:.95rem;text-decoration:none;transition:border-color .2s,transform .2s,color .2s}
-.article>p:first-of-type a:hover{border-color:var(--up);color:var(--up);transform:translateX(-3px)}
+.article>p:first-of-type a:not(.fbtn){display:inline-flex;align-items:center;gap:.3rem;padding:.35rem .95rem;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-weight:600;font-size:.95rem;text-decoration:none;transition:border-color .2s,transform .2s,color .2s}
+.article>p:first-of-type a:not(.fbtn):hover{border-color:var(--up);color:var(--up);transform:translateX(-3px)}
 .article h2{font-family:Caveat,"Segoe Print","Comic Sans MS",cursive;font-size:2.15rem;font-weight:700;letter-spacing:0;display:inline-block;margin:2.2rem 0 .4rem;padding:0 .35rem;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--gold) 38%,transparent) 58% 92%,transparent 92%);transform:rotate(-.6deg)}
 .article p b:first-child{font-family:Caveat,"Segoe Print",cursive;font-size:1.3rem;font-weight:700;color:var(--up);margin-right:.15rem}
 .article p.trap{max-width:40rem;background:#fff1a6;color:#3a3000;padding:.7rem 1rem .8rem;margin:1rem 0;border-radius:3px;transform:rotate(-.7deg);box-shadow:2px 5px 10px rgba(0,0,0,.18)}
@@ -26,7 +26,7 @@
 .js-nb .dgm.in .wd{stroke-dashoffset:0}
 .js-nb .dgm.in .wf{opacity:1}
 @media(max-width:640px){.article{padding:1rem .9rem 1.5rem 2.3rem}.article::before{left:1.6rem}.article::after{left:.35rem;width:12px}.article h2{font-size:1.9rem}}
-@media(prefers-reduced-motion:reduce){.article>p:first-of-type a{transition:none}.js-nb .dgm .wd,.js-nb .dgm .wf{transition:none}}
+@media(prefers-reduced-motion:reduce){.article>p:first-of-type a:not(.fbtn){transition:none}.js-nb .dgm .wd,.js-nb .dgm .wf{transition:none}}
 .js-nb .dgm.done .wd{stroke-dasharray:none;transition:none}
 
 /* Learn index: course page with lesson-thumbnail cards */
