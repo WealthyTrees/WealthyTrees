@@ -1,1 +1,0 @@
-Beginner to Intermediate modules go in this folder. Delete this file when module-1.html is added.
