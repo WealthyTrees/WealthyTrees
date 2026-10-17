@@ -174,11 +174,13 @@ jobs:
                 throw new Error('Greeting video is not the first Daily Edition slide: ' + JSON.stringify(editionOrder.slice(0,3)));
               }
               if (pageErrors.length) throw new Error('Browser errors: ' + JSON.stringify(pageErrors));
+              await page.screenshot({ path: '/tmp/wt-video-test/greeting-slide.png' });
               console.log(JSON.stringify({
                 passed:true,
                 introPlaying:true,
                 greetingHandoffPlaying:true,
                 dailyEditionOpeningSlidePlaying:true,
+                actualVideoFrameStats:frameStats,
                 mediaResponses,
                 editionFirstSlides:editionOrder.slice(0,3)
               },null,2));
@@ -191,3 +193,10 @@ jobs:
           });
           NODE
           node /tmp/wt-video-test/check.cjs
+      - name: Upload rendered greeting screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-dussehra-greeting
+          path: /tmp/wt-video-test/greeting-slide.png
+          if-no-files-found: ignore
