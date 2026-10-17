@@ -60,6 +60,42 @@
         28% {opacity:1;visibility:visible;transform:translate3d(-110%,-50%,0)}
         32%,100% {opacity:0;visibility:hidden;transform:translate3d(-110%,-50%,0)}
       }
+      .ticker.nse.wt-dussehra-text-ticker #track { z-index:5!important; }
+      .wt-dussehra-sequence {
+        position:absolute; left:0; top:50%; display:flex; align-items:center;
+        gap:clamp(11px,1.8vw,23px); width:max-content; max-width:none; margin:0;
+        padding:0 8px; white-space:nowrap; pointer-events:none;
+        color:#ffe4a2; font-family:Georgia,"Times New Roman","Noto Sans Devanagari","Mangal",serif;
+        font-size:clamp(18px,2.15vw,25px); font-weight:700; line-height:1.1;
+        letter-spacing:.018em; text-shadow:0 0 2px rgba(255,244,202,.8),0 0 10px rgba(226,171,62,.4),0 1px 0 #39250c;
+        opacity:0; visibility:hidden; will-change:transform,opacity;
+        animation:wtDussehraSequencePass 16s linear infinite;
+      }
+      .wt-dussehra-sequence .wt-dussehra-hindi {
+        font-family:"Noto Sans Devanagari","Mangal",Georgia,serif;
+        font-size:1.05em; letter-spacing:.02em;
+      }
+      .wt-dussehra-sequence .wt-dussehra-company {
+        font-family:Georgia,"Times New Roman",serif; font-size:.91em; letter-spacing:.025em;
+      }
+      .wt-dussehra-arrow {
+        display:inline-block; flex:0 0 auto; width:clamp(24px,2.2vw,30px); height:24px;
+        color:#ffd46a; transform-origin:center;
+        filter:drop-shadow(0 0 3px rgba(255,207,87,.9)) drop-shadow(0 0 8px rgba(223,155,31,.72));
+        animation:wtDussehraArrowGlow 1.6s ease-in-out infinite;
+      }
+      .wt-dussehra-arrow svg {display:block;width:100%;height:100%;overflow:visible}
+      .wt-dussehra-arrow path {fill:#ffd45d;stroke:#fff0ad;stroke-width:.65;stroke-linejoin:round}
+      @keyframes wtDussehraArrowGlow {
+        0%,100% {opacity:.86;transform:scale(.94);filter:drop-shadow(0 0 2px #f8cc62) drop-shadow(0 0 5px rgba(244,171,38,.5))}
+        50% {opacity:1;transform:scale(1.08);filter:drop-shadow(0 0 4px #fff1b1) drop-shadow(0 0 11px rgba(244,171,38,.95))}
+      }
+      @keyframes wtDussehraSequencePass {
+        0%,2% {opacity:0;visibility:hidden;transform:translate3d(calc(100vw + 10px),-50%,0)}
+        5% {opacity:1;visibility:visible;transform:translate3d(calc(100vw + 10px),-50%,0)}
+        78% {opacity:1;visibility:visible;transform:translate3d(-100%,-50%,0)}
+        83%,100% {opacity:0;visibility:hidden;transform:translate3d(-100%,-50%,0)}
+      }
       .wt-dussehra-petal-layer {
         position:absolute!important; inset:0!important; z-index:4!important; overflow:hidden!important;
         pointer-events:none!important; contain:strict; clip-path:inset(0); isolation:isolate;
@@ -87,8 +123,8 @@
         @keyframes wtDussehraPetalFall {100% {opacity:0;transform:translate3d(var(--drift),72px,0) rotate(var(--end-rot))}}
       }
       @media(prefers-reduced-motion:reduce) {
-        .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message {animation:none!important;opacity:0;visibility:hidden}
-        .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message--hindi {opacity:1;visibility:visible;position:relative;left:auto;top:auto;transform:none;padding:18px 8px;text-align:center;width:100%}
+        .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-sequence {animation:none!important;opacity:1;visibility:visible;position:relative;left:auto;top:auto;transform:none;justify-content:center;flex-wrap:wrap;white-space:normal;width:100%;padding:8px;gap:8px}
+        .wt-dussehra-sequence .wt-dussehra-arrow {animation:none!important}
         .wt-dussehra-petal {animation:none!important;opacity:.25}
       }
     `;
@@ -106,7 +142,7 @@
     addStyles();
     ticker.dataset.wtDussehraTextReady = "1";
     ticker.classList.add("wt-dussehra-text-ticker");
-    ticker.setAttribute("aria-label", "We wishes you a very शुभ विजयादशमी — WealthyTrees Private Limited");
+    ticker.setAttribute("aria-label", "We wish you a very शुभ विजयादशमी — WealthyTrees Private Limited");
     track.dataset.wtPromoActive = "1";
     track.dataset.wtFestival = "1";
     track.dataset.sig = "wt-dussehra-text";
@@ -115,10 +151,14 @@
     if (label) label.setAttribute("aria-hidden", "true");
 
     track.innerHTML = `
-      <span class="wt-dussehra-message wt-dussehra-message--greeting">We wishes you a very</span>
-      <span class="wt-dussehra-message wt-dussehra-message--hindi">शुभ विजयादशमी</span>
-      <span class="wt-dussehra-message wt-dussehra-message--company">WealthyTrees Private Limited</span>
-    `;
+      <div class="wt-dussehra-sequence" aria-label="We wish you a very शुभ विजयादशमी — WealthyTrees Private Limited">
+        <span class="wt-dussehra-greeting">We wish you a very</span>
+        <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 26 24"><path d="M1 8.25H15.2V2.4L25 12 15.2 21.6v-5.85H1z"/></svg></span>
+        <span class="wt-dussehra-hindi">शुभ विजयादशमी</span>
+        <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 26 24"><path d="M1 8.25H15.2V2.4L25 12 15.2 21.6v-5.85H1z"/></svg></span>
+        <span class="wt-dussehra-company">WealthyTrees Private Limited</span>
+      </div>
+`;
 
     const petals = document.createElement("span");
     petals.className = "wt-dussehra-petal-layer";
