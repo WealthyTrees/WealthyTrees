@@ -61,6 +61,46 @@
       .wt-petal:nth-child(3n) { border-radius:90% 10% 85% 15%; background:linear-gradient(145deg,#ffeeb0,#f8bd49 60%,#e78925); }
       .wt-petal:nth-child(4n) { width:calc(var(--size)*.78); height:calc(var(--size)*1.8); background:linear-gradient(145deg,#ffd5a0,#e77731 80%); }
       @keyframes wtPetalFall { 0%{opacity:0;transform:translate3d(0,-8vh,0) rotate(var(--rot))} 8%{opacity:.95} 82%{opacity:.88} 100%{opacity:0;transform:translate3d(var(--drift),112vh,0) rotate(var(--end-rot))} }
+
+      .wt-greeting-overlay {
+        position:fixed; inset:0; z-index:2147482990; display:grid; place-items:center;
+        padding:clamp(14px,4vw,34px); overflow:hidden; background:rgba(25,54,37,.34);
+        backdrop-filter:blur(3px); opacity:0; animation:wtGreetingAppear .7s ease forwards;
+      }
+      .wt-greeting-card {
+        position:relative; isolation:isolate; width:min(560px,94vw); max-height:calc(100dvh - 34px);
+        overflow:auto; padding:clamp(24px,5vw,42px) clamp(20px,6vw,48px) clamp(22px,4vw,34px);
+        text-align:center; border:2px solid #c89234; border-radius:clamp(22px,5vw,38px);
+        color:#6c271e;
+        background:
+          radial-gradient(circle at 12% 10%,#f0ad36 0 3px,transparent 4px),
+          radial-gradient(circle at 88% 10%,#f0ad36 0 3px,transparent 4px),
+          radial-gradient(ellipse at 50% 0%,#fffdf4,#fff5df 70%,#ffe8c5);
+        box-shadow:0 20px 65px rgba(51,30,14,.28),inset 0 0 0 5px rgba(255,255,255,.72),inset 0 0 0 7px #f5d89b;
+      }
+      .wt-greeting-card:before,.wt-greeting-card:after {
+        content:"✦ ❋ ✦"; position:absolute; z-index:-1; color:#c48a27; opacity:.55; font-size:20px; letter-spacing:7px;
+      }
+      .wt-greeting-card:before { top:17px; left:50%; transform:translateX(-50%); }
+      .wt-greeting-card:after { bottom:14px; left:50%; transform:translateX(-50%); }
+      .wt-greeting-logo { display:block; width:clamp(70px,17vw,110px); height:clamp(70px,17vw,110px); margin:4px auto 10px; object-fit:contain; }
+      .wt-greeting-title { margin:0 0 16px; color:#176443; font-family:Georgia,"Times New Roman",serif; font-size:clamp(27px,5.6vw,43px); font-weight:800; line-height:1.1; text-wrap:balance; }
+      .wt-greeting-divider { width:92px; height:3px; margin:0 auto 18px; border-radius:5px; background:linear-gradient(90deg,#b56b1e,#ffdb76,#b56b1e); }
+      .wt-greeting-quote { margin:0 auto 21px; max-width:440px; color:#812b20; font-family:"Noto Sans Devanagari","Mangal",serif; font-size:clamp(17px,2.8vw,21px); line-height:1.8; text-wrap:pretty; }
+      .wt-greeting-company { margin:16px 0 22px; color:#176443; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:clamp(13px,2.5vw,16px); font-weight:800; letter-spacing:.035em; }
+      .wt-greeting-continue { min-height:46px; max-width:100%; border:1px solid #0d6746; border-radius:999px; padding:12px 24px; color:#fff8e8; background:linear-gradient(135deg,#146b49,#0b5138); font:inherit; font-size:14px; font-weight:750; cursor:pointer; box-shadow:0 7px 18px rgba(13,75,50,.18); }
+      .wt-greeting-overlay.is-leaving { animation:wtGreetingLeave .65s ease forwards; pointer-events:none; }
+      #wt-dussehra-intro.is-lifting { animation:wtCurtainLift 1.05s cubic-bezier(.6,0,.8,.35) forwards; pointer-events:none; }
+      @keyframes wtCurtainLift { 0%{transform:translateY(0);opacity:1} 65%{opacity:1} 100%{transform:translateY(-102%);opacity:.98} }
+      @keyframes wtGreetingAppear { to { opacity:1; } }
+      @keyframes wtGreetingLeave { to { opacity:0; visibility:hidden; } }
+      .wt-petal-layer { position:fixed; inset:0; z-index:2147483005; overflow:hidden; pointer-events:none; contain:strict; }
+      .wt-petal { position:absolute; top:-9vh; left:var(--x); width:var(--size); height:calc(var(--size)*1.55); opacity:0; border-radius:80% 5% 75% 15%; background:linear-gradient(145deg,#ffdf65,#ff9e2f 55%,#e55b24); box-shadow:inset 1px 1px 1px #ffffff8c,0 1px 4px #80390f1f; animation:wtPetalFall var(--duration) var(--delay) cubic-bezier(.3,.05,.7,.95) forwards; will-change:transform,opacity; }
+      .wt-petal:nth-child(3n) { border-radius:90% 10% 85% 15%; background:linear-gradient(145deg,#ffeeb0,#f8bd49 60%,#e78925); }
+      .wt-petal:nth-child(4n) { width:calc(var(--size)*.78); height:calc(var(--size)*1.8); background:linear-gradient(145deg,#ffd5a0,#e77731 80%); }
+      .wt-petal:nth-child(5n) { border-radius:85% 12% 70% 20%; background:linear-gradient(145deg,#ffe0e6,#e87991 65%,#b9415e); }
+      @keyframes wtPetalFall { 0%{opacity:0;transform:translate3d(0,-9vh,0) rotate(var(--rot))} 8%{opacity:.96} 82%{opacity:.88} 100%{opacity:0;transform:translate3d(var(--drift),112vh,0) rotate(var(--end-rot))} }
+
       @media(min-width:700px) { #wt-dussehra-intro .wt-enter { left:auto; right:max(24px,calc((100vw - min(100vw,56.25dvh))/4 - 90px)); bottom:max(26px,env(safe-area-inset-bottom)); transform:none; } }
       @media(max-width:420px) {
         #wt-dussehra-intro .wt-skip { top:max(10px,env(safe-area-inset-top)); right:10px; padding:10px 13px; font-size:12px; }
@@ -78,20 +118,51 @@
     const layer = document.createElement("div");
     layer.className = "wt-petal-layer";
     layer.setAttribute("aria-hidden", "true");
-    for (let i = 0; i < 58; i++) {
+    // Many petals enter from above the viewport at slightly staggered times,
+    // creating a continuous festival waterfall across the card and page.
+    for (let i = 0; i < 104; i++) {
       const petal = document.createElement("i");
       petal.className = "wt-petal";
       petal.style.setProperty("--x", Math.random() * 100 + "%");
-      petal.style.setProperty("--size", 7 + Math.random() * 12 + "px");
-      petal.style.setProperty("--duration", 3.4 + Math.random() * 2.2 + "s");
-      petal.style.setProperty("--delay", Math.random() * 1.4 + "s");
-      petal.style.setProperty("--drift", Math.round((Math.random() - .5) * 34) + "vw");
-      petal.style.setProperty("--rot", Math.round(Math.random() * 120 - 60) + "deg");
-      petal.style.setProperty("--end-rot", Math.round(Math.random() * 900 + 360) + "deg");
+      petal.style.setProperty("--size", 7 + Math.random() * 15 + "px");
+      petal.style.setProperty("--duration", 4.2 + Math.random() * 2.8 + "s");
+      petal.style.setProperty("--delay", Math.random() * 2.1 + "s");
+      petal.style.setProperty("--drift", Math.round((Math.random() - .5) * 38) + "vw");
+      petal.style.setProperty("--rot", Math.round(Math.random() * 140 - 70) + "deg");
+      petal.style.setProperty("--end-rot", Math.round(Math.random() * 1080 + 360) + "deg");
       layer.appendChild(petal);
     }
     document.body.appendChild(layer);
-    window.setTimeout(() => layer.remove(), 6800);
+    window.setTimeout(() => layer.remove(), 10000);
+  }
+
+  function showGreetingCard() {
+    const cardOverlay = document.createElement("div");
+    cardOverlay.className = "wt-greeting-overlay";
+    cardOverlay.setAttribute("role", "dialog");
+    cardOverlay.setAttribute("aria-modal", "true");
+    cardOverlay.setAttribute("aria-label", "Happy Vijayadashami from WealthyTrees");
+    cardOverlay.innerHTML = `
+      <article class="wt-greeting-card">
+        <img class="wt-greeting-logo" src="/assets/logo.svg" alt="WealthyTrees logo">
+        <h2 class="wt-greeting-title">Happy Vijayadashami</h2>
+        <div class="wt-greeting-divider" aria-hidden="true"></div>
+        <p class="wt-greeting-quote">असत्य पर सत्य और अधर्म पर धर्म की विजय का यह पावन पर्व आपके जीवन में नई आशा, सुख, समृद्धि और खुशियाँ लेकर आए।</p>
+        <p class="wt-greeting-company">WealthyTrees Private Limited</p>
+        <button class="wt-greeting-continue" type="button">Continue to Website</button>
+      </article>
+    `;
+    document.body.appendChild(cardOverlay);
+    createPetalShower();
+    let closed = false;
+    const closeCard = () => {
+      if (closed) return;
+      closed = true;
+      cardOverlay.classList.add("is-leaving");
+      window.setTimeout(() => cardOverlay.remove(), 700);
+    };
+    cardOverlay.querySelector(".wt-greeting-continue").addEventListener("click", closeCard);
+    window.setTimeout(closeCard, 8000);
   }
 
   function init() {
@@ -134,7 +205,9 @@
       hasTransitioned = true;
       try { if (!PREVIEW_MODE) sessionStorage.setItem(SESSION_KEY, "1"); } catch (_) {}
       video.pause();
-      createPetalShower();
+      // The greeting card is placed above the real homepage but underneath
+      // the video curtain. As the curtain lifts, the greeting is revealed.
+      showGreetingCard();
       overlay.classList.add("is-lifting");
       window.setTimeout(() => {
         overlay.remove();
