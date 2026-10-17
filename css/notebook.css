@@ -180,3 +180,18 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 .dgm.pl .ptip{min-height:3.2em;margin-top:.4rem}
 @media(prefers-reduced-motion:reduce){.pb,.pw,.pp,.ph,.pt{animation:none}}
 .cthumb.dgm{aspect-ratio:320/258}
+
+/*mnav*/
+.mnav.mpath{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;margin:2.2rem 0 1rem;justify-content:stretch;align-items:stretch}
+.article .mnav a.mn{display:flex;flex-direction:column;justify-content:center;gap:.15rem;padding:.7rem 1rem;border:2px solid var(--btn);border-radius:12px;background:var(--btn);color:var(--btn-fg);text-decoration:none;font-weight:700;line-height:1.25;min-height:3.6rem;transition:transform .15s,box-shadow .15s}
+.article .mnav a.mn-all{background:var(--paper);color:var(--ink);border-color:var(--ink);align-items:center;text-align:center}
+.article .mnav a.mn-next{background:var(--up);color:var(--paper);border-color:var(--up);text-align:right;align-items:flex-end}
+.mn-k{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;opacity:.85;font-weight:700}
+.mn-t{font-size:1rem}
+.mn-prev .mn-t::before{content:"\2190\00a0"}.mn-next .mn-t::after{content:"\00a0\2192"}
+@media(hover:hover){.article .mnav a.mn:hover{transform:translateY(-2px);box-shadow:4px 4px 0 color-mix(in srgb,var(--up) 45%,transparent)}}
+[data-theme=dark] .article .mnav a.mn-prev{background:var(--paper);color:var(--ink);border-color:var(--up)}
+@media(max-width:640px){.mnav.mpath{grid-template-columns:1fr}.mnav .mn-next{order:1}.mnav .mn-prev{order:2}.mnav .mn-all{order:3}.mnav .mn-ph{display:none}.article .mnav a.mn-next,.article .mnav a.mn-all{text-align:left;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.article .mnav a.mn{transition:none}}
+.article a.mlink{font-family:Caveat,"Segoe Print",cursive;font-weight:700;font-size:1.3em;line-height:1.1;color:var(--up);text-decoration:none;padding:0 .25em;border-radius:4px;background:linear-gradient(transparent 55%,color-mix(in srgb,var(--gold) 45%,transparent) 55%);border-bottom:2px solid color-mix(in srgb,var(--up) 70%,transparent);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.article a.mlink:hover{background:color-mix(in srgb,var(--up) 16%,transparent)}
