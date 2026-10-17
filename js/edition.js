@@ -62,7 +62,10 @@
       greeting.setAttribute("webkit-playsinline", "");
       greeting.setAttribute("loop", "");
       greeting.setAttribute("aria-label", "WealthyTrees Dussehra greeting video");
-      greeting.src = "/assets/dussehra-greeting.mp4";
+      greeting.poster = "/assets/dussehra-greeting-poster.svg?v=1";
+      greeting.setAttribute("poster", "/assets/dussehra-greeting-poster.svg?v=1");
+      // Version the media URL so a previously cached, failed/partial MP4 is not reused.
+      greeting.src = "/assets/dussehra-greeting.mp4?v=20261017-inline3";
       var greetingTitle = el("div", "ed-greeting-title");
       greetingTitle.append(el("span", "pillx", "Special festival edition"), el("strong", "", "शुभ विजयादशमी"));
       var greetingHint = el("p", "ed-greeting-hint", "Swipe or tap to continue to the news");
