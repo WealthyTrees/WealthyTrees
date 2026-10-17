@@ -78,3 +78,18 @@
   opacity:1!important;transform:none!important;animation:none!important;pointer-events:none;
 }
 .sl.sfestival .ed-greeting-video::-webkit-media-controls {z-index:6}
+
+
+/* Festival greeting is an embedded, control-free story slide. Let taps reach Story navigation. */
+.sl.sfestival .ed-greeting-video {
+  pointer-events:none!important;
+  user-select:none;
+  -webkit-user-select:none;
+}
+.sl.sfestival .ed-greeting-video::-webkit-media-controls,
+.sl.sfestival .ed-greeting-video::-webkit-media-controls-panel,
+.sl.sfestival .ed-greeting-video::-webkit-media-controls-enclosure {
+  display:none!important;
+  opacity:0!important;
+}
+.sl.sfestival .ed-greeting-hint {pointer-events:none}
