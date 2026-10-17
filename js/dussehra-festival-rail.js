@@ -100,17 +100,36 @@
             <path d="M25 190L9 190" stroke="#ffb04e" stroke-width="9" opacity=".45"/>
           </g>
           <g class="wt-fest-main-burst" transform="translate(298 191)" filter="url(#wtdGlow)">
-            <use href="#wtdSpark"/>
-            <circle r="10" fill="#fff8c5"/>
+            <use href="#wtdSpark">
+              <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                values=".12;.12;.9;1.55;.22;.12" keyTimes="0;.274;.29;.315;.38;1"
+                dur="15s" repeatCount="indefinite"/>
+            </use>
+            <circle r="10" fill="#fff8c5">
+              <animate attributeName="r" values="1;1;14;19;2;1"
+                keyTimes="0;.274;.29;.315;.38;1" dur="15s" repeatCount="indefinite"/>
+            </circle>
           </g>
           <g class="wt-fest-firework wt-fw-a" transform="translate(445 100)">
-            <use href="#wtdSpark" transform="scale(.63)" fill="#ffdf6c"/>
+            <use href="#wtdSpark" transform="scale(.63)" fill="#ffdf6c">
+              <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                values=".08;.08;.63;1.05;.08;.08" keyTimes="0;.28;.30;.35;.42;1"
+                dur="15s" repeatCount="indefinite"/>
+            </use>
           </g>
           <g class="wt-fest-firework wt-fw-b" transform="translate(515 160)">
-            <use href="#wtdSpark" transform="scale(.4)"/>
+            <use href="#wtdSpark" transform="scale(.4)">
+              <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                values=".05;.05;.42;.78;.05;.05" keyTimes="0;.30;.32;.37;.44;1"
+                dur="15s" repeatCount="indefinite"/>
+            </use>
           </g>
           <g class="wt-fest-firework wt-fw-c" transform="translate(178 158)">
-            <use href="#wtdSpark" transform="scale(.45)"/>
+            <use href="#wtdSpark" transform="scale(.45)">
+              <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                values=".05;.05;.48;.88;.05;.05" keyTimes="0;.31;.33;.38;.45;1"
+                dur="15s" repeatCount="indefinite"/>
+            </use>
           </g>
           <g class="wt-fest-streamers" fill="none" stroke-linecap="round">
             <path d="M116 45q20 14 2 27t3 24M470 32q-15 16 2 25t-1 28M722 52q17 12 1 24t1 25M1080 39q-18 12-2 26t-3 25" stroke="#ffd76e" stroke-width="4"/>
