@@ -8,6 +8,17 @@
   function safe(u) { return typeof u === "string" && /^https?:\/\//i.test(u) ? u : ""; }
   function jget(u, ms) { var c = new AbortController(), t = setTimeout(function () { c.abort(); }, ms); return fetch(u, { signal: c.signal }).then(function (r) { clearTimeout(t); if (!r.ok) throw 0; return r.json(); }); }
 
+  // Show the greeting opening slide on Vijayadashami only; query flags enable preview.
+  var query = new URLSearchParams(window.location.search);
+  var festivalPreview = ["previewDussehra", "previewDussehraEdition"].some(function (key) { return query.get(key) === "1"; });
+  var indiaParts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(new Date());
+  var indiaPart = function (type) { return (indiaParts.find(function (item) { return item.type === type; }) || {}).value || ""; };
+  var indiaDate = indiaPart("year") + "-" + indiaPart("month") + "-" + indiaPart("day");
+  var SHOW_FESTIVAL_GREETING = festivalPreview || indiaDate === "2026-10-20";
+
+
   var now = new Date(), hour = +new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", hour: "2-digit", hourCycle: "h23" }).format(now);
   var date = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", day: "numeric", month: "short" }).format(now);
   var doy = Math.floor((now.getTime() + 19800000) / 864e5);
@@ -32,13 +43,31 @@
       .sort(function (a, b) { return b.n - a.n || a.i - b.i; }).slice(0, 8).map(function (o) { return o.x; });
   }
   function build(stories, lead) {
-    var L = pick(stories), s; N = L.length + 2;
-    s = slide("s0", 0);
+    var L = pick(stories), s;
+    slides = [];
+    N = L.length + 2 + (SHOW_FESTIVAL_GREETING ? 1 : 0);
+    if (SHOW_FESTIVAL_GREETING) {
+      s = slide("sfestival", slides.length);
+      var greeting = el("video", "ed-greeting-video");
+      greeting.src = "/assets/dussehra-greeting.mp4";
+      greeting.autoplay = true;
+      greeting.muted = true;
+      greeting.playsInline = true;
+      greeting.controls = true;
+      greeting.preload = "auto";
+      greeting.setAttribute("aria-label", "WealthyTrees Dussehra greeting video");
+      var greetingTitle = el("div", "ed-greeting-title");
+      greetingTitle.append(el("span", "pillx", "Special festival edition"), el("strong", "", "शुभ विजयादशमी"));
+      var greetingHint = el("p", "ed-greeting-hint", "Swipe or tap to continue to the news");
+      s.append(greeting, greetingTitle, greetingHint);
+      slides.push(s);
+    }
+    s = slide("s0", slides.length);
     s.append(el("span", "pillx", ED[0] + " Edition \u00B7 " + date), el("h3", "big", lead || (L[0] ? L[0].hook || L[0].title : "Today\u2019s stories are still loading.")));
     var ul = el("ol", "toc"); L.slice(0, 5).forEach(function (x) { ul.append(el("li", "", x.hook || x.title)); });
     s.append(el("p", "kk", "In this edition \u00B7 " + L.length + " stories"), ul, el("p", "hint", "Tap or swipe to continue \u2192")); slides.push(s);
     L.forEach(function (x, i) {
-      s = slide("s" + (1 + i % 3), i + 1);
+      s = slide("s" + (1 + i % 3), slides.length);
       s.append(el("span", "pillx", x.topic || "News"), el("h3", "hk", x.hook || x.title));
       if (x.summary) s.append(el("p", "sum", x.summary));
       if (x.simple) { var ex = el("div", "ex wd"); ex.append(el("b", "", "In simple words"), el("span", "", x.simple)); if (x.term && x.meaning) ex.append(el("small", "", x.term + " \u00B7 " + x.meaning)); s.append(ex); }
@@ -82,6 +111,20 @@
     if (n < 0) n = 0; if (n > N - 1) n = N - 1; cur = n; el_ = 0;
     slides.forEach(function (s, i) { s.classList.toggle("on", i === cur); s.classList.toggle("past", i < cur); if (i === cur) { s.removeAttribute("inert"); s.removeAttribute("aria-hidden"); } else { s.setAttribute("inert", ""); s.setAttribute("aria-hidden", "true"); } });
     bars.forEach(function (b, i) { b.style.width = i < cur ? "100%" : "0%"; });
+    slides.forEach(function (node, i) {
+      var v = node.querySelector(".ed-greeting-video");
+      if (!v) return;
+      if (i === cur && visible && !panel.hidden) {
+        var promise = v.play();
+        if (promise && typeof promise.catch === "function") promise.catch(function () {
+          v.controls = true;
+          var hint = node.querySelector(".ed-greeting-hint");
+          if (hint) hint.textContent = "Press ▶ to play the greeting, then swipe to continue.";
+        });
+      } else {
+        v.pause();
+      }
+    });
     holdN = 0; slides.forEach(function (s) { s.querySelectorAll(".ex:not(.wd)").forEach(function (x) { x.hidden = true; }); s.querySelectorAll(".exb").forEach(function (b) { if (b.textContent === "Close") b.textContent = "Explain simply"; }); });
   }
   function tick() {
@@ -98,7 +141,7 @@
         return jget("/data/brief.json?t=" + Date.now(), 6000).then(function (b) { return { stories: (b.items || []).map(function (i) { return { topic: i.category, title: i.title, hook: i.title, summary: i.summary, sources: [{ name: i.source, url: i.url }] }; }) }; }).catch(function () { return { stories: [] }; });
       }).then(function (p) { build(p.stories || [], p.ai ? p.lead : ""); mount(); });
   }
-  function close() { visible = false; }
+  function close() { visible = false; slides.forEach(function (node) { var v = node.querySelector(".ed-greeting-video"); if (v) v.pause(); }); }
   tabs.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest(".tab"); if (!b) return;
     if (b === tb) { tabs.querySelectorAll(".tab").forEach(function (x) { x.setAttribute("aria-selected", String(x === tb)); }); document.querySelectorAll('[role="tabpanel"]').forEach(function (p) { p.hidden = p !== panel; }); open(); }
