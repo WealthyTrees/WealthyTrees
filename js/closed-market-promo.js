@@ -66,8 +66,13 @@
   }
 
   function render() {
+    const ticker = document.getElementById("ticker");
     const track = document.getElementById("track");
-    if (!track) return;
+    if (!ticker || !track) return;
+
+    // The Dussehra scene owns the ticker exclusively while active.
+    if (ticker.classList.contains("wt-dussehra-festival") || track.dataset.wtFestival === "1") return;
+
     const day = indiaDay();
     const dussehra = day.date === DUSSEHRA_DATE || FESTIVE_PREVIEW;
     const shouldPromote = !dussehra && (PREVIEW || indiaMarketClosed());
@@ -81,21 +86,18 @@
       track.style.setProperty("--dur", "58s");
       track.innerHTML = sequence + sequence;
     } else if (track.dataset.wtPromoActive === "1") {
-      // app.js will restore the real market cards on its next quote refresh.
       track.classList.remove("wt-promo-track");
       delete track.dataset.wtPromoActive;
       track.dataset.sig = "";
       track.style.removeProperty("--dur");
+      // The main ticker script redraws current market prices on its next refresh.
     }
   }
 
   function init() {
     render();
-    const ticker = document.getElementById("ticker");
-    if (ticker && window.MutationObserver) {
-      const observer = new MutationObserver(() => render());
-      observer.observe(ticker, { childList: true, subtree: true });
-    }
+    // Poll rather than observing all descendants: ticker text/content changes should not
+    // trigger a render loop or compete with the festival animation.
     window.setInterval(render, 15000);
   }
 
