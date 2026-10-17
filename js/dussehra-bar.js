@@ -106,7 +106,7 @@
     addStyles();
     ticker.dataset.wtDussehraTextReady = "1";
     ticker.classList.add("wt-dussehra-text-ticker");
-    ticker.setAttribute("aria-label", "We wish you a very शुभ विजयादशमी — WealthyTrees Private Limited");
+    ticker.setAttribute("aria-label", "We wishes you a very शुभ विजयादशमी — WealthyTrees Private Limited");
     track.dataset.wtPromoActive = "1";
     track.dataset.wtFestival = "1";
     track.dataset.sig = "wt-dussehra-text";
