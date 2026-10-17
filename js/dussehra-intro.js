@@ -9,6 +9,7 @@
   const FESTIVAL_DATE = "2026-10-20"; // Dussehra 2026, India
   const SESSION_KEY = "wtDussehraIntroSeen2026";
   const VIDEO_URL = "/assets/festival/dussehra-intro.mp4";
+  const PREVIEW_MODE = new URLSearchParams(window.location.search).get("previewDussehra") === "1";
 
   function indiaDateString() {
     const parts = new Intl.DateTimeFormat("en-CA", {
@@ -90,8 +91,8 @@
 
   function init() {
     // Only show on Dussehra in the India timezone.
-    if (indiaDateString() !== FESTIVAL_DATE) return;
-    if (sessionStorage.getItem(SESSION_KEY) === "1") return;
+    if (!PREVIEW_MODE && indiaDateString() !== FESTIVAL_DATE) return;
+    if (!PREVIEW_MODE && sessionStorage.getItem(SESSION_KEY) === "1") return;
     if (document.getElementById("wt-dussehra-intro")) return;
 
     addStyles();
@@ -118,7 +119,7 @@
     document.documentElement.style.overflow = "hidden";
 
     const dismiss = () => {
-      sessionStorage.setItem(SESSION_KEY, "1");
+      if (!PREVIEW_MODE) sessionStorage.setItem(SESSION_KEY, "1");
       video.pause();
       overlay.remove();
       document.documentElement.style.overflow = "";
