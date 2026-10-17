@@ -144,3 +144,114 @@
   .wt-ticker-petal { animation: none; display: none; }
   .ticker.nse .tk-label.wt-dussehra-label #tkstat { transition: none; }
 }
+
+/* v4: spacious left-to-right promotional cards during Indian equity weekends/holidays. */
+.ticker.nse .track.wt-promo-track {
+  --dur: 58s;
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  width: max-content;
+  padding: .45rem .65rem;
+  animation: wtPromoTravel var(--dur) linear infinite;
+  will-change: transform;
+}
+@keyframes wtPromoTravel {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.ticker.nse .track.wt-promo-track .wt-promo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px minmax(0,1fr) 18px;
+  align-items: center;
+  gap: .75rem;
+  flex: 0 0 clamp(275px, 27vw, 350px);
+  min-width: 0;
+  height: 76px;
+  margin: 0;
+  padding: .65rem .9rem;
+  border: 1px solid rgba(213,174,96,.65);
+  border-radius: 13px;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(226,184,99,.17), transparent 58%),
+    linear-gradient(135deg, rgba(255,255,255,.105), rgba(255,255,255,.025));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.035), 0 3px 14px rgba(0,0,0,.12);
+  color: #fff8e8;
+  text-decoration: none;
+  white-space: normal;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-card:hover {
+  transform: translateY(-2px);
+  border-color: #f5cf79;
+  box-shadow: 0 7px 20px rgba(0,0,0,.2), 0 0 14px rgba(220,174,78,.13);
+}
+.ticker.nse .track.wt-promo-track .wt-promo-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(236,199,119,.48);
+  border-radius: 12px;
+  background: #fff8e9;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-mark img {
+  display: block;
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: .25rem;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-copy strong {
+  display: block;
+  overflow: hidden;
+  color: #ffe3a0;
+  font-size: .83rem;
+  line-height: 1.15;
+  letter-spacing: .005em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-copy > span {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #e7eee8;
+  font-size: .69rem;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-arrow {
+  color: #e8c16c;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-mark,
+.ticker.nse .track.wt-promo-track .wt-promo-copy,
+.ticker.nse .track.wt-promo-track .wt-promo-arrow { text-decoration: none !important; }
+@media (max-width: 640px) {
+  .ticker.nse .track.wt-promo-track { gap: .6rem; padding: .45rem .4rem; }
+  .ticker.nse .track.wt-promo-track .wt-promo-card {
+    flex-basis: 278px;
+    height: 72px;
+    grid-template-columns: 40px minmax(0,1fr) 14px;
+    gap: .55rem;
+    padding: .55rem .7rem;
+  }
+  .ticker.nse .track.wt-promo-track .wt-promo-mark { width: 38px; height: 38px; }
+  .ticker.nse .track.wt-promo-track .wt-promo-mark img { width: 32px; height: 32px; }
+  .ticker.nse .track.wt-promo-track .wt-promo-copy strong { font-size: .78rem; }
+  .ticker.nse .track.wt-promo-track .wt-promo-copy > span { font-size: .66rem; }
+}
+@media (hover:hover) and (pointer:fine) {
+  .ticker.nse .track.wt-promo-track:hover { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker.nse .track.wt-promo-track { animation: none; overflow-x: auto; }
+}
