@@ -79,13 +79,17 @@
         font-family:Georgia,"Times New Roman",serif; font-size:.91em; letter-spacing:.025em;
       }
       .wt-dussehra-arrow {
-        display:inline-block; flex:0 0 auto; width:clamp(24px,2.2vw,30px); height:24px;
+        display:inline-block; flex:0 0 auto; width:clamp(34px,3vw,42px); height:26px;
         color:#ffd46a; transform-origin:center;
         filter:drop-shadow(0 0 3px rgba(255,207,87,.9)) drop-shadow(0 0 8px rgba(223,155,31,.72));
         animation:wtDussehraArrowGlow 1.6s ease-in-out infinite;
       }
       .wt-dussehra-arrow svg {display:block;width:100%;height:100%;overflow:visible}
-      .wt-dussehra-arrow path {fill:#ffd45d;stroke:#fff0ad;stroke-width:.65;stroke-linejoin:round}
+      .wt-dussehra-arrow path {fill:none;stroke:#ffd45d;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+      .wt-dussehra-arrow .wt-bow {stroke:#fff0ad;stroke-width:2.7}
+      .wt-dussehra-arrow .wt-bowstring {stroke:#ffe5a3;stroke-width:1.15}
+      .wt-dussehra-arrow .wt-arrowhead {stroke:#fff0ad;stroke-width:2.6}
+      .wt-dussehra-arrow .wt-fletching {stroke:#ffca62;stroke-width:1.8}
       @keyframes wtDussehraArrowGlow {
         0%,100% {opacity:.86;transform:scale(.94);filter:drop-shadow(0 0 2px #f8cc62) drop-shadow(0 0 5px rgba(244,171,38,.5))}
         50% {opacity:1;transform:scale(1.08);filter:drop-shadow(0 0 4px #fff1b1) drop-shadow(0 0 11px rgba(244,171,38,.95))}
@@ -153,9 +157,9 @@
     track.innerHTML = `
       <div class="wt-dussehra-sequence" aria-label="We wish you a very शुभ विजयादशमी — WealthyTrees Private Limited">
         <span class="wt-dussehra-greeting">We wish you a very</span>
-        <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 26 24"><path d="M1 8.25H15.2V2.4L25 12 15.2 21.6v-5.85H1z"/></svg></span>
+        <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 64 32" role="presentation"><path class="wt-bow" d="M8 2 Q28 16 8 30"/><path class="wt-bowstring" d="M8 2 L8 30"/><path class="wt-arrow-shaft" d="M8 16 H57"/><path class="wt-arrowhead" d="M47 6 L60 16 L47 26"/><path class="wt-fletching" d="M15 16 L21 10 M15 16 L21 22"/></svg></span>
         <span class="wt-dussehra-hindi">शुभ विजयादशमी</span>
-        <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 26 24"><path d="M1 8.25H15.2V2.4L25 12 15.2 21.6v-5.85H1z"/></svg></span>
+        <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 64 32" role="presentation"><path class="wt-bow" d="M8 2 Q28 16 8 30"/><path class="wt-bowstring" d="M8 2 L8 30"/><path class="wt-arrow-shaft" d="M8 16 H57"/><path class="wt-arrowhead" d="M47 6 L60 16 L47 26"/><path class="wt-fletching" d="M15 16 L21 10 M15 16 L21 22"/></svg></span>
         <span class="wt-dussehra-company">WealthyTrees Private Limited</span>
       </div>
 `;
