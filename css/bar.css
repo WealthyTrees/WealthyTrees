@@ -332,3 +332,174 @@
  .wt-fest-arrow{opacity:1}.wt-fest-burst{opacity:.6}
  .wt-fest-message{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
 }
+
+/* ===== Dussehra cinematic rail v3: larger scene, precise arrow impact, fireworks and petals ===== */
+.ticker.nse.wt-dussehra-festival {
+  height:clamp(268px,26vw,320px);
+  min-height:clamp(268px,26vw,320px);
+  display:flex;
+  position:relative;
+  overflow:hidden;
+  background:#111d2c;
+  border-top:1px solid rgba(255,216,131,.22);
+  border-bottom:1px solid rgba(255,216,131,.5);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),inset 0 -12px 30px rgba(0,0,0,.22);
+}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label {display:none!important}
+.ticker.nse.wt-dussehra-festival .tk-view {
+  display:block;position:absolute;inset:0;width:100%;height:100%;padding:0;
+  overflow:hidden;min-width:0;mask-image:none;-webkit-mask-image:none;
+}
+.ticker.nse.wt-dussehra-festival .track,
+.ticker.nse.wt-dussehra-festival .track.wt-promo-track {
+  display:block;position:absolute;inset:0;width:100%;height:100%;min-height:0;
+  margin:0;padding:0;overflow:hidden;white-space:normal;animation:none!important;transform:none!important;
+}
+.wt-fest-stage {
+  position:relative;isolation:isolate;display:block;width:100%;height:100%;min-height:268px;
+  overflow:hidden;color:#fff5df;
+  background:
+    radial-gradient(ellipse at 52% 28%,rgba(255,185,98,.27),transparent 38%),
+    linear-gradient(112deg,#101e34 0%,#51304c 36%,#a74f47 65%,#ed9c4b 100%);
+}
+.wt-fest-stage:before {
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,15,30,.15),transparent 42%,rgba(19,14,27,.38));
+}
+.wt-fest-sky-glow {
+  position:absolute;z-index:0;left:50%;top:-60%;width:min(68vw,760px);height:140%;
+  transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(ellipse,rgba(255,200,110,.22),rgba(255,129,69,.075) 36%,transparent 72%);
+  animation:wtFestSkyGlow 5s ease-in-out infinite alternate;
+}
+@keyframes wtFestSkyGlow {to{opacity:.6;transform:translateX(-50%) scale(1.12)}}
+.wt-fest-torana {
+  position:absolute;z-index:3;left:0;right:0;top:0;height:22px;display:flex;align-items:flex-start;justify-content:center;
+  gap:clamp(8px,2vw,24px);overflow:hidden;opacity:.72;pointer-events:none;
+  color:#ffdc87;text-shadow:0 0 9px rgba(255,193,76,.55);font-size:12px;
+}
+.wt-fest-torana i {height:19px;width:1px;background:linear-gradient(#f4c35d,transparent);opacity:.65}
+.wt-fest-torana span {animation:wtToranaGlow 2.2s ease-in-out infinite alternate}
+.wt-fest-torana span:nth-of-type(2) {animation-delay:-.7s}
+.wt-fest-torana span:nth-of-type(3) {animation-delay:-1.3s}
+@keyframes wtToranaGlow {to{opacity:.4;text-shadow:0 0 2px rgba(255,193,76,.25)}}
+.wt-fest-scene {position:absolute;z-index:1;inset:0;display:block;width:100%;height:100%;overflow:visible}
+.wt-fest-ravana {animation:wtRavanaHitV3 15s linear infinite;transform-origin:298px 202px}
+@keyframes wtRavanaHitV3 {
+  0%,26.7%,100% {filter:brightness(1) saturate(1)}
+  28.2% {filter:brightness(2.2) saturate(1.6) drop-shadow(0 0 10px rgba(255,194,67,.85))}
+  31% {filter:brightness(1.7) saturate(1.3) drop-shadow(0 0 6px rgba(255,194,67,.55))}
+  36% {filter:brightness(1) saturate(1)}
+}
+.wt-fest-rama {animation:wtRamaAuraV3 2.8s ease-in-out infinite alternate}
+@keyframes wtRamaAuraV3 {to{filter:drop-shadow(0 0 7px rgba(255,219,125,.65))}}
+.wt-fest-arrow {
+  opacity:0;transform-box:view-box;transform-origin:0 190px;
+  animation:wtArrowFlightV3 15s cubic-bezier(.18,.78,.2,1) infinite!important;
+  filter:drop-shadow(0 0 6px rgba(255,221,123,.9));
+}
+@keyframes wtArrowFlightV3 {
+  0%,7% {opacity:0;transform:translateX(78vw)}
+  9% {opacity:1;transform:translateX(78vw)}
+  27.7% {opacity:1;transform:translateX(26vw)}
+  28.4%,100% {opacity:0;transform:translateX(26vw)}
+}
+.wt-fest-main-burst {
+  opacity:0;filter:drop-shadow(0 0 12px rgba(255,217,102,.95));
+  animation:wtMainImpactV3 15s ease-out infinite;
+}
+@keyframes wtMainImpactV3 {
+  0%,27.4% {opacity:0}
+  28% {opacity:1}
+  30.5% {opacity:1;filter:drop-shadow(0 0 24px rgba(255,239,157,1))}
+  35.5%,100% {opacity:0}
+}
+.wt-fest-firework {
+  opacity:0;filter:drop-shadow(0 0 4px rgba(255,224,129,.8));
+}
+.wt-fw-a {animation:wtFireworkA 15s ease-out infinite}
+.wt-fw-b {animation:wtFireworkB 15s ease-out infinite}
+.wt-fw-c {animation:wtFireworkC 15s ease-out infinite}
+@keyframes wtFireworkA {
+  0%,28%{opacity:0}30%{opacity:1}36%{opacity:.75}42%,100%{opacity:0}
+}
+@keyframes wtFireworkB {
+  0%,30%{opacity:0}32%{opacity:1}37%{opacity:.85}44%,100%{opacity:0}
+}
+@keyframes wtFireworkC {
+  0%,31%{opacity:0}33%{opacity:1}38%{opacity:.7}45%,100%{opacity:0}
+}
+.wt-fest-streamers {
+  opacity:.08;animation:wtStreamerBurstV3 15s ease-out infinite;
+}
+@keyframes wtStreamerBurstV3 {
+  0%,28%{opacity:.08}31%{opacity:1}37%{opacity:.8}47%,100%{opacity:.08}
+}
+.wt-fest-petal-rain {
+  position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none;
+}
+.wt-fest-petal {
+  position:absolute;top:-24px;left:var(--x);width:var(--size);height:calc(var(--size)*1.6);
+  display:block;opacity:0;border-radius:82% 12% 74% 18%;
+  background:linear-gradient(145deg,#fff0a8 0%,#ffbf3e 50%,#e76c27 100%);
+  box-shadow:inset 1px 1px 1px rgba(255,255,255,.55),0 1px 5px rgba(64,20,16,.2);
+  transform:rotate(var(--rot));
+  animation:wtFestivalPetalFall var(--fall) var(--delay) linear infinite;
+  will-change:transform,opacity;
+}
+.wt-fest-petal:nth-child(3n) {
+  width:calc(var(--size)*.76);height:calc(var(--size)*1.8);border-radius:88% 10% 80% 18%;
+  background:linear-gradient(145deg,#ffe7eb 0%,#ef96a4 57%,#c64b6b 100%);
+}
+.wt-fest-petal:nth-child(4n) {
+  background:linear-gradient(145deg,#fff6c9,#f9d36b 60%,#e88a2d);
+}
+.wt-fest-petal:nth-child(5n) {width:calc(var(--size)*.7);height:calc(var(--size)*1.3);background:linear-gradient(145deg,#ffd6a5,#f08d43 65%,#c54c38)}
+@keyframes wtFestivalPetalFall {
+  0% {opacity:0;transform:translate3d(0,-5vh,0) rotate(var(--rot))}
+  10% {opacity:.98}
+  80% {opacity:.9}
+  100% {opacity:0;transform:translate3d(var(--drift),115%,0) rotate(calc(var(--rot) + 420deg))}
+}
+.wt-fest-message {
+  z-index:5;top:55%;width:min(840px,calc(100% - 34px));min-height:clamp(148px,15vw,184px);
+  padding:clamp(14px,2vw,24px) clamp(16px,3.3vw,38px);gap:clamp(10px,2.5vw,28px);
+  border:2px solid #d6a64b;border-radius:clamp(18px,3.2vw,30px);
+  background:
+    radial-gradient(circle at 8% 13%,rgba(228,156,58,.13) 0 2px,transparent 3px),
+    radial-gradient(circle at 92% 13%,rgba(228,156,58,.13) 0 2px,transparent 3px),
+    linear-gradient(135deg,rgba(255,253,240,.985),rgba(255,235,190,.98));
+  box-shadow:0 12px 40px rgba(18,10,20,.44),inset 0 0 0 3px rgba(255,255,255,.78),inset 0 0 0 6px rgba(239,203,128,.5);
+}
+.wt-fest-message:before,.wt-fest-message:after {
+  content:"✦  ❋  ✦";position:absolute;left:50%;transform:translateX(-50%);
+  color:#c18b2c;font-size:12px;letter-spacing:7px;white-space:nowrap;opacity:.72;
+}
+.wt-fest-message:before{top:7px}.wt-fest-message:after{bottom:6px}
+.wt-fest-message img {width:clamp(58px,7vw,88px);height:clamp(58px,7vw,88px);filter:drop-shadow(0 4px 5px rgba(72,48,15,.12))}
+.wt-fest-message h2 {font-size:clamp(27px,4.1vw,50px);line-height:1.02;letter-spacing:-.03em;text-shadow:0 2px 0 #fff}
+.wt-fest-message p {margin:7px 0;color:#72291f;font-size:clamp(12px,1.6vw,18px);line-height:1.4;font-weight:650}
+.wt-fest-message strong {margin-top:8px;color:#654017;font-size:clamp(11px,1.35vw,15px);letter-spacing:.055em}
+.wt-fest-card-flower {position:absolute;right:12px;top:9px;color:#ce832a;font-size:18px;animation:wtCardFlowerSpin 7s linear infinite}
+@keyframes wtCardFlowerSpin {to{transform:rotate(360deg)}}
+.wt-fest-foot {z-index:4;bottom:8px;right:14px;font-size:clamp(9px,.95vw,12px);letter-spacing:.12em}
+@media(max-width:640px) {
+  .ticker.nse.wt-dussehra-festival {height:266px;min-height:266px}
+  .ticker.nse.wt-dussehra-festival .track,.ticker.nse.wt-dussehra-festival .track.wt-promo-track,.wt-fest-stage {height:266px;min-height:266px}
+  .wt-fest-torana{height:18px;gap:8px}.wt-fest-badge{font-size:8px;top:30px;left:9px;padding:5px 8px}
+  .wt-fest-message {width:calc(100% - 18px);min-height:154px;top:57%;padding:14px 10px;gap:6px;border-radius:17px}
+  .wt-fest-message img {width:41px;height:41px}
+  .wt-fest-message h2 {font-size:clamp(22px,6vw,30px);letter-spacing:-.04em}
+  .wt-fest-message p {font-size:clamp(11px,2.9vw,14px);line-height:1.35}
+  .wt-fest-message strong {font-size:clamp(9px,2.4vw,12px);letter-spacing:0}
+  .wt-fest-card-flower {right:7px;top:6px;font-size:14px}
+  .wt-fest-foot {right:8px;bottom:5px;font-size:8px;letter-spacing:.04em}
+}
+@media(prefers-reduced-motion:reduce) {
+  .wt-fest-sky-glow,.wt-fest-torana span,.wt-fest-ravana,.wt-fest-rama,
+  .wt-fest-arrow,.wt-fest-main-burst,.wt-fest-firework,.wt-fest-streamers,
+  .wt-fest-petal,.wt-fest-message,.wt-fest-card-flower {animation:none!important}
+  .wt-fest-arrow {opacity:0!important}
+  .wt-fest-main-burst {opacity:.9}
+  .wt-fest-message {opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+}
