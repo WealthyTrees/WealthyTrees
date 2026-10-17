@@ -66,10 +66,8 @@
       greeting.setAttribute("poster", "/assets/dussehra-greeting-poster.svg?v=1");
       // Version the media URL so a previously cached, failed/partial MP4 is not reused.
       greeting.src = "/assets/dussehra-greeting.mp4?v=20261017-inline3";
-      var greetingTitle = el("div", "ed-greeting-title");
-      greetingTitle.append(el("span", "pillx", "Special festival edition"), el("strong", "", "शुभ विजयादशमी"));
-      var greetingHint = el("p", "ed-greeting-hint", "Swipe or tap to continue to the news");
-      s.append(greeting, greetingTitle, greetingHint);
+      // Keep the greeting artwork unobstructed: no title banner or bottom hint over the video.
+      s.append(greeting);
       slides.push(s);
     }
     s = slide("s0", slides.length);
@@ -97,8 +95,16 @@
     root = el("div", "ed2"); story = el("div", "story"); story.tabIndex = 0; story.setAttribute("role", "region"); story.setAttribute("aria-roledescription", "carousel"); story.setAttribute("aria-label", "Daily Edition");
     var bw = el("div", "bars"); for (var i = 0; i < N; i++) { var b = el("i"); b.append(el("b")); bw.append(b); bars.push(b.firstChild); }
     var hd = el("div", "shead"), av = el("span", "av"); av.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3ecf8e" stroke-width="2.4" stroke-linecap="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 14c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg>';
-    var nm = el("div"); nm.append(el("b", "", "Sprout"), el("small", "", ED[0] + " Edition")); pp = el("button", "pp", ""); pp.type = "button"; pp.setAttribute("aria-label", "Pause or play");
-    hd.append(av, nm, pp); var sw = el("div", "slides"); slides.forEach(function (s) { sw.append(s); });
+    var nm = el("div", "sprout-head");
+    nm.append(el("b", "sprout-name", "Sprout"), el("small", "sprout-edition", ED[0] + " Edition"));
+    pp = el("button", "pp", ""); pp.type = "button"; pp.setAttribute("aria-label", "Pause or play");
+    hd.append(av, nm);
+    if (SHOW_FESTIVAL_GREETING) {
+      hd.classList.add("is-festival");
+      hd.append(el("span", "festival-edition-badge", "SPECIAL FESTIVAL EDITION"));
+    }
+    hd.append(pp);
+    var sw = el("div", "slides"); slides.forEach(function (s) { sw.append(s); });
     var l = el("button", "tz l"), r = el("button", "tz r"); l.type = r.type = "button"; l.setAttribute("aria-label", "Previous slide"); r.setAttribute("aria-label", "Next slide"); l.tabIndex = r.tabIndex = -1;
     story.append(bw, hd, sw, l, r); root.append(story, el("p", "ednote", ED[0] + " Edition \u00B7 3 editions a day (Morning 6 AM, Afternoon 12 PM, Night 6 PM, the last). Education only, not investment advice."));
     panel.innerHTML = ""; panel.append(root); upd();
