@@ -71,7 +71,9 @@
     (function nx() { say.textContent = text.slice(0, ++i); if (i < text.length && typed === text) setTimeout(nx, step); })();
   }
   function introSay(lead, instant) {
-    var text = "Sprout here, live from the newsroom. " + (lead || "Here\u2019s what\u2019s moving the markets and why it matters.");
+    var fest = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date()) === "2026-10-20";
+    if (fest && !document.getElementById("wt-fest-font")) { var fl = document.createElement("link"); fl.id = "wt-fest-font"; fl.rel = "stylesheet"; fl.href = "https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"; document.head.appendChild(fl); if (say) say.style.fontFamily = "Kalam,'Segoe Print',cursive"; }
+    var text = fest ? "Hello, I am Sprout, live from the newsroom. Happy Dussehra to all my readers! Markets rest today, so enjoy the festival." : "Sprout here, live from the newsroom. " + (lead || "Here\u2019s what\u2019s moving the markets and why it matters.");
     if (instant) typeOut(text, true); else setTimeout(function () { typeOut(text); }, Math.max(0, 900 - (Date.now() - born)));
   }
   dots();

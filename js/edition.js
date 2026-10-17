@@ -92,7 +92,7 @@
   }
 
   function mount() {
-    root = el("div", "ed2"); story = el("div", "story"); story.tabIndex = 0; story.setAttribute("role", "region"); story.setAttribute("aria-roledescription", "carousel"); story.setAttribute("aria-label", "Daily Edition");
+    root = el("div", "ed2"); story = el("div", "story"); if (SHOW_FESTIVAL_GREETING) story.classList.add("fest"); story.tabIndex = 0; story.setAttribute("role", "region"); story.setAttribute("aria-roledescription", "carousel"); story.setAttribute("aria-label", "Daily Edition");
     var bw = el("div", "bars"); for (var i = 0; i < N; i++) { var b = el("i"); b.append(el("b")); bw.append(b); bars.push(b.firstChild); }
     var hd = el("div", "shead"), av = el("span", "av"); av.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3ecf8e" stroke-width="2.4" stroke-linecap="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 14c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg>';
     var nm = el("div", "sprout-head");

@@ -98,3 +98,7 @@
   .shead.is-festival .pp {width:30px;height:30px;flex:0 0 30px}
 }
 @media(prefers-reduced-motion:reduce) {.festival-edition-badge{animation:none}}
+
+/* Festival card: exact phone-story shape (9:16) so the greeting video fits with no bars */
+.story.fest{aspect-ratio:9/16;height:auto;min-height:0;width:min(100%,25rem,calc(86vh*9/16));width:min(100%,25rem,calc(86dvh*9/16))}
+.sl.sfestival .ed-greeting-video{object-fit:cover}
