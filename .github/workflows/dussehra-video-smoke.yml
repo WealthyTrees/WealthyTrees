@@ -36,7 +36,7 @@ jobs:
           npm init -y
           npm install playwright
           npx playwright install --with-deps chromium
-      - name: Verify visible greeting frames, muted autoplay, and tap-to-advance
+      - name: Verify intro-only reveal, festival ticker, and Daily Edition greeting
         run: |
           cat > /tmp/wt-video-test/check.cjs <<'NODE'
           const { chromium } = require('/tmp/wt-video-test/node_modules/playwright');
@@ -73,7 +73,7 @@ jobs:
                 const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
                 const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
                 const boardCount = await page.locator('.wt-dussehra-video-board').count();
-                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=25') && boardCount === 0) {
+                if (scriptSrc && scriptSrc.includes('v=33') && siteSrc && siteSrc.includes('v=25') && boardCount === 0) {
                   deployed = true;
                   break;
                 }
@@ -96,19 +96,20 @@ jobs:
               });
 
               await page.locator('#wt-dussehra-intro .wt-skip').click();
-              await page.waitForFunction(() => {
-                const v = document.querySelector('#wt-dussehra-intro video');
-                return !!v && (v.currentSrc || v.src).includes('dussehra-greeting.mp4') &&
-                  !v.paused && v.currentTime > 0.2 && v.readyState >= 2 && v.videoWidth > 0;
-              }, null, { timeout: 15000 }).catch(async () => {
-                const state = await page.locator('#wt-dussehra-intro video').evaluate(v => ({
-                  currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
-                  readyState: v.readyState, errorCode: v.error ? v.error.code : null
-                })).catch(() => null);
-                throw new Error('Greeting video handoff after preview intro failed: ' + JSON.stringify({state,mediaResponses,pageErrors}));
-              });
-
-              await page.locator('#wt-dussehra-intro').waitFor({ state: 'detached', timeout: 25000 });
+              await page.locator('#wt-dussehra-intro').waitFor({ state: 'detached', timeout: 5000 });
+              const secondFullscreenIntroVideo = await page.locator('#wt-dussehra-intro video, body > video').count();
+              if (secondFullscreenIntroVideo !== 0) {
+                throw new Error('A second full-screen video appeared after the intro instead of revealing the website.');
+              }
+              const introScript = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src');
+              const introText = await page.request.get('https://wealthytrees.online/js/dussehra-intro.js?v=33').then(r => r.text());
+              if (introText.includes('dussehra-greeting.mp4') || introText.includes('GREETING_VIDEO_URL')) {
+                throw new Error('The intro script still references the separate greeting video.');
+              }
+              const tickerVisible = await page.locator('.wt-dussehra-sequence').count();
+              if (tickerVisible !== 1) {
+                throw new Error('Festival ticker did not remain on the page after the intro.');
+              }
               const editionTab = page.locator('#t-ed');
               await editionTab.waitFor({ state: 'visible', timeout: 15000 });
               await editionTab.click();
@@ -230,7 +231,8 @@ jobs:
               console.log(JSON.stringify({
                 passed:true,
                 introPlaying:true,
-                greetingHandoffPlaying:true,
+                noSecondFullscreenGreeting:true,
+                tickerVisible:true,
                 dailyEditionOpeningSlidePlaying:true,
                 actualVideoFrameStats:frameStats,
                 festivalBadge:{text:badgeText,insideSproutHeader:true,glow:badgeGlow},
