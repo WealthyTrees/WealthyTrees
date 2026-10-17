@@ -5,7 +5,7 @@
   const SESSION_KEY = "wtDussehraIntroSeen2026";
   const VIDEO_URL = "/assets/dussehra-intro.mp4";
   const PREVIEW_MODE = new URLSearchParams(window.location.search).get("previewDussehra") === "1";
-  const BRANDING_START = 12.45;
+  const BRANDING_START = Number.POSITIVE_INFINITY;
   const CURTAIN_LIFT_MS = 1050;
 
   function indiaDateString() {
