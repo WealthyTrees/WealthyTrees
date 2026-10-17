@@ -255,3 +255,80 @@
 @media (prefers-reduced-motion: reduce) {
   .ticker.nse .track.wt-promo-track { animation: none; overflow-x: auto; }
 }
+
+/* Dussehra festival animation in the large ticker rail. */
+.ticker.nse.wt-dussehra-festival {
+  position:relative; display:flex; align-items:stretch; width:100%;
+  height:196px; min-height:196px; overflow:hidden; white-space:normal;
+  border-bottom:1px solid rgba(225,174,75,.55);
+  background:#182932;
+}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label {
+  position:absolute; z-index:9; left:12px; top:8px; max-width:none; width:auto;
+  display:flex; align-items:center; flex-wrap:wrap; gap:.2rem .4rem;
+  padding:.32rem .55rem; border:1px solid rgba(238,195,100,.65); border-radius:8px;
+  background:rgba(8,30,24,.88); font-size:.61rem; line-height:1.15; white-space:normal;
+}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label #tkname{font-size:.61rem;letter-spacing:.02em}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label #tkstat{font-size:.48rem;letter-spacing:0}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label .wt-ticker-petals{display:none}
+.ticker.nse.wt-dussehra-festival .tk-view {
+ display:block; flex:1 1 auto; width:100%; height:100%; min-width:0; padding:0;
+ overflow:hidden; mask-image:none; -webkit-mask-image:none;
+}
+.ticker.nse.wt-dussehra-festival .track,
+.ticker.nse.wt-dussehra-festival .track.wt-promo-track {
+ position:relative; display:block; width:100%; height:196px; min-height:196px;
+ margin:0; padding:0; overflow:hidden; white-space:normal;
+ animation:none!important; transform:none!important;
+}
+.wt-fest-stage{position:relative;isolation:isolate;width:100%;height:196px;overflow:hidden;color:#fff7e5;background:linear-gradient(130deg,#122934,#72413c 54%,#eba04a)}
+.wt-fest-scene{position:absolute;z-index:1;inset:0;width:100%;height:100%}
+.wt-fest-ravan{transform-origin:center bottom;animation:wtFestRavan 13s linear infinite}
+@keyframes wtFestRavan{0%,27%,100%{filter:brightness(1)}29%{filter:brightness(1.9)}34%{filter:brightness(1)}}
+.wt-fest-rama{animation:wtFestRama 2.8s ease-in-out infinite alternate}
+@keyframes wtFestRama{to{filter:drop-shadow(0 0 5px rgba(255,214,123,.5))}}
+.wt-fest-arrow{opacity:0;transform-box:view-box;animation:wtFestArrow 13s linear infinite}
+@keyframes wtFestArrow{0%,9%{opacity:0;transform:translateX(0)}11%{opacity:1}27%{opacity:1;transform:translateX(-470px)}29%,100%{opacity:0;transform:translateX(-470px)}}
+.wt-fest-burst{opacity:0;transform-box:fill-box;transform-origin:center;animation:wtFestBurst 13s ease-out infinite}
+@keyframes wtFestBurst{0%,27%{opacity:0;transform:scale(.15)}29%{opacity:1;transform:scale(1)}33%{opacity:.9;transform:scale(1.15)}39%,100%{opacity:0;transform:scale(1.8)}}
+.wt-fest-fireworks{opacity:0;transform-box:fill-box;transform-origin:center;animation:wtFestCrackers 13s ease-out infinite}
+@keyframes wtFestCrackers{0%,28%{opacity:0;transform:scale(.5)}32%{opacity:1;transform:scale(1.1)}38%,100%{opacity:0;transform:scale(1.55)}}
+.wt-fest-ribbon{position:absolute;z-index:5;top:9px;left:12px;color:#fff0ca;font:800 10px/1.2 system-ui,sans-serif;letter-spacing:.08em;opacity:0}
+.wt-fest-ribbon span{margin-left:8px;color:#ffd98b}
+.wt-fest-message{
+ position:absolute;z-index:4;left:50%;top:53%;display:flex;align-items:center;gap:clamp(10px,2vw,22px);
+ width:min(780px,calc(100% - 36px));min-height:128px;padding:10px clamp(12px,2.5vw,26px);
+ border:2px solid #d6a64b;border-radius:22px;
+ background:linear-gradient(130deg,rgba(255,251,231,.97),rgba(255,238,195,.96));
+ box-shadow:0 8px 28px rgba(20,16,22,.35),inset 0 0 0 3px rgba(255,255,255,.7);
+ color:#1c573e;opacity:0;visibility:hidden;transform:translate(-50%,-43%) scale(.96);
+ animation:wtFestMessage 13s ease-in-out infinite;
+}
+.wt-fest-message img{display:block;flex:0 0 auto;width:clamp(44px,6vw,76px);height:clamp(44px,6vw,76px);object-fit:contain}
+.wt-fest-message>div{min-width:0;flex:1;text-align:center}
+.wt-fest-message h2{margin:0 0 4px;color:#126341;font:800 clamp(23px,3.5vw,41px)/1.04 Georgia,"Times New Roman",serif;letter-spacing:-.025em;text-shadow:0 1px 0 #fff}
+.wt-fest-message p{margin:5px 0;color:#782c20;font:600 clamp(11px,1.45vw,16px)/1.35 "Noto Sans Devanagari","Mangal",serif}
+.wt-fest-message strong{display:block;margin-top:5px;color:#754316;font:850 clamp(10px,1.25vw,14px)/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.04em}
+@keyframes wtFestMessage{
+ 0%,33%{opacity:0;visibility:hidden;transform:translate(-50%,-43%) scale(.96)}
+ 37%{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+ 90%{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+ 98%,100%{opacity:0;visibility:hidden;transform:translate(-50%,-54%) scale(.98)}
+}
+.wt-fest-foot{position:absolute;z-index:3;right:12px;bottom:6px;color:rgba(255,240,205,.85);font-size:10px;font-weight:800;letter-spacing:.1em;text-shadow:0 1px 4px #0008}
+@media(max-width:640px){
+ .ticker.nse.wt-dussehra-festival,.ticker.nse.wt-dussehra-festival .track,.ticker.nse.wt-dussehra-festival .track.wt-promo-track,.wt-fest-stage{height:190px;min-height:190px}
+ .ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label{left:8px;top:7px;padding:.25rem .4rem}
+ .wt-fest-message{width:calc(100% - 18px);min-height:124px;padding:8px 9px;gap:7px;border-radius:15px}
+ .wt-fest-message img{width:36px;height:36px}
+ .wt-fest-message h2{font-size:clamp(19px,5.25vw,27px);letter-spacing:-.035em}
+ .wt-fest-message p{font-size:clamp(10px,2.7vw,13px);line-height:1.3}
+ .wt-fest-message strong{font-size:clamp(9px,2.3vw,11px);letter-spacing:0}
+ .wt-fest-foot{bottom:4px;right:7px;font-size:8px;letter-spacing:.03em}
+}
+@media(prefers-reduced-motion:reduce){
+ .wt-fest-ravan,.wt-fest-rama,.wt-fest-arrow,.wt-fest-burst,.wt-fest-fireworks,.wt-fest-message{animation:none}
+ .wt-fest-arrow{opacity:1}.wt-fest-burst{opacity:.6}
+ .wt-fest-message{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+}
