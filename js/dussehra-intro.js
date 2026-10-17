@@ -5,7 +5,7 @@
   const SESSION_KEY = "wtDussehraIntroSeen2026";
   const VIDEO_URL = "/assets/dussehra-intro.mp4";
   const PREVIEW_MODE = new URLSearchParams(window.location.search).get("previewDussehra") === "1";
-  const BRANDING_START = 12.45;
+  const BRANDING_START = Number.POSITIVE_INFINITY;
   const CURTAIN_LIFT_MS = 1050;
 
   function indiaDateString() {
@@ -105,6 +105,11 @@
       .wt-greeting-video-card .wt-greeting-continue { flex:0 0 auto; }
       .wt-greeting-error { margin:0; padding:10px 14px; border-radius:10px; color:#542d14; background:#fff8e7; text-align:center; }
 
+      .wt-greeting-video {
+        display:block; width:min(100vw,56.25dvh); height:min(100dvh,177.7778vw);
+        max-width:100vw; max-height:100dvh; aspect-ratio:9/16; object-fit:contain;
+        border:0; border-radius:0; background:transparent; box-shadow:none;
+      }
       .wt-greeting-overlay.is-leaving { animation:wtGreetingLeave .65s ease forwards; pointer-events:none; }
       #wt-dussehra-intro.is-lifting { animation:wtCurtainLift 1.05s cubic-bezier(.6,0,.8,.35) forwards; pointer-events:none; }
       @keyframes wtCurtainLift { 0%{transform:translateY(0);opacity:1} 65%{opacity:1} 100%{transform:translateY(-102%);opacity:.98} }
@@ -152,61 +157,43 @@
     window.setTimeout(() => layer.remove(), 10000);
   }
 
-  function showGreetingCard() {
-    const cardOverlay = document.createElement("div");
-    cardOverlay.className = "wt-greeting-overlay";
-    cardOverlay.setAttribute("role", "dialog");
-    cardOverlay.setAttribute("aria-modal", "true");
-    cardOverlay.setAttribute("aria-label", "Vijayadashami greeting from WealthyTrees");
-    cardOverlay.innerHTML = `
-      <article class="wt-greeting-card wt-greeting-video-card">
-        <video class="wt-greeting-video" autoplay muted playsinline preload="auto" aria-label="WealthyTrees Vijayadashami greeting">
-          <source src="/assets/dussehra-greeting.mp4" type="video/mp4">
-        </video>
-        <button class="wt-greeting-continue" type="button">Continue to Website</button>
-      </article>
+  function showGreetingVideo() {
+    // The user's uploaded MP4 is the greeting screen. Do not generate or fall back
+    // to a separate static greeting card.
+    const overlay = document.createElement("div");
+    overlay.className = "wt-greeting-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Vijayadashami greeting video from WealthyTrees");
+    overlay.innerHTML = `
+      <video class="wt-greeting-video" autoplay muted playsinline preload="auto"
+        aria-label="WealthyTrees Vijayadashami greeting video">
+        <source src="/assets/dussehra-greeting.mp4" type="video/mp4">
+      </video>
     `;
-    document.body.appendChild(cardOverlay);
+    document.body.appendChild(overlay);
 
-    const card = cardOverlay.querySelector(".wt-greeting-video-card");
-    const greetingVideo = cardOverlay.querySelector(".wt-greeting-video");
+    const greetingVideo = overlay.querySelector(".wt-greeting-video");
     let closed = false;
-    let fellBack = false;
-    const closeCard = () => {
+    const closeVideo = () => {
       if (closed) return;
       closed = true;
       greetingVideo.pause();
-      cardOverlay.classList.add("is-leaving");
-      window.setTimeout(() => cardOverlay.remove(), 700);
+      overlay.classList.add("is-leaving");
+      window.setTimeout(() => overlay.remove(), 650);
     };
-    const wireContinue = () => {
-      const button = cardOverlay.querySelector(".wt-greeting-continue");
-      if (button) button.addEventListener("click", closeCard, { once: true });
-    };
-    const fallbackToStaticCard = () => {
-      if (fellBack || closed) return;
-      fellBack = true;
-      greetingVideo.pause();
-      card.classList.remove("wt-greeting-video-card");
-      card.innerHTML = `
-        <img class="wt-greeting-logo" src="/assets/logo.svg" alt="WealthyTrees logo">
-        <h2 class="wt-greeting-title">Happy Vijayadashami</h2>
-        <div class="wt-greeting-divider" aria-hidden="true"></div>
-        <p class="wt-greeting-quote">असत्य पर सत्य और अधर्म पर धर्म की विजय का यह पावन पर्व आपके जीवन में नई आशा, सुख, समृद्धि और खुशियाँ लेकर आए।</p>
-        <p class="wt-greeting-company">WealthyTrees Private Limited</p>
-        <button class="wt-greeting-continue" type="button">Continue to Website</button>
-      `;
-      wireContinue();
-    };
-    wireContinue();
-    greetingVideo.addEventListener("ended", () => window.setTimeout(closeCard, 500), { once: true });
-    greetingVideo.addEventListener("error", fallbackToStaticCard, { once: true });
-    window.setTimeout(closeCard, 16000);
-    // A missing or blocked MP4 must never leave a blank greeting card behind.
+
+    greetingVideo.addEventListener("ended", closeVideo, { once: true });
+    greetingVideo.addEventListener("error", closeVideo, { once: true });
+
+    // If the browser cannot begin loading this asset, remove the overlay instead
+    // of leaving an empty/blank card over the page.
     window.setTimeout(() => {
-      if (!closed && !fellBack && greetingVideo.readyState < 2) fallbackToStaticCard();
-    }, 2500);
-    greetingVideo.play().catch(fallbackToStaticCard);
+      if (!closed && greetingVideo.readyState < 2) closeVideo();
+    }, 5000);
+    // 15 seconds covers this ~13-second greeting with a small safety margin.
+    window.setTimeout(closeVideo, 15000);
+    greetingVideo.play().catch(closeVideo);
   }
 
   function init() {
@@ -251,7 +238,7 @@
       video.pause();
       // The greeting card is placed above the real homepage but underneath
       // the video curtain. As the curtain lifts, the greeting is revealed.
-      showGreetingCard();
+      showGreetingVideo();
       overlay.classList.add("is-lifting");
       window.setTimeout(() => {
         overlay.remove();
