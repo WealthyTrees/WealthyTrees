@@ -73,7 +73,7 @@ jobs:
                 const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
                 const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
                 const boardCount = await page.locator('.wt-dussehra-video-board').count();
-                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=24') && boardCount === 0) {
+                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=25') && boardCount === 0) {
                   deployed = true;
                   break;
                 }
@@ -157,6 +157,22 @@ jobs:
                 throw new Error('Video time advances but rendered video frame is black: ' + JSON.stringify(frameStats));
               }
 
+              const overlayCount = await page.locator('#p-ed .ed-greeting-title, #p-ed .ed-greeting-hint').count();
+              if (overlayCount !== 0) throw new Error('Old banners are still over the greeting video.');
+              const festivalBadge = page.locator('#p-ed .shead.is-festival .festival-edition-badge');
+              await festivalBadge.waitFor({state:'visible', timeout:3000});
+              const badgeText = (await festivalBadge.innerText()).trim();
+              if (badgeText !== 'SPECIAL FESTIVAL EDITION') throw new Error('Unexpected festival badge text: ' + badgeText);
+              const headerBox = await page.locator('#p-ed .shead.is-festival').boundingBox();
+              const badgeBox = await festivalBadge.boundingBox();
+              if (!headerBox || !badgeBox || badgeBox.x < headerBox.x || badgeBox.x + badgeBox.width > headerBox.x + headerBox.width ||
+                  badgeBox.y < headerBox.y || badgeBox.y + badgeBox.height > headerBox.y + headerBox.height) {
+                throw new Error('Festival badge is not contained in the Sprout header: ' + JSON.stringify({headerBox,badgeBox}));
+              }
+              const badgeGlow = await festivalBadge.evaluate(el => getComputedStyle(el).boxShadow);
+              if (!badgeGlow || badgeGlow === 'none') throw new Error('Festival badge glow is missing.');
+              await page.screenshot({ path: '/tmp/wt-video-test/desktop-greeting-slide.png' });
+
               const firstSlide = page.locator('#p-ed .sl.sfestival.on');
               await firstSlide.click({ position: { x: 190, y: 300 } });
               await page.waitForFunction(() => {
@@ -174,16 +190,56 @@ jobs:
                 throw new Error('Greeting video is not the first Daily Edition slide: ' + JSON.stringify(editionOrder.slice(0,3)));
               }
               if (pageErrors.length) throw new Error('Browser errors: ' + JSON.stringify(pageErrors));
-              await page.screenshot({ path: '/tmp/wt-video-test/greeting-slide.png' });
+
+              // Repeat the actual greeting presentation test at a phone-sized viewport.
+              const mobilePage = await browser.newPage({
+                viewport:{width:390,height:844}, deviceScaleFactor:1, isMobile:true, hasTouch:true
+              });
+              const mobileErrors = [];
+              mobilePage.on('pageerror', error => mobileErrors.push(error.message));
+              await mobilePage.goto(url, {waitUntil:'domcontentloaded',timeout:45000});
+              await mobilePage.locator('#wt-dussehra-intro .wt-enter').click({timeout:20000});
+              await mobilePage.locator('#wt-dussehra-intro').waitFor({state:'detached',timeout:10000});
+              await mobilePage.locator('#t-ed').click();
+              const mobileVideo = mobilePage.locator('#p-ed .ed-greeting-video');
+              await mobilePage.waitForFunction(() => {
+                const v = document.querySelector('#p-ed .ed-greeting-video');
+                return !!v && v.closest('.sl')?.classList.contains('on') &&
+                  !v.paused && v.currentTime > 4.5 && v.readyState >= 2 && v.videoWidth > 0;
+              }, null, {timeout:30000}).catch(async () => {
+                const state = await mobileVideo.evaluate(v => ({
+                  paused:v.paused,currentTime:v.currentTime,readyState:v.readyState,
+                  width:v.videoWidth,height:v.videoHeight,error:v.error?v.error.code:null
+                })).catch(()=>null);
+                throw new Error('Mobile greeting video does not display/play: ' + JSON.stringify(state));
+              });
+              const mobileHasOverlay = await mobilePage.locator('#p-ed .ed-greeting-title, #p-ed .ed-greeting-hint').count();
+              const mobileControls = await mobileVideo.evaluate(v => v.controls);
+              const mobileBadge = mobilePage.locator('#p-ed .shead.is-festival .festival-edition-badge');
+              const mobileBadgeBox = await mobileBadge.boundingBox();
+              const mobileCardBox = await mobilePage.locator('#p-ed .story').boundingBox();
+              if (mobileHasOverlay || mobileControls) throw new Error('Mobile greeting still shows a video overlay or native controls.');
+              if (!mobileBadgeBox || !mobileCardBox || mobileBadgeBox.x < mobileCardBox.x ||
+                  mobileBadgeBox.x + mobileBadgeBox.width > mobileCardBox.x + mobileCardBox.width) {
+                throw new Error('Festival badge overflows the mobile Story header: ' + JSON.stringify({mobileBadgeBox,mobileCardBox}));
+              }
+              if (mobileErrors.length) throw new Error('Mobile browser errors: ' + JSON.stringify(mobileErrors));
+              await mobilePage.screenshot({path:'/tmp/wt-video-test/mobile-greeting-slide.png'});
               console.log(JSON.stringify({
                 passed:true,
                 introPlaying:true,
                 greetingHandoffPlaying:true,
                 dailyEditionOpeningSlidePlaying:true,
                 actualVideoFrameStats:frameStats,
+                festivalBadge:{text:badgeText,insideSproutHeader:true,glow:badgeGlow},
+                oldBannersRemoved:overlayCount===0,
+                nativeControlsDisabled:!frameStats.controls,
+                desktopTapAdvances:true,
+                mobile:{greetingPlaying:true,overlays:mobileHasOverlay,controls:mobileControls,badgeInCard:true},
                 mediaResponses,
                 editionFirstSlides:editionOrder.slice(0,3)
               },null,2));
+              await mobilePage.close();
             } finally {
               await browser.close();
             }
@@ -198,5 +254,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: rendered-dussehra-greeting
-          path: /tmp/wt-video-test/greeting-slide.png
+          path: /tmp/wt-video-test/*-greeting-slide.png
           if-no-files-found: ignore
