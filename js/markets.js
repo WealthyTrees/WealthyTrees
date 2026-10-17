@@ -156,7 +156,7 @@ function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){
  var q=Q[LIVE[key]];if(q&&q.price&&mainSeries&&lastBar){var day=liveQ[key].day;
   if(day===lastBar.time){lastBar.close=q.price;lastBar.high=Math.max(lastBar.high,q.high||q.price);lastBar.low=Math.min(lastBar.low,q.low||q.price);mainSeries.update(type==="Candles"?{time:lastBar.time,open:lastBar.open,high:lastBar.high,low:lastBar.low,close:lastBar.close}:{time:lastBar.time,value:lastBar.close})}}
  drawTiles();drawHead()}).catch(function(){})}
-setInterval(live,60000);setTimeout(live,3000);document.addEventListener("visibilitychange",function(){if(!document.hidden)live()});window.addEventListener("online",live);
+setInterval(live,60000);setTimeout(live,200);document.addEventListener("visibilitychange",function(){if(!document.hidden)live()});window.addEventListener("online",live);
 /* ---------- start ---------- */
 drawTabs();initDraw();
 fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then(function(j){data=j;Object.keys(data).forEach(function(k){data[k]=clean(data[k],k)})}).catch(function(){data={}}).then(function(){drawTiles();build()});
@@ -169,5 +169,5 @@ fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then
  m.querySelectorAll("label").forEach(function(l){var show=function(){$("indtip").innerHTML="<b>"+esc(l.textContent.trim())+"</b> "+esc(INFO[l.querySelector("input").value]||"")};l.addEventListener("mouseenter",show);l.addEventListener("focusin",show);l.addEventListener("click",show)});
  document.addEventListener("click",function(e){var t=e.target.closest("[data-tip]");if(!t)return;t.classList.add("tip-on");setTimeout(function(){t.classList.remove("tip-on")},2600)});
 })();
-screener();
+(function(){var b=$("scrbox");if(!b)return;if(!("IntersectionObserver" in window)){setTimeout(screener,1500);return}var o=new IntersectionObserver(function(e){if(e[0].isIntersecting){o.disconnect();screener()}},{rootMargin:"400px"});o.observe(b)})();
 })();

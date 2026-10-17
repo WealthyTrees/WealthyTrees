@@ -13,3 +13,9 @@
 .nse .track .tk .c{padding:0;background:none;font-size:.82rem}
 .nse .track .tk .c.up{color:#3ddc97}.nse .track .tk .c.dn{color:#ff7b6b}
 @media(max-width:640px){.nse .track .tk{min-width:148px;padding:.45rem .75rem}}
+
+/* v2: smooth, never stuck */
+.nse .track{will-change:transform;backface-visibility:hidden}
+.ticker:hover .track{animation-play-state:running}
+@media(hover:hover) and (pointer:fine){.ticker.nse:hover .track{animation-play-state:paused}}
+.tk-label{max-width:46vw}.tk-label span{white-space:normal;line-height:1.15;font-size:.68rem}

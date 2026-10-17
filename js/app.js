@@ -4,7 +4,7 @@ const p=v.map((y,i)=>(i*w/(v.length-1)).toFixed(1)+','+(h-4-(y-mn)/r*(h-8)).toFi
 return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${p}" fill="none" stroke="${up?'#0f8a5f':'#d64b3a'}" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`}
 fetch('/data/brief.json').then(r=>r.json()).then(d=>{
   $('date').textContent=d.date.replace(/,\s*\d{1,2}:\d{2}\s*[AP]M IST$/,'');
-  if(!window.__tkLive){const t=d.ticker.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;}
+  window.__tkBrief=d.ticker;tkFallback();if(false){const t=d.ticker.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;}
   const cats=['All',...new Set(d.items.map(i=>i.category))];
   if(cats.length>2){const bar=document.createElement('div');bar.className='chips';bar.setAttribute('role','group');
     cats.forEach(c=>{const b=document.createElement('button');b.className='chip';b.textContent=c;b.setAttribute('aria-pressed',c==='All');
@@ -30,7 +30,7 @@ function tzp(tz){const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{tim
   return{wk:p.weekday==='Sat'||p.weekday==='Sun',m:(+p.hour)*60+(+p.minute)}}
 function phase(){const i=tzp('Asia/Kolkata'),e=tzp('America/New_York');
   if(!e.wk&&e.m>=570&&e.m<960)return{g:'US',n:'US markets',s:'LIVE',live:1};
-  if(i.wk)return{g:'IN',n:'India',s:'LAST CLOSE'};
+  if(i.wk)return{g:'IN',n:'India · Weekend',s:'MARKETS CLOSED · LAST CLOSE'};
   if(i.m>=360&&i.m<930)return i.m>=555?{g:'IN',n:'India',s:'LIVE',live:1}:{g:'IN',n:'India',s:'PRE-OPEN'};
   if(i.m>=930)return{g:'CM',n:'Commodities',s:'FUTURES',live:1};
   return{g:'US',n:'US markets',s:'LAST CLOSE'}}
@@ -42,9 +42,13 @@ function tkRender(){const ph=phase();if(ph.g==='IN'&&window.WT_HOL){const H=WT_H
   window.__tkLive=1;const tk=$('ticker');tk.classList.toggle('live',!!ph.live);$('tkname').textContent=ph.n;$('tkstat').textContent=ph.s;
   const h=names.map(n=>{const q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;
     const ck=CMAP[n],tg=ck?'a':'span',hr=ck?` href="/markets.html?i=${encodeURIComponent(ck)}#charts" title="Open ${ck} chart"`:'';return `<${tg} class="tk ${up?'u':'d'}" data-n="${n}"${hr} style="color:inherit;text-decoration:none"><b>${n}</b><i class="v">${fmt(n,q.price,ph.g)}</i><span class="c ${up?'up':'dn'}">${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)</span></${tg}>`}).join('');
-  const t=$('track');t.innerHTML=h+h;t.style.setProperty('--dur',Math.max(32,names.length*7)+'s')}
+  const t=$('track'),sig=ph.g+names.join('|');
+  if(t.dataset.sig===sig){const rows=[...t.children];rows.forEach((el,i)=>{const n=names[i%names.length],q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;el.className='tk '+(up?'u':'d');el.querySelector('.v').textContent=fmt(n,q.price,ph.g);const c=el.querySelector('.c');c.className='c '+(up?'up':'dn');c.textContent=`${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)`})}
+  else{t.innerHTML=h+h;t.dataset.sig=sig;t.style.setProperty('--dur',Math.max(32,names.length*7)+'s')}}
+function tkFallback(){if(window.__tkLive||!window.__tkBrief||!window.__tkDone)return;const d=window.__tkBrief,t=d.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;$('track').dataset.sig='brief'}
 function refresh(){if(document.hidden&&window.__tkLive)return;
-  fetch('/api/quotes').then(r=>r.json()).then(j=>{QS=j.quotes||{};tkRender()}).catch(()=>{})}
+  fetch('/api/quotes').then(r=>r.json()).then(j=>{QS=j.quotes||{};tkRender();window.__tkDone=1;tkFallback()}).catch(()=>{window.__tkDone=1;tkFallback()})}
+setTimeout(()=>{window.__tkDone=1;tkFallback()},4000);
 setInterval(refresh,60000);refresh();window.addEventListener('wt-holidays',()=>{if(Object.keys(QS).length)tkRender()});
 
 /* Newsroom: tabs (Live Wire lives in wire.js) */
