@@ -1,11 +1,15 @@
-name: Dussehra video-board browser smoke test
+name: Dussehra intro and Daily Edition browser smoke test
 
 on:
   push:
     branches: [main]
     paths:
       - "index.html"
-      - "js/dussehra-video-board.js"
+      - "js/site.js"
+      - "js/dussehra-intro.js"
+      - "js/edition.js"
+      - "css/edition.css"
+      - "assets/dussehra-intro.mp4"
       - "assets/dussehra-greeting.mp4"
       - ".github/workflows/dussehra-video-smoke.yml"
   workflow_dispatch:
@@ -14,7 +18,7 @@ permissions:
   contents: read
 
 jobs:
-  video-board:
+  festival-video-flow:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -31,7 +35,7 @@ jobs:
           npm init -y
           npm install playwright
           npx playwright install --with-deps chromium
-      - name: Verify the deployed greeting video actually plays
+      - name: Verify preview intro, greeting handoff, and Daily Edition opening page
         run: |
           cat > /tmp/wt-video-test/check.cjs <<'NODE'
           const { chromium } = require('/tmp/wt-video-test/node_modules/playwright');
@@ -47,73 +51,96 @@ jobs:
                 deviceScaleFactor: 1
               });
               const pageErrors = [];
-              let mediaResponse = null;
+              const mediaResponses = [];
               page.on('pageerror', error => pageErrors.push(error.message));
               page.on('response', response => {
-                if (response.url().includes('/assets/dussehra-greeting.mp4')) {
-                  mediaResponse = {
+                if (response.url().includes('/assets/dussehra-') && response.url().endsWith('.mp4')) {
+                  mediaResponses.push({
+                    url: response.url().split('?')[0],
                     status: response.status(),
                     contentType: response.headers()['content-type'] || '',
                     contentLength: response.headers()['content-length'] || ''
-                  };
+                  });
                 }
               });
 
+              const url = 'https://wealthytrees.online/?previewDussehra=1&previewDussehraBar=1&previewDussehraEdition=1&editionSmokeTest=1';
               const deadline = Date.now() + 240000;
               let deployed = false;
               while (Date.now() < deadline) {
-                await page.goto(
-                  'https://wealthytrees.online/?previewDussehra=1&previewDussehraBar=1&videoSmokeTest=1',
-                  { waitUntil: 'domcontentloaded', timeout: 45000 }
-                );
-                const scriptUrl = await page.locator('script[src*="dussehra-video-board.js"]').getAttribute('src').catch(() => '');
-                if (scriptUrl && scriptUrl.includes('v=4')) {
+                await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+                const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
+                const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
+                const boardCount = await page.locator('.wt-dussehra-video-board').count();
+                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=22') && boardCount === 0) {
                   deployed = true;
                   break;
                 }
-                await page.waitForTimeout(15000);
+                await page.waitForTimeout(12000);
               }
-              if (!deployed) throw new Error('New video-board version was not visible on the live site within 4 minutes.');
+              if (!deployed) throw new Error('The updated preview intro or removed-board homepage has not reached the live site.');
 
-              await page.locator('.wt-dussehra-video-board').waitFor({ state: 'attached', timeout: 20000 });
-              await page.locator('#p-live').scrollIntoViewIfNeeded();
-              await page.locator('.wt-dussehra-video-board.is-locked').waitFor({ state: 'visible', timeout: 15000 });
-
-              const video = page.locator('.wt-dussehra-video-player');
-              await video.waitFor({ state: 'visible', timeout: 10000 });
+              const intro = page.locator('#wt-dussehra-intro video.wt-intro-clip');
+              await intro.waitFor({ state: 'visible', timeout: 20000 });
               await page.waitForFunction(() => {
-                const video = document.querySelector('.wt-dussehra-video-player');
-                return !!video && !video.paused && video.currentTime > 0.25 && video.readyState >= 2;
-              }, null, { timeout: 30000 }).catch(async () => {
-                const state = await video.evaluate(el => ({
-                  src: el.currentSrc || el.src,
-                  paused: el.paused,
-                  currentTime: el.currentTime,
-                  readyState: el.readyState,
-                  networkState: el.networkState,
-                  errorCode: el.error ? el.error.code : null,
-                  errorMessage: el.error ? el.error.message : null,
-                  controls: el.controls
+                const v = document.querySelector('#wt-dussehra-intro video.wt-intro-clip');
+                return !!v && !v.paused && v.currentTime > 0.35 && v.readyState >= 2 && v.videoWidth > 0;
+              }, null, { timeout: 20000 }).catch(async () => {
+                const state = await intro.evaluate(v => ({
+                  currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
+                  readyState: v.readyState, width: v.videoWidth, height: v.videoHeight,
+                  errorCode: v.error ? v.error.code : null
                 }));
-                throw new Error('Greeting video never entered playback: ' + JSON.stringify({state, mediaResponse, pageErrors}));
+                throw new Error('Intro video does not play in preview: ' + JSON.stringify({state, mediaResponses, pageErrors}));
               });
 
-              const finalState = await video.evaluate(el => ({
-                currentTime: el.currentTime,
-                duration: el.duration,
-                paused: el.paused,
-                readyState: el.readyState,
-                videoHeight: el.videoHeight,
-                videoWidth: el.videoWidth,
-                controls: el.controls
-              }));
-              const board = await page.locator('.wt-dussehra-video-board').boundingBox();
-              if (!board || board.y < 0 || board.y + board.height > 900) {
-                throw new Error('Video board is cut off in the desktop viewport: ' + JSON.stringify(board));
+              await page.locator('#wt-dussehra-intro .wt-skip').click();
+              await page.waitForFunction(() => {
+                const v = document.querySelector('#wt-dussehra-intro video');
+                return !!v && (v.currentSrc || v.src).includes('dussehra-greeting.mp4') &&
+                  !v.paused && v.currentTime > 0.2 && v.readyState >= 2 && v.videoWidth > 0;
+              }, null, { timeout: 15000 }).catch(async () => {
+                const state = await page.locator('#wt-dussehra-intro video').evaluate(v => ({
+                  currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
+                  readyState: v.readyState, errorCode: v.error ? v.error.code : null
+                })).catch(() => null);
+                throw new Error('Greeting video handoff after preview intro failed: ' + JSON.stringify({state,mediaResponses,pageErrors}));
+              });
+
+              await page.locator('#wt-dussehra-intro').waitFor({ state: 'detached', timeout: 25000 });
+              const editionTab = page.locator('#t-ed');
+              await editionTab.waitFor({ state: 'visible', timeout: 15000 });
+              await editionTab.click();
+              const editionVideo = page.locator('#p-ed .ed-greeting-video');
+              await editionVideo.waitFor({ state: 'visible', timeout: 60000 });
+              await page.waitForFunction(() => {
+                const v = document.querySelector('#p-ed .ed-greeting-video');
+                return !!v && v.closest('.sl')?.classList.contains('on') &&
+                  !v.paused && v.currentTime > 0.25 && v.readyState >= 2 && v.videoWidth > 0;
+              }, null, { timeout: 30000 }).catch(async () => {
+                const state = await editionVideo.evaluate(v => ({
+                  currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
+                  readyState: v.readyState, videoWidth: v.videoWidth,
+                  errorCode: v.error ? v.error.code : null
+                })).catch(() => null);
+                throw new Error('Daily Edition greeting opening slide does not play: ' + JSON.stringify({state,mediaResponses,pageErrors}));
+              });
+
+              const editionOrder = await page.locator('#p-ed .sl').evaluateAll(nodes =>
+                nodes.map(n => ({className:n.className, text:(n.innerText||'').slice(0,80)}))
+              );
+              if (!editionOrder.length || !editionOrder[0].className.includes('sfestival')) {
+                throw new Error('Greeting video is not the first Daily Edition slide: ' + JSON.stringify(editionOrder.slice(0,3)));
               }
-              if (pageErrors.length) throw new Error('Browser console errors: ' + JSON.stringify(pageErrors));
-              console.log(JSON.stringify({passed: true, mediaResponse, finalState, board}, null, 2));
-              await page.screenshot({ path: '/tmp/wt-video-test/video-board.png', fullPage: false });
+              if (pageErrors.length) throw new Error('Browser errors: ' + JSON.stringify(pageErrors));
+              console.log(JSON.stringify({
+                passed:true,
+                introPlaying:true,
+                greetingHandoffPlaying:true,
+                dailyEditionOpeningSlidePlaying:true,
+                mediaResponses,
+                editionFirstSlides:editionOrder.slice(0,3)
+              },null,2));
             } finally {
               await browser.close();
             }
