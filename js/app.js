@@ -38,14 +38,14 @@ const CMAP={'NIFTY 50':'Nifty 50','SENSEX':'Sensex','BANK NIFTY':'Bank Nifty','N
 const FM={'CRUDE WTI':2,'BRENT':2,'GOLD $/oz':2,'SILVER $/oz':2,'NATURAL GAS':3,'COPPER':3,'USD/INR':2};
 const fmt=(n,v,g)=>v.toLocaleString(g==='IN'?'en-IN':'en-US',{minimumFractionDigits:FM[n]||2,maximumFractionDigits:FM[n]||2});
 let QS={};
-function tkRender(){const ph=phase();if(ph.g==='IN'&&window.WT_HOL){const H=WT_HOL.today();if(H&&H.kind==='closed'){ph.s='HOLIDAY · '+H.name;ph.live=0}else if(H&&H.kind==='muhurat'){ph.s='MUHURAT DAY';ph.live=0}}const names=GRP[ph.g].filter(n=>QS[n]&&QS[n].price&&QS[n].prev);if(!names.length)return;
+function tkRender(){const tkr=$('ticker');if(tkr&&tkr.classList.contains('wt-dussehra-festival'))return;const ph=phase();if(ph.g==='IN'&&window.WT_HOL){const H=WT_HOL.today();if(H&&H.kind==='closed'){ph.s='HOLIDAY · '+H.name;ph.live=0}else if(H&&H.kind==='muhurat'){ph.s='MUHURAT DAY';ph.live=0}}const names=GRP[ph.g].filter(n=>QS[n]&&QS[n].price&&QS[n].prev);if(!names.length)return;
   window.__tkLive=1;const tk=$('ticker');tk.classList.toggle('live',!!ph.live);$('tkname').textContent=ph.n;$('tkstat').textContent=ph.s;
   const h=names.map(n=>{const q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;
     const ck=CMAP[n],tg=ck?'a':'span',hr=ck?` href="/markets.html?i=${encodeURIComponent(ck)}#charts" title="Open ${ck} chart"`:'';return `<${tg} class="tk ${up?'u':'d'}" data-n="${n}"${hr} style="color:inherit;text-decoration:none"><b>${n}</b><i class="v">${fmt(n,q.price,ph.g)}</i><span class="c ${up?'up':'dn'}">${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)</span></${tg}>`}).join('');
   const t=$('track'),sig=ph.g+names.join('|');
   if(t.dataset.sig===sig){const rows=[...t.children];rows.forEach((el,i)=>{const n=names[i%names.length],q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;el.className='tk '+(up?'u':'d');el.querySelector('.v').textContent=fmt(n,q.price,ph.g);const c=el.querySelector('.c');c.className='c '+(up?'up':'dn');c.textContent=`${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)`})}
   else{t.innerHTML=h+h;t.dataset.sig=sig;t.style.setProperty('--dur',Math.max(32,names.length*7)+'s')}}
-function tkFallback(){if(window.__tkLive||!window.__tkBrief||!window.__tkDone)return;const d=window.__tkBrief,t=d.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;$('track').dataset.sig='brief'}
+function tkFallback(){const tkr=$('ticker');if(tkr&&tkr.classList.contains('wt-dussehra-festival'))return;if(window.__tkLive||!window.__tkBrief||!window.__tkDone)return;const d=window.__tkBrief,t=d.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;$('track').dataset.sig='brief'}
 function refresh(){if(document.hidden&&window.__tkLive)return;
   fetch('/api/quotes').then(r=>r.json()).then(j=>{QS=j.quotes||{};tkRender();window.__tkDone=1;tkFallback()}).catch(()=>{window.__tkDone=1;tkFallback()})}
 setTimeout(()=>{window.__tkDone=1;tkFallback()},4000);
