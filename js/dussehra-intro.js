@@ -56,17 +56,17 @@
       #wt-dussehra-intro .wt-error { position:fixed; z-index:9; left:50%; top:50%; transform:translate(-50%,-50%); max-width:min(88vw,420px); margin:0; padding:14px 17px; border-radius:14px; color:#542d14; border:1px solid #dfb361; background:#fff8e7; text-align:center; box-shadow:0 8px 30px #5d36182e; font-size:14px; }
       #wt-dussehra-intro.is-lifting { animation:wtCurtainLift 1.05s cubic-bezier(.6,0,.8,.35) forwards; pointer-events:none; }
       @keyframes wtCurtainLift { 0%{transform:translateY(0);opacity:1} 65%{opacity:1} 100%{transform:translateY(-102%);opacity:.98} }
-      .wt-greeting-overlay {
+      .wt-dussehra-greeting-overlay {
         position:fixed; inset:0; z-index:2147482990; display:grid; place-items:center;
-        padding:clamp(14px,4vw,34px); overflow:hidden; background:rgba(25,54,37,.34);
-        backdrop-filter:blur(3px); opacity:0; animation:wtGreetingAppear .7s ease forwards;
+        padding:0; overflow:hidden; background:#07160f; opacity:0;
+        animation:wtGreetingAppear .7s ease forwards;
       }
       .wt-greeting-video {
         display:block; width:100vw; height:100dvh; max-width:100vw; max-height:100dvh;
         object-fit:contain; aspect-ratio:9/16; border:0; border-radius:0;
         background:#07160f; box-shadow:none;
       }
-      .wt-greeting-overlay.is-leaving { animation:wtGreetingLeave .65s ease forwards; pointer-events:none; }
+      .wt-dussehra-greeting-overlay.is-leaving { animation:wtGreetingLeave .65s ease forwards; pointer-events:none; }
       #wt-dussehra-intro.is-lifting { animation:wtCurtainLift 1.05s cubic-bezier(.6,0,.8,.35) forwards; pointer-events:none; }
       @keyframes wtCurtainLift { 0%{transform:translateY(0);opacity:1} 65%{opacity:1} 100%{transform:translateY(-102%);opacity:.98} }
       @keyframes wtGreetingAppear { to { opacity:1; } }
@@ -87,27 +87,27 @@
   function showGreetingVideo() {
     // The user's uploaded MP4 is the greeting screen. Do not generate or fall back
     // to a separate static greeting card.
-    const overlay = document.createElement("div");
-    overlay.className = "wt-greeting-overlay";
-    overlay.setAttribute("role", "dialog");
-    overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute("aria-label", "Vijayadashami greeting video from WealthyTrees");
-    overlay.innerHTML = `
+    const videoOverlay = document.createElement("div");
+    videoOverlay.className = "wt-dussehra-greeting-overlay";
+    videoOverlay.setAttribute("role", "dialog");
+    videoOverlay.setAttribute("aria-modal", "true");
+    videoOverlay.setAttribute("aria-label", "Vijayadashami greeting video from WealthyTrees");
+    videoOverlay.innerHTML = `
       <video class="wt-greeting-video" autoplay muted playsinline preload="auto"
         aria-label="WealthyTrees Vijayadashami greeting video">
         <source src="/assets/dussehra-greeting.mp4" type="video/mp4">
       </video>
     `;
-    document.body.appendChild(overlay);
+    document.body.appendChild(videoOverlay);
 
-    const greetingVideo = overlay.querySelector(".wt-greeting-video");
+    const greetingVideo = videoOverlay.querySelector(".wt-greeting-video");
     let closed = false;
     const closeVideo = () => {
       if (closed) return;
       closed = true;
       greetingVideo.pause();
-      overlay.classList.add("is-leaving");
-      window.setTimeout(() => overlay.remove(), 650);
+      videoOverlay.classList.add("is-leaving");
+      window.setTimeout(() => videoOverlay.remove(), 650);
     };
 
     greetingVideo.addEventListener("ended", closeVideo, { once: true });
