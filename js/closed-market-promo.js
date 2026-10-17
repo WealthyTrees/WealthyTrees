@@ -3,7 +3,10 @@
    Preview any time with ?previewMarketPromo=1. */
 (() => {
   "use strict";
-  const PREVIEW = new URLSearchParams(window.location.search).get("previewMarketPromo") === "1";
+  const params = new URLSearchParams(window.location.search);
+  const PREVIEW = params.get("previewMarketPromo") === "1";
+  const FESTIVE_PREVIEW = params.get("previewDussehraFestival") === "1" || params.get("previewDussehraBar") === "1";
+  const DUSSEHRA_DATE = "2026-10-20";
 
   const cards = [
     {
@@ -65,7 +68,9 @@
   function render() {
     const track = document.getElementById("track");
     if (!track) return;
-    const shouldPromote = PREVIEW || indiaMarketClosed();
+    const day = indiaDay();
+    const dussehra = day.date === DUSSEHRA_DATE || FESTIVE_PREVIEW;
+    const shouldPromote = !dussehra && (PREVIEW || indiaMarketClosed());
 
     if (shouldPromote) {
       if (track.dataset.wtPromoActive === "1" && track.querySelector(".wt-promo-card")) return;
