@@ -49,13 +49,20 @@
     if (SHOW_FESTIVAL_GREETING) {
       s = slide("sfestival", slides.length);
       var greeting = el("video", "ed-greeting-video");
-      greeting.src = "/assets/dussehra-greeting.mp4";
+      // This is an embedded story slide, not a separate video-player UI.
       greeting.autoplay = true;
       greeting.muted = true;
+      greeting.defaultMuted = true;
       greeting.playsInline = true;
-      greeting.controls = true;
+      greeting.loop = true;
       greeting.preload = "auto";
+      greeting.setAttribute("autoplay", "");
+      greeting.setAttribute("muted", "");
+      greeting.setAttribute("playsinline", "");
+      greeting.setAttribute("webkit-playsinline", "");
+      greeting.setAttribute("loop", "");
       greeting.setAttribute("aria-label", "WealthyTrees Dussehra greeting video");
+      greeting.src = "/assets/dussehra-greeting.mp4";
       var greetingTitle = el("div", "ed-greeting-title");
       greetingTitle.append(el("span", "pillx", "Special festival edition"), el("strong", "", "शुभ विजयादशमी"));
       var greetingHint = el("p", "ed-greeting-hint", "Swipe or tap to continue to the news");
@@ -96,11 +103,18 @@
     var sx = null, sy = 0, st = 0, nc = false;
     story.addEventListener("pointerdown", function (e) { if (e.target.closest("a,button:not(.tz)")) { sx = null; return; } sx = e.clientX; sy = e.clientY; st = Date.now(); hold(true); });
     story.addEventListener("pointerup", function (e) {
-      hold(false); if (sx == null) return; var dx = e.clientX - sx, dy = e.clientY - sy, longp = Date.now() - st >= 300; sx = null;
-      if (longp || Math.abs(dx) > 10) { nc = true; setTimeout(function () { nc = false; }, 350); }
-      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+      hold(false); if (sx == null) return;
+      var dx = e.clientX - sx, dy = e.clientY - sy, elapsed = Date.now() - st, longp = elapsed >= 300;
+      sx = null;
+      if (longp || Math.abs(dx) > 10 || Math.abs(dy) > 10) { nc = true; setTimeout(function () { nc = false; }, 350); }
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        go(cur + (dx < 0 ? 1 : -1));
+      } else if (!longp && Math.abs(dx) <= 12 && Math.abs(dy) <= 12 && slides[cur] && slides[cur].querySelector(".ed-greeting-video")) {
+        // Tap anywhere on the greeting slide to move directly to the next Story card.
+        go(cur + 1);
+      }
     });
-    story.addEventListener("pointercancel", function () { sx = null; hold(false); });
+        story.addEventListener("pointercancel", function () { sx = null; hold(false); });
     document.addEventListener("keydown", function (e) { if (!visible || /INPUT|TEXTAREA/.test(e.target.tagName)) return; if (e.key === "ArrowRight") go(cur + 1); else if (e.key === "ArrowLeft") go(cur - 1); });
     go(0);
   }
@@ -115,11 +129,18 @@
       var v = node.querySelector(".ed-greeting-video");
       if (!v) return;
       if (i === cur && visible && !panel.hidden) {
+        // Keep the clip embedded and muted. Never expose native media controls.
+        v.muted = true;
+        v.defaultMuted = true;
         var promise = v.play();
         if (promise && typeof promise.catch === "function") promise.catch(function () {
-          v.controls = true;
-          var hint = node.querySelector(".ed-greeting-hint");
-          if (hint) hint.textContent = "Press ▶ to play the greeting, then swipe to continue.";
+          // Retry once shortly after the browser's first media-decoding pass.
+          window.setTimeout(function () {
+            if (i === cur && visible && !panel.hidden) {
+              var retry = v.play();
+              if (retry && typeof retry.catch === "function") retry.catch(function () {});
+            }
+          }, 250);
         });
       } else {
         v.pause();
