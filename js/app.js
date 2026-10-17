@@ -46,8 +46,10 @@ function tkRender(){const tkr=$('ticker'),tr=$('track');if(tkr&&tkr.classList.co
   if(t.dataset.sig===sig){const rows=[...t.children];rows.forEach((el,i)=>{const n=names[i%names.length],q=QS[n],d=q.price-q.prev,p=d/q.prev*100,up=d>=0;el.className='tk '+(up?'u':'d');el.querySelector('.v').textContent=fmt(n,q.price,ph.g);const c=el.querySelector('.c');c.className='c '+(up?'up':'dn');c.textContent=`${up?'▲':'▼'} ${Math.abs(d).toFixed(2)} (${Math.abs(p).toFixed(2)}%)`})}
   else{t.innerHTML=h+h;t.dataset.sig=sig;t.style.setProperty('--dur',Math.max(32,names.length*7)+'s')}}
 function tkFallback(){const tkr=$('ticker'),tr=$('track');if(tkr&&tkr.classList.contains('wt-dussehra-festival'))return;if(tr&&(tr.dataset.wtFestival==='1'||tr.dataset.wtPromoActive==='1'))return;if(window.__tkLive||!window.__tkBrief||!window.__tkDone)return;const d=window.__tkBrief,t=d.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;$('track').dataset.sig='brief'}
+/* keep the ticker steady: ignore broken quotes, and keep a missing index's last good price for 10 minutes so the list never shrinks and re-draws */
+function mergeQ(n){const now=Date.now(),m={};Object.keys(n).forEach(k=>{const q=n[k];if(q&&isFinite(q.price)&&isFinite(q.prev)&&q.price>0&&q.prev>0&&Math.abs(q.price/q.prev-1)<0.6)m[k]=Object.assign({},q,{_at:now})});Object.keys(QS).forEach(k=>{if(!m[k]&&QS[k]._at&&now-QS[k]._at<600000)m[k]=QS[k]});QS=m}
 function refresh(){if(document.hidden&&window.__tkLive)return;
-  fetch('/api/quotes').then(r=>r.json()).then(j=>{QS=j.quotes||{};tkRender();window.__tkDone=1;tkFallback()}).catch(()=>{window.__tkDone=1;tkFallback()})}
+  fetch('/api/quotes').then(r=>r.json()).then(j=>{mergeQ(j.quotes||{});tkRender();window.__tkDone=1;tkFallback()}).catch(()=>{window.__tkDone=1;tkFallback()})}
 setTimeout(()=>{window.__tkDone=1;tkFallback()},4000);
 setInterval(refresh,60000);refresh();window.addEventListener('wt-holidays',()=>{if(Object.keys(QS).length)tkRender()});
 

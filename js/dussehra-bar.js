@@ -182,6 +182,18 @@
     view.appendChild(petals);
   }
 
+  function restore() {
+    const t = document.getElementById("ticker"), k = document.getElementById("track");
+    if (!t || t.dataset.wtDussehraTextReady !== "1") return;
+    t.classList.remove("wt-dussehra-text-ticker"); delete t.dataset.wtDussehraTextReady; t.removeAttribute("aria-label");
+    const lb = t.querySelector(".tk-label"); if (lb) lb.removeAttribute("aria-hidden");
+    const pl = t.querySelector(".wt-dussehra-petal-layer"); if (pl) pl.remove();
+    if (k) { delete k.dataset.wtFestival; delete k.dataset.wtPromoActive; k.dataset.sig = ""; k.innerHTML = ""; }
+    window.dispatchEvent(new Event("wt-holidays")); /* live prices redraw straight away */
+  }
+  /* a tab left open past midnight returns to normal live prices */
+  if (!preview && indiaDate() === FESTIVAL_DATE) setInterval(function () { if (indiaDate() !== FESTIVAL_DATE) restore(); }, 30000);
+
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
 })();

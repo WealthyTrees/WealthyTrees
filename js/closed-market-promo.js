@@ -90,12 +90,13 @@
       delete track.dataset.wtPromoActive;
       track.dataset.sig = "";
       track.style.removeProperty("--dur");
-      // The main ticker script redraws current market prices on its next refresh.
+      window.dispatchEvent(new Event("wt-holidays")); // redraw live prices straight away
     }
   }
 
   function init() {
     render();
+    window.addEventListener("wt-holidays", render);
     // Poll rather than observing all descendants: ticker text/content changes should not
     // trigger a render loop or compete with the festival animation.
     window.setInterval(render, 15000);

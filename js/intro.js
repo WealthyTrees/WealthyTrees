@@ -61,7 +61,7 @@
   raf = requestAnimationFrame(frame);
   var lifted = false, tl, tf;
   function lift() { if (lifted) return; lifted = true; clearInterval(ty); sp.textContent = TXT; o.classList.add("up"); cv.style.opacity = "0"; tf = setTimeout(done, 950); }
-  function done() { if (gone) return; gone = true; cancelAnimationFrame(raf); clearTimeout(tl); clearTimeout(tf); clearTimeout(ks); root.classList.remove("wti-lock"); if (o.parentNode) o.parentNode.removeChild(o); document.removeEventListener("keydown", key2); }
+  function done() { if (gone) return; gone = true; cancelAnimationFrame(raf); clearTimeout(tl); clearTimeout(tf); clearTimeout(ks); root.classList.remove("wti-lock"); try { var hh = location.hash && document.querySelector(location.hash); if (hh) hh.scrollIntoView(); else window.scrollTo(0, 0); } catch (e) { window.scrollTo(0, 0); } if (o.parentNode) o.parentNode.removeChild(o); document.removeEventListener("keydown", key2); }
   function key2(e) { if (e.key === "Escape" || e.key === "Enter" || e.key === " ") lift(); }
   o.addEventListener("click", lift); document.addEventListener("keydown", key2);
   tl = setTimeout(lift, T.lift);

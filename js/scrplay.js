@@ -21,7 +21,7 @@
   function stars() { st.textContent = "\u2605".repeat(score) + "\u2606".repeat(5 - score); }
   function ask() { var pe = pick(PE), eps = pick(EPS); cur = { pe: pe, eps: eps, price: pe * eps }; n++; phase = "ask";
     q.innerHTML = '<span class="gpn">Question ' + n + ' of 5</span> <span class="gpx">Price \u20B9' + cur.price + '</span> \u00F7 <span class="gpx">Earnings \u20B9' + cur.eps + '</span> = <b>?</b>';
-    inp.value = ""; inp.disabled = false; inp.hidden = false; btn.textContent = "Check"; fb.textContent = ""; inp.focus(); }
+    inp.value = ""; inp.disabled = false; inp.hidden = false; btn.textContent = "Check"; fb.textContent = ""; if (n > 1) inp.focus({ preventScroll: true }); }
   function act() {
     if (phase === "ask") { var v = parseFloat(inp.value); if (isNaN(v)) { fb.textContent = "Type a number first."; return; }
       var ok = Math.abs(v - cur.pe) <= 0.5; if (ok) score++; stars();

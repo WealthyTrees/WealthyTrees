@@ -70,6 +70,15 @@ async function editionChecks(page, label) {
         if (errors.length) throw new Error(errors.slice(0, 2).join(' | '));
       });
       await ctx.close(); }
+    { const { ctx, page } = await open(browser, NORMAL, { viewport: { width: 390, height: 844 } }, '/markets.html');
+      await check('Markets page: after the intro lifts you land at the top, not on the PE game', async () => {
+        await page.waitForFunction(() => !document.querySelector('.wti'), null, { timeout: 30000 });
+        await page.waitForTimeout(1500);
+        const y = await page.evaluate(() => Math.round(scrollY)), a = await page.evaluate(() => document.activeElement.id || '');
+        if (y > 80) throw new Error('page opened scrolled down to ' + y + 'px');
+        if (a === 'gpi') throw new Error('PE game grabbed the cursor');
+      });
+      await ctx.close(); }
     await check('Festival video files are online', async () => {
       const ctx = await browser.newContext();
       for (const f of ['dussehra-intro.mp4', 'dussehra-greeting.mp4', 'dussehra-greeting-poster.svg']) { const r = await ctx.request.get(`${BASE}/assets/${f}`); if (r.status() !== 200) throw new Error(f + ' returned ' + r.status()); }
