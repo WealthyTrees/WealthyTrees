@@ -8,9 +8,10 @@
   try { if (!q && localStorage.getItem("wt-fest") === key) return; if (!q) localStorage.setItem("wt-fest", key); } catch (e) {}
   var h = window.WT_HOL, tr = h && h.trading[key], mu = key === "2026-11-08";
   var note = mu ? "Muhurat trading session today. Timings are announced by NSE." : tr ? "Indian stock markets are closed today." : "";
+  if (key === "2026-10-20" && !rm && document.getElementById("p-live")) return; /* home already has intro, ticker and festival edition */
   if (key === "2026-10-20" && !rm) {
     var ds = document.createElement("script"); ds.src = "/js/dussehra.js?v=3" + (q ? "&t=" + Date.now() : "");
-    ds.onload = function () { window.WT_DUSSEHRA(note); }; document.body.appendChild(ds); return;
+    ds.onload = function () { var n = 0, w = setInterval(function () { if (!document.getElementById("wt-dussehra-intro") || ++n > 60) { clearInterval(w); window.WT_DUSSEHRA(note); } }, 500); }; document.body.appendChild(ds); return;
   }
   var st = document.createElement("style");
   st.textContent = ".wt-fest{position:fixed;top:12px;left:50%;z-index:99990;width:min(92vw,460px);transform:translate(-50%,-140%);transition:transform .7s cubic-bezier(.2,1.3,.4,1),opacity .5s;padding:.9rem 2.4rem .9rem 1rem;border-radius:16px;text-align:center;background:var(--paper,#fff);color:var(--ink,#16231d);border:2px solid var(--gold,#e0a82e);box-shadow:0 14px 40px rgba(0,0,0,.25),0 0 28px color-mix(in srgb,var(--gold,#e0a82e) 40%,transparent)}"

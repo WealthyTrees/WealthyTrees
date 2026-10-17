@@ -71,11 +71,11 @@
 (function () {
   if (!document.getElementById("p-live")) return;
   var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/edition.css?v=9"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/js/edition.js?v=9"; s.defer = true; document.body.appendChild(s);
+  var s = document.createElement("script"); s.src = "/js/edition.js?v=10"; s.defer = true; document.body.appendChild(s);
 })();
 
 
 (function () {
-  function add(n, cb) { var s = document.createElement("script"); s.src = "/js/" + n + ".js?v=3" + (location.search.indexOf("fest=") > -1 ? "&t=" + Date.now() : ""); s.onload = s.onerror = cb || null; document.body.appendChild(s); }
+  function add(n, cb) { var s = document.createElement("script"); s.src = "/js/" + n + ".js?v=4" + (location.search.indexOf("fest=") > -1 ? "&t=" + Date.now() : ""); s.onload = s.onerror = cb || null; document.body.appendChild(s); }
   add("holidays", function () { add("festival"); });
 })();

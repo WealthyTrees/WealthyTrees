@@ -70,7 +70,7 @@
 
 
   function init() {
-    if (!PREVIEW_MODE && indiaDateString() !== FESTIVAL_DATE) return;
+    if (!PREVIEW_MODE && indiaDateString() !== FESTIVAL_DATE) return; if (!PREVIEW_MODE && window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     try { if (!PREVIEW_MODE && sessionStorage.getItem(SESSION_KEY) === "1") return; } catch (_) {}
     if (document.getElementById("wt-dussehra-intro")) return;
 

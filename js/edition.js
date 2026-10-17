@@ -137,6 +137,7 @@
     slides.forEach(function (node, i) {
       var v = node.querySelector(".ed-greeting-video");
       if (!v) return;
+      if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { v.pause(); return; }
       if (i === cur && visible && !panel.hidden) {
         // Keep the clip embedded and muted. Never expose native media controls.
         v.muted = true;
