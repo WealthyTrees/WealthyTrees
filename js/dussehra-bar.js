@@ -2,7 +2,8 @@
 (() => {
   "use strict";
   const FESTIVAL_DATE = "2026-10-20";
-  const preview = new URLSearchParams(window.location.search).get("previewDussehraBar") === "1";
+  const params = new URLSearchParams(window.location.search);
+  const preview = params.get("previewDussehraBar") === "1" || params.get("previewDussehraFestival") === "1";
   const frames = [
     "MARKETS CLOSED · DUSSEHRA",
     "Happy Vijayadashami",
