@@ -112,6 +112,7 @@ jobs:
               const editionTab = page.locator('#t-ed');
               await editionTab.waitFor({ state: 'visible', timeout: 15000 });
               await editionTab.click();
+              await page.locator('#p-ed .story').scrollIntoViewIfNeeded();
               const editionVideo = page.locator('#p-ed .ed-greeting-video');
               await editionVideo.waitFor({ state: 'visible', timeout: 60000 });
               await page.waitForFunction(() => {
@@ -201,6 +202,7 @@ jobs:
               await mobilePage.locator('#wt-dussehra-intro .wt-enter').click({timeout:20000});
               await mobilePage.locator('#wt-dussehra-intro').waitFor({state:'detached',timeout:10000});
               await mobilePage.locator('#t-ed').click();
+              await mobilePage.locator('#p-ed .story').scrollIntoViewIfNeeded();
               const mobileVideo = mobilePage.locator('#p-ed .ed-greeting-video');
               await mobilePage.waitForFunction(() => {
                 const v = document.querySelector('#p-ed .ed-greeting-video');
