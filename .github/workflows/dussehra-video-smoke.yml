@@ -1,0 +1,125 @@
+name: Dussehra video-board browser smoke test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "js/dussehra-video-board.js"
+      - "assets/dussehra-greeting.mp4"
+      - ".github/workflows/dussehra-video-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  video-board:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Playwright and Chromium
+        run: |
+          mkdir -p /tmp/wt-video-test
+          cd /tmp/wt-video-test
+          npm init -y
+          npm install playwright
+          npx playwright install --with-deps chromium
+      - name: Verify the deployed greeting video actually plays
+        run: |
+          cat > /tmp/wt-video-test/check.cjs <<'NODE'
+          const { chromium } = require('/tmp/wt-video-test/node_modules/playwright');
+
+          (async () => {
+            const browser = await chromium.launch({
+              headless: true,
+              args: ['--autoplay-policy=no-user-gesture-required']
+            });
+            try {
+              const page = await browser.newPage({
+                viewport: { width: 1440, height: 900 },
+                deviceScaleFactor: 1
+              });
+              const pageErrors = [];
+              let mediaResponse = null;
+              page.on('pageerror', error => pageErrors.push(error.message));
+              page.on('response', response => {
+                if (response.url().includes('/assets/dussehra-greeting.mp4')) {
+                  mediaResponse = {
+                    status: response.status(),
+                    contentType: response.headers()['content-type'] || '',
+                    contentLength: response.headers()['content-length'] || ''
+                  };
+                }
+              });
+
+              const deadline = Date.now() + 240000;
+              let deployed = false;
+              while (Date.now() < deadline) {
+                await page.goto(
+                  'https://wealthytrees.online/?previewDussehra=1&previewDussehraBar=1&videoSmokeTest=1',
+                  { waitUntil: 'domcontentloaded', timeout: 45000 }
+                );
+                const scriptUrl = await page.locator('script[src*="dussehra-video-board.js"]').getAttribute('src').catch(() => '');
+                if (scriptUrl && scriptUrl.includes('v=3')) {
+                  deployed = true;
+                  break;
+                }
+                await page.waitForTimeout(15000);
+              }
+              if (!deployed) throw new Error('New video-board version was not visible on the live site within 4 minutes.');
+
+              await page.locator('.wt-dussehra-video-board').waitFor({ state: 'attached', timeout: 20000 });
+              await page.locator('#brief').scrollIntoViewIfNeeded();
+              await page.locator('.wt-dussehra-video-board.is-locked').waitFor({ state: 'visible', timeout: 15000 });
+
+              const video = page.locator('.wt-dussehra-video-player');
+              await video.waitFor({ state: 'visible', timeout: 10000 });
+              await page.waitForFunction(() => {
+                const video = document.querySelector('.wt-dussehra-video-player');
+                return !!video && !video.paused && video.currentTime > 0.25 && video.readyState >= 2;
+              }, null, { timeout: 30000 }).catch(async () => {
+                const state = await video.evaluate(el => ({
+                  src: el.currentSrc || el.src,
+                  paused: el.paused,
+                  currentTime: el.currentTime,
+                  readyState: el.readyState,
+                  networkState: el.networkState,
+                  errorCode: el.error ? el.error.code : null,
+                  errorMessage: el.error ? el.error.message : null,
+                  controls: el.controls
+                }));
+                throw new Error('Greeting video never entered playback: ' + JSON.stringify({state, mediaResponse, pageErrors}));
+              });
+
+              const finalState = await video.evaluate(el => ({
+                currentTime: el.currentTime,
+                duration: el.duration,
+                paused: el.paused,
+                readyState: el.readyState,
+                videoHeight: el.videoHeight,
+                videoWidth: el.videoWidth,
+                controls: el.controls
+              }));
+              const board = await page.locator('.wt-dussehra-video-board').boundingBox();
+              if (!board || board.y < 0 || board.y + board.height > 900) {
+                throw new Error('Video board is cut off in the desktop viewport: ' + JSON.stringify(board));
+              }
+              if (pageErrors.length) throw new Error('Browser console errors: ' + JSON.stringify(pageErrors));
+              console.log(JSON.stringify({passed: true, mediaResponse, finalState, board}, null, 2));
+              await page.screenshot({ path: '/tmp/wt-video-test/video-board.png', fullPage: false });
+            } finally {
+              await browser.close();
+            }
+          })().catch(error => {
+            console.error(error.stack || error);
+            process.exit(1);
+          });
+          NODE
+          node /tmp/wt-video-test/check.cjs
