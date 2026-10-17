@@ -92,11 +92,12 @@
             <path d="M864 162L850 152L840 163" fill="none" stroke="#e8c878" stroke-width="4" stroke-linecap="round"/>
           </g>
           <g class="wt-fest-arrow" filter="url(#wtdGlow)">
-            <path d="M0 0H74" stroke="#fff5b6" stroke-width="4" stroke-linecap="round"/>
-            <path d="M-15 0L8 -11L4 0L8 11Z" fill="url(#wtdGold)" stroke="#fff6bd" stroke-width="1"/>
-            <path d="M71 -4L83 -10M71 4L83 10" stroke="#f0ce73" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M22 -8L14 -16M22 8L14 16" stroke="#fff1b7" stroke-width="2"/>
-            <circle cx="38" cy="0" r="3.4" fill="#fff"/>
+            <path d="M0 190H74" stroke="#fff5b6" stroke-width="4" stroke-linecap="round"/>
+            <path d="M-15 190L8 179L4 190L8 201Z" fill="url(#wtdGold)" stroke="#fff6bd" stroke-width="1"/>
+            <path d="M71 186L83 180M71 194L83 200" stroke="#f0ce73" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M22 182L14 174M22 198L14 206" stroke="#fff1b7" stroke-width="2"/>
+            <circle cx="38" cy="190" r="3.4" fill="#fff"/>
+            <path d="M25 190L9 190" stroke="#ffb04e" stroke-width="9" opacity=".45"/>
           </g>
           <g class="wt-fest-main-burst" transform="translate(298 191)" filter="url(#wtdGlow)">
             <use href="#wtdSpark"/>
