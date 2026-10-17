@@ -202,7 +202,11 @@
     greetingVideo.addEventListener("ended", () => window.setTimeout(closeCard, 500), { once: true });
     greetingVideo.addEventListener("error", fallbackToStaticCard, { once: true });
     window.setTimeout(closeCard, 16000);
-    greetingVideo.play().catch(() => { greetingVideo.setAttribute("controls", "controls"); });
+    // A missing or blocked MP4 must never leave a blank greeting card behind.
+    window.setTimeout(() => {
+      if (!closed && !fellBack && greetingVideo.readyState < 2) fallbackToStaticCard();
+    }, 2500);
+    greetingVideo.play().catch(fallbackToStaticCard);
   }
 
   function init() {
