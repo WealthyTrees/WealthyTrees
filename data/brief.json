@@ -1,5 +1,5 @@
 {
- "date": "Friday, 16 October 2026",
+ "date": "Saturday, 17 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,179",
-   "change": 0.2
+   "value": "4,187",
+   "change": 0.4
   },
   {
    "name": "CRUDE WTI",
-   "value": "$99.2",
-   "change": 2.81
+   "value": "$99.0",
+   "change": 2.63
   },
   {
    "name": "USD/INR",
@@ -28,92 +28,92 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,649",
-   "change": -1.23
+   "value": "7,659",
+   "change": -1.09
   },
   {
    "name": "NASDAQ",
-   "value": "26,118",
-   "change": -2.23
+   "value": "26,140",
+   "change": -2.14
   },
   {
    "name": "DOW",
-   "value": "51,902",
-   "change": -0.53
+   "value": "52,002",
+   "change": -0.34
   }
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "Domestic Currency Records Strongest Weekly Advance in Several Months",
-   "summary": "The Indian currency appreciated by two percent over the past week following regulatory interventions aimed at curbing downward volatility. Market observers note that enduring stability will depend on broader economic conditions.",
-   "why": "Exchange rate shifts directly affect the cost of national imports and foreign investment flows.",
+   "category": "Equity",
+   "title": "Domestic Equity Gauges Advance for a Second Session Spurred by Technology Companies",
+   "summary": "Indian benchmark indices finished higher, supported by substantial investor demand across information technology firms. This marked consecutive daily progress for the key broader market indicators.",
+   "why": "Tracking sector-specific moves helps newcomers understand how heavily weighted industries like software services influence broader index performance.",
+   "source": "Deccan Herald",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORHhWaW1EeFFCazIyVU1uR2NDUWM2NEtDOWFQSFdQVGlDWWNicHVsNi1HVml6MWlJblR1TDMxcW5fQV9HWG9jUzFrRTB2cFZjbFk3SnZKbk1NUVZUUGhDSEhkU0ZwZjRjV21mYkt6UlNjTUhLeWRlMHY5SS1TaE5PTVRqUzNUNzZnYzJGTjA4WTAwZ1NJenJmQTkwUUd3OFFnTE5YaXZFamtmaGNnSnNyaTRHa25RY3EwTi12Y2gxVHA?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Lender Warns Capital Adequacy May Erode Following Apex Court Bond Order",
+   "summary": "Yes Bank indicated its primary equity buffer could contract by about 250 basis points after judicial validation of overturned debt cancellations. The determination affects over eight thousand crore rupees of perpetual debt instruments.",
+   "why": "Core capital metrics show how much buffer a financial institution possesses to absorb losses and comply with banking safeguards.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/yes-bank-flags-250-bps-impact-in-core-capital-ratio-after-supreme-court-upholds-at-1-bond-write-off-ruling-11792175520924.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Fitness Enterprise Secures Regulatory Clearance for Forthcoming Public Offering",
+   "summary": "Cult.fit received observations from the securities regulator to conduct an initial share offering consisting of a fresh 950 crore rupee issue and an offer for sale. The business achieved over 36 percent revenue growth in fiscal 2026 alongside better operating profitability.",
+   "why": "Understanding how companies transition from private backing to public bourses introduces novice investors to primary market capital raising.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-posts-best-week-in-seven-months-fundamentals-key-for-lasting-turnaround/articleshow/134991672.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Benchmark Indices Finish Higher Supported by Information Technology Sector",
-   "summary": "Major Indian equity gauges advanced during Friday trade, with the Nifty breaching the 23,100 threshold. Technology companies served as the primary driver behind the broader market upswing.",
-   "why": "Index levels reflect overall market sentiment and serve as performance benchmarks for equity investors.",
-   "source": "APAC Media",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOGdqRkVQd1I1bmlUSGJqM2tpeC1CT1N5a3ptNll5RnJ1OEJuUy1oUlozVk1jbHFndUNsczhfWWpQenloWmhBTVRnZzF0SjNDbnBjQ1JvZTJvenA0ZzdZUEs0X2tzQTVUX2FONHdrbW5ObWJOWTRoVWRlX2VKQXVFSFhmSHozaXc?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Tech Mahindra Shares Advance Following Payout and Bonus Equity Announcement",
-   "summary": "Shares of the information technology firm climbed up to eight percent during daily trading. The rally occurred after corporate declarations regarding investor dividends and additional share issuances.",
-   "why": "Corporate actions like dividends and bonus issues distribute profits and expand an investor's share count without extra cost.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/tech-mahindra-dividend-bonus-share-2026-double-delight-for-investors-this-diwali-should-you-buy-ahead-of-record-date-11792139485359.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Silver Leads Annual Precious Metal Returns Ahead of Gold and Platinum",
-   "summary": "Over a twelve-month span, domestic silver values climbed roughly forty-seven percent. This outpaced gains recorded by gold and platinum, which rose twenty-six percent and ten and a half percent respectively.",
-   "why": "Comparing asset returns helps investors understand how industrial usage and inflation hedging influence metal prices differently.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-vs-silver-vs-platinum-which-metal-saw-biggest-rally-since-last-dussehra-experts-explain-outlook-11792142307625.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "September Precious Metal Inflows Contract Steeply",
-   "summary": "India witnessed an eighty-one percent drop in inbound gold deliveries during September. Incoming shipments of silver also contracted by nearly half over the same period.",
-   "why": "Import volumes provide insight into consumer appetite, domestic jewelry manufacturing activity, and the national trade balance.",
-   "source": "India Today",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWWZ0ZE9va2JWQlRKU0hIVmNyZ2F6a0VGUFU2RTVoSHE0MkFMSHB1YnZyUWdwaVNEaW1ZR1ctQkdNQnBVQ2xHZU5ITXdqbE0yYU1xN0JmQThTclA2MG5qZnpaOUVZc0RpOUREVm9HcEF0YjBaYVFPaGJXS2UtWDRsTEt6bmlPN0JVaVZWSFJicFkwM0F2SEQ4LVpyXzIzLTBia0hnNTV4T0g5RTN0RmhWdGxmbXpla2FER18wc2hha0NMd9IBwgFBVV95cUxNWWZ0ZE9va2JWQlRKU0hIVmNyZ2F6a0VGUFU2RTVoSHE0MkFMSHB1YnZyUWdwaVNEaW1ZR1ctQkdNQnBVQ2xHZU5ITXdqbE0yYU1xN0JmQThTclA2MG5qZnpaOUVZc0RpOUREVm9HcEF0YjBaYVFPaGJXS2UtWDRsTEt6bmlPN0JVaVZWSFJicFkwM0F2SEQ4LVpyXzIzLTBia0hnNTV4T0g5RTN0RmhWdGxmbXpla2FER18wc2hha0NMdw?oc=5"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/cult-fit-receives-sebi-approval-for-proposed-ipo/articleshow/134997161.cms"
   },
   {
    "category": "Economy",
-   "title": "Currency Support Actions Constrain Banking Cash Balances and Elevate Yields",
-   "summary": "The central bank's efforts to shield the domestic currency have absorbed cash from the financial system. Consequently, available market liquidity has decreased while bond interest rates have climbed.",
-   "why": "When central banks sell foreign reserves to support a currency, domestic money supply shrinks, raising borrowing costs across the economy.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZVMxeW1tQXVxdkxySTZBaVEzVHJHc1BwV1M5QWI4dmRvSGdnZl9NOGNjWEx0WWEwclpvMEQ5RTQxMzJUenRBRTZQSng4ZmQ3c1hrdEs1ZURMQmhZaGdBN0JnRkRSdDZ6M0JmUUlPZjBlT244NV9Pc2VoMXlPZVlORUhGM1E5Um1HT1VZbUJFRXA0RVdXSWgxZTVENFFNZFJuWllNUDFIdDNBMF9QcDZuQXBLeTFNR1I4blVQbklvTHUzOHdrc21uNWlTZXF0bi1WM1HSAdcBQVVfeXFMTkE5MS1CeGl3MVZOaWpKeXBUb3czdHREQVBtUm9PU1JlNUdQX0hSdjYxVExLSTQzTVlia0V4YXZGQmpnU25pUEhxQjY5ZEhEcjJQcmQ3Z00zZkRCaEpBOW5mMGFKY2tYTmNzXzdUOVEweVJLQ0psa245MV9LM2N6RVJqdlhVU1ZsMloxVGRjcC1rSFZVX2pIVmVaYWY1MTY3aHI2bjZuUTlEbnRkVXotaUd3akNtbnpIWXhQVFAxODdXN1RGMkZUQWc2OGkyY040TmNjMmVkZ2M?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Regional Administrations Plan Debt Issuance of Twenty-Four Thousand Crore",
-   "summary": "Several state governments intend to raise funds by auctioning sovereign securities. The combined borrowing program amounts to an aggregate face value of 24,400 crore rupees.",
-   "why": "State government bonds represent sovereign borrowing instruments used to finance public infrastructure and regional expenditure.",
+   "title": "Central Bank Clears Combination of Overseas Branches into Private Domestic Lender",
+   "summary": "The Reserve Bank of India approved the integration of Emirates NBD Bank's local branch operations with RBL Bank. The formal sanction permits the transfer of the foreign lender's Indian offices into the domestic bank.",
+   "why": "Regulatory clearances for banking amalgamations alter branch footprints and reshape competitive reach in the domestic lending landscape.",
    "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63814"
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Currency Strengthens Modestly Following Monetary Authority Market Action",
+   "summary": "The rupee gained seven paise to finish at 94.92 against the US dollar. The upward move was underpinned by active intervention from the central bank in currency trading.",
+   "why": "Central bank presence in the foreign exchange market dampens wild currency swings and helps restrain imported inflationary pressures.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUXdJYUU0cE5MMExnY0ktQmdfS3lNakxIN3dYbmNUWUhQVUhTLXY5Wk12bXphaWRPdlcyWnpUdjc2VE1DZU9md0c3Wlhkc1NRcVBuMk53MTcyQXhhN2NKd2lsY2JoLS1OMDN5ZnVxVWZGaEtZd19oVEZ1M0U1U0plOW1sR2tnTjVaUlphZG84dHNJSW5VemZUc3BXZDUtelpqV25xT2h4MC1vTmFLUzRIYU1HVklPMlNUTm9vYnV1cl9NYWlaNFNRdXF3SWJsVEp6X3fSAdgBQVVfeXFMTVRMNXl2STAyWlluMHRhUnpxd2ZURm9MWFhsMGVaLUJMcTdYYU9YakxsbW10ZElXS1VqajVCbkY0allnS2M5MGFyQUlTVEVhcjcwVktvLWNwWEhLajhkaG5vXzdRRmVVNkJjS1Nha3FHX1FEcHNIcmJGc1ZfVXFwWjktODZRazdtM1JpZGFIS2JGeS0wZmRLY3BZRVRVc0VhNjI1bUxodmlHREt6VWYzRk9hOUpUOWw4NDktSFJmVnVrRDA2dWlXeDdFUTl4MHpTMHFWOEFmdFF6?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "National Foreign Exchange Reserves Shrink for Fifth Week to 726 Billion Dollars",
+   "summary": "India's foreign currency assets dropped over five consecutive weekly periods to settle at 726 billion dollars. The drawdown was confirmed in regular statistical disclosures from the central bank.",
+   "why": "Foreign exchange reserves function as a national liquidity buffer that authorities deploy to defend the domestic currency during outflows.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVmRHRHlQMWJNcWl0WElCNjF1NjdNT29tbkdBb20taDUxQ3J0ZWhvTnZmWjlFWElwbnV0Z3FZenFXbGNCY1J4OFZZNmFrZEIwQ1ByQnR6TTcyMEI5Mk14VndvUlNPeWVneXc0SHVyLU84WXptWjYyR1dUWHNCUFVCY2cxdUhwTlhIc01lNTN0bGRZSVRfRU5WZU9neHRoZnNxbEdtSkNCNjVnY28weWhubmo0dUJUbllhYVFlWUhrMzV1d0JzMnFlS0FkY01OQXNJNEpr0gHYAUFVX3lxTE1EZ0NVWE52Vl9BaDl1UmhlZ2Y5cXpkaHRQTUt0RnQ0NV93Ym5OemNDWlIzSW8xRHF4aHBWZFJJSTZSblk3dzFJOGJUWll0c0tScDk1TWtSVFNYb2IybUV0MVIxSDNSOWlXeGtuakhRdHRaZllYa2ZDdzc3cnBHOVBVX3I5YkhOSTJCcFJlMXRubkRfdUxBUGFmV2dMYTFSeXVMdWloVDJuMkdvN083YkRYSElySVczUHhRZDNHbzBJbUtyRG9Qcm95SEoxc1FLOTFWN2NvbDVkWQ?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Arabica Coffee Climbs to Multi-Week High Amid Constrained Global Inventories",
+   "summary": "Prices for arabica coffee touched their strongest valuation in a month as available physical reserves stayed critically depleted. The tightness in warehouse holdings provided fresh support for agricultural commodity contracts.",
+   "why": "Soft commodity prices respond sharply to inventory data, illustrating how supply bottlenecks drive spot market valuations.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/arabica-coffee-touches-one-month-high-as-stocks-remain-critically-low-11792178652490.html"
   },
   {
    "category": "US Markets",
-   "title": "Broad American Equities Rise Amid Sector Rotation Toward Healthcare",
-   "summary": "The benchmark S&P 500 settled with gains as market participants reallocated capital into healthcare companies. This move coincided with a shift away from artificial intelligence holdings.",
-   "why": "Sector rotation illustrates how institutional capital migrates between high-growth technology and defensive industries as market conditions evolve.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZTRob0s4X3hCYkZQZzFfeUxuU1ZlN0tPT2hvelcwcW9QdU9yeVN1ZUZfR253ZUNoN3NjUlRHbG9aS0wzMmVGLUpNOVcyTUlHOWo3WERDX1psTXlmWGthb0JPN19GMGxnT2pkYkRWQ0R1THEyODhoWnZTd1NIQjdZbm5fLXNYb0M2c1g2YU02TENSSi1xSFZMQzRuUTc?oc=5"
+   "title": "Prominent American Banks Suffer Protracted Weekly Slump Not Seen in Years",
+   "summary": "Major US lenders entered their longest weekly decline since the 2008 global financial crisis due to uneven quarterly disclosures and stubborn inflation. An index tracking the sector has dropped approximately 13 percent during the recent downtrend.",
+   "why": "Banking shares serve as an economic bellwether because loan demand and asset quality reflect broader financial health.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/big-us-bank-stocks-head-for-longest-weekly-losing-streak-since-2008/articleshow/135002546.cms"
   },
   {
    "category": "US Markets",
-   "title": "Federal Reserve Official Comments Heighten Anticipation of Unchanged Rates",
-   "summary": "Market projections for a pause in US monetary policy strengthened following public commentary by policymaker Kevin Warsh. Investors increasingly look toward the October meeting with expectations of steady benchmark borrowing costs.",
-   "why": "Federal Reserve policy decisions dictate global capital costs and heavily sway foreign institutional investment into emerging markets.",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdHZhMDY1QkVFRU1NQ0c1NkxlNzR2cDR4NEgwbVFMSkQ3RzFSNlFYT1Q0d1BzOWpRUGtLcTg1YUk0UkxOc2tKWENkTGxkRWc5SFAwWDFMS3JxdXJfWUIyNmwzR1Z0T3B5SmF0R2hjc0lDdXppV0wzQmw2bHh0a0FZS1BsUXVJdkdyZF9YcWIxMlZ3RnMwOVZ0YlFDeHdFWE5nTXdSdlQwb2NfZw?oc=5"
+   "title": "Broad American Equities Index Logs Deepest Weekly Drop Since Mid-Year",
+   "summary": "The S&P 500 recorded its sharpest weekly fall since June as elevated crude prices and anxieties surrounding artificial intelligence spending unnerved investors. Rising energy costs compounded pressure on major technology companies.",
+   "why": "High oil costs alongside elevated valuations can dampen corporate earnings expectations and reduce overall risk appetite.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdmxYbGl0SVlXNXN2SGRFNG9Gc2dPUndlSUNtYk5Dd2g4SzY2YU5EUTNLVlJpVFg3QnZqVl9fNjZaWHl4a093eGFwdXZiYjJZb3ROeGg1QkI4MUFwbW1jN2hLWjZWanNRRkltbVUxZmxrVXNmb1M1dkkwd2F5bm1GZmxSdTh5dkhCUGYwcFFjV0dYRWRzRU9fMzRrbzhLaGhNX2gwYU04SFhxNDN2UnVlUlRtR0VYZEJoakhzbFphWEhEWTBnNzNGUlpfdklSTGZmSFZMMlZGUVhIRFFLVDhpN3ViVWhvX3NnODdNa9IB8gFBVV95cUxOaFQyTFV4Ukp1UFQ2eVdtY3h0MnVvNU9sV29LQUFIaUs1V1h0SVk4a2Npb2hRc2lXNkdYM2tCeDlwM0NIQWFLNmJuVjdwODdjYkZKZS1VQlp3OTdlSUx6SjhycE96YVhfSDQ1MkNOTndwc2RDd3gyU1VyMjBOX0xGWFFzOVE0SmdpR055NUpyS1lKcUxFQV9SU0d0eF9paXRndUJlOVVJSUstdmlOc2F4VnVsMHF3R0dJbFBGd2toS3g3cXNVdXp5R2VtLXFCQzNIdW9LelF1ejc0dXFNejU0SllwNkRKbGNvMU1fM3dDaXFhZw?oc=5"
   }
  ]
 }

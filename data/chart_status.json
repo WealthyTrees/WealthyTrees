@@ -1,51 +1,51 @@
 {
- "updated": "2026-10-16T18:43:08+00:00",
+ "updated": "2026-10-17T01:53:47+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
-   "rows": 495
+   "rows": 496
   },
   "Sensex": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 495
   },
   "Bank Nifty": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 495
   },
   "Nifty IT": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 495
   },
   "Nifty Pharma": {
    "yahoo": "ok",
-   "rows": 493
+   "rows": 494
   },
   "Nifty Auto": {
-   "yahoo": "only 1 rows",
+   "yahoo": "only 2 rows",
    "etf": "AUTOBEES.NS ok (scaled)",
-   "rows": 493
+   "rows": 494
   },
   "Nifty Metal": {
-   "yahoo": "only 1 rows",
+   "yahoo": "only 2 rows",
    "etf": "METALIETF.NS ok (scaled)",
-   "rows": 494
+   "rows": 495
   },
   "India VIX": {
    "yahoo": "ok",
-   "rows": 492
+   "rows": 493
   },
   "S&P 500": {
    "yahoo": "ok",
-   "rows": 502
+   "rows": 501
   },
   "Nasdaq": {
    "yahoo": "ok",
-   "rows": 502
+   "rows": 501
   },
   "Dow": {
    "yahoo": "ok",
-   "rows": 502
+   "rows": 501
   },
   "Gold": {
    "yahoo": "ok",
