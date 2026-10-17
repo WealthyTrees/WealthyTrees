@@ -115,7 +115,7 @@
     if (label) label.setAttribute("aria-hidden", "true");
 
     track.innerHTML = `
-      <span class="wt-dussehra-message wt-dussehra-message--greeting">We wish you a very</span>
+      <span class="wt-dussehra-message wt-dussehra-message--greeting">We wishes you a very</span>
       <span class="wt-dussehra-message wt-dussehra-message--hindi">शुभ विजयादशमी</span>
       <span class="wt-dussehra-message wt-dussehra-message--company">WealthyTrees Private Limited</span>
     `;
