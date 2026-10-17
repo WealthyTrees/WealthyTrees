@@ -19,3 +19,55 @@
 .ticker:hover .track{animation-play-state:running}
 @media(hover:hover) and (pointer:fine){.ticker.nse:hover .track{animation-play-state:paused}}
 .tk-label{max-width:46vw}.tk-label span{white-space:normal;line-height:1.15;font-size:.68rem}
+
+/* v3: compact two-line market status leaves more horizontal room for index cards. */
+.ticker.nse .tk-label {
+  flex: 0 0 clamp(190px, 17vw, 226px);
+  width: clamp(190px, 17vw, 226px);
+  max-width: none;
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr);
+  grid-template-rows: min-content min-content;
+  align-content: center;
+  align-items: center;
+  column-gap: .5rem;
+  row-gap: .16rem;
+  padding: .45rem .85rem;
+  white-space: normal;
+  line-height: 1.1;
+}
+.ticker.nse .tk-label .tk-dot {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.ticker.nse .tk-label #tkname {
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  font-size: .7rem;
+  letter-spacing: .045em;
+}
+.ticker.nse .tk-label #tkstat {
+  grid-column: 2;
+  grid-row: 2;
+  display: block;
+  min-width: 0;
+  color: #8fd9b8;
+  font-size: .57rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: .015em;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .ticker.nse .tk-label {
+    flex-basis: 174px;
+    width: 174px;
+    padding: .4rem .6rem;
+    column-gap: .42rem;
+  }
+  .ticker.nse .tk-label #tkname { font-size: .62rem; letter-spacing: .025em; }
+  .ticker.nse .tk-label #tkstat { font-size: .49rem; letter-spacing: 0; }
+}
