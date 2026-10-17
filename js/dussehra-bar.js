@@ -6,7 +6,7 @@
   const frames = [
     "MARKETS CLOSED · DUSSEHRA",
     "Happy Vijayadashami",
-    "असत्य पर सत्य की विजय · सुख-समृद्धि",
+    "सत्य की विजय, समृद्धि का पर्व",
     "WealthyTrees Private Limited"
   ];
   const intervalMs = 3200;
