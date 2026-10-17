@@ -7,6 +7,7 @@ on:
       - "index.html"
       - "js/site.js"
       - "js/dussehra-intro.js"
+      - "js/dussehra-video-board.js"
       - "js/edition.js"
       - "css/edition.css"
       - "assets/dussehra-intro.mp4"
