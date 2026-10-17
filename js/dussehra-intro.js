@@ -119,21 +119,12 @@
     const priorOverflow = document.documentElement.style.overflow;
     document.documentElement.style.overflow = "hidden";
 
-    // Preload the small, user-uploaded greeting MP4 while the intro plays.
-    // Keeping both clips in this same overlay avoids the old z-index/black-screen gap.
-    const greetingVideo = document.createElement("video");
-    greetingVideo.className = "wt-video wt-greeting-preload";
-    greetingVideo.muted = true;
-    greetingVideo.playsInline = true;
-    greetingVideo.preload = "auto";
-    greetingVideo.setAttribute("aria-label", "WealthyTrees Vijayadashami greeting video");
-    greetingVideo.src = GREETING_VIDEO_URL;
-    stage.appendChild(greetingVideo);
-    greetingVideo.load();
-
+    // Reuse the visible video element for the greeting handoff. This avoids
+    // a hidden second player, stacking glitches, and a blank second overlay.
     let hasTransitioned = false;
     let finished = false;
     let greetingFailTimer = null;
+    let greetingStarted = false;
 
     const finishExperience = () => {
       if (finished) return;
@@ -141,50 +132,55 @@
       if (greetingFailTimer) window.clearTimeout(greetingFailTimer);
       try { if (!PREVIEW_MODE) sessionStorage.setItem(SESSION_KEY, "1"); } catch (_) {}
       introVideo.pause();
-      greetingVideo.pause();
       overlay.remove();
       document.documentElement.style.overflow = priorOverflow;
     };
 
-    const showGreetingInSameOverlay = () => {
-      if (finished || !hasTransitioned || !document.body.contains(overlay)) return;
-      if (greetingVideo.error || greetingVideo.readyState < 2) {
-        finishExperience();
-        return;
-      }
+    const startGreetingPlayback = () => {
+      if (finished || !hasTransitioned || greetingStarted || introVideo.readyState < 2) return;
+      greetingStarted = true;
       if (greetingFailTimer) window.clearTimeout(greetingFailTimer);
-      stage.classList.add("is-greeting");
-      overlay.classList.add("is-greeting");
-      plaque.remove();
-      skipButton.remove();
-      enterButton.remove();
-      introVideo.pause();
-      introVideo.style.display = "none";
-      greetingVideo.classList.remove("wt-greeting-preload");
-      greetingVideo.classList.add("is-greeting-active");
-      try { greetingVideo.currentTime = 0; } catch (_) {}
-      greetingVideo.addEventListener("ended", finishExperience, { once: true });
-      greetingVideo.addEventListener("error", finishExperience, { once: true });
-      const playPromise = greetingVideo.play();
-      if (playPromise && typeof playPromise.catch === "function") playPromise.catch(finishExperience);
+      try { introVideo.currentTime = 0; } catch (_) {}
+      const playPromise = introVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {
+          // If browser policy blocks autoplay, leave the actual greeting video
+          // visible and provide native playback controls instead of blacking out.
+          introVideo.controls = true;
+        });
+      }
     };
 
     const transitionToGreeting = () => {
       if (hasTransitioned || finished) return;
       hasTransitioned = true;
       introVideo.pause();
-      // Hold the last intro frame while waiting for a decoded greeting frame.
-      if (greetingVideo.error) {
-        finishExperience();
-        return;
-      }
-      if (greetingVideo.readyState >= 2) {
-        showGreetingInSameOverlay();
-        return;
-      }
-      greetingFailTimer = window.setTimeout(finishExperience, 8000);
-      greetingVideo.addEventListener("loadeddata", showGreetingInSameOverlay, { once: true });
-      greetingVideo.addEventListener("error", finishExperience, { once: true });
+      stage.classList.add("is-greeting");
+      overlay.classList.add("is-greeting");
+      plaque.remove();
+      skipButton.remove();
+      enterButton.remove();
+
+      introVideo.classList.remove("wt-intro-clip");
+      introVideo.classList.add("is-greeting-active");
+      introVideo.setAttribute("aria-label", "WealthyTrees Vijayadashami greeting video");
+      introVideo.muted = true;
+      introVideo.playsInline = true;
+      introVideo.preload = "auto";
+      introVideo.removeAttribute("poster");
+      introVideo.querySelectorAll("source").forEach((source) => source.remove());
+      introVideo.src = GREETING_VIDEO_URL;
+
+      introVideo.addEventListener("loadeddata", startGreetingPlayback);
+      introVideo.addEventListener("canplay", startGreetingPlayback);
+      introVideo.addEventListener("ended", finishExperience, { once: true });
+      introVideo.addEventListener("error", finishExperience, { once: true });
+      greetingFailTimer = window.setTimeout(() => {
+        if (!greetingStarted) finishExperience();
+      }, 12000);
+      introVideo.load();
+      // Handle a cached asset that is already decoded by the time load() returns.
+      startGreetingPlayback();
     };
 
     const syncBranding = () => {
