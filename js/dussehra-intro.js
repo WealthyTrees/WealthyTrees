@@ -5,7 +5,7 @@
   const SESSION_KEY = "wtDussehraIntroSeen2026";
   const VIDEO_URL = "/assets/dussehra-intro.mp4";
   const PREVIEW_MODE = new URLSearchParams(window.location.search).get("previewDussehra") === "1";
-  const BRANDING_START = Number.POSITIVE_INFINITY;
+  const BRANDING_START = 12.45;
   const CURTAIN_LIFT_MS = 1050;
 
   function indiaDateString() {
@@ -89,6 +89,22 @@
       .wt-greeting-quote { margin:0 auto 21px; max-width:440px; color:#812b20; font-family:"Noto Sans Devanagari","Mangal",serif; font-size:clamp(17px,2.8vw,21px); line-height:1.8; text-wrap:pretty; }
       .wt-greeting-company { margin:16px 0 22px; color:#176443; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:clamp(13px,2.5vw,16px); font-weight:800; letter-spacing:.035em; }
       .wt-greeting-continue { min-height:46px; max-width:100%; border:1px solid #0d6746; border-radius:999px; padding:12px 24px; color:#fff8e8; background:linear-gradient(135deg,#146b49,#0b5138); font:inherit; font-size:14px; font-weight:750; cursor:pointer; box-shadow:0 7px 18px rgba(13,75,50,.18); }
+
+      .wt-greeting-card.wt-greeting-video-card {
+        display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
+        width:min(94vw,500px); max-height:calc(100dvh - 24px); overflow:visible;
+        padding:0; border:0; border-radius:0; background:transparent; box-shadow:none;
+      }
+      .wt-greeting-video-card:before,.wt-greeting-video-card:after { display:none; }
+      .wt-greeting-video {
+        display:block; width:auto; height:auto; max-width:min(92vw,56.25dvh);
+        max-height:calc(100dvh - 100px); aspect-ratio:9/16; object-fit:contain;
+        border:1px solid rgba(224,183,100,.82); border-radius:18px; background:#10251a;
+        box-shadow:0 14px 54px rgba(27,19,9,.35);
+      }
+      .wt-greeting-video-card .wt-greeting-continue { flex:0 0 auto; }
+      .wt-greeting-error { margin:0; padding:10px 14px; border-radius:10px; color:#542d14; background:#fff8e7; text-align:center; }
+
       .wt-greeting-overlay.is-leaving { animation:wtGreetingLeave .65s ease forwards; pointer-events:none; }
       #wt-dussehra-intro.is-lifting { animation:wtCurtainLift 1.05s cubic-bezier(.6,0,.8,.35) forwards; pointer-events:none; }
       @keyframes wtCurtainLift { 0%{transform:translateY(0);opacity:1} 65%{opacity:1} 100%{transform:translateY(-102%);opacity:.98} }
@@ -141,28 +157,38 @@
     cardOverlay.className = "wt-greeting-overlay";
     cardOverlay.setAttribute("role", "dialog");
     cardOverlay.setAttribute("aria-modal", "true");
-    cardOverlay.setAttribute("aria-label", "Happy Vijayadashami from WealthyTrees");
+    cardOverlay.setAttribute("aria-label", "Vijayadashami greeting video from WealthyTrees");
     cardOverlay.innerHTML = `
-      <article class="wt-greeting-card">
-        <img class="wt-greeting-logo" src="/assets/logo.svg" alt="WealthyTrees logo">
-        <h2 class="wt-greeting-title">Happy Vijayadashami</h2>
-        <div class="wt-greeting-divider" aria-hidden="true"></div>
-        <p class="wt-greeting-quote">असत्य पर सत्य और अधर्म पर धर्म की विजय का यह पावन पर्व आपके जीवन में नई आशा, सुख, समृद्धि और खुशियाँ लेकर आए।</p>
-        <p class="wt-greeting-company">WealthyTrees Private Limited</p>
+      <article class="wt-greeting-card wt-greeting-video-card">
+        <video class="wt-greeting-video" autoplay muted playsinline preload="auto" aria-label="WealthyTrees Vijayadashami greeting">
+          <source src="/assets/dussehra-greeting.mp4" type="video/mp4">
+        </video>
         <button class="wt-greeting-continue" type="button">Continue to Website</button>
       </article>
     `;
     document.body.appendChild(cardOverlay);
-    createPetalShower();
+
+    const greetingVideo = cardOverlay.querySelector(".wt-greeting-video");
     let closed = false;
     const closeCard = () => {
       if (closed) return;
       closed = true;
+      greetingVideo.pause();
       cardOverlay.classList.add("is-leaving");
       window.setTimeout(() => cardOverlay.remove(), 700);
     };
     cardOverlay.querySelector(".wt-greeting-continue").addEventListener("click", closeCard);
-    window.setTimeout(closeCard, 8000);
+    greetingVideo.addEventListener("ended", () => window.setTimeout(closeCard, 500), { once: true });
+    greetingVideo.addEventListener("error", () => {
+      if (cardOverlay.querySelector(".wt-greeting-error")) return;
+      const note = document.createElement("p");
+      note.className = "wt-greeting-error";
+      note.textContent = "The greeting video could not load. Please continue to the website.";
+      note.setAttribute("role", "status");
+      cardOverlay.querySelector(".wt-greeting-video-card").appendChild(note);
+    }, { once: true });
+    window.setTimeout(closeCard, 16000);
+    greetingVideo.play().catch(() => { greetingVideo.setAttribute("controls", "controls"); });
   }
 
   function init() {
