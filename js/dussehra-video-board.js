@@ -199,14 +199,24 @@
       if (!playedAtLeastOnce) showStatus("Loading greeting video…");
     });
     video.addEventListener("error", () => {
-      stopWatchdog();
       playRequested = false;
+      if (!retried) {
+        retried = true;
+        stopWatchdog();
+        showStatus("Retrying the greeting video…");
+        video.src = GREETING_VIDEO_URL + "?retry=" + Date.now();
+        video.load();
+        startWatchdog();
+        attemptPlay();
+        return;
+      }
+      stopWatchdog();
       const code = video.error ? video.error.code : 0;
       const detail = code === 4
         ? "The browser could not open the MP4 file."
         : code === 3 ? "The browser could not decode the MP4 file."
         : "The greeting video could not be downloaded.";
-      showStatus(detail + " Refresh the page to retry.");
+      showStatus(detail + " The player controls remain available; refresh to try again.");
     });
 
     // On desktop, lock the board to the upper-right only while the Newsroom
