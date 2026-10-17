@@ -73,7 +73,7 @@ jobs:
                 const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
                 const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
                 const boardCount = await page.locator('.wt-dussehra-video-board').count();
-                if (scriptSrc && scriptSrc.includes('v=33') && siteSrc && siteSrc.includes('v=25') && boardCount === 0) {
+                if (scriptSrc && scriptSrc.includes('v=34') && siteSrc && siteSrc.includes('v=25') && boardCount === 0) {
                   deployed = true;
                   break;
                 }
