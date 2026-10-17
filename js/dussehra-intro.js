@@ -4,10 +4,8 @@
   const FESTIVAL_DATE = "2026-10-20";
   const SESSION_KEY = "wtDussehraIntroSeen2026";
   const VIDEO_URL = "/assets/dussehra-intro.mp4";
-  const GREETING_VIDEO_URL = "/assets/dussehra-greeting.mp4";
   const PREVIEW_MODE = new URLSearchParams(window.location.search).get("previewDussehra") === "1";
   const BRANDING_START = 12.45;
-  const CURTAIN_LIFT_MS = 1050;
 
   function indiaDateString() {
     const parts = new Intl.DateTimeFormat("en-CA", {
@@ -57,20 +55,6 @@
       #wt-dussehra-intro .wt-error { position:fixed; z-index:9; left:50%; top:50%; transform:translate(-50%,-50%); max-width:min(88vw,420px); margin:0; padding:14px 17px; border-radius:14px; color:#542d14; border:1px solid #dfb361; background:#fff8e7; text-align:center; box-shadow:0 8px 30px #5d36182e; font-size:14px; }
       #wt-dussehra-intro.is-lifting { animation:wtCurtainLift 1.05s cubic-bezier(.6,0,.8,.35) forwards; pointer-events:none; }
       @keyframes wtCurtainLift { 0%{transform:translateY(0);opacity:1} 65%{opacity:1} 100%{transform:translateY(-102%);opacity:.98} }
-      #wt-dussehra-intro .wt-greeting-preload { opacity:0; visibility:hidden; pointer-events:none; }
-      #wt-dussehra-intro .wt-stage.is-greeting {
-        width:100vw; height:100dvh; aspect-ratio:auto; overflow:hidden;
-        background:#07160f; box-shadow:none;
-      }
-      #wt-dussehra-intro.is-greeting { background:#07160f; animation:none!important; }
-      #wt-dussehra-intro.is-greeting .wt-brand-plaque,
-      #wt-dussehra-intro.is-greeting .wt-skip,
-      #wt-dussehra-intro.is-greeting .wt-enter { display:none!important; }
-      #wt-dussehra-intro .wt-video.is-greeting-active {
-        opacity:1; visibility:visible; object-fit:contain; background:#07160f;
-        animation:wtGreetingVideoReveal .45s ease-out both;
-      }
-      @keyframes wtGreetingVideoReveal { from{opacity:0} to{opacity:1} }
       @media(min-width:700px) { #wt-dussehra-intro .wt-enter { left:auto; right:max(24px,calc((100vw - min(100vw,56.25dvh))/4 - 90px)); bottom:max(26px,env(safe-area-inset-bottom)); transform:none; } }
       @media(max-width:420px) {
         #wt-dussehra-intro .wt-skip { top:max(10px,env(safe-area-inset-top)); right:10px; padding:10px 13px; font-size:12px; }
@@ -111,7 +95,6 @@
     `;
     document.body.appendChild(overlay);
 
-    const stage = overlay.querySelector(".wt-stage");
     const introVideo = overlay.querySelector(".wt-intro-clip");
     const plaque = overlay.querySelector(".wt-brand-plaque");
     const skipButton = overlay.querySelector(".wt-skip");
@@ -119,68 +102,17 @@
     const priorOverflow = document.documentElement.style.overflow;
     document.documentElement.style.overflow = "hidden";
 
-    // Reuse the visible video element for the greeting handoff. This avoids
-    // a hidden second player, stacking glitches, and a blank second overlay.
-    let hasTransitioned = false;
+    // The intro is the only full-screen video. When it ends or is skipped,
+    // reveal the website directly; the separate greeting remains in Daily Edition.
     let finished = false;
-    let greetingFailTimer = null;
-    let greetingStarted = false;
 
     const finishExperience = () => {
       if (finished) return;
       finished = true;
-      if (greetingFailTimer) window.clearTimeout(greetingFailTimer);
       try { if (!PREVIEW_MODE) sessionStorage.setItem(SESSION_KEY, "1"); } catch (_) {}
       introVideo.pause();
       overlay.remove();
       document.documentElement.style.overflow = priorOverflow;
-    };
-
-    const startGreetingPlayback = () => {
-      if (finished || !hasTransitioned || greetingStarted || introVideo.readyState < 2) return;
-      greetingStarted = true;
-      if (greetingFailTimer) window.clearTimeout(greetingFailTimer);
-      try { introVideo.currentTime = 0; } catch (_) {}
-      const playPromise = introVideo.play();
-      if (playPromise && typeof playPromise.catch === "function") {
-        playPromise.catch(() => {
-          // If browser policy blocks autoplay, leave the actual greeting video
-          // visible and provide native playback controls instead of blacking out.
-          introVideo.controls = true;
-        });
-      }
-    };
-
-    const transitionToGreeting = () => {
-      if (hasTransitioned || finished) return;
-      hasTransitioned = true;
-      introVideo.pause();
-      stage.classList.add("is-greeting");
-      overlay.classList.add("is-greeting");
-      plaque.remove();
-      skipButton.remove();
-      enterButton.remove();
-
-      introVideo.classList.remove("wt-intro-clip");
-      introVideo.classList.add("is-greeting-active");
-      introVideo.setAttribute("aria-label", "WealthyTrees Vijayadashami greeting video");
-      introVideo.muted = true;
-      introVideo.playsInline = true;
-      introVideo.preload = "auto";
-      introVideo.removeAttribute("poster");
-      introVideo.querySelectorAll("source").forEach((source) => source.remove());
-      introVideo.src = GREETING_VIDEO_URL;
-
-      introVideo.addEventListener("loadeddata", startGreetingPlayback);
-      introVideo.addEventListener("canplay", startGreetingPlayback);
-      introVideo.addEventListener("ended", finishExperience, { once: true });
-      introVideo.addEventListener("error", finishExperience, { once: true });
-      greetingFailTimer = window.setTimeout(() => {
-        if (!greetingStarted) finishExperience();
-      }, 12000);
-      introVideo.load();
-      // Handle a cached asset that is already decoded by the time load() returns.
-      startGreetingPlayback();
     };
 
     const syncBranding = () => {
@@ -190,19 +122,23 @@
     };
     introVideo.addEventListener("timeupdate", syncBranding);
     introVideo.addEventListener("seeked", syncBranding);
-    introVideo.addEventListener("ended", transitionToGreeting, { once: true });
-    introVideo.addEventListener("error", transitionToGreeting, { once: true });
-    skipButton.addEventListener("click", transitionToGreeting);
+    introVideo.addEventListener("ended", finishExperience, { once: true });
+    introVideo.addEventListener("error", finishExperience, { once: true });
+    skipButton.addEventListener("click", finishExperience);
     enterButton.addEventListener("click", finishExperience);
     document.addEventListener("keydown", function onKeydown(event) {
       if (event.key === "Escape" && document.getElementById("wt-dussehra-intro")) {
-        if (hasTransitioned) finishExperience();
-        else transitionToGreeting();
+        finishExperience();
         document.removeEventListener("keydown", onKeydown);
       }
     });
     const playPromise = introVideo.play();
-    if (playPromise && typeof playPromise.catch === "function") playPromise.catch(transitionToGreeting);
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {
+        // Reveal the site if the intro cannot autoplay; never substitute another video.
+        finishExperience();
+      });
+    }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
