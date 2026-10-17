@@ -4,27 +4,27 @@
   {
    "name": "NIFTY 50",
    "value": "23,146",
-   "change": 2.31
+   "change": 0.65
   },
   {
    "name": "SENSEX",
    "value": "74,729",
-   "change": 2.68
+   "change": 0.56
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,187",
-   "change": 0.4
+   "value": "4,181",
+   "change": 0.26
   },
   {
    "name": "CRUDE WTI",
    "value": "$99.0",
-   "change": 2.63
+   "change": 2.61
   },
   {
    "name": "USD/INR",
-   "value": "94.95",
-   "change": -0.1
+   "value": "94.96",
+   "change": -0.09
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Domestic Equity Gauges Advance for a Second Session Spurred by Technology Companies",
-   "summary": "Indian benchmark indices finished higher, supported by substantial investor demand across information technology firms. This marked consecutive daily progress for the key broader market indicators.",
-   "why": "Tracking sector-specific moves helps newcomers understand how heavily weighted industries like software services influence broader index performance.",
-   "source": "Deccan Herald",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORHhWaW1EeFFCazIyVU1uR2NDUWM2NEtDOWFQSFdQVGlDWWNicHVsNi1HVml6MWlJblR1TDMxcW5fQV9HWG9jUzFrRTB2cFZjbFk3SnZKbk1NUVZUUGhDSEhkU0ZwZjRjV21mYkt6UlNjTUhLeWRlMHY5SS1TaE5PTVRqUzNUNzZnYzJGTjA4WTAwZ1NJenJmQTkwUUd3OFFnTE5YaXZFamtmaGNnSnNyaTRHa25RY3EwTi12Y2gxVHA?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Lender Warns Capital Adequacy May Erode Following Apex Court Bond Order",
-   "summary": "Yes Bank indicated its primary equity buffer could contract by about 250 basis points after judicial validation of overturned debt cancellations. The determination affects over eight thousand crore rupees of perpetual debt instruments.",
-   "why": "Core capital metrics show how much buffer a financial institution possesses to absorb losses and comply with banking safeguards.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/yes-bank-flags-250-bps-impact-in-core-capital-ratio-after-supreme-court-upholds-at-1-bond-write-off-ruling-11792175520924.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Fitness Enterprise Secures Regulatory Clearance for Forthcoming Public Offering",
-   "summary": "Cult.fit received observations from the securities regulator to conduct an initial share offering consisting of a fresh 950 crore rupee issue and an offer for sale. The business achieved over 36 percent revenue growth in fiscal 2026 alongside better operating profitability.",
-   "why": "Understanding how companies transition from private backing to public bourses introduces novice investors to primary market capital raising.",
+   "title": "ICICI Bank Posts Twenty Percent Net Profit Expansion in Second Quarter",
+   "summary": "The private financial institution recorded a second-quarter surplus of 14,843 crore rupees, improving from 12,359 crore rupees in the prior corresponding period. Revenue from core lending operations expanded by eighteen percent alongside bottom-line growth.",
+   "why": "Tracking commercial bank profitability assists investors in evaluating credit growth trends and financial system strength.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/cult-fit-receives-sebi-approval-for-proposed-ipo/articleshow/134997161.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/icici-bank-q2-results-net-profit-jumps-20-to-rs-14843-crore-nii-rises-18-yoy/articleshow/135011810.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "State-Run Rail Enterprise Equities Tumble From Previous Highs Over Operational Concerns",
+   "summary": "Shares of government rail companies dropped by up to forty percent over a twelve-month span as stock prices outpaced underlying business performance. Industry observers pointed to softening operating margins and slower contract executions rather than public capital expenditure cutbacks.",
+   "why": "Understanding valuation limits helps market participants realize when asset prices disconnect from real operational gains.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/railway-psu-stocks-derailed-rvnl-irfc-ircon-rites-to-irctc-down-60-in-yr-what-went-wrong-experts-explain-11792225685815.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Jio Platforms Prepares Record Domestic Initial Public Offering At Premium Valuation",
+   "summary": "Reliance's technology enterprise is moving ahead with an issue targeting approximately 3.2 billion dollars. The transaction seeks an implied enterprise value of around 108 billion dollars to draw public investment.",
+   "why": "Massive primary market listings test institutional capital capacity and signal corporate appetite for public market funding.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/reliance-jio-ipo-from-dhirubhai-ambanis-1977-listing-to-akash-ambanis-mega-issue-whats-changed-gen-z-connect-11792219519404.html"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Clears Combination of Overseas Branches into Private Domestic Lender",
-   "summary": "The Reserve Bank of India approved the integration of Emirates NBD Bank's local branch operations with RBL Bank. The formal sanction permits the transfer of the foreign lender's Indian offices into the domestic bank.",
-   "why": "Regulatory clearances for banking amalgamations alter branch footprints and reshape competitive reach in the domestic lending landscape.",
+   "title": "Reserve Bank Authorizes Emirates NBD Branch Combination Into RBL Bank",
+   "summary": "The central banking regulator sanctioned the official amalgamation uniting the domestic offices of Emirates NBD Bank with RBL Bank. The scheme transfers the foreign entity's local branch presence to the recipient institution.",
+   "why": "Regulatory clearances for banking amalgamations reshape commercial balance sheets and consolidate the domestic financial sector.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
   },
   {
+   "category": "Commodity",
+   "title": "Central Authorities Lower Duty Drawback Rates on Precious Jewellery Shipments",
+   "summary": "The administration revised and lowered drawback benefits offered to outbound consignments of gold and silver ornaments. The step adjusts government tariff refunds allocated to domestic jewellery fabricators sending merchandise abroad.",
+   "why": "Duty drawback variations influence exporter profit dynamics and alter the international pricing power of refined precious commodities.",
+   "source": "Indian Jeweller",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOajRPYVVkZVFra2VZNG54OGt0ODkzdU5YX2tESF80cXZWZG9NdkwzQnV1WDc4cXlJMU1PVFNXVDNRNUY2d0x6NEdMaUlIN05XUUpsRndtbTdHSHF4VE10M29sM0VwTWE5YWJ4bFpYSmIyRjRkTWJ1aERqcmlIS3VfMEV6UHBmVjhSZEJkdG83X2pfUHVfWTU1MUpjMmdwRHBEYW5mWDlVa2tNZkk1ZUVpMVNBdnQxclgzc1FlRUI1WEZUVENkdzYzVkZ3?oc=5"
+  },
+  {
    "category": "Economy",
-   "title": "Indian Currency Strengthens Modestly Following Monetary Authority Market Action",
-   "summary": "The rupee gained seven paise to finish at 94.92 against the US dollar. The upward move was underpinned by active intervention from the central bank in currency trading.",
-   "why": "Central bank presence in the foreign exchange market dampens wild currency swings and helps restrain imported inflationary pressures.",
+   "title": "Indian Rupee Strengthens Modestly Following Targeted Central Bank Currency Interventions",
+   "summary": "The domestic unit advanced seven paise to finish trading at 94.92 per US dollar. The upward move was facilitated by monetary authority measures intended to contain sharp currency volatility.",
+   "why": "Foreign exchange intervention prevents rapid currency depreciation, keeping imported commodity inflation in check.",
    "source": "The Hindu",
    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUXdJYUU0cE5MMExnY0ktQmdfS3lNakxIN3dYbmNUWUhQVUhTLXY5Wk12bXphaWRPdlcyWnpUdjc2VE1DZU9md0c3Wlhkc1NRcVBuMk53MTcyQXhhN2NKd2lsY2JoLS1OMDN5ZnVxVWZGaEtZd19oVEZ1M0U1U0plOW1sR2tnTjVaUlphZG84dHNJSW5VemZUc3BXZDUtelpqV25xT2h4MC1vTmFLUzRIYU1HVklPMlNUTm9vYnV1cl9NYWlaNFNRdXF3SWJsVEp6X3fSAdgBQVVfeXFMTVRMNXl2STAyWlluMHRhUnpxd2ZURm9MWFhsMGVaLUJMcTdYYU9YakxsbW10ZElXS1VqajVCbkY0allnS2M5MGFyQUlTVEVhcjcwVktvLWNwWEhLajhkaG5vXzdRRmVVNkJjS1Nha3FHX1FEcHNIcmJGc1ZfVXFwWjktODZRazdtM1JpZGFIS2JGeS0wZmRLY3BZRVRVc0VhNjI1bUxodmlHREt6VWYzRk9hOUpUOWw4NDktSFJmVnVrRDA2dWlXeDdFUTl4MHpTMHFWOEFmdFF6?oc=5"
   },
   {
-   "category": "Economy",
-   "title": "National Foreign Exchange Reserves Shrink for Fifth Week to 726 Billion Dollars",
-   "summary": "India's foreign currency assets dropped over five consecutive weekly periods to settle at 726 billion dollars. The drawdown was confirmed in regular statistical disclosures from the central bank.",
-   "why": "Foreign exchange reserves function as a national liquidity buffer that authorities deploy to defend the domestic currency during outflows.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVmRHRHlQMWJNcWl0WElCNjF1NjdNT29tbkdBb20taDUxQ3J0ZWhvTnZmWjlFWElwbnV0Z3FZenFXbGNCY1J4OFZZNmFrZEIwQ1ByQnR6TTcyMEI5Mk14VndvUlNPeWVneXc0SHVyLU84WXptWjYyR1dUWHNCUFVCY2cxdUhwTlhIc01lNTN0bGRZSVRfRU5WZU9neHRoZnNxbEdtSkNCNjVnY28weWhubmo0dUJUbllhYVFlWUhrMzV1d0JzMnFlS0FkY01OQXNJNEpr0gHYAUFVX3lxTE1EZ0NVWE52Vl9BaDl1UmhlZ2Y5cXpkaHRQTUt0RnQ0NV93Ym5OemNDWlIzSW8xRHF4aHBWZFJJSTZSblk3dzFJOGJUWll0c0tScDk1TWtSVFNYb2IybUV0MVIxSDNSOWlXeGtuakhRdHRaZllYa2ZDdzc3cnBHOVBVX3I5YkhOSTJCcFJlMXRubkRfdUxBUGFmV2dMYTFSeXVMdWloVDJuMkdvN083YkRYSElySVczUHhRZDNHbzBJbUtyRG9Qcm95SEoxc1FLOTFWN2NvbDVkWQ?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Arabica Coffee Climbs to Multi-Week High Amid Constrained Global Inventories",
-   "summary": "Prices for arabica coffee touched their strongest valuation in a month as available physical reserves stayed critically depleted. The tightness in warehouse holdings provided fresh support for agricultural commodity contracts.",
-   "why": "Soft commodity prices respond sharply to inventory data, illustrating how supply bottlenecks drive spot market valuations.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/arabica-coffee-touches-one-month-high-as-stocks-remain-critically-low-11792178652490.html"
-  },
-  {
    "category": "US Markets",
-   "title": "Prominent American Banks Suffer Protracted Weekly Slump Not Seen in Years",
-   "summary": "Major US lenders entered their longest weekly decline since the 2008 global financial crisis due to uneven quarterly disclosures and stubborn inflation. An index tracking the sector has dropped approximately 13 percent during the recent downtrend.",
-   "why": "Banking shares serve as an economic bellwether because loan demand and asset quality reflect broader financial health.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/big-us-bank-stocks-head-for-longest-weekly-losing-streak-since-2008/articleshow/135002546.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Broad American Equities Index Logs Deepest Weekly Drop Since Mid-Year",
-   "summary": "The S&P 500 recorded its sharpest weekly fall since June as elevated crude prices and anxieties surrounding artificial intelligence spending unnerved investors. Rising energy costs compounded pressure on major technology companies.",
-   "why": "High oil costs alongside elevated valuations can dampen corporate earnings expectations and reduce overall risk appetite.",
+   "title": "Wall Street Benchmark S&P 500 Suffers Worst Weekly Retraction Since June",
+   "summary": "A surge in crude prices toward 110 dollars alongside apprehensions regarding tech investments pulled down the American market index. Heightened energy costs and volatility across automated computing shares drove the multi-day downturn.",
+   "why": "Substantial weekly drawdowns in US benchmark indices often generate defensive investor behavior across worldwide equities.",
    "source": "Moneycontrol.com",
    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdmxYbGl0SVlXNXN2SGRFNG9Gc2dPUndlSUNtYk5Dd2g4SzY2YU5EUTNLVlJpVFg3QnZqVl9fNjZaWHl4a093eGFwdXZiYjJZb3ROeGg1QkI4MUFwbW1jN2hLWjZWanNRRkltbVUxZmxrVXNmb1M1dkkwd2F5bm1GZmxSdTh5dkhCUGYwcFFjV0dYRWRzRU9fMzRrbzhLaGhNX2gwYU04SFhxNDN2UnVlUlRtR0VYZEJoakhzbFphWEhEWTBnNzNGUlpfdklSTGZmSFZMMlZGUVhIRFFLVDhpN3ViVWhvX3NnODdNa9IB8gFBVV95cUxOaFQyTFV4Ukp1UFQ2eVdtY3h0MnVvNU9sV29LQUFIaUs1V1h0SVk4a2Npb2hRc2lXNkdYM2tCeDlwM0NIQWFLNmJuVjdwODdjYkZKZS1VQlp3OTdlSUx6SjhycE96YVhfSDQ1MkNOTndwc2RDd3gyU1VyMjBOX0xGWFFzOVE0SmdpR055NUpyS1lKcUxFQV9SU0d0eF9paXRndUJlOVVJSUstdmlOc2F4VnVsMHF3R0dJbFBGd2toS3g3cXNVdXp5R2VtLXFCQzNIdW9LelF1ejc0dXFNejU0SllwNkRKbGNvMU1fM3dDaXFhZw?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Nasdaq Tumbles Two Percent Under Persistent Pressure on Chip Shares",
+   "summary": "The technology-focused index slipped two percent during Friday's trading session. Selling in computer hardware producers and artificial intelligence software firms contributed heavily to the slide.",
+   "why": "Semiconductor industry performance serves as a primary barometer for global risk sentiment in high-growth technology investments.",
+   "source": "Quartz",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBFVzI5c0t2ZW9tY1ZBd096QkF1MmhRbkhpNnNGNmdXWHljOGRwdC1MdWN1NVUyTHFsMFF0OEY5ZHdpeXJCb1dQMC01UmZQU0kxaGtOSy1KdFRCNVE2bXNTODZKU3o1aXlIZGRFXzlsZw?oc=5"
   }
  ]
 }

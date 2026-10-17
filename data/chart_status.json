@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T01:53:47+00:00",
+ "updated": "2026-10-17T11:15:02+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
@@ -49,31 +49,31 @@
   },
   "Gold": {
    "yahoo": "ok",
-   "rows": 504
+   "rows": 503
   },
   "Silver": {
    "yahoo": "ok",
-   "rows": 504
+   "rows": 503
   },
   "Crude WTI": {
    "yahoo": "ok",
-   "rows": 504
+   "rows": 503
   },
   "Brent": {
    "yahoo": "ok",
-   "rows": 504
+   "rows": 503
   },
   "Natural Gas": {
    "yahoo": "ok",
-   "rows": 504
+   "rows": 503
   },
   "Copper": {
    "yahoo": "ok",
-   "rows": 504
+   "rows": 503
   },
   "USD/INR": {
    "yahoo": "ok",
-   "rows": 518
+   "rows": 519
   }
  }
 }
