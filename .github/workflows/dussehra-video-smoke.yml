@@ -1,27 +1,35 @@
-name: Dussehra intro and Daily Edition browser smoke test
+name: Festival day check
+
+# Pretends it is the festival day (India time) and checks the live site: intro, festive ticker,
+# Live Wire wish, Daily Edition greeting video (fits the phone card and plays), other pages,
+# and that nothing festive shows on a normal day.
+# Runs: on every push, by hand (Actions tab > Run workflow), and automatically on 18, 19 and 20 Oct
+# so any problem shows up BEFORE the festival. GitHub emails you if it fails.
 
 on:
   push:
     branches: [main]
     paths:
       - "index.html"
-      - "js/site.js"
-      - "js/dussehra-intro.js"
-      - "js/dussehra-video-board.js"
-      - "js/edition.js"
-      - "css/edition.css"
-      - "assets/dussehra-intro.mp4"
-      - "assets/dussehra-greeting.mp4"
+      - "js/**"
+      - "css/**"
+      - "assets/**"
+      - "data/brief.json"
+      - "scripts/festival_check.cjs"
       - ".github/workflows/dussehra-video-smoke.yml"
   workflow_dispatch:
+  schedule:
+    - cron: "0 4 18 10 *"
+    - cron: "0 4 19 10 *"
+    - cron: "30 1 20 10 *"
 
 permissions:
   contents: read
 
 jobs:
-  festival-video-flow:
+  festival-day:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -31,232 +39,21 @@ jobs:
           node-version: "20"
       - name: Install Playwright and Chromium
         run: |
-          mkdir -p /tmp/wt-video-test
-          cd /tmp/wt-video-test
+          mkdir -p /tmp/wt-test && cd /tmp/wt-test
           npm init -y
           npm install playwright
           npx playwright install --with-deps chromium
-      - name: Verify intro-only reveal, festival ticker, and Daily Edition greeting
+      - name: Wait for the new version to go live
+        if: github.event_name == 'push'
+        run: sleep 150
+      - name: Run the festival day check (up to 3 tries)
         run: |
-          cat > /tmp/wt-video-test/check.cjs <<'NODE'
-          const { chromium } = require('/tmp/wt-video-test/node_modules/playwright');
-
-          (async () => {
-            const browser = await chromium.launch({
-              headless: true,
-              args: []
-            });
-            try {
-              const page = await browser.newPage({
-                viewport: { width: 1440, height: 900 },
-                deviceScaleFactor: 1
-              });
-              const pageErrors = [];
-              const mediaResponses = [];
-              page.on('pageerror', error => pageErrors.push(error.message));
-              page.on('response', response => {
-                if (response.url().includes('/assets/dussehra-') && response.url().includes('.mp4')) {
-                  mediaResponses.push({
-                    url: response.url().split('?')[0],
-                    status: response.status(),
-                    contentType: response.headers()['content-type'] || '',
-                    contentLength: response.headers()['content-length'] || ''
-                  });
-                }
-              });
-
-              const url = 'https://wealthytrees.online/?previewDussehra=1&previewDussehraBar=1&previewDussehraEdition=1&editionSmokeTest=1';
-              const deadline = Date.now() + 240000;
-              let deployed = false;
-              while (Date.now() < deadline) {
-                await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
-                const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
-                const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
-                const boardCount = await page.locator('.wt-dussehra-video-board').count();
-                if (scriptSrc && scriptSrc.includes('v=34') && siteSrc && siteSrc.includes('v=25') && boardCount === 0) {
-                  deployed = true;
-                  break;
-                }
-                await page.waitForTimeout(12000);
-              }
-              if (!deployed) throw new Error('The updated preview intro or removed-board homepage has not reached the live site.');
-
-              const intro = page.locator('#wt-dussehra-intro video.wt-intro-clip');
-              await intro.waitFor({ state: 'visible', timeout: 20000 });
-              await page.waitForFunction(() => {
-                const v = document.querySelector('#wt-dussehra-intro video.wt-intro-clip');
-                return !!v && !v.paused && v.currentTime > 0.35 && v.readyState >= 2 && v.videoWidth > 0;
-              }, null, { timeout: 20000 }).catch(async () => {
-                const state = await intro.evaluate(v => ({
-                  currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
-                  readyState: v.readyState, width: v.videoWidth, height: v.videoHeight,
-                  errorCode: v.error ? v.error.code : null
-                }));
-                throw new Error('Intro video does not play in preview: ' + JSON.stringify({state, mediaResponses, pageErrors}));
-              });
-
-              await page.locator('#wt-dussehra-intro .wt-skip').click();
-              await page.locator('#wt-dussehra-intro').waitFor({ state: 'detached', timeout: 5000 });
-              const secondFullscreenIntroVideo = await page.locator('#wt-dussehra-intro video, body > video').count();
-              if (secondFullscreenIntroVideo !== 0) {
-                throw new Error('A second full-screen video appeared after the intro instead of revealing the website.');
-              }
-              const introScript = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src');
-              const introText = await page.request.get('https://wealthytrees.online/js/dussehra-intro.js?v=33').then(r => r.text());
-              if (introText.includes('dussehra-greeting.mp4') || introText.includes('GREETING_VIDEO_URL')) {
-                throw new Error('The intro script still references the separate greeting video.');
-              }
-              const tickerVisible = await page.locator('.wt-dussehra-sequence').count();
-              if (tickerVisible !== 1) {
-                throw new Error('Festival ticker did not remain on the page after the intro.');
-              }
-              const editionTab = page.locator('#t-ed');
-              await editionTab.waitFor({ state: 'visible', timeout: 15000 });
-              await editionTab.click();
-              await page.locator('#p-ed .story').scrollIntoViewIfNeeded();
-              const editionVideo = page.locator('#p-ed .ed-greeting-video');
-              await editionVideo.waitFor({ state: 'visible', timeout: 60000 });
-              await page.waitForFunction(() => {
-                const v = document.querySelector('#p-ed .ed-greeting-video');
-                return !!v && v.closest('.sl')?.classList.contains('on') &&
-                  !v.paused && v.currentTime > 4.5 && v.readyState >= 2 && v.videoWidth > 0;
-              }, null, { timeout: 30000 }).catch(async () => {
-                const state = await editionVideo.evaluate(v => ({
-                  currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
-                  readyState: v.readyState, videoWidth: v.videoWidth,
-                  errorCode: v.error ? v.error.code : null
-                })).catch(() => null);
-                throw new Error('Daily Edition greeting opening slide does not play: ' + JSON.stringify({state,mediaResponses,pageErrors}));
-              });
-
-              const frameStats = await editionVideo.evaluate(v => {
-                const c = document.createElement('canvas');
-                c.width = 32; c.height = 32;
-                const ctx = c.getContext('2d', { willReadFrequently: true });
-                ctx.drawImage(v, 0, 0, c.width, c.height);
-                const pixels = ctx.getImageData(0, 0, c.width, c.height).data;
-                let total = 0, bright = 0, red = 0, green = 0, blue = 0;
-                for (let i = 0; i < pixels.length; i += 4) {
-                  const lum = 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2];
-                  total += lum; if (lum > 55) bright++;
-                  red += pixels[i]; green += pixels[i + 1]; blue += pixels[i + 2];
-                }
-                const count = pixels.length / 4;
-                return {
-                  meanLuminance: total / count,
-                  brightPixelRatio: bright / count,
-                  meanRgb: [red / count, green / count, blue / count],
-                  videoTime: v.currentTime,
-                  dimensions: [v.videoWidth, v.videoHeight],
-                  controls: v.controls,
-                  opacity: getComputedStyle(v).opacity,
-                  display: getComputedStyle(v).display,
-                  box: (() => { const r=v.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width,height:r.height}; })()
-                };
-              });
-              if (frameStats.controls) throw new Error('The greeting story slide unexpectedly shows native video controls.');
-              if (frameStats.meanLuminance < 45 || frameStats.brightPixelRatio < 0.2) {
-                throw new Error('Video time advances but rendered video frame is black: ' + JSON.stringify(frameStats));
-              }
-
-              const overlayCount = await page.locator('#p-ed .ed-greeting-title, #p-ed .ed-greeting-hint').count();
-              if (overlayCount !== 0) throw new Error('Old banners are still over the greeting video.');
-              const festivalBadge = page.locator('#p-ed .shead.is-festival .festival-edition-badge');
-              await festivalBadge.waitFor({state:'visible', timeout:3000});
-              const badgeText = (await festivalBadge.innerText()).trim();
-              if (badgeText !== 'SPECIAL FESTIVAL EDITION') throw new Error('Unexpected festival badge text: ' + badgeText);
-              const headerBox = await page.locator('#p-ed .shead.is-festival').boundingBox();
-              const badgeBox = await festivalBadge.boundingBox();
-              if (!headerBox || !badgeBox || badgeBox.x < headerBox.x || badgeBox.x + badgeBox.width > headerBox.x + headerBox.width ||
-                  badgeBox.y < headerBox.y || badgeBox.y + badgeBox.height > headerBox.y + headerBox.height) {
-                throw new Error('Festival badge is not contained in the Sprout header: ' + JSON.stringify({headerBox,badgeBox}));
-              }
-              const badgeGlow = await festivalBadge.evaluate(el => getComputedStyle(el).boxShadow);
-              if (!badgeGlow || badgeGlow === 'none') throw new Error('Festival badge glow is missing.');
-              await page.screenshot({ path: '/tmp/wt-video-test/desktop-greeting-slide.png' });
-
-              const firstSlide = page.locator('#p-ed .sl.sfestival.on');
-              await firstSlide.click({ position: { x: 190, y: 300 } });
-              await page.waitForFunction(() => {
-                const first = document.querySelector('#p-ed .sl.sfestival');
-                const next = document.querySelector('#p-ed .sl.s0');
-                return !!first && !!next && !first.classList.contains('on') && next.classList.contains('on');
-              }, null, { timeout: 3000 }).catch(() => {
-                throw new Error('Tapping the embedded greeting did not advance to the next Story card.');
-              });
-
-              const editionOrder = await page.locator('#p-ed .sl').evaluateAll(nodes =>
-                nodes.map(n => ({className:n.className, text:(n.innerText||'').slice(0,80)}))
-              );
-              if (!editionOrder.length || !editionOrder[0].className.includes('sfestival')) {
-                throw new Error('Greeting video is not the first Daily Edition slide: ' + JSON.stringify(editionOrder.slice(0,3)));
-              }
-              if (pageErrors.length) throw new Error('Browser errors: ' + JSON.stringify(pageErrors));
-
-              // Repeat the actual greeting presentation test at a phone-sized viewport.
-              const mobilePage = await browser.newPage({
-                viewport:{width:390,height:844}, deviceScaleFactor:1, isMobile:true, hasTouch:true
-              });
-              const mobileErrors = [];
-              mobilePage.on('pageerror', error => mobileErrors.push(error.message));
-              await mobilePage.goto(url, {waitUntil:'domcontentloaded',timeout:45000});
-              await mobilePage.locator('#wt-dussehra-intro .wt-enter').click({timeout:20000});
-              await mobilePage.locator('#wt-dussehra-intro').waitFor({state:'detached',timeout:10000});
-              await mobilePage.locator('#t-ed').click();
-              await mobilePage.locator('#p-ed .story').scrollIntoViewIfNeeded();
-              const mobileVideo = mobilePage.locator('#p-ed .ed-greeting-video');
-              await mobilePage.waitForFunction(() => {
-                const v = document.querySelector('#p-ed .ed-greeting-video');
-                return !!v && v.closest('.sl')?.classList.contains('on') &&
-                  !v.paused && v.currentTime > 4.5 && v.readyState >= 2 && v.videoWidth > 0;
-              }, null, {timeout:30000}).catch(async () => {
-                const state = await mobileVideo.evaluate(v => ({
-                  paused:v.paused,currentTime:v.currentTime,readyState:v.readyState,
-                  width:v.videoWidth,height:v.videoHeight,error:v.error?v.error.code:null
-                })).catch(()=>null);
-                throw new Error('Mobile greeting video does not display/play: ' + JSON.stringify(state));
-              });
-              const mobileHasOverlay = await mobilePage.locator('#p-ed .ed-greeting-title, #p-ed .ed-greeting-hint').count();
-              const mobileControls = await mobileVideo.evaluate(v => v.controls);
-              const mobileBadge = mobilePage.locator('#p-ed .shead.is-festival .festival-edition-badge');
-              const mobileBadgeBox = await mobileBadge.boundingBox();
-              const mobileCardBox = await mobilePage.locator('#p-ed .story').boundingBox();
-              if (mobileHasOverlay || mobileControls) throw new Error('Mobile greeting still shows a video overlay or native controls.');
-              if (!mobileBadgeBox || !mobileCardBox || mobileBadgeBox.x < mobileCardBox.x ||
-                  mobileBadgeBox.x + mobileBadgeBox.width > mobileCardBox.x + mobileCardBox.width) {
-                throw new Error('Festival badge overflows the mobile Story header: ' + JSON.stringify({mobileBadgeBox,mobileCardBox}));
-              }
-              if (mobileErrors.length) throw new Error('Mobile browser errors: ' + JSON.stringify(mobileErrors));
-              await mobilePage.screenshot({path:'/tmp/wt-video-test/mobile-greeting-slide.png'});
-              console.log(JSON.stringify({
-                passed:true,
-                introPlaying:true,
-                noSecondFullscreenGreeting:true,
-                tickerVisible:true,
-                dailyEditionOpeningSlidePlaying:true,
-                actualVideoFrameStats:frameStats,
-                festivalBadge:{text:badgeText,insideSproutHeader:true,glow:badgeGlow},
-                oldBannersRemoved:overlayCount===0,
-                nativeControlsDisabled:!frameStats.controls,
-                desktopTapAdvances:true,
-                mobile:{greetingPlaying:true,overlays:mobileHasOverlay,controls:mobileControls,badgeInCard:true},
-                mediaResponses,
-                editionFirstSlides:editionOrder.slice(0,3)
-              },null,2));
-              await mobilePage.close();
-            } finally {
-              await browser.close();
-            }
-          })().catch(error => {
-            console.error(error.stack || error);
-            process.exit(1);
-          });
-          NODE
-          node /tmp/wt-video-test/check.cjs
-      - name: Upload rendered greeting screenshot
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: rendered-dussehra-greeting
-          path: /tmp/wt-video-test/*-greeting-slide.png
-          if-no-files-found: ignore
+          for i in 1 2 3; do
+            echo "=== Try $i ==="
+            if PW_PATH=/tmp/wt-test/node_modules/playwright BASE=https://wealthytrees.online node scripts/festival_check.cjs; then
+              exit 0
+            fi
+            sleep 60
+          done
+          echo "The festival day check failed 3 times. See PROBLEMS TO FIX above."
+          exit 1
