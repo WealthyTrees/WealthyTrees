@@ -67,7 +67,7 @@ jobs:
                   { waitUntil: 'domcontentloaded', timeout: 45000 }
                 );
                 const scriptUrl = await page.locator('script[src*="dussehra-video-board.js"]').getAttribute('src').catch(() => '');
-                if (scriptUrl && scriptUrl.includes('v=3')) {
+                if (scriptUrl && scriptUrl.includes('v=4')) {
                   deployed = true;
                   break;
                 }
@@ -76,7 +76,7 @@ jobs:
               if (!deployed) throw new Error('New video-board version was not visible on the live site within 4 minutes.');
 
               await page.locator('.wt-dussehra-video-board').waitFor({ state: 'attached', timeout: 20000 });
-              await page.locator('#brief').scrollIntoViewIfNeeded();
+              await page.locator('#p-live').scrollIntoViewIfNeeded();
               await page.locator('.wt-dussehra-video-board.is-locked').waitFor({ state: 'visible', timeout: 15000 });
 
               const video = page.locator('.wt-dussehra-video-player');
