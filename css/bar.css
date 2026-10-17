@@ -503,3 +503,24 @@
   .wt-fest-main-burst {opacity:.9}
   .wt-fest-message {opacity:1;visibility:visible;transform:translate(-50%,-50%)}
 }
+
+/* Final v3 polish: badge visibility and synchronized 15-second scene timeline. */
+.wt-fest-badge {
+  position:absolute;z-index:4;top:30px;left:16px;display:flex;align-items:center;gap:10px;
+  padding:6px 11px;border:1px solid rgba(255,224,153,.55);border-radius:9px;
+  color:#fff0ca;background:rgba(13,30,43,.58);backdrop-filter:blur(8px);
+  font:800 10px/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.09em;
+  box-shadow:0 4px 16px rgba(0,0,0,.16);
+}
+.wt-fest-badge span {color:#ffd98b;font-size:9px;letter-spacing:.04em}
+.wt-fest-message {animation:wtFestMessageV3 15s ease-in-out infinite!important}
+@keyframes wtFestMessageV3 {
+  0%,33% {opacity:0;visibility:hidden;transform:translate(-50%,-43%) scale(.96)}
+  37% {opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+  91% {opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+  98%,100% {opacity:0;visibility:hidden;transform:translate(-50%,-54%) scale(.98)}
+}
+@media(max-width:640px) {
+ .wt-fest-badge {left:9px;top:27px;gap:6px;padding:5px 7px;font-size:8px;letter-spacing:.04em}
+ .wt-fest-badge span {font-size:7px}
+}
