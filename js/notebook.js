@@ -92,3 +92,8 @@
   window.addEventListener("wt-progress", strp); strp();
   paint();
 })();
+
+/* wt-play: tap or hover a picture to read what it means */
+(function(){function show(e){var h=e.target.closest&&e.target.closest(".dgm.pl .hs");if(!h)return;var d=h.closest(".dgm.pl");d.querySelectorAll(".hs.on").forEach(function(x){x.classList.remove("on")});h.classList.add("on");var t=d.querySelector(".ptip");if(t)t.textContent=h.getAttribute("data-tip")}
+document.addEventListener("click",show);document.addEventListener("mouseover",show);
+document.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("hs")){e.preventDefault();show(e)}})})();

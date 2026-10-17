@@ -164,3 +164,19 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 .lvrow{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
 .article a.fbtn{color:var(--paper);text-decoration:none}.article a.fbtn.alt{color:var(--btn-fg)}
 [data-theme=dark] .article a.fbtn.alt{color:var(--ink)}
+
+/*play*/
+.pb,.pw,.pp,.pf,.ph,.pt{transform-box:fill-box;transform-origin:center}
+.pb{animation:plb 2.6s ease-in-out infinite}.pw{animation:plw 3s ease-in-out infinite}.pp{animation:plp 2.2s ease-in-out infinite}.ph{animation:plh 2.4s ease-in-out infinite}.pt{animation:plt 4s ease-in-out infinite}
+@keyframes plb{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes plw{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes plp{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@keyframes plh{0%{transform:translateX(0);opacity:1}80%{transform:translateX(34px);opacity:.2}100%{transform:translateX(34px);opacity:0}}
+@keyframes plt{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@media(hover:hover){.ccard:hover .pb,.ccard:hover .pw,.ccard:hover .pp,.ccard:hover .ph{animation-duration:.9s}.ccard:hover .pt{animation-duration:1.8s}}
+.dgm.pl svg{max-width:540px;margin:0 auto}
+.dgm.pl .hs{cursor:pointer;outline:none}
+.dgm.pl .hs:hover .wd,.dgm.pl .hs.on .wd,.dgm.pl .hs:focus-visible .wd{stroke:var(--up);stroke-width:3.6}
+.dgm.pl .ptip{min-height:3.2em;margin-top:.4rem}
+@media(prefers-reduced-motion:reduce){.pb,.pw,.pp,.ph,.pt{animation:none}}
+.cthumb.dgm{aspect-ratio:320/258}
