@@ -289,7 +289,7 @@
 .wt-fest-rama{animation:wtFestRama 2.8s ease-in-out infinite alternate}
 @keyframes wtFestRama{to{filter:drop-shadow(0 0 5px rgba(255,214,123,.5))}}
 .wt-fest-arrow{opacity:0;transform-box:view-box;animation:wtFestArrow 13s linear infinite}
-@keyframes wtFestArrow{0%,9%{opacity:0;transform:translateX(0)}11%{opacity:1}27%{opacity:1;transform:translateX(-470px)}29%,100%{opacity:0;transform:translateX(-470px)}}
+@keyframes wtFestArrow{0%,9%{opacity:0;transform:translateX(0)}11%{opacity:1}27%{opacity:1;transform:translateX(-47vw)}29%,100%{opacity:0;transform:translateX(-47vw)}}
 .wt-fest-burst{opacity:0;transform-box:fill-box;transform-origin:center;animation:wtFestBurst 13s ease-out infinite}
 @keyframes wtFestBurst{0%,27%{opacity:0;transform:scale(.15)}29%{opacity:1;transform:scale(1)}33%{opacity:.9;transform:scale(1.15)}39%,100%{opacity:0;transform:scale(1.8)}}
 .wt-fest-fireworks{opacity:0;transform-box:fill-box;transform-origin:center;animation:wtFestCrackers 13s ease-out infinite}
