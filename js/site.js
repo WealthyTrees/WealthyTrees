@@ -70,8 +70,8 @@
 
 (function () {
   if (!document.getElementById("p-live")) return;
-  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/edition.css?v=7"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/js/edition.js?v=7"; s.defer = true; document.body.appendChild(s);
+  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/edition.css?v=8"; document.head.appendChild(l);
+  var s = document.createElement("script"); s.src = "/js/edition.js?v=8"; s.defer = true; document.body.appendChild(s);
 })();
 
 
