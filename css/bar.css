@@ -71,3 +71,76 @@
   .ticker.nse .tk-label #tkname { font-size: .62rem; letter-spacing: .025em; }
   .ticker.nse .tk-label #tkstat { font-size: .49rem; letter-spacing: 0; }
 }
+
+/* v4: understated Dussehra greeting animation in the market-status rail. */
+.ticker.nse .tk-label.wt-dussehra-label {
+  flex-basis: clamp(200px, 18vw, 236px);
+  width: clamp(200px, 18vw, 236px);
+  background:
+    radial-gradient(ellipse at 8% 5%, rgba(224,176,79,.16), transparent 56%),
+    linear-gradient(135deg, #10271c, #081810);
+  border-right-color: #d3a64e;
+  overflow: hidden;
+  isolation: isolate;
+}
+.ticker.nse .tk-label.wt-dussehra-label #tkname {
+  color: #fff0ca;
+  font-size: .66rem;
+  letter-spacing: .04em;
+}
+.ticker.nse .tk-label.wt-dussehra-label #tkstat {
+  max-width: 100%;
+  color: #ffd98b;
+  font-size: .56rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: clip;
+  transition: opacity .22s ease, transform .22s ease;
+}
+.ticker.nse .tk-label.wt-dussehra-label #tkstat.is-changing {
+  opacity: 0;
+  transform: translateY(3px);
+}
+.wt-ticker-petals {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 28px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(90deg, transparent, rgba(8,24,16,.62));
+}
+.wt-ticker-petal {
+  position: absolute;
+  top: -8px;
+  left: var(--px);
+  width: 5px;
+  height: 8px;
+  border-radius: 80% 12% 70% 20%;
+  background: linear-gradient(145deg,#ffeab0,#f3b533 65%,#dc7130);
+  opacity: .75;
+  transform: rotate(20deg);
+  animation: wtTickerPetalFall 4.8s var(--delay) linear infinite;
+}
+.wt-ticker-petal:nth-child(3n) {
+  width: 4px;
+  height: 6px;
+  background: linear-gradient(145deg,#ffe0e6,#df8295);
+}
+@keyframes wtTickerPetalFall {
+  0% { transform: translate3d(0,-8px,0) rotate(0deg); opacity: 0; }
+  12% { opacity: .8; }
+  88% { opacity: .7; }
+  100% { transform: translate3d(8px,86px,0) rotate(220deg); opacity: 0; }
+}
+@media (max-width: 640px) {
+  .ticker.nse .tk-label.wt-dussehra-label { flex-basis: 178px; width: 178px; }
+  .ticker.nse .tk-label.wt-dussehra-label #tkname { font-size: .6rem; letter-spacing: .02em; }
+  .ticker.nse .tk-label.wt-dussehra-label #tkstat { font-size: .48rem; }
+  .wt-ticker-petals { width: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wt-ticker-petal { animation: none; display: none; }
+  .ticker.nse .tk-label.wt-dussehra-label #tkstat { transition: none; }
+}
