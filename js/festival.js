@@ -9,7 +9,7 @@
   var h = window.WT_HOL, tr = h && h.trading[key], mu = key === "2026-11-08";
   var note = mu ? "Muhurat trading session today. Timings are announced by NSE." : tr ? "Indian stock markets are closed today." : "";
   if (key === "2026-10-20" && !rm) {
-    var ds = document.createElement("script"); ds.src = "/js/dussehra.js?v=1";
+    var ds = document.createElement("script"); ds.src = "/js/dussehra.js?v=3" + (q ? "&t=" + Date.now() : "");
     ds.onload = function () { window.WT_DUSSEHRA(note); }; document.body.appendChild(ds); return;
   }
   var st = document.createElement("style");

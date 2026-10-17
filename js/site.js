@@ -76,6 +76,6 @@
 
 
 (function () {
-  function add(n, cb) { var s = document.createElement("script"); s.src = "/js/" + n + ".js?v=2"; s.onload = s.onerror = cb || null; document.body.appendChild(s); }
+  function add(n, cb) { var s = document.createElement("script"); s.src = "/js/" + n + ".js?v=3" + (location.search.indexOf("fest=") > -1 ? "&t=" + Date.now() : ""); s.onload = s.onerror = cb || null; document.body.appendChild(s); }
   add("holidays", function () { add("festival"); });
 })();
