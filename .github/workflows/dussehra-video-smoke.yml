@@ -36,7 +36,7 @@ jobs:
           npm init -y
           npm install playwright
           npx playwright install --with-deps chromium
-      - name: Verify preview intro, autoplaying embedded greeting, and tap-to-advance
+      - name: Verify visible greeting frames, muted autoplay, and tap-to-advance
         run: |
           cat > /tmp/wt-video-test/check.cjs <<'NODE'
           const { chromium } = require('/tmp/wt-video-test/node_modules/playwright');
@@ -55,7 +55,7 @@ jobs:
               const mediaResponses = [];
               page.on('pageerror', error => pageErrors.push(error.message));
               page.on('response', response => {
-                if (response.url().includes('/assets/dussehra-') && response.url().endsWith('.mp4')) {
+                if (response.url().includes('/assets/dussehra-') && response.url().includes('.mp4')) {
                   mediaResponses.push({
                     url: response.url().split('?')[0],
                     status: response.status(),
@@ -73,7 +73,7 @@ jobs:
                 const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
                 const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
                 const boardCount = await page.locator('.wt-dussehra-video-board').count();
-                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=23') && boardCount === 0) {
+                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=24') && boardCount === 0) {
                   deployed = true;
                   break;
                 }
@@ -117,7 +117,7 @@ jobs:
               await page.waitForFunction(() => {
                 const v = document.querySelector('#p-ed .ed-greeting-video');
                 return !!v && v.closest('.sl')?.classList.contains('on') &&
-                  !v.paused && v.currentTime > 0.25 && v.readyState >= 2 && v.videoWidth > 0;
+                  !v.paused && v.currentTime > 4.5 && v.readyState >= 2 && v.videoWidth > 0;
               }, null, { timeout: 30000 }).catch(async () => {
                 const state = await editionVideo.evaluate(v => ({
                   currentSrc: v.currentSrc, paused: v.paused, currentTime: v.currentTime,
@@ -127,8 +127,35 @@ jobs:
                 throw new Error('Daily Edition greeting opening slide does not play: ' + JSON.stringify({state,mediaResponses,pageErrors}));
               });
 
-              const controlsEnabled = await editionVideo.evaluate(v => v.controls);
-              if (controlsEnabled) throw new Error('The greeting story slide unexpectedly shows native video controls.');
+              const frameStats = await editionVideo.evaluate(v => {
+                const c = document.createElement('canvas');
+                c.width = 32; c.height = 32;
+                const ctx = c.getContext('2d', { willReadFrequently: true });
+                ctx.drawImage(v, 0, 0, c.width, c.height);
+                const pixels = ctx.getImageData(0, 0, c.width, c.height).data;
+                let total = 0, bright = 0, red = 0, green = 0, blue = 0;
+                for (let i = 0; i < pixels.length; i += 4) {
+                  const lum = 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2];
+                  total += lum; if (lum > 55) bright++;
+                  red += pixels[i]; green += pixels[i + 1]; blue += pixels[i + 2];
+                }
+                const count = pixels.length / 4;
+                return {
+                  meanLuminance: total / count,
+                  brightPixelRatio: bright / count,
+                  meanRgb: [red / count, green / count, blue / count],
+                  videoTime: v.currentTime,
+                  dimensions: [v.videoWidth, v.videoHeight],
+                  controls: v.controls,
+                  opacity: getComputedStyle(v).opacity,
+                  display: getComputedStyle(v).display,
+                  box: (() => { const r=v.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width,height:r.height}; })()
+                };
+              });
+              if (frameStats.controls) throw new Error('The greeting story slide unexpectedly shows native video controls.');
+              if (frameStats.meanLuminance < 45 || frameStats.brightPixelRatio < 0.2) {
+                throw new Error('Video time advances but rendered video frame is black: ' + JSON.stringify(frameStats));
+              }
 
               const firstSlide = page.locator('#p-ed .sl.sfestival.on');
               await firstSlide.click({ position: { x: 190, y: 300 } });
