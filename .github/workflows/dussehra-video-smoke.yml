@@ -36,7 +36,7 @@ jobs:
           npm init -y
           npm install playwright
           npx playwright install --with-deps chromium
-      - name: Verify preview intro, greeting handoff, and Daily Edition opening page
+      - name: Verify preview intro, autoplaying embedded greeting, and tap-to-advance
         run: |
           cat > /tmp/wt-video-test/check.cjs <<'NODE'
           const { chromium } = require('/tmp/wt-video-test/node_modules/playwright');
@@ -44,7 +44,7 @@ jobs:
           (async () => {
             const browser = await chromium.launch({
               headless: true,
-              args: ['--autoplay-policy=no-user-gesture-required']
+              args: []
             });
             try {
               const page = await browser.newPage({
@@ -73,7 +73,7 @@ jobs:
                 const scriptSrc = await page.locator('script[src*="dussehra-intro.js"]').getAttribute('src').catch(() => '');
                 const siteSrc = await page.locator('script[src*="site.js"]').getAttribute('src').catch(() => '');
                 const boardCount = await page.locator('.wt-dussehra-video-board').count();
-                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=22') && boardCount === 0) {
+                if (scriptSrc && scriptSrc.includes('v=32') && siteSrc && siteSrc.includes('v=23') && boardCount === 0) {
                   deployed = true;
                   break;
                 }
@@ -125,6 +125,19 @@ jobs:
                   errorCode: v.error ? v.error.code : null
                 })).catch(() => null);
                 throw new Error('Daily Edition greeting opening slide does not play: ' + JSON.stringify({state,mediaResponses,pageErrors}));
+              });
+
+              const controlsEnabled = await editionVideo.evaluate(v => v.controls);
+              if (controlsEnabled) throw new Error('The greeting story slide unexpectedly shows native video controls.');
+
+              const firstSlide = page.locator('#p-ed .sl.sfestival.on');
+              await firstSlide.click({ position: { x: 190, y: 300 } });
+              await page.waitForFunction(() => {
+                const first = document.querySelector('#p-ed .sl.sfestival');
+                const next = document.querySelector('#p-ed .sl.s0');
+                return !!first && !!next && !first.classList.contains('on') && next.classList.contains('on');
+              }, null, { timeout: 3000 }).catch(() => {
+                throw new Error('Tapping the embedded greeting did not advance to the next Story card.');
               });
 
               const editionOrder = await page.locator('#p-ed .sl').evaluateAll(nodes =>
