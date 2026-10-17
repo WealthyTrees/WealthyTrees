@@ -116,7 +116,7 @@
     };
 
     const syncBranding = () => {
-      if (!hasTransitioned && plaque.isConnected) {
+      if (!finished && plaque.isConnected) {
         plaque.classList.toggle("is-visible", introVideo.currentTime >= BRANDING_START);
       }
     };
