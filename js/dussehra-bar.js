@@ -46,12 +46,12 @@
         font-size:clamp(18px,2.15vw,25px); font-weight:700; line-height:1.12;
         letter-spacing:.025em; text-shadow:0 0 2px rgba(255,244,202,.8),0 0 10px rgba(226,171,62,.4),0 1px 0 #39250c;
         opacity:0; visibility:hidden; will-change:transform,opacity;
-        animation:wtDussehraSlowPass 36s linear infinite;
+        animation:wtDussehraSlowPass 48s linear infinite;
       }
       .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message--greeting {animation-delay:0s}
-      .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message--hindi {animation-delay:12s}
+      .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message--hindi {animation-delay:16s}
       .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message--company {
-        animation-delay:24s; font-family:Georgia,"Times New Roman",serif; font-size:clamp(17px,2vw,23px);
+        animation-delay:32s; font-family:Georgia,"Times New Roman",serif; font-size:clamp(17px,2vw,23px);
         letter-spacing:.035em;
       }
       @keyframes wtDussehraSlowPass {
