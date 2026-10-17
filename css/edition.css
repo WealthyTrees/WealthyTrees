@@ -52,44 +52,49 @@
 @media(max-height:700px){.story{height:min(92vh,44rem);min-height:26rem}.hk{font-size:1.4rem}.sum{-webkit-line-clamp:4}.ex.wd span{-webkit-line-clamp:3}}
 
 
-/* Dussehra Daily Edition opening video slide */
+/* Festival Story: compact Sprout identity + luminous issue label; no banners over video. */
+.shead.is-festival {
+  left:12px;right:12px;top:22px;gap:.5rem;
+  min-height:54px;padding:8px 9px;border:1px solid rgba(238,204,124,.58);
+  border-radius:15px;
+  background:linear-gradient(115deg,rgba(5,25,17,.9),rgba(11,43,29,.78));
+  box-shadow:0 5px 20px rgba(0,0,0,.18),0 0 17px rgba(237,190,79,.13),inset 0 0 0 1px rgba(255,240,188,.04);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.shead.is-festival .sprout-head {flex:0 1 auto;min-width:0}
+.shead.is-festival .sprout-name {font-size:.88rem;white-space:nowrap}
+.shead.is-festival .sprout-edition {font-size:.68rem;white-space:nowrap}
+.festival-edition-badge {
+  display:inline-flex;flex:0 1 auto;min-width:0;max-width:100%;
+  align-items:center;justify-content:center;text-align:center;
+  padding:.43rem .58rem;border:1px solid rgba(255,222,131,.92);border-radius:9px;
+  color:#ffe7a2;background:linear-gradient(135deg,rgba(114,78,21,.78),rgba(60,53,23,.9));
+  font:800 .55rem/1.2 Inter,system-ui,sans-serif;letter-spacing:.055em;white-space:nowrap;
+  text-shadow:0 0 9px rgba(255,219,128,.55);
+  box-shadow:0 0 7px rgba(255,205,91,.36),0 0 17px rgba(255,194,71,.23),inset 0 0 9px rgba(255,236,174,.08);
+  animation:festivalBadgeGlow 2.2s ease-in-out infinite alternate;
+}
+@keyframes festivalBadgeGlow {
+  from {box-shadow:0 0 5px rgba(255,205,91,.28),0 0 12px rgba(255,194,71,.16),inset 0 0 7px rgba(255,236,174,.05)}
+  to {box-shadow:0 0 9px rgba(255,221,126,.58),0 0 21px rgba(255,194,71,.28),inset 0 0 11px rgba(255,236,174,.12)}
+}
 .sl.sfestival {padding:0;background:#07130d;justify-content:center}
 .sl.sfestival .ed-greeting-video {
   position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;
   object-fit:contain;background:#07130d;opacity:1!important;transform:none!important;
-  animation:none!important;pointer-events:auto;border:0;
-}
-.sl.sfestival .ed-greeting-title {
-  position:absolute;z-index:4;top:4.15rem;left:1rem;right:1rem;
-  display:flex;flex-direction:column;align-items:center;gap:.45rem;text-align:center;
-  padding:.8rem .7rem;border:1px solid rgba(231,194,111,.45);border-radius:13px;
-  background:linear-gradient(180deg,rgba(5,28,18,.87),rgba(5,28,18,.5));
-  opacity:1!important;transform:none!important;animation:none!important;pointer-events:none;
-}
-.sl.sfestival .ed-greeting-title .pillx {align-self:center;background:rgba(238,201,118,.16);color:#f5d88a}
-.sl.sfestival .ed-greeting-title strong {
-  color:#ffe8ab;font-family:Georgia,"Noto Sans Devanagari","Mangal",serif;
-  font-size:1.4rem;line-height:1.2;text-shadow:0 2px 14px rgba(0,0,0,.5);
-}
-.sl.sfestival .ed-greeting-hint {
-  position:absolute;z-index:4;left:1rem;right:1rem;bottom:1rem;margin:0;
-  padding:.7rem .9rem;border:1px solid rgba(255,231,171,.3);border-radius:10px;
-  background:rgba(5,28,18,.83);color:#fff3d1;text-align:center;font-size:.82rem;line-height:1.35;
-  opacity:1!important;transform:none!important;animation:none!important;pointer-events:none;
-}
-.sl.sfestival .ed-greeting-video::-webkit-media-controls {z-index:6}
-
-
-/* Festival greeting is an embedded, control-free story slide. Let taps reach Story navigation. */
-.sl.sfestival .ed-greeting-video {
-  pointer-events:none!important;
-  user-select:none;
-  -webkit-user-select:none;
+  animation:none!important;pointer-events:none!important;user-select:none;-webkit-user-select:none;border:0;
 }
 .sl.sfestival .ed-greeting-video::-webkit-media-controls,
 .sl.sfestival .ed-greeting-video::-webkit-media-controls-panel,
 .sl.sfestival .ed-greeting-video::-webkit-media-controls-enclosure {
-  display:none!important;
-  opacity:0!important;
+  display:none!important;opacity:0!important;
 }
-.sl.sfestival .ed-greeting-hint {pointer-events:none}
+@media(max-width:420px) {
+  .shead.is-festival {left:9px;right:9px;gap:.38rem;padding:7px 7px;min-height:50px}
+  .shead.is-festival .av {width:30px;height:30px;flex:0 0 30px}
+  .shead.is-festival .sprout-name {font-size:.82rem}
+  .shead.is-festival .sprout-edition {font-size:.62rem}
+  .festival-edition-badge {font-size:.48rem;letter-spacing:.025em;padding:.38rem .4rem;border-radius:8px}
+  .shead.is-festival .pp {width:30px;height:30px;flex:0 0 30px}
+}
+@media(prefers-reduced-motion:reduce) {.festival-edition-badge{animation:none}}
