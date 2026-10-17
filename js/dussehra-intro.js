@@ -157,7 +157,7 @@
     cardOverlay.className = "wt-greeting-overlay";
     cardOverlay.setAttribute("role", "dialog");
     cardOverlay.setAttribute("aria-modal", "true");
-    cardOverlay.setAttribute("aria-label", "Vijayadashami greeting video from WealthyTrees");
+    cardOverlay.setAttribute("aria-label", "Vijayadashami greeting from WealthyTrees");
     cardOverlay.innerHTML = `
       <article class="wt-greeting-card wt-greeting-video-card">
         <video class="wt-greeting-video" autoplay muted playsinline preload="auto" aria-label="WealthyTrees Vijayadashami greeting">
@@ -168,8 +168,10 @@
     `;
     document.body.appendChild(cardOverlay);
 
+    const card = cardOverlay.querySelector(".wt-greeting-video-card");
     const greetingVideo = cardOverlay.querySelector(".wt-greeting-video");
     let closed = false;
+    let fellBack = false;
     const closeCard = () => {
       if (closed) return;
       closed = true;
@@ -177,16 +179,28 @@
       cardOverlay.classList.add("is-leaving");
       window.setTimeout(() => cardOverlay.remove(), 700);
     };
-    cardOverlay.querySelector(".wt-greeting-continue").addEventListener("click", closeCard);
+    const wireContinue = () => {
+      const button = cardOverlay.querySelector(".wt-greeting-continue");
+      if (button) button.addEventListener("click", closeCard, { once: true });
+    };
+    const fallbackToStaticCard = () => {
+      if (fellBack || closed) return;
+      fellBack = true;
+      greetingVideo.pause();
+      card.classList.remove("wt-greeting-video-card");
+      card.innerHTML = `
+        <img class="wt-greeting-logo" src="/assets/logo.svg" alt="WealthyTrees logo">
+        <h2 class="wt-greeting-title">Happy Vijayadashami</h2>
+        <div class="wt-greeting-divider" aria-hidden="true"></div>
+        <p class="wt-greeting-quote">असत्य पर सत्य और अधर्म पर धर्म की विजय का यह पावन पर्व आपके जीवन में नई आशा, सुख, समृद्धि और खुशियाँ लेकर आए।</p>
+        <p class="wt-greeting-company">WealthyTrees Private Limited</p>
+        <button class="wt-greeting-continue" type="button">Continue to Website</button>
+      `;
+      wireContinue();
+    };
+    wireContinue();
     greetingVideo.addEventListener("ended", () => window.setTimeout(closeCard, 500), { once: true });
-    greetingVideo.addEventListener("error", () => {
-      if (cardOverlay.querySelector(".wt-greeting-error")) return;
-      const note = document.createElement("p");
-      note.className = "wt-greeting-error";
-      note.textContent = "The greeting video could not load. Please continue to the website.";
-      note.setAttribute("role", "status");
-      cardOverlay.querySelector(".wt-greeting-video-card").appendChild(note);
-    }, { once: true });
+    greetingVideo.addEventListener("error", fallbackToStaticCard, { once: true });
     window.setTimeout(closeCard, 16000);
     greetingVideo.play().catch(() => { greetingVideo.setAttribute("controls", "controls"); });
   }
