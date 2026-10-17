@@ -219,16 +219,19 @@
       showStatus(detail + " The player controls remain available; refresh to try again.");
     });
 
-    // On desktop, lock the board to the upper-right only while the Newsroom
-    // is on screen. Fixed positioning means the panel no longer gets clipped
-    // by the bottom of the news container.
-    if (window.matchMedia("(min-width: 1100px)").matches && "IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        for (const entry of entries) board.classList.toggle("is-locked", entry.isIntersecting);
-      }, { threshold: 0 });
-      observer.observe(layout);
-    } else if (window.matchMedia("(min-width: 1100px)").matches) {
-      board.classList.add("is-locked");
+    // Lock the ad board in the upper-right while the actual newsroom/news
+    // list crosses the viewport. A geometry check avoids observer edge cases
+    // when the newsroom content is much taller than the screen.
+    if (window.matchMedia("(min-width: 1100px)").matches) {
+      const syncBoardLock = () => {
+        const rect = layout.getBoundingClientRect();
+        const insideNewsArea = rect.bottom > 120 && rect.top < window.innerHeight - 100;
+        board.classList.toggle("is-locked", insideNewsArea);
+      };
+      window.addEventListener("scroll", syncBoardLock, { passive: true });
+      window.addEventListener("resize", syncBoardLock);
+      syncBoardLock();
+      window.requestAnimationFrame(syncBoardLock);
     }
 
     video.src = mediaUrl;
