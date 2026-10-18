@@ -45,75 +45,75 @@
  "items": [
   {
    "category": "Economy",
-   "title": "Foreign Funds Pull Fifty-Two Thousand Crore Rupees From Local Equities",
-   "summary": "Overseas portfolio participants removed substantial capital from domestic shares during October, extending net disposals recorded in the prior month.",
-   "why": "Cross-border capital flows directly affect domestic liquidity conditions and exchange-rate stability.",
+   "title": "Foreign Investors Pull Over Fifty-Two Thousand Crore Rupees From Domestic Equities",
+   "summary": "Overseas institutional participants withdrew more than 52,000 crore rupees from Indian shares during October, exceeding the total withdrawn in September. Escalating American government bond yields contributed to the ongoing cross-border capital exit.",
+   "why": "Tracking overseas portfolio flows helps market observers understand cross-border capital trends and liquidity conditions in domestic shares.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-pull-out-rs-52100-cr-from-equities-in-oct-so-far-amid-global-headwinds/articleshow/135024995.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpi-selling-crosses-rs-52000-crore-in-october-as-nifty-defies-foreign-exodus/articleshow/135025955.cms"
   },
   {
    "category": "Equity",
-   "title": "Nine Prominent Domestic Companies Experience Substantial Valuation Expansion",
-   "summary": "India's premier listed entities added over three lakh crore rupees in aggregate worth during the preceding week. Benchmark indices recorded notable jumps, led by advances in software services heavyweight Tata Consultancy Services.",
-   "why": "Gains in mega-cap enterprises carry heavy index weighting and often steer overall market sentiment.",
+   "title": "Market Valuation of Leading Ten Indian Corporations Climbs Substantially Over Past Week",
+   "summary": "Nine of the country's ten most valuable listed enterprises added 3.65 lakh crore rupees in combined market worth as benchmark indices rallied. Technology major TCS was highlighted among the notable gainers during the weekly advance.",
+   "why": "Market capitalisation tracks the aggregate market worth of a firm's equity, illustrating the dominant contributors to index movements.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/mcap-of-nine-of-top-10-most-valued-firms-surges-by-rs-3-65-lakh-cr-tcs-shines/articleshow/135024970.cms"
   },
   {
    "category": "Equity",
-   "title": "ICICI Bank Posts One-Fifth Profit Growth Led by Core Lending Revenue",
-   "summary": "The private lender achieved higher second-quarter earnings on expanding interest receipts, though foreign currency non-resident balances placed downward pressure on operating spreads.",
-   "why": "Tracking net interest income reveals whether banking institutions can expand earnings while managing margin pressures on funding liabilities.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/icici-bank-profit-spurts-20-on-nii-core-profitability-a-tad-lower-on-fcnrb/articleshow/135023892.cms"
+   "title": "Public Power Companies Show Variations in Yearly Cash Dividend Yields",
+   "summary": "Power Grid posted an annual dividend yield of 3.08 percent, ranking highest among five state-run energy companies, followed by NTPC at 2.63 percent. Other state power firms distributed under two rupees per share over the previous twelve months.",
+   "why": "Dividend yield reveals the annual cash return an investor receives relative to the prevailing market price of a stock.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/energy-stocks-dividend-leaderboard-power-grid-ntpc-sjvn-nhpc-or-ireda-which-power-stock-beats-the-rest-on-yield-11792318828215.html"
   },
   {
    "category": "Equity",
-   "title": "Jio Platforms Details Upcoming Share Sale With Defined Valuation Band",
-   "summary": "The telecom unit slated its initial public offering for late October with an established price bracket. Regulatory filings showed expanding subscriber tallies alongside ongoing rollouts of advanced wireless network infrastructure.",
-   "why": "A draft prospectus informs the public regarding an enterprise's operational scale and capital deployment before primary market bidding starts.",
+   "title": "Cyient DLM Shares Fall Over Twelve Percent Following Margin Compression",
+   "summary": "The company's equity dropped 12.24 percent after operating margins narrowed to 8.7 percent, despite revenue and normalised profit growing more than 25 percent. A record volume of confirmed orders underpinned the firm's broader business outlook.",
+   "why": "Operating margin trends can overshadow top-line growth if market participants perceive that underlying profitability per rupee of sales is weakening.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/jio-platforms-ipo-rhp-from-financials-to-spectrum-portfolio-10-key-things-to-know-before-subscribing-11792293777990.html"
+   "url": "https://www.livemint.com/market/stock-market-news/cyient-dlm-shares-crash-12-despite-q2-profit-growth-3-reasons-brokerages-set-targets-should-you-buy-11792312714575.html"
   },
   {
    "category": "Commodity",
-   "title": "Central Bank Announces Early Buyback Window for Sovereign Gold Bonds",
-   "summary": "The monetary regulator scheduled an early exit opportunity for the 2020-21 Series Seven gold debt issuance. Bondholders can tender their holdings prior to final maturity under government guidelines.",
-   "why": "Early redemption windows provide secondary liquidity to investors tracking bullion returns without needing to hold physical metal.",
+   "title": "Reserve Bank Establishes Early Buyback Terms for Sovereign Gold Bond Tranche",
+   "summary": "The Reserve Bank of India has scheduled the early exit pricing for the 2020-21 Series Seven gold bond issue for October 19, 2026. This allows eligible bondholders to surrender their units ahead of final maturity.",
+   "why": "Sovereign Gold Bonds offer investors a government-backed channel to invest in precious metals with periodic redemption options.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63822"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Clears Merger Involving Foreign Lender Offices and RBL Bank",
-   "summary": "The monetary authority formally sanctioned the consolidation of Emirates NBD Bank's local offices into RBL Bank Limited. The statutory merger combines the overseas entity's domestic footprint with the Indian private lender.",
-   "why": "Regulatory sanctions of banking mergers safeguard depositor interests and restructure competitive reach in the domestic financial framework.",
+   "title": "Reserve Bank Clears Merger of Emirates NBD Local Branches With RBL",
+   "summary": "The central bank approved the formal scheme transferring the Indian operations of Emirates NBD Bank into RBL Bank. This official sanction facilitates the structural combination of the foreign institution's domestic footprint with the Indian private lender.",
+   "why": "Regulatory approval is mandatory for bank mergers to ensure financial stability and orderly asset transfers across financial institutions.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
   },
   {
+   "category": "US Markets",
+   "title": "Wall Street Records Deepest Weekly Downturn Since June on Tech Slide",
+   "summary": "American equity markets registered their sharpest weekly decline since June as artificial intelligence shares retreated.",
+   "why": "Global stock markets frequently mirror moves in major US benchmarks due to interconnected international investment flows.",
+   "source": "Eurasia Business News",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNckZRUlh6V2VTd1BucUM2ZUp0U3pkQzdzaE4yYWdvT3M1UE5TdGcwaHNMcHBxa2ZpN090MklITTJjTVZnOU54V2xJNUYtV0ZCZi1vdzBJcUplSVlOUzZoMkxoRzd4N0x5SENPZ2FzcWtTdnZ3ZXV4RGxiMkhCM1M5YmdVajlVTUVDdUt6bTVGaG5TRURrOXNCY25DZjdlWm9ieC01OGZKbWtnUlNTN3U4U2lfZlUtZzA?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "American Bourses Retreat as Artificial Intelligence Stocks Slide and Crude Climbs",
+   "summary": "US equity markets dropped following a downturn in artificial intelligence companies coupled with a spike in petroleum prices.",
+   "why": "Simultaneous shifts in key technology holdings and fuel prices can alter corporate operating costs and investor sentiment.",
+   "source": "Analytics Insight",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORS1FWWxrZzAyRTJjT0F5N29UdmRENk8zX2ZZLVBhN3FtY3lRZjF5dHFvdmFKWFVxNkc5M0Y1Y1hKTTBURkNNXzI5cG9XNXk5QU1mSnZlUUZDYzhpWndIWmtXS1VMSE5rX1kzSHNDV0JxWlBJZVNfLVh4Nlcza2V2TEZnQkFRWGctNUoyWS1NcTdYbVZjM0k4NExpb1RCdk84T2VYVXA4RHPSAagBQVVfeXFMTkUtRVlsa2cwMkUyY09BeTdvVHZkRDZPM19mWS1QYTdxbWN5UWYxeXRxb3ZhSlhVcTZHOTNGNWNYSk0wVEZDTV8yOXBvVzV5OUFNZkp2ZVFGQ2M4aVp3SFprV0tVTEhOa19ZM0hzQ1dCcVpQSWVTXy1YeDZXM2tldkxGZ0JBUVhnLTVKMlktTXE3WG1WYzNJODRMaW9UQnZPOE9lWFVwOERz?oc=5"
+  },
+  {
    "category": "Commodity",
-   "title": "Global Gold Rates Finish Lower Following Pressure From US Inflation Reports",
-   "summary": "International bullion settled at 4,165 dollars per unit at the conclusion of the week. Fresh American price indices dampened investor demand for the precious metal.",
-   "why": "Inflation reports alter central bank interest rate trajectories, which directly impacts the holding appeal of non-yielding commodities.",
+   "title": "Gold Closes Weekly Trading at 4,165 Dollars Amid American Price Data",
+   "summary": "The precious metal settled at 4,165 dollars at the close of the week following the release of United States inflation figures.",
+   "why": "Precious metals often react to inflation numbers because changing consumer prices alter the trajectory of interest rates.",
    "source": "Kuwait Times",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUERKTk0wTkE4dVg4VGNqSDNia253cHVDejRxVzFXc1lPbFQ2U0ZTZGtLTXNOeGlFdkhUOUpOWUl3WVFFWEtoQTUta2tmMUpmeGU5ZzB4NDEtTU5nd1VlQzI4WFpIVFhoeFY2LUpfTV9Xc25fVFNNUzhLOFZUcEZ4Q0lVRV9FblllVFh1cWJvdmZRY2xpaHpPaTd6MnhZYmPSAaMBQVVfeXFMTWd0dURRVW5jN2tuUEdCTGI0LXlqLVdLTTRIcHpyTHlRYlBldnlfZ0dncDB2b2xUdEMwTGRrUkFkR1I2QVQ3RXlpaUpvQzhsTnNZaGpKV1JHTE0tM0piX0JCT0xITXhIUlVDcWhHcTRIZF9OS0VRcGFRTHdJOTNzUjJEVWJQTEtvNi16MnRIRXp4SEg1T0x0TWxVUjFWWDJsNzBvWQ?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "American Markets Anticipate Quarterly Financial Disclosures From Major Technology Giants",
-   "summary": "Wall Street participants are monitoring impending results from prominent firms including Meta, Tesla, and Netflix. These corporate figures are slated to clarify consumer appetite alongside ongoing technological investments.",
-   "why": "Corporate earnings scorecards offer vital insight into enterprise health and consumer demand across the broader global economy.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/wall-street-week-ahead-earnings-expectations-all-eyes-on-meta-tesla-netflix-and-spacex-this-survey-also-in-focus-11792254700438.html"
-  },
-  {
-   "category": "US Markets",
-   "title": "Technology Shares Pull Nasdaq Down While Dow Advances on Defensive Allocations",
-   "summary": "The tech-focused index contracted four and a half percent amid growing concerns regarding artificial intelligence funding requirements. Meanwhile, capital rotated into safer segments, enabling the Dow Jones index to gain fractionally.",
-   "why": "Investors reallocate capital between speculative growth equities and stable defensive counters based on prevailing risk appetites and funding conditions.",
-   "source": "HDFC Sky",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPR2VSVEw2S2I5VEpGUlhVU251UHFwckVKbjdRVVJxRU9nQlUwbVMyZ3MzM1RvV09DWk9uTnRRT2hPYkQ1cWtLbFJMZmpOQ0pxejI5dGdTWWZ3NUpKeEhnM0luNTRPVW5xZVo0V1FZbGxSSjlndG9Fak9LM29YM3Z1UmlsaEU1V05maU5VcFdlVXlZSFVwLVVPYVhmS05DQjdCX1NPNE1vWlJIU3dYWmR4a0E2eVVDdFNYZ0pGazBPZWVhWVE2N011VENRaDROaHM?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZ3R1RFFVbmM3a25QR0JMYjQteWotV0tNNEhwenJMeVFiUGV2eV9nR2dwMHZvbFR0QzBMZGtSQWRHUjZBVDdFeWlpSm9DOGxOc1loakpXUkdMTS0zSmJfQkJPTEhNeEhSVUNxaEdxNEhkX05LRVFwYVFMd0k5M3NSMkRVYlBMS282LXoydEhFenhISDVPTHRNbFVSMVZYMmw3MG9Z0gGjAUFVX3lxTE1ndHVEUVVuYzdrblBHQkxiNC15ai1XS000SHB6ckx5UWJQZXZ5X2dHZ3Awdm9sVHRDMExka1JBZEdSNkFUN0V5aWlKb0M4bE5zWWhqSldSR0xNLTNKYl9CQk9MSE14SFJVQ3FoR3E0SGRfTktFUXBhUUx3STkzc1IyRFViUExLbzYtejJ0SEV6eEhINU9MdE1sVVIxVlgybDcwb1k?oc=5"
   }
  ]
 }
