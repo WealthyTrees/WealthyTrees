@@ -23,8 +23,8 @@
   },
   {
    "name": "USD/INR",
-   "value": "94.96",
-   "change": -0.09
+   "value": "94.95",
+   "change": -0.1
   },
   {
    "name": "S&P 500",
@@ -44,76 +44,76 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "Foreign Investors Pull Over Fifty-Two Thousand Crore Rupees From Domestic Equities",
-   "summary": "Overseas institutional participants withdrew more than 52,000 crore rupees from Indian shares during October, exceeding the total withdrawn in September. Escalating American government bond yields contributed to the ongoing cross-border capital exit.",
-   "why": "Tracking overseas portfolio flows helps market observers understand cross-border capital trends and liquidity conditions in domestic shares.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpi-selling-crosses-rs-52000-crore-in-october-as-nifty-defies-foreign-exodus/articleshow/135025955.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Market Valuation of Leading Ten Indian Corporations Climbs Substantially Over Past Week",
-   "summary": "Nine of the country's ten most valuable listed enterprises added 3.65 lakh crore rupees in combined market worth as benchmark indices rallied. Technology major TCS was highlighted among the notable gainers during the weekly advance.",
-   "why": "Market capitalisation tracks the aggregate market worth of a firm's equity, illustrating the dominant contributors to index movements.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/mcap-of-nine-of-top-10-most-valued-firms-surges-by-rs-3-65-lakh-cr-tcs-shines/articleshow/135024970.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Public Power Companies Show Variations in Yearly Cash Dividend Yields",
-   "summary": "Power Grid posted an annual dividend yield of 3.08 percent, ranking highest among five state-run energy companies, followed by NTPC at 2.63 percent. Other state power firms distributed under two rupees per share over the previous twelve months.",
-   "why": "Dividend yield reveals the annual cash return an investor receives relative to the prevailing market price of a stock.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/energy-stocks-dividend-leaderboard-power-grid-ntpc-sjvn-nhpc-or-ireda-which-power-stock-beats-the-rest-on-yield-11792318828215.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Cyient DLM Shares Fall Over Twelve Percent Following Margin Compression",
-   "summary": "The company's equity dropped 12.24 percent after operating margins narrowed to 8.7 percent, despite revenue and normalised profit growing more than 25 percent. A record volume of confirmed orders underpinned the firm's broader business outlook.",
-   "why": "Operating margin trends can overshadow top-line growth if market participants perceive that underlying profitability per rupee of sales is weakening.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/cyient-dlm-shares-crash-12-despite-q2-profit-growth-3-reasons-brokerages-set-targets-should-you-buy-11792312714575.html"
-  },
-  {
    "category": "Commodity",
-   "title": "Reserve Bank Establishes Early Buyback Terms for Sovereign Gold Bond Tranche",
-   "summary": "The Reserve Bank of India has scheduled the early exit pricing for the 2020-21 Series Seven gold bond issue for October 19, 2026. This allows eligible bondholders to surrender their units ahead of final maturity.",
-   "why": "Sovereign Gold Bonds offer investors a government-backed channel to invest in precious metals with periodic redemption options.",
+   "title": "Reserve Bank Sets Redemption Value for Maturing Sovereign Gold Bonds",
+   "summary": "The central bank declared the early redemption rate for the 2020-21 Series VII Sovereign Gold Bond. Eligible bondholders can redeem their units ahead of full maturity following government rules.",
+   "why": "Sovereign Gold Bonds offer investors returns tied to precious metal values without holding physical bullion.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63822"
   },
   {
+   "category": "US Markets",
+   "title": "Global Strategist Urges Investors to Expand Holdings Beyond Artificial Intelligence",
+   "summary": "Chris Wood from Jefferies suggested reducing heavy concentration in international artificial intelligence firms. He highlighted expectations of slower profit expansion alongside high valuation multiples for the sector.",
+   "why": "Understanding portfolio diversification helps investors manage risks when high-flying market sectors face potential slowdowns.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/jefferies-chris-wood-says-its-time-to-diversify-beyond-ai-where-should-investors-look-now/articleshow/135025560.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Elevated American Bond Yields and Federal Reserve Stance Guide Foreign Flows",
+   "summary": "A firm policy stance from the United States central bank and higher ten-year Treasury yields continue to affect international capital movements. These global monetary conditions play a central role in foreign investor trading activity.",
+   "why": "Changes in American interest rates directly influence how global investors allocate capital across emerging economies.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-ganesh-dongre-of-anand-rathi-recommends-larsen-and-toubro-equitas-bajaj-finance-shares-target-sl-11792314410454.html"
+  },
+  {
    "category": "Economy",
-   "title": "Reserve Bank Clears Merger of Emirates NBD Local Branches With RBL",
-   "summary": "The central bank approved the formal scheme transferring the Indian operations of Emirates NBD Bank into RBL Bank. This official sanction facilitates the structural combination of the foreign institution's domestic footprint with the Indian private lender.",
-   "why": "Regulatory approval is mandatory for bank mergers to ensure financial stability and orderly asset transfers across financial institutions.",
+   "title": "Foreign Investor Outflows Exceed Fifty-Two Thousand Crore Rupees in October",
+   "summary": "Overseas portfolio funds pulled out more than fifty-two thousand crore rupees from domestic equities during October. Stronger benchmark yields in the United States contributed to the acceleration in foreign institutional selling.",
+   "why": "Foreign capital flows strongly shape liquidity and sentiment within domestic financial markets.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpi-selling-crosses-rs-52000-crore-in-october-as-nifty-defies-foreign-exodus/articleshow/135025955.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Approves Amalgamation of Emirates NBD Branches With RBL Bank",
+   "summary": "The Reserve Bank of India cleared a merger scheme transferring the local branch network of Emirates NBD into RBL Bank. This official regulatory clearance allows the two banking entities to combine their Indian operations.",
+   "why": "Regulatory approval is mandatory for commercial bank mergers to protect financial stability and depositor interests.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
   },
   {
-   "category": "US Markets",
-   "title": "Wall Street Records Deepest Weekly Downturn Since June on Tech Slide",
-   "summary": "American equity markets registered their sharpest weekly decline since June as artificial intelligence shares retreated.",
-   "why": "Global stock markets frequently mirror moves in major US benchmarks due to interconnected international investment flows.",
-   "source": "Eurasia Business News",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNckZRUlh6V2VTd1BucUM2ZUp0U3pkQzdzaE4yYWdvT3M1UE5TdGcwaHNMcHBxa2ZpN090MklITTJjTVZnOU54V2xJNUYtV0ZCZi1vdzBJcUplSVlOUzZoMkxoRzd4N0x5SENPZ2FzcWtTdnZ3ZXV4RGxiMkhCM1M5YmdVajlVTUVDdUt6bTVGaG5TRURrOXNCY25DZjdlWm9ieC01OGZKbWtnUlNTN3U4U2lfZlUtZzA?oc=5"
+   "category": "Economy",
+   "title": "Reserve Bank Announces Upcoming Auctions for Multiple Treasury Bill Tenures",
+   "summary": "India's central bank scheduled periodic auctions for short-term sovereign debt across ninety-one, one-hundred-eighty-two, and three-hundred-sixty-four day tenures. These auctions enable the central government to borrow short-term funds from institutional market participants.",
+   "why": "Treasury bills provide risk-free sovereign benchmarks and reflect current short-term money market liquidity.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63821"
   },
   {
-   "category": "US Markets",
-   "title": "American Bourses Retreat as Artificial Intelligence Stocks Slide and Crude Climbs",
-   "summary": "US equity markets dropped following a downturn in artificial intelligence companies coupled with a spike in petroleum prices.",
-   "why": "Simultaneous shifts in key technology holdings and fuel prices can alter corporate operating costs and investor sentiment.",
-   "source": "Analytics Insight",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORS1FWWxrZzAyRTJjT0F5N29UdmRENk8zX2ZZLVBhN3FtY3lRZjF5dHFvdmFKWFVxNkc5M0Y1Y1hKTTBURkNNXzI5cG9XNXk5QU1mSnZlUUZDYzhpWndIWmtXS1VMSE5rX1kzSHNDV0JxWlBJZVNfLVh4Nlcza2V2TEZnQkFRWGctNUoyWS1NcTdYbVZjM0k4NExpb1RCdk84T2VYVXA4RHPSAagBQVVfeXFMTkUtRVlsa2cwMkUyY09BeTdvVHZkRDZPM19mWS1QYTdxbWN5UWYxeXRxb3ZhSlhVcTZHOTNGNWNYSk0wVEZDTV8yOXBvVzV5OUFNZkp2ZVFGQ2M4aVp3SFprV0tVTEhOa19ZM0hzQ1dCcVpQSWVTXy1YeDZXM2tldkxGZ0JBUVhnLTVKMlktTXE3WG1WYzNJODRMaW9UQnZPOE9lWFVwOERz?oc=5"
+   "category": "Equity",
+   "title": "Domestic Institutions Expand Equity Stakes Across NSE Midcap Companies",
+   "summary": "Local institutional funds raised their ownership percentages in multiple mid-tier listed firms during the September quarter. Entities seeing greater institutional participation include Swiggy, Meesho, and Cochin Shipyard.",
+   "why": "Tracking institutional shareholding shifts helps new investors understand where professional money managers are allocating funds.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/diis-increase-stake-in-8-midcap-stocks-in-q2fy27/slideshow/135027062.cms"
   },
   {
-   "category": "Commodity",
-   "title": "Gold Closes Weekly Trading at 4,165 Dollars Amid American Price Data",
-   "summary": "The precious metal settled at 4,165 dollars at the close of the week following the release of United States inflation figures.",
-   "why": "Precious metals often react to inflation numbers because changing consumer prices alter the trajectory of interest rates.",
-   "source": "Kuwait Times",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZ3R1RFFVbmM3a25QR0JMYjQteWotV0tNNEhwenJMeVFiUGV2eV9nR2dwMHZvbFR0QzBMZGtSQWRHUjZBVDdFeWlpSm9DOGxOc1loakpXUkdMTS0zSmJfQkJPTEhNeEhSVUNxaEdxNEhkX05LRVFwYVFMd0k5M3NSMkRVYlBMS282LXoydEhFenhISDVPTHRNbFVSMVZYMmw3MG9Z0gGjAUFVX3lxTE1ndHVEUVVuYzdrblBHQkxiNC15ai1XS000SHB6ckx5UWJQZXZ5X2dHZ3Awdm9sVHRDMExka1JBZEdSNkFUN0V5aWlKb0M4bE5zWWhqSldSR0xNLTNKYl9CQk9MSE14SFJVQ3FoR3E0SGRfTktFUXBhUUx3STkzc1IyRFViUExLbzYtejJ0SEV6eEhINU9MdE1sVVIxVlgybDcwb1k?oc=5"
+   "category": "Equity",
+   "title": "Nineteen Listed Companies Approach Record Dates for Upcoming Corporate Actions",
+   "summary": "Several public firms including Tech Mahindra, IRFC, and Angel One have scheduled record dates this week. These cut-off dates will determine investor eligibility to receive declared dividends, stock splits, or bonus shares.",
+   "why": "Knowing record dates helps investors understand corporate distributions and how share quantities adjust on exchanges.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/bonus-issues-stock-splits-dividends-hdb-financial-irfc-techm-among-19-stocks-turning-ex-record-date-this-week/articleshow/135024511.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Cyient DLM Shares Drop Following Narrower Operating Profit Margins",
+   "summary": "Shares of Cyient DLM declined over twelve percent despite delivering quarterly revenue and adjusted profit gains above twenty-five percent. Market participants reacted to operating margins tightening down to eight-point-seven percent.",
+   "why": "Share prices frequently react to profitability margins rather than top-line revenue growth alone.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/cyient-dlm-shares-crash-12-despite-q2-profit-growth-3-reasons-brokerages-set-targets-should-you-buy-11792312714575.html"
   }
  ]
 }
