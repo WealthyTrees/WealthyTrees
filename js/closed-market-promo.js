@@ -9,31 +9,20 @@
   const DUSSEHRA_DATE = "2026-10-20";
 
   const cards = [
-    {
-      href: "/",
-      title: "WealthyTrees",
-      body: "Markets, simplified. Daily.",
-      variant: "brand"
-    },
-    {
-      href: "/markets.html",
-      title: "Explore the Markets",
-      body: "Charts, indices and price moves — made clearer.",
-      variant: "markets"
-    },
-    {
-      href: "/learn.html",
-      title: "Weekend Learning",
-      body: "Build your market knowledge, one idea at a time.",
-      variant: "learn"
-    },
-    {
-      href: "/about.html",
-      title: "No hype. Just clarity.",
-      body: "Understand what happened and why it matters.",
-      variant: "about"
-    }
+    { href: "/", title: "WealthyTrees", body: "Markets, simplified. Daily.", cta: "Read today's news" },
+    { href: "/markets.html", title: "Explore the Markets", body: "Charts, indices and price moves \u2014 made clearer.", cta: "Open charts" },
+    { href: "/learn.html", title: "Weekend Learning", body: "Build your market knowledge, one idea at a time.", cta: "Start Learning" },
+    { href: "/about.html", title: "No hype. Just clarity.", body: "Understand what happened and why it matters.", cta: "Our approach" }
   ];
+  let timer = null, idx = 0, paused = false;
+  function show(i) { document.querySelectorAll("#track .wt-rot-card").forEach((el, k) => el.classList.toggle("on", k === i)); }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function start(track) {
+    stop(); idx = 0; paused = false;
+    ["mouseenter", "focusin", "touchstart"].forEach(e => track.addEventListener(e, () => { paused = true; }));
+    ["mouseleave", "focusout", "touchend"].forEach(e => track.addEventListener(e, () => { paused = false; }));
+    timer = setInterval(() => { if (paused) return; idx = (idx + 1) % cards.length; show(idx); }, 5000);
+  }
 
   function indiaDay() {
     const parts = new Intl.DateTimeFormat("en-GB", {
@@ -58,11 +47,20 @@
     return false;
   }
 
-  function cardMarkup(card) {
-    return '<a class="tk wt-promo-card wt-promo-' + card.variant + '" href="' + card.href + '">' +
-      '<span class="wt-promo-mark"><img src="/assets/logo.svg" alt=""></span>' +
-      '<span class="wt-promo-copy"><strong>' + card.title + '</strong><span>' + card.body + '</span></span>' +
-      '<span class="wt-promo-arrow" aria-hidden="true">↗</span></a>';
+  function cardMarkup(card, i) {
+    return '<a class="wt-promo-card wt-rot-card' + (i ? '' : ' on') + '" href="' + card.href + '">' +
+      '<span class="wt-rot-copy"><strong>' + card.title + '</strong><span>' + card.body + '</span></span>' +
+      '<span class="wt-rot-btn"><span class="wt-rot-cta">' + card.cta + ' </span>\u2197</span></a>';
+  }
+
+  function setChip(day) {
+    const n = document.getElementById("tkname"), st = document.getElementById("tkstat");
+    if (!n || !st) return;
+    const wk = day.weekday === "Sat" || day.weekday === "Sun";
+    const h = window.WT_HOL && typeof window.WT_HOL.today === "function" ? window.WT_HOL.today() : null;
+    if (wk) { n.textContent = "India \u00b7 Weekend"; st.textContent = "MARKETS CLOSED \u00b7 LAST CLOSE"; }
+    else if (h && h.kind === "closed") { n.textContent = "India"; st.textContent = "HOLIDAY \u00b7 " + h.name; }
+    else { n.textContent = "India"; st.textContent = "MARKETS CLOSED"; }
   }
 
   function render() {
@@ -78,15 +76,19 @@
     const shouldPromote = !dussehra && (PREVIEW || indiaMarketClosed());
 
     if (shouldPromote) {
+      setChip(day);
       if (track.dataset.wtPromoActive === "1" && track.querySelector(".wt-promo-card")) return;
-      const sequence = cards.map(cardMarkup).join("");
-      track.classList.add("wt-promo-track");
+      track.className = "track wt-rotor-track";
+      ticker.classList.add("wt-rotor-on");
       track.dataset.wtPromoActive = "1";
       track.dataset.sig = "wt-promo";
-      track.style.setProperty("--dur", "58s");
-      track.innerHTML = sequence + sequence;
+      track.style.removeProperty("--dur");
+      track.innerHTML = cards.map(cardMarkup).join("");
+      start(track);
     } else if (track.dataset.wtPromoActive === "1") {
-      track.classList.remove("wt-promo-track");
+      stop();
+      track.classList.remove("wt-rotor-track");
+      ticker.classList.remove("wt-rotor-on");
       delete track.dataset.wtPromoActive;
       track.dataset.sig = "";
       track.style.removeProperty("--dur");
