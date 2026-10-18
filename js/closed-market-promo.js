@@ -6,6 +6,7 @@
   const params = new URLSearchParams(window.location.search);
   const PREVIEW = params.get("previewMarketPromo") === "1";
   const FESTIVE_PREVIEW = params.get("previewDussehraFestival") === "1" || params.get("previewDussehraBar") === "1";
+  const WEEKDAY_PREVIEW = params.get("previewWeekday") === "1";
   const DUSSEHRA_DATE = "2026-10-20";
 
   const cards = [
@@ -73,7 +74,7 @@
 
     const day = indiaDay();
     const dussehra = day.date === DUSSEHRA_DATE || FESTIVE_PREVIEW;
-    const shouldPromote = !dussehra && (PREVIEW || indiaMarketClosed());
+    const shouldPromote = !dussehra && !WEEKDAY_PREVIEW && (PREVIEW || indiaMarketClosed());
 
     if (shouldPromote) {
       setChip(day);

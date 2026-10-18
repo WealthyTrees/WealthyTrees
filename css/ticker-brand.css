@@ -1,9 +1,4 @@
 /* WealthyTrees ticker v-brand: logo slot, forced two-line status chip, rotating promo cards. */
-.ticker.nse .tk-brand{flex:none;align-self:stretch;display:flex;align-items:center;gap:.5rem;padding:.3rem .9rem .3rem .8rem;color:#fff;text-decoration:none;border-right:1px solid rgba(255,255,255,.14)}
-.ticker.nse .tk-brand img{width:34px;height:34px;display:block}
-.ticker.nse .tk-brand b{font-size:.84rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;color:#fff}
-.ticker.nse .tk-brand em{font-style:normal;color:#3ddc97}
-.ticker.wt-dussehra-festival .tk-brand,.ticker.wt-dussehra-text-ticker .tk-brand{display:none!important}
 
 /* Status chip: always two lines (name over status) */
 .ticker.nse .tk-label:not(.wt-dussehra-label){display:grid!important;grid-template-columns:8px minmax(0,1fr);grid-template-rows:auto auto;align-content:center;align-items:center;column-gap:.5rem;row-gap:.16rem;flex:0 0 clamp(190px,17vw,226px)!important;width:clamp(190px,17vw,226px)!important;max-width:none!important;padding:.45rem .85rem;white-space:normal;line-height:1.1}
@@ -22,8 +17,7 @@
 .wt-rot-btn{flex:none;font-size:.78rem;font-weight:700;padding:.42rem .9rem;border-radius:999px;background:#3ddc97;color:#06150e;white-space:nowrap}
 .wt-rot-card:hover .wt-rot-btn{background:#7cf0bd}
 @media(max-width:640px){
-  .ticker.nse .tk-brand{padding:.3rem .55rem}.ticker.nse .tk-brand b{display:none}.ticker.nse .tk-brand img{width:30px;height:30px}
-  .ticker.nse .tk-label:not(.wt-dussehra-label){flex-basis:160px!important;width:160px!important;padding:.4rem .55rem;column-gap:.4rem}
+    .ticker.nse .tk-label:not(.wt-dussehra-label){flex-basis:160px!important;width:160px!important;padding:.4rem .55rem;column-gap:.4rem}
   .ticker.nse .tk-label:not(.wt-dussehra-label) #tkname{font-size:.6rem}
   .ticker.nse .tk-label:not(.wt-dussehra-label) #tkstat{font-size:.47rem}
   .wt-rot-card{gap:.6rem;padding:0 .7rem}.wt-rot-copy strong{font-size:.82rem}.wt-rot-copy span{display:none}.wt-rot-cta{display:none}.wt-rot-btn{font-size:.9rem;padding:.3rem .6rem}.wt-rot-copy strong{white-space:normal;line-height:1.1;font-size:.75rem}

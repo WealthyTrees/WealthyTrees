@@ -28,7 +28,7 @@ const GRP={IN:['NIFTY 50','SENSEX','BANK NIFTY','NIFTY IT','NIFTY PHARMA','NIFTY
   US:['S&P 500','NASDAQ','DOW']};
 function tzp(tz){const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:tz,weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));
   return{wk:p.weekday==='Sat'||p.weekday==='Sun',m:(+p.hour)*60+(+p.minute)}}
-function phase(){const i=tzp('Asia/Kolkata'),e=tzp('America/New_York');
+function phase(){if(/[?&]previewWeekday=1/.test(location.search))return{g:'IN',n:'India',s:'LIVE',live:1};const i=tzp('Asia/Kolkata'),e=tzp('America/New_York');
   if(!e.wk&&e.m>=570&&e.m<960)return{g:'US',n:'US markets',s:'LIVE',live:1};
   if(i.wk)return{g:'IN',n:'India · Weekend',s:'MARKETS CLOSED · LAST CLOSE'};
   if(i.m>=360&&i.m<930)return i.m>=555?{g:'IN',n:'India',s:'LIVE',live:1}:{g:'IN',n:'India',s:'PRE-OPEN'};
