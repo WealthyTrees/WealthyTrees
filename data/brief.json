@@ -1,5 +1,5 @@
 {
- "date": "Saturday, 17 October 2026",
+ "date": "Sunday, 18 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -45,67 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "ICICI Bank Posts Twenty Percent Net Profit Expansion in Second Quarter",
-   "summary": "The private financial institution recorded a second-quarter surplus of 14,843 crore rupees, improving from 12,359 crore rupees in the prior corresponding period. Revenue from core lending operations expanded by eighteen percent alongside bottom-line growth.",
-   "why": "Tracking commercial bank profitability assists investors in evaluating credit growth trends and financial system strength.",
+   "title": "ICICI Bank Records Strong Second Quarter Earnings Expansion",
+   "summary": "The private sector lender posted a twenty percent jump in quarterly net income, reaching 14,843 crore rupees. Growth was assisted by an eighteen percent expansion in net interest income.",
+   "why": "Net interest income shows the core profitability of a lender by measuring the gap between interest earned and interest disbursed.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/icici-bank-q2-results-net-profit-jumps-20-to-rs-14843-crore-nii-rises-18-yoy/articleshow/135011810.cms"
   },
   {
    "category": "Equity",
-   "title": "State-Run Rail Enterprise Equities Tumble From Previous Highs Over Operational Concerns",
-   "summary": "Shares of government rail companies dropped by up to forty percent over a twelve-month span as stock prices outpaced underlying business performance. Industry observers pointed to softening operating margins and slower contract executions rather than public capital expenditure cutbacks.",
-   "why": "Understanding valuation limits helps market participants realize when asset prices disconnect from real operational gains.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/railway-psu-stocks-derailed-rvnl-irfc-ircon-rites-to-irctc-down-60-in-yr-what-went-wrong-experts-explain-11792225685815.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Jio Platforms Prepares Record Domestic Initial Public Offering At Premium Valuation",
-   "summary": "Reliance's technology enterprise is moving ahead with an issue targeting approximately 3.2 billion dollars. The transaction seeks an implied enterprise value of around 108 billion dollars to draw public investment.",
-   "why": "Massive primary market listings test institutional capital capacity and signal corporate appetite for public market funding.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/reliance-jio-ipo-from-dhirubhai-ambanis-1977-listing-to-akash-ambanis-mega-issue-whats-changed-gen-z-connect-11792219519404.html"
-  },
-  {
-   "category": "Economy",
-   "title": "Reserve Bank Authorizes Emirates NBD Branch Combination Into RBL Bank",
-   "summary": "The central banking regulator sanctioned the official amalgamation uniting the domestic offices of Emirates NBD Bank with RBL Bank. The scheme transfers the foreign entity's local branch presence to the recipient institution.",
-   "why": "Regulatory clearances for banking amalgamations reshape commercial balance sheets and consolidate the domestic financial sector.",
+   "title": "Central Bank Sanctions Merger of Foreign Branches into RBL Bank",
+   "summary": "The Reserve Bank of India gave regulatory approval to integrate the domestic offices of Emirates NBD Bank with RBL Bank. The scheme formally consolidates the overseas institution's local presence into the Indian bank.",
+   "why": "Banking mergers help institutions scale their branch networks, capital base, and customer reach under central bank oversight.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
   },
   {
+   "category": "Equity",
+   "title": "Jio Platforms Prepares Massive Initial Public Offering",
+   "summary": "India's major telecom provider is preparing to launch a public listing scheduled for next week. The transaction is set to value the business at approximately 108.3 billion dollars.",
+   "why": "An initial public offering lets private firms raise capital from public investors while offering a benchmark for company valuations.",
+   "source": "BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9QcHl1b0ZvVG4zdHY4dVk2dGlRcFdhVjNPUlRTUk5MOXh2eFJvY1dJNGFpU2c0ZHBDd2NOM2FCdE1GbS03eTNCcjBYZVh0UWtvMS00dFh3aGMtX1FHdVZtME82R1JEWGhhUUxpNklySmJmWXhROGc?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Indian Technology Shares Achieve Multi-Year High Weekly Rally",
+   "summary": "Domestic information technology shares recorded their sharpest seven-day performance in eighteen years. The surge occurred despite an ongoing international sell-off in artificial intelligence equities.",
+   "why": "Sector rotations happen when investors reallocate capital into undervalued or resilient segments during broader market uncertainty.",
+   "source": "Rediff",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQzRyXy13dUlSc3JCcU9tdGt6UmJjM1JycTdSSnRTT2cwYWJvb2pjdUVzanNZU0Zmb1BYdzRfbUVhb1hiTGRDM2FlSE9FV28yU2tRZFBCOElidk1uNEF4TXBHdENnNURicGRja0ZaRlJXelJFd2hob3MxZVYtMl9xdVM2WjBjdVFqanNHTWhmT0N2cWFkSnVNNmxUOXRsWnhPeW4zbDhYWmtqT2JXVjdUbmtyb1J3MWdtUHlVQlhTWGlXM2hvcTl0cTg3ZmpkVkZpeGfSAdQBQVVfeXFMT3hFNkJINnpWZkR1RWE0OXRtaXdFejhqWGtTeHUxbl9ZNktaZVNqOTZqdG1SMmwzS1BBYkdZTjRKR0ZDNXNXdE9ndFFwdU95VEFONktoaU9pYUFEYWZvNHEyM0IzTmlieWNXMGpQeVl1XzZjU0RrQmExUjkzNzlyZmowR2I3N2QyUlZwREtWSEFRUTBxSlVDX2V0VW13S2ctNUNKN3F5MllreDZrb3lDRFJ3VkdLYUptRWdVOEJxOW5hbnRyTEZpeEJ2TE9aZWgzSGx0RjE?oc=5"
+  },
+  {
    "category": "Commodity",
-   "title": "Central Authorities Lower Duty Drawback Rates on Precious Jewellery Shipments",
-   "summary": "The administration revised and lowered drawback benefits offered to outbound consignments of gold and silver ornaments. The step adjusts government tariff refunds allocated to domestic jewellery fabricators sending merchandise abroad.",
-   "why": "Duty drawback variations influence exporter profit dynamics and alter the international pricing power of refined precious commodities.",
-   "source": "Indian Jeweller",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOajRPYVVkZVFra2VZNG54OGt0ODkzdU5YX2tESF80cXZWZG9NdkwzQnV1WDc4cXlJMU1PVFNXVDNRNUY2d0x6NEdMaUlIN05XUUpsRndtbTdHSHF4VE10M29sM0VwTWE5YWJ4bFpYSmIyRjRkTWJ1aERqcmlIS3VfMEV6UHBmVjhSZEJkdG83X2pfUHVfWTU1MUpjMmdwRHBEYW5mWDlVa2tNZkk1ZUVpMVNBdnQxclgzc1FlRUI1WEZUVENkdzYzVkZ3?oc=5"
+   "title": "Central Bank Sets Early Exit Window for Gold Bonds",
+   "summary": "The Reserve Bank of India announced premature redemption terms for the 2020-21 Series VII Sovereign Gold Bond tranche. Bondholders can tender their holdings ahead of final maturity based on prevailing gold prices.",
+   "why": "Sovereign Gold Bonds offer investors paper-based exposure to bullion with periodic early redemption windows backed by the government.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63822"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold and Silver See Sharp Weekly Price Pullbacks",
+   "summary": "Domestic bullion markets experienced notable drops over the past week, with gold falling by 3,000 rupees. Silver recorded a steeper decline, dropping over 10,000 rupees to 2.11 lakh rupees.",
+   "why": "Precious metal prices fluctuate based on currency strength, industrial demand, and shifting investor risk appetite.",
+   "source": "Bhaskar English",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYW9pSGgtbU9MVHRKQ3RhVTUzS0NZQXNkT0R1ZkRiNkNnUDcyWmR2eGNlallIeVhuMWN3Q1AwMUVGSC1aNFFLSlg4MGp3ajZYTlEwX3d0T0pCS29JYzE3SF93M1NxamktX0VfRjdVSExIdHFfeTNhc3RRR2FZZjI5eVU4QzhiTlpzZldMWEN3OFBRRl9kQzI5dVRyMEhzR1FsUjF6dXkxaHVtZ2gxamxRbnZ6SW5MUdIBuwFBVV95cUxNeFZNTnhwR1FvQmNCQmQ1Skg1bFYwTkdSRk1CRE44cnZleEwxb1BUb0hfR2U0RHktdGFUdHVvaHp3UGd4dmFaQzkweWg4R2tvNnVJM1R0aHVCTWJzdG1ra09kRmc1eHJFQTFPNko3Qm5WNTF5T1VUVWx3R1djSS1WRGZNVUk2U0xwQXVNMk51Tl9KSjRVNHNadjhTMWxCU1dQYmQ2OXRiLUVnaDJQQURwWUNzdldZTnQyTmtn?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Strengthens Modestly Following Targeted Central Bank Currency Interventions",
-   "summary": "The domestic unit advanced seven paise to finish trading at 94.92 per US dollar. The upward move was facilitated by monetary authority measures intended to contain sharp currency volatility.",
-   "why": "Foreign exchange intervention prevents rapid currency depreciation, keeping imported commodity inflation in check.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUXdJYUU0cE5MMExnY0ktQmdfS3lNakxIN3dYbmNUWUhQVUhTLXY5Wk12bXphaWRPdlcyWnpUdjc2VE1DZU9md0c3Wlhkc1NRcVBuMk53MTcyQXhhN2NKd2lsY2JoLS1OMDN5ZnVxVWZGaEtZd19oVEZ1M0U1U0plOW1sR2tnTjVaUlphZG84dHNJSW5VemZUc3BXZDUtelpqV25xT2h4MC1vTmFLUzRIYU1HVklPMlNUTm9vYnV1cl9NYWlaNFNRdXF3SWJsVEp6X3fSAdgBQVVfeXFMTVRMNXl2STAyWlluMHRhUnpxd2ZURm9MWFhsMGVaLUJMcTdYYU9YakxsbW10ZElXS1VqajVCbkY0allnS2M5MGFyQUlTVEVhcjcwVktvLWNwWEhLajhkaG5vXzdRRmVVNkJjS1Nha3FHX1FEcHNIcmJGc1ZfVXFwWjktODZRazdtM1JpZGFIS2JGeS0wZmRLY3BZRVRVc0VhNjI1bUxodmlHREt6VWYzRk9hOUpUOWw4NDktSFJmVnVrRDA2dWlXeDdFUTl4MHpTMHFWOEFmdFF6?oc=5"
+   "title": "Indian Rupee Rebounds Following Strong Central Bank Intervention",
+   "summary": "The domestic currency gained nearly two percent over the past week, settling at 94.71 per US dollar. The recovery follows active market measures taken by the central bank to curb excessive currency depreciation.",
+   "why": "A stabilizing currency shields developing economies from imported inflation and protects foreign investment inflows.",
+   "source": "Business Today",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPWFI1WFlPaXlGNDk2RUtMYzRCaXM2Tm0xVlowSDRCSHlSSUxfVExsdzU1S1NicnI5YWM2T2xKTFRNNWFYMlY5Wl84aFYwMXVhZVVEUHBnMHkxXzYyb0lSZlc3S2wycmdGQkRjTEtKaVdkdV9zR3djelJEcmQ5SnZUWUFIUi1ySExfbzZzdlJhRjV3QnZzVDZqZzNORnFmOE84QmFRWmk3aHNCbGczQXo4SzNuM21ueklJZWNzNEtHRjJkQ0RibWdKc3pJRmxuYTJqSjJzdWFhVlNXQ3lKd1hYN2I2eWrSAeoBQVVfeXFMT0lVS0JzY1B5dk9yb2xZSDRuU1ZDekhSX2kzTkZadGw3NUtiend1NnNfTENiblVmek5kTmVZMTl6cW55WWRqTm1HOURtOHBJbGVxQXVJbVU5TkM2Q3hpM2NVZmpNM0V4Ulp5YlU3RUp1c0U0QTB0OVE1SmFtVXpPVWZ4Z0tiZE5maDF5ZGRzVXNWd1ZtSzl6MkRlUVF2WmFEUEp0ZFZ1M1IwLTQzNXl1TzRCVHlsdnNxY1Bld3NBV3VVZHhRMWlMYzlBVzZEZUVfaEtBTEp5dGhWaDNGTEd5WDhWVUdJZkFnTUFB?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Benchmark S&P 500 Suffers Worst Weekly Retraction Since June",
-   "summary": "A surge in crude prices toward 110 dollars alongside apprehensions regarding tech investments pulled down the American market index. Heightened energy costs and volatility across automated computing shares drove the multi-day downturn.",
-   "why": "Substantial weekly drawdowns in US benchmark indices often generate defensive investor behavior across worldwide equities.",
+   "title": "Wall Street Drops Amid Tech Valuation Concerns and Expensive Energy",
+   "summary": "US equity benchmarks declined as traders questioned elevated valuations across artificial intelligence companies. Rising crude oil costs also contributed to the negative sentiment on trading desks.",
+   "why": "High energy costs increase corporate operating expenses and can dampen consumer spending across the wider economy.",
    "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdmxYbGl0SVlXNXN2SGRFNG9Gc2dPUndlSUNtYk5Dd2g4SzY2YU5EUTNLVlJpVFg3QnZqVl9fNjZaWHl4a093eGFwdXZiYjJZb3ROeGg1QkI4MUFwbW1jN2hLWjZWanNRRkltbVUxZmxrVXNmb1M1dkkwd2F5bm1GZmxSdTh5dkhCUGYwcFFjV0dYRWRzRU9fMzRrbzhLaGhNX2gwYU04SFhxNDN2UnVlUlRtR0VYZEJoakhzbFphWEhEWTBnNzNGUlpfdklSTGZmSFZMMlZGUVhIRFFLVDhpN3ViVWhvX3NnODdNa9IB8gFBVV95cUxOaFQyTFV4Ukp1UFQ2eVdtY3h0MnVvNU9sV29LQUFIaUs1V1h0SVk4a2Npb2hRc2lXNkdYM2tCeDlwM0NIQWFLNmJuVjdwODdjYkZKZS1VQlp3OTdlSUx6SjhycE96YVhfSDQ1MkNOTndwc2RDd3gyU1VyMjBOX0xGWFFzOVE0SmdpR055NUpyS1lKcUxFQV9SU0d0eF9paXRndUJlOVVJSUstdmlOc2F4VnVsMHF3R0dJbFBGd2toS3g3cXNVdXp5R2VtLXFCQzNIdW9LelF1ejc0dXFNejU0SllwNkRKbGNvMU1fM3dDaXFhZw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSE1qek5YR3g1QTdWTF9jdHFNaGRhc1ZVbS1sdWczaXhjVm5vRDEwM1JSU0ZMS004RU93ZHhLY3VhclFNeXJxcy1vZ3N6dEZtQllXdWRNbWx4WjNpckhucW4zdkZfNmVSVjJaS3Z4cEdFY2FZcElkWUhnTmd1cmFuUjNKS0xhYlVoSmQ3VnQ5b3ZkSkVHaTFHbU9COVRLY18zZkU0amJLTkJxaTVuVC1PY01CaHNOQ3JSQUdLdlB5Ujc1eWNLX3VxZ2g2c21Tazl0SlHSAdcBQVVfeXFMT3YwY1g1YnBPQVY2ZUJNLVBUbUlBZXBpaTlhOGN1WU1Lb2Z2cXFGMnVBQkVZTUxMSTE4Y2Vaazd1MEk2R0Y1RWNaSEFycUFDMVZmWlFNN1g4Q002RVh3VlNDZXJBWTh1Mnl2U0pfblp4UTdBN01wRUF4aWxPbk9tNk90YW1Ec2xPekFhTjNFb1RkMS13a2FUZTZxRWRTSENtemxUd0RBUGl0ZHZKeDRiQXB5dWM3Z2diNE12VEUzWmVKY3gyVmlSMUFud1l2amJURllMT3dSd0U?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq Tumbles Two Percent Under Persistent Pressure on Chip Shares",
-   "summary": "The technology-focused index slipped two percent during Friday's trading session. Selling in computer hardware producers and artificial intelligence software firms contributed heavily to the slide.",
-   "why": "Semiconductor industry performance serves as a primary barometer for global risk sentiment in high-growth technology investments.",
-   "source": "Quartz",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBFVzI5c0t2ZW9tY1ZBd096QkF1MmhRbkhpNnNGNmdXWHljOGRwdC1MdWN1NVUyTHFsMFF0OEY5ZHdpeXJCb1dQMC01UmZQU0kxaGtOSy1KdFRCNVE2bXNTODZKU3o1aXlIZGRFXzlsZw?oc=5"
+   "title": "US Federal Reserve Leaves Policy Rates Unaltered",
+   "summary": "The American central bank kept its key interest rate unchanged during its latest monetary policy review. The decision marks the first rate announcement since conflict involving Iran drove up global petroleum prices.",
+   "why": "Central bank interest rate decisions guide borrowing costs worldwide and influence international capital movements.",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOWVgwU0l2bjYwREJ2NE9WVC1ObnpJa3Qxa2syS0lmUXphVm8zTWpnYVJ5NXpFZmxWYUZlVXpmc3ZFQzk2ZnZlYjNSUHRPb3F1emZhVDdPNEMxak1mM2wzOEZtYnA5dklfUFlfOUdVRU5lSXNmTlhqMy1pUElaMjNBTEFJbV9IRHNkRGt1NHJKVDVFd1Za0gGaAUFVX3lxTE9IOWFDX2MzMVhjUXl2VE1oTGNTTlowMmxkMUZnNEQ1TzhKemJ3TmlSTElmdzVPQ3VmR2E3OGdNLXN2dVBHQ2xiLXl0WWJfdjBUQktuSnNwbTNQV3puQzBJTUVZS295S2lHYU9iQVpFd05FQkw4WmhmZ2EyU3dCUWt0bHNCUy1xX0pHME5ZbVBlZ1RXSkxnSVZ1TWc?oc=5"
   }
  ]
 }
