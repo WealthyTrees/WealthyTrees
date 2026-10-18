@@ -195,3 +195,9 @@ a.tryb:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.article .mnav a.mn{transition:none}}
 .article a.mlink{font-family:Caveat,"Segoe Print",cursive;font-weight:700;font-size:1.3em;line-height:1.1;color:var(--up);text-decoration:none;padding:0 .25em;border-radius:4px;background:linear-gradient(transparent 55%,color-mix(in srgb,var(--gold) 45%,transparent) 55%);border-bottom:2px solid color-mix(in srgb,var(--up) 70%,transparent);-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .article a.mlink:hover{background:color-mix(in srgb,var(--up) 16%,transparent)}
+
+.lvl.live .lvtag + h2{margin-top:.5rem}
+.lvl.is-locked{cursor:not-allowed;box-shadow:none}.lvl.is-locked h2,.lvl.is-locked p{opacity:.75}
+@media(hover:hover){a.lvl.is-locked:hover{transform:none}}
+.lvhint{font-size:.85rem;font-weight:600;color:var(--mute);margin:.2rem 0 .6rem}
+.ccard-lock{cursor:not-allowed;opacity:.72}@media(hover:hover){a.ccard-lock:hover{transform:none}}

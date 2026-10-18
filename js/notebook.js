@@ -11,11 +11,27 @@
     return { read: read, lab: lab, qd: qd, done: done, pct: done ? 100 : Math.min(99, Math.round(read * 0.4 + lab * 10 + (qd ? 30 : 0))) };
   }
   window.WTP = prog;
+  // Intermediate unlocks only after all six Beginner modules are complete (checked in this browser).
+  var begDone = function () { for (var i = 1; i <= 6; i++) if (!prog(i).done) return false; return true; };
+  var prev = /[?&]preview=1/.test(location.search);
+  if (/\/learn\/intermediate\/module-/.test(location.pathname) && !prev && !begDone()) { location.replace("/intermediate.html"); return; }
   var lb = document.getElementById("lvbar");
   if (lb) { var t = 0; for (var i = 1; i <= 6; i++) t += prog(i).pct;
-    var bp = Math.round(t / 6), ap = Math.round((t + prog("i1").pct + prog("i2").pct) / 18);
+    var bp = Math.round(t / 6), it = 0, ap; for (var j = 1; j <= 6; j++) it += prog("i" + j).pct; ap = Math.round((t + it) / 18);
     lb.style.width = bp + "%"; document.getElementById("lvpct").textContent = bp + "%";
     document.getElementById("obar").style.width = ap + "%"; document.getElementById("opct").textContent = ap + "%"; }
+  var ic = document.getElementById("lvint");
+  if (ic) {
+    var it2 = 0, bd = 0;
+    for (var k = 1; k <= 6; k++) { it2 += prog("i" + k).pct; if (prog(k).done) bd++; }
+    var ip = Math.round(it2 / 6);
+    document.getElementById("ivpct").textContent = ip + "%"; document.getElementById("ivbar").style.width = ip + "%";
+    if (bd < 6) {
+      ic.querySelector(".lvp").hidden = true;
+      var hn = document.getElementById("ivhint"); hn.hidden = false; hn.textContent = "Modules unlock after Beginner (" + bd + " of 6 done)";
+      document.getElementById("ivgo").textContent = "See what's inside";
+    }
+  }
   // 1) Module pages: remember how far down the reader got (saved only in their own browser)
   var m = location.pathname.match(/module-(\d+)/), art = document.querySelector(".article"), lv = (location.pathname.match(/\/(intermediate|advanced)\//) || [])[1], mid = m && (lv ? lv.charAt(0) + m[1] : m[1]);
   if (m && art) {
@@ -47,6 +63,13 @@
       if (!next) { b.textContent = "Review Module 1"; b.href = cards[0].getAttribute("href"); }
       else { b.href = next.getAttribute("href"); b.textContent = prog(next.dataset.mod).pct > 0 ? "Continue Module " + num(next) : anyDone ? "Next: Module " + num(next) : "Start here"; }
     }
+  }
+  // Intermediate overview stays open as a preview; its module cards lock until Beginner is complete.
+  var ic2 = document.querySelectorAll("a.ccard[data-mod^='i']");
+  if (ic2.length && !prev && !begDone()) {
+    ic2.forEach(function (c) { c.removeAttribute("href"); c.classList.add("ccard-lock"); c.setAttribute("aria-disabled", "true"); c.querySelector(".cst").textContent = "Locked"; c.querySelector(".cgo").textContent = "Finish Beginner to unlock"; });
+    var cb = document.getElementById("cont"); if (cb) { cb.textContent = "Finish Beginner first"; cb.href = "/beginner.html"; }
+    var nt = document.getElementById("ilock"); if (nt) { nt.hidden = false; nt.textContent = "Preview mode: the modules unlock once you complete all 6 Beginner modules."; }
   }
   // 3) Diagrams draw themselves when scrolled into view; thumbnails replay on hover or tap
   var g = document.querySelectorAll(".dgm");
