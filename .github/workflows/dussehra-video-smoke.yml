@@ -7,7 +7,7 @@ name: Festival day check
 # so any problem shows up BEFORE the festival. GitHub emails you if it fails.
 
 on:
-  push:
+   push:
     branches: [main]
     paths:
       - "index.html"
