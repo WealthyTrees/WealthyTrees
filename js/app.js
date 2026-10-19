@@ -2,8 +2,8 @@ const $=id=>document.getElementById(id);
 function spark(v,up){const w=200,h=44,mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
 const p=v.map((y,i)=>(i*w/(v.length-1)).toFixed(1)+','+(h-4-(y-mn)/r*(h-8)).toFixed(1)).join(' ');
 return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${p}" fill="none" stroke="${up?'#0f8a5f':'#d64b3a'}" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`}
-fetch('/data/brief.json').then(r=>r.json()).then(d=>{
-  $('date').textContent=d.date.replace(/,\s*\d{1,2}:\d{2}\s*[AP]M IST$/,'');
+fetch('/data/brief.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  (function(){var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',weekday:'long',day:'numeric',month:'long',year:'numeric'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});$('date').textContent=p.weekday+', '+p.day+' '+p.month+' '+p.year;})();
   window.__tkBrief=d.ticker;tkFallback();if(false){const t=d.ticker.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;}
   const cats=['All',...new Set(d.items.map(i=>i.category))];
   if(cats.length>2){const bar=document.createElement('div');bar.className='chips';bar.setAttribute('role','group');
