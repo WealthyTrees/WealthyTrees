@@ -124,7 +124,6 @@
         .ticker.nse.wt-dussehra-text-ticker,.ticker.nse.wt-dussehra-text-ticker .tk-view {height:60px!important;min-height:60px!important}
         .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message {font-size:clamp(17px,4.6vw,21px);letter-spacing:0}
         .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-message--company {font-size:clamp(16px,4.2vw,20px)}
-        @keyframes wtDussehraPetalFall {100% {opacity:0;transform:translate3d(var(--drift),72px,0) rotate(var(--end-rot))}}
       }
       @media(prefers-reduced-motion:reduce) {
         .ticker.nse.wt-dussehra-text-ticker .wt-dussehra-sequence {animation:none!important;opacity:1;visibility:visible;position:relative;left:auto;top:auto;transform:none;justify-content:center;flex-wrap:wrap;white-space:normal;width:100%;padding:8px;gap:8px}
