@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "23,146",
-   "change": 0.65
+   "value": "22,925",
+   "change": -0.95
   },
   {
    "name": "SENSEX",
-   "value": "74,729",
-   "change": 0.56
+   "value": "74,038",
+   "change": -0.93
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,192",
-   "change": 0.26
+   "value": "4,205",
+   "change": 0.57
   },
   {
    "name": "CRUDE WTI",
-   "value": "$97.6",
-   "change": -1.45
+   "value": "$97.0",
+   "change": -2.04
   },
   {
    "name": "USD/INR",
-   "value": "94.95",
-   "change": 0.0
+   "value": "94.85",
+   "change": -0.11
   },
   {
    "name": "S&P 500",
@@ -45,67 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Jio Platforms Schedules Massive Public Listing Alongside Paras Healthcare",
-   "summary": "Jio Platforms is preparing an initial share sale valued at over thirty thousand crore rupees. Meanwhile, hospital operator Paras Healthcare is also readying an offering worth over one thousand crore rupees.",
-   "why": "Large initial public offerings expand market capitalization and allow everyday investors to participate directly in prominent commercial enterprises.",
+   "title": "Divergence in Banking Sector as State Lenders Gain While Private Banks Drop",
+   "summary": "State-run lenders gained up to 8% led by strong earnings, whereas major private banks retreated despite their quarterly numbers.",
+   "why": "Earnings surprises often trigger sharp divergences between public and private sector institutions within the same industry.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-platforms-to-lead-ipo-parade-this-week/articleshow/135037311.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "State Run Banks Report Massive Corporate Borrowing Pipeline",
-   "summary": "Public sector lenders have identified roughly 7.8 lakh crore rupees in prospective corporate debt demand. This rise in loan requests reflects renewed capital expenditure and expansion plans across major commercial sectors.",
-   "why": "Rising corporate credit pipelines serve as a leading economic barometer for private investment and industrial capacity building.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/public-sector-banks-rs-7-8-lakh-core-corporate-loan-pipeline-signals-capex-revival/articleshow/135037258.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/psu-bank-stocks-soar-up-to-8-but-hdfc-axis-and-other-private-lenders-fall-up-to-5-after-q2-results-why-the-sharp-divide/articleshow/135041687.cms"
   },
   {
    "category": "Equity",
-   "title": "IIFL Finance Seeks Fresh Capital via Minority Stake Divestment",
-   "summary": "Non-bank lender IIFL Finance is aiming to secure between 2,500 and 5,000 crore rupees by offering a non-controlling equity holding. Promoters may acquire warrants to contain dilution while institutional investor Fairfax evaluates a potential departure.",
-   "why": "Equity fundraising bolsters capital adequacy for financial institutions, though warrant issuances and stakeholder departures can alter ownership structures.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/expert-view/iifl-finance-plans-to-raise-2500-5000-crore-by-selling-stake-amid-fairfax-exit-rumors/articleshow/135037342.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "Bullion Prices Stabilize as Traders Evaluate Interest Rate and Oil Pressures",
-   "summary": "Gold experienced minimal price movement as market participants balanced receding expectations of near-term rate hikes against rising crude values. The climb in petroleum prices also pushed sovereign debt yields higher.",
-   "why": "Gold values fluctuate based on the continuous interplay between benchmark bond yields, energy-driven inflation, and monetary policy projections.",
+   "title": "Domestic Technology Stocks Advance Following Signs of Broader IT Expenditure",
+   "summary": "Major Indian software companies experienced upward momentum after peer results signaled enterprise spending expanding beyond artificial intelligence.",
+   "why": "Global enterprise software spending patterns serve as a key leading indicator for domestic IT service contracts.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-steady-as-rate-hike-bets-ease-oil-pushes-yields-higher-11792367574043.html"
+   "url": "https://www.livemint.com/market/stock-market-news/tcs-hcl-tech-wipro-infosys-to-tech-mahindra-experts-bullish-on-it-shares-after-accentures-shift-from-ai-investment-11792390800742.html"
   },
   {
-   "category": "Economy",
-   "title": "Central Bank Clears Merger of Emirates NBD Domestic Units With RBL Bank",
-   "summary": "The Reserve Bank of India has sanctioned the integration of the Indian branch network of Emirates NBD into RBL Bank. This official endorsement completes the formal amalgamation framework between the two financial firms.",
-   "why": "Central bank approvals of banking consolidations alter domestic institutional capacity and expand branch footprints for acquiring lenders.",
+   "category": "Equity",
+   "title": "Central Bank Clears Consolidation of Emirates NBD Branches With RBL Bank",
+   "summary": "The Reserve Bank of India sanctioned the integration of Emirates NBD's domestic branch network into RBL Bank.",
+   "why": "Regulatory approval of banking mergers enables lenders to expand asset bases and commercial reach under established compliance frameworks.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
   },
   {
    "category": "Equity",
-   "title": "Overseas Institutional Investors Withdraw Over Fifty Thousand Crore Rupees in October",
-   "summary": "Foreign portfolio outflows exceeded 52,000 crore rupees during the month of October. Despite this substantial pullout of foreign capital, key domestic equity indices held firm.",
-   "why": "Comparing heavy foreign institutional selling against market resilience highlights the growing counterbalancing power of domestic investment flows.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYTNTYWQyMmdfV040eFdfLW9qX2VWdTkzcTZsVllmLVNFUkpjMjlyVXBwZFhlSDJmUTNVN3FLVzBBZmlOb1UwclU2cVZqalFFY0xjT0tWOWxaOFRLS09MVTJPRXkxaUdDWkk0MzJxaUxUUnI0V3NPeVVUU0xYMm9TTVFsRlhqT2FEbW9mLWF5WVRmQWtJSG1Vc3RfcVBqSkdieEZUaDFDUWJiYTQxU3gtS29wQTlnbkhLWGNEWC1YdkZ2N3JEYUU2MjkycHpESmZ5WEdLQkpybDVTYUhtQUpaYlAtWk1JbVJTSUxPWFhuaGfSAeoBQVVfeXFMUGdYOE55Uzg1dUxIeE8yNlc4dUROMlZEaDI3V0ZLMFpNTHR6eEVBMmF5VVpXa0RndjRhNi05OFJRV0U2U05GdzZWMkxLTEpMSjZrQUhWblk4aUVkZHVYVGFLQmdaaUlTZ2VhUkpsWEpIb05qVFdfN2NVVzhtZ2Q0cndNUjFxVUlkeE5BUWUxdF84c2tZNE9ObWI2Yk1wQU1xSHZIa0VrX2JsSFVSc1NwS3JjUnM0SDdKZ3BJUW52dElBWkhtQ1JWU09WVXNqZXRSaXN1T3BUQy1YOS1JVHdXM1R2cmthRHRPNlN3?oc=5"
+   "title": "Benchmark Sensex Drops 765 Points Amid Bank Weakness and Foreign Outflows",
+   "summary": "The headline index registered steep intraday losses driven by declining financial shares alongside selling from institutional overseas funds.",
+   "why": "Foreign institutional selling directly impacts domestic liquidity and can exert downward pressure across major market indices.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQQmhnZl9zOTVwaUJnNDFwSmNOSWFoU2VLSXZVTFVqazI3OW1kYWtlblNITUtNdV92NWtaT09EVkNQZ2tlUmFDOFpOaVdwTWJrSXRUVldpQTN5Qi1rbWRwamMtaDhrdDZMOExXdFVEN2c5WkdLNmFVLXhpSXp4SmswYmZySmdSME5YYTc5OFNycTV4bmh4UG9TbkRmRnd3OU1LalJDcV9wb3RDS2VoYWJVZU8tc1FxSW93Z1Badm84UEYtbThHT2d0Y2kwdUh5YlJBTW5WWHNyMNIB3AFBVV95cUxNdGdXd1gweDVlQjUxSVVwMWpUVnl2TEF3M1Y2QjFjNkZFakhhNTNHeEVOaHUtM1lHYTVxRS1QU191TVB4YThsWHRDQkVRcVpOel9USDVDV19UWGF4dHNpSTFXc013cE5BczN2RWNxa0FZYWdqU3ZseG5oMW54VnZDVzFsajUtY3ZBNnhDV0dWQm9CdVllODk0eFFEM2VyRW42ZkJVSzVpTUVCWXYwRk9qVXZrTnpnakxQaGtCUmlzb1hYSlhkS3NXUnZ1TXExRzBTQ0YyOUR2bHB6Wklw?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Sovereign Bond Prices Rise Following a Decline in United States Yields",
+   "summary": "Indian government debt securities gained ground as falling American treasury yields spurred domestic value purchases.",
+   "why": "Sovereign debt markets are globally linked because changes in US borrowing costs alter relative yields and international capital flows.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-rise-after-flat-open-as-sharp-drop-in-us-yields-spurs-value-buying/articleshow/135041797.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Rupee Strengthens Against Dollar as Central Bank Counterbalances Elevated Oil Costs",
+   "summary": "The domestic currency gained 22 paise as central bank market actions offset downward pressure from high crude prices.",
+   "why": "Central monetary authorities use foreign exchange interventions to temper volatility when imported commodity costs rise.",
+   "source": "Investment Guru India",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVmFWR2xtcmFnNTV3V2cyNE9DSFhhT2pHbVplR05YanlSeWs0cXRLd1Jia0YxdHBST2tNYy1sTUFjdHRJLUpXdzJaQ25lMUhqT211LWFlUU9XSk0zTG1fWGNqT09FcUUtc2htTTVRLURJaW1FNkRyS0FRY2lsMjQzeUUxR3NJdUtBaFowYXlBOXpSYmF4dlVKTVRJWDBnR1FxZ1EzY3Z5QlJjb2xESjVCUnVjUTRXbDgtd0U3TA?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold and Silver Values Climb Amid Heightened Geopolitical Frictions",
+   "summary": "Domestic precious metal quotes increased as mounting political friction between Washington and Tehran encouraged safe-haven buying.",
+   "why": "Geopolitical conflict prompts investors to allocate toward bullion, which is traditionally viewed as a store of value in uncertain periods.",
+   "source": "Deccan Chronicle",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYzd3TXI4NzlBQi1yeVpUWi1wSHhhNUdqNDdXY0xva1haWHNRY0ZFYWxkODd0cDRneXZSWDZyRlUtX3I5bFNlLWlKUXlRWXNPOVQ2VlYzbmFvaDMwSUJtN1dCVVFfZlhLcjh2aFo5OEkxT1Y4a0x0aWY1TU5xcUl2MnJCV0tKOUVJRGdnczBEZi0ydTF4azE5enp3a29nOUJMalhzODdqUzBpNVFRaXFwZUV0NldpdnoybEZjUdIBwgFBVV95cUxQZEh3TFhUUmdTdG9Uc2tSb0d3dlVnSF92QmxYUkJRakg1cWxVUU53NlpVWTloQ1FvYlp6YlJEeUlvb2UxVHhDQjA4ajUtZkhlZTZ1WWxjWUI5UEZGTXdpcmJYa1Z2TFBrTnNGb1RkdVU2NUoyWUFPYk56TS1NYk9HZmp0SlllWGxMWWFqQ3g3Vy1LY1BINWhQNUVHbkhfR1JRR3RiQnNadG1TTGxwOVZ2dldHM2ZDN0xmZFNYZS1RNG4wZw?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "American Tech Contracts Rebound Ahead of Critical Earnings Reports",
-   "summary": "Nasdaq futures moved up by as much as two hundred points following their steepest weekly slide since June. The recovery comes right before a major wave of corporate earnings announcements on Wall Street.",
-   "why": "U.S. equity futures indicate global risk appetite and frequently dictate early trading sentiment across worldwide exchanges.",
+   "title": "United States Stock Futures Advance in Anticipation of Heavy Earnings Reports",
+   "summary": "American equity index futures moved upward as investors positioned ahead of a dense schedule of corporate financial results.",
+   "why": "Quarterly earnings results demonstrate corporate profitability and provide fundamental signals that drive equity index valuations.",
+   "source": "Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOR0MwWG9IMlN3MDVva0xabG5QbzNhX09jY3JnaVVTSHJvYXFMSmtHaDhFZ2RTSHVFLUVKYU9za2MxTXA4UGZDN0E3YVk4dEF6QmtIc2Z5YnR5TXB4V2h1QWR6MllZYXRUcGsyOExYMEloYll2RDhHVklKRno4TGhCaGV3RC1OMFJ3c04wWUVCblVFUkdB?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Tech Index Futures Rebound Sharply Following Prior Week Losses",
+   "summary": "Contracts linked to the tech-focused benchmark climbed up to 200 points after recording their steepest weekly drop in months.",
+   "why": "Sharp rebounds after severe drawdowns often indicate stabilizing short-term sentiment as traders digest previous sell-offs.",
    "source": "CNBC TV18",
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNMUkzdjlBZU45Ny1MbEVIQ0FKVTRjOEZqVFhmcFhpR3JpMTF4WlFabFR6c3lGNFVaVXFGN09QNEFjNFd5ZjBzRXdKdmNjQmJHRllLOE5feWVLaEpmWXhUbXQ0akNuZDRiQjRacVROUDZOWlliSW5uYjVQX1lPM3lQMzRjdWVQTTZkdzhoaWRmbE5TMVlYNklUODhWTmRrMlZNMC0xREdYSVNzVTZ4VmJJd0w3NTU4NThVY1hYdjRmeGdnZjRsZjZBUGwwSjJVNlVoUGh3bF9PcVhrSzJzMWfSAeMBQVVfeXFMUHhtT3h6SnNLUTVWMGlkQWhkRS05YTZvY0t1Rk1iQ3RtNURWOEd6ZDh2cEh1dXZQcmRDdlI3bHdKeXFmdlpYQUlwZjNsQzVIa09lbHFhY1FOUkVrZE5vSHlwM25WRFYzVWowbWlGaFFKS1pHV2YwcHZ2Vkoyc0FXak4wZ1MwczRkMzEyTHg2aEFJaUlYWE5qX1pjSkNucU9SLTdxNzJfM3dQeXZyWjFiSXVqUmNLeEp2aHRUd0hPV3JFWWVtQWpZUEFYTE9wX29lWEwtczdZZnZKR2FCWEZuWTJfdEk?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Tech Benchmark Drops Over Four Percent Amid Persistent Inflation Concerns",
-   "summary": "The Nasdaq fell 4.48 percent over the week, marking its sharpest contraction in months as sticky consumer price data fueled interest rate worries. Tightened monetary expectations continued to weigh heavily on technology valuations.",
-   "why": "Higher interest rate environments reduce the present value of projected corporate earnings, disproportionately impacting high-growth technology shares.",
-   "source": "TradingKey",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPSk5BelFiQjZfX2FlZzZieU1jdG15SHVqcUxCZzFJR0pQT1pDVjB3TE5TLTlGM19NY29WWHljcXVxVUNrd0J4ZWwwcUhmS0lKNGVPVGdDbGMzTDR1M1JWdzh0cE1FTVl1eUdqa2cxb0pnX1k4TXpKU2NIcHlGNXdQRUVjejZjTmkzMm0tOG5idmhmVVU3YlJrR192VHlVVGtibmVBWkk1Tk95ZlQ5SE4yQXlzOEZQcEgycnk2NFl3UnRkc2lKV3ZwY2R5VGhFVF8tTnFn?oc=5"
   }
  ]
 }
