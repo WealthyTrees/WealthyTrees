@@ -25,3 +25,4 @@ Live site: https://wealthytrees.online (Cloudflare Pages, deployed from this rep
 
 ## Festivals
 NSE holidays live in `js/holidays.js` (update each December). Greetings live in `js/festival.js`. Preview any day with `?fest=YYYY-MM-DD`. Dussehra (20 Oct 2026) also has its own intro, ticker and rail scripts.
+
