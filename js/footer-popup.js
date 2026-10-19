@@ -5,6 +5,7 @@
   var css = '' +
   'footer.wt-f{display:block!important;visibility:visible!important;background:var(--deep,#0e2a20);color:#b8c8bf;margin-top:2rem;padding:2.6rem 0 1.4rem;font-size:.92rem}' +
   'footer.wt-f a{color:#cfe0d6;text-decoration:none}footer.wt-f a:hover{color:#4fd1a0}' +
+  'footer.wt-f .wrap{color:#b8c8bf;font-weight:400}' +
   '.wt-fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2rem}' +
   '.wt-fg h4{margin:0 0 .8rem;font:700 1.05rem Fraunces,Georgia,serif;color:#fff}' +
   '.wt-fg li{list-style:none;margin:.45rem 0}.wt-fg ul{margin:0;padding:0}' +
