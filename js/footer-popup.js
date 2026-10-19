@@ -11,6 +11,7 @@
   '.wt-fb{font:700 1.4rem Fraunces,Georgia,serif;color:#fff;margin:0 0 .6rem}' +
   'footer.wt-f a.wt-lg{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 .8rem;transition:transform .2s}footer.wt-f a.wt-lg:hover{transform:translateY(-1px)}' +
   '.wt-lg img{width:44px;height:44px}.wt-lg span{font:700 1.65rem Fraunces,Georgia,serif;letter-spacing:-.01em;color:#fff}' +
+  '.wt-tg{margin:.2rem 0 .5rem;font:700 1.2rem/1.3 Fraunces,Georgia,serif;color:#f5c26b;letter-spacing:-.005em}.wt-ds{margin:0;line-height:1.6}.wt-fg li.wt-soon{color:#93a89c}' +
   '.wt-fn{margin-top:1rem;padding:.9rem 1rem;border-radius:12px;background:rgba(255,255,255,.06);font-size:.86rem;line-height:1.5}' +
   '.wt-fn em{display:block;color:#e0b04f;font-style:italic;margin-bottom:.3rem}' +
   '.wt-fl{border-top:1px solid rgba(255,255,255,.12);margin-top:1.8rem;padding-top:1rem;font-size:.8rem;color:#93a89c}' +
@@ -39,13 +40,13 @@
   if (f) {
     f.className = "wt-f";
     f.innerHTML = '<div class="wrap"><div class="wt-fg">' +
-      '<div><a class="wt-lg" href="/"><img src="/assets/logo-dark.svg" alt=""><span>WealthyTrees</span></a>Markets, simplified. Daily. Indian stock and commodity news in plain language, plus a learning path that respects your pace.' +
+      '<div><a class="wt-lg" href="/"><img src="/assets/logo-dark.svg" alt=""><span>WealthyTrees</span></a><p class="wt-tg">Markets, simplified. Daily.</p><p class="wt-ds">Indian stock and commodity news in plain language, plus a learning path that respects your pace.</p>' +
       '<div class="wt-fn"><em>Built by Priyansh</em>A finance student who got tired of market news that needs a dictionary. WealthyTrees is his attempt to fix that: learn the concept, then read the headline.</div></div>' +
       '<div><h4>Explore</h4><ul><li><a href="/">Newsroom</a></li><li><a href="/markets.html">Markets</a></li><li><a href="/learn.html">Learn</a></li><li><a href="/about.html">About</a></li></ul></div>' +
-      '<div><h4>Learn</h4><ul><li><a href="/beginner.html">Beginner path</a></li><li><a href="/intermediate.html">Intermediate path</a></li><li><a href="/#nl">Daily brief newsletter</a></li></ul></div>' +
-      '<div><h4>WealthyTrees</h4><ul><li><a href="/about.html">About &amp; the founder\u2019s story</a></li><li><a href="mailto:priyansharora@wealthytrees.online">priyansharora@wealthytrees.online</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>' +
+      '<div><h4>Learn</h4><ul><li><a href="/beginner.html">Beginner path</a></li><li><a href="/intermediate.html">Intermediate path</a></li><li class="wt-soon">Advanced path, coming soon</li></ul></div>' +
+      '<div><h4>WealthyTrees</h4><ul><li><a href="/about.html">About</a></li><li><a href="/about.html#founder">Founder\u2019s story</a></li><li><a href="mailto:priyansharora@wealthytrees.online">priyansharora@wealthytrees.online</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>' +
       '</div><div class="wt-sf" id="nl"><div><h4>Get the daily brief</h4><p>One short, clear email a day. Learning only, no tips.</p></div>' +
-      '<form action="https://buttondown.com/api/emails/embed-subscribe/' + encodeURIComponent(BD) + '" method="post" target="popupwindow" onsubmit="window.open(\'https://buttondown.com/' + encodeURIComponent(BD) + '\',\'popupwindow\')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe, free</button></form></div>' +
+      '<form action="https://buttondown.com/api/emails/embed-subscribe/' + encodeURIComponent(BD) + '" method="post" target="popupwindow" onsubmit="window.open(\'https://buttondown.com/' + encodeURIComponent(BD) + '\',\'popupwindow\')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe</button></form></div>' +
       '<div class="wt-fl">For education only. Not investment advice. We are not SEBI-registered advisors. \u00a9 ' + new Date().getFullYear() + ' WealthyTrees</div></div>';
   }
 
@@ -60,7 +61,7 @@
     d.innerHTML = '<div class="b"><button class="x" aria-label="Close">\u00d7</button><div style="font-size:2rem">\ud83c\udf31</div>' +
       '<h2>Get the daily brief</h2><p>One short, clear email a day: what moved the markets and the concept behind it. Learning only, no tips.</p>' +
       '<form action="https://buttondown.com/api/emails/embed-subscribe/' + u + '" method="post" target="popupwindow">' +
-      '<input type="email" name="email" placeholder="Your email" aria-label="Email address" required><button class="go" type="submit">Subscribe, free</button></form>' +
+      '<input type="email" name="email" placeholder="Your email" aria-label="Email address" required><button class="go" type="submit">Subscribe</button></form>' +
       '<small>Free. Unsubscribe anytime. Education only, not investment advice.</small></div>';
     function close() { d.remove(); document.removeEventListener("keydown", esc); }
     function esc(e) { if (e.key === "Escape") close(); }
