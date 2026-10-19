@@ -102,3 +102,16 @@
 /* Festival card: exact phone-story shape (9:16) so the greeting video fits with no bars */
 .story.fest{aspect-ratio:9/16;height:auto;min-height:0;width:min(100%,25rem,calc(86vh*9/16));width:min(100%,25rem,calc(86dvh*9/16))}
 .sl.sfestival .ed-greeting-video{object-fit:cover}
+
+/* v2 festival header: one tidy row (logo | Sprout | centred badge | pause), lighter panel so the video stays visible */
+.shead.is-festival{display:flex;align-items:center;gap:.4rem;min-height:48px;padding:6px 8px;
+  background:linear-gradient(115deg,rgba(5,25,17,.55),rgba(11,43,29,.4));border-color:rgba(238,204,124,.4);box-shadow:0 0 14px rgba(237,190,79,.1)}
+.shead.is-festival .sprout-head{flex:0 0 auto;min-width:max-content}
+.shead.is-festival .festival-edition-badge{flex:1 1 auto;min-width:0;margin:0 .15rem;white-space:normal;text-align:center;line-height:1.25;font-size:.52rem;letter-spacing:.04em;padding:.3rem .35rem}
+.shead.is-festival .pp{margin-left:0;flex:0 0 auto}
+@media(max-width:420px){
+  .shead.is-festival{gap:.3rem;padding:5px 6px;min-height:44px}
+  .shead.is-festival .sprout-name{font-size:.78rem}
+  .shead.is-festival .sprout-edition{font-size:.58rem}
+  .shead.is-festival .festival-edition-badge{font-size:.46rem;letter-spacing:.02em;padding:.28rem .3rem}
+}
