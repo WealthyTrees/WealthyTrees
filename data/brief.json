@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,925",
-   "change": -0.95
+   "value": "22,889",
+   "change": -1.11
   },
   {
    "name": "SENSEX",
-   "value": "74,038",
-   "change": -0.93
+   "value": "73,853",
+   "change": -1.17
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,205",
-   "change": 0.57
+   "value": "4,183",
+   "change": 0.04
   },
   {
    "name": "CRUDE WTI",
-   "value": "$97.0",
-   "change": -2.04
+   "value": "$97.8",
+   "change": -1.19
   },
   {
    "name": "USD/INR",
-   "value": "94.85",
-   "change": -0.11
+   "value": "94.92",
+   "change": -0.04
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Divergence in Banking Sector as State Lenders Gain While Private Banks Drop",
-   "summary": "State-run lenders gained up to 8% led by strong earnings, whereas major private banks retreated despite their quarterly numbers.",
-   "why": "Earnings surprises often trigger sharp divergences between public and private sector institutions within the same industry.",
+   "title": "Bajaj Finance Posts Robust Profit Expansion for Second Quarter",
+   "summary": "The non-banking financial firm registered a 29% increase in quarterly net profit to Rs 6,367 crore alongside improved net interest income. Net earnings expanded from Rs 4,948 crore recorded during the corresponding period last year.",
+   "why": "Quarterly earnings track whether large retail lenders are successfully growing income while containing funding expenses.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/psu-bank-stocks-soar-up-to-8-but-hdfc-axis-and-other-private-lenders-fall-up-to-5-after-q2-results-why-the-sharp-divide/articleshow/135041687.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/bajaj-finance-q2-results-net-profit-jumps-29-yoy-to-rs-6367-crore-nii-up-24/articleshow/135048431.cms"
   },
   {
    "category": "Equity",
-   "title": "Domestic Technology Stocks Advance Following Signs of Broader IT Expenditure",
-   "summary": "Major Indian software companies experienced upward momentum after peer results signaled enterprise spending expanding beyond artificial intelligence.",
-   "why": "Global enterprise software spending patterns serve as a key leading indicator for domestic IT service contracts.",
+   "title": "Benchmark Indices Slip Over One Percent on Earnings and Global Cues",
+   "summary": "Indian benchmark gauges dropped over 1% during Monday trade due to lacklustre private banking results and profit booking across information technology counters. The decline erased significant market capitalisation across major domestic listings.",
+   "why": "Broad market corrections illustrate how earnings disappointments in core sectors can dampen overall equity market sentiment.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/tcs-hcl-tech-wipro-infosys-to-tech-mahindra-experts-bullish-on-it-shares-after-accentures-shift-from-ai-investment-11792390800742.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Central Bank Clears Consolidation of Emirates NBD Branches With RBL Bank",
-   "summary": "The Reserve Bank of India sanctioned the integration of Emirates NBD's domestic branch network into RBL Bank.",
-   "why": "Regulatory approval of banking mergers enables lenders to expand asset bases and commercial reach under established compliance frameworks.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820"
-  },
-  {
-   "category": "Equity",
-   "title": "Benchmark Sensex Drops 765 Points Amid Bank Weakness and Foreign Outflows",
-   "summary": "The headline index registered steep intraday losses driven by declining financial shares alongside selling from institutional overseas funds.",
-   "why": "Foreign institutional selling directly impacts domestic liquidity and can exert downward pressure across major market indices.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQQmhnZl9zOTVwaUJnNDFwSmNOSWFoU2VLSXZVTFVqazI3OW1kYWtlblNITUtNdV92NWtaT09EVkNQZ2tlUmFDOFpOaVdwTWJrSXRUVldpQTN5Qi1rbWRwamMtaDhrdDZMOExXdFVEN2c5WkdLNmFVLXhpSXp4SmswYmZySmdSME5YYTc5OFNycTV4bmh4UG9TbkRmRnd3OU1LalJDcV9wb3RDS2VoYWJVZU8tc1FxSW93Z1Badm84UEYtbThHT2d0Y2kwdUh5YlJBTW5WWHNyMNIB3AFBVV95cUxNdGdXd1gweDVlQjUxSVVwMWpUVnl2TEF3M1Y2QjFjNkZFakhhNTNHeEVOaHUtM1lHYTVxRS1QU191TVB4YThsWHRDQkVRcVpOel9USDVDV19UWGF4dHNpSTFXc013cE5BczN2RWNxa0FZYWdqU3ZseG5oMW54VnZDVzFsajUtY3ZBNnhDV0dWQm9CdVllODk0eFFEM2VyRW42ZkJVSzVpTUVCWXYwRk9qVXZrTnpnakxQaGtCUmlzb1hYSlhkS3NXUnZ1TXExRzBTQ0YyOUR2bHB6Wklw?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Sovereign Bond Prices Rise Following a Decline in United States Yields",
-   "summary": "Indian government debt securities gained ground as falling American treasury yields spurred domestic value purchases.",
-   "why": "Sovereign debt markets are globally linked because changes in US borrowing costs alter relative yields and international capital flows.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-rise-after-flat-open-as-sharp-drop-in-us-yields-spurs-value-buying/articleshow/135041797.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "Rupee Strengthens Against Dollar as Central Bank Counterbalances Elevated Oil Costs",
-   "summary": "The domestic currency gained 22 paise as central bank market actions offset downward pressure from high crude prices.",
-   "why": "Central monetary authorities use foreign exchange interventions to temper volatility when imported commodity costs rise.",
-   "source": "Investment Guru India",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVmFWR2xtcmFnNTV3V2cyNE9DSFhhT2pHbVplR05YanlSeWs0cXRLd1Jia0YxdHBST2tNYy1sTUFjdHRJLUpXdzJaQ25lMUhqT211LWFlUU9XSk0zTG1fWGNqT09FcUUtc2htTTVRLURJaW1FNkRyS0FRY2lsMjQzeUUxR3NJdUtBaFowYXlBOXpSYmF4dlVKTVRJWDBnR1FxZ1EzY3Z5QlJjb2xESjVCUnVjUTRXbDgtd0U3TA?oc=5"
+   "url": "https://www.livemint.com/market/stock-market-news/manic-monday-at-indian-stock-market-sensex-nifty-bleed-rs-3-6-lakh-cr-gone-in-6-hours-what-went-wrong-big-reasons-11792405459477.html"
   },
   {
    "category": "Commodity",
-   "title": "Gold and Silver Values Climb Amid Heightened Geopolitical Frictions",
-   "summary": "Domestic precious metal quotes increased as mounting political friction between Washington and Tehran encouraged safe-haven buying.",
-   "why": "Geopolitical conflict prompts investors to allocate toward bullion, which is traditionally viewed as a store of value in uncertain periods.",
-   "source": "Deccan Chronicle",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYzd3TXI4NzlBQi1yeVpUWi1wSHhhNUdqNDdXY0xva1haWHNRY0ZFYWxkODd0cDRneXZSWDZyRlUtX3I5bFNlLWlKUXlRWXNPOVQ2VlYzbmFvaDMwSUJtN1dCVVFfZlhLcjh2aFo5OEkxT1Y4a0x0aWY1TU5xcUl2MnJCV0tKOUVJRGdnczBEZi0ydTF4azE5enp3a29nOUJMalhzODdqUzBpNVFRaXFwZUV0NldpdnoybEZjUdIBwgFBVV95cUxQZEh3TFhUUmdTdG9Uc2tSb0d3dlVnSF92QmxYUkJRakg1cWxVUU53NlpVWTloQ1FvYlp6YlJEeUlvb2UxVHhDQjA4ajUtZkhlZTZ1WWxjWUI5UEZGTXdpcmJYa1Z2TFBrTnNGb1RkdVU2NUoyWUFPYk56TS1NYk9HZmp0SlllWGxMWWFqQ3g3Vy1LY1BINWhQNUVHbkhfR1JRR3RiQnNadG1TTGxwOVZ2dldHM2ZDN0xmZFNYZS1RNG4wZw?oc=5"
+   "title": "Copper Softens as Inventories Expand Following Chilean Mine Accord",
+   "summary": "Copper prices eased as available exchange inventories reached a two-month high following the resolution of a major mine strike in Chile. Increased inflows of the red metal helped alleviate recent supply concerns.",
+   "why": "Industrial commodity values tend to fall when output disruptions end and warehouse stockpiles build back up.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/metals-copper-falls-as-lme-stocks-edge-higher-and-mine-supply-concerns-ease/articleshow/135048371.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "CME Group Introduces Tungsten Futures to Meet Critical Mineral Appetite",
+   "summary": "The derivatives exchange announced the introduction of tungsten futures contracts to serve expanding interest across its metals platform. The launch follows a year of record trading volumes in related industrial metals.",
+   "why": "Futures contracts offer commercial consumers and producers standardized financial instruments to protect against raw material price volatility.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/cme-to-launch-tungsten-futures-to-meet-rising-demand-for-critical-minerals/articleshow/135048438.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Government Bond Yields Rise Amid Surging Global Energy Prices",
+   "summary": "Sovereign debt surrendered early gains as climbing crude oil prices amplified concerns regarding prolonged high borrowing costs. The benchmark 10-year yield has now extended its weekly upward streak to nine consecutive weeks.",
+   "why": "Rising sovereign yields lift borrowing costs across the economy and reflect growing market concern over inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-india-bonds-give-up-days-gains-as-oil-price-spike-adds-to-rate-hike-fears/articleshow/135048949.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Announces Auction of Sovereign Debt Worth Rs 33,000 Crore",
+   "summary": "The Reserve Bank of India confirmed the upcoming re-issue of two central government securities to raise public funds. The notified borrowing amount stands at Rs 33,000 crore across the designated debt tenors.",
+   "why": "Regular debt auctions show how sovereign authorities fund government spending requirements through institutional capital markets.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63832"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Settles Flat as Equities Drop and Importers Buy Dollars",
+   "summary": "The Indian currency finished unchanged against the greenback after an early advance was erased by falling local shares and corporate hedging. Commercial importers purchased dollars, offsetting positive opening momentum.",
+   "why": "Exchange rates mirror the ongoing balance between foreign capital flows, share market sentiment, and corporate trade demands.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa3NLUV9hTjZtMURDMENEaVZFZFBNWFNJVXNoakRPSjZTa1lGU1FQZHlVYU9HQVUyWGg0eDI3Y3lsRXFRZ2lhV0FSMFhPN3pwaHJ0SEVSOENrTUVtY1cxMjRZRWpxTVFwMDlJMURMRVN3dURIbVhQc3hiUTR3Nmh0QXJkUnRKNjJVSFkzTkFPYmRCT0JyZkpzaFF3LUJMZzlDbm5TMXRJUlZ1VUhSbXA4?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "United States Stock Futures Advance in Anticipation of Heavy Earnings Reports",
-   "summary": "American equity index futures moved upward as investors positioned ahead of a dense schedule of corporate financial results.",
-   "why": "Quarterly earnings results demonstrate corporate profitability and provide fundamental signals that drive equity index valuations.",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOR0MwWG9IMlN3MDVva0xabG5QbzNhX09jY3JnaVVTSHJvYXFMSmtHaDhFZ2RTSHVFLUVKYU9za2MxTXA4UGZDN0E3YVk4dEF6QmtIc2Z5YnR5TXB4V2h1QWR6MllZYXRUcGsyOExYMEloYll2RDhHVklKRno4TGhCaGV3RC1OMFJ3c04wWUVCblVFUkdB?oc=5"
+   "title": "US Index Futures Climb as Technology Equities Rally Before Corporate Results",
+   "summary": "Futures tracking the S&P 500 and Nasdaq rose as artificial intelligence equities bounced back ahead of critical quarterly earnings. The upswing reflected pre-market stabilization across major technology names.",
+   "why": "Futures indicators offer early insight into investor positioning and benchmark direction before official exchange trading begins.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX21SVVhfUjZRQ255YlFzVWVEZ3BFMmt3aWlDdkVPVENFOExuRE9KOXZ6WjNqbzdHelUwdzZudy02TjlyNkxVZWcxQmFzZF9NaUE0SFZYaWI3dmxlYTBVdjdULWhLMkNQNnlMUXFaM1J5T1dPMEo3ajhkb0RQLUM3M0pkYlFqbHNKQ1U1c3k5WlUtdjR1UkNCV0JkdjJZTzdIa2c?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Tech Index Futures Rebound Sharply Following Prior Week Losses",
-   "summary": "Contracts linked to the tech-focused benchmark climbed up to 200 points after recording their steepest weekly drop in months.",
-   "why": "Sharp rebounds after severe drawdowns often indicate stabilizing short-term sentiment as traders digest previous sell-offs.",
-   "source": "CNBC TV18",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNMUkzdjlBZU45Ny1MbEVIQ0FKVTRjOEZqVFhmcFhpR3JpMTF4WlFabFR6c3lGNFVaVXFGN09QNEFjNFd5ZjBzRXdKdmNjQmJHRllLOE5feWVLaEpmWXhUbXQ0akNuZDRiQjRacVROUDZOWlliSW5uYjVQX1lPM3lQMzRjdWVQTTZkdzhoaWRmbE5TMVlYNklUODhWTmRrMlZNMC0xREdYSVNzVTZ4VmJJd0w3NTU4NThVY1hYdjRmeGdnZjRsZjZBUGwwSjJVNlVoUGh3bF9PcVhrSzJzMWfSAeMBQVVfeXFMUHhtT3h6SnNLUTVWMGlkQWhkRS05YTZvY0t1Rk1iQ3RtNURWOEd6ZDh2cEh1dXZQcmRDdlI3bHdKeXFmdlpYQUlwZjNsQzVIa09lbHFhY1FOUkVrZE5vSHlwM25WRFYzVWowbWlGaFFKS1pHV2YwcHZ2Vkoyc0FXak4wZ1MwczRkMzEyTHg2aEFJaUlYWE5qX1pjSkNucU9SLTdxNzJfM3dQeXZyWjFiSXVqUmNLeEp2aHRUd0hPV3JFWWVtQWpZUEFYTE9wX29lWEwtczdZZnZKR2FCWEZuWTJfdEk?oc=5"
+   "title": "SpaceX Chief Pledges Single Company Share to Each Child in America",
+   "summary": "Elon Musk announced intentions to allocate one share of his private aerospace company to every minor in the United States next year. The proposal did not detail transfer logistics or qualification criteria for the estimated 72 million children.",
+   "why": "Gifting unlisted corporate shares to the public represents an unusual approach to distributing private company equity to retail minors.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/105-billion-worth-of-shares-spacex-boss-elon-musk-to-give-one-share-to-every-us-child-how-many-shares-does-he-own-11792411456791.html"
   }
  ]
 }
