@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,146",
-   "change": -0.33
+   "value": "4,152",
+   "change": -0.2
   },
   {
    "name": "CRUDE WTI",
-   "value": "$98.6",
-   "change": 0.08
+   "value": "$98.8",
+   "change": 0.25
   },
   {
    "name": "USD/INR",
    "value": "94.92",
-   "change": 0.0
+   "change": 0.01
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Union Bank Posts Strong Profit Expansion on Corporate Lending Growth",
-   "summary": "The state-owned lender registered a thirty percent jump in second-quarter net earnings amid wider margins. Total credit advanced nineteen percent, propelled by a twenty-four percent expansion in corporate borrowing.",
-   "why": "Expanding lending books and wider margins highlight improving financial stability in the banking sector.",
+   "title": "Tonbo Imaging Primary Offering Draws Exceptional Subscription Interest",
+   "summary": "The defense technology firm's public offering drew bids exceeding one hundred times the total shares offered. Institutional participants led the volume by requesting nearly three hundred times their reserved quota.",
+   "why": "Analyzing bidding levels helps students understand institutional demand and broader market interest during new stock offerings.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/union-bank-q2-net-profit-up-30-as-margins-improve/articleshow/135059129.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/tonbo-imagings-rs-852-crore-ipo-subscribed-140x-check-gmp-allotment-other-details/articleshow/135062276.cms"
   },
   {
    "category": "Equity",
-   "title": "Jio Platforms Gathers Massive Institutional Bids Ahead of Public Listing",
-   "summary": "Large foreign and domestic institutions pledged ₹2.5 lakh crore during the anchor allocation window. Key global participants included major investment entities such as BlackRock, Fidelity, and Capital Group.",
-   "why": "Strong institutional backing offers insight into global investor confidence regarding an issuer's commercial prospects.",
+   "title": "Jio Sets Price Band for Public Offering Launching Late October",
+   "summary": "The telecommunications giant established an issue corridor between 1,065 and 1,119 rupees per equity unit. Investors can submit bids starting October 21 through the final deadline on October 23.",
+   "why": "Massive primary listings test market liquidity and can redirect investor cash from other sectors of the exchange.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-platforms-ipo-draws-rs-2-5-lakh-crore-in-anchor-bids/articleshow/135059075.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Equities Tumble Over One Percent Driven by Bank Losses",
-   "summary": "Indian benchmark indices fell sharply following heavy selling across private banking counters. Elevated crude petroleum prices added further downward pressure on market sentiment during trading.",
-   "why": "Private banks hold heavy index weightings, making their movements critical in driving benchmark market trends.",
-   "source": "The New Indian Express",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNeWhOTjEtX1hiVGREQnlUVklXTFZpMW4yVTN1bHR3MXkxQWllT0JGb0ZWU0V4elFXcDBON1VQSGNaNVFvWjBHTXcwRTcya2JQdnBjUW9wZ1BqVGVCWXN1Z2NhblNVMjY2V2Q1ZFhndS11c2FSdWt2cHBTYUxlbkpabjdsUFc3MHZzaThwQVZqclhqblBCRFVGQ0RnVUVTZ1NqRFo5cG5kTktqVW14RWZfcld3R2NrdzAyd0tVa19XM1ltY29PM3pnT2lYSU9iaHhVTnBpa0FDaUpjVjlabDJvYzBxUVjSAfIBQVVfeXFMUHZMZS1SZm1YUFJ4Z2V5bHNwVFp0aVhpV3VNbjY3UFZISG82Uko3US04SGd0ZVRYMWl6VlVFWW16YzF6dldFMkhNNXNPS1pSWXlXb2xBY1MxOURVcmlMMGJDUVZyYVpRU3V3b3Rjak1LSGJjVzA4QU5UcHZNc1V1aldWRUVHR0d5Snd2NHFpRHYzOEpFY1loMGxHdUJZYUJwamZPQzlRYUYtU3FGY0oxWGluMEZ6a3dXLUZvRjk5V1VQY3RKNFlHVUZQQjlTNHEtZ0JoNWpxTElXRnBibTI0bjh3UXhFbm4tUEF6ZU5tM0c3VGc?oc=5"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipos-gmp-rises-to-22-as-indias-largest-ever-issue-set-to-open-on-october-21-should-you-subscribe/articleshow/135061297.cms"
   },
   {
    "category": "Commodity",
-   "title": "Gold Stays Subdued as Costlier Energy Clouds Fed Policy Outlook",
-   "summary": "Bullion prices maintained downward pressure as high petroleum rates stoked worries over persistent price pressures. These inflationary concerns have heightened uncertainty regarding future benchmark interest-rate decisions.",
-   "why": "Expectations of prolonged monetary tightening diminish the investment appeal of non-yielding assets like precious metals.",
+   "title": "Festive Shoppers Pivot to Smaller Ornaments and Bullion Funds",
+   "summary": "Domestic consumers are responding to precious metal price levels by acquiring lighter ornaments along with physical coins and exchange-traded products. Values found recent footing as American yields softened and the dollar weakened.",
+   "why": "Shifting retail patterns illustrate how household consumption adjusts between decorative pieces and pure investment vehicles.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-holds-decline-as-energy-led-inflation-weighs-on-rate-path-11792456762808.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Geopolitical Frictions in Middle East Push Domestic Bullion Rates Upward",
-   "summary": "Domestic market prices for both gold and silver moved modestly higher during recent trade. The price uptick was influenced by intensifying international friction involving the United States and Iran.",
-   "why": "Investors frequently turn to precious metals as safe havens during geopolitical crises to protect capital.",
-   "source": "Deccan Chronicle",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYzd3TXI4NzlBQi1yeVpUWi1wSHhhNUdqNDdXY0xva1haWHNRY0ZFYWxkODd0cDRneXZSWDZyRlUtX3I5bFNlLWlKUXlRWXNPOVQ2VlYzbmFvaDMwSUJtN1dCVVFfZlhLcjh2aFo5OEkxT1Y4a0x0aWY1TU5xcUl2MnJCV0tKOUVJRGdnczBEZi0ydTF4azE5enp3a29nOUJMalhzODdqUzBpNVFRaXFwZUV0NldpdnoybEZjUdIBwgFBVV95cUxQZEh3TFhUUmdTdG9Uc2tSb0d3dlVnSF92QmxYUkJRakg1cWxVUU53NlpVWTloQ1FvYlp6YlJEeUlvb2UxVHhDQjA4ajUtZkhlZTZ1WWxjWUI5UEZGTXdpcmJYa1Z2TFBrTnNGb1RkdVU2NUoyWUFPYk56TS1NYk9HZmp0SlllWGxMWWFqQ3g3Vy1LY1BINWhQNUVHbkhfR1JRR3RiQnNadG1TTGxwOVZ2dldHM2ZDN0xmZFNYZS1RNG4wZw?oc=5"
+   "url": "https://www.livemint.com/market/commodities/gold-price-outlook-yellow-metal-prices-cool-26-from-record-high-what-indian-buyers-are-doing-this-dussehra-diwali-11792472642371.html"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Announces Variable Rate Repo to Balance Banking Liquidity",
-   "summary": "The Reserve Bank of India scheduled an overnight variable rate repo operation for October 21. The intervention seeks to manage near-term liquidity conditions across the domestic banking system.",
-   "why": "Liquidity auctions allow the monetary authority to regulate cash availability and steady short-term lending rates.",
+   "title": "Central Bank Schedules Short-Term Repo Operation to Support Bank Liquidity",
+   "summary": "The Reserve Bank of India has announced a temporary repo auction slated for October 21. The intervention comes after an assessment of short-term cash balances across the banking framework.",
+   "why": "Repo mechanisms enable central authorities to inject short-term funds into commercial lenders to keep overnight interest rates steady.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63833"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Strengthens Modestly Following Central Bank Currency Market Support",
-   "summary": "The local currency appreciated nine paise to reach 94.80 against the American greenback. The advance was underpinned by timely intervention from the Reserve Bank of India.",
-   "why": "Central bank market operations help mitigate extreme exchange rate volatility, maintaining stability for international trade.",
-   "source": "BW Businessworld",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQN3IyZVpFUDd1NW85MnJ6cHhaNUI4M2t3QkFmTGlKWmJQaXJjY3BOZmFYcWlBaXM3cTlUNk85Z01UZFp1bFI0eG1tNU80RkxMMEhCRmJlVnlUZHAzaFR4TXlnYXJjODJNV0lrYWVINUp5TVBCT3RLOHhBY0JLS0dEcWNTVENUOTdiNnFXRFlNMmlXZw?oc=5"
+   "title": "Sovereign Debt Issuance of Thirty-Three Thousand Crore Rupees Announced",
+   "summary": "The central administration plans to raise funds through the re-issuance of two specific dated sovereign papers. Total borrowing for this scheduled offering stands at 33,000 crore rupees.",
+   "why": "Government bond auctions reflect state financing needs and establish the risk-free rate used to value corporate debt.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63832"
+  },
+  {
+   "category": "Equity",
+   "title": "Domestic Stock Benchmarks Retreat Amid Private Lending Losses and Costly Crude",
+   "summary": "Major domestic stock gauges dropped beyond one percent in a recent trading session. Market sentiment was dampened by persistent pullbacks in private lenders alongside higher crude energy costs.",
+   "why": "Banks and energy dynamics hold significant sway over index calculations and broader corporate input expenses.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNeWhOTjEtX1hiVGREQnlUVklXTFZpMW4yVTN1bHR3MXkxQWllT0JGb0ZWU0V4elFXcDBON1VQSGNaNVFvWjBHTXcwRTcya2JQdnBjUW9wZ1BqVGVCWXN1Z2NhblNVMjY2V2Q1ZFhndS11c2FSdWt2cHBTYUxlbkpabjdsUFc3MHZzaThwQVZqclhqblBCRFVGQ0RnVUVTZ1NqRFo5cG5kTktqVW14RWZfcld3R2NrdzAyd0tVa19XM1ltY29PM3pnT2lYSU9iaHhVTnBpa0FDaUpjVjlabDJvYzBxUVjSAfIBQVVfeXFMUHZMZS1SZm1YUFJ4Z2V5bHNwVFp0aVhpV3VNbjY3UFZISG82Uko3US04SGd0ZVRYMWl6VlVFWW16YzF6dldFMkhNNXNPS1pSWXlXb2xBY1MxOURVcmlMMGJDUVZyYVpRU3V3b3Rjak1LSGJjVzA4QU5UcHZNc1V1aldWRUVHR0d5Snd2NHFpRHYzOEpFY1loMGxHdUJZYUJwamZPQzlRYUYtU3FGY0oxWGluMEZ6a3dXLUZvRjk5V1VQY3RKNFlHVUZQQjlTNHEtZ0JoNWpxTElXRnBibTI0bjh3UXhFbm4tUEF6ZU5tM0c3VGc?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Currency Dips Slightly Against Dollar to Conclude at 94.92",
+   "summary": "The Indian rupee slipped by three paise relative to the United States dollar at the end of trade. The domestic currency settled at a level of 94.92.",
+   "why": "Exchange rate shifts directly alter the local cost of foreign energy imports and influence balance-of-payments metrics.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTlZnT1NiWldHVDVRVHhiVjlObXJ3b0ZZTl9tMzJrcXVKZjlVVnAyR2RpMjZia045T0xoa3hHdFdpQk1CaWhUV3BQYS1YR1FBemRnem9LVHVuSk5BaUVseWlISTZfRUdTb01UOVJLMmNSdEFzVlpnaTJXWkE2MGtoX3o3cmhhenM0QXplc3VjNzJyZWZxNVJwRThxVzVkTzVBdXE5R0FLb2dnbU5TbE11SGJpa2NFbnotWjhETG130gG-AUFVX3lxTE9OVmdPU2JaV0dUNVFUeGJWOU5tcndvRllOX20zMmtxdUpmOVVWcDJHZGkyNmJrTjlPTGhreEd0V2lCTUJpaFRXcFBhLVhHUUF6ZGd6b0tUdW5KTkFpRWx5aUhJNl9FR1NvTVQ5UksyY1J0QXNWWmdpMldaQTYwa2hfejdyaGF6czRBemVzdWM3MnJlZnE1UnBFOHFXNWRPNUF1cTlHQUtvZ2dtTlNsTXVIYmlrY0Vuei1aOERMbXc?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq Rallies as Semiconductor and Artificial Intelligence Shares Recover",
-   "summary": "The tech-focused American benchmark outpaced broader market indices on Monday following a previous sharp selloff. Buying interest centered heavily on semiconductor manufacturers and artificial intelligence companies.",
-   "why": "Mega-cap technology firms wield heavy influence on index performance due to their significant market capitalization.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-today-nasdaq-leads-wall-street-gains-as-chip-ai-stocks-rebound/articleshow/135056194.cms"
+   "title": "Nasdaq Gains as Advanced Computing and Semiconductor Equities Rally",
+   "summary": "The tech-heavy American index rose as shares in computing hardware and artificial intelligence companies recovered. Stronger performance in prominent tech names helped lift broader trading sentiment.",
+   "why": "Developments in leading technology firms frequently guide global risk appetite and international capital movements.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX21SVVhfUjZRQ255YlFzVWVEZ3BFMmt3aWlDdkVPVENFOExuRE9KOXZ6WjNqbzdHelUwdzZudy02TjlyNkxVZWcxQmFzZF9NaUE0SFZYaWI3dmxlYTBVdjdULWhLMkNQNnlMUXFaM1J5T1dPMEo3ajhkb0RQLUM3M0pkYlFqbHNKQ1U1c3k5WlUtdjR1UkNCV0JkdjJZTzdIa2c?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Sovereign Debt Falls as Renewed Equity Appetite Reduces Demand",
-   "summary": "Prices for United States Treasury obligations declined as capital shifted back toward technology equities. The renewed enthusiasm for corporate shares reduced demand for safe-haven sovereign paper.",
-   "why": "Bond values usually decrease when investor appetite for riskier asset classes like equities gathers momentum.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/treasuries-fall-as-tech-shares-rebound-denting-haven-demand-11792444988693.html"
+   "title": "American Equity Futures Stabilize Following Prior Tech-Driven Recovery",
+   "summary": "Futures tied to primary United States market averages remained balanced after cash markets recorded advances. The preceding Wall Street session benefited from a rebound across large technology firms.",
+   "why": "Tracking pre-market derivatives helps traders assess potential cross-border market direction before normal trading commences.",
+   "source": "Investing.com",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOc3RONS1WcUhUam1hQkFZbWlZX0VoUWdRSTNtYXI5UVAwZHpGOXZ5dW1kOTJQLS1iMGVXMjgwcUh5Q2ozeklSRkFmT2pWRXlJVDRjWDU3SlpVblBITlhyUXlTVVBtMDBSQldnSVltaXRZNXdvNW1rdWZRaDNXd1ZVbjVNS3ZjdWNjMVV5YXF5SHJJd09pUmpNOGhXSmF3NmlOdGVrX2Nza2pkRlcxVkRQZ1o3c19sVVgyMUs2QzVfRTNGUQ?oc=5"
   }
  ]
 }
