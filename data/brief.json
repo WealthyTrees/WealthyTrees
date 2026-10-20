@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,152",
-   "change": -0.2
+   "value": "4,136",
+   "change": -0.58
   },
   {
    "name": "CRUDE WTI",
-   "value": "$98.8",
-   "change": 0.25
+   "value": "$99.9",
+   "change": 1.42
   },
   {
    "name": "USD/INR",
    "value": "94.92",
-   "change": 0.01
+   "change": 0.0
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Tonbo Imaging Primary Offering Draws Exceptional Subscription Interest",
-   "summary": "The defense technology firm's public offering drew bids exceeding one hundred times the total shares offered. Institutional participants led the volume by requesting nearly three hundred times their reserved quota.",
-   "why": "Analyzing bidding levels helps students understand institutional demand and broader market interest during new stock offerings.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/tonbo-imagings-rs-852-crore-ipo-subscribed-140x-check-gmp-allotment-other-details/articleshow/135062276.cms"
+   "title": "Reliance Jio IPO Receives Strong Interest for Anchor Allocation",
+   "summary": "Anchor investors placed over twenty-five billion dollars in bids for the telecom unit's thirty thousand two hundred thirteen crore rupee public issue. This institutional demand exceeded the allocation available to anchor participants by more than thirty times.",
+   "why": "Anchor books signal how sophisticated institutional funds value a company before its shares open to retail and general investors.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo/reliance-jio-ipo-massive-bids-top-25-bn-amount-for-anchor-book-okhow-mukesh-ambani-firm-attracted-top-notch-investors-11792488288719.html"
   },
   {
    "category": "Equity",
-   "title": "Jio Sets Price Band for Public Offering Launching Late October",
-   "summary": "The telecommunications giant established an issue corridor between 1,065 and 1,119 rupees per equity unit. Investors can submit bids starting October 21 through the final deadline on October 23.",
-   "why": "Massive primary listings test market liquidity and can redirect investor cash from other sectors of the exchange.",
+   "title": "Hospitality Brand Parent PRISM Lowers Upcoming Initial Public Offering Size",
+   "summary": "The company plans to decrease its planned equity offering by nearly half to three thousand three hundred fifty crore rupees. The reduction follows notable enhancements in corporate cash generation and balance sheet strength.",
+   "why": "Firms often scale back primary equity issuances when internal cash flow improves sufficiently to reduce the requirement for fresh equity capital.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipos-gmp-rises-to-22-as-indias-largest-ever-issue-set-to-open-on-october-21-should-you-subscribe/articleshow/135061297.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/oyo-parent-prism-to-nearly-halve-ipo-fresh-issue-size-to-up-to-rs-3350-cr-sources/articleshow/135068962.cms"
   },
   {
    "category": "Commodity",
-   "title": "Festive Shoppers Pivot to Smaller Ornaments and Bullion Funds",
-   "summary": "Domestic consumers are responding to precious metal price levels by acquiring lighter ornaments along with physical coins and exchange-traded products. Values found recent footing as American yields softened and the dollar weakened.",
-   "why": "Shifting retail patterns illustrate how household consumption adjusts between decorative pieces and pure investment vehicles.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-price-outlook-yellow-metal-prices-cool-26-from-record-high-what-indian-buyers-are-doing-this-dussehra-diwali-11792472642371.html"
+   "title": "Domestic Gold and Silver Quotations Reach Elevated Thresholds",
+   "summary": "During festival trading, physical gold climbed past one lakh forty-seven thousand rupees per ten grams. Simultaneously, silver traded close to two lakh ten thousand rupees per kilogram.",
+   "why": "Precious metal prices in India indicate consumer appetite during auspicious festivals as well as underlying asset valuation patterns.",
+   "source": "NDTV Profit",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNejZmU0lOMjhZNVA3VGZnLUc2dk5yaVdmYlYwQjk0c2RpeElFLWpteUlNbUpCcFh0eGQwUkVGLVRZblN3Zi1JME10TE1nSk9jYTFLUVNQMW8xMjhQUklXbUFPWDZWOFEwbEhXM1FMTHRMeG9yYWd2TmNLRXpkNS1tUlBOZjNSbEZIX1JZdFVkWUZZWGUzcElZV2tQb1ltSUJsYXpDSGxfRDF1emY4VmpkazQyVlJ6S2lwNS15Z193c19sam54Vi03OW9iclQ1Mmo4QVpuZEsweGJfMU01YTQ00gHnAUFVX3lxTE9xY3YzUE41VVB6X1RaRHd3aGpTc3hVcnRJWERacUZwMlRnRXNaZzJDNGVPYkt4dks1a3ZwR3JsSmxJaFJCbjRZTDFicFBFTTFvSHJWZHdlMklNdHJwdGZJQnNTS1BQazRES3ZXV1lwb3ZsdGFJSVFsLTAwUElZX0U5cVl3WWdoOEswaVhQcWktVTl1Y3dTS1ZHaWlreHA3TFJIc2VodGtROThhWHZSTDNfNktJaG1rV3Fsdjl0bTRyVWV6VVFrYnZiNERJY3hQeEhQVmxGN0FuRTQwbEhBR0JucVlEZ1JrQQ?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Schedules Short-Term Repo Operation to Support Bank Liquidity",
-   "summary": "The Reserve Bank of India has announced a temporary repo auction slated for October 21. The intervention comes after an assessment of short-term cash balances across the banking framework.",
-   "why": "Repo mechanisms enable central authorities to inject short-term funds into commercial lenders to keep overnight interest rates steady.",
+   "title": "Reserve Bank Plans Short-Term Liquidity Support Operation",
+   "summary": "The central authority will hold an overnight variable rate repo auction on October twenty-first under its liquidity framework. The move comes after reviewing evolving short-term cash conditions within the banking system.",
+   "why": "Central banks conduct repo operations to lend funds to commercial banks, helping manage systemic liquidity and stabilize short-term interest rates.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63833"
   },
   {
    "category": "Economy",
-   "title": "Sovereign Debt Issuance of Thirty-Three Thousand Crore Rupees Announced",
-   "summary": "The central administration plans to raise funds through the re-issuance of two specific dated sovereign papers. Total borrowing for this scheduled offering stands at 33,000 crore rupees.",
-   "why": "Government bond auctions reflect state financing needs and establish the risk-free rate used to value corporate debt.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63832"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Stock Benchmarks Retreat Amid Private Lending Losses and Costly Crude",
-   "summary": "Major domestic stock gauges dropped beyond one percent in a recent trading session. Market sentiment was dampened by persistent pullbacks in private lenders alongside higher crude energy costs.",
-   "why": "Banks and energy dynamics hold significant sway over index calculations and broader corporate input expenses.",
-   "source": "The New Indian Express",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNeWhOTjEtX1hiVGREQnlUVklXTFZpMW4yVTN1bHR3MXkxQWllT0JGb0ZWU0V4elFXcDBON1VQSGNaNVFvWjBHTXcwRTcya2JQdnBjUW9wZ1BqVGVCWXN1Z2NhblNVMjY2V2Q1ZFhndS11c2FSdWt2cHBTYUxlbkpabjdsUFc3MHZzaThwQVZqclhqblBCRFVGQ0RnVUVTZ1NqRFo5cG5kTktqVW14RWZfcld3R2NrdzAyd0tVa19XM1ltY29PM3pnT2lYSU9iaHhVTnBpa0FDaUpjVjlabDJvYzBxUVjSAfIBQVVfeXFMUHZMZS1SZm1YUFJ4Z2V5bHNwVFp0aVhpV3VNbjY3UFZISG82Uko3US04SGd0ZVRYMWl6VlVFWW16YzF6dldFMkhNNXNPS1pSWXlXb2xBY1MxOURVcmlMMGJDUVZyYVpRU3V3b3Rjak1LSGJjVzA4QU5UcHZNc1V1aldWRUVHR0d5Snd2NHFpRHYzOEpFY1loMGxHdUJZYUJwamZPQzlRYUYtU3FGY0oxWGluMEZ6a3dXLUZvRjk5V1VQY3RKNFlHVUZQQjlTNHEtZ0JoNWpxTElXRnBibTI0bjh3UXhFbm4tUEF6ZU5tM0c3VGc?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Currency Dips Slightly Against Dollar to Conclude at 94.92",
-   "summary": "The Indian rupee slipped by three paise relative to the United States dollar at the end of trade. The domestic currency settled at a level of 94.92.",
-   "why": "Exchange rate shifts directly alter the local cost of foreign energy imports and influence balance-of-payments metrics.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTlZnT1NiWldHVDVRVHhiVjlObXJ3b0ZZTl9tMzJrcXVKZjlVVnAyR2RpMjZia045T0xoa3hHdFdpQk1CaWhUV3BQYS1YR1FBemRnem9LVHVuSk5BaUVseWlISTZfRUdTb01UOVJLMmNSdEFzVlpnaTJXWkE2MGtoX3o3cmhhenM0QXplc3VjNzJyZWZxNVJwRThxVzVkTzVBdXE5R0FLb2dnbU5TbE11SGJpa2NFbnotWjhETG130gG-AUFVX3lxTE9OVmdPU2JaV0dUNVFUeGJWOU5tcndvRllOX20zMmtxdUpmOVVWcDJHZGkyNmJrTjlPTGhreEd0V2lCTUJpaFRXcFBhLVhHUUF6ZGd6b0tUdW5KTkFpRWx5aUhJNl9FR1NvTVQ5UksyY1J0QXNWWmdpMldaQTYwa2hfejdyaGF6czRBemVzdWM3MnJlZnE1UnBFOHFXNWRPNUF1cTlHQUtvZ2dtTlNsTXVIYmlrY0Vuei1aOERMbXc?oc=5"
+   "title": "Indian Rupee Closes Lower Against US Dollar",
+   "summary": "The domestic unit dipped by two paise to conclude at ninety-four point nine one per American dollar.",
+   "why": "Exchange rate variations affect the cost of imported commodities and influence foreign capital flows within the broader economy.",
+   "source": "The Shillong Times",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOejFOdkd5c2RKeEJ3eEN6TjA2b1FhRUZERUNNZVc0ekJYdDlNbWlrOWVxbXgtVXVyc3UwUW5zZWVfVzJ5Q09PSGp6NU11Z0JzR2swaWppRjlhSlV0SUlncXg3NVlJajFPN1ZkSHRFc19CZ2xIek4xVld5ZFhoU0x3SUt1bU1iVkdkVWRRRVh3OFU3ZHR2?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq Gains as Advanced Computing and Semiconductor Equities Rally",
-   "summary": "The tech-heavy American index rose as shares in computing hardware and artificial intelligence companies recovered. Stronger performance in prominent tech names helped lift broader trading sentiment.",
-   "why": "Developments in leading technology firms frequently guide global risk appetite and international capital movements.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX21SVVhfUjZRQ255YlFzVWVEZ3BFMmt3aWlDdkVPVENFOExuRE9KOXZ6WjNqbzdHelUwdzZudy02TjlyNkxVZWcxQmFzZF9NaUE0SFZYaWI3dmxlYTBVdjdULWhLMkNQNnlMUXFaM1J5T1dPMEo3ajhkb0RQLUM3M0pkYlFqbHNKQ1U1c3k5WlUtdjR1UkNCV0JkdjJZTzdIa2c?oc=5"
+   "title": "Automaker General Motors Posts Operating Earnings Growth",
+   "summary": "The vehicle manufacturer reported four point one billion dollars in adjusted quarterly operating earnings, marking a twenty-two percent year-on-year rise. Demand for pickup models and sport utility vehicles drove the performance past market estimates.",
+   "why": "Quarterly earnings results from legacy manufacturers offer clear evidence about corporate operational efficiency and end-consumer demand.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-gms-core-profit-rises-22-on-strength-of-pickup-truck-business/articleshow/135068643.cms"
   },
   {
    "category": "US Markets",
-   "title": "American Equity Futures Stabilize Following Prior Tech-Driven Recovery",
-   "summary": "Futures tied to primary United States market averages remained balanced after cash markets recorded advances. The preceding Wall Street session benefited from a rebound across large technology firms.",
-   "why": "Tracking pre-market derivatives helps traders assess potential cross-border market direction before normal trading commences.",
+   "title": "United States Equity Futures Drop as Crude Surpasses Benchmark",
+   "summary": "Contracts tied to major American stock benchmarks declined as technology shares faced fresh headwinds. At the same time, crude oil prices crossed one hundred ten dollars per barrel.",
+   "why": "Surging fuel costs can heighten corporate operating expenditure and dampen sentiment across global equity markets.",
    "source": "Investing.com",
    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOc3RONS1WcUhUam1hQkFZbWlZX0VoUWdRSTNtYXI5UVAwZHpGOXZ5dW1kOTJQLS1iMGVXMjgwcUh5Q2ozeklSRkFmT2pWRXlJVDRjWDU3SlpVblBITlhyUXlTVVBtMDBSQldnSVltaXRZNXdvNW1rdWZRaDNXd1ZVbjVNS3ZjdWNjMVV5YXF5SHJJd09pUmpNOGhXSmF3NmlOdGVrX2Nza2pkRlcxVkRQZ1o3c19sVVgyMUs2QzVfRTNGUQ?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Frontier Tech Firms Aim for Record Public Market Capitalizations",
+   "summary": "Following a space venture's seventy-five billion dollar listing at a valuation above one point seven trillion dollars, an artificial intelligence developer is weighing a two trillion dollar debut. The potential listing could seek up to one hundred billion dollars.",
+   "why": "Mega-sized initial offerings demonstrate the magnitude of capital that global public markets can allocate to emerging technological industries.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/spacex-ipo-vs-upcoming-anthropic-ipo-will-claude-maker-beat-elon-musk-s-75-bn-record-11792493013233.html"
   }
  ]
 }
