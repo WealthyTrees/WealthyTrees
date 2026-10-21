@@ -1,0 +1,117 @@
+[
+ {
+  "title": "Why costly crude oil moves your Nifty",
+  "intro": "Why can a fight in a faraway sea make petrol, vegetables and the Nifty costlier on the same day? Four steps.",
+  "steps": [
+   [
+    "India imports most of its crude",
+    "We pay for it in dollars. There is no local tap to open."
+   ],
+   [
+    "The price jumps",
+    "A costlier barrel raises India's import bill overnight."
+   ],
+   [
+    "Fuel and transport get costlier",
+    "Trucks, flights and factories burn fuel, so everyday prices follow."
+   ],
+   [
+    "Profits squeeze, stocks wobble",
+    "Companies spend more and earn less, and the Nifty feels it."
+   ]
+  ],
+  "oneline": "When you read “crude up”, read: India's costs went up today."
+ },
+ {
+  "title": "What is India VIX?",
+  "intro": "Markets have a fear meter. It is called India VIX. Here is how to read it.",
+  "steps": [
+   [
+    "It measures expected swings",
+    "VIX shows how much the market expects Nifty to move over the next 30 days."
+   ],
+   [
+    "High VIX means nervous",
+    "Big expected swings mean investors are worried or unsure."
+   ],
+   [
+    "Low VIX means calm",
+    "Small expected swings mean the market feels comfortable."
+   ],
+   [
+    "It is not a prediction",
+    "It shows the mood, not the direction. It can be high on up days too."
+   ]
+  ],
+  "oneline": "VIX up means fear up. It tells you the mood, not where the market goes."
+ },
+ {
+  "title": "Why bank stocks fall first on red days",
+  "intro": "On a red day, bank stocks often fall faster than others. Why?",
+  "steps": [
+   [
+    "Banks touch everything",
+    "Loans, savings and businesses all run through banks, so they feel every worry first."
+   ],
+   [
+    "Big investors own them most",
+    "Banks are heavily owned by large funds, which sell fast when nervous."
+   ],
+   [
+    "Rates and bad loans matter",
+    "Rising rates and loan defaults hit bank profits directly."
+   ],
+   [
+    "They also rise fast",
+    "The same size makes them bounce quickly when mood improves."
+   ]
+  ],
+  "oneline": "Banks are the market's mirror: they show the mood first."
+ },
+ {
+  "title": "What is the rupee, and why does it move?",
+  "intro": "The rupee goes up and down against the dollar every day. Here is why.",
+  "steps": [
+   [
+    "It is a price",
+    "USD/INR is the price of one dollar in rupees."
+   ],
+   [
+    "Dollars in, rupee up",
+    "When foreign money flows into India, more buyers want rupees."
+   ],
+   [
+    "Dollars out, rupee down",
+    "Costly oil or foreign selling means more demand for dollars."
+   ],
+   [
+    "Why you care",
+    "A weaker rupee makes imports, travel and foreign education costlier."
+   ]
+  ],
+  "oneline": "More dollars coming in means a stronger rupee."
+ },
+ {
+  "title": "Sensex vs Nifty: what is the difference?",
+  "intro": "Two numbers, one story. What are they?",
+  "steps": [
+   [
+    "Both are baskets",
+    "Each index tracks a group of big companies to show how the market did."
+   ],
+   [
+    "Sensex has 30",
+    "The BSE's index of 30 large companies."
+   ],
+   [
+    "Nifty has 50",
+    "The NSE's index of 50 large companies."
+   ],
+   [
+    "They move together",
+    "They are mostly similar, so one tells you the other's story."
+   ]
+  ],
+  "oneline": "Sensex and Nifty are two scorecards for the same big companies."
+ }
+]
