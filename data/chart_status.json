@@ -1,39 +1,39 @@
 {
- "updated": "2026-10-21T01:12:46+00:00",
+ "updated": "2026-10-21T07:19:32+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 495
   },
   "Sensex": {
    "yahoo": "ok",
-   "rows": 493
+   "rows": 494
   },
   "Bank Nifty": {
    "yahoo": "ok",
-   "rows": 493
+   "rows": 494
   },
   "Nifty IT": {
    "yahoo": "ok",
-   "rows": 493
+   "rows": 494
   },
   "Nifty Pharma": {
    "yahoo": "ok",
-   "rows": 492
-  },
-  "Nifty Auto": {
-   "yahoo": "only 3 rows",
-   "etf": "AUTOBEES.NS ok (scaled)",
    "rows": 493
   },
-  "Nifty Metal": {
-   "yahoo": "only 3 rows",
-   "etf": "METALIETF.NS ok (scaled)",
+  "Nifty Auto": {
+   "yahoo": "only 4 rows",
+   "etf": "AUTOBEES.NS ok (scaled)",
    "rows": 494
+  },
+  "Nifty Metal": {
+   "yahoo": "only 4 rows",
+   "etf": "METALIETF.NS ok (scaled)",
+   "rows": 495
   },
   "India VIX": {
    "yahoo": "ok",
-   "rows": 491
+   "rows": 492
   },
   "S&P 500": {
    "yahoo": "ok",
@@ -49,27 +49,27 @@
   },
   "Gold": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 504
   },
   "Silver": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 504
   },
   "Crude WTI": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 504
   },
   "Brent": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 504
   },
   "Natural Gas": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 504
   },
   "Copper": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 504
   },
   "USD/INR": {
    "yahoo": "ok",

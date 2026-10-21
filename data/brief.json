@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,889",
-   "change": -1.11
+   "value": "22,742",
+   "change": -0.64
   },
   {
    "name": "SENSEX",
-   "value": "73,853",
-   "change": -1.17
+   "value": "73,582",
+   "change": -0.37
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,136",
-   "change": -0.16
+   "value": "4,133",
+   "change": -0.24
   },
   {
    "name": "CRUDE WTI",
-   "value": "$98.9",
-   "change": 1.1
+   "value": "$99.0",
+   "change": 1.23
   },
   {
    "name": "USD/INR",
-   "value": "94.77",
-   "change": 0.0
+   "value": "94.69",
+   "change": -0.09
   },
   {
    "name": "S&P 500",
@@ -45,73 +45,73 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Indian Benchmark Indices Fall Under Energy Pressure and Earnings Disappointments",
-   "summary": "Domestic stock markets pulled back as investors cashed in profits amidst climbing petroleum rates. Soft corporate quarterly performance contributed to the benchmark ending substantially lower at 22,889.",
-   "why": "Corporate results and energy costs are foundational elements that directly influence company valuations and broader economic health.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/stocks-in-news-reliance-industries-eternal-ireda-yes-bank-trent-and-hindustan-zinc/articleshow/135074022.cms"
+   "title": "Jio Initial Public Offering Achieves Full Subscription in Opening Hours",
+   "summary": "The primary share sale of the telecom operator reached full investor booking shortly after launch. This marks a major milestone following a decade of rapid expansion in the domestic communications market.",
+   "why": "High investor subscription speed demonstrates broad retail and institutional participation in landmark corporate listings.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo/jio-has-record-ipo-fully-subscribed-within-hours-11792562581882.html"
   },
   {
    "category": "Equity",
-   "title": "Key Banking Giant Reports Compressed Yields Alongside Sound Operational Gains",
-   "summary": "The private lender's net interest margin hit a three-year bottom during the second quarter. At the same time, primary operational income expanded and loan portfolio health showed progress.",
-   "why": "A lender's interest margins reflect its basic borrowing and lending profitability, making it an essential gauge for banking sector strength.",
+   "title": "Benchmark Indices Surge Driven by Gains in Major Software Exporters",
+   "summary": "Indian stock benchmarks rose sharply, with headline indices pushed higher by top technology firms such as Infosys and TCS. The upswing lifted both the Sensex and the Nifty well above key index levels.",
+   "why": "Large-cap information technology stocks carry heavy weightings that can significantly shift overall market direction.",
+   "source": "Equitymaster",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdUE5bVhWSWoxbzJzSTE0ZzAzYUVNMTBpbjM3M09nUk5iZVNTMHFvaWZNams1LW5PSnhvck8yM0VRNmlMR2o3eXg3TEFpZHJJVmNYVHlQaXZQUk9ST18tcV9UNVdRZnFhdTByNmJ3QkU5YXNST1hnSzFNTm5WWGxjY3BvRElWNWdhS05wZmNHODlyVkVsWFRXU1BxUGhsSmhFZUh3RkZ4Uzd2WjYwZUJBei16Y3gyZ3dlUmtLXzBrcXlHaEFBX2Z5MlZ6MjF6SHNCUkFB?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Input Cost Pressures Weigh on UltraTech Cement Despite Rising Sales",
+   "summary": "The building materials manufacturer expanded sales volumes and market footprint on steady construction activity. Nevertheless, elevated thermal energy and fuel expenses compressed overall operational profitability.",
+   "why": "Volume expansion does not guarantee profit growth when inflationary pressures severely dent operating margins.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/mark-to-market/hdfc-bank-q2-quarterly-results-review-11792465354169.html"
+   "url": "https://www.livemint.com/market/mark-to-market/ultratech-cement-q2-results-share-price-outlook-11792559939685.html"
   },
   {
    "category": "Commodity",
-   "title": "Petroleum Prices Consolidate Following Geopolitical Friction and Fluctuating Headlines",
-   "summary": "Crude values balanced out after volatile trading as market participants examined ambiguous messages concerning potential conflict resolution between Washington and Tehran.",
-   "why": "Crude movements affect international shipping expenses, inflation data, and current account deficits for net energy importing nations.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/oil-steadies-as-traders-weigh-conflicting-signals-on-iran-talks-11792537101821.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Bullion Investment Vehicles Reach Annual Peak Despite Inflationary Headwinds",
-   "summary": "Elevated inflation readings put downward pressure on spot precious metal rates. Conversely, investor participation in gold exchange-traded funds increased, driving total assets in these products to fresh highs.",
-   "why": "Institutional flows into exchange-traded products indicate underlying long-term portfolio diversification even during short-term price pullbacks.",
-   "source": "Kitco",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWS1XbUdWTEt4Vjd3MHRGSWhndDhGUFNnaDR1OExpajlpX1kwVVAxZXpPb1l5N1dPRm5QRTkyRjRVc0dKRDdiTVJ0Z09nQmpzaU9Ub2M3MVhDYksxelZOc1htWXg0UlIydGE4VE1iVkplbnFDWDVJMG1UWVNESk1TUmZRQWdzWUF0SWVaQTl1Zk1jLTZadlRRaWN6ZjVPS2drM1NvQ1Z4SHh6dHdjWXB2WjltU2VzU2RjY0VzQXV3?oc=5"
+   "title": "Precious Metals Weaken Domestically Ahead of US Monetary Policy Decision",
+   "summary": "Bullion contracts declined on the multi-commodity exchange as market participants paused prior to central bank guidance. Traders predominantly anticipate benchmark lending rates to stay steady during October.",
+   "why": "Global metal prices frequently react to interest rate expectations because non-yielding assets become less attractive when yields rise.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-prices-near-rs-1-47-lakh/10-grams-silver-falls-by-rs-1144/kg-as-traders-await-fed-rate-signals-what-lies-ahead/articleshow/135083841.cms"
   },
   {
    "category": "Economy",
-   "title": "Banking Regulator Schedules Short Term Liquidity Auction for Financial Institutions",
-   "summary": "The central bank organized an overnight repo operation under its liquidity adjustment mechanism. This measure comes in response to an evaluation of immediate cash flow dynamics across domestic lenders.",
-   "why": "Variable repo facilities let the monetary authority manage transient cash shortages in the banking sector to maintain orderly interbank rates.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63833"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Currency Gains Against the Dollar Following Central Bank Actions",
-   "summary": "The domestic rupee strengthened to 94.80 per unit, advancing by nine paise during the session. The uptick occurred as the monetary authority actively entered the foreign exchange market.",
-   "why": "Direct currency market participation prevents sudden exchange rate depreciation, helping keep imported goods from becoming excessively expensive.",
-   "source": "BW Businessworld",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQN3IyZVpFUDd1NW85MnJ6cHhaNUI4M2t3QkFmTGlKWmJQaXJjY3BOZmFYcWlBaXM3cTlUNk85Z01UZFp1bFI0eG1tNU80RkxMMEhCRmJlVnlUZHAzaFR4TXlnYXJjODJNV0lrYWVINUp5TVBCT3RLOHhBY0JLS0dEcWNTVENUOTdiNnFXRFlNMmlXZw?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "American Equities Advance as Medical and Defensive Shares Attract Buyers",
-   "summary": "Major United States stock averages finished in positive territory, with blue-chip industrial shares leading the broader market. Medical and healthcare firms provided the strongest upward momentum throughout the trading day.",
-   "why": "A market advance led by healthcare often highlights a defensive posture by market participants seeking steady corporate performance.",
+   "title": "Indian Rupee Touches Six-Week Peak on Foreign Listing Inflows",
+   "summary": "The domestic currency gained ground against foreign counterparts, reaching its strongest level in over a month. Strong overseas capital flows directed toward a mega public share offer aided the recovery.",
+   "why": "Foreign capital entering domestic markets increases demand for local currency, providing upward support to foreign exchange rates.",
    "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2JsXzZ4YTVKcDJjNE9iTW42aU0wY0VOZXRtdDYxTzJTanBUOGZIT1FLSl9FVTNxQ1RpTVFSWHlsejgyR0Y1b3JQWXRlT0dEMjJPWWpXYlpfdFJQaHZKZG5KdUNMdW53NmlMd2RwUWJKWFB3dE9Xc2ZBbnRfalF3cWNzblhxTGJOTGlKYUh1a0FmWC1vaGQydWZXdTMzemJjSVg5NWZ0bw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTW50dk9NZE9aaGFzX24yNmxGN19HMlRSd29NajBxMFVXdDQ5RUVHYUVGTVBFX21jZDM4bnNVVXVFVE1jOHowcUpVWHJnNUZkSEVxaS1samY5ems0MEtqUUJGWm9OS0dmZGp1bmVkcEp3cTVMbmRkTi04LXpzT0lFQlhFYm9RbnZVYXM3ZkJoTTVBYlRLS3dvY1FRNmFrcDJFSXI3Qm9zMGk5TlZp?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Injects Short-Term Liquidity via Variable Rate Repo",
+   "summary": "The Reserve Bank of India allocated just over fifty thousand crore rupees in a one-day repo operation to address banking cash needs. Commercial lenders submitted bids substantially exceeding the notified volume.",
+   "why": "Central banks conduct repo operations to stabilize daily cash balances across commercial banks and maintain smooth money market functioning.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63835"
   },
   {
    "category": "US Markets",
-   "title": "Hardware Server Data Reassures Investors and Lifts Technology Sector",
-   "summary": "Computing and semiconductor firms gained ground in extended trading following encouraging early revenue numbers from Super Micro Computer. The figures helped soothe market anxiety regarding enterprise commitments to technological infrastructure.",
-   "why": "Supply-chain hardware receipts provide tangible evidence of whether broader enterprise spending in computational infrastructure remains intact.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ai-stocks-rally-after-super-micro-preliminary-sales-bring-relief-11792535998995.html"
+   "title": "SpaceX Reports Rapid Top-Line Growth Driven by Satellite and Computing Services",
+   "summary": "Quarterly revenue at the aerospace company escalated over one hundred and sixty percent to surpass fourteen billion dollars. Advancements in satellite connectivity networks and artificial intelligence systems powered the performance.",
+   "why": "Technological infrastructure expansion can produce rapid revenue scaling in pioneering frontier industries.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/spacex-stock-6-things-to-know-about-q3-earnings-ai-growth-and-tesla-merger-buzz/slideshow/135084626.cms"
   },
   {
    "category": "US Markets",
-   "title": "Analysts Anticipate Federal Reserve Inaction in October Followed by Winter Adjustment",
-   "summary": "An overwhelming consensus of professional forecasters expects the American central bank to maintain existing borrowing costs at its next gathering. Most surveyed anticipate a subsequent interest rate hike toward year-end.",
-   "why": "Global capital availability and foreign institutional investments in emerging economies are heavily swayed by the direction of US benchmark interest rates.",
+   "title": "US Equities Advance Following Robust Earnings and Healthcare Gains",
+   "summary": "Major indices in New York finished in positive territory as upbeat corporate earnings reports lifted investor appetite. Medical and healthcare companies posted notable advances that supported broad index performance.",
+   "why": "Strong quarterly corporate scorecards can reassure investors about corporate financial strength during evolving macroeconomic conditions.",
+   "source": "Investing.com India",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYy1XSFEzWGxieHMxUkQxcm1mN0NCTlRENnhxSHFmY3Y5Tll5SWpjWG81eVk2djhvLXYtSGFuaFNPUUQzTXFzQ3Naa3czTHFDdUNPeDBHT3REZmtWcHZNOXhka1JpZGQ1dWV5ckxSajdpU3NXM3JmV0tHX3lQNC1WZ2U1aXZuNHV2ckFnWTZSV2w3M3JfNEw2VGZKV3NfbWp4N2lKRFpPYnFWTEhobUs5RGRqLWZWU3czMGNqRWpBLXk?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Economists Project Federal Reserve Policy Pause Followed by December Tightening",
+   "summary": "A consensus among surveyed economists suggests the American central bank will maintain borrowing costs in October. However, analysts widely anticipate an additional interest rate increase before the close of the year.",
+   "why": "Shifts in interest rate trajectories affect global borrowing conditions, currency valuations, and capital allocations across emerging economies.",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUFYOUZFZXZ4UWJSN1J6RkRxM1lkdGJsUFZRZ2puQkFnRk9rczVQZF9iUS12amVsUl9ESnA4MmNlUmFuVnBVY3BoeVZoVWx1dmwtSWdCa2tGUUlXeXdWR0o0U2o5NHdUend5d2o3c1NoUlZTQUNyWFFEalBHY25QMVptcnFoRnZiSk1JVDFyb1VFYkg0NGRJaXhWemlUY3gxX3YxeVh0YkNMSHNQU21pWkc0OVQ?oc=5"
   }
