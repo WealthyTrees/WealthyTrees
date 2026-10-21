@@ -18,7 +18,7 @@ jobs:
           curl -fsS -m 30 "$S/api/headlines" | jq -e '(.items|length) >= 5' >/dev/null || { echo "Too few headlines"; exit 1; }
           curl -fsS -m 30 "$S/api/quotes" | jq -e '(.quotes|length) >= 12 and ([.quotes[]|select(.price > 0)]|length) == (.quotes|length)' >/dev/null || { echo "Live prices missing or broken"; exit 1; }
           curl -fsS -m 30 -o /dev/null "$S/api/health" || { echo "Health check failed"; exit 1; }
-          for p in "" markets.html learn.html learn-1.html learn-2.html about.html; do
+          for p in "" pages/markets.html pages/learn.html learn-1.html learn-2.html pages/about.html; do
             curl -fsS -m 30 -o /dev/null "$S/$p" || { echo "Page failed: /$p"; exit 1; }
           done
           echo "All good"

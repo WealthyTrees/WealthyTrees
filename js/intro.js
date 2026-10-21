@@ -1,7 +1,7 @@
 /* WealthyTrees intro.js v5: curtain intro on arrival at Learn and Markets (once per visit). The page loads underneath, so there is no wait and no lag when the curtain lifts. */
 (function () {
   if (window.__wtIntro) return; window.__wtIntro = 1;
-  var P = location.pathname.replace(/\/+$/, "").replace(/\.html$/, ""), key = P === "/learn" ? "learn" : P === "/markets" ? "markets" : null;
+  var P = location.pathname.replace(/\/+$/, "").replace(/\.html$/, ""), key = P === "/pages/learn" ? "learn" : P === "/pages/markets" ? "markets" : null;
   if (!key) return;
   try { if (sessionStorage.getItem("wt-i-" + key)) return; sessionStorage.setItem("wt-i-" + key, "1"); } catch (e) {}
   if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;

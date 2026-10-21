@@ -11,9 +11,9 @@
 
   const cards = [
     { href: "/", title: "WealthyTrees", body: "Markets, simplified. Daily.", cta: "Read today's news" },
-    { href: "/markets.html", title: "Explore the Markets", body: "Charts, indices and price moves \u2014 made clearer.", cta: "Open charts" },
-    { href: "/learn.html", title: "Weekend Learning", body: "Build your market knowledge, one idea at a time.", cta: "Start Learning" },
-    { href: "/about.html", title: "No hype. Just clarity.", body: "Understand what happened and why it matters.", cta: "Our approach" }
+    { href: "/pages/markets.html", title: "Explore the Markets", body: "Charts, indices and price moves \u2014 made clearer.", cta: "Open charts" },
+    { href: "/pages/learn.html", title: "Weekend Learning", body: "Build your market knowledge, one idea at a time.", cta: "Start Learning" },
+    { href: "/pages/about.html", title: "No hype. Just clarity.", body: "Understand what happened and why it matters.", cta: "Our approach" }
   ];
   let timer = null, idx = 0, paused = false;
   function show(i) { document.querySelectorAll("#track .wt-rot-card").forEach((el, k) => el.classList.toggle("on", k === i)); }

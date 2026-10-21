@@ -54,7 +54,7 @@ async function editionChecks(page, label) {
       await check(`${label}: no browser errors on the home page`, async () => { if (errors.length) throw new Error(errors.slice(0, 2).join(' | ')); });
       await ctx.close();
     }
-    for (const p of ['/markets.html', '/learn.html', '/about.html']) {
+    for (const p of ['/pages/markets.html', '/pages/learn.html', '/pages/about.html']) {
       const { ctx, page, errors } = await open(browser, FEST, { viewport: { width: 390, height: 844 } }, p);
       await check(`Festival day: ${p} loads without errors or a blocking intro`, async () => { await page.waitForTimeout(3500); if (await page.locator('#wt-dussehra-intro').count()) throw new Error('intro covers this page'); if (errors.length) throw new Error(errors.slice(0, 2).join(' | ')); });
       await ctx.close();
@@ -70,7 +70,7 @@ async function editionChecks(page, label) {
         if (errors.length) throw new Error(errors.slice(0, 2).join(' | '));
       });
       await ctx.close(); }
-    { const { ctx, page } = await open(browser, NORMAL, { viewport: { width: 390, height: 844 } }, '/markets.html');
+    { const { ctx, page } = await open(browser, NORMAL, { viewport: { width: 390, height: 844 } }, '/pages/markets.html');
       await check('Markets page: after the intro lifts you land at the top, not on the PE game', async () => {
         await page.waitForFunction(() => !document.querySelector('.wti'), null, { timeout: 30000 });
         await page.waitForTimeout(1500);

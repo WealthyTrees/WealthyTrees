@@ -14,7 +14,7 @@
   // Intermediate unlocks only after all six Beginner modules are complete (checked in this browser).
   var begDone = function () { for (var i = 1; i <= 6; i++) if (!prog(i).done) return false; return true; };
   var prev = /[?&]preview=1/.test(location.search);
-  if (/\/learn\/intermediate\/module-/.test(location.pathname) && !prev && !begDone()) { location.replace("/intermediate.html"); return; }
+  if (/\/learn\/intermediate\/module-/.test(location.pathname) && !prev && !begDone()) { location.replace("/pages/intermediate.html"); return; }
   var lb = document.getElementById("lvbar");
   if (lb) { var t = 0; for (var i = 1; i <= 6; i++) t += prog(i).pct;
     var bp = Math.round(t / 6), it = 0, ap; for (var j = 1; j <= 6; j++) it += prog("i" + j).pct; ap = Math.round((t + it) / 18);
@@ -68,7 +68,7 @@
   var ic2 = document.querySelectorAll("a.ccard[data-mod^='i']");
   if (ic2.length && !prev && !begDone()) {
     ic2.forEach(function (c) { c.removeAttribute("href"); c.classList.add("ccard-lock"); c.setAttribute("aria-disabled", "true"); c.querySelector(".cst").textContent = "Locked"; c.querySelector(".cgo").textContent = "Finish Beginner to unlock"; });
-    var cb = document.getElementById("cont"); if (cb) { cb.textContent = "Finish Beginner first"; cb.href = "/beginner.html"; }
+    var cb = document.getElementById("cont"); if (cb) { cb.textContent = "Finish Beginner first"; cb.href = "/pages/beginner.html"; }
     var nt = document.getElementById("ilock"); if (nt) { nt.hidden = false; nt.textContent = "Preview mode: the modules unlock once you complete all 6 Beginner modules."; }
   }
   // 3) Diagrams draw themselves when scrolled into view; thumbnails replay on hover or tap
