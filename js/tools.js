@@ -29,7 +29,7 @@ function tip(i){var a=r.series[i];$('bt').textContent='Year '+(i+1)+': '+T.legen
  var c=$('bars').children;for(var j=0;j<c.length;j++)c[j].className=j==i?'on':''}
 function qa(){var o=$('qa'),open={};[].forEach.call(o.querySelectorAll('details'),function(d,i){if(d.open)open[i]=1});
  o.innerHTML=T.qa.map(function(x,i){return'<details'+(open[i]?' open':'')+'><summary>'+x.q+'</summary><div class="a">'+x.a(v,r)+(x.set?'<div><button class="tt-btn ghost try" data-i="'+i+'">Try it in the sliders</button></div>':'')+'</div></details>'}).join('')}
-function run(){T.inputs.forEach(function(d){$('o_'+d.k).textContent=fmtv(d.f,v[d.k])});
+function run(){if(T.fix){T.fix(v);T.inputs.forEach(function(d){$('i_'+d.k).value=v[d.k]})}T.inputs.forEach(function(d){$('o_'+d.k).textContent=fmtv(d.f,v[d.k])});
  r=T.compute(v);var m=T.main(r);$('ml').textContent=m[0];$('mv').textContent=fmtv(m[2],m[1]);
  $('rows').innerHTML=r.rows.map(function(x){return'<div class="tt-row"><span>'+x[0]+'</span><b>'+fmtv(x[2],x[1])+'</b></div>'}).join('');
  $('bub').textContent=r.story;var st=r.ratio<1.6?0:r.ratio<2.6?1:r.ratio<4.5?2:3;$('sp').textContent=['\uD83C\uDF31','\uD83C\uDF3F','\uD83C\uDF33','\uD83C\uDF34'][st];

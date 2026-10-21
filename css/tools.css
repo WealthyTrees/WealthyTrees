@@ -53,3 +53,20 @@
 .tools-hub a:hover{transform:translateY(-4px) rotate(-.6deg)}
 .tools-hub .em{font-size:2.2rem}.tools-hub h2{font:700 1.7rem Caveat,cursive;margin:.2rem 0}.tools-hub p{margin:0;color:var(--mute);font-size:.92rem}
 .tools-hub .lvtag{margin-bottom:.3rem}
+
+/* v2: proper buttons, spacing, polish */
+a.tt-btn,button.tt-btn{display:inline-flex;align-items:center;gap:.4rem;line-height:1.2;text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,.14);transition:transform .15s,box-shadow .15s,background .15s,color .15s;-webkit-tap-highlight-color:transparent}
+a.tt-btn.ghost{box-shadow:none}
+@media(hover:hover){.tt-btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(15,138,95,.28)}.tt-btn.ghost:hover{background:var(--up);color:var(--on-up)}}
+.tt-btn:active{transform:translateY(1px);box-shadow:none}
+.tt-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tt-back{margin:1rem 0 .2rem}
+.tt-grid{align-items:start}
+.tt-card h2{font:700 1.35rem Fraunces,Georgia,serif;margin:.1rem 0 .8rem}
+.seo{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:1.2rem 1.4rem;margin-top:1.2rem}
+.seo h2{font:700 1.3rem Fraunces,Georgia,serif;margin:.2rem 0 .6rem}.seo h2+p{margin-top:0}
+.seo details{border-bottom:1px dashed var(--line)}.seo details:last-of-type{border:0}
+.seo .tt-btns{margin-top:1.1rem}
+@media(prefers-reduced-motion:reduce){.tt-btn{transition:none}}
+.tt-btns{align-items:center}.tt-btns .tt-back{margin:0}
+.tool>.tt-back{display:inline-flex}
