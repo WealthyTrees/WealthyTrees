@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,742",
-   "change": -0.64
+   "value": "22,811",
+   "change": -0.34
   },
   {
    "name": "SENSEX",
-   "value": "73,582",
-   "change": -0.37
+   "value": "73,710",
+   "change": -0.19
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,133",
-   "change": -0.24
+   "value": "4,159",
+   "change": 0.4
   },
   {
    "name": "CRUDE WTI",
-   "value": "$99.0",
-   "change": 1.23
+   "value": "$98.5",
+   "change": 0.65
   },
   {
    "name": "USD/INR",
-   "value": "94.69",
-   "change": -0.09
+   "value": "94.45",
+   "change": -0.34
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Jio Initial Public Offering Achieves Full Subscription in Opening Hours",
-   "summary": "The primary share sale of the telecom operator reached full investor booking shortly after launch. This marks a major milestone following a decade of rapid expansion in the domestic communications market.",
-   "why": "High investor subscription speed demonstrates broad retail and institutional participation in landmark corporate listings.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/jio-has-record-ipo-fully-subscribed-within-hours-11792562581882.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Benchmark Indices Surge Driven by Gains in Major Software Exporters",
-   "summary": "Indian stock benchmarks rose sharply, with headline indices pushed higher by top technology firms such as Infosys and TCS. The upswing lifted both the Sensex and the Nifty well above key index levels.",
-   "why": "Large-cap information technology stocks carry heavy weightings that can significantly shift overall market direction.",
-   "source": "Equitymaster",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdUE5bVhWSWoxbzJzSTE0ZzAzYUVNMTBpbjM3M09nUk5iZVNTMHFvaWZNams1LW5PSnhvck8yM0VRNmlMR2o3eXg3TEFpZHJJVmNYVHlQaXZQUk9ST18tcV9UNVdRZnFhdTByNmJ3QkU5YXNST1hnSzFNTm5WWGxjY3BvRElWNWdhS05wZmNHODlyVkVsWFRXU1BxUGhsSmhFZUh3RkZ4Uzd2WjYwZUJBei16Y3gyZ3dlUmtLXzBrcXlHaEFBX2Z5MlZ6MjF6SHNCUkFB?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Input Cost Pressures Weigh on UltraTech Cement Despite Rising Sales",
-   "summary": "The building materials manufacturer expanded sales volumes and market footprint on steady construction activity. Nevertheless, elevated thermal energy and fuel expenses compressed overall operational profitability.",
-   "why": "Volume expansion does not guarantee profit growth when inflationary pressures severely dent operating margins.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/mark-to-market/ultratech-cement-q2-results-share-price-outlook-11792559939685.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Precious Metals Weaken Domestically Ahead of US Monetary Policy Decision",
-   "summary": "Bullion contracts declined on the multi-commodity exchange as market participants paused prior to central bank guidance. Traders predominantly anticipate benchmark lending rates to stay steady during October.",
-   "why": "Global metal prices frequently react to interest rate expectations because non-yielding assets become less attractive when yields rise.",
+   "title": "Indian Benchmarks Decline for Second Session While Technology Shares Advance",
+   "summary": "Domestic equity indices continued downward during Wednesday's trade, with the Nifty dropping 0.34% and the Sensex giving up 0.19%. Software exporters including Infosys and HCL Technologies diverged positively by topping sectoral performance tables.",
+   "why": "Examining individual sector movement shows beginners how specific industries can maintain strength even during broad market pullbacks.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-prices-near-rs-1-47-lakh/10-grams-silver-falls-by-rs-1144/kg-as-traders-await-fed-rate-signals-what-lies-ahead/articleshow/135083841.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-infosys-hcl-tech-bajaj-finance-bse-top-gainers-and-losers-on-nifty-and-sensex-on-wednesday/articleshow/135090920.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Brokerage Executive Warns Public Against Social Media Securities Scams",
+   "summary": "Zerodha co-founder Nithin Kamath alerted retail participants that illicit tip networks across messaging applications typically expand alongside bullish market conditions. He recommended scrutinizing unexpected messages and validating financial claims before risking money.",
+   "why": "Pump-and-dump operations mislead novice traders by generating artificial excitement in low-volume stocks before organizers abruptly cash out.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/got-stock-tips-on-whatsapp-zerodhas-nithin-kamath-warns-against-pump-and-dump-schemes-advises-asking-chatgpt-11792578165904.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Reliance Jio Opens Nation's Largest Initial Public Offering to Date",
+   "summary": "Telecom and digital services giant Jio has initiated the largest equity market listing ever conducted in India. The public offer marks a landmark corporate milestone for billionaire Mukesh Ambani's business empire.",
+   "why": "Initial public offerings allow expanding corporations to collect equity financing directly from institutions and individual public participants.",
+   "source": "BBC",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9aUm4yYlhoeVZmZGxFZlJ4SDlPemU3UEVDSTVfUUhKUVJnclJTS0Zzb1F4dVkwdTk0d2FaVlMyQVh4MG5wLVRHZnNXMUd2QlkzLWZtMThUT2dVUUU?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Touches Six-Week Peak on Foreign Listing Inflows",
-   "summary": "The domestic currency gained ground against foreign counterparts, reaching its strongest level in over a month. Strong overseas capital flows directed toward a mega public share offer aided the recovery.",
-   "why": "Foreign capital entering domestic markets increases demand for local currency, providing upward support to foreign exchange rates.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTW50dk9NZE9aaGFzX24yNmxGN19HMlRSd29NajBxMFVXdDQ5RUVHYUVGTVBFX21jZDM4bnNVVXVFVE1jOHowcUpVWHJnNUZkSEVxaS1samY5ems0MEtqUUJGWm9OS0dmZGp1bmVkcEp3cTVMbmRkTi04LXpzT0lFQlhFYm9RbnZVYXM3ZkJoTTVBYlRLS3dvY1FRNmFrcDJFSXI3Qm9zMGk5TlZp?oc=5"
+   "title": "Rupee Strengthens to Multi-Week Peak Behind Capital Inflows and Central Intervention",
+   "summary": "The domestic currency settled at 94.43 against the US dollar, registering its strongest finish in six weeks. Substantial foreign demand linked to the Jio share sale alongside official market operations supported the exchange rate.",
+   "why": "Exchange rates appreciate when significant cross-border investments enter a country, prompting foreign buyers to exchange foreign currencies for local money.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRDZQOWU2ZlJUQ2VPTmoxMHVnY0ItRzdXcWFqNDNYcWV1TElZRE5JTUZ3bUNqbURja0NaOUtmaEVfdFN2MDY0cW5UWHd1TkZ3MWZ0THYtUkU5RS1HamN3dkxPR1FONWM5LTA5NXFBLXV1RkpXSFpndTlMUllsZU5BSjNoX2drS3ptM29ITzc3NG9ib3N3RkpVMFdITjhiMGNJTEpETlE1QTdnd1Ffb3ZtMThaSkRqV2pHa3VjSnhQTDQ5MnZpMlFJdHoxOEFOZXfSAdYBQVVfeXFMT3JaeHNjOV9UU1JKYjNUMDFaZzBwTUhVV25LaDN5ZzRtOEhhdkRWT1RqUk5nLUNWWmZMTW45anZETkxsNjlvWEdEd0NXX21Kb0QyUFdQR3RoMUZPQm1nODNhMkRsTEVWdExZampQWTVrbERkY2dOQ0Jva2o1UnV4T3V5UXNYak53SGxDZ3h5aHpwbXFVSElEUFVITXJOSWdFdS1rTC01bkIwejVqck5rV1JwaTZTVGZTUWs3N1l6X1ZseUdheS1xVkdBY2R5TXFnblNwTWJaZw?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Injects Short-Term Liquidity via Variable Rate Repo",
-   "summary": "The Reserve Bank of India allocated just over fifty thousand crore rupees in a one-day repo operation to address banking cash needs. Commercial lenders submitted bids substantially exceeding the notified volume.",
-   "why": "Central banks conduct repo operations to stabilize daily cash balances across commercial banks and maintain smooth money market functioning.",
+   "title": "Reserve Bank Conducts Overnight Repo to Support Banking Liquidity",
+   "summary": "The Reserve Bank of India accepted 50,007 crore rupees in bids during an overnight lending auction with a 50,000 crore rupee target. Participating institutions demonstrated robust cash demand, tendering bids totaling 93,241 crore rupees.",
+   "why": "Short-term repo facilities allow the central bank to supply immediate cash reserves to commercial lenders facing interim balance shortfalls.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63835"
   },
   {
-   "category": "US Markets",
-   "title": "SpaceX Reports Rapid Top-Line Growth Driven by Satellite and Computing Services",
-   "summary": "Quarterly revenue at the aerospace company escalated over one hundred and sixty percent to surpass fourteen billion dollars. Advancements in satellite connectivity networks and artificial intelligence systems powered the performance.",
-   "why": "Technological infrastructure expansion can produce rapid revenue scaling in pioneering frontier industries.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/spacex-stock-6-things-to-know-about-q3-earnings-ai-growth-and-tesla-merger-buzz/slideshow/135084626.cms"
+   "category": "Commodity",
+   "title": "Precious Metals Weaken on Domestic Exchange on Softer Spot Inquiries",
+   "summary": "Gold and silver futures declined on the Multi Commodity Exchange following reduced consumer interest and active market liquidations. Both metals recorded downward pressure as buyers remained hesitant at existing quote levels.",
+   "why": "Commodity futures react to immediate supply-demand balances, where slack spot consumption frequently prompts sellers to discount trade prices.",
+   "source": "Deccan Chronicle",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR2VNTk5kWEI4SVNVM3BRLVpVLVRleHM1dW5PSjgtUjNKR1h6OWdIZEZMaXpVV2tHbG1ENUx5emNXM2V0OU5ZYVFqQjFZalBpLW8yanQ1SUZNdVF2b0RpRlhnU2xZODlIaWlveDgwUnFIaGRtcEZKQ19mNzdPT0VrTnc3OThvellNMzdQT2VFSVVOLUNuZF9fdnV6c1NYV3JmV1Jza0NkQmtqUdIBrwFBVV95cUxNenE4UzlfWmhBak5NTGFWMVZJa3lHalpJLTV3Q3RfZnY3OFNwdERUeEx1UlpOSk1JSlhpTnZJb3AzSUkxX3VJRjA4QmVtZW1fM0ZMaHJ6b1V1OVEtcGpiSWUtZG1JdWpvbnFsdllveXBhT0cweFFxUUg1RDNRQ1Q5OXhCODlpRHpmU2lTd2pDeUY5SEZYWmhyWWFXOWtDbWUxdUNXNmdxcklhMkRiM3ZV?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "International Gold Slips Lower Amid Geopolitical Friction and Monetary Outlook",
+   "summary": "Global gold benchmarks softened toward 4,120 dollars per ounce during ongoing Middle Eastern developments. Traders concurrently evaluated the future interest rate direction signaled by the United States central bank.",
+   "why": "Gold prices fluctuate in response to perceived safe-haven demand alongside shifting expectations regarding US real interest rate trends.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMWppdy12Wl9VdHZZb05uRHdaeDh5ajJjZ0FRdF9iN0FqRzZHei16UWRWRXlwU1JRcklZRVZpWnc2SmlUcV9mc1dpVjlUdkZDeHZnYVozYzNrZld5aXNDTUNJdkhKeXFDNTNHUy1WRk9MUE5EYTVneWMxTzM4VDNoM2M0cTY1Mmx5Yk9DM3YyNFE3Y2x1WFI1cm1EQ3ljUQ?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Equities Advance Following Robust Earnings and Healthcare Gains",
-   "summary": "Major indices in New York finished in positive territory as upbeat corporate earnings reports lifted investor appetite. Medical and healthcare companies posted notable advances that supported broad index performance.",
-   "why": "Strong quarterly corporate scorecards can reassure investors about corporate financial strength during evolving macroeconomic conditions.",
-   "source": "Investing.com India",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYy1XSFEzWGxieHMxUkQxcm1mN0NCTlRENnhxSHFmY3Y5Tll5SWpjWG81eVk2djhvLXYtSGFuaFNPUUQzTXFzQ3Naa3czTHFDdUNPeDBHT3REZmtWcHZNOXhka1JpZGQ1dWV5ckxSajdpU3NXM3JmV0tHX3lQNC1WZ2U1aXZuNHV2ckFnWTZSV2w3M3JfNEw2VGZKV3NfbWp4N2lKRFpPYnFWTEhobUs5RGRqLWZWU3czMGNqRWpBLXk?oc=5"
+   "title": "SpaceX Surges Following First Quarterly Profit Since Going Public",
+   "summary": "Premarket shares in SpaceX jumped up to 9% after the enterprise generated 4.4 billion dollars in quarterly earnings. Top-line revenue increased 161% year-on-year to finish at 14.58 billion dollars.",
+   "why": "Demonstrating positive net income following a public debut signals that an aggressive growth firm can successfully transition toward operational self-sufficiency.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/spacex-q3-2026-results-shares-jump-8-in-pre-market-after-4-4-billion-profit-what-musk-said-on-spacex-tesla-merger-11792575955027.html"
   },
   {
    "category": "US Markets",
-   "title": "Economists Project Federal Reserve Policy Pause Followed by December Tightening",
-   "summary": "A consensus among surveyed economists suggests the American central bank will maintain borrowing costs in October. However, analysts widely anticipate an additional interest rate increase before the close of the year.",
-   "why": "Shifts in interest rate trajectories affect global borrowing conditions, currency valuations, and capital allocations across emerging economies.",
+   "title": "Wall Street Climbs as Healthcare Equities Lead the Dow Higher",
+   "summary": "Major equity benchmarks in the United States moved higher, with the Dow Jones outpacing fellow indexes. The day's upward momentum was driven largely by strong performance across pharmaceutical and healthcare corporations.",
+   "why": "Sector leadership from defensive businesses often cushions major market averages when other cyclical or high-valuation segments pause.",
    "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUFYOUZFZXZ4UWJSN1J6RkRxM1lkdGJsUFZRZ2puQkFnRk9rczVQZF9iUS12amVsUl9ESnA4MmNlUmFuVnBVY3BoeVZoVWx1dmwtSWdCa2tGUUlXeXdWR0o0U2o5NHdUend5d2o3c1NoUlZTQUNyWFFEalBHY25QMVptcnFoRnZiSk1JVDFyb1VFYkg0NGRJaXhWemlUY3gxX3YxeVh0YkNMSHNQU21pWkc0OVQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2JsXzZ4YTVKcDJjNE9iTW42aU0wY0VOZXRtdDYxTzJTanBUOGZIT1FLSl9FVTNxQ1RpTVFSWHlsejgyR0Y1b3JQWXRlT0dEMjJPWWpXYlpfdFJQaHZKZG5KdUNMdW53NmlMd2RwUWJKWFB3dE9Xc2ZBbnRfalF3cWNzblhxTGJOTGlKYUh1a0FmWC1vaGQydWZXdTMzemJjSVg5NWZ0bw?oc=5"
   }
  ]
 }
