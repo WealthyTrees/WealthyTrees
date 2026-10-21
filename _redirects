@@ -12,3 +12,21 @@
 /learn/module-4.html /learn/beginner/module-4.html 301
 /learn/module-5.html /learn/beginner/module-5.html 301
 /learn/module-6.html /learn/beginner/module-6.html 301
+
+# Old page URLs (pages moved into /pages)
+/about.html /pages/about.html 301
+/beginner.html /pages/beginner.html 301
+/contact.html /pages/contact.html 301
+/cost-of-delay-calculator.html /pages/cost-of-delay-calculator.html 301
+/direct-vs-regular-calculator.html /pages/direct-vs-regular-calculator.html 301
+/disclaimer.html /pages/disclaimer.html 301
+/emi-calculator.html /pages/emi-calculator.html 301
+/goal-planner.html /pages/goal-planner.html 301
+/intermediate.html /pages/intermediate.html 301
+/learn.html /pages/learn.html 301
+/lumpsum-calculator.html /pages/lumpsum-calculator.html 301
+/markets.html /pages/markets.html 301
+/privacy.html /pages/privacy.html 301
+/sip-calculator.html /pages/sip-calculator.html 301
+/terms.html /pages/terms.html 301
+/tools.html /pages/tools.html 301
