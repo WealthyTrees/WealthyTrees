@@ -10,7 +10,7 @@
 // switches to Cloudflare's own AI (Workers AI, binding name AI) so the stories keep refreshing.
 import { getHeadlines } from "./headlines.js";
 
-const KEY = "pulse:v2", LOCK = "pulse:lock2", FAIL = "pulse:fail", ERR = "pulse:lasterr", GBLOCK = "pulse:gblock", TRY = "pulse:try";
+const KEY = "pulse:v2", LOCK = "pulse:lock2", FAIL = "pulse:fail", ERR = "pulse:lasterr", GBLOCK = "pulse:gblock", TRY = "pulse:try", GSLOW = "pulse:gslow";
 const FRESH = 20 * 60e3, CF_FRESH = 30 * 60e3, TOOOLD = 6 * 3600e3, SYNC_MS = 14000, MAXSTORIES = 8, MANUAL_MIN_AGE = 10 * 60e3;
 const TOPICS = ["Markets", "Economy", "Commodities", "Global", "Policy"];
 
@@ -63,7 +63,7 @@ function extractJSON(text) {
 async function viaGemini(env, prompt) {
   const model = modelOf(env);
   const call = async () => {
-    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 12000);
+    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 16000);
     try {
       return await fetch("https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent", {
         method: "POST", signal: ctl.signal,
@@ -113,14 +113,15 @@ async function refresh(env, opts) {
     const hasG = !!env.GEMINI_API_KEY, hasCF = !!(env.AI && env.AI.run);
     let blocked = false;
     if (opts && opts.retryGemini) { try { await kv.delete(GBLOCK); } catch (e) {} }
-    else { try { blocked = !!(await kv.get(GBLOCK)); } catch (e) {} }
+    else { try { blocked = !!(await kv.get(GBLOCK)) || !!(await kv.get(GSLOW)); } catch (e) {} }
 
     let text = "", gErr = "";
     if (hasG && !(blocked && hasCF)) {
       try { text = await viaGemini(env, prompt); engine = "gemini"; }
       catch (e) {
-        gErr = e && e.name === "AbortError" ? "gemini timed out after 12 seconds" : clip((e && e.message) || e, 200);
+        gErr = e && e.name === "AbortError" ? "gemini timed out after 16 seconds" : clip((e && e.message) || e, 200);
         if (/location is not supported/i.test(gErr)) { try { await kv.put(GBLOCK, "1", { expirationTtl: 3600 }); } catch (e2) {} }
+        if (/timed out/i.test(gErr)) { try { await kv.put(GSLOW, "1", { expirationTtl: 1200 }); } catch (e2) {} }
         if (!hasCF) throw new Error(gErr);
       }
     }
