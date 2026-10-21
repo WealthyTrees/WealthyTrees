@@ -1,86 +1,39 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SIP Calculator: Monthly Investment Returns | WealthyTrees</title>
+<title>SIP Calculator: See How Your Monthly Investment Grows | WealthyTrees</title>
 <link rel="canonical" href="https://wealthytrees.online/sip-calculator.html">
 <meta name="theme-color" content="#0f3d2e">
 <meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">
-<meta property="og:title" content="SIP Calculator: Monthly Investment Returns | WealthyTrees"><meta property="og:description" content="Free SIP calculator for India. See how a monthly SIP can grow with step-up and inflation, in plain English. Educational only.">
+<meta property="og:title" content="SIP Calculator: See How Your Monthly Investment Grows"><meta property="og:description" content="Free playful SIP calculator for India. Slide the amount, years and return, watch it grow, and get plain answers to common SIP questions.">
 <meta property="og:url" content="https://wealthytrees.online/sip-calculator.html"><meta property="og:image" content="https://wealthytrees.online/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Free SIP calculator for India. See how a monthly SIP can grow with step-up and inflation, in plain English. Educational only.">
+<meta name="description" content="Free playful SIP calculator for India. Slide the amount, years and return, watch it grow, and get plain answers to common SIP questions.">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/css/style.css?v=20"><style>
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-@media(max-width:760px){.calc{grid-template-columns:1fr}}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.2rem}
-.f{margin-bottom:1.1rem}.f label{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem}
-.f output{color:var(--up)}.f input[type=range]{width:100%;accent-color:var(--up)}
-.f input[type=number]{width:100%;padding:.5rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;margin-top:.3rem}
-.res .big{font:700 2rem Fraunces,Georgia,serif;color:var(--up);margin:.2rem 0 .8rem}
-.res .row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--line);gap:1rem}
-.res .row:last-of-type{border:0}
-.bars{display:flex;align-items:flex-end;gap:3px;height:150px;margin-top:1rem}
-.bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-width:0}
-.bars i{display:block;background:var(--up)}.bars b{display:block;background:var(--gold);opacity:.85}
-.leg{font-size:.8rem;color:var(--mute);display:flex;gap:1rem;margin-top:.5rem}
-.leg span:before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:.35rem;background:var(--gold)}.leg span+span:before{background:var(--up)}
-.tog{display:flex;align-items:center;gap:.5rem;font-size:.95rem;margin-bottom:1rem}
-details{border-bottom:1px solid var(--line);padding:.7rem 0}summary{font-weight:600;cursor:pointer}
-main.sip h1{margin:1.5rem 0 .3rem}.note{color:var(--mute);font-size:.9rem}
-</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"WealthyTrees SIP Calculator","url":"https://wealthytrees.online/sip-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a SIP?","acceptedAnswer":{"@type":"Answer","text":"A Systematic Investment Plan (SIP) invests a fixed amount in a mutual fund at regular intervals, usually monthly, so you build the habit and average out your purchase price."}},{"@type":"Question","name":"How is SIP return calculated?","acceptedAnswer":{"@type":"Answer","text":"This calculator compounds your expected annual return monthly: FV = P x [((1+i)^n - 1) / i] x (1+i), where P is the monthly amount, i is the monthly rate and n is the number of months."}},{"@type":"Question","name":"Are SIP returns guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. Mutual fund returns vary with markets. The calculator shows an illustration based on the return you enter, not a promise."}},{"@type":"Question","name":"What is a step-up SIP?","acceptedAnswer":{"@type":"Answer","text":"A step-up SIP raises your monthly amount by a fixed percentage every year, usually as your income grows, which can increase the final corpus significantly."}}]}]}</script></head><body>
+<link rel="stylesheet" href="/css/style.css?v=20"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap"><link rel="stylesheet" href="/css/tools.css?v=1"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "SIP Calculator", "url": "https://wealthytrees.online/sip-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a SIP?", "acceptedAnswer": {"@type": "Answer", "text": "A Systematic Investment Plan invests a fixed amount in a mutual fund at regular intervals, usually monthly."}}, {"@type": "Question", "name": "How is SIP return calculated?", "acceptedAnswer": {"@type": "Answer", "text": "FV = P x [((1+i)^n - 1) / i] x (1+i), where P is the monthly amount, i the monthly rate and n the number of months."}}, {"@type": "Question", "name": "Are SIP returns guaranteed?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mutual fund returns vary with markets. The calculator shows an illustration, not a promise."}}, {"@type": "Question", "name": "What is a step-up SIP?", "acceptedAnswer": {"@type": "Answer", "text": "A SIP whose monthly amount rises by a fixed percentage every year, usually as income grows."}}]}]}</script></head><body>
 <header><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" alt=""><span>WealthyTrees</span></a>
-<nav><a href="/">Today</a><a href="/markets.html">Markets</a><a href="/learn.html" aria-current="page">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
-<main class="wrap sip">
-<h1>SIP Calculator</h1>
-<p class="note">See what a monthly SIP could grow into. Plain numbers, no sign-up. Illustration only, not a promise of returns.</p>
-<div class="calc">
-<div class="card">
-<div class="f"><label for="amt">Monthly SIP <output id="oa"></output></label><input id="amt" type="range" min="500" max="200000" step="500" value="10000"></div>
-<div class="f"><label for="ret">Expected return (per year) <output id="or"></output></label><input id="ret" type="range" min="1" max="30" step="0.5" value="12"></div>
-<div class="f"><label for="yrs">Time period <output id="oy"></output></label><input id="yrs" type="range" min="1" max="40" step="1" value="15"></div>
-<div class="f"><label for="stp">Yearly step-up <output id="os"></output></label><input id="stp" type="range" min="0" max="25" step="1" value="0"></div>
-<div class="f"><label for="inf">Inflation (per year) <output id="oi"></output></label><input id="inf" type="range" min="0" max="12" step="0.5" value="6"></div>
-</div>
-<div class="card res" aria-live="polite">
-<div>Expected value after <span id="ty"></span> years</div><div class="big" id="fv"></div>
-<div class="row"><span>Total invested</span><b id="inv"></b></div>
-<div class="row"><span>Estimated gains</span><b id="gain"></b></div>
-<div class="row"><span>Value in today's money (after inflation)</span><b id="real"></b></div>
-<div class="bars" id="bars" aria-hidden="true"></div>
-<div class="leg"><span>Invested</span><span>Gains</span></div>
-</div></div>
-<p class="note">How it works: your return is compounded monthly. FV = P × [((1+i)<sup>n</sup> − 1) / i] × (1+i), with i = yearly return ÷ 12 and n = months. Investment is assumed at the start of each month. Taxes, expense ratio and exit load are not included. Real mutual fund returns go up and down.</p>
-<h2>Why a SIP works</h2>
-<p>A SIP turns investing into a habit. You buy more units when prices are low and fewer when they are high, so you do not have to guess the "right time". The real power is time: try moving the years slider from 10 to 20 and watch how much of the final value is gains, not your own money. Then try a 10% yearly step-up to see what a rising income can do.</p>
-<h2>Questions</h2>
-<details><summary>What is a SIP?</summary><p>A Systematic Investment Plan invests a fixed amount in a mutual fund at regular intervals, usually monthly.</p></details>
-<details><summary>Are SIP returns guaranteed?</summary><p>No. The number above is an illustration based on the return you type in. Markets can fall, and past returns do not promise future ones.</p></details>
-<details><summary>What is a step-up SIP?</summary><p>A SIP whose monthly amount rises by a fixed percentage every year. Even a small step-up can add a lot over 15 to 20 years.</p></details>
-<details><summary>Why show inflation?</summary><p>Prices rise over time, so a big future number buys less. The inflation line shows roughly what the final value is worth in today's money.</p></details>
-<p class="note">Next: <a href="/learn.html">continue the free course</a> to learn how mutual funds and compounding work.</p>
-</main>
-<footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a> · <a href="/sip-calculator.html">SIP Calculator</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a></div></footer>
-<script>
-(function(){
-var $=function(i){return document.getElementById(i)};
-var inr=function(n){n=Math.round(n);if(n>=1e7)return"\u20B9"+(n/1e7).toFixed(2)+" Cr";if(n>=1e5)return"\u20B9"+(n/1e5).toFixed(2)+" L";return"\u20B9"+n.toLocaleString("en-IN")};
-function run(){
- var P=+$("amt").value,r=+$("ret").value/100,y=+$("yrs").value,s=+$("stp").value/100,inf=+$("inf").value/100;
- $("oa").textContent="\u20B9"+P.toLocaleString("en-IN");$("or").textContent=(r*100)+"%";$("oy").textContent=y+" yrs";$("os").textContent=(s*100)+"%";$("oi").textContent=(inf*100)+"%";
- var i=r/12,val=0,inv=0,pay=P,yr=[];
- for(var m=1;m<=y*12;m++){if(m>1&&(m-1)%12===0)pay*=1+s;val=(val+pay)*(1+i);inv+=pay;if(m%12===0)yr.push([inv,val])}
- var real=val/Math.pow(1+inf,y);
- $("ty").textContent=y;$("fv").textContent=inr(val);$("inv").textContent=inr(inv);$("gain").textContent=inr(val-inv);$("real").textContent=inr(real);
- var mx=yr[yr.length-1][1],h="";
- yr.forEach(function(a){var t=a[1]/mx*100,iv=a[0]/a[1]*100;h+='<div style="height:'+t+'%"><b style="height:'+(100-iv)+'%"></b><i style="height:'+iv+'%"></i></div>'});
- $("bars").innerHTML=h;
-}
-["amt","ret","yrs","stp","inf"].forEach(function(k){$(k).addEventListener("input",run)});run();
-})();
-</script>
+<nav><a href="/">Today</a><a href="/markets.html">Markets</a><a href="/learn.html">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
+<main class="wrap tool"><h1>SIP Calculator</h1><p class="note" style="color:var(--mute);margin:0">Slide, tap, play. See what a monthly SIP could become.</p><div id="app"></div><section class="seo"><h2>About this calculator</h2><p>A SIP (Systematic Investment Plan) invests a fixed amount in a mutual fund every month. This calculator compounds your expected yearly return monthly and lets you add a yearly step-up and inflation, so you can see both the big future number and what it is worth in today’s money.</p><h2>Common questions</h2><details><summary>What is a SIP?</summary><p>A Systematic Investment Plan invests a fixed amount in a mutual fund at regular intervals, usually monthly.</p></details><details><summary>How is SIP return calculated?</summary><p>FV = P x [((1+i)^n - 1) / i] x (1+i), where P is the monthly amount, i the monthly rate and n the number of months.</p></details><details><summary>Are SIP returns guaranteed?</summary><p>No. Mutual fund returns vary with markets. The calculator shows an illustration, not a promise.</p></details><details><summary>What is a step-up SIP?</summary><p>A SIP whose monthly amount rises by a fixed percentage every year, usually as income grows.</p></details><p class="note" style="color:var(--mute);font-size:.88rem">Illustration only. Returns are not guaranteed and this is not investment advice. Taxes, fund expenses and exit loads are not included unless stated.</p><p><a href="/tools.html">← All WealthyTrees tools</a></p></section></main>
+<footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/disclaimer.html">Disclaimer</a> · <a href="/tools.html">Tools</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a></div></footer>
 <script src="/js/site.js?v=11"></script>
-</body></html>
+<script>window.TOOL={
+inputs:[{k:"amt",label:"Monthly SIP",min:500,max:200000,step:500,val:10000,f:"inr"},{k:"ret",label:"Expected return per year",min:1,max:30,step:0.5,val:12,f:"pct"},{k:"yrs",label:"For how long",min:1,max:40,step:1,val:15,f:"yr"},{k:"step",label:"Raise SIP every year by",min:0,max:25,step:1,val:0,f:"pct"},{k:"inf",label:"Inflation per year",min:0,max:12,step:0.5,val:6,f:"pct"}],
+legend:["You invested","Growth"],
+main:function(r){return["Your SIP could become",r.val,"inr"]},
+compute:function(v){var i=v.ret/1200,val=0,inv=0,pay=v.amt,s=[];for(var m=1;m<=v.yrs*12;m++){if(m>1&&(m-1)%12==0)pay*=1+v.step/100;val=(val+pay)*(1+i);inv+=pay;if(m%12==0)s.push([inv,val])}
+var real=val/Math.pow(1+v.inf/100,v.yrs),F=TOOL.F;
+return{val:val,inv:inv,series:s,ratio:val/inv,rows:[["You put in",inv],["Growth (the gains)",val-inv],["Worth in today's money",real]],
+story:"Of every Rs 100 you end with, about Rs "+Math.round((val-inv)/val*100)+" is growth. Time did that, not you!",
+share:"A monthly SIP of "+F.inr(v.amt)+" for "+v.yrs+" years at "+v.ret+"% could grow to "+F.inr(val)+"."}},
+formula:"FV = {P} \u00D7 [((1 + {i})^{n} \u2212 1) \u00F7 {i}] \u00D7 (1 + {i})",
+terms:{FV:{n:"Future value",tip:"The pot you end up with.",g:function(v,r){return TOOL.F.inr(r.val)}},P:{n:"Monthly SIP",tip:"The fixed amount you invest every month.",g:function(v){return TOOL.F.inr(v.amt)}},i:{n:"Monthly rate",tip:"Yearly return divided by 12. Money grows a little every month.",g:function(v){return(v.ret/12).toFixed(2)+"%"}},n:{n:"Number of months",tip:"Years times 12. More months means more compounding.",g:function(v){return v.yrs*12}}},
+qa:[
+{q:"Can a SIP make me a crorepati?",a:function(v){var y=TH.yrsTo(v.amt,v.ret,1e7);return"At <b>"+TOOL.F.inr(v.amt)+"</b> a month and <b>"+v.ret+"%</b> a year, you cross Rs 1 Cr in about <b>"+(y>=80?"more than 80":y.toFixed(1))+" years</b>. A bigger SIP or a yearly step-up gets you there faster."},set:{amt:20000,yrs:20}},
+{q:"What if I can only start with a small amount?",a:function(v){var a=TH.fv(5000,v.ret,v.yrs,0);return"Even <b>Rs 5,000</b> a month for "+v.yrs+" years could become <b>"+TOOL.F.inr(a)+"</b>. Start small and raise it later."},set:{amt:5000}},
+{q:"What if markets give only 8%?",a:function(v){return"Your SIP would grow to <b>"+TOOL.F.inr(TH.fv(v.amt,8,v.yrs,v.step))+"</b> instead of "+TOOL.F.inr(TH.fv(v.amt,v.ret,v.yrs,v.step))+". Lower returns do not break the plan, they only slow it."},set:{ret:8}},
+{q:"Is a yearly step-up really worth it?",a:function(v){return"With a <b>10%</b> yearly step-up you could reach <b>"+TOOL.F.inr(TH.fv(v.amt,v.ret,v.yrs,10))+"</b>, versus "+TOOL.F.inr(TH.fv(v.amt,v.ret,v.yrs,0))+" with a flat SIP."},set:{step:10}},
+{q:"Are these returns guaranteed?",a:function(){return"No. Equity mutual funds go up and down. The number above is an <b>illustration</b> based on the return you pick, not a promise."}}],
+notes:["SIP = a fixed amount, every month, no timing the market","More months beats a bigger amount","Rs 100 grows slowly at first, then fast","Raise your SIP when your salary rises","Returns are not guaranteed, ever!"]};</script><script src="/js/tools.js?v=1"></script></body></html>
