@@ -11,7 +11,7 @@
 import { getHeadlines } from "./headlines.js";
 
 const KEY = "pulse:v2", LOCK = "pulse:lock2", FAIL = "pulse:fail", ERR = "pulse:lasterr", GBLOCK = "pulse:gblock";
-const FRESH = 20 * 60e3, CF_FRESH = 45 * 60e3, TOOOLD = 6 * 3600e3, SYNC_MS = 14000, MAXSTORIES = 8, MANUAL_MIN_AGE = 10 * 60e3;
+const FRESH = 20 * 60e3, CF_FRESH = 30 * 60e3, TOOOLD = 6 * 3600e3, SYNC_MS = 14000, MAXSTORIES = 8, MANUAL_MIN_AGE = 10 * 60e3;
 const TOPICS = ["Markets", "Economy", "Commodities", "Global", "Policy"];
 
 const SYSTEM = `You are Sprout, the news reporter at WealthyTrees, a market-learning site for Indian students and beginners.
