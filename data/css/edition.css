@@ -1,0 +1,118 @@
+/* Daily Edition v2: Stories-style card inside the Newsroom tab */
+.ed2{display:flex;flex-direction:column;align-items:center;gap:.9rem;padding:.4rem 0 1rem}
+.story{position:relative;width:min(100%,25rem);height:min(76vh,41rem);border-radius:22px;overflow:hidden;background:#0e1f1a;color:#fff;box-shadow:0 22px 50px rgba(0,0,0,.28);touch-action:pan-y;outline:none;user-select:none;-webkit-user-select:none;animation:storyin .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes storyin{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+.bars{position:absolute;z-index:6;top:10px;left:12px;right:12px;display:flex;gap:5px}
+.bars i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden}.bars b{display:block;height:100%;width:0;background:#fff}
+.shead{position:absolute;z-index:6;top:22px;left:12px;right:12px;display:flex;align-items:center;gap:.6rem}
+.av{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center}
+.shead b{display:block;font-size:.92rem;line-height:1.1}.shead small{opacity:.75;font-size:.75rem}
+.pp{margin-left:auto;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:50%;width:34px;height:34px;font-size:.8rem;cursor:pointer;z-index:8}
+.slides{position:absolute;inset:0}
+.sl{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:.8rem;padding:4.4rem 1.5rem 1.6rem;opacity:0;transform:translateX(7%);pointer-events:none;transition:opacity .35s,transform .5s cubic-bezier(.2,.8,.2,1)}
+.sl.on{opacity:1;transform:none;pointer-events:auto}.sl.past{transform:translateX(-7%)}
+.s0{background:linear-gradient(160deg,#0e1f1a,#17624a)}.s1{background:linear-gradient(160deg,#10222c,#1b5e7a)}.s2{background:linear-gradient(160deg,#1c1f2e,#4a3a8c)}.s3{background:linear-gradient(160deg,#241a14,#8a4b1f)}.s4{background:linear-gradient(160deg,#0e1f1a,#2a4a3a)}
+.sl>*{opacity:0;transform:translateY(16px)}.sl.on>*{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.sl.on>*:nth-child(2){animation-delay:.12s}.sl.on>*:nth-child(3){animation-delay:.24s}.sl.on>*:nth-child(4){animation-delay:.36s}.sl.on>*:nth-child(5){animation-delay:.48s}
+@keyframes rise{to{opacity:1;transform:none}}
+.pillx{align-self:flex-start;background:rgba(255,255,255,.16);border-radius:99px;padding:.25rem .8rem;font:700 .74rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.big{margin:.2rem 0;font:700 clamp(1.5rem,6vw,1.9rem)/1.2 Fraunces,Georgia,serif}
+.hk{margin:.2rem 0;font:700 clamp(1.7rem,7vw,2.15rem)/1.15 Fraunces,Georgia,serif}
+.sum{margin:0;font-size:1.08rem;line-height:1.5;opacity:.95}
+.kk{margin:.6rem 0 0;font:700 .72rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#3ecf8e}
+.toc{margin:0;padding-left:1.2rem;display:grid;gap:.4rem;font-size:1rem}.hint{margin:auto 0 0;font-size:.82rem;opacity:.7}
+.foot{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;margin-top:.4rem}
+.go{color:#3ecf8e;font-weight:600;font-size:.9rem;text-decoration:none}
+.exb{border:1.5px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:99px;padding:.5rem 1.1rem;font:600 .9rem Inter,sans-serif;cursor:pointer;z-index:7;transition:background .2s,transform .15s}
+.exb:hover{background:rgba(255,255,255,.16)}.exb:active{transform:scale(.96)}
+.ex{background:rgba(0,0,0,.35);border-radius:14px;padding:.8rem 1rem;display:grid;gap:.3rem;font-size:.98rem}.ex[hidden]{display:none}
+.ex b{font:700 .72rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#3ecf8e}.ex small{opacity:.8}
+.qh{margin:0;padding:0;list-style:none;display:grid;gap:.7rem}.qh li{padding-bottom:.6rem;border-bottom:1px solid rgba(255,255,255,.18);font-weight:600;line-height:1.35}.qh small{font-weight:400;opacity:.7}
+.tz{position:absolute;z-index:5;top:64px;bottom:90px;width:34%;border:0;background:none;cursor:pointer}.tz.l{left:0}.tz.r{right:0}
+.ednote{margin:0;max-width:25rem;text-align:center;color:var(--mute);font-size:.82rem}
+@media(prefers-reduced-motion:reduce){.story,.sl,.sl>*{animation:none!important;transition:none!important}.sl>*{opacity:1;transform:none}}
+
+/* v3: links above tap zones, readable source button, more stagger */
+.foot{position:relative;z-index:7}
+.go{position:relative;z-index:7}
+.go.main{display:inline-block;background:#3ecf8e;color:#08241a;border-radius:99px;padding:.6rem 1.1rem;font-weight:700}
+.sl.on>*:nth-child(6){animation-delay:.6s}
+.sl .ex.wd{display:grid}
+
+/* v5: content always fits the card (top-aligned, safe centering, line limits) */
+.story{height:min(86vh,44rem);height:min(86dvh,44rem);min-height:30rem}
+.sl{justify-content:flex-start;gap:.65rem;padding:4.2rem 1.3rem 1.3rem;overflow:hidden}
+.sl>:first-child{margin-top:auto}.sl>:last-child{margin-bottom:auto}
+.hk{font-size:clamp(1.45rem,6vw,1.9rem);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.sum{font-size:1rem;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.big{font-size:clamp(1.35rem,5.5vw,1.75rem);display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.ex.wd span{font-size:.98rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.ex.wd small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.toc li{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-height:700px){.story{height:min(92vh,44rem);min-height:26rem}.hk{font-size:1.4rem}.sum{-webkit-line-clamp:4}.ex.wd span{-webkit-line-clamp:3}}
+
+
+/* Festival Story: compact Sprout identity + luminous issue label; no banners over video. */
+.shead.is-festival {
+  left:12px;right:12px;top:22px;gap:.5rem;
+  min-height:54px;padding:8px 9px;border:1px solid rgba(238,204,124,.58);
+  border-radius:15px;
+  background:linear-gradient(115deg,rgba(5,25,17,.9),rgba(11,43,29,.78));
+  box-shadow:0 5px 20px rgba(0,0,0,.18),0 0 17px rgba(237,190,79,.13),inset 0 0 0 1px rgba(255,240,188,.04);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.shead.is-festival .sprout-head {flex:0 1 auto;min-width:0}
+.shead.is-festival .sprout-name {font-size:.88rem;white-space:nowrap}
+.shead.is-festival .sprout-edition {font-size:.68rem;white-space:nowrap}
+.festival-edition-badge {
+  display:inline-flex;flex:0 1 auto;min-width:0;max-width:100%;
+  align-items:center;justify-content:center;text-align:center;
+  padding:.43rem .58rem;border:1px solid rgba(255,222,131,.92);border-radius:9px;
+  color:#ffe7a2;background:linear-gradient(135deg,rgba(114,78,21,.78),rgba(60,53,23,.9));
+  font:800 .55rem/1.2 Inter,system-ui,sans-serif;letter-spacing:.055em;white-space:nowrap;
+  text-shadow:0 0 9px rgba(255,219,128,.55);
+  box-shadow:0 0 7px rgba(255,205,91,.36),0 0 17px rgba(255,194,71,.23),inset 0 0 9px rgba(255,236,174,.08);
+  animation:festivalBadgeGlow 2.2s ease-in-out infinite alternate;
+}
+@keyframes festivalBadgeGlow {
+  from {box-shadow:0 0 5px rgba(255,205,91,.28),0 0 12px rgba(255,194,71,.16),inset 0 0 7px rgba(255,236,174,.05)}
+  to {box-shadow:0 0 9px rgba(255,221,126,.58),0 0 21px rgba(255,194,71,.28),inset 0 0 11px rgba(255,236,174,.12)}
+}
+.sl.sfestival {padding:0;background:#07130d;justify-content:center}
+.sl.sfestival .ed-greeting-video {
+  position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;
+  object-fit:contain;background:#07130d;opacity:1!important;transform:none!important;
+  animation:none!important;pointer-events:none!important;user-select:none;-webkit-user-select:none;border:0;
+}
+.sl.sfestival .ed-greeting-video::-webkit-media-controls,
+.sl.sfestival .ed-greeting-video::-webkit-media-controls-panel,
+.sl.sfestival .ed-greeting-video::-webkit-media-controls-enclosure {
+  display:none!important;opacity:0!important;
+}
+@media(max-width:420px) {
+  .shead.is-festival {left:9px;right:9px;gap:.38rem;padding:7px 7px;min-height:50px}
+  .shead.is-festival .av {width:30px;height:30px;flex:0 0 30px}
+  .shead.is-festival .sprout-name {font-size:.82rem}
+  .shead.is-festival .sprout-edition {font-size:.62rem}
+  .festival-edition-badge {font-size:.48rem;letter-spacing:.025em;padding:.38rem .4rem;border-radius:8px}
+  .shead.is-festival .pp {width:30px;height:30px;flex:0 0 30px}
+}
+@media(prefers-reduced-motion:reduce) {.festival-edition-badge{animation:none}}
+
+/* Festival card: exact phone-story shape (9:16) so the greeting video fits with no bars */
+.story.fest{aspect-ratio:9/16;height:auto;min-height:0;width:min(100%,25rem,calc(86vh*9/16));width:min(100%,25rem,calc(86dvh*9/16))}
+.sl.sfestival .ed-greeting-video{object-fit:cover}
+
+/* v3 festival header: sleek single row, no panel, never covers slide content */
+.story.fest .shead.is-festival{top:20px;left:12px;right:12px;min-height:0;padding:0;gap:.45rem;border:0;border-radius:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+.story.fest .shead.is-festival .av{width:28px;height:28px;flex:0 0 28px}
+.story.fest .shead.is-festival .sprout-head{flex:0 0 auto;min-width:max-content}
+.story.fest .shead.is-festival .sprout-name{font-size:.8rem;line-height:1.1}
+.story.fest .shead.is-festival .sprout-edition{font-size:.6rem}
+.story.fest .shead.is-festival .festival-edition-badge{flex:0 0 auto;margin:0 auto;white-space:nowrap;font-size:.46rem;letter-spacing:.04em;line-height:1;padding:.28rem .55rem;border-radius:99px;text-shadow:none;animation:festivalBadgeGlow 2.2s ease-in-out infinite alternate}
+.story.fest .shead.is-festival .pp{margin-left:0;width:28px;height:28px;flex:0 0 28px}
+.story.fest .sl:not(.sfestival){padding-top:5.2rem}
+@media(max-width:420px){
+  .story.fest .shead.is-festival{left:10px;right:10px;gap:.35rem}
+  .story.fest .shead.is-festival .festival-edition-badge{font-size:.42rem;letter-spacing:.02em;padding:.26rem .45rem}
+}

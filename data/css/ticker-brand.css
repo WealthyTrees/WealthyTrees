@@ -1,0 +1,25 @@
+/* WealthyTrees ticker v-brand: logo slot, forced two-line status chip, rotating promo cards. */
+
+/* Status chip: always two lines (name over status) */
+.ticker.nse .tk-label:not(.wt-dussehra-label){display:grid!important;grid-template-columns:8px minmax(0,1fr);grid-template-rows:auto auto;align-content:center;align-items:center;column-gap:.5rem;row-gap:.16rem;flex:0 0 clamp(190px,17vw,226px)!important;width:clamp(190px,17vw,226px)!important;max-width:none!important;padding:.45rem .85rem;white-space:normal;line-height:1.1}
+.ticker.nse .tk-label:not(.wt-dussehra-label) .tk-dot{grid-column:1;grid-row:1/span 2}
+.ticker.nse .tk-label:not(.wt-dussehra-label) #tkname{grid-column:2;grid-row:1;display:block!important;white-space:nowrap;font-size:.7rem}
+.ticker.nse .tk-label:not(.wt-dussehra-label) #tkstat{grid-column:2;grid-row:2;display:block!important;white-space:nowrap;font-size:.57rem;font-weight:700;color:#8fd9b8}
+
+/* Rotating promo cards (weekends / market holidays) */
+.ticker.wt-rotor-on .tk-view{-webkit-mask-image:none;mask-image:none}
+.ticker.nse .track.wt-rotor-track{display:block;position:relative;width:100%;height:50px;padding:0;animation:none;transform:none}
+.wt-rot-card{position:absolute;inset:0;display:flex;align-items:center;gap:1rem;padding:0 1rem;color:#fff;text-decoration:none;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s;pointer-events:none}
+.wt-rot-card.on{opacity:1;transform:none;pointer-events:auto}
+.wt-rot-copy{display:flex;flex-direction:column;min-width:0;flex:1}
+.wt-rot-copy strong{font-size:1rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wt-rot-copy span{font-size:.78rem;color:#b9cfc4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wt-rot-btn{flex:none;font-size:.78rem;font-weight:700;padding:.42rem .9rem;border-radius:999px;background:#3ddc97;color:#06150e;white-space:nowrap}
+.wt-rot-card:hover .wt-rot-btn{background:#7cf0bd}
+@media(max-width:640px){
+    .ticker.nse .tk-label:not(.wt-dussehra-label){flex-basis:160px!important;width:160px!important;padding:.4rem .55rem;column-gap:.4rem}
+  .ticker.nse .tk-label:not(.wt-dussehra-label) #tkname{font-size:.6rem}
+  .ticker.nse .tk-label:not(.wt-dussehra-label) #tkstat{font-size:.47rem}
+  .wt-rot-card{gap:.6rem;padding:0 .7rem}.wt-rot-copy strong{font-size:.82rem}.wt-rot-copy span{display:none}.wt-rot-cta{display:none}.wt-rot-btn{font-size:.9rem;padding:.3rem .6rem}.wt-rot-copy strong{white-space:normal;line-height:1.1;font-size:.75rem}
+}
+@media(prefers-reduced-motion:reduce){.wt-rot-card{transition:none;transform:none}}

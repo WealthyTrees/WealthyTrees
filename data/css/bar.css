@@ -1,0 +1,526 @@
+/* WealthyTrees bar.css v1: NSE-style market bar, one separate box per index */
+.ticker.nse{border-bottom:0;align-items:center}
+.ticker.nse .tk-view{padding:.5rem 0}
+.nse .track{gap:0;padding:0 .3rem}
+.nse .track .tk{display:inline-flex;flex-direction:column;align-items:flex-start;gap:.12rem;min-width:170px;margin:0 .35rem;padding:.5rem .9rem;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.02));color:#fff;text-decoration:none;transition:transform .15s,border-color .15s,box-shadow .15s}
+.nse .track .tk.u{border-color:rgba(61,220,151,.42)}.nse .track .tk.d{border-color:rgba(255,123,107,.42)}
+.nse .track a.tk{cursor:pointer}
+.nse .track a.tk:hover{transform:translateY(-2px);border-color:#3ddc97;box-shadow:0 6px 16px rgba(0,0,0,.4),0 0 14px rgba(61,220,151,.28)}
+.nse .track a.tk:focus{outline:none}.nse .track a.tk:focus-visible{outline:2px solid #e0b04f;outline-offset:2px}
+.nse .track .tk,.nse .track .tk *{text-decoration:none!important}
+.nse .track .tk b{font-size:.7rem;color:#9db5a9;letter-spacing:.07em}
+.nse .track .tk .v{font-size:1.08rem;color:#fff}
+.nse .track .tk .c{padding:0;background:none;font-size:.82rem}
+.nse .track .tk .c.up{color:#3ddc97}.nse .track .tk .c.dn{color:#ff7b6b}
+@media(max-width:640px){.nse .track .tk{min-width:148px;padding:.45rem .75rem}}
+
+/* v2: smooth, never stuck */
+.nse .track{will-change:transform;backface-visibility:hidden}
+.ticker:hover .track{animation-play-state:running}
+@media(hover:hover) and (pointer:fine){.ticker.nse:hover .track{animation-play-state:paused}}
+.tk-label{max-width:46vw}.tk-label span{white-space:normal;line-height:1.15;font-size:.68rem}
+
+/* v3: compact two-line market status leaves more horizontal room for index cards. */
+.ticker.nse .tk-label {
+  flex: 0 0 clamp(190px, 17vw, 226px);
+  width: clamp(190px, 17vw, 226px);
+  max-width: none;
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr);
+  grid-template-rows: min-content min-content;
+  align-content: center;
+  align-items: center;
+  column-gap: .5rem;
+  row-gap: .16rem;
+  padding: .45rem .85rem;
+  white-space: normal;
+  line-height: 1.1;
+}
+.ticker.nse .tk-label .tk-dot {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.ticker.nse .tk-label #tkname {
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  font-size: .7rem;
+  letter-spacing: .045em;
+}
+.ticker.nse .tk-label #tkstat {
+  grid-column: 2;
+  grid-row: 2;
+  display: block;
+  min-width: 0;
+  color: #8fd9b8;
+  font-size: .57rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: .015em;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .ticker.nse .tk-label {
+    flex-basis: 174px;
+    width: 174px;
+    padding: .4rem .6rem;
+    column-gap: .42rem;
+  }
+  .ticker.nse .tk-label #tkname { font-size: .62rem; letter-spacing: .025em; }
+  .ticker.nse .tk-label #tkstat { font-size: .49rem; letter-spacing: 0; }
+}
+
+/* v4: understated Dussehra greeting animation in the market-status rail. */
+.ticker.nse .tk-label.wt-dussehra-label {
+  flex-basis: clamp(200px, 18vw, 236px);
+  width: clamp(200px, 18vw, 236px);
+  background:
+    radial-gradient(ellipse at 8% 5%, rgba(224,176,79,.16), transparent 56%),
+    linear-gradient(135deg, #10271c, #081810);
+  border-right-color: #d3a64e;
+  overflow: hidden;
+  isolation: isolate;
+}
+.ticker.nse .tk-label.wt-dussehra-label #tkname {
+  color: #fff0ca;
+  font-size: .66rem;
+  letter-spacing: .04em;
+}
+.ticker.nse .tk-label.wt-dussehra-label #tkstat {
+  max-width: 100%;
+  color: #ffd98b;
+  font-size: .56rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: clip;
+  transition: opacity .22s ease, transform .22s ease;
+}
+.ticker.nse .tk-label.wt-dussehra-label #tkstat.is-changing {
+  opacity: 0;
+  transform: translateY(3px);
+}
+.wt-ticker-petals {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 28px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(90deg, transparent, rgba(8,24,16,.62));
+}
+.wt-ticker-petal {
+  position: absolute;
+  top: -8px;
+  left: var(--px);
+  width: 5px;
+  height: 8px;
+  border-radius: 80% 12% 70% 20%;
+  background: linear-gradient(145deg,#ffeab0,#f3b533 65%,#dc7130);
+  opacity: .75;
+  transform: rotate(20deg);
+  animation: wtTickerPetalFall 4.8s var(--delay) linear infinite;
+}
+.wt-ticker-petal:nth-child(3n) {
+  width: 4px;
+  height: 6px;
+  background: linear-gradient(145deg,#ffe0e6,#df8295);
+}
+@keyframes wtTickerPetalFall {
+  0% { transform: translate3d(0,-8px,0) rotate(0deg); opacity: 0; }
+  12% { opacity: .8; }
+  88% { opacity: .7; }
+  100% { transform: translate3d(8px,86px,0) rotate(220deg); opacity: 0; }
+}
+@media (max-width: 640px) {
+  .ticker.nse .tk-label.wt-dussehra-label { flex-basis: 178px; width: 178px; }
+  .ticker.nse .tk-label.wt-dussehra-label #tkname { font-size: .6rem; letter-spacing: .02em; }
+  .ticker.nse .tk-label.wt-dussehra-label #tkstat { font-size: .48rem; }
+  .wt-ticker-petals { width: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wt-ticker-petal { animation: none; display: none; }
+  .ticker.nse .tk-label.wt-dussehra-label #tkstat { transition: none; }
+}
+
+/* v4: spacious left-to-right promotional cards during Indian equity weekends/holidays. */
+.ticker.nse .track.wt-promo-track {
+  --dur: 58s;
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  width: max-content;
+  padding: .45rem .65rem;
+  animation: wtPromoTravel var(--dur) linear infinite;
+  will-change: transform;
+}
+@keyframes wtPromoTravel {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.ticker.nse .track.wt-promo-track .wt-promo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px minmax(0,1fr) 18px;
+  align-items: center;
+  gap: .75rem;
+  flex: 0 0 clamp(275px, 27vw, 350px);
+  min-width: 0;
+  height: 76px;
+  margin: 0;
+  padding: .65rem .9rem;
+  border: 1px solid rgba(213,174,96,.65);
+  border-radius: 13px;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(226,184,99,.17), transparent 58%),
+    linear-gradient(135deg, rgba(255,255,255,.105), rgba(255,255,255,.025));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.035), 0 3px 14px rgba(0,0,0,.12);
+  color: #fff8e8;
+  text-decoration: none;
+  white-space: normal;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-card:hover {
+  transform: translateY(-2px);
+  border-color: #f5cf79;
+  box-shadow: 0 7px 20px rgba(0,0,0,.2), 0 0 14px rgba(220,174,78,.13);
+}
+.ticker.nse .track.wt-promo-track .wt-promo-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(236,199,119,.48);
+  border-radius: 12px;
+  background: #fff8e9;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-mark img {
+  display: block;
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: .25rem;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-copy strong {
+  display: block;
+  overflow: hidden;
+  color: #ffe3a0;
+  font-size: .83rem;
+  line-height: 1.15;
+  letter-spacing: .005em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-copy > span {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #e7eee8;
+  font-size: .69rem;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-arrow {
+  color: #e8c16c;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+.ticker.nse .track.wt-promo-track .wt-promo-mark,
+.ticker.nse .track.wt-promo-track .wt-promo-copy,
+.ticker.nse .track.wt-promo-track .wt-promo-arrow { text-decoration: none !important; }
+@media (max-width: 640px) {
+  .ticker.nse .track.wt-promo-track { gap: .6rem; padding: .45rem .4rem; }
+  .ticker.nse .track.wt-promo-track .wt-promo-card {
+    flex-basis: 278px;
+    height: 72px;
+    grid-template-columns: 40px minmax(0,1fr) 14px;
+    gap: .55rem;
+    padding: .55rem .7rem;
+  }
+  .ticker.nse .track.wt-promo-track .wt-promo-mark { width: 38px; height: 38px; }
+  .ticker.nse .track.wt-promo-track .wt-promo-mark img { width: 32px; height: 32px; }
+  .ticker.nse .track.wt-promo-track .wt-promo-copy strong { font-size: .78rem; }
+  .ticker.nse .track.wt-promo-track .wt-promo-copy > span { font-size: .66rem; }
+}
+@media (hover:hover) and (pointer:fine) {
+  .ticker.nse .track.wt-promo-track:hover { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker.nse .track.wt-promo-track { animation: none; overflow-x: auto; }
+}
+
+/* Dussehra festival animation in the large ticker rail. */
+.ticker.nse.wt-dussehra-festival {
+  position:relative; display:flex; align-items:stretch; width:100%;
+  height:196px; min-height:196px; overflow:hidden; white-space:normal;
+  border-bottom:1px solid rgba(225,174,75,.55);
+  background:#182932;
+}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label {
+  position:absolute; z-index:9; left:12px; top:8px; max-width:none; width:auto;
+  display:flex; align-items:center; flex-wrap:wrap; gap:.2rem .4rem;
+  padding:.32rem .55rem; border:1px solid rgba(238,195,100,.65); border-radius:8px;
+  background:rgba(8,30,24,.88); font-size:.61rem; line-height:1.15; white-space:normal;
+}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label #tkname{font-size:.61rem;letter-spacing:.02em}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label #tkstat{font-size:.48rem;letter-spacing:0}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label .wt-ticker-petals{display:none}
+.ticker.nse.wt-dussehra-festival .tk-view {
+ display:block; flex:1 1 auto; width:100%; height:100%; min-width:0; padding:0;
+ overflow:hidden; mask-image:none; -webkit-mask-image:none;
+}
+.ticker.nse.wt-dussehra-festival .track,
+.ticker.nse.wt-dussehra-festival .track.wt-promo-track {
+ position:relative; display:block; width:100%; height:196px; min-height:196px;
+ margin:0; padding:0; overflow:hidden; white-space:normal;
+ animation:none!important; transform:none!important;
+}
+.wt-fest-stage{position:relative;isolation:isolate;width:100%;height:196px;overflow:hidden;color:#fff7e5;background:linear-gradient(130deg,#122934,#72413c 54%,#eba04a)}
+.wt-fest-scene{position:absolute;z-index:1;inset:0;width:100%;height:100%}
+.wt-fest-ravan{transform-origin:center bottom;animation:wtFestRavan 13s linear infinite}
+@keyframes wtFestRavan{0%,27%,100%{filter:brightness(1)}29%{filter:brightness(1.9)}34%{filter:brightness(1)}}
+.wt-fest-rama{animation:wtFestRama 2.8s ease-in-out infinite alternate}
+@keyframes wtFestRama{to{filter:drop-shadow(0 0 5px rgba(255,214,123,.5))}}
+.wt-fest-arrow{opacity:0;transform-box:view-box;animation:wtFestArrow 13s linear infinite}
+@keyframes wtFestArrow{0%,9%{opacity:0;transform:translateX(0)}11%{opacity:1}27%{opacity:1;transform:translateX(-47vw)}29%,100%{opacity:0;transform:translateX(-47vw)}}
+.wt-fest-burst{opacity:0;transform-box:fill-box;transform-origin:center;animation:wtFestBurst 13s ease-out infinite}
+@keyframes wtFestBurst{0%,27%{opacity:0;transform:scale(.15)}29%{opacity:1;transform:scale(1)}33%{opacity:.9;transform:scale(1.15)}39%,100%{opacity:0;transform:scale(1.8)}}
+.wt-fest-fireworks{opacity:0;transform-box:fill-box;transform-origin:center;animation:wtFestCrackers 13s ease-out infinite}
+@keyframes wtFestCrackers{0%,28%{opacity:0;transform:scale(.5)}32%{opacity:1;transform:scale(1.1)}38%,100%{opacity:0;transform:scale(1.55)}}
+.wt-fest-ribbon{position:absolute;z-index:5;top:9px;left:12px;color:#fff0ca;font:800 10px/1.2 system-ui,sans-serif;letter-spacing:.08em;opacity:0}
+.wt-fest-ribbon span{margin-left:8px;color:#ffd98b}
+.wt-fest-message{
+ position:absolute;z-index:4;left:50%;top:53%;display:flex;align-items:center;gap:clamp(10px,2vw,22px);
+ width:min(780px,calc(100% - 36px));min-height:128px;padding:10px clamp(12px,2.5vw,26px);
+ border:2px solid #d6a64b;border-radius:22px;
+ background:linear-gradient(130deg,rgba(255,251,231,.97),rgba(255,238,195,.96));
+ box-shadow:0 8px 28px rgba(20,16,22,.35),inset 0 0 0 3px rgba(255,255,255,.7);
+ color:#1c573e;opacity:0;visibility:hidden;transform:translate(-50%,-43%) scale(.96);
+ animation:wtFestMessage 13s ease-in-out infinite;
+}
+.wt-fest-message img{display:block;flex:0 0 auto;width:clamp(44px,6vw,76px);height:clamp(44px,6vw,76px);object-fit:contain}
+.wt-fest-message>div{min-width:0;flex:1;text-align:center}
+.wt-fest-message h2{margin:0 0 4px;color:#126341;font:800 clamp(23px,3.5vw,41px)/1.04 Georgia,"Times New Roman",serif;letter-spacing:-.025em;text-shadow:0 1px 0 #fff}
+.wt-fest-message p{margin:5px 0;color:#782c20;font:600 clamp(11px,1.45vw,16px)/1.35 "Noto Sans Devanagari","Mangal",serif}
+.wt-fest-message strong{display:block;margin-top:5px;color:#754316;font:850 clamp(10px,1.25vw,14px)/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.04em}
+@keyframes wtFestMessage{
+ 0%,33%{opacity:0;visibility:hidden;transform:translate(-50%,-43%) scale(.96)}
+ 37%{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+ 90%{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+ 98%,100%{opacity:0;visibility:hidden;transform:translate(-50%,-54%) scale(.98)}
+}
+.wt-fest-foot{position:absolute;z-index:3;right:12px;bottom:6px;color:rgba(255,240,205,.85);font-size:10px;font-weight:800;letter-spacing:.1em;text-shadow:0 1px 4px #0008}
+@media(max-width:640px){
+ .ticker.nse.wt-dussehra-festival,.ticker.nse.wt-dussehra-festival .track,.ticker.nse.wt-dussehra-festival .track.wt-promo-track,.wt-fest-stage{height:190px;min-height:190px}
+ .ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label{left:8px;top:7px;padding:.25rem .4rem}
+ .wt-fest-message{width:calc(100% - 18px);min-height:124px;padding:8px 9px;gap:7px;border-radius:15px}
+ .wt-fest-message img{width:36px;height:36px}
+ .wt-fest-message h2{font-size:clamp(19px,5.25vw,27px);letter-spacing:-.035em}
+ .wt-fest-message p{font-size:clamp(10px,2.7vw,13px);line-height:1.3}
+ .wt-fest-message strong{font-size:clamp(9px,2.3vw,11px);letter-spacing:0}
+ .wt-fest-foot{bottom:4px;right:7px;font-size:8px;letter-spacing:.03em}
+}
+@media(prefers-reduced-motion:reduce){
+ .wt-fest-ravan,.wt-fest-rama,.wt-fest-arrow,.wt-fest-burst,.wt-fest-fireworks,.wt-fest-message{animation:none}
+ .wt-fest-arrow{opacity:1}.wt-fest-burst{opacity:.6}
+ .wt-fest-message{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+}
+
+/* ===== Dussehra cinematic rail v3: larger scene, precise arrow impact, fireworks and petals ===== */
+.ticker.nse.wt-dussehra-festival {
+  height:clamp(268px,26vw,320px);
+  min-height:clamp(268px,26vw,320px);
+  display:flex;
+  position:relative;
+  overflow:hidden;
+  background:#111d2c;
+  border-top:1px solid rgba(255,216,131,.22);
+  border-bottom:1px solid rgba(255,216,131,.5);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),inset 0 -12px 30px rgba(0,0,0,.22);
+}
+.ticker.nse.wt-dussehra-festival .tk-label.wt-dussehra-label {display:none!important}
+.ticker.nse.wt-dussehra-festival .tk-view {
+  display:block;position:absolute;inset:0;width:100%;height:100%;padding:0;
+  overflow:hidden;min-width:0;mask-image:none;-webkit-mask-image:none;
+}
+.ticker.nse.wt-dussehra-festival .track,
+.ticker.nse.wt-dussehra-festival .track.wt-promo-track {
+  display:block;position:absolute;inset:0;width:100%;height:100%;min-height:0;
+  margin:0;padding:0;overflow:hidden;white-space:normal;animation:none!important;transform:none!important;
+}
+.wt-fest-stage {
+  position:relative;isolation:isolate;display:block;width:100%;height:100%;min-height:268px;
+  overflow:hidden;color:#fff5df;
+  background:
+    radial-gradient(ellipse at 52% 28%,rgba(255,185,98,.27),transparent 38%),
+    linear-gradient(112deg,#101e34 0%,#51304c 36%,#a74f47 65%,#ed9c4b 100%);
+}
+.wt-fest-stage:before {
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,15,30,.15),transparent 42%,rgba(19,14,27,.38));
+}
+.wt-fest-sky-glow {
+  position:absolute;z-index:0;left:50%;top:-60%;width:min(68vw,760px);height:140%;
+  transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(ellipse,rgba(255,200,110,.22),rgba(255,129,69,.075) 36%,transparent 72%);
+  animation:wtFestSkyGlow 5s ease-in-out infinite alternate;
+}
+@keyframes wtFestSkyGlow {to{opacity:.6;transform:translateX(-50%) scale(1.12)}}
+.wt-fest-torana {
+  position:absolute;z-index:3;left:0;right:0;top:0;height:22px;display:flex;align-items:flex-start;justify-content:center;
+  gap:clamp(8px,2vw,24px);overflow:hidden;opacity:.72;pointer-events:none;
+  color:#ffdc87;text-shadow:0 0 9px rgba(255,193,76,.55);font-size:12px;
+}
+.wt-fest-torana i {height:19px;width:1px;background:linear-gradient(#f4c35d,transparent);opacity:.65}
+.wt-fest-torana span {animation:wtToranaGlow 2.2s ease-in-out infinite alternate}
+.wt-fest-torana span:nth-of-type(2) {animation-delay:-.7s}
+.wt-fest-torana span:nth-of-type(3) {animation-delay:-1.3s}
+@keyframes wtToranaGlow {to{opacity:.4;text-shadow:0 0 2px rgba(255,193,76,.25)}}
+.wt-fest-scene {position:absolute;z-index:1;inset:0;display:block;width:100%;height:100%;overflow:visible}
+.wt-fest-ravana {animation:wtRavanaHitV3 15s linear infinite;transform-origin:298px 202px}
+@keyframes wtRavanaHitV3 {
+  0%,26.7%,100% {filter:brightness(1) saturate(1)}
+  28.2% {filter:brightness(2.2) saturate(1.6) drop-shadow(0 0 10px rgba(255,194,67,.85))}
+  31% {filter:brightness(1.7) saturate(1.3) drop-shadow(0 0 6px rgba(255,194,67,.55))}
+  36% {filter:brightness(1) saturate(1)}
+}
+.wt-fest-rama {animation:wtRamaAuraV3 2.8s ease-in-out infinite alternate}
+@keyframes wtRamaAuraV3 {to{filter:drop-shadow(0 0 7px rgba(255,219,125,.65))}}
+.wt-fest-arrow {
+  opacity:0;transform-box:view-box;transform-origin:0 190px;
+  animation:wtArrowFlightV3 15s cubic-bezier(.18,.78,.2,1) infinite!important;
+  filter:drop-shadow(0 0 6px rgba(255,221,123,.9));
+}
+@keyframes wtArrowFlightV3 {
+  0%,7% {opacity:0;transform:translateX(78vw)}
+  9% {opacity:1;transform:translateX(78vw)}
+  27.7% {opacity:1;transform:translateX(26vw)}
+  28.4%,100% {opacity:0;transform:translateX(26vw)}
+}
+.wt-fest-main-burst {
+  opacity:0;filter:drop-shadow(0 0 12px rgba(255,217,102,.95));
+  animation:wtMainImpactV3 15s ease-out infinite;
+}
+@keyframes wtMainImpactV3 {
+  0%,27.4% {opacity:0}
+  28% {opacity:1}
+  30.5% {opacity:1;filter:drop-shadow(0 0 24px rgba(255,239,157,1))}
+  35.5%,100% {opacity:0}
+}
+.wt-fest-firework {
+  opacity:0;filter:drop-shadow(0 0 4px rgba(255,224,129,.8));
+}
+.wt-fw-a {animation:wtFireworkA 15s ease-out infinite}
+.wt-fw-b {animation:wtFireworkB 15s ease-out infinite}
+.wt-fw-c {animation:wtFireworkC 15s ease-out infinite}
+@keyframes wtFireworkA {
+  0%,28%{opacity:0}30%{opacity:1}36%{opacity:.75}42%,100%{opacity:0}
+}
+@keyframes wtFireworkB {
+  0%,30%{opacity:0}32%{opacity:1}37%{opacity:.85}44%,100%{opacity:0}
+}
+@keyframes wtFireworkC {
+  0%,31%{opacity:0}33%{opacity:1}38%{opacity:.7}45%,100%{opacity:0}
+}
+.wt-fest-streamers {
+  opacity:.08;animation:wtStreamerBurstV3 15s ease-out infinite;
+}
+@keyframes wtStreamerBurstV3 {
+  0%,28%{opacity:.08}31%{opacity:1}37%{opacity:.8}47%,100%{opacity:.08}
+}
+.wt-fest-petal-rain {
+  position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none;
+}
+.wt-fest-petal {
+  position:absolute;top:-24px;left:var(--x);width:var(--size);height:calc(var(--size)*1.6);
+  display:block;opacity:0;border-radius:82% 12% 74% 18%;
+  background:linear-gradient(145deg,#fff0a8 0%,#ffbf3e 50%,#e76c27 100%);
+  box-shadow:inset 1px 1px 1px rgba(255,255,255,.55),0 1px 5px rgba(64,20,16,.2);
+  transform:rotate(var(--rot));
+  animation:wtFestivalPetalFall var(--fall) var(--delay) linear infinite;
+  will-change:transform,opacity;
+}
+.wt-fest-petal:nth-child(3n) {
+  width:calc(var(--size)*.76);height:calc(var(--size)*1.8);border-radius:88% 10% 80% 18%;
+  background:linear-gradient(145deg,#ffe7eb 0%,#ef96a4 57%,#c64b6b 100%);
+}
+.wt-fest-petal:nth-child(4n) {
+  background:linear-gradient(145deg,#fff6c9,#f9d36b 60%,#e88a2d);
+}
+.wt-fest-petal:nth-child(5n) {width:calc(var(--size)*.7);height:calc(var(--size)*1.3);background:linear-gradient(145deg,#ffd6a5,#f08d43 65%,#c54c38)}
+@keyframes wtFestivalPetalFall {
+  0% {opacity:0;transform:translate3d(0,-5vh,0) rotate(var(--rot))}
+  10% {opacity:.98}
+  80% {opacity:.9}
+  100% {opacity:0;transform:translate3d(var(--drift),115%,0) rotate(calc(var(--rot) + 420deg))}
+}
+.wt-fest-message {
+  z-index:5;top:55%;width:min(840px,calc(100% - 34px));min-height:clamp(148px,15vw,184px);
+  padding:clamp(14px,2vw,24px) clamp(16px,3.3vw,38px);gap:clamp(10px,2.5vw,28px);
+  border:2px solid #d6a64b;border-radius:clamp(18px,3.2vw,30px);
+  background:
+    radial-gradient(circle at 8% 13%,rgba(228,156,58,.13) 0 2px,transparent 3px),
+    radial-gradient(circle at 92% 13%,rgba(228,156,58,.13) 0 2px,transparent 3px),
+    linear-gradient(135deg,rgba(255,253,240,.985),rgba(255,235,190,.98));
+  box-shadow:0 12px 40px rgba(18,10,20,.44),inset 0 0 0 3px rgba(255,255,255,.78),inset 0 0 0 6px rgba(239,203,128,.5);
+}
+.wt-fest-message:before,.wt-fest-message:after {
+  content:"✦  ❋  ✦";position:absolute;left:50%;transform:translateX(-50%);
+  color:#c18b2c;font-size:12px;letter-spacing:7px;white-space:nowrap;opacity:.72;
+}
+.wt-fest-message:before{top:7px}.wt-fest-message:after{bottom:6px}
+.wt-fest-message img {width:clamp(58px,7vw,88px);height:clamp(58px,7vw,88px);filter:drop-shadow(0 4px 5px rgba(72,48,15,.12))}
+.wt-fest-message h2 {font-size:clamp(27px,4.1vw,50px);line-height:1.02;letter-spacing:-.03em;text-shadow:0 2px 0 #fff}
+.wt-fest-message p {margin:7px 0;color:#72291f;font-size:clamp(12px,1.6vw,18px);line-height:1.4;font-weight:650}
+.wt-fest-message strong {margin-top:8px;color:#654017;font-size:clamp(11px,1.35vw,15px);letter-spacing:.055em}
+.wt-fest-card-flower {position:absolute;right:12px;top:9px;color:#ce832a;font-size:18px;animation:wtCardFlowerSpin 7s linear infinite}
+@keyframes wtCardFlowerSpin {to{transform:rotate(360deg)}}
+.wt-fest-foot {z-index:4;bottom:8px;right:14px;font-size:clamp(9px,.95vw,12px);letter-spacing:.12em}
+@media(max-width:640px) {
+  .ticker.nse.wt-dussehra-festival {height:266px;min-height:266px}
+  .ticker.nse.wt-dussehra-festival .track,.ticker.nse.wt-dussehra-festival .track.wt-promo-track,.wt-fest-stage {height:266px;min-height:266px}
+  .wt-fest-torana{height:18px;gap:8px}.wt-fest-badge{font-size:8px;top:30px;left:9px;padding:5px 8px}
+  .wt-fest-message {width:calc(100% - 18px);min-height:154px;top:57%;padding:14px 10px;gap:6px;border-radius:17px}
+  .wt-fest-message img {width:41px;height:41px}
+  .wt-fest-message h2 {font-size:clamp(22px,6vw,30px);letter-spacing:-.04em}
+  .wt-fest-message p {font-size:clamp(11px,2.9vw,14px);line-height:1.35}
+  .wt-fest-message strong {font-size:clamp(9px,2.4vw,12px);letter-spacing:0}
+  .wt-fest-card-flower {right:7px;top:6px;font-size:14px}
+  .wt-fest-foot {right:8px;bottom:5px;font-size:8px;letter-spacing:.04em}
+}
+@media(prefers-reduced-motion:reduce) {
+  .wt-fest-sky-glow,.wt-fest-torana span,.wt-fest-ravana,.wt-fest-rama,
+  .wt-fest-arrow,.wt-fest-main-burst,.wt-fest-firework,.wt-fest-streamers,
+  .wt-fest-petal,.wt-fest-message,.wt-fest-card-flower {animation:none!important}
+  .wt-fest-arrow {opacity:0!important}
+  .wt-fest-main-burst {opacity:.9}
+  .wt-fest-message {opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+}
+
+/* Final v3 polish: badge visibility and synchronized 15-second scene timeline. */
+.wt-fest-badge {
+  position:absolute;z-index:4;top:30px;left:16px;display:flex;align-items:center;gap:10px;
+  padding:6px 11px;border:1px solid rgba(255,224,153,.55);border-radius:9px;
+  color:#fff0ca;background:rgba(13,30,43,.58);backdrop-filter:blur(8px);
+  font:800 10px/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.09em;
+  box-shadow:0 4px 16px rgba(0,0,0,.16);
+}
+.wt-fest-badge span {color:#ffd98b;font-size:9px;letter-spacing:.04em}
+.wt-fest-message {animation:wtFestMessageV3 15s ease-in-out infinite!important}
+@keyframes wtFestMessageV3 {
+  0%,33% {opacity:0;visibility:hidden;transform:translate(-50%,-43%) scale(.96)}
+  37% {opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+  91% {opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+  98%,100% {opacity:0;visibility:hidden;transform:translate(-50%,-54%) scale(.98)}
+}
+@media(max-width:640px) {
+ .wt-fest-badge {left:9px;top:27px;gap:6px;padding:5px 7px;font-size:8px;letter-spacing:.04em}
+ .wt-fest-badge span {font-size:7px}
+}

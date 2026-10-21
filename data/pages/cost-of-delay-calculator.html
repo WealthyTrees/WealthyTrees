@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cost of Delay Calculator: What Starting Your SIP Late Really Costs | WealthyTrees</title>
+<link rel="canonical" href="https://wealthytrees.online/pages/cost-of-delay-calculator.html">
+<meta name="theme-color" content="#0f3d2e">
+<meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">
+<meta property="og:title" content="Cost of Delay Calculator: What Starting Your SIP Late Really Costs"><meta property="og:description" content="See exactly how much money you lose by delaying your SIP by 1, 5 or 10 years. Free cost of delay calculator for India.">
+<meta property="og:url" content="https://wealthytrees.online/pages/cost-of-delay-calculator.html"><meta property="og:image" content="https://wealthytrees.online/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="See exactly how much money you lose by delaying your SIP by 1, 5 or 10 years. Free cost of delay calculator for India.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/css/style.css?v=20"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap"><link rel="stylesheet" href="/css/tools.css?v=2"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Cost of Delay", "url": "https://wealthytrees.online/pages/cost-of-delay-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the cost of delaying a SIP?", "acceptedAnswer": {"@type": "Answer", "text": "It is the difference between what a SIP becomes if started today and what the same SIP becomes if started later."}}, {"@type": "Question", "name": "Why is delay so costly?", "acceptedAnswer": {"@type": "Answer", "text": "Because compounding rewards time. The first years of growth feed all the later years."}}, {"@type": "Question", "name": "Can I catch up by investing more?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but the extra monthly amount is much larger than the money you saved by waiting."}}]}]}</script></head><body>
+<header><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" alt=""><span>WealthyTrees</span></a>
+<nav><a href="/">Today</a><a href="/pages/markets.html">Markets</a><a href="/pages/learn.html">Learn</a><a href="/pages/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
+<main class="wrap tool"><a class="tt-btn tt-back" href="/pages/tools.html">← All tools</a><h1>Cost of Delay</h1><p class="note" style="color:var(--mute);margin:0">What does starting late really cost?</p><div id="app"></div><section class="seo"><h2>About this calculator</h2><p>Two investors put in the same monthly SIP at the same return. One starts today, the other waits. This tool shows the gap between them, and how much extra the late starter must invest every month to catch up.</p><h2>Common questions</h2><details><summary>What is the cost of delaying a SIP?</summary><p>It is the difference between what a SIP becomes if started today and what the same SIP becomes if started later.</p></details><details><summary>Why is delay so costly?</summary><p>Because compounding rewards time. The first years of growth feed all the later years.</p></details><details><summary>Can I catch up by investing more?</summary><p>Yes, but the extra monthly amount is much larger than the money you saved by waiting.</p></details><p class="note" style="color:var(--mute);font-size:.88rem">Illustration only. Returns are not guaranteed and this is not investment advice. Taxes, fund expenses and exit loads are not included unless stated.</p><div class="tt-btns"><a class="tt-btn tt-back" href="/pages/tools.html">← All tools</a><a class="tt-btn ghost" href="/pages/learn.html">Back to Learn</a></div></section></main>
+<footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/pages/disclaimer.html">Disclaimer</a> · <a href="/pages/tools.html">Tools</a> · <a href="/pages/privacy.html">Privacy</a> · <a href="/pages/terms.html">Terms</a> · <a href="/pages/contact.html">Contact</a></div></footer>
+<script src="/js/site.js?v=11"></script>
+<script>window.TOOL={
+inputs:[{k:"amt",label:"Monthly SIP",min:1000,max:100000,step:500,val:10000,f:"inr"},{k:"ret",label:"Expected return per year",min:4,max:20,step:0.5,val:12,f:"pct"},{k:"yrs",label:"Total years until my goal",min:5,max:40,step:1,val:30,f:"yr"},{k:"d",label:"If I start late by",min:0,max:15,step:1,val:5,f:"yr"}],
+fix:function(v){if(v.d>=v.yrs)v.d=v.yrs-1},
+legend:["If you start late","What waiting costs you"],
+main:function(r){return["Waiting costs you",r.cost,"inr"]},
+compute:function(v){var F=TOOL.F,s=[];for(var y=1;y<=v.yrs;y++){var now=TH.fv(v.amt,v.ret,y,0),late=y>v.d?TH.fv(v.amt,v.ret,y-v.d,0):0;s.push([late,now])}
+var now=s[s.length-1][1],late=s[s.length-1][0],cost=now-late;
+return{cost:cost,series:s,ratio:now/Math.max(late,1),rows:[["Start today you get",now],["Start "+v.d+" yrs late you get",late],["Extra SIP to catch up",late>0?v.amt*now/late-v.amt:0]],
+story:"Same SIP, same return. Starting "+v.d+" years late costs "+F.inr(cost)+". Ouch!",
+share:"Starting a "+F.inr(v.amt)+" SIP "+v.d+" years late would cost me "+F.inr(cost)+" over "+v.yrs+" years."}},
+formula:"{C} = {N} \u2212 {L}",
+terms:{C:{n:"Cost of waiting",tip:"The money you lose by starting late.",g:function(v,r){return TOOL.F.inr(r.cost)}},N:{n:"Start today",tip:"What the SIP becomes if you start now.",g:function(v,r){return TOOL.F.inr(r.series[r.series.length-1][1])}},L:{n:"Start late",tip:"What the same SIP becomes after a delay. It has fewer months to compound.",g:function(v,r){return TOOL.F.inr(r.series[r.series.length-1][0])}}},
+qa:[
+{q:"Is waiting just one year a big deal?",a:function(v){var a=TH.fv(v.amt,v.ret,v.yrs,0),b=TH.fv(v.amt,v.ret,v.yrs-1,0);return"Yes. One year late costs <b>"+TOOL.F.inr(a-b)+"</b> over "+v.yrs+" years."},set:{d:1}},
+{q:"What if I start 10 years late?",a:function(v){var a=TH.fv(v.amt,v.ret,v.yrs,0),b=TH.fv(v.amt,v.ret,Math.max(1,v.yrs-10),0);return"You would lose <b>"+TOOL.F.inr(a-b)+"</b>, most of what compounding would have given you."},set:{d:10}},
+{q:"How much extra SIP will catch me up?",a:function(v){var a=TH.fv(v.amt,v.ret,v.yrs,0),b=TH.fv(v.amt,v.ret,Math.max(1,v.yrs-v.d),0);return"You would need about <b>"+TOOL.F.inr(v.amt*a/b)+"</b> a month, instead of "+TOOL.F.inr(v.amt)+"."}},
+{q:"Is it better to start small today?",a:function(v){var a=TH.fv(v.amt/2,v.ret,v.yrs,0),b=TH.fv(v.amt,v.ret,Math.max(1,v.yrs-v.d),0);return"Half the SIP started today gives <b>"+TOOL.F.inr(a)+"</b>. The full SIP started "+v.d+" years late gives <b>"+TOOL.F.inr(b)+"</b>."}}],
+notes:["Compounding needs TIME, not just money","Early months are the most valuable ones","A small SIP today beats a big SIP later","Do not wait for the perfect moment"]};</script><script src="/js/tools.js?v=2"></script></body></html>

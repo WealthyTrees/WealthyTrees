@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lumpsum Calculator: Grow a One-Time Investment | WealthyTrees</title>
+<link rel="canonical" href="https://wealthytrees.online/pages/lumpsum-calculator.html">
+<meta name="theme-color" content="#0f3d2e">
+<meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">
+<meta property="og:title" content="Lumpsum Calculator: Grow a One-Time Investment"><meta property="og:description" content="Free lumpsum calculator for India. See how a one-time investment grows, how long it takes to double, and lumpsum vs SIP.">
+<meta property="og:url" content="https://wealthytrees.online/pages/lumpsum-calculator.html"><meta property="og:image" content="https://wealthytrees.online/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Free lumpsum calculator for India. See how a one-time investment grows, how long it takes to double, and lumpsum vs SIP.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/css/style.css?v=20"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap"><link rel="stylesheet" href="/css/tools.css?v=2"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Lumpsum Calculator", "url": "https://wealthytrees.online/pages/lumpsum-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a lumpsum investment?", "acceptedAnswer": {"@type": "Answer", "text": "Investing a large amount in one go, instead of in monthly instalments."}}, {"@type": "Question", "name": "What is the Rule of 72?", "acceptedAnswer": {"@type": "Answer", "text": "Divide 72 by the yearly return to estimate how many years your money takes to double."}}, {"@type": "Question", "name": "Is lumpsum better than SIP?", "acceptedAnswer": {"@type": "Answer", "text": "A lumpsum gets more time in the market. A SIP spreads risk and fits monthly income."}}]}]}</script></head><body>
+<header><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" alt=""><span>WealthyTrees</span></a>
+<nav><a href="/">Today</a><a href="/pages/markets.html">Markets</a><a href="/pages/learn.html">Learn</a><a href="/pages/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
+<main class="wrap tool"><a class="tt-btn tt-back" href="/pages/tools.html">← All tools</a><h1>Lumpsum Calculator</h1><p class="note" style="color:var(--mute);margin:0">One payment. Let time do the work.</p><div id="app"></div><section class="seo"><h2>About this calculator</h2><p>A lumpsum is a one-time investment. This calculator compounds it yearly at the return you choose, shows the Rule of 72 doubling time and compares it with a SIP of the same total.</p><h2>Common questions</h2><details><summary>What is a lumpsum investment?</summary><p>Investing a large amount in one go, instead of in monthly instalments.</p></details><details><summary>What is the Rule of 72?</summary><p>Divide 72 by the yearly return to estimate how many years your money takes to double.</p></details><details><summary>Is lumpsum better than SIP?</summary><p>A lumpsum gets more time in the market. A SIP spreads risk and fits monthly income.</p></details><p class="note" style="color:var(--mute);font-size:.88rem">Illustration only. Returns are not guaranteed and this is not investment advice. Taxes, fund expenses and exit loads are not included unless stated.</p><div class="tt-btns"><a class="tt-btn tt-back" href="/pages/tools.html">← All tools</a><a class="tt-btn ghost" href="/pages/learn.html">Back to Learn</a></div></section></main>
+<footer><div class="wrap">For education only. Not investment advice. We are not SEBI-registered advisors. <a href="/pages/disclaimer.html">Disclaimer</a> · <a href="/pages/tools.html">Tools</a> · <a href="/pages/privacy.html">Privacy</a> · <a href="/pages/terms.html">Terms</a> · <a href="/pages/contact.html">Contact</a></div></footer>
+<script src="/js/site.js?v=11"></script>
+<script>window.TOOL={
+inputs:[{k:"amt",label:"One-time investment",min:10000,max:10000000,step:10000,val:100000,f:"inr"},{k:"ret",label:"Expected return per year",min:1,max:30,step:0.5,val:12,f:"pct"},{k:"yrs",label:"For how long",min:1,max:40,step:1,val:10,f:"yr"}],
+legend:["You invested","Growth"],
+main:function(r){return["Your money could become",r.val,"inr"]},
+compute:function(v){var s=[],F=TOOL.F;for(var y=1;y<=v.yrs;y++)s.push([v.amt,v.amt*Math.pow(1+v.ret/100,y)]);var val=s[s.length-1][1];
+return{val:val,series:s,ratio:val/v.amt,rows:[["You put in",v.amt],["Growth (the gains)",val-v.amt],["It grew",val/v.amt,"x"],["Doubles roughly every",72/v.ret,"yr"]],
+story:"Your "+F.inr(v.amt)+" turns into "+F.inr(val)+". Just wait, it multiplies!",
+share:"A lumpsum of "+F.inr(v.amt)+" for "+v.yrs+" years at "+v.ret+"% could become "+F.inr(val)+"."}},
+formula:"FV = {P} \u00D7 (1 + {r})^{n}",
+terms:{FV:{n:"Future value",tip:"What your one-time money becomes.",g:function(v,r){return TOOL.F.inr(r.val)}},P:{n:"Amount invested",tip:"Your one-time investment.",g:function(v){return TOOL.F.inr(v.amt)}},r:{n:"Yearly return",tip:"The growth rate you expect each year.",g:function(v){return v.ret+"%"}},n:{n:"Years",tip:"Each extra year multiplies your money again.",g:function(v){return v.yrs}}},
+qa:[
+{q:"How long to double Rs 1 lakh?",a:function(v){return"Use the <b>Rule of 72</b>: 72 divided by the return. At "+v.ret+"% it doubles in about <b>"+(72/v.ret).toFixed(1)+" years</b>."}},
+{q:"Lumpsum or SIP, which is better?",a:function(v){var m=v.yrs*12,sip=TH.fv(v.amt/m,v.ret,v.yrs,0);return"The same "+TOOL.F.inr(v.amt)+" spread as a SIP over "+v.yrs+" years becomes only about <b>"+TOOL.F.inr(sip)+"</b>, while the lumpsum becomes <b>"+TOOL.F.inr(v.amt*Math.pow(1+v.ret/100,v.yrs))+"</b>, because the whole amount works from day one. A SIP is gentler when markets fall, and suits monthly income."}},
+{q:"What if I wait one more year?",a:function(v){return"You would end with <b>"+TOOL.F.inr(v.amt*Math.pow(1+v.ret/100,Math.max(0,v.yrs-1)))+"</b> instead of "+TOOL.F.inr(v.amt*Math.pow(1+v.ret/100,v.yrs))+". Each year of waiting costs a full year of growth."}},
+{q:"What if returns are only 8%?",a:function(v){return"You would get <b>"+TOOL.F.inr(v.amt*Math.pow(1.08,v.yrs))+"</b>. Use a lower return to plan safely."},set:{ret:8}}],
+notes:["Lumpsum = all money in at once","Rule of 72: 72 divided by return = years to double","Time in the market beats timing the market","Do not invest money you need within 3 years"]};</script><script src="/js/tools.js?v=2"></script></body></html>

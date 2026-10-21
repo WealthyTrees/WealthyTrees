@@ -1,0 +1,59 @@
+name: Festival day check
+
+# Pretends it is the festival day (India time) and checks the live site: intro, festive ticker,
+# Live Wire wish, Daily Edition greeting video (fits the phone card and plays), other pages,
+# and that nothing festive shows on a normal day.
+# Runs: on every push, by hand (Actions tab > Run workflow), and automatically on 18, 19 and 20 Oct
+# so any problem shows up BEFORE the festival. GitHub emails you if it fails.
+
+on:
+   push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "js/**"
+      - "css/**"
+      - "assets/**"
+      - "data/brief.json"
+      - "scripts/festival_check.cjs"
+      - ".github/workflows/dussehra-video-smoke.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 18 10 *"
+    - cron: "0 4 19 10 *"
+    - cron: "30 1 20 10 *"
+
+permissions:
+  contents: read
+
+jobs:
+  festival-day:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Playwright and Chromium
+        run: |
+          mkdir -p /tmp/wt-test && cd /tmp/wt-test
+          npm init -y
+          npm install playwright
+          npx playwright install --with-deps chromium
+      - name: Wait for the new version to go live
+        if: github.event_name == 'push'
+        run: sleep 150
+      - name: Run the festival day check (up to 3 tries)
+        run: |
+          for i in 1 2 3; do
+            echo "=== Try $i ==="
+            if PW_PATH=/tmp/wt-test/node_modules/playwright BASE=https://wealthytrees.online node scripts/festival_check.cjs; then
+              exit 0
+            fi
+            sleep 60
+          done
+          echo "The festival day check failed 3 times. See PROBLEMS TO FIX above."
+          exit 1
