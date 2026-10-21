@@ -14,13 +14,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('wt-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script src="/js/intro.js?v=6"></script>
-<link rel="stylesheet" href="/css/style.css?v=20"><link rel="stylesheet" href="/css/notebook.css?v=17"></head><body>
+<link rel="stylesheet" href="/css/style.css?v=20"><link rel="stylesheet" href="/css/notebook.css?v=17"><style>
+.lhead{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:2rem;align-items:start}
+.ft-card{background:var(--paper);border:1.5px solid var(--up);border-radius:18px;padding:1.2rem 1.3rem;margin-top:.5rem;box-shadow:0 6px 18px rgba(15,138,95,.10)}
+.ft-tag{display:inline-block;background:var(--up);color:var(--on-up);border-radius:999px;padding:.15rem .65rem;font:700 .68rem Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.ft-card h2{font:700 1.7rem Fraunces,Georgia,serif;margin:.5rem 0 .1rem;color:var(--ink)}
+.ft-card p{margin:0 0 .9rem;color:var(--mute);font-size:.92rem}
+.ft-pills{display:flex;flex-wrap:wrap;gap:.55rem}
+.ft-pill{display:inline-flex;align-items:center;gap:.4rem;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:.45rem .9rem;font:600 .9rem Inter,system-ui,sans-serif;text-decoration:none;transition:all .15s}
+.ft-pill:hover{border-color:var(--up);background:var(--up);color:var(--on-up);transform:translateY(-2px)}
+.ft-pill span{font-size:1.05rem}
+.ft-all{border-style:dashed;border-color:var(--up);color:var(--up)}
+@media(max-width:820px){.lhead{grid-template-columns:1fr;gap:.6rem}.ft-card{margin:.4rem 0 .8rem}}
+</style></head><body>
 <header><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" alt=""><span>WealthyTrees</span></a>
 <nav><a href="/">Today</a><a href="/markets.html">Markets</a><a href="/learn.html" aria-current="page">Learn</a><a href="/about.html">About</a><a class="navcta" href="/#nl">Subscribe</a></nav></div></header>
 <main class="wrap page lw"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1000" height="600"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.4"/></filter></svg><div class="lhead"><div class="lmain"><h1>Learn</h1>
 <p class="clead">A short course on reading the markets, not chasing them. Pick your level and learn at your own pace.</p>
 <div class="oprog"><p><b id="opct">0%</b> of the full course complete</p><div class="cprog"><i id="obar"></i></div></div>
-</div><aside class="tbox" aria-label="Tools"><span class="lvtag">Free tools</span><h2>Tools</h2><a class="tlink" href="/sip-calculator.html"><b>SIP Calculator</b><span>Watch your monthly SIP grow</span></a><a class="tlink" href="/goal-planner.html"><b>Goal Planner</b><span>How much SIP for Rs 1 crore?</span></a><a class="tlink" href="/cost-of-delay-calculator.html"><b>Cost of Delay</b><span>What starting late really costs</span></a><p class="tsoon"><a href="/tools.html">See all 6 tools →</a></p></aside></div>
+</div><aside class="ft-card" aria-label="Finance tools"><span class="ft-tag">Free · No sign-up</span><h2>Finance Tools</h2><p>Play with your money numbers.</p><div class="ft-pills"><a class="ft-pill" href="/sip-calculator.html"><span>🌱</span>SIP Calculator</a><a class="ft-pill" href="/goal-planner.html"><span>🎯</span>Goal Planner</a><a class="ft-pill" href="/lumpsum-calculator.html"><span>💰</span>Lumpsum</a><a class="ft-pill" href="/cost-of-delay-calculator.html"><span>⏳</span>Cost of Delay</a><a class="ft-pill" href="/direct-vs-regular-calculator.html"><span>⚖️</span>Direct vs Regular</a><a class="ft-pill" href="/emi-calculator.html"><span>🏠</span>EMI Calculator</a><a class="ft-pill ft-all" href="/tools.html">See all tools →</a></div></aside></div>
 <div class="lvls" id="levels">
 <a class="lvl live" href="/beginner.html"><span class="lvtag">All 6 modules ready</span><h2>Beginner</h2><p>From "what is a share?" to reading a company, a chart and your own risk.</p><div class="cstats"><span>6 modules</span><span>23 lessons</span><span>about 35 min</span></div><div class="lvp"><span><b id="lvpct">0%</b> done</span><div class="cprog"><i id="lvbar"></i></div></div><span class="lvact"><span class="fbtn go">Open Beginner</span></span></a>
 <a class="lvl live" id="lvint" href="/intermediate.html"><span class="lvtag">All 6 modules ready</span><h2>Beginner to Intermediate</h2><p>Financial statements, valuation, sectors, funds and SIPs, technical analysis, taxes and costs.</p><div class="cstats"><span>6 modules</span><span>36 lessons</span><span>about 50 min</span></div><div class="lvp"><span><b id="ivpct">0%</b> done</span><div class="cprog"><i id="ivbar"></i></div></div><p class="lvhint" id="ivhint" hidden></p><span class="lvact"><span class="fbtn go" id="ivgo">Open Intermediate</span></span></a>
