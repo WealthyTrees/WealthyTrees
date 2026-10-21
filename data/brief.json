@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,143",
-   "change": 0.01
+   "value": "4,152",
+   "change": 0.23
   },
   {
    "name": "CRUDE WTI",
-   "value": "$98.0",
-   "change": 0.2
+   "value": "$97.1",
+   "change": -0.77
   },
   {
    "name": "USD/INR",
@@ -45,73 +45,73 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Indian Benchmarks Decline for Second Session While Technology Shares Advance",
-   "summary": "Domestic equity indices continued downward during Wednesday's trade, with the Nifty dropping 0.34% and the Sensex giving up 0.19%. Software exporters including Infosys and HCL Technologies diverged positively by topping sectoral performance tables.",
-   "why": "Examining individual sector movement shows beginners how specific industries can maintain strength even during broad market pullbacks.",
+   "title": "Key Indian Stock Gauges Drop for Second Day While Tech Rallies",
+   "summary": "The benchmark Nifty fell over a third of a percent while the Sensex ended slightly lower. Information technology counters bucked the downward momentum to post positive returns.",
+   "why": "Observing sectoral trends helps individuals understand how particular industries can decouple from broad market declines.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-infosys-hcl-tech-bajaj-finance-bse-top-gainers-and-losers-on-nifty-and-sensex-on-wednesday/articleshow/135090920.cms"
   },
   {
    "category": "Equity",
-   "title": "Brokerage Executive Warns Public Against Social Media Securities Scams",
-   "summary": "Zerodha co-founder Nithin Kamath alerted retail participants that illicit tip networks across messaging applications typically expand alongside bullish market conditions. He recommended scrutinizing unexpected messages and validating financial claims before risking money.",
-   "why": "Pump-and-dump operations mislead novice traders by generating artificial excitement in low-volume stocks before organizers abruptly cash out.",
+   "title": "Zerodha Fund House Unveils New Product Tracking Major Banking Lenders",
+   "summary": "A newly introduced exchange-traded fund tracks the ten biggest listed lenders in India. The initial offering requires an entry threshold of one thousand rupees.",
+   "why": "Exchange-traded funds give novice investors diversified exposure to entire sectors through a single investment vehicle.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/want-exposure-to-indias-biggest-banks-zerodha-launches-new-etf/articleshow/135090790.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Super Micro Surges in Premarket Action on Strong Revenue Outlook",
+   "summary": "Shares of the hardware manufacturer climbed more than twelve percent prior to the market open. The move came after projected quarterly revenue beat expectations, reaching up to 19.5 billion dollars.",
+   "why": "Earnings projections provide a window into company demand trends, frequently altering short-term share performance.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/super-micro-shares-jump-12-after-q1-preliminary-results-top-estimates-can-the-ai-server-maker-sustain-its-recovery-11792584229403.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Zerodha Co-Founder Issues Warning Over Social Media Investment Scams",
+   "summary": "Nithin Kamath cautioned market participants that fraudulent stock-recommendation schemes on messaging platforms could proliferate. He encouraged users to critically evaluate dubious tips and verify data independently.",
+   "why": "Learning to spot unauthorized tips protects new traders from falling victim to artificial price manipulation.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/got-stock-tips-on-whatsapp-zerodhas-nithin-kamath-warns-against-pump-and-dump-schemes-advises-asking-chatgpt-11792578165904.html"
   },
   {
    "category": "Equity",
-   "title": "Reliance Jio Opens Nation's Largest Initial Public Offering to Date",
-   "summary": "Telecom and digital services giant Jio has initiated the largest equity market listing ever conducted in India. The public offer marks a landmark corporate milestone for billionaire Mukesh Ambani's business empire.",
-   "why": "Initial public offerings allow expanding corporations to collect equity financing directly from institutions and individual public participants.",
-   "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9aUm4yYlhoeVZmZGxFZlJ4SDlPemU3UEVDSTVfUUhKUVJnclJTS0Zzb1F4dVkwdTk0d2FaVlMyQVh4MG5wLVRHZnNXMUd2QlkzLWZtMThUT2dVUUU?oc=5"
+   "title": "Hindustan Zinc Posts Strong Second-Quarter Profit Expansion",
+   "summary": "The metals company recorded a 142 percent annual surge in quarterly net profit, exceeding market projections. Better operating performance was driven primarily by decreased production costs.",
+   "why": "A subsidiary company's financial growth contributes directly to the overall value of its parent organization.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/should-you-buy-vedanta-shares-after-subsidiary-hindustan-zinc-beats-d-street-estimates-in-q2-results-what-analyst-says-11792576290440.html"
   },
   {
    "category": "Economy",
-   "title": "Rupee Strengthens to Multi-Week Peak Behind Capital Inflows and Central Intervention",
-   "summary": "The domestic currency settled at 94.43 against the US dollar, registering its strongest finish in six weeks. Substantial foreign demand linked to the Jio share sale alongside official market operations supported the exchange rate.",
-   "why": "Exchange rates appreciate when significant cross-border investments enter a country, prompting foreign buyers to exchange foreign currencies for local money.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRDZQOWU2ZlJUQ2VPTmoxMHVnY0ItRzdXcWFqNDNYcWV1TElZRE5JTUZ3bUNqbURja0NaOUtmaEVfdFN2MDY0cW5UWHd1TkZ3MWZ0THYtUkU5RS1HamN3dkxPR1FONWM5LTA5NXFBLXV1RkpXSFpndTlMUllsZU5BSjNoX2drS3ptM29ITzc3NG9ib3N3RkpVMFdITjhiMGNJTEpETlE1QTdnd1Ffb3ZtMThaSkRqV2pHa3VjSnhQTDQ5MnZpMlFJdHoxOEFOZXfSAdYBQVVfeXFMT3JaeHNjOV9UU1JKYjNUMDFaZzBwTUhVV25LaDN5ZzRtOEhhdkRWT1RqUk5nLUNWWmZMTW45anZETkxsNjlvWEdEd0NXX21Kb0QyUFdQR3RoMUZPQm1nODNhMkRsTEVWdExZampQWTVrbERkY2dOQ0Jva2o1UnV4T3V5UXNYak53SGxDZ3h5aHpwbXFVSElEUFVITXJOSWdFdS1rTC01bkIwejVqck5rV1JwaTZTVGZTUWs3N1l6X1ZseUdheS1xVkdBY2R5TXFnblNwTWJaZw?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Reserve Bank Conducts Overnight Repo to Support Banking Liquidity",
-   "summary": "The Reserve Bank of India accepted 50,007 crore rupees in bids during an overnight lending auction with a 50,000 crore rupee target. Participating institutions demonstrated robust cash demand, tendering bids totaling 93,241 crore rupees.",
-   "why": "Short-term repo facilities allow the central bank to supply immediate cash reserves to commercial lenders facing interim balance shortfalls.",
+   "title": "Reserve Bank Allots Over Fifty Thousand Crore Rupees in Liquidity Auction",
+   "summary": "The Indian monetary authority conducted a one-day liquidity operation, distributing over fifty thousand crore rupees. Financial lenders exhibited high demand, placing bids worth over ninety-three thousand crore rupees.",
+   "why": "Central bank repo auctions allow policymakers to regulate temporary cash deficits or surpluses across commercial banks.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63835"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Weaken on Domestic Exchange on Softer Spot Inquiries",
-   "summary": "Gold and silver futures declined on the Multi Commodity Exchange following reduced consumer interest and active market liquidations. Both metals recorded downward pressure as buyers remained hesitant at existing quote levels.",
-   "why": "Commodity futures react to immediate supply-demand balances, where slack spot consumption frequently prompts sellers to discount trade prices.",
+   "title": "Precious Metals Decline on Domestic Commodity Platform Amid Tepid Purchases",
+   "summary": "Values for bullion contracts fell during trading on the Multi Commodity Exchange. The downturn was fueled by lower consumer demand alongside heightened selling activity.",
+   "why": "Commodity prices fluctuate in response to real-time supply and demand imbalances on spot and futures exchanges.",
    "source": "Deccan Chronicle",
    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR2VNTk5kWEI4SVNVM3BRLVpVLVRleHM1dW5PSjgtUjNKR1h6OWdIZEZMaXpVV2tHbG1ENUx5emNXM2V0OU5ZYVFqQjFZalBpLW8yanQ1SUZNdVF2b0RpRlhnU2xZODlIaWlveDgwUnFIaGRtcEZKQ19mNzdPT0VrTnc3OThvellNMzdQT2VFSVVOLUNuZF9fdnV6c1NYV3JmV1Jza0NkQmtqUdIBrwFBVV95cUxNenE4UzlfWmhBak5NTGFWMVZJa3lHalpJLTV3Q3RfZnY3OFNwdERUeEx1UlpOSk1JSlhpTnZJb3AzSUkxX3VJRjA4QmVtZW1fM0ZMaHJ6b1V1OVEtcGpiSWUtZG1JdWpvbnFsdllveXBhT0cweFFxUUg1RDNRQ1Q5OXhCODlpRHpmU2lTd2pDeUY5SEZYWmhyWWFXOWtDbWUxdUNXNmdxcklhMkRiM3ZV?oc=5"
   },
   {
-   "category": "Commodity",
-   "title": "International Gold Slips Lower Amid Geopolitical Friction and Monetary Outlook",
-   "summary": "Global gold benchmarks softened toward 4,120 dollars per ounce during ongoing Middle Eastern developments. Traders concurrently evaluated the future interest rate direction signaled by the United States central bank.",
-   "why": "Gold prices fluctuate in response to perceived safe-haven demand alongside shifting expectations regarding US real interest rate trends.",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMWppdy12Wl9VdHZZb05uRHdaeDh5ajJjZ0FRdF9iN0FqRzZHei16UWRWRXlwU1JRcklZRVZpWnc2SmlUcV9mc1dpVjlUdkZDeHZnYVozYzNrZld5aXNDTUNJdkhKeXFDNTNHUy1WRk9MUE5EYTVneWMxTzM4VDNoM2M0cTY1Mmx5Yk9DM3YyNFE3Y2x1WFI1cm1EQ3ljUQ?oc=5"
+   "category": "Economy",
+   "title": "Indian Rupee Touches Six-Week Peak Supported by Capital Inflows",
+   "summary": "The domestic currency appreciated to 94.43 against the American dollar. The recovery was aided by foreign funding related to a massive initial public offering alongside central bank participation.",
+   "why": "Large overseas capital inflows create demand for local currency, helping counteract external currency pressures.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRDZQOWU2ZlJUQ2VPTmoxMHVnY0ItRzdXcWFqNDNYcWV1TElZRE5JTUZ3bUNqbURja0NaOUtmaEVfdFN2MDY0cW5UWHd1TkZ3MWZ0THYtUkU5RS1HamN3dkxPR1FONWM5LTA5NXFBLXV1RkpXSFpndTlMUllsZU5BSjNoX2drS3ptM29ITzc3NG9ib3N3RkpVMFdITjhiMGNJTEpETlE1QTdnd1Ffb3ZtMThaSkRqV2pHa3VjSnhQTDQ5MnZpMlFJdHoxOEFOZXfSAdYBQVVfeXFMT3JaeHNjOV9UU1JKYjNUMDFaZzBwTUhVV25LaDN5ZzRtOEhhdkRWT1RqUk5nLUNWWmZMTW45anZETkxsNjlvWEdEd0NXX21Kb0QyUFdQR3RoMUZPQm1nODNhMkRsTEVWdExZampQWTVrbERkY2dOQ0Jva2o1UnV4T3V5UXNYak53SGxDZ3h5aHpwbXFVSElEUFVITXJOSWdFdS1rTC01bkIwejVqck5rV1JwaTZTVGZTUWs3N1l6X1ZseUdheS1xVkdBY2R5TXFnblNwTWJaZw?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "SpaceX Surges Following First Quarterly Profit Since Going Public",
-   "summary": "Premarket shares in SpaceX jumped up to 9% after the enterprise generated 4.4 billion dollars in quarterly earnings. Top-line revenue increased 161% year-on-year to finish at 14.58 billion dollars.",
-   "why": "Demonstrating positive net income following a public debut signals that an aggressive growth firm can successfully transition toward operational self-sufficiency.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/spacex-q3-2026-results-shares-jump-8-in-pre-market-after-4-4-billion-profit-what-musk-said-on-spacex-tesla-merger-11792575955027.html"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Climbs as Healthcare Equities Lead the Dow Higher",
-   "summary": "Major equity benchmarks in the United States moved higher, with the Dow Jones outpacing fellow indexes. The day's upward momentum was driven largely by strong performance across pharmaceutical and healthcare corporations.",
-   "why": "Sector leadership from defensive businesses often cushions major market averages when other cyclical or high-valuation segments pause.",
+   "title": "Wall Street Advances as Healthcare Shares Drive Dow Outperformance",
+   "summary": "American equity markets concluded on a firmer footing, with the Dow Jones Industrial Average outpacing broader indices. Gains across healthcare companies led the upward charge across the trading floor.",
+   "why": "Sector rotation into healthcare demonstrates how investor capital can migrate into defensive businesses during market cycles.",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2JsXzZ4YTVKcDJjNE9iTW42aU0wY0VOZXRtdDYxTzJTanBUOGZIT1FLSl9FVTNxQ1RpTVFSWHlsejgyR0Y1b3JQWXRlT0dEMjJPWWpXYlpfdFJQaHZKZG5KdUNMdW53NmlMd2RwUWJKWFB3dE9Xc2ZBbnRfalF3cWNzblhxTGJOTGlKYUh1a0FmWC1vaGQydWZXdTMzemJjSVg5NWZ0bw?oc=5"
   }
