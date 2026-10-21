@@ -1,5 +1,5 @@
 {
- "date": "Tuesday, 20 October 2026",
+ "date": "Wednesday, 21 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -14,98 +14,106 @@
   {
    "name": "GOLD $/oz",
    "value": "4,136",
-   "change": -0.58
+   "change": -0.16
   },
   {
    "name": "CRUDE WTI",
-   "value": "$99.9",
-   "change": 1.42
+   "value": "$98.9",
+   "change": 1.1
   },
   {
    "name": "USD/INR",
-   "value": "94.92",
+   "value": "94.77",
    "change": 0.0
   },
   {
    "name": "S&P 500",
-   "value": "7,691",
-   "change": 0.41
+   "value": "7,713",
+   "change": 0.28
   },
   {
    "name": "NASDAQ",
-   "value": "26,431",
-   "change": 1.11
+   "value": "26,425",
+   "change": -0.02
   },
   {
    "name": "DOW",
-   "value": "51,966",
-   "change": -0.07
+   "value": "52,496",
+   "change": 1.02
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Reliance Jio IPO Receives Strong Interest for Anchor Allocation",
-   "summary": "Anchor investors placed over twenty-five billion dollars in bids for the telecom unit's thirty thousand two hundred thirteen crore rupee public issue. This institutional demand exceeded the allocation available to anchor participants by more than thirty times.",
-   "why": "Anchor books signal how sophisticated institutional funds value a company before its shares open to retail and general investors.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/reliance-jio-ipo-massive-bids-top-25-bn-amount-for-anchor-book-okhow-mukesh-ambani-firm-attracted-top-notch-investors-11792488288719.html"
+   "title": "Indian Benchmark Indices Fall Under Energy Pressure and Earnings Disappointments",
+   "summary": "Domestic stock markets pulled back as investors cashed in profits amidst climbing petroleum rates. Soft corporate quarterly performance contributed to the benchmark ending substantially lower at 22,889.",
+   "why": "Corporate results and energy costs are foundational elements that directly influence company valuations and broader economic health.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/stocks-in-news-reliance-industries-eternal-ireda-yes-bank-trent-and-hindustan-zinc/articleshow/135074022.cms"
   },
   {
    "category": "Equity",
-   "title": "Hospitality Brand Parent PRISM Lowers Upcoming Initial Public Offering Size",
-   "summary": "The company plans to decrease its planned equity offering by nearly half to three thousand three hundred fifty crore rupees. The reduction follows notable enhancements in corporate cash generation and balance sheet strength.",
-   "why": "Firms often scale back primary equity issuances when internal cash flow improves sufficiently to reduce the requirement for fresh equity capital.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/oyo-parent-prism-to-nearly-halve-ipo-fresh-issue-size-to-up-to-rs-3350-cr-sources/articleshow/135068962.cms"
+   "title": "Key Banking Giant Reports Compressed Yields Alongside Sound Operational Gains",
+   "summary": "The private lender's net interest margin hit a three-year bottom during the second quarter. At the same time, primary operational income expanded and loan portfolio health showed progress.",
+   "why": "A lender's interest margins reflect its basic borrowing and lending profitability, making it an essential gauge for banking sector strength.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/mark-to-market/hdfc-bank-q2-quarterly-results-review-11792465354169.html"
   },
   {
    "category": "Commodity",
-   "title": "Domestic Gold and Silver Quotations Reach Elevated Thresholds",
-   "summary": "During festival trading, physical gold climbed past one lakh forty-seven thousand rupees per ten grams. Simultaneously, silver traded close to two lakh ten thousand rupees per kilogram.",
-   "why": "Precious metal prices in India indicate consumer appetite during auspicious festivals as well as underlying asset valuation patterns.",
-   "source": "NDTV Profit",
-   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNejZmU0lOMjhZNVA3VGZnLUc2dk5yaVdmYlYwQjk0c2RpeElFLWpteUlNbUpCcFh0eGQwUkVGLVRZblN3Zi1JME10TE1nSk9jYTFLUVNQMW8xMjhQUklXbUFPWDZWOFEwbEhXM1FMTHRMeG9yYWd2TmNLRXpkNS1tUlBOZjNSbEZIX1JZdFVkWUZZWGUzcElZV2tQb1ltSUJsYXpDSGxfRDF1emY4VmpkazQyVlJ6S2lwNS15Z193c19sam54Vi03OW9iclQ1Mmo4QVpuZEsweGJfMU01YTQ00gHnAUFVX3lxTE9xY3YzUE41VVB6X1RaRHd3aGpTc3hVcnRJWERacUZwMlRnRXNaZzJDNGVPYkt4dks1a3ZwR3JsSmxJaFJCbjRZTDFicFBFTTFvSHJWZHdlMklNdHJwdGZJQnNTS1BQazRES3ZXV1lwb3ZsdGFJSVFsLTAwUElZX0U5cVl3WWdoOEswaVhQcWktVTl1Y3dTS1ZHaWlreHA3TFJIc2VodGtROThhWHZSTDNfNktJaG1rV3Fsdjl0bTRyVWV6VVFrYnZiNERJY3hQeEhQVmxGN0FuRTQwbEhBR0JucVlEZ1JrQQ?oc=5"
+   "title": "Petroleum Prices Consolidate Following Geopolitical Friction and Fluctuating Headlines",
+   "summary": "Crude values balanced out after volatile trading as market participants examined ambiguous messages concerning potential conflict resolution between Washington and Tehran.",
+   "why": "Crude movements affect international shipping expenses, inflation data, and current account deficits for net energy importing nations.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/oil-steadies-as-traders-weigh-conflicting-signals-on-iran-talks-11792537101821.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Bullion Investment Vehicles Reach Annual Peak Despite Inflationary Headwinds",
+   "summary": "Elevated inflation readings put downward pressure on spot precious metal rates. Conversely, investor participation in gold exchange-traded funds increased, driving total assets in these products to fresh highs.",
+   "why": "Institutional flows into exchange-traded products indicate underlying long-term portfolio diversification even during short-term price pullbacks.",
+   "source": "Kitco",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWS1XbUdWTEt4Vjd3MHRGSWhndDhGUFNnaDR1OExpajlpX1kwVVAxZXpPb1l5N1dPRm5QRTkyRjRVc0dKRDdiTVJ0Z09nQmpzaU9Ub2M3MVhDYksxelZOc1htWXg0UlIydGE4VE1iVkplbnFDWDVJMG1UWVNESk1TUmZRQWdzWUF0SWVaQTl1Zk1jLTZadlRRaWN6ZjVPS2drM1NvQ1Z4SHh6dHdjWXB2WjltU2VzU2RjY0VzQXV3?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Plans Short-Term Liquidity Support Operation",
-   "summary": "The central authority will hold an overnight variable rate repo auction on October twenty-first under its liquidity framework. The move comes after reviewing evolving short-term cash conditions within the banking system.",
-   "why": "Central banks conduct repo operations to lend funds to commercial banks, helping manage systemic liquidity and stabilize short-term interest rates.",
+   "title": "Banking Regulator Schedules Short Term Liquidity Auction for Financial Institutions",
+   "summary": "The central bank organized an overnight repo operation under its liquidity adjustment mechanism. This measure comes in response to an evaluation of immediate cash flow dynamics across domestic lenders.",
+   "why": "Variable repo facilities let the monetary authority manage transient cash shortages in the banking sector to maintain orderly interbank rates.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63833"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Closes Lower Against US Dollar",
-   "summary": "The domestic unit dipped by two paise to conclude at ninety-four point nine one per American dollar.",
-   "why": "Exchange rate variations affect the cost of imported commodities and influence foreign capital flows within the broader economy.",
-   "source": "The Shillong Times",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOejFOdkd5c2RKeEJ3eEN6TjA2b1FhRUZERUNNZVc0ekJYdDlNbWlrOWVxbXgtVXVyc3UwUW5zZWVfVzJ5Q09PSGp6NU11Z0JzR2swaWppRjlhSlV0SUlncXg3NVlJajFPN1ZkSHRFc19CZ2xIek4xVld5ZFhoU0x3SUt1bU1iVkdkVWRRRVh3OFU3ZHR2?oc=5"
+   "title": "Indian Currency Gains Against the Dollar Following Central Bank Actions",
+   "summary": "The domestic rupee strengthened to 94.80 per unit, advancing by nine paise during the session. The uptick occurred as the monetary authority actively entered the foreign exchange market.",
+   "why": "Direct currency market participation prevents sudden exchange rate depreciation, helping keep imported goods from becoming excessively expensive.",
+   "source": "BW Businessworld",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQN3IyZVpFUDd1NW85MnJ6cHhaNUI4M2t3QkFmTGlKWmJQaXJjY3BOZmFYcWlBaXM3cTlUNk85Z01UZFp1bFI0eG1tNU80RkxMMEhCRmJlVnlUZHAzaFR4TXlnYXJjODJNV0lrYWVINUp5TVBCT3RLOHhBY0JLS0dEcWNTVENUOTdiNnFXRFlNMmlXZw?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Automaker General Motors Posts Operating Earnings Growth",
-   "summary": "The vehicle manufacturer reported four point one billion dollars in adjusted quarterly operating earnings, marking a twenty-two percent year-on-year rise. Demand for pickup models and sport utility vehicles drove the performance past market estimates.",
-   "why": "Quarterly earnings results from legacy manufacturers offer clear evidence about corporate operational efficiency and end-consumer demand.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-gms-core-profit-rises-22-on-strength-of-pickup-truck-business/articleshow/135068643.cms"
+   "title": "American Equities Advance as Medical and Defensive Shares Attract Buyers",
+   "summary": "Major United States stock averages finished in positive territory, with blue-chip industrial shares leading the broader market. Medical and healthcare firms provided the strongest upward momentum throughout the trading day.",
+   "why": "A market advance led by healthcare often highlights a defensive posture by market participants seeking steady corporate performance.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2JsXzZ4YTVKcDJjNE9iTW42aU0wY0VOZXRtdDYxTzJTanBUOGZIT1FLSl9FVTNxQ1RpTVFSWHlsejgyR0Y1b3JQWXRlT0dEMjJPWWpXYlpfdFJQaHZKZG5KdUNMdW53NmlMd2RwUWJKWFB3dE9Xc2ZBbnRfalF3cWNzblhxTGJOTGlKYUh1a0FmWC1vaGQydWZXdTMzemJjSVg5NWZ0bw?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "United States Equity Futures Drop as Crude Surpasses Benchmark",
-   "summary": "Contracts tied to major American stock benchmarks declined as technology shares faced fresh headwinds. At the same time, crude oil prices crossed one hundred ten dollars per barrel.",
-   "why": "Surging fuel costs can heighten corporate operating expenditure and dampen sentiment across global equity markets.",
-   "source": "Investing.com",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOc3RONS1WcUhUam1hQkFZbWlZX0VoUWdRSTNtYXI5UVAwZHpGOXZ5dW1kOTJQLS1iMGVXMjgwcUh5Q2ozeklSRkFmT2pWRXlJVDRjWDU3SlpVblBITlhyUXlTVVBtMDBSQldnSVltaXRZNXdvNW1rdWZRaDNXd1ZVbjVNS3ZjdWNjMVV5YXF5SHJJd09pUmpNOGhXSmF3NmlOdGVrX2Nza2pkRlcxVkRQZ1o3c19sVVgyMUs2QzVfRTNGUQ?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Frontier Tech Firms Aim for Record Public Market Capitalizations",
-   "summary": "Following a space venture's seventy-five billion dollar listing at a valuation above one point seven trillion dollars, an artificial intelligence developer is weighing a two trillion dollar debut. The potential listing could seek up to one hundred billion dollars.",
-   "why": "Mega-sized initial offerings demonstrate the magnitude of capital that global public markets can allocate to emerging technological industries.",
+   "title": "Hardware Server Data Reassures Investors and Lifts Technology Sector",
+   "summary": "Computing and semiconductor firms gained ground in extended trading following encouraging early revenue numbers from Super Micro Computer. The figures helped soothe market anxiety regarding enterprise commitments to technological infrastructure.",
+   "why": "Supply-chain hardware receipts provide tangible evidence of whether broader enterprise spending in computational infrastructure remains intact.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/spacex-ipo-vs-upcoming-anthropic-ipo-will-claude-maker-beat-elon-musk-s-75-bn-record-11792493013233.html"
+   "url": "https://www.livemint.com/market/ai-stocks-rally-after-super-micro-preliminary-sales-bring-relief-11792535998995.html"
+  },
+  {
+   "category": "US Markets",
+   "title": "Analysts Anticipate Federal Reserve Inaction in October Followed by Winter Adjustment",
+   "summary": "An overwhelming consensus of professional forecasters expects the American central bank to maintain existing borrowing costs at its next gathering. Most surveyed anticipate a subsequent interest rate hike toward year-end.",
+   "why": "Global capital availability and foreign institutional investments in emerging economies are heavily swayed by the direction of US benchmark interest rates.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUFYOUZFZXZ4UWJSN1J6RkRxM1lkdGJsUFZRZ2puQkFnRk9rczVQZF9iUS12amVsUl9ESnA4MmNlUmFuVnBVY3BoeVZoVWx1dmwtSWdCa2tGUUlXeXdWR0o0U2o5NHdUend5d2o3c1NoUlZTQUNyWFFEalBHY25QMVptcnFoRnZiSk1JVDFyb1VFYkg0NGRJaXhWemlUY3gxX3YxeVh0YkNMSHNQU21pWkc0OVQ?oc=5"
   }
  ]
 }
