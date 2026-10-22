@@ -20,7 +20,8 @@
     "Companies spend more and earn less, and the Nifty feels it."
    ]
   ],
-  "oneline": "When you read “crude up”, read: India's costs went up today."
+  "oneline": "When you read “crude up”, read: India's costs went up today.",
+  "learn": "/learn/beginner/module-5.html"
  },
  {
   "title": "What is India VIX?",
@@ -43,7 +44,8 @@
     "It shows the mood, not the direction. It can be high on up days too."
    ]
   ],
-  "oneline": "VIX up means fear up. It tells you the mood, not where the market goes."
+  "oneline": "VIX up means fear up. It tells you the mood, not where the market goes.",
+  "learn": "/learn/beginner/module-6.html"
  },
  {
   "title": "Why bank stocks fall first on red days",
@@ -66,7 +68,8 @@
     "The same size makes them bounce quickly when mood improves."
    ]
   ],
-  "oneline": "Banks are the market's mirror: they show the mood first."
+  "oneline": "Banks are the market's mirror: they show the mood first.",
+  "learn": "/learn/intermediate/module-3.html?preview=1"
  },
  {
   "title": "What is the rupee, and why does it move?",
@@ -89,7 +92,8 @@
     "A weaker rupee makes imports, travel and foreign education costlier."
    ]
   ],
-  "oneline": "More dollars coming in means a stronger rupee."
+  "oneline": "More dollars coming in means a stronger rupee.",
+  "learn": "/learn/beginner/module-5.html"
  },
  {
   "title": "Sensex vs Nifty: what is the difference?",
@@ -112,6 +116,7 @@
     "They are mostly similar, so one tells you the other's story."
    ]
   ],
-  "oneline": "Sensex and Nifty are two scorecards for the same big companies."
+  "oneline": "Sensex and Nifty are two scorecards for the same big companies.",
+  "learn": "/learn/beginner/module-1.html"
  }
 ]

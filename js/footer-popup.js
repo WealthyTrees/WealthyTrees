@@ -53,7 +53,7 @@
 
   /* ---- Subscribe popup: once per visit (tab session), after the intro ---- */
   if (/404/.test(location.pathname)) return;
-  try { if (sessionStorage.getItem("wt-sub-shown") === "1") return; } catch (e) {}
+  var auto = true; try { if (sessionStorage.getItem("wt-sub-shown") === "1") auto = false; } catch (e) {}
   function show() {
     if (document.getElementById("wt-sub")) return;
     try { sessionStorage.setItem("wt-sub-shown", "1"); } catch (e) {}
@@ -72,7 +72,10 @@
     document.body.appendChild(d);
   }
   function wait() { if (document.getElementById("wt-dussehra-intro")) return setTimeout(wait, 500); setTimeout(show, 1500); }
-  setTimeout(wait, 1200);
+  if (auto) setTimeout(wait, 1200);
+  window.wtSubscribe = show;
+  document.addEventListener("click", function (e) { var t = e.target.closest && e.target.closest("[data-wt-subscribe]"); if (t) { e.preventDefault(); show(); } });
+  if (/[?&]subscribe=1/.test(location.search)) setTimeout(show, 400);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

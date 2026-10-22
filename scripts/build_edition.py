@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Builds THE 9:15 (mobile pages + desktop broadsheet) from data/brief.json, charts.json, explain.json. No dependencies."""
-import json, html, datetime as dt, os
+import json, html, datetime as dt, os, sys
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 now = dt.datetime.now(IST)
+TODAY = now.strftime("%Y-%m-%d")
+if now.weekday() >= 5 and not os.environ.get("FORCE"):
+    print("weekend: edition not rebuilt"); sys.exit(0)
 J = lambda f, d=None: json.load(open(f"{R}/data/{f}")) if os.path.exists(f"{R}/data/{f}") else d
 brief, explain, charts = J("brief.json"), J("explain.json"), J("charts.json", {})
 e = lambda s: html.escape(str(s))
@@ -17,19 +20,31 @@ def short(s, n=230):
     cut = s[:n]; m = max(cut.rfind(". "), cut.rfind("; "))
     return cut[:m + 1] if m > 80 else cut.rsplit(" ", 1)[0] + "…"
 
-def idx(n):
-    c = charts.get(n) or []
-    if len(c) < 2: return None
-    a, b = c[-2]["close"], c[-1]["close"]
-    return {"value": f"{b:,.0f}", "change": (b - a) / a * 100}
-
+def lc(n):
+    """Last CLOSE only: ignores today's (still moving) row, so the paper never shows intraday prices."""
+    rows = [r for r in (charts.get(n) or []) if r["time"] < TODAY]
+    if len(rows) < 2: return None
+    p, q = rows[-2]["close"], rows[-1]["close"]
+    return {"v": q, "c": (q - p) / p * 100, "d": rows[-1]["time"]}
+FMT = {"Gold": "${:,.0f}", "Crude WTI": "${:,.2f}", "USD/INR": "{:,.2f}"}
 def card(n, label=None):
-    t = idx(n) if n in ("Nifty 50", "Sensex", "Bank Nifty", "Nifty IT") else None
-    t = t or tk.get(n.upper()) or tk.get(n)
+    t = lc(n)
     if not t: return ""
-    c = float(t["change"]); cls = "up" if c >= 0 else "dn"
-    return (f'<div class="cd"><small>{e(label or n)}</small><strong>{e(t["value"])}</strong>'
-            f'<b class="{cls}">{"▲" if c >= 0 else "▼"} {abs(c):.2f}%</b></div>')
+    cls = "up" if t["c"] >= 0 else "dn"
+    return (f'<div class="cd"><small>{e(label or n)}</small><strong>{e(FMT.get(n, "{:,.0f}").format(t["v"]))}</strong>'
+            f'<b class="{cls}">{"▲" if t["c"] >= 0 else "▼"} {abs(t["c"]):.2f}%</b></div>')
+
+def glance():
+    rows, mx = [], 0.5
+    for n, lab in [("Bank Nifty", "Banks"), ("Nifty IT", "IT"), ("Nifty Pharma", "Pharma"), ("Nifty Auto", "Auto"), ("Nifty Metal", "Metals")]:
+        t = lc(n)
+        if t: rows.append((lab, t)); mx = max(mx, abs(t["c"]))
+    if not rows: return ""
+    body = "".join(f'<div class="gr"><span class="gl">{lab}</span><span class="gb"><i class="{"up" if t["c"] >= 0 else "dn"}" style="width:{max(6, abs(t["c"]) / mx * 100):.0f}%"></i></span>'
+                   f'<b class="{"up" if t["c"] >= 0 else "dn"}">{"▲" if t["c"] >= 0 else "▼"} {abs(t["c"]):.2f}%</b></div>' for lab, t in rows)
+    r = lc("USD/INR")
+    foot = (f'<p class="gf">USD/INR closed <b>{abs(r["c"]):.2f}%</b> {"lower, a stronger rupee" if r["c"] < 0 else "higher, a weaker rupee"}.</p>') if r else ""
+    return f'<article class="sty glance"><small class="tag">AT A GLANCE</small><h3>Sector scoreboard</h3><p class="src">Last close, % change</p><div class="rows">{body}</div>{foot}</article>'
 
 def story(i, w=True):
     src = f'<a href="{e(i["url"])}" rel="noopener">{e(i["source"])}</a>' if i.get("url") else e(i.get("source", ""))
@@ -47,7 +62,8 @@ d0, d, n, x = dt.date(2026, 10, 26), now.date(), 0, dt.date(2026, 10, 26)
 while x <= d:
     n += x.weekday() < 5; x += dt.timedelta(days=1)
 edno = f"Edition No. {n} · {now.strftime('%a %d %b %Y')}"
-stamp = f"Prices as of {now.strftime('%I:%M %p').lstrip('0')} IST · last close"
+_n = lc("Nifty 50")
+stamp = "Closing prices · " + (dt.date.fromisoformat(_n["d"]).strftime("%a %d %b") if _n else "last close")
 eq, ec, cm, us = by("Equity"), by("Economy"), by("Commodity"), by("US Markets")
 lead = eq[0] if eq else items[0]
 inside = [(2, "MARKETS", (eq[1:] or [lead])[0]), (3, "INDIA &amp; ECONOMY", (ec or [lead])[0]), (4, "COMMODITIES &amp; WORLD", (cm + us or [lead])[0])]
@@ -55,15 +71,15 @@ ex = explain[(n - 1) % len(explain)] if n > 0 else explain[0]
 
 watch = []
 def lvl(n_, txt):
-    t = tk.get(n_)
-    if t: watch.append(txt.format(v=t["value"], c=float(t["change"])))
-lvl("NIFTY 50", "Nifty closed at {v} ({c:+.2f}%). Does it hold or slip at the open?")
-lvl("CRUDE WTI", "Crude (WTI) at {v} ({c:+.2f}%). Oil moves India’s costs.")
+    t = lc(n_)
+    if t: watch.append(txt.format(v=FMT.get(n_, "{:,.0f}").format(t["v"]), c=t["c"]))
+lvl("Nifty 50", "Nifty closed at {v} ({c:+.2f}%). Does it hold or slip at the open?")
+lvl("Crude WTI", "Crude (WTI) at {v} ({c:+.2f}%). Oil moves India’s costs.")
 lvl("USD/INR", "Rupee at {v} per dollar ({c:+.2f}%).")
 lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%, which sets our opening tone.")
 btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>EXPLAIN ONE THING</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
        '<div class="bx"><small>WHERE TO LOOK TODAY</small><ul>'+''.join('<li>'+e(w)+'</li>' for w in watch[:2])+'</ul></div>'
-       '<a class="bx bg" href="/"><small>GET IT FREE</small><h4>THE 9:15 every weekday morning</h4><p>Subscribe on wealthytrees.online and it lands in your inbox before the bell.</p><i>wealthytrees.online →</i></a></div>')
+       '<a class="bx bg" href="/?subscribe=1"><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
 teasers_unused = "".join(f'<a class="tz" href="#p{p}" data-go="{p-1}"><small>{t}</small><h4>{e(i["title"])}</h4><p>{e(short(i["summary"], 120))}</p><i>Page {p} →</i></a>' for p, t, i in inside)
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
       f'<p class="stamp">{e(stamp)}</p><div class="fwrap"><div class="fmain"><small class="tag">THE LEAD</small>'
@@ -73,27 +89,27 @@ p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")
       + "".join(f'<a href="#p{p}" data-go="{p-1}"><i>PAGE {p}</i> {e(i["title"])}</a>' for p, t, i in inside)
       + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · EXPLAIN ONE THING</i> {e(ex["title"])}</a></div></aside></div>'
       + btm)
-mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg" alt=""><small class="m-by">by the makers of<br>wealthytrees.online</small></div>'
+mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg" alt=""><span class="m-wt">WealthyTrees</span></div>'
         f'<div class="m-c"><small>WEALTHYTREES</small><h1 class="mh">THE 9:15</h1></div><span>{e(edno)}</span></header>'
         f'<p class="tagl">The Morning Paper — Markets, simplified. In 2 minutes.</p>')
 pages = [f'<section class="pg first" id="p1" data-title="Front Page">{mast}<div class="in">{p1}</div>'
          f'<footer><span>wealthytrees.online · PAGE 1 OF 6</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
-def stories(lst, k_show=2, first_w=True):
-    return '<div class="stories">' + "".join(story(i, first_w and k == 0).replace('class="sty"', 'class="sty%s"' % (" dx" if k >= k_show else ""), 1) for k, i in enumerate(lst)) + '</div>'
+def stories(lst, k_show=2, first_w=True, glance_html=""):
+    return '<div class="stories">' + "".join(story(i, first_w and k == 0).replace('class="sty"', 'class="sty%s"' % (" dx" if k >= k_show else ""), 1) for k, i in enumerate(lst)) + glance_html + '</div>'
 pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])), "Markets"))
-pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", stories(ec[:4]) if ec else "<p>No economy stories today.</p>", "India & Economy"))
+pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", stories(ec[:3], glance_html=glance()) if ec else "<p>No economy stories today.</p>", "India & Economy"))
 pages.append(page(4, "COMMODITIES &amp; WORLD", "Commodities &amp; World",
-    f'<div class="strip">{card("GOLD $/oz","GOLD")}{card("CRUDE WTI","CRUDE")}{card("USD/INR")}{card("S&P 500")}</div>'
+    f'<div class="strip">{card("Gold","GOLD")}{card("Crude WTI","CRUDE")}{card("USD/INR")}{card("S&P 500")}</div>'
     + stories((cm[:2] + us[:2]), 2, False), "Commodities & World"))
 steps = "".join(f'<div class="st"><span>{k+1}</span><div><h3>{e(s[0])}</h3><p>{e(s[1])}</p></div></div>' for k, s in enumerate(ex["steps"]))
 pages.append(page(5, "EXPLAIN ONE THING", e(ex["title"]),
-    f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="/learn/">Learn this properly, free →</a></div><div class="xr">{steps}</div></div>', "Explain One Thing"))
+    f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a></div><div class="xr">{steps}</div></div>', "Explain One Thing"))
 wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", quote=True).replace(" ", "%20")
 pages.append(page(6, "TOMORROW &amp; WRAP", "Today at the Bell",
     '<div class="twrap"><div><p class="lead">Where to look when the bell rings. Not predictions.</p><ul>' + "".join(f"<li>{e(w)}</li>" for w in watch) + '</ul></div>'
-    '<div><div class="box">GET THE 9:15 — FREE<br>Every weekday morning. Read it here, or tap “Subscribe” on wealthytrees.online to get it in your inbox.</div>'
+    '<div><a class="box subs" href="/?subscribe=1"><b>GET THE 9:15 — FREE</b>Every weekday at 8:30 AM, in your inbox before the bell.<u>Subscribe free →</u></a>'
     f'<a class="share" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div></div>'
-    '<p class="src">Prices are last-close values, stamped with the time they were updated. Always check live prices before acting.</p>', "Tomorrow"))
+    '<p class="src">All prices are the previous trading day’s closing values and do not change during the day. Check live prices before acting.</p>', "Tomorrow"))
 
 CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read()
 titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Explain One Thing", "Tomorrow"]
@@ -109,7 +125,7 @@ document.addEventListener('keydown',function(ev){if(!q.matches)return;if(ev.key=
 q.addEventListener?q.addEventListener('change',init):0;init()})();"""
 out = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        f'<title>THE 9:15 · {e(edno)} · WealthyTrees</title><meta name="description" content="{e(lead["title"])}. Markets, simplified. In 2 minutes.">'
-       f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
+       f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
        f'<style>{CSS}</style></head><body>{util}<main>{"".join(pages)}</main><script>{JS}</script></body></html>')
 os.makedirs(f"{R}/pages", exist_ok=True); os.makedirs(f"{R}/edition", exist_ok=True)
 open(f"{R}/pages/the-915.html", "w").write(out)
