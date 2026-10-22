@@ -79,7 +79,7 @@ lvl("USD/INR", "Rupee at {v} per dollar ({c:+.2f}%).")
 lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%, which sets our opening tone.")
 btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>EXPLAIN ONE THING</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
        '<div class="bx"><small>WHERE TO LOOK TODAY</small><ul>'+''.join('<li>'+e(w)+'</li>' for w in watch[:2])+'</ul></div>'
-       '<a class="bx bg" href="/?subscribe=1"><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
+       '<a class="bx bg" href="#" data-wt-sub><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
 teasers_unused = "".join(f'<a class="tz" href="#p{p}" data-go="{p-1}"><small>{t}</small><h4>{e(i["title"])}</h4><p>{e(short(i["summary"], 120))}</p><i>Page {p} →</i></a>' for p, t, i in inside)
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
       f'<p class="stamp">{e(stamp)}</p><div class="fwrap"><div class="fmain"><small class="tag">THE LEAD</small>'
@@ -107,11 +107,11 @@ pages.append(page(5, "EXPLAIN ONE THING", e(ex["title"]),
 wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", quote=True).replace(" ", "%20")
 pages.append(page(6, "TOMORROW &amp; WRAP", "Today at the Bell",
     '<div class="twrap"><div><p class="lead">Where to look when the bell rings. Not predictions.</p><ul>' + "".join(f"<li>{e(w)}</li>" for w in watch) + '</ul></div>'
-    '<div><a class="box subs" href="/?subscribe=1"><b>GET THE 9:15 — FREE</b>Every weekday at 8:30 AM, in your inbox before the bell.<u>Subscribe free →</u></a>'
+    '<div><a class="box subs" href="#" data-wt-sub><b>GET THE 9:15 — FREE</b>Every weekday at 8:30 AM, in your inbox before the bell.<u>Subscribe free →</u></a>'
     f'<a class="share" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div></div>'
     '<p class="src">All prices are the previous trading day’s closing values and do not change during the day. Check live prices before acting.</p>', "Tomorrow"))
 
-CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read()
+CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read()
 titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Explain One Thing", "Tomorrow"]
 util = ('<div class="util"><a href="/">← WealthyTrees</a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))
@@ -123,6 +123,7 @@ document.addEventListener('click',function(ev){var g=ev.target.closest('[data-go
 document.getElementById('pv').onclick=function(){show(i-1,1)};document.getElementById('nx').onclick=function(){show(i+1,1)};
 document.addEventListener('keydown',function(ev){if(!q.matches)return;if(ev.key==='ArrowRight')show(i+1,1);if(ev.key==='ArrowLeft')show(i-1,1)});
 q.addEventListener?q.addEventListener('change',init):0;init()})();"""
+JS += open(f"{R}/scripts/tools.js").read()
 out = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        f'<title>THE 9:15 · {e(edno)} · WealthyTrees</title><meta name="description" content="{e(lead["title"])}. Markets, simplified. In 2 minutes.">'
        f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
