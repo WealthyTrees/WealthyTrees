@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T07:20:12+00:00",
+ "updated": "2026-10-22T11:56:19+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
@@ -24,12 +24,12 @@
   "Nifty Auto": {
    "yahoo": "only 5 rows",
    "etf": "AUTOBEES.NS ok (scaled)",
-   "rows": 493
+   "rows": 494
   },
   "Nifty Metal": {
    "yahoo": "only 5 rows",
    "etf": "METALIETF.NS ok (scaled)",
-   "rows": 494
+   "rows": 495
   },
   "India VIX": {
    "yahoo": "ok",
