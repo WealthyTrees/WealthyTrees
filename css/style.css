@@ -339,3 +339,4 @@ nav{margin-left:auto}
 @media(prefers-reduced-motion:reduce){.nse .track{animation:none}.tk-view{overflow-x:auto}.ticker.live .tk-dot{animation:none}}
 
 a.tk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover b{text-decoration:underline}
+.e915{display:block;width:100%;max-width:560px;height:78vh;min-height:520px;border:0;margin:0 auto;border-radius:8px;background:#e9e6dd}

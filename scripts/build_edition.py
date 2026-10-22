@@ -22,8 +22,17 @@ def chg(c):
     c = float(c); cls = "up" if c >= 0 else "dn"
     return f'<b class="{cls}">{"▲" if c >= 0 else "▼"} {abs(c):.2f}%</b>'
 
+try: charts = json.load(open(f"{R}/data/charts.json"))
+except Exception: charts = {}
+def idx(n):
+    c = charts.get(n) or []
+    if len(c) < 2: return tk.get(n)
+    a, b = c[-2]["close"], c[-1]["close"]
+    return {"value": f"{b:,.0f}", "change": (b - a) / a * 100}
+
 def card(n, label=None):
-    t = tk.get(n)
+    t = idx(n) if n in ("Nifty 50", "Sensex", "Bank Nifty", "Nifty IT") else tk.get(n)
+    if not t and n in ("NIFTY 50", "SENSEX"): t = tk.get(n)
     if not t: return ""
     return f'<div class="cd"><small>{e(label or n)}</small><strong>{e(t["value"])}</strong>{chg(t["change"])}</div>'
 
@@ -52,7 +61,7 @@ eq, ec, cm, us = by("Equity"), by("Economy"), by("Commodity"), by("US Markets")
 lead = eq[0] if eq else items[0]
 inside = [(2, (eq[1:] or [lead])[0]), (3, (ec or [lead])[0]), (4, (cm + us or [lead])[0])]
 
-p1 = (f'<div class="strip">{card("NIFTY 50")}{card("SENSEX")}{card("GOLD $/oz","GOLD")}{card("CRUDE WTI","CRUDE")}</div>'
+p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
       f'<p class="stamp">{e(stamp)}</p><small class="tag">THE LEAD</small>'
       f'<h1>{e(lead["title"])}</h1><p class="lead">{e(short(lead["summary"], 135))}</p>'
       f'<div class="ins"><b>INSIDE TODAY</b>'
