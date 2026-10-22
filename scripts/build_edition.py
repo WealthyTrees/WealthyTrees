@@ -111,7 +111,7 @@ pages.append(page(6, "TOMORROW &amp; WRAP", "Today at the Bell",
     f'<a class="share" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div></div>'
     '<p class="src">All prices are the previous trading day’s closing values and do not change during the day. Check live prices before acting.</p>', "Tomorrow"))
 
-CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read()
+CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read()
 titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Explain One Thing", "Tomorrow"]
 util = ('<div class="util"><a href="/">← WealthyTrees</a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))
