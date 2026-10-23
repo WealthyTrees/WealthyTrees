@@ -56,7 +56,7 @@ def story(i, w=True):
 def page(n, tag, head, body, title):
     return (f'<section class="pg" id="p{n}" data-title="{e(title)}"><div class="bar"><b>THE 9:15</b><span>{e(edno)}</span></div>'
             f'<div class="in"><small class="tag">PAGE {n} · {tag}</small><h2>{head}</h2>{body}</div>'
-            f'<footer><span>wealthytrees.online · PAGE {n} OF 6</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>')
+            f'<footer><span>wealthytrees.online · PAGE {n} OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>')
 
 d0, d, n, x = dt.date(2026, 10, 26), now.date(), 0, dt.date(2026, 10, 26)
 while x <= d:
@@ -73,12 +73,12 @@ watch = []
 def lvl(n_, txt):
     t = lc(n_)
     if t: watch.append(txt.format(v=FMT.get(n_, "{:,.0f}").format(t["v"]), c=t["c"]))
-lvl("Nifty 50", "Nifty closed at {v} ({c:+.2f}%). Does it hold or slip at the open?")
-lvl("Crude WTI", "Crude (WTI) at {v} ({c:+.2f}%). Oil moves India’s costs.")
-lvl("USD/INR", "Rupee at {v} per dollar ({c:+.2f}%).")
-lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%, which sets our opening tone.")
+lvl("Nifty 50", "Nifty 50 closed at {v} ({c:+.2f}%).")
+lvl("Sensex", "Sensex closed at {v} ({c:+.2f}%).")
+lvl("Crude WTI", "Crude (WTI) settled at {v} ({c:+.2f}%).")
+lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%.")
 btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>EXPLAIN ONE THING</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
-       '<div class="bx"><small>WHERE TO LOOK TODAY</small><ul>'+''.join('<li>'+e(w)+'</li>' for w in watch[:2])+'</ul></div>'
+       '<div class="bx"><small>AT THE CLOSE</small><ul>'+''.join('<li>'+e(w)+'</li>' for w in watch[:3])+'</ul></div>'
        '<a class="bx bg" href="#" data-wt-sub><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
 teasers_unused = "".join(f'<a class="tz" href="#p{p}" data-go="{p-1}"><small>{t}</small><h4>{e(i["title"])}</h4><p>{e(short(i["summary"], 120))}</p><i>Page {p} →</i></a>' for p, t, i in inside)
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
@@ -93,7 +93,7 @@ mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg"
         f'<div class="m-c"><small>WEALTHYTREES</small><h1 class="mh">THE 9:15</h1></div><span>{e(edno)}</span></header>'
         f'<p class="tagl">The Morning Paper — Markets, simplified. In 2 minutes.</p>')
 pages = [f'<section class="pg first" id="p1" data-title="Front Page">{mast}<div class="in">{p1}</div>'
-         f'<footer><span>wealthytrees.online · PAGE 1 OF 6</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
+         f'<footer><span>wealthytrees.online · PAGE 1 OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
 def stories(lst, k_show=2, first_w=True, glance_html=""):
     return '<div class="stories">' + "".join(story(i, first_w and k == 0).replace('class="sty"', 'class="sty%s"' % (" dx" if k >= k_show else ""), 1) for k, i in enumerate(lst)) + glance_html + '</div>'
 pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])), "Markets"))
@@ -101,24 +101,18 @@ pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", stories(ec[:3
 pages.append(page(4, "COMMODITIES &amp; WORLD", "Commodities &amp; World",
     f'<div class="strip">{card("Gold","GOLD")}{card("Crude WTI","CRUDE")}{card("USD/INR")}{card("S&P 500")}</div>'
     + stories((cm[:2] + us[:2]), 2, False), "Commodities & World"))
+wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", quote=True).replace(" ", "%20")
 steps = "".join(f'<div class="st"><span>{k+1}</span><div><h3>{e(s[0])}</h3><p>{e(s[1])}</p></div></div>' for k, s in enumerate(ex["steps"]))
 pages.append(page(5, "EXPLAIN ONE THING", e(ex["title"]),
-    f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a></div><div class="xr">{steps}</div></div>', "Explain One Thing"))
-wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", quote=True).replace(" ", "%20")
-pages.append(page(6, "TOMORROW &amp; WRAP", "Today at the Bell",
-    '<div class="twrap"><div><p class="lead">Where to look when the bell rings. Not predictions.</p><ul>' + "".join(f"<li>{e(w)}</li>" for w in watch) + '</ul></div>'
-    '<div><a class="box subs" href="#" data-wt-sub><b>GET THE 9:15 — FREE</b>Every weekday at 8:30 AM, in your inbox before the bell.<u>Subscribe free →</u></a>'
-    f'<a class="share" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div></div>'
-    '<p class="src">All prices are the previous trading day’s closing values and do not change during the day. Check live prices before acting.</p>', "Tomorrow"))
-
+    f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Explain One Thing"))
 CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read()
-titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Explain One Thing", "Tomorrow"]
+titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Explain One Thing"]
 util = ('<div class="util"><a href="/">← WealthyTrees</a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))
         + '</nav><span class="arr"><button id="pv" aria-label="Previous page">←</button><button id="nx" aria-label="Next page">→</button></span></div>')
 JS = """(function(){var p=[].slice.call(document.querySelectorAll('.pg')),m=document.querySelector('main'),q=matchMedia('(min-width:900px)'),b=[].slice.call(document.querySelectorAll('.tabs9 button')),i=0;
-function show(n,w){i=Math.max(0,Math.min(5,n));p.forEach(function(s,k){s.classList.toggle('on',k===i)});b.forEach(function(x,k){x.classList.toggle('on',k===i)});if(w)history.replaceState(null,'','#p'+(i+1));window.scrollTo(0,0)}
-function init(){m.classList.toggle('flip',q.matches);if(q.matches){var h=/^#p([1-6])$/.exec(location.hash);show(h?h[1]-1:i,0)}}
+function show(n,w){i=Math.max(0,Math.min(4,n));p.forEach(function(s,k){s.classList.toggle('on',k===i)});b.forEach(function(x,k){x.classList.toggle('on',k===i)});if(w)history.replaceState(null,'','#p'+(i+1));window.scrollTo(0,0)}
+function init(){m.classList.toggle('flip',q.matches);if(q.matches){var h=/^#p([1-5])$/.exec(location.hash);show(h?h[1]-1:i,0)}}
 document.addEventListener('click',function(ev){var g=ev.target.closest('[data-go]');if(g&&q.matches){ev.preventDefault();show(+g.getAttribute('data-go'),1)}});
 document.getElementById('pv').onclick=function(){show(i-1,1)};document.getElementById('nx').onclick=function(){show(i+1,1)};
 document.addEventListener('keydown',function(ev){if(!q.matches)return;if(ev.key==='ArrowRight')show(i+1,1);if(ev.key==='ArrowLeft')show(i-1,1)});

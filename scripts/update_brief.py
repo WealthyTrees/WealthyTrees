@@ -140,6 +140,16 @@ def yahoo_rows(sym):
                     continue
                 d = datetime.fromtimestamp(t + off, timezone.utc).strftime("%Y-%m-%d")
                 rows[d] = {"time": d, "open": round(o, 2), "high": round(h, 2), "low": round(l, 2), "close": round(c, 2), "volume": int(vol or 0)}
+            try:  # Yahoo often leaves the latest finished session out of the daily list; fill it from meta once that session is over
+                mt, cp = r["meta"], r["meta"].get("currentTradingPeriod", {}).get("regular", {})
+                sd = datetime.fromtimestamp(mt["regularMarketTime"] + off, timezone.utc).strftime("%Y-%m-%d")
+                if sd not in rows and rows and cp.get("end") and time.time() >= cp["end"] and mt["regularMarketTime"] >= cp.get("start", 0):
+                    c = float(mt["regularMarketPrice"]); pc = rows[max(rows)]["close"]
+                    if sd > max(rows) and 0 < c and abs(c / pc - 1) < 0.12:
+                        hi, lo = float(mt.get("regularMarketDayHigh") or c), float(mt.get("regularMarketDayLow") or c)
+                        rows[sd] = {"time": sd, "open": round(pc, 2), "high": round(max(hi, c, pc), 2), "low": round(min(lo, c, pc), 2), "close": round(c, 2), "volume": int(mt.get("regularMarketVolume") or 0)}
+            except Exception:
+                pass
             if len(rows) > 20:
                 return rows
             last = f"only {len(rows)} rows"
