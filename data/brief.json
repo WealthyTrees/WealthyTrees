@@ -1,5 +1,5 @@
 {
- "date": "Wednesday, 21 October 2026",
+ "date": "Friday, 23 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,107 +13,107 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,097",
-   "change": -1.27
+   "value": "4,032",
+   "change": -0.69
   },
   {
    "name": "CRUDE WTI",
-   "value": "$99.6",
-   "change": 2.5
+   "value": "$99.8",
+   "change": 0.28
   },
   {
    "name": "USD/INR",
    "value": "94.81",
-   "change": 0.38
+   "change": 0.0
   },
   {
    "name": "S&P 500",
-   "value": "7,757",
-   "change": 0.58
+   "value": "7,663",
+   "change": -1.21
   },
   {
    "name": "NASDAQ",
-   "value": "26,703",
-   "change": 1.05
+   "value": "26,009",
+   "change": -2.6
   },
   {
    "name": "DOW",
-   "value": "52,856",
-   "change": 0.69
+   "value": "52,868",
+   "change": 0.02
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Key Indian Stock Gauges Drop for Second Day While Tech Rallies",
-   "summary": "The benchmark Nifty fell over a third of a percent while the Sensex ended slightly lower. Information technology counters bucked the downward momentum to post positive returns.",
-   "why": "Observing sectoral trends helps individuals understand how particular industries can decouple from broad market declines.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-infosys-hcl-tech-bajaj-finance-bse-top-gainers-and-losers-on-nifty-and-sensex-on-wednesday/articleshow/135090920.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Zerodha Fund House Unveils New Product Tracking Major Banking Lenders",
-   "summary": "A newly introduced exchange-traded fund tracks the ten biggest listed lenders in India. The initial offering requires an entry threshold of one thousand rupees.",
-   "why": "Exchange-traded funds give novice investors diversified exposure to entire sectors through a single investment vehicle.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/want-exposure-to-indias-biggest-banks-zerodha-launches-new-etf/articleshow/135090790.cms"
+   "category": "US Markets",
+   "title": "Tech Sector Slump Drags Major American Indices Lower",
+   "summary": "Renewed reservations concerning artificial intelligence technology prompted a heavy selloff in United States equities. The tech-heavy Nasdaq and the broader S&P 500 both recorded substantial losses.",
+   "why": "Significant swings in leading US technology firms frequently influence global investor confidence and foreign portfolio movements.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTWxDZDg5X0padGNvb2k2V2ZkX2tEWW9YWkdjeVdMZHNUTlg1MXY4TmUyTDZHdUhNTHFRNWRPRjc2VFlEN3RXTDhNSjhDYmRfTWZGXzdKYXdLejRHNGgwRVdNbmZRUkFhSm9GakxMek56UUZ2OUtqajd6NVkzRkR1VzBNWlo5VWp5NUFkX2phUjlSSFlndUlNNGxvUXlHSm1wMlpTbkRR?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Super Micro Surges in Premarket Action on Strong Revenue Outlook",
-   "summary": "Shares of the hardware manufacturer climbed more than twelve percent prior to the market open. The move came after projected quarterly revenue beat expectations, reaching up to 19.5 billion dollars.",
-   "why": "Earnings projections provide a window into company demand trends, frequently altering short-term share performance.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/super-micro-shares-jump-12-after-q1-preliminary-results-top-estimates-can-the-ai-server-maker-sustain-its-recovery-11792584229403.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Zerodha Co-Founder Issues Warning Over Social Media Investment Scams",
-   "summary": "Nithin Kamath cautioned market participants that fraudulent stock-recommendation schemes on messaging platforms could proliferate. He encouraged users to critically evaluate dubious tips and verify data independently.",
-   "why": "Learning to spot unauthorized tips protects new traders from falling victim to artificial price manipulation.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/got-stock-tips-on-whatsapp-zerodhas-nithin-kamath-warns-against-pump-and-dump-schemes-advises-asking-chatgpt-11792578165904.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Hindustan Zinc Posts Strong Second-Quarter Profit Expansion",
-   "summary": "The metals company recorded a 142 percent annual surge in quarterly net profit, exceeding market projections. Better operating performance was driven primarily by decreased production costs.",
-   "why": "A subsidiary company's financial growth contributes directly to the overall value of its parent organization.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/should-you-buy-vedanta-shares-after-subsidiary-hindustan-zinc-beats-d-street-estimates-in-q2-results-what-analyst-says-11792576290440.html"
+   "title": "American Weekly Unemployment Applications Resume Downward Movement",
+   "summary": "Fresh filings for jobless assistance across the United States decreased once again. This shift marks a continuation of the broader decline in labor support applications.",
+   "why": "Employment data serves as a critical measure of economic strength and shapes central bank monetary policy actions.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZGJ0enIydGpnaExlUG5GdFJlR25SVE9PR1Q4LVN4eUFKbkhaUmQyT21uNHozaHF0UGM4MnpZQjNiU3hiSDlyU1lHQlJoMEkzQmM3cFNFSC1GaC1yTndWV29rd1NJd253VjNxdEI1NGtNLTJhaDk3d2k4bk1Ga290bTd2OWt1RjFSaUNqVlBB?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Reserve Bank Allots Over Fifty Thousand Crore Rupees in Liquidity Auction",
-   "summary": "The Indian monetary authority conducted a one-day liquidity operation, distributing over fifty thousand crore rupees. Financial lenders exhibited high demand, placing bids worth over ninety-three thousand crore rupees.",
-   "why": "Central bank repo auctions allow policymakers to regulate temporary cash deficits or surpluses across commercial banks.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63835"
+   "title": "Domestic Banking System Surplus Narrows Sharply Amid Cash Pressure",
+   "summary": "Available excess funds within Indian commercial banks fell to 541 crore rupees on October 21. Institutions set aside more capital to satisfy their mandatory daily cash reserve allocations.",
+   "why": "Liquidity levels dictate short-term borrowing costs between lenders and impact overall monetary conditions across the financial sector.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/banking-liquidity-surplus-shrinks-to-rs-541-crore-as-cash-crunch-increases/articleshow/135131128.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Domestic Currency Halts Eight-Day Rally as Oil Imports Pressure Balance",
+   "summary": "The Indian rupee weakened after posting gains for eight straight trading days. Increased energy import bills countered the positive influence of incoming international investment.",
+   "why": "Crude import requirements directly affect foreign exchange reserves and the valuation of the home currency.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUzRXM3Zsbm5IWnNiRE9lUVRET19aWTluQjBsWWF5UkZYcHJOT191R056QjBwUW03cVVNUWY2RjlsdmZiZDNNX2JKUmNwaXZGYUVMMGpGMVYyOVVVYU03SGxFbjYxSjl4Q1BBdE9mNVBpUUwwX2dpWFp0eWZRWGlXLUR0NGp4MWpVakU0UnF0bVNucV9wY19mc2M4OTVVcVJVVVRpZEJkdm5RbGRvYml1OE1qUWVKT0cwYlhYU3FSSnJzY2NoZkR3SUxCdkFjb1RRU2fSAdcBQVVfeXFMT21TdUFtSWNublp4YkdxblZPeDRhajVmd2NONE96Mm9Ud3Nka1IyZnQ3QmxFUzZfY3A5UTlSZUthTndJbDV5c0QyWWdaY0ZMM3V4MTNvQ1dSVUZwajNXRkszMWhPR2hUd2tvaXplNjY4QW5Ba0FpbjJLODZsVlZSa0tiUnoySXAxaWJlRmM3SjVUQVBUdmNJUktaNEVwZGxkbUdGTWR4allJMWphTTE0RzF1QTlORGxyWXR4c3FBNnhmcVJmNl9qUVpGY3dsUkFfTGRma3FYUUk?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Strong Bidding Lifts Jio Platforms Offering Over Five Times Subscription",
+   "summary": "Investor demand for Jio Platforms shares surged during the second day of its public share offering, achieving 5.57 times total coverage. The retail portion of the issue was completely booked by participants.",
+   "why": "Oversubscription numbers illustrate the prevailing investor appetite for primary market public listings.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-platforms-ipo-subscribed-5-57-times-on-day-2-on-strong-interest/articleshow/135130103.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Retail Investors Shift Toward Margin Borrowing Over Derivative Contracts",
+   "summary": "Individual market participants are opting for broker-financed margin facilities to establish geared positions in cash equities. This migration follows regulatory changes, elevated taxation, and larger lot requirements in derivative trading.",
+   "why": "Changes in market regulations can prompt participants to alter how they access leverage in stock trading.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/traders-ditch-derivatives-for-broker-funded-stock-bets-11792660897899.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Domestic Benchmark Gauges Drop Under Pressure from Costly Crude",
+   "summary": "The Sensex and Nifty indices slipped during trading hours. Rising international petroleum values alongside geopolitical uncertainties weighed heavily on investor sentiment.",
+   "why": "Costlier energy supplies raise input expenditures for domestic corporations and can dampen broad equity valuations.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNnEtOEpza2RBX1U2Z3VETVNvOG5wcW9yYXJscFY1Ql9YbjNRZDctR2thT08zclRnbzVVSmtvN29UMzdTSGY2MzBtSnFpRWhlU3lFZVRYNk13UEdRakRYR09wR28tYmJldHhDZjVOZDFwZTg4engxUVVWci1NWU5STGhNR0JtdndtX2dXU21tenhlcU9ZWUE4NGI2YWE2bFZBNFpaeXdWTnhNeHdZYlF3?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Decline on Domestic Commodity Platform Amid Tepid Purchases",
-   "summary": "Values for bullion contracts fell during trading on the Multi Commodity Exchange. The downturn was fueled by lower consumer demand alongside heightened selling activity.",
-   "why": "Commodity prices fluctuate in response to real-time supply and demand imbalances on spot and futures exchanges.",
-   "source": "Deccan Chronicle",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR2VNTk5kWEI4SVNVM3BRLVpVLVRleHM1dW5PSjgtUjNKR1h6OWdIZEZMaXpVV2tHbG1ENUx5emNXM2V0OU5ZYVFqQjFZalBpLW8yanQ1SUZNdVF2b0RpRlhnU2xZODlIaWlveDgwUnFIaGRtcEZKQ19mNzdPT0VrTnc3OThvellNMzdQT2VFSVVOLUNuZF9fdnV6c1NYV3JmV1Jza0NkQmtqUdIBrwFBVV95cUxNenE4UzlfWmhBak5NTGFWMVZJa3lHalpJLTV3Q3RfZnY3OFNwdERUeEx1UlpOSk1JSlhpTnZJb3AzSUkxX3VJRjA4QmVtZW1fM0ZMaHJ6b1V1OVEtcGpiSWUtZG1JdWpvbnFsdllveXBhT0cweFFxUUg1RDNRQ1Q5OXhCODlpRHpmU2lTd2pDeUY5SEZYWmhyWWFXOWtDbWUxdUNXNmdxcklhMkRiM3ZV?oc=5"
+   "title": "Precious Metal Stabilizes Near Three-Month Trough Amid Broader Equity Turmoil",
+   "summary": "Gold held steady near its lowest level in over a quarter after facing selling pressure. Market participants sold bullion holdings to manage liquidity during an equity downturn.",
+   "why": "During broad market stress, even traditional defensive commodities can face selling as investors raise cash.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/gold-holds-near-three-month-low-as-ai-jitters-fuel-volatility-11792715984506.html"
   },
   {
-   "category": "Economy",
-   "title": "Indian Rupee Touches Six-Week Peak Supported by Capital Inflows",
-   "summary": "The domestic currency appreciated to 94.43 against the American dollar. The recovery was aided by foreign funding related to a massive initial public offering alongside central bank participation.",
-   "why": "Large overseas capital inflows create demand for local currency, helping counteract external currency pressures.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRDZQOWU2ZlJUQ2VPTmoxMHVnY0ItRzdXcWFqNDNYcWV1TElZRE5JTUZ3bUNqbURja0NaOUtmaEVfdFN2MDY0cW5UWHd1TkZ3MWZ0THYtUkU5RS1HamN3dkxPR1FONWM5LTA5NXFBLXV1RkpXSFpndTlMUllsZU5BSjNoX2drS3ptM29ITzc3NG9ib3N3RkpVMFdITjhiMGNJTEpETlE1QTdnd1Ffb3ZtMThaSkRqV2pHa3VjSnhQTDQ5MnZpMlFJdHoxOEFOZXfSAdYBQVVfeXFMT3JaeHNjOV9UU1JKYjNUMDFaZzBwTUhVV25LaDN5ZzRtOEhhdkRWT1RqUk5nLUNWWmZMTW45anZETkxsNjlvWEdEd0NXX21Kb0QyUFdQR3RoMUZPQm1nODNhMkRsTEVWdExZampQWTVrbERkY2dOQ0Jva2o1UnV4T3V5UXNYak53SGxDZ3h5aHpwbXFVSElEUFVITXJOSWdFdS1rTC01bkIwejVqck5rV1JwaTZTVGZTUWs3N1l6X1ZseUdheS1xVkdBY2R5TXFnblNwTWJaZw?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Advances as Healthcare Shares Drive Dow Outperformance",
-   "summary": "American equity markets concluded on a firmer footing, with the Dow Jones Industrial Average outpacing broader indices. Gains across healthcare companies led the upward charge across the trading floor.",
-   "why": "Sector rotation into healthcare demonstrates how investor capital can migrate into defensive businesses during market cycles.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2JsXzZ4YTVKcDJjNE9iTW42aU0wY0VOZXRtdDYxTzJTanBUOGZIT1FLSl9FVTNxQ1RpTVFSWHlsejgyR0Y1b3JQWXRlT0dEMjJPWWpXYlpfdFJQaHZKZG5KdUNMdW53NmlMd2RwUWJKWFB3dE9Xc2ZBbnRfalF3cWNzblhxTGJOTGlKYUh1a0FmWC1vaGQydWZXdTMzemJjSVg5NWZ0bw?oc=5"
+   "category": "Commodity",
+   "title": "Spiking Maritime Freight Rates Stifle American Crude Shipments to Asia",
+   "summary": "Leasing expenses for supertankers transporting crude between the United States and Asian buyers reached nearly 80 million dollars. Shipping complications sparked by regional conflict in the Middle East have pushed export volumes toward multi-year lows.",
+   "why": "Elevated maritime transport expenses disrupt international supply chains and restrict regional access to key energy supplies.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/oil-tankers-sailing-the-us-china-route-are-commanding-60-million-and-it-s-crushing-demand-11792703194471.html"
   }
  ]
 }
