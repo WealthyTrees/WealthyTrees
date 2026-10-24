@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,010",
-   "change": -1.24
+   "value": "4,008",
+   "change": -1.29
   },
   {
    "name": "CRUDE WTI",
-   "value": "$103.4",
-   "change": 3.99
+   "value": "$103.3",
+   "change": 3.82
   },
   {
    "name": "USD/INR",
-   "value": "94.93",
-   "change": 0.13
+   "value": "94.94",
+   "change": 0.14
   },
   {
    "name": "S&P 500",
@@ -44,76 +44,76 @@
  ],
  "items": [
   {
-   "category": "US Markets",
-   "title": "American Shares Slide Over Tech Hesitation and Approaching Central Bank Gathering",
-   "summary": "Key United States indices closed in the red following heightened caution surrounding artificial intelligence investments. Market participants also trimmed exposure while anticipating the upcoming Federal Reserve policy session.",
-   "why": "Developments in major global benchmarks frequently guide international investor sentiment and capital flows toward emerging destinations like India.",
+   "category": "Equity",
+   "title": "Regulator Mandates Major Repayment from Uncertified Advisory Firm",
+   "summary": "The capital markets authority instructed Avadhut Sathe Trading Academy to return over 546 crore rupees collected from clients. The entity had been running financial consulting operations without formal regulatory registration.",
+   "why": "Licensing requirements protect retail market participants from unauthorized entities offering unverified stock guidance.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-markets-today-dow-ends-600-pts-lower-as-ai-doubts-persist-ahead-of-fed-meet/articleshow/135155408.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "American Sovereign Debt Rates Edge Upward Beneath Five Percent Threshold",
-   "summary": "Yields on United States government obligations climbed slightly after an earlier pullback, though key benchmark rates stayed under five percent. Elevated economic momentum and technology sector uncertainties kept fixed-income participants cautious.",
-   "why": "Elevated returns on overseas sovereign paper can pull foreign institutional funding out of domestic equities and weaken local currencies.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-treasury-yields-rise-but-10-year-stays-below-5-as-ai-jitters-persist/articleshow/135151795.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-orders-avadhut-sathe-academy-to-refund-rs-546-crore/articleshow/135162877.cms"
   },
   {
    "category": "Equity",
-   "title": "Tata Motors Commercial Segment Rebounds to Quarterly Profitability",
-   "summary": "The vehicle manufacturer recorded a net profit exceeding two thousand crore rupees for the recent quarter, shifting out of a prior-year deficit. Operational turnover also posted substantial expansion, climbing forty-two percent year over year.",
-   "why": "Tracking quarterly earnings helps students evaluate whether a firm's operational turnaround is translating into improved balance sheet health.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/tata-motors-cv-posts-rs-2138-crore-q2-profit/articleshow/135154453.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Jio Platforms Public Listing Generates Record Bidding Across Investor Classes",
-   "summary": "The telecom company closed its public offering after drawing bids totaling over four lakh crore rupees from millions of participants. The issue marks the biggest public share offering in the country's financial history.",
-   "why": "Substantial participation in primary market offerings illustrates domestic liquidity and overall investor appetite for new corporate issuances.",
+   "title": "Jio Platforms Public Issue Sets Historic Domestic Demand Milestone",
+   "summary": "The primary share offering of Jio Platforms gathered bids worth 4.72 lakh crore rupees across nearly 14 million submissions. Both institutional and individual participants contributed to making it the biggest public sale in the country.",
+   "why": "Tracking subscription metrics helps beginners gauge institutional enthusiasm and overall liquidity directed toward massive public offerings.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/mother-of-all-ipos-jio-platforms-shatters-many-existing-records-full-list-here-11792775064634.html"
   },
   {
    "category": "Equity",
-   "title": "Securities Regulator Bans Trading Training Provider and Mandates Investor Reimbursements",
-   "summary": "The capital markets watchdog has penalized a prominent market training entity and directed the refund of over five hundred crore rupees collected from clients. The institution and its founder are also restrained from participating in public securities exchanges.",
-   "why": "Regulatory oversight protects retail traders by penalizing unregistered advisory services and establishing clear standards of market conduct.",
+   "title": "Domestic Benchmarks Extend Drop as Energy Prices Approach Peak Levels",
+   "summary": "Key Indian share gauges experienced a fourth day of losses as Brent crude neared 114 dollars per barrel. The Nifty concluded trading at the 22,600 mark.",
+   "why": "Elevated fuel prices raise production expenses for companies and can depress broad equity valuations.",
+   "source": "HDFC Sky",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcW5MSjcwWkJSamFDMl9hNUpSdG9Bd0lwWkJyQ2RrVy1ReVJJNzlVa0Q4TklPRUdKNFBqV1pQSHgxbVo4aVhBSUlZa3I2VUJWMlRSQ2gxUXV5QjNISl83LXFlVklqc2dOdXJVV2M1YzlGV3JidjFYQkVfaU01djVpdS1pLThxZ2pNTlRua2VjT1l3MkF6U3VxcW96S1NmQ3JPa0pyYkEycTlzS1ZBZVE?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Bullion Rates Slide Amid Energy Inflation and Interest Rate Pressures",
+   "summary": "Gold contracts declined roughly 3.5 percent on domestic commodity bourses during the week. Elevated crude costs, inflation worries, and anticipated monetary tightening abroad reduced demand for the metal.",
+   "why": "Precious metals often react inversely to expectations of elevated yields and firmer global borrowing costs.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/sebi-bars-avadhut-sathe-academy-from-markets-imposes-11-5-crore-penalty-11792771771945.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Spike in Energy Costs Pressures Domestic Share Benchmarks Lower",
-   "summary": "Elevated international petroleum costs contributed to a weekly downturn across domestic equity markets. Heavier import bills typically burden corporate profit margins and broaden trade deficits.",
-   "why": "Since India relies heavily on foreign crude imports, elevated oil quotes directly affect inflation and business input expenditures.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeVk5bXN2THRVWVBubnpudHpPQ2dreFhuVUxXSUFqZWJLa2psTU1rbjl3UktXTlVabEpvVEM0YUpuZVBUWkJQSjB4X1o1QlI5OEZYNE1fNE5QREZ1RjZqeURTcEFZSm5DbkFGYkFCLVNVYkpRNXRCQ3RMTDExMGVJdS1lUjUtdlBFVkJQY1VXdVBZTF9qVklpbU1YRXp6dHpXNWhqcHVFVFNsZUtQeXV6SGNBTnJYaHBzWlE5SF9EeFpiYllha3c?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Precious Metals Face Sharp Correction Following Prior Peaks",
-   "summary": "Silver values fell substantially alongside broad declines in gold from earlier highs. The price reset highlights renewed volatility across bullion trading desks.",
-   "why": "Precious commodities frequently experience cyclical contractions when macro trends shift or speculative positions unwind.",
-   "source": "Livemint",
-   "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNSERQMWlydW9wT2t2LWRqM1RvdUwyRWw1NTZWQmZyV1dtWmNuREl6Qll4blZYWHZqc1hkSDl2QWE0OHNFaWhFY29oVm12ZXFoY3NyRzJ0Uk5LZ2R3SnV2bkJIbFB3ZWRvdk9XWk9mS3V6WDlZUmZ6WmI4NDl2d3hLRmNfWDdyZmthcXMtV01Hc3N0SEVNdnBTU1luTXA3Y1JoVWwxdVFCQjJnT0xBZ2x2ZlFVUEJHOEc0TXI2SmtBWUNKM3ZNdm4yUjE5R1FSZWMwa0MyWVVUSktGVGtWdHhpU3V2Wi05dkxmQ3FoRWlsUkpzY08teHY3RXNkamZPZkNfSUpSNmxsaC1LdUFYM3R6MXpyaTbSAZoCQVVfeXFMTXZkMzRiaXpMNTNRYU9JOUsxZmQ0Uy1Zdmpaa0FaZUh6cEE4MFFjT1FzNERWZHl2M0IyOFJobm5oRzh3YjNjWFhtb01LWVk0QjNjWHpDQUE3cmVoTHBmc2QzZE5nWmREVzVKTzRSeHMyTkxzU29JcEptSHpqemxzOXhIWnpWOWczb2thUHpYOHpLcXlabUxCck5JX0Q0Z0FoNlVhZzZmR0NyQnRDX01vX0lTQ1Y5UzdOUnFnaUpILVVBT0ZXSzREcWVHYkhRX0drMTVYa0M5MEdxMjA0VXNOVVd0c010UHZPeGRKcnZxa0tzV1NBZnhMbUIyM09JNnhVYTNWU3hHVUc0TnBHNUVMM19ucEp5ZDNCU1FR?oc=5"
+   "url": "https://www.livemint.com/market/commodities/gold-rates-in-chennai-city-crash-this-week-can-yellow-metal-rebound-ahead-of-diwali-key-levels-to-watch-in-future-11792820547953.html"
   },
   {
    "category": "Economy",
-   "title": "Sovereign Debt Values Extend Multi-Decade Slump Amid Global Pressures",
-   "summary": "Indian central paper experienced prolonged weakness driven by soaring petroleum benchmarks and hardening debt yields overseas. The selloff marks one of the steepest continuous declines in government bond trading.",
-   "why": "Rising bond yields raise government borrowing expenses and signal shifting interest rate expectations within the broader financial system.",
+   "title": "Central Bank Schedules Short Term Liquidity Injection Mechanism",
+   "summary": "The Reserve Bank of India announced a four-day variable rate repo operation scheduled for October 26, 2026. This measure follows an assessment of immediate cash requirements across the banking system.",
+   "why": "Repo auctions allow the monetary authority to stabilize short-term interest rates by managing cash supply among commercial lenders.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63861"
+  },
+  {
+   "category": "Economy",
+   "title": "Sovereign Debt Endures Protracted Slump Linked to Yields and Petroleum",
+   "summary": "Domestic government paper suffered its most severe downturn in three decades. The selloff was triggered by expanding American debt yields alongside surging energy prices.",
+   "why": "Bond prices fall when yields climb, directly influencing debt financing costs for the sovereign.",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUWZRT2JWb0xKeF9EOWV5VG5TU190d09rUWswNVBNZjNPcVZwTmJYZHNQNV9JOGhCR1pvTkpMdG11TUE0VGJVZzhHQS0wck1MTk8wZko1NG1BTTR1d2FxSElzdzgzRXFBNTNqdENTc1ZlSms3cDgwM1BoTWtGMmJmVG1wMUVadkVlLWYzN3daeG40dVFSU18tTC1oZndQY1Ywaks0MnE3VjgzWS1JVnhicmZYQ1NwbkR4azVMSE5RMThuQ3cyMUl3MXpKT1dQV3YxODRN0gHYAUFVX3lxTE9nWG9tRW1ycWRLODNjUWV2bnpNN3ZEdVdFYnpHcWJFMFdibGpRSENZZUZWRkhFWTJGOEVXdFpTTFVNWlNxdkJPNDNxNmstQjEwRmhPYi1IUHV6VWRJcW5KNThWbTdyZGl1MzlkYVNBSnR1SERNWHB6UnJGbk9iRTdWcFVyQWhRMXJ5a1ZIODZ3VEVVeGNiSklNeGR4LU55UzhONTZ1QVVvMk9HbzJwX1lPSDdDaTFmN2xySnJqdkZtX0JnLW5wNHNSdlNRaHF6ZlVDOXRpcDF1cg?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Focuses on Exchange Rate Stability Rather Than Precise Targets",
-   "summary": "The Reserve Bank stated that its foreign exchange intervention aims to reduce sharp price fluctuations rather than defend a preset value for the domestic currency. The approach prioritizes orderly trade conditions in the currency market.",
-   "why": "Understanding central bank interventions helps new investors see how monetary authorities smooth out currency turbulence without distorting price discovery.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPbkIydGZGZXZvRmZEZ0Z0TEE3ejdUbDk0Qk1CNHNLanNFV2RlM0lLQ0hNVG9wemhnamZ0TERZQlpvY19jSkRJQkNCb1NRWWIzQ2ZnaW1SWEF3ek00U0pmWUc3S2Vkdlh2OEY0cExnQ3BTXzlZZWIyaE1iQTg3VFNUdnQ2b2NRVi03TDJoZldlMVZQWEdkRHlpVzdBa0cyaWJtdWxKVmVLd0tnSE0tX1pWdnZBaFJ4eWY4Y3JlSGY1a3dCeEVveWpMeXhmNXZuSFc2eHQ0aThOUTN6WjJDMmZWa1N6TkRzMDhTMHhYZUlvemRuRFJrOERPUWlVSmREdVFWWV83bkJmWGpXNXRGNm1kONIBlgJBVV95cUxQTUd6YkE1b05sT0RtcWpRR1dPZ3pQYmtfbF9lOTk0Z1hTNXBfblIwd0pFZzB2d3VsSUpfMnVLZEdDeE5UZ0loTlFQekxib0FPZ0xObzNVMkdvZWp1LWRDSFRJVlV3amxRQWdoMUpsNTd3cG84dHN3Tmt0dzFCTlpDUkZHTmQ5dU1Nc3gxZk92dnlZT3haMUxKLVZUNU0tWlh4VHBxMTNCYjBEbFBoN2JfQnBCbmxHV3FwQkIycXJPSV9PMGxmRzRwUDh2dWFiR2dIOUxYZmU2LXdQNFFON3NCMlhraFpjektkUE5MYnFqMlBFb01UcFFqclhZeU5BY0x0NHc5N2tlY0VFTWlHMVUyWmxVZ1VrZw?oc=5"
+   "title": "Indian Currency Weakens Against Dollar as Import Expenses Climb",
+   "summary": "The rupee depreciated by 12 paise to trade at 94.93 per American dollar. The drop occurred alongside strengthening worldwide petroleum prices.",
+   "why": "Because India imports significant petroleum, higher global oil prices increase foreign exchange demand and weaken the local unit.",
+   "source": "Deccan Herald",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNSm1KMmhEbGJnc09WN09XUUlrYUZIVUFISHRiaE1ldmtwMU1xUjhfNnNXd3ZnRUdVbE43MnlpejI5aFpUeGRLX2J2T0g3R2lSQ3k2ZWljb19PNWs2bnRIU2QxMFJGVjVxcFhKR1pjOHJMWFBCYWE1Zm5IOWdIME1VN1ZuUkFUS01rZERVZGY4cnk3dy1sclV3MzRoN3VBVlE5Xzd0UXd6b3hyeG4ydVFNYS1jRVNOdEI3NE9CS2N0T0ZYUFlON2JRYXBZNzJzWVQ3bU1JMmpR?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Technology Unease and Costlier Energy Drive US Indices Downward",
+   "summary": "American equity benchmarks ended noticeably down as crude rates advanced and technology sector apprehensions intensified. Investors pulled back from major indexes during the session.",
+   "why": "Movements in leading overseas exchanges often shape international investor sentiment and capital flows toward emerging markets.",
+   "source": "Sharecast.com",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNakhhUWhPOXN1clNXQXNXWWgtNFNyTVEtVWJPZ1dQYTA3V3p4X1lVbW82TFJXWmpLU2E4d0pYUTViZU1CZEo3RnFsWU1KQzZ6cHplYmJVdzFoRUZNUXVjSG1kUkhKQjg0UFlMZVFmZXg4TzItY0JaNENFcFUzN09ZcVBnUHRuYzFkYnRjMFpRaEVnUTZmOEp4ZzJqVkNKNm00aW9CN21weldRVUpYZDZWMWlCOFY0Wi1HTUJjdGF0Z0o0Q2JaY1FmTUtYVUYwblBNaUE?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Global Currency and Bond Desks Prepare for Central Bank Deliberations",
+   "summary": "Fixed income and currency traders are focusing on upcoming rate decisions from the United States Federal Reserve and other monetary authorities. These scheduled policy announcements will guide cross-border asset pricing.",
+   "why": "Federal Reserve decisions dictate global dollar liquidity, benchmark borrowing rates, and worldwide investment trends.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZl9NRnpPb3laN0tSUlB6NFUwekhQWkUyNG11ck5jQmxHZUxTZl82RzJoVmlLMzlQY2JCS1BuTC1mMDlZYjdXVHFFeTgxTXJ5eGJZazZOcGdLaDg4RFhvaDNidXhySlVzRFBTUmoyeTJ4YjYtMUR2M0RYT1M2WVZSRTIxYlNQQjk2RGJmWmRTMml5MEoyV1h5bHpSQ2dFaExzZVJmU1N3djBENFhM?oc=5"
   }
  ]
 }
