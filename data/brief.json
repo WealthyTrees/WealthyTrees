@@ -44,76 +44,76 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Regulator Mandates Major Repayment from Uncertified Advisory Firm",
-   "summary": "The capital markets authority instructed Avadhut Sathe Trading Academy to return over 546 crore rupees collected from clients. The entity had been running financial consulting operations without formal regulatory registration.",
-   "why": "Licensing requirements protect retail market participants from unauthorized entities offering unverified stock guidance.",
+   "category": "US Markets",
+   "title": "Major American Indices Retreat as Energy Costs Surge",
+   "summary": "United States equities tumbled, marked by the Dow Jones Industrial Average shedding 653 points. This downturn occurred alongside petroleum benchmarks reaching 116 dollars.",
+   "why": "Energy spikes often stoke inflation concerns, prompting equity investors to reassess corporate operating expenses and profit margins.",
+   "source": "NiftyTrader",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVnN1VjZqQ2tiY3poSEJwaVlhWDhrSHdkRnI4S0M3SEJhaHNGR08zMmVjNkJOdnZRbWU4T1NxU0d4NWthYnd3VUktSkpUTV84cjB0emEtaWZ5cTMzT2dMU3RWcm5uSXNLbXhmZGNoTkRwTFJCWDhDMGM4aHloWkxBUXVBUQ?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Sharp Valuation Slumps Hit Key Technology Equities",
+   "summary": "Several prominent American equities experienced severe drawdowns during 2026, with digital ad firm The Trade Desk contracting roughly 66 percent to 13 dollars. Such losses reflect steep valuation cuts across select technology enterprises.",
+   "why": "Examining steep pullbacks teaches beginners about single-stock risk and the volatility inherent in growth-oriented investments.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-orders-avadhut-sathe-academy-to-refund-rs-546-crore/articleshow/135162877.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/portfolio-killers-10-us-stocks-that-wiped-out-up-to-66-of-investors-wealth-in-2026/slideshow/135167355.cms"
   },
   {
    "category": "Equity",
-   "title": "Jio Platforms Public Issue Sets Historic Domestic Demand Milestone",
-   "summary": "The primary share offering of Jio Platforms gathered bids worth 4.72 lakh crore rupees across nearly 14 million submissions. Both institutional and individual participants contributed to making it the biggest public sale in the country.",
-   "why": "Tracking subscription metrics helps beginners gauge institutional enthusiasm and overall liquidity directed toward massive public offerings.",
+   "title": "Overseas Funds Pull Capital for Tenth Straight Week",
+   "summary": "Overseas institutional participants offloaded Indian shares across consecutive weeks, pulling the Nifty 50 down 2.4 percent. The broader market faced sustained selling pressure across trading sessions.",
+   "why": "Tracking cross-border fund flows helps investors monitor institutional liquidity trends that influence benchmark index directions.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fiis-dump-indian-stocks-for-10th-straight-week-as-markets-slide-is-the-worst-over-or-more-pain-ahead/articleshow/135165684.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Kotak Mahindra Bank Posts Over Twenty Percent Earnings Growth",
+   "summary": "The major lender recorded a consolidated net profit expansion of 26 percent to 5,645 crore rupees during the second quarter. Net interest income also registered a 16 percent increase compared to the prior-year period.",
+   "why": "Net interest income and net profit reveal how effectively commercial banks generate revenue from core lending operations.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/kotak-mahindra-bank-q2-results-consolidated-pat-rises-26-yoy-to-rs-5645-crore-lenders-nii-up-16/articleshow/135165924.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Godrej Properties Reports Sharp Earnings Contraction",
+   "summary": "Godrej Properties logged a 62 percent fall in quarterly bottom line to 154.15 crore rupees amid escalating expenditures. The company's equity price retreated over 4 percent following the financial update.",
+   "why": "Quarterly earnings reports highlight how changing construction expenses and project timelines directly alter corporate profitability.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/mother-of-all-ipos-jio-platforms-shatters-many-existing-records-full-list-here-11792775064634.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Benchmarks Extend Drop as Energy Prices Approach Peak Levels",
-   "summary": "Key Indian share gauges experienced a fourth day of losses as Brent crude neared 114 dollars per barrel. The Nifty concluded trading at the 22,600 mark.",
-   "why": "Elevated fuel prices raise production expenses for companies and can depress broad equity valuations.",
-   "source": "HDFC Sky",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcW5MSjcwWkJSamFDMl9hNUpSdG9Bd0lwWkJyQ2RrVy1ReVJJNzlVa0Q4TklPRUdKNFBqV1pQSHgxbVo4aVhBSUlZa3I2VUJWMlRSQ2gxUXV5QjNISl83LXFlVklqc2dOdXJVV2M1YzlGV3JidjFYQkVfaU01djVpdS1pLThxZ2pNTlRua2VjT1l3MkF6U3VxcW96S1NmQ3JPa0pyYkEycTlzS1ZBZVE?oc=5"
+   "url": "https://www.livemint.com/market/stock-market-news/godrej-properties-q2-profit-falls-62-to-rs-154-crore-real-estate-stock-down-6-5-in-1-week-what-s-next-for-investors-11792839670974.html"
   },
   {
    "category": "Commodity",
-   "title": "Bullion Rates Slide Amid Energy Inflation and Interest Rate Pressures",
-   "summary": "Gold contracts declined roughly 3.5 percent on domestic commodity bourses during the week. Elevated crude costs, inflation worries, and anticipated monetary tightening abroad reduced demand for the metal.",
-   "why": "Precious metals often react inversely to expectations of elevated yields and firmer global borrowing costs.",
+   "title": "Domestic Silver Drops Below Key Benchmark Level",
+   "summary": "Silver traded below two lakh rupees per kilogram, marking its first dip under that threshold since late 2025. Heightened energy expenses and worries over potential interest rate hikes contributed to the decline.",
+   "why": "Precious metals respond strongly to industrial energy shifts and interest rate expectations in global financial markets.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-rates-in-chennai-city-crash-this-week-can-yellow-metal-rebound-ahead-of-diwali-key-levels-to-watch-in-future-11792820547953.html"
+   "url": "https://www.livemint.com/market/stock-market-news/silver-price-has-broken-below-2-lakh-for-the-first-time-since-december-2025-is-this-the-right-time-to-buy-for-returns-11792841534411.html"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Schedules Short Term Liquidity Injection Mechanism",
-   "summary": "The Reserve Bank of India announced a four-day variable rate repo operation scheduled for October 26, 2026. This measure follows an assessment of immediate cash requirements across the banking system.",
-   "why": "Repo auctions allow the monetary authority to stabilize short-term interest rates by managing cash supply among commercial lenders.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63861"
-  },
-  {
-   "category": "Economy",
-   "title": "Sovereign Debt Endures Protracted Slump Linked to Yields and Petroleum",
-   "summary": "Domestic government paper suffered its most severe downturn in three decades. The selloff was triggered by expanding American debt yields alongside surging energy prices.",
-   "why": "Bond prices fall when yields climb, directly influencing debt financing costs for the sovereign.",
+   "title": "Sovereign Debt Experiences Multi-Decade Losing Streak",
+   "summary": "Indian government securities logged their longest stretch of losses in 30 years. This extended debt decline coincided with climbing petroleum prices and higher yields on American debt instruments.",
+   "why": "Bond prices move inversely to yields and weaken when elevated fuel costs trigger concerns about domestic inflation.",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUWZRT2JWb0xKeF9EOWV5VG5TU190d09rUWswNVBNZjNPcVZwTmJYZHNQNV9JOGhCR1pvTkpMdG11TUE0VGJVZzhHQS0wck1MTk8wZko1NG1BTTR1d2FxSElzdzgzRXFBNTNqdENTc1ZlSms3cDgwM1BoTWtGMmJmVG1wMUVadkVlLWYzN3daeG40dVFSU18tTC1oZndQY1Ywaks0MnE3VjgzWS1JVnhicmZYQ1NwbkR4azVMSE5RMThuQ3cyMUl3MXpKT1dQV3YxODRN0gHYAUFVX3lxTE9nWG9tRW1ycWRLODNjUWV2bnpNN3ZEdVdFYnpHcWJFMFdibGpRSENZZUZWRkhFWTJGOEVXdFpTTFVNWlNxdkJPNDNxNmstQjEwRmhPYi1IUHV6VWRJcW5KNThWbTdyZGl1MzlkYVNBSnR1SERNWHB6UnJGbk9iRTdWcFVyQWhRMXJ5a1ZIODZ3VEVVeGNiSklNeGR4LU55UzhONTZ1QVVvMk9HbzJwX1lPSDdDaTFmN2xySnJqdkZtX0JnLW5wNHNSdlNRaHF6ZlVDOXRpcDF1cg?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Currency Weakens Against Dollar as Import Expenses Climb",
-   "summary": "The rupee depreciated by 12 paise to trade at 94.93 per American dollar. The drop occurred alongside strengthening worldwide petroleum prices.",
-   "why": "Because India imports significant petroleum, higher global oil prices increase foreign exchange demand and weaken the local unit.",
-   "source": "Deccan Herald",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNSm1KMmhEbGJnc09WN09XUUlrYUZIVUFISHRiaE1ldmtwMU1xUjhfNnNXd3ZnRUdVbE43MnlpejI5aFpUeGRLX2J2T0g3R2lSQ3k2ZWljb19PNWs2bnRIU2QxMFJGVjVxcFhKR1pjOHJMWFBCYWE1Zm5IOWdIME1VN1ZuUkFUS01rZERVZGY4cnk3dy1sclV3MzRoN3VBVlE5Xzd0UXd6b3hyeG4ydVFNYS1jRVNOdEI3NE9CS2N0T0ZYUFlON2JRYXBZNzJzWVQ3bU1JMmpR?oc=5"
+   "title": "Central Bank Logs Unprecedented Monthly Foreign Currency Purchases",
+   "summary": "The monetary authority reached an all-time high net purchase of 43 billion dollars in foreign currency during August. The central bank utilized foreign exchange swap agreements to manage the liquidity impact.",
+   "why": "Reserve accumulation allows central banks to stabilize currency volatility and buffer the domestic economy from international capital swings.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOZ2o4cUtGM0ZxZ1FPb19LcVRHemNpX0ZNbGczZndPV1dneEltWWhSd25MM2hlNTJzOUxkZUp4R2pITGNnN3ZzNkxJLWRRWW9mYjl0T0FqVHdWTU1TWm90WFRsa2pZVEs4bjNnSk8zTmFZZ3NRVUJ6akY3RndvTldYMHdHd1BMQnQ5WUY1aHE0R0JaRlBwRUtaYl9wdFdhT080UlMwM3ZKV0hBMUdMTG5Kb3hLTTdpTmRBMWZDQ3BJTWlBcXUtZnBnd0hjY2FWVmlFX0c4eHJjVVVQNUlsbW5nN3hGOGJZWlZMaFHSAe8BQVVfeXFMTllyNEhOcXBCX2xsalhkTlRIZ2FZTWw0Z0FVcVJDdjFCTlFrN3h0dVFibFFJbFB3TXFLT3lmZU03ZWFnamxNM282YTlWLThwcEFOZHNsUHRUSWFJLXpFcVVUa1B2WWdYcndnSDNqWEJDcVhHaXVHdXJWVXladHNxdHpESTkybU5sdHE0MkVFRkZjRUJpelNMWWhONWRna0ZueEpwV3JINUY2dE53MXU0bkNLQ3ljM2Nab1h3X1BqRTBIMlJ6aFJxQnBuX3JabHFtc3NkY0l4QVAycVBBNWE0SDJZVjJhR25XYjFmQ2JqVEE?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "Technology Unease and Costlier Energy Drive US Indices Downward",
-   "summary": "American equity benchmarks ended noticeably down as crude rates advanced and technology sector apprehensions intensified. Investors pulled back from major indexes during the session.",
-   "why": "Movements in leading overseas exchanges often shape international investor sentiment and capital flows toward emerging markets.",
-   "source": "Sharecast.com",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNakhhUWhPOXN1clNXQXNXWWgtNFNyTVEtVWJPZ1dQYTA3V3p4X1lVbW82TFJXWmpLU2E4d0pYUTViZU1CZEo3RnFsWU1KQzZ6cHplYmJVdzFoRUZNUXVjSG1kUkhKQjg0UFlMZVFmZXg4TzItY0JaNENFcFUzN09ZcVBnUHRuYzFkYnRjMFpRaEVnUTZmOEp4ZzJqVkNKNm00aW9CN21weldRVUpYZDZWMWlCOFY0Wi1HTUJjdGF0Z0o0Q2JaY1FmTUtYVUYwblBNaUE?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Global Currency and Bond Desks Prepare for Central Bank Deliberations",
-   "summary": "Fixed income and currency traders are focusing on upcoming rate decisions from the United States Federal Reserve and other monetary authorities. These scheduled policy announcements will guide cross-border asset pricing.",
-   "why": "Federal Reserve decisions dictate global dollar liquidity, benchmark borrowing rates, and worldwide investment trends.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZl9NRnpPb3laN0tSUlB6NFUwekhQWkUyNG11ck5jQmxHZUxTZl82RzJoVmlLMzlQY2JCS1BuTC1mMDlZYjdXVHFFeTgxTXJ5eGJZazZOcGdLaDg4RFhvaDNidXhySlVzRFBTUmoyeTJ4YjYtMUR2M0RYT1M2WVZSRTIxYlNQQjk2RGJmWmRTMml5MEoyV1h5bHpSQ2dFaExzZVJmU1N3djBENFhM?oc=5"
+   "category": "Economy",
+   "title": "Reserve Bank Schedules Short-Term Liquidity Infusion Auction",
+   "summary": "The Reserve Bank arranged a four-day variable rate repo auction scheduled for October 26 under its liquidity facility. The operation aims to manage evolving cash conditions in the domestic banking space.",
+   "why": "Repo auctions serve as standard tools for central banks to regulate short-term money supply across the financial system.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63861"
   }
  ]
 }
