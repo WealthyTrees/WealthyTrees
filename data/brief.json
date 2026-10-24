@@ -1,5 +1,5 @@
 {
- "date": "Friday, 23 October 2026",
+ "date": "Saturday, 24 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,039",
-   "change": -0.53
+   "value": "4,010",
+   "change": -1.24
   },
   {
    "name": "CRUDE WTI",
-   "value": "$102.0",
-   "change": 2.57
+   "value": "$103.4",
+   "change": 3.99
   },
   {
    "name": "USD/INR",
@@ -28,92 +28,92 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,630",
-   "change": -0.43
+   "value": "7,624",
+   "change": -0.52
   },
   {
    "name": "NASDAQ",
-   "value": "25,956",
-   "change": -0.2
+   "value": "25,955",
+   "change": -0.21
   },
   {
    "name": "DOW",
-   "value": "52,318",
-   "change": -1.04
+   "value": "52,215",
+   "change": -1.23
   }
  ],
  "items": [
   {
+   "category": "US Markets",
+   "title": "American Shares Slide Over Tech Hesitation and Approaching Central Bank Gathering",
+   "summary": "Key United States indices closed in the red following heightened caution surrounding artificial intelligence investments. Market participants also trimmed exposure while anticipating the upcoming Federal Reserve policy session.",
+   "why": "Developments in major global benchmarks frequently guide international investor sentiment and capital flows toward emerging destinations like India.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-markets-today-dow-ends-600-pts-lower-as-ai-doubts-persist-ahead-of-fed-meet/articleshow/135155408.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "American Sovereign Debt Rates Edge Upward Beneath Five Percent Threshold",
+   "summary": "Yields on United States government obligations climbed slightly after an earlier pullback, though key benchmark rates stayed under five percent. Elevated economic momentum and technology sector uncertainties kept fixed-income participants cautious.",
+   "why": "Elevated returns on overseas sovereign paper can pull foreign institutional funding out of domestic equities and weaken local currencies.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-treasury-yields-rise-but-10-year-stays-below-5-as-ai-jitters-persist/articleshow/135151795.cms"
+  },
+  {
    "category": "Equity",
-   "title": "High Investor Participation Marks Final Day of Jio Platforms Share Sale",
-   "summary": "The primary offering concluded with investors placing bids for over seven times the allocated equity. Cumulative financial commitments for the public issue surpassed fifteen billion dollars.",
-   "why": "Heavy oversubscription reflects strong institutional and retail demand for a new market entrant.",
+   "title": "Tata Motors Commercial Segment Rebounds to Quarterly Profitability",
+   "summary": "The vehicle manufacturer recorded a net profit exceeding two thousand crore rupees for the recent quarter, shifting out of a prior-year deficit. Operational turnover also posted substantial expansion, climbing forty-two percent year over year.",
+   "why": "Tracking quarterly earnings helps students evaluate whether a firm's operational turnaround is translating into improved balance sheet health.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/tata-motors-cv-posts-rs-2138-crore-q2-profit/articleshow/135154453.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Jio Platforms Public Listing Generates Record Bidding Across Investor Classes",
+   "summary": "The telecom company closed its public offering after drawing bids totaling over four lakh crore rupees from millions of participants. The issue marks the biggest public share offering in the country's financial history.",
+   "why": "Substantial participation in primary market offerings illustrates domestic liquidity and overall investor appetite for new corporate issuances.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/jio-platforms-ipo-lures-investors-as-bids-surge-on-final-day-11792737737745.html"
+   "url": "https://www.livemint.com/market/stock-market-news/mother-of-all-ipos-jio-platforms-shatters-many-existing-records-full-list-here-11792775064634.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Securities Regulator Bans Trading Training Provider and Mandates Investor Reimbursements",
+   "summary": "The capital markets watchdog has penalized a prominent market training entity and directed the refund of over five hundred crore rupees collected from clients. The institution and its founder are also restrained from participating in public securities exchanges.",
+   "why": "Regulatory oversight protects retail traders by penalizing unregistered advisory services and establishing clear standards of market conduct.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/sebi-bars-avadhut-sathe-academy-from-markets-imposes-11-5-crore-penalty-11792771771945.html"
   },
   {
    "category": "Commodity",
-   "title": "Silver Exchange-Traded Funds Drop as Inbound Supply Rules Ease",
-   "summary": "Silver-backed funds fell up to four percent following an official permit allowing 6,500 metric tonnes of foreign metal into the country across half a year. The policy decision is anticipated to alleviate local availability constraints and lower domestic premiums.",
-   "why": "Asset-backed commodity funds adjust in value when physical supply conditions change within local borders.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nippon-silver-etf-other-silver-etfs-slide-up-to-4-as-silver-prices-tumble-heres-why/articleshow/135137769.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Headline Equity Indices Give Up Intraday Advances in Late Decline",
-   "summary": "The Sensex retreated 1,100 points away from its peak during the trading session, pushing the Nifty under the 22,450 mark. A sudden afternoon turnaround wiped out early strength across domestic equities.",
-   "why": "Tracking intraday reversals helps novice market watchers understand how shifting broader pressures can overcome morning momentum.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQR250SWE3RDBETXh2Unp3ZENZa1ZNX1k3QnVlaUk4cERpOVl1Zm5XT25FNVAtZnJXc1YwSnQxY3VIUjdRckM2Wm1DZjhUMXpIVW96eXdIb2IybkxlOGNETDFvR0xVYjZuazlaNkcwNWhSMzU1b2pqUnZwVHlPYUtULVphbmh0VUhSNjFSOGNCY0RiVGM3MEdibzZLa05FQUNCc2ZkRi1FY1F1dDR5MHZnSVBWamVQSzlvaTNxNVpmLW9hbUtqRFN2QzhGX3BLOGc0Qldqdlp5c01PMkVLOUZxdVRrTVZrOXd1OVHSAe8BQVVfeXFMTmpwTlpEb25yZXVFWHRXUzhuQ2RDYVVTX08xSWZSVGFTMHlTU2F2SDVJTkN5ZU9hWWdIb0tsUEdtdzE2M1kxcTRxTWt1ZDdRdVNSS0t0bWlFWTlkSXh2Vk9wQUstRldGT0JDbGNkX3Vab1FZQVZkcWtqNmM5QUZiRS1qOFNsR0pHRmdRUkNhY195TFBMN21HNEl5OTA3aVhVYkdHWXgyMmppN0JlY3dDRVRkZ1dMeWpReHZmaWJCc3ROMHFJWEY2dE0tSU83TXFXdEpvRm1leVBLVzhmQXlHMEhNZUFJQlZmR0xDOXp4V0U?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Manufacturing Platform Zetwerk Closes Under Issue Level on Debut",
-   "summary": "Zetwerk traded below its original issue price upon entering the public bourses, establishing an overall corporate valuation of 2.7 billion dollars.",
-   "why": "Initial public offering debuts illustrate how secondary market buyers reassess valuations relative to original issuance prices.",
+   "title": "Spike in Energy Costs Pressures Domestic Share Benchmarks Lower",
+   "summary": "Elevated international petroleum costs contributed to a weekly downturn across domestic equity markets. Heavier import bills typically burden corporate profit margins and broaden trade deficits.",
+   "why": "Since India relies heavily on foreign crude imports, elevated oil quotes directly affect inflation and business input expenditures.",
    "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa0Y2WHFqb19hRHBJX3M2OUNwYXozQ1RLNWtPYkJqX0ljZzRkNkxTM1poamZEYnNjMTB5SGZoZER3QUlDbHU1UFRVLXFxRVZPYk0tV1Z1bFdmejFXME1CSWdIYi0tMHp4elBiRnJMV0xDamcxaVpJOFVjS1lBMDJRM0YwUlJjOXZzVXV3ME45V3VqSzdVMjlSNy14NHp1UTRLLVI3RG5YWXI3VFFNMS1JSA?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeVk5bXN2THRVWVBubnpudHpPQ2dreFhuVUxXSUFqZWJLa2psTU1rbjl3UktXTlVabEpvVEM0YUpuZVBUWkJQSjB4X1o1QlI5OEZYNE1fNE5QREZ1RjZqeURTcEFZSm5DbkFGYkFCLVNVYkpRNXRCQ3RMTDExMGVJdS1lUjUtdlBFVkJQY1VXdVBZTF9qVklpbU1YRXp6dHpXNWhqcHVFVFNsZUtQeXV6SGNBTnJYaHBzWlE5SF9EeFpiYllha3c?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Precious Metals Face Sharp Correction Following Prior Peaks",
+   "summary": "Silver values fell substantially alongside broad declines in gold from earlier highs. The price reset highlights renewed volatility across bullion trading desks.",
+   "why": "Precious commodities frequently experience cyclical contractions when macro trends shift or speculative positions unwind.",
+   "source": "Livemint",
+   "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNSERQMWlydW9wT2t2LWRqM1RvdUwyRWw1NTZWQmZyV1dtWmNuREl6Qll4blZYWHZqc1hkSDl2QWE0OHNFaWhFY29oVm12ZXFoY3NyRzJ0Uk5LZ2R3SnV2bkJIbFB3ZWRvdk9XWk9mS3V6WDlZUmZ6WmI4NDl2d3hLRmNfWDdyZmthcXMtV01Hc3N0SEVNdnBTU1luTXA3Y1JoVWwxdVFCQjJnT0xBZ2x2ZlFVUEJHOEc0TXI2SmtBWUNKM3ZNdm4yUjE5R1FSZWMwa0MyWVVUSktGVGtWdHhpU3V2Wi05dkxmQ3FoRWlsUkpzY08teHY3RXNkamZPZkNfSUpSNmxsaC1LdUFYM3R6MXpyaTbSAZoCQVVfeXFMTXZkMzRiaXpMNTNRYU9JOUsxZmQ0Uy1Zdmpaa0FaZUh6cEE4MFFjT1FzNERWZHl2M0IyOFJobm5oRzh3YjNjWFhtb01LWVk0QjNjWHpDQUE3cmVoTHBmc2QzZE5nWmREVzVKTzRSeHMyTkxzU29JcEptSHpqemxzOXhIWnpWOWczb2thUHpYOHpLcXlabUxCck5JX0Q0Z0FoNlVhZzZmR0NyQnRDX01vX0lTQ1Y5UzdOUnFnaUpILVVBT0ZXSzREcWVHYkhRX0drMTVYa0M5MEdxMjA0VXNOVVd0c010UHZPeGRKcnZxa0tzV1NBZnhMbUIyM09JNnhVYTNWU3hHVUc0TnBHNUVMM19ucEp5ZDNCU1FR?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Finishes Multi-Day Winning Streak as Petroleum Hardens",
-   "summary": "The domestic legal tender stopped an eight-session run of advances as higher imported oil values neutralized incoming capital. Greater expenditures on crude petroleum weakened earlier currency strength.",
-   "why": "India relies heavily on imported energy, making the domestic currency vulnerable to rising international fuel costs.",
+   "title": "Sovereign Debt Values Extend Multi-Decade Slump Amid Global Pressures",
+   "summary": "Indian central paper experienced prolonged weakness driven by soaring petroleum benchmarks and hardening debt yields overseas. The selloff marks one of the steepest continuous declines in government bond trading.",
+   "why": "Rising bond yields raise government borrowing expenses and signal shifting interest rate expectations within the broader financial system.",
    "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUzRXM3Zsbm5IWnNiRE9lUVRET19aWTluQjBsWWF5UkZYcHJOT191R056QjBwUW03cVVNUWY2RjlsdmZiZDNNX2JKUmNwaXZGYUVMMGpGMVYyOVVVYU03SGxFbjYxSjl4Q1BBdE9mNVBpUUwwX2dpWFp0eWZRWGlXLUR0NGp4MWpVakU0UnF0bVNucV9wY19mc2M4OTVVcVJVVVRpZEJkdm5RbGRvYml1OE1qUWVKT0cwYlhYU3FSSnJzY2NoZkR3SUxCdkFjb1RRU2fSAdcBQVVfeXFMT21TdUFtSWNublp4YkdxblZPeDRhajVmd2NONE96Mm9Ud3Nka1IyZnQ3QmxFUzZfY3A5UTlSZUthTndJbDV5c0QyWWdaY0ZMM3V4MTNvQ1dSVUZwajNXRkszMWhPR2hUd2tvaXplNjY4QW5Ba0FpbjJLODZsVlZSa0tiUnoySXAxaWJlRmM3SjVUQVBUdmNJUktaNEVwZGxkbUdGTWR4allJMWphTTE0RzF1QTlORGxyWXR4c3FBNnhmcVJmNl9qUVpGY3dsUkFfTGRma3FYUUk?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUWZRT2JWb0xKeF9EOWV5VG5TU190d09rUWswNVBNZjNPcVZwTmJYZHNQNV9JOGhCR1pvTkpMdG11TUE0VGJVZzhHQS0wck1MTk8wZko1NG1BTTR1d2FxSElzdzgzRXFBNTNqdENTc1ZlSms3cDgwM1BoTWtGMmJmVG1wMUVadkVlLWYzN3daeG40dVFSU18tTC1oZndQY1Ywaks0MnE3VjgzWS1JVnhicmZYQ1NwbkR4azVMSE5RMThuQ3cyMUl3MXpKT1dQV3YxODRN0gHYAUFVX3lxTE9nWG9tRW1ycWRLODNjUWV2bnpNN3ZEdVdFYnpHcWJFMFdibGpRSENZZUZWRkhFWTJGOEVXdFpTTFVNWlNxdkJPNDNxNmstQjEwRmhPYi1IUHV6VWRJcW5KNThWbTdyZGl1MzlkYVNBSnR1SERNWHB6UnJGbk9iRTdWcFVyQWhRMXJ5a1ZIODZ3VEVVeGNiSklNeGR4LU55UzhONTZ1QVVvMk9HbzJwX1lPSDdDaTFmN2xySnJqdkZtX0JnLW5wNHNSdlNRaHF6ZlVDOXRpcDF1cg?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Liquidity Auction Draws Strong Cash Bids from Lenders",
-   "summary": "A three-day variable rate repo facility tendered by the monetary authority gathered bids worth 1,06,949 crore rupees, more than double the planned 50,000 crore rupees. Commercial lenders actively sought temporary funds to navigate their reserve balances.",
-   "why": "Repo auctions show how the banking system manages everyday cash liquidity with the central bank.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63851"
-  },
-  {
-   "category": "US Markets",
-   "title": "American Technology Shares Slide Amid Elevated Spending Concerns",
-   "summary": "United States indices declined broadly, led by a drop of more than two percent in the tech-heavy Nasdaq. Investors grew hesitant over the significant capital expenditure required to support artificial intelligence projects.",
-   "why": "Major corporate spending without immediate profitability can prompt sector-wide valuation adjustments in global equities.",
-   "source": "marketscreener.com",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVEJrY2VFRHJOaGJheFNPTkFYVXZiSUg5ZWRMakIxRTVvNDNJSlFqcEt3UTkwYVRfZVJibm8xZDZKbk1QSlAxVUxZUWEzSWlqOUc3dFFlMjR1cnp3SjRyZXR5bTVQV1JNaFFjQTZrVUFVXzVKR0RZSXhjYW84V3I5MldLMEJka1V4ZzlZXzZLalRGOFhhajdoeHNtWE5GeG5UR285Z0E0THNNb3Q4cDV1QlZ3?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Ten-Year Treasury Rates Slide Below Five Percent on Defensive Buying",
-   "summary": "The ten-year United States benchmark yield dipped beneath the five percent threshold as global participants shifted capital toward sovereign paper. Increasing safety concerns stimulated interest in defensive government instruments.",
-   "why": "Bond prices and yields move in opposite directions, meaning heavy buying of debt securities pushes yields downward.",
-   "source": "CNBC TV18",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWm5YVmJyS0M0YTJFck1wT0l2bGFxSFcxZTVualFWcURGWlYwUWNLelZIc0taVjlfTm1NaVd6T0FHY2pSMlJjLW83dzZrQkI4dTJyMXB1SGozam9SQ2V3MmgwY1Zmc3ptbG1hd2t5NVdzSFhXcmdrQVZLZTB6MGtadjdWZ3NPTHRSbi1lVzJnMlQzLWZrbmZRYUgxd2F2dnVIcVI4SjFUMNIBrAFBVV95cUxPcWw2Mm01amVjMi01bk55blVLRFFSWjJURG5lTjhxWVhUQ2hnWFpYVFJ3cEdGWUFWOHBzS24xNU1lajlNdFd2V0dGSXNsWEZHeUJ3ODdIOXNsMmtITUtMQ3UybkdUUjJyUmg1eG50NWl3UThqWU1Yd04zVVRPUGV0bXJ6em8zd1VQcnZXYy1vMEx6RENTWjI2UUNKVVlTcUtZemI2TXlJWDEteFBK?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Weekly Applications for American Unemployment Benefits Resume Downward Path",
-   "summary": "Filings for state unemployment support in the United States resumed their lower trajectory after prior fluctuations. The figures indicate ongoing stability in domestic employment conditions.",
-   "why": "Tracking weekly jobless data helps market participants gauge overall labor market health and economic momentum.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZGJ0enIydGpnaExlUG5GdFJlR25SVE9PR1Q4LVN4eUFKbkhaUmQyT21uNHozaHF0UGM4MnpZQjNiU3hiSDlyU1lHQlJoMEkzQmM3cFNFSC1GaC1yTndWV29rd1NJd253VjNxdEI1NGtNLTJhaDk3d2k4bk1Ga290bTd2OWt1RjFSaUNqVlBB?oc=5"
+   "title": "Central Bank Focuses on Exchange Rate Stability Rather Than Precise Targets",
+   "summary": "The Reserve Bank stated that its foreign exchange intervention aims to reduce sharp price fluctuations rather than defend a preset value for the domestic currency. The approach prioritizes orderly trade conditions in the currency market.",
+   "why": "Understanding central bank interventions helps new investors see how monetary authorities smooth out currency turbulence without distorting price discovery.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPbkIydGZGZXZvRmZEZ0Z0TEE3ejdUbDk0Qk1CNHNLanNFV2RlM0lLQ0hNVG9wemhnamZ0TERZQlpvY19jSkRJQkNCb1NRWWIzQ2ZnaW1SWEF3ek00U0pmWUc3S2Vkdlh2OEY0cExnQ3BTXzlZZWIyaE1iQTg3VFNUdnQ2b2NRVi03TDJoZldlMVZQWEdkRHlpVzdBa0cyaWJtdWxKVmVLd0tnSE0tX1pWdnZBaFJ4eWY4Y3JlSGY1a3dCeEVveWpMeXhmNXZuSFc2eHQ0aThOUTN6WjJDMmZWa1N6TkRzMDhTMHhYZUlvemRuRFJrOERPUWlVSmREdVFWWV83bkJmWGpXNXRGNm1kONIBlgJBVV95cUxQTUd6YkE1b05sT0RtcWpRR1dPZ3pQYmtfbF9lOTk0Z1hTNXBfblIwd0pFZzB2d3VsSUpfMnVLZEdDeE5UZ0loTlFQekxib0FPZ0xObzNVMkdvZWp1LWRDSFRJVlV3amxRQWdoMUpsNTd3cG84dHN3Tmt0dzFCTlpDUkZHTmQ5dU1Nc3gxZk92dnlZT3haMUxKLVZUNU0tWlh4VHBxMTNCYjBEbFBoN2JfQnBCbmxHV3FwQkIycXJPSV9PMGxmRzRwUDh2dWFiR2dIOUxYZmU2LXdQNFFON3NCMlhraFpjektkUE5MYnFqMlBFb01UcFFqclhZeU5BY0x0NHc5N2tlY0VFTWlHMVUyWmxVZ1VrZw?oc=5"
   }
  ]
 }
