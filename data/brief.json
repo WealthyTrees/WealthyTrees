@@ -1,5 +1,5 @@
 {
- "date": "Saturday, 24 October 2026",
+ "date": "Sunday, 25 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -44,76 +44,76 @@
  ],
  "items": [
   {
-   "category": "US Markets",
-   "title": "Major American Indices Retreat as Energy Costs Surge",
-   "summary": "United States equities tumbled, marked by the Dow Jones Industrial Average shedding 653 points. This downturn occurred alongside petroleum benchmarks reaching 116 dollars.",
-   "why": "Energy spikes often stoke inflation concerns, prompting equity investors to reassess corporate operating expenses and profit margins.",
-   "source": "NiftyTrader",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVnN1VjZqQ2tiY3poSEJwaVlhWDhrSHdkRnI4S0M3SEJhaHNGR08zMmVjNkJOdnZRbWU4T1NxU0d4NWthYnd3VUktSkpUTV84cjB0emEtaWZ5cTMzT2dMU3RWcm5uSXNLbXhmZGNoTkRwTFJCWDhDMGM4aHloWkxBUXVBUQ?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Sharp Valuation Slumps Hit Key Technology Equities",
-   "summary": "Several prominent American equities experienced severe drawdowns during 2026, with digital ad firm The Trade Desk contracting roughly 66 percent to 13 dollars. Such losses reflect steep valuation cuts across select technology enterprises.",
-   "why": "Examining steep pullbacks teaches beginners about single-stock risk and the volatility inherent in growth-oriented investments.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/portfolio-killers-10-us-stocks-that-wiped-out-up-to-66-of-investors-wealth-in-2026/slideshow/135167355.cms"
-  },
-  {
    "category": "Equity",
-   "title": "Overseas Funds Pull Capital for Tenth Straight Week",
-   "summary": "Overseas institutional participants offloaded Indian shares across consecutive weeks, pulling the Nifty 50 down 2.4 percent. The broader market faced sustained selling pressure across trading sessions.",
-   "why": "Tracking cross-border fund flows helps investors monitor institutional liquidity trends that influence benchmark index directions.",
+   "title": "Overseas Investors Continue Pulling Capital from Domestic Equities",
+   "summary": "Foreign portfolio participants extended their net divestment streak to ten consecutive weeks. Across the shortened trading period, the primary fifty-stock benchmark decreased by over two percent to finish at 22,600.",
+   "why": "Sustained capital withdrawals by large global institutions reduce available market liquidity and create persistent downward pressure on major indices.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/fiis-dump-indian-stocks-for-10th-straight-week-as-markets-slide-is-the-worst-over-or-more-pain-ahead/articleshow/135165684.cms"
   },
   {
    "category": "Equity",
-   "title": "Kotak Mahindra Bank Posts Over Twenty Percent Earnings Growth",
-   "summary": "The major lender recorded a consolidated net profit expansion of 26 percent to 5,645 crore rupees during the second quarter. Net interest income also registered a 16 percent increase compared to the prior-year period.",
-   "why": "Net interest income and net profit reveal how effectively commercial banks generate revenue from core lending operations.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/kotak-mahindra-bank-q2-results-consolidated-pat-rises-26-yoy-to-rs-5645-crore-lenders-nii-up-16/articleshow/135165924.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Godrej Properties Reports Sharp Earnings Contraction",
-   "summary": "Godrej Properties logged a 62 percent fall in quarterly bottom line to 154.15 crore rupees amid escalating expenditures. The company's equity price retreated over 4 percent following the financial update.",
-   "why": "Quarterly earnings reports highlight how changing construction expenses and project timelines directly alter corporate profitability.",
+   "title": "Massive Bidding Numbers Mark Conclusion of Jio Platforms Public Offering",
+   "summary": "Bids for the telecom entity's initial share offering exceeded the available pool by more than twenty-two times. Allotment processing is scheduled ahead of its public debut on October 28.",
+   "why": "High oversubscription levels indicate strong participant demand and highlight how effectively major primary offerings can attract capital.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/godrej-properties-q2-profit-falls-62-to-rs-154-crore-real-estate-stock-down-6-5-in-1-week-what-s-next-for-investors-11792839670974.html"
+   "url": "https://www.livemint.com/market/stock-market-news/reliance-jio-ipo-listing-on-oct-28-will-mukesh-ambanis-firm-be-in-top-5-m-cap-ril-to-hold-top-spot-11792854254054.html"
   },
   {
    "category": "Commodity",
-   "title": "Domestic Silver Drops Below Key Benchmark Level",
-   "summary": "Silver traded below two lakh rupees per kilogram, marking its first dip under that threshold since late 2025. Heightened energy expenses and worries over potential interest rate hikes contributed to the decline.",
-   "why": "Precious metals respond strongly to industrial energy shifts and interest rate expectations in global financial markets.",
+   "title": "Silver Drops Beneath Key Psychological Threshold on Macro Headwinds",
+   "summary": "Heavy selling pressured silver values under two lakh rupees per kilogram, erasing cumulative gains logged during 2026. Elevated fuel expenditures alongside worries over potential policy tightening have driven the white metal more than halfway down from its January peak.",
+   "why": "Precious metals often suffer downward price adjustments when expectations of elevated interest rates make non-yielding assets less competitive.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/silver-price-has-broken-below-2-lakh-for-the-first-time-since-december-2025-is-this-the-right-time-to-buy-for-returns-11792841534411.html"
   },
   {
-   "category": "Economy",
-   "title": "Sovereign Debt Experiences Multi-Decade Losing Streak",
-   "summary": "Indian government securities logged their longest stretch of losses in 30 years. This extended debt decline coincided with climbing petroleum prices and higher yields on American debt instruments.",
-   "why": "Bond prices move inversely to yields and weaken when elevated fuel costs trigger concerns about domestic inflation.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUWZRT2JWb0xKeF9EOWV5VG5TU190d09rUWswNVBNZjNPcVZwTmJYZHNQNV9JOGhCR1pvTkpMdG11TUE0VGJVZzhHQS0wck1MTk8wZko1NG1BTTR1d2FxSElzdzgzRXFBNTNqdENTc1ZlSms3cDgwM1BoTWtGMmJmVG1wMUVadkVlLWYzN3daeG40dVFSU18tTC1oZndQY1Ywaks0MnE3VjgzWS1JVnhicmZYQ1NwbkR4azVMSE5RMThuQ3cyMUl3MXpKT1dQV3YxODRN0gHYAUFVX3lxTE9nWG9tRW1ycWRLODNjUWV2bnpNN3ZEdVdFYnpHcWJFMFdibGpRSENZZUZWRkhFWTJGOEVXdFpTTFVNWlNxdkJPNDNxNmstQjEwRmhPYi1IUHV6VWRJcW5KNThWbTdyZGl1MzlkYVNBSnR1SERNWHB6UnJGbk9iRTdWcFVyQWhRMXJ5a1ZIODZ3VEVVeGNiSklNeGR4LU55UzhONTZ1QVVvMk9HbzJwX1lPSDdDaTFmN2xySnJqdkZtX0JnLW5wNHNSdlNRaHF6ZlVDOXRpcDF1cg?oc=5"
+   "category": "Commodity",
+   "title": "Global Crude Touches Multi-Month Highs Pressuring Indian Shares",
+   "summary": "International Brent oil quotes climbed to their highest marks in six months. This upward move in energy costs triggered further valuation contractions across domestic bourses.",
+   "why": "Because India imports a vast majority of its petroleum needs, surging oil prices tend to worsen the trade balance and stoke domestic inflation.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNl9BZzNmWkVobVp1eUNraFp3SjJEZF9Ec1QtZEI4X3FsYTdrQThyTnB6TUhCcUxyVTFzTVUtRFV3WjZ6RUFxRzN0LTJmR3Jsb21MRU44R0FpVzBCZExsNVk3YXEwdUtGQkRUYTFoWExjOFoycDB1cXpnTW5YN3RFSXZ5M2VlQ3haeTJlVkRTRGQ1UFBq?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Logs Unprecedented Monthly Foreign Currency Purchases",
-   "summary": "The monetary authority reached an all-time high net purchase of 43 billion dollars in foreign currency during August. The central bank utilized foreign exchange swap agreements to manage the liquidity impact.",
-   "why": "Reserve accumulation allows central banks to stabilize currency volatility and buffer the domestic economy from international capital swings.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOZ2o4cUtGM0ZxZ1FPb19LcVRHemNpX0ZNbGczZndPV1dneEltWWhSd25MM2hlNTJzOUxkZUp4R2pITGNnN3ZzNkxJLWRRWW9mYjl0T0FqVHdWTU1TWm90WFRsa2pZVEs4bjNnSk8zTmFZZ3NRVUJ6akY3RndvTldYMHdHd1BMQnQ5WUY1aHE0R0JaRlBwRUtaYl9wdFdhT080UlMwM3ZKV0hBMUdMTG5Kb3hLTTdpTmRBMWZDQ3BJTWlBcXUtZnBnd0hjY2FWVmlFX0c4eHJjVVVQNUlsbW5nN3hGOGJZWlZMaFHSAe8BQVVfeXFMTllyNEhOcXBCX2xsalhkTlRIZ2FZTWw0Z0FVcVJDdjFCTlFrN3h0dVFibFFJbFB3TXFLT3lmZU03ZWFnamxNM282YTlWLThwcEFOZHNsUHRUSWFJLXpFcVVUa1B2WWdYcndnSDNqWEJDcVhHaXVHdXJWVXladHNxdHpESTkybU5sdHE0MkVFRkZjRUJpelNMWWhONWRna0ZueEpwV3JINUY2dE53MXU0bkNLQ3ljM2Nab1h3X1BqRTBIMlJ6aFJxQnBuX3JabHFtc3NkY0l4QVAycVBBNWE0SDJZVjJhR25XYjFmQ2JqVEE?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Reserve Bank Schedules Short-Term Liquidity Infusion Auction",
-   "summary": "The Reserve Bank arranged a four-day variable rate repo auction scheduled for October 26 under its liquidity facility. The operation aims to manage evolving cash conditions in the domestic banking space.",
-   "why": "Repo auctions serve as standard tools for central banks to regulate short-term money supply across the financial system.",
+   "title": "Central Bank Schedules Short-Term Liquidity Injection for Commercial Banks",
+   "summary": "The Reserve Bank announced a four-day auction under its liquidity adjustment framework set for October 26. This operational measure follows an ongoing assessment of prevailing cash conditions in the domestic financial system.",
+   "why": "Variable rate repo auctions help monetary authorities supply short-term funds to lenders, stabilizing overnight interest rates within the banking sector.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63861"
+  },
+  {
+   "category": "Economy",
+   "title": "Government Bond Prices Experience Historic Decline Amid Dual Pressures",
+   "summary": "Sovereign debt securities in India logged their steepest continuous losing run in three decades. Persistently high oil quotations and surging American sovereign yields exerted sustained strain on domestic fixed-income instruments.",
+   "why": "Bond prices fall when yields climb, reflecting higher borrowing costs and inflation risks across the broader economy.",
+   "source": "Rediff",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOT25NeG1SNklPVUw3RzNBSjA5RzlfM21MeHA2eWZEcTctOXV2VEVhTC1Ja0dUa1VPS3laVm5mdWtpM1RGVFpmNmZtcFc1b3RXMmFjdnhTSEszUDM2RlVZWmZIOFc2RTRlODJNcDlpVDlfeEdPTVJGNjBCaWo0NnJEalV6ZGJkSnI3RDlIUFFGalA2aDdKckhvbDQwQy1nZmpwc1NuXzV1RWhvcnM0NThmT2lxeUVRMTEzX24zYl9KRzZVZms2eGNmakhGYkQwbnJhUC1HRU1B0gHYAUFVX3lxTFBhTFVSd0J2UFI4ZWQ3Tkc2UXl1TmVIZkJkSmlMV29PVHhZN3JXNnctcW9SZHlmOG15eWhGVG94NlgzVWU4cUxSMFphaDRZRFB4R1BCUTh5aU96dTYzOEotS2MxdGdPM1hyMVNTdkhLRzV4S3RLUnQ0YmFFTmpsVmhwLWpWWGpnTlhsU3FUQXpydmRIQXdNb05HSGZmME1EMXU3VW9kb3FpRFo5S1VpMEtPSEJWYVl2SmF0MXJqRWhBRENnaG1iSldsOEpwN2Y4RWsyWUc3ZzRfSw?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Central Bank Publication Emphasizes Resilience in Underlying National Indicators",
+   "summary": "The latest bulletin from the monetary regulator stated that robust core economic factors are shielding the nation from international turbulence. The release highlighted sound domestic parameters amid external pressures.",
+   "why": "A solid macroeconomic foundation allows emerging economies to absorb adverse cross-border shocks like currency shifts and foreign capital outflows.",
+   "source": "News18",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVmo5c3R3cDd1SXFxYjBZSzE1ZG5wLUxQRXlhTnhnRTBXRWI3Y1BSeXBhdGV6enBabjN2dFZxUk5Lcmpxb0FZRnFZbjZnVGRpVHNlalh1TXk3NGs3LW9JdzZsV19mSXJRdzFZRjBnbzRkWnNVRmtxck5SVDVHclQtTnVHVDl2TFR3VHhkVTl6eEhEM0p2dkFWNnN1cExyVm9GTUI0Ty1tdXRFVVlJMVk3VTdqaWlpZkFkcGljbzhodTF4SEJwN3Ewa3RaMWRQNjk3ZDV0TTRKdVJmaUFyQk15cmM2cFIzV3fSAewBQVVfeXFMTWRZRXhXX3JsakJtNmRKdnR6QnBScW0wQXQ0eXdCRkxMNTZ3aVhSMVFEN1EwTVRSN1RkTmk5WWloVlRZMUFRMUNhVTlabWRST0EyUlRYM3B5QkpWLWM2X3o4b1J6UEtPYS1DeTh4OUxLTGQzUmtjak1mRURPU3c2LWZLelVlMmxUVVB0UHZfN1ZtZExfSjFFN2tlcm5tb1RYdnFuam8yanBfZnV0bjFmcjNhVlVyYmRjRlRRdWN4Yk5haGl6dDU1YkZqSGQ1aTBvUm1BV29GRU8zWXpOS3prcEFIb2Nvc0lBUEtKN1A?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Major American Indices Fall Sharply as Crude Crosses $116",
+   "summary": "The Dow Jones Industrial Average dropped by 653 points during a widespread retreat on Wall Street. Surging petroleum prices past the 116-dollar mark dampened investor sentiment across equity desks.",
+   "why": "Sharply escalating energy prices raise operational costs for corporations and can hamper consumer spending in major developed markets.",
+   "source": "NiftyTrader",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVnN1VjZqQ2tiY3poSEJwaVlhWDhrSHdkRnI4S0M3SEJhaHNGR08zMmVjNkJOdnZRbWU4T1NxU0d4NWthYnd3VUktSkpUTV84cjB0emEtaWZ5cTMzT2dMU3RWcm5uSXNLbXhmZGNoTkRwTFJCWDhDMGM4aHloWkxBUXVBUQ?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "US Central Bank Pauses Rate Adjustments Amid Elevated Inflation Reading",
+   "summary": "The Federal Reserve kept its benchmark borrowing cost unchanged despite price pressures reaching their highest level in three years. Policymakers opted to maintain existing policy boundaries as cost-of-living metrics escalated.",
+   "why": "Central bank interest rate decisions directly influence global capital flows, currency valuations, and international borrowing costs.",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5"
   }
  ]
 }
