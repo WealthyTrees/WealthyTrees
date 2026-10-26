@@ -147,7 +147,7 @@
   function apply(j, instant) {
     stories = j.stories || []; loaded = true;
     note.textContent = !stories.length ? "No major stories right now. Please check back soon."
-      : j.ai ? "Sprout writes these from headlines only, so double-check the source. Learning only, not investment advice."
+      : j.ai ? (j.at ? "Sprout last checked the news " + ago(j.at) + ". " : "") + "Sprout writes these from headlines only, so double-check the source. Learning only, not investment advice."
              : "Key headlines from established outlets. Each links to the original publisher.";
     introSay(j.ai ? j.lead : "", instant);
     draw();

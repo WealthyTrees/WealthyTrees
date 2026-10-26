@@ -191,7 +191,18 @@ export async function onRequestGet(ctx) {
       lastEngine: b && b.engine ? b.engine : "unknown", geminiBlockedByLocation: kv ? !!(await kv.get(GBLOCK)) : false,
       lastError: !kv ? "KV not connected" : e ? e.m + " (" + Math.round((Date.now() - e.at) / 60000) + " min ago, model " + e.model + ")" : "none since last success",
       storedStories: b ? b.stories.length : 0, ageMinutes: b ? Math.round((Date.now() - b.at) / 60000) : null,
+      newestStoryMinutes: b && b.stories.length ? Math.round((Date.now() - Math.max.apply(null, b.stories.map((x) => x.t))) / 60000) : null,
     });
+  }
+
+  if (asked.get("heal")) {     // v17 watchdog: clear stuck locks/blocks, then run ONE refresh (only if the stored copy is 8+ min old)
+    if (!can) return json({ ok: false, error: "No AI or KV connected" });
+    const old = await readBook(kv);
+    if (old && Date.now() - old.at < 8 * 60e3) return json({ ok: true, healed: false, ageMinutes: Math.round((Date.now() - old.at) / 60000) });
+    for (const k of [LOCK, FAIL, GSLOW, GBLOCK]) { try { await kv.delete(k); } catch (e) {} }
+    const nb = await refresh(env, { retryGemini: true });
+    const e = nb ? null : await readErr(kv);
+    return json(nb ? { ok: true, healed: true, engine: nb.engine, stories: nb.stories.length } : { ok: false, error: e ? e.m : "unknown" });
   }
 
   if (asked.get("refresh")) {  // run ONE refresh now and show the result. Only works if the stored copy is 10+ min old.
