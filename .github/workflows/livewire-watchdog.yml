@@ -1,0 +1,35 @@
+name: Live Wire watchdog
+# Every 10 minutes: checks Live Wire. If stale or broken, it heals it (clears stuck locks, forces a refresh).
+# If healing fails twice, this run turns red and GitHub emails you. Free.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: livewire-watchdog
+  cancel-in-progress: true
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check, heal, re-check
+        run: |
+          S=https://wealthytrees.online
+          bad() {
+            R=$(curl -fsS -m 40 "$S/api/pulse?status=1") || { echo "status endpoint unreachable"; return 0; }
+            echo "$R"
+            echo "$R" | jq -e '(.ageMinutes != null) and (.ageMinutes <= 30) and (.storedStories >= 3)' >/dev/null && return 1
+            return 0
+          }
+          if bad; then
+            for i in 1 2; do
+              echo "Healing attempt $i"
+              curl -sS -m 50 "$S/api/pulse?heal=1" || true
+              sleep 20
+              bad || { echo "Healed"; exit 0; }
+            done
+            echo "::error::Live Wire is stale or broken and auto-heal failed. Open $S/api/pulse?status=1"
+            exit 1
+          fi
+          echo "Live Wire healthy"
