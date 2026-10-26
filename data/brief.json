@@ -14,17 +14,17 @@
   {
    "name": "GOLD $/oz",
    "value": "4,008",
-   "change": -1.29
+   "change": -0.01
   },
   {
    "name": "CRUDE WTI",
-   "value": "$103.3",
-   "change": 3.82
+   "value": "$101.5",
+   "change": -1.73
   },
   {
    "name": "USD/INR",
-   "value": "94.94",
-   "change": 0.14
+   "value": "94.93",
+   "change": 0.0
   },
   {
    "name": "S&P 500",
