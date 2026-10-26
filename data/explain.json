@@ -118,5 +118,365 @@
   ],
   "oneline": "Sensex and Nifty are two scorecards for the same big companies.",
   "learn": "/learn/beginner/module-1.html"
+ },
+ {
+  "title": "Why does the market open at 9:15?",
+  "intro": "Trading does not start the moment you wake up. India's market has a fixed daily rhythm.",
+  "steps": [
+   [
+    "9:00 to 9:15 is pre-open",
+    "Orders are collected and a fair opening price is worked out."
+   ],
+   [
+    "9:15 is the opening bell",
+    "Normal buying and selling starts at the price found in pre-open."
+   ],
+   [
+    "Trading runs to 3:30 PM",
+    "The close is the last price of the day. That is the number we record."
+   ],
+   [
+    "Weekends and holidays are closed",
+    "No trading, so no new closing price."
+   ]
+  ],
+  "oneline": "Pre-open finds the price, 9:15 opens trading, 3:30 PM sets the close.",
+  "learn": "/learn/beginner/module-1.html"
+ },
+ {
+  "title": "Who are FIIs and DIIs?",
+  "intro": "You often hear that foreigners sold and Indian funds bought. Who are they?",
+  "steps": [
+   [
+    "FII means foreign institutional investor",
+    "Large overseas funds that invest in Indian shares."
+   ],
+   [
+    "DII means domestic institutional investor",
+    "Indian mutual funds, insurers and similar large investors."
+   ],
+   [
+    "Their flows are published daily",
+    "Exchanges report how much each group bought and sold."
+   ],
+   [
+    "Flows are information, not instructions",
+    "They show what big money did, not what you should do."
+   ]
+  ],
+  "oneline": "FIIs are foreign funds, DIIs are Indian funds, and their daily buying and selling is public data.",
+  "learn": "/learn/beginner/module-1.html"
+ },
+ {
+  "title": "What is the repo rate?",
+  "intro": "The RBI has one rate that quietly touches loans, deposits and markets.",
+  "steps": [
+   [
+    "Banks borrow from the RBI",
+    "The repo rate is the rate they pay for that short-term money."
+   ],
+   [
+    "It sets the tone for lending rates",
+    "When it changes, home and car loan rates often follow."
+   ],
+   [
+    "It affects deposits too",
+    "Banks adjust what they pay savers."
+   ],
+   [
+    "Markets read it as a signal",
+    "Rate-sensitive sectors like banks and housing watch it closely."
+   ]
+  ],
+  "oneline": "The repo rate is the RBI's lending rate to banks, and it ripples into loans, deposits and markets.",
+  "learn": "/learn/beginner/module-5.html"
+ },
+ {
+  "title": "What is inflation (CPI)?",
+  "intro": "Why does the same ₹100 buy less than it did a few years ago?",
+  "steps": [
+   [
+    "Prices of a basket are tracked",
+    "CPI follows what households typically buy: food, fuel, housing and more."
+   ],
+   [
+    "The change over a year is inflation",
+    "If the basket cost 5% more, inflation is 5%."
+   ],
+   [
+    "Food moves it the most",
+    "Vegetables and grains carry a large weight in India's basket."
+   ],
+   [
+    "The RBI keeps an eye on it",
+    "Its rate decisions are linked to the inflation reading."
+   ]
+  ],
+  "oneline": "Inflation is how much more the same basket of goods costs than a year ago.",
+  "learn": "/learn/beginner/module-5.html"
+ },
+ {
+  "title": "What is the P/E ratio?",
+  "intro": "One number that says how much you pay for each rupee of a company's profit.",
+  "steps": [
+   [
+    "Price is the share price",
+    "What one share costs today."
+   ],
+   [
+    "Earnings is profit per share",
+    "Called EPS, from the latest results."
+   ],
+   [
+    "Divide price by earnings",
+    "A P/E of 20 means ₹20 paid for every ₹1 of yearly profit."
+   ],
+   [
+    "Compare with similar companies",
+    "A P/E means little alone. Compare within the same sector."
+   ]
+  ],
+  "oneline": "P/E is the price paid for each rupee of profit, and it is best compared within a sector.",
+  "learn": "/learn/beginner/module-3.html"
+ },
+ {
+  "title": "What is market cap?",
+  "intro": "Market cap tells you how big a company is, not how expensive its share is.",
+  "steps": [
+   [
+    "Multiply price by shares",
+    "Share price times the total number of shares."
+   ],
+   [
+    "It is the market's value of the company",
+    "Not the money the company holds."
+   ],
+   [
+    "Sizes get labels",
+    "SEBI ranks the top 100 as large cap, the next 150 as mid cap, the rest as small cap."
+   ],
+   [
+    "Size changes the kind of risk",
+    "Small caps usually swing more than large caps."
+   ]
+  ],
+  "oneline": "Market cap is share price times number of shares: the size of a company.",
+  "learn": "/learn/beginner/module-1.html"
+ },
+ {
+  "title": "What is a SIP?",
+  "intro": "Investing a fixed amount on a fixed date, instead of one big lump sum.",
+  "steps": [
+   [
+    "You pick an amount and a date",
+    "For example ₹1,000 on the 5th of each month."
+   ],
+   [
+    "The money goes into a mutual fund",
+    "Automatically, with no need to time the market."
+   ],
+   [
+    "You buy more units when prices are low",
+    "And fewer when prices are high."
+   ],
+   [
+    "Time does the heavy lifting",
+    "The habit matters more than the exact amount."
+   ]
+  ],
+  "oneline": "A SIP is a fixed amount invested regularly, so you do not have to pick the right day.",
+  "learn": "/learn/intermediate/module-4.html?preview=1"
+ },
+ {
+  "title": "What is NAV?",
+  "intro": "Every mutual fund unit has a price. It is called NAV.",
+  "steps": [
+   [
+    "The fund owns many shares",
+    "Its total value is the value of everything it holds."
+   ],
+   [
+    "Costs are taken out",
+    "Then the rest is divided by the number of units."
+   ],
+   [
+    "That gives NAV per unit",
+    "Calculated once a day after the market closes."
+   ],
+   [
+    "Low NAV does not mean cheap",
+    "A ₹20 NAV fund is not better than a ₹200 NAV fund."
+   ]
+  ],
+  "oneline": "NAV is the value of one fund unit, worked out after each day's close.",
+  "learn": "/learn/intermediate/module-4.html?preview=1"
+ },
+ {
+  "title": "What happens in an IPO?",
+  "intro": "The first time a company offers its shares to the public.",
+  "steps": [
+   [
+    "A private company decides to list",
+    "It wants money from many investors."
+   ],
+   [
+    "A price band is announced",
+    "Investors bid for shares within that range."
+   ],
+   [
+    "Allotment follows",
+    "If more people apply than shares exist, shares are allotted by lottery."
+   ],
+   [
+    "Shares start trading",
+    "The company then has a market price every day."
+   ]
+  ],
+  "oneline": "An IPO is a company's first public share sale, after which its shares trade daily.",
+  "learn": "/learn/beginner/module-1.html"
+ },
+ {
+  "title": "What is a dividend?",
+  "intro": "Some companies share part of their profit with shareholders.",
+  "steps": [
+   [
+    "The company earns a profit",
+    "It can keep it or pay some out."
+   ],
+   [
+    "The board declares a dividend",
+    "A rupee amount per share."
+   ],
+   [
+    "Eligible holders are paid",
+    "Those holding shares on the record date."
+   ],
+   [
+    "Share price adjusts",
+    "It usually drops by about the dividend on the ex-date."
+   ]
+  ],
+  "oneline": "A dividend is a share of profit paid to shareholders, not a free bonus.",
+  "learn": "/learn/beginner/module-2.html"
+ },
+ {
+  "title": "Why do bond prices fall when yields rise?",
+  "intro": "It sounds backwards at first. It is just fair pricing.",
+  "steps": [
+   [
+    "An old bond pays a fixed interest",
+    "Say 7% on its face value."
+   ],
+   [
+    "New bonds start paying more",
+    "If new ones offer 8%, the old one looks worse."
+   ],
+   [
+    "The old bond's price must fall",
+    "So that buying it gives a similar return."
+   ],
+   [
+    "That is why yield and price move opposite",
+    "Prices down, yield up, and the reverse."
+   ]
+  ],
+  "oneline": "When new bonds pay more, old bonds must get cheaper, so price and yield move opposite ways.",
+  "learn": "/learn/beginner/module-5.html"
+ },
+ {
+  "title": "What is a circuit breaker?",
+  "intro": "A pause button for the market on very wild days.",
+  "steps": [
+   [
+    "Single stocks have price bands",
+    "A stock can only move a set percentage in a day."
+   ],
+   [
+    "Index circuit breakers exist too",
+    "If the Nifty or Sensex falls 10%, 15% or 20%, trading halts."
+   ],
+   [
+    "The pause cools things down",
+    "It gives everyone time to read the news."
+   ],
+   [
+    "It is rare",
+    "Most days never come close."
+   ]
+  ],
+  "oneline": "Circuit breakers stop trading for a while when prices move too far, too fast.",
+  "learn": "/learn/beginner/module-1.html"
+ },
+ {
+  "title": "What is diversification?",
+  "intro": "Not keeping all your eggs in one basket, in plain terms.",
+  "steps": [
+   [
+    "One company can go wrong",
+    "Bad news hits one stock harder than the whole market."
+   ],
+   [
+    "Spread across sectors",
+    "Banks, IT, pharma, FMCG react differently to the same news."
+   ],
+   [
+    "Spread across asset types",
+    "Shares, bonds, gold and cash behave differently."
+   ],
+   [
+    "It reduces surprise, not risk to zero",
+    "The whole market can still fall."
+   ]
+  ],
+  "oneline": "Diversification spreads money so one bad event hurts less.",
+  "learn": "/learn/beginner/module-6.html"
+ },
+ {
+  "title": "What is compounding?",
+  "intro": "Earning returns on your earlier returns.",
+  "steps": [
+   [
+    "You invest ₹1,000 at 10% a year",
+    "After year one you have ₹1,100."
+   ],
+   [
+    "Year two earns on ₹1,100",
+    "Not on the original ₹1,000, so you gain ₹110."
+   ],
+   [
+    "Growth speeds up",
+    "Each year's base is bigger than the last."
+   ],
+   [
+    "Time matters most",
+    "Starting earlier beats investing more later."
+   ]
+  ],
+  "oneline": "Compounding is growth on top of earlier growth, and it needs time.",
+  "learn": "/learn/beginner/module-6.html"
+ },
+ {
+  "title": "What is EPS?",
+  "intro": "Profit per share, the number under the P/E ratio.",
+  "steps": [
+   [
+    "Take the company's profit",
+    "After tax, from the results."
+   ],
+   [
+    "Divide by the number of shares",
+    "That gives profit per share."
+   ],
+   [
+    "Track it quarter by quarter",
+    "Rising EPS means profit per share is growing."
+   ],
+   [
+    "Check why it changed",
+    "Higher profit, or fewer shares? The reason matters."
+   ]
+  ],
+  "oneline": "EPS is a company's profit divided by its number of shares.",
+  "learn": "/learn/beginner/module-3.html"
  }
 ]

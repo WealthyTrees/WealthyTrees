@@ -8,7 +8,7 @@ TODAY = now.strftime("%Y-%m-%d")
 if now.weekday() >= 5 and not os.environ.get("FORCE"):
     print("weekend: edition not rebuilt"); sys.exit(0)
 J = lambda f, d=None: json.load(open(f"{R}/data/{f}")) if os.path.exists(f"{R}/data/{f}") else d
-brief, explain, charts = J("brief.json"), J("explain.json"), J("charts.json", {})
+brief, explain, charts, quizzes = J("brief.json"), J("explain.json"), J("charts.json", {}), J("quiz.json", [])
 e = lambda s: html.escape(str(s))
 tk = {t["name"]: t for t in brief["ticker"]}
 items = brief["items"]
@@ -58,7 +58,7 @@ def page(n, tag, head, body, title):
             f'<div class="in"><small class="tag">PAGE {n} · {tag}</small><h2>{head}</h2>{body}</div>'
             f'<footer><span>wealthytrees.online · PAGE {n} OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>')
 
-d0, d, n, x = dt.date(2026, 10, 26), now.date(), 0, dt.date(2026, 10, 26)
+d0, d, n, x = dt.date(2026, 10, 27), now.date(), 0, dt.date(2026, 10, 27)
 while x <= d:
     n += x.weekday() < 5; x += dt.timedelta(days=1)
 edno = f"Edition No. {n} · {now.strftime('%a %d %b %Y')}"
@@ -69,6 +69,24 @@ lead = eq[0] if eq else items[0]
 inside = [(2, "MARKETS", (eq[1:] or [lead])[0]), (3, "INDIA &amp; ECONOMY", (ec or [lead])[0]), (4, "COMMODITIES &amp; WORLD", (cm + us or [lead])[0])]
 ex = explain[(n - 1) % len(explain)] if n > 0 else explain[0]
 
+def quiz(k):
+    if not quizzes: return ""
+    z = quizzes[(n * 3 + k) % len(quizzes)]
+    opts = "".join(f'<button type="button" data-i="{j}">{e(o)}</button>' for j, o in enumerate(z["o"]))
+    return (f'<div class="quiz" data-a="{z["a"]}"><div class="qh"><small>SPROUT QUIZ</small><h4>{e(z["q"])}</h4></div>'
+            f'<div class="qo">{opts}</div><p class="qw" hidden>{e(z["w"])}</p></div>')
+def closetbl():
+    rows = []
+    for nm, lab in [("Nifty 50", "Nifty 50"), ("Sensex", "Sensex"), ("Bank Nifty", "Bank Nifty"), ("Nifty IT", "Nifty IT"), ("Gold", "Gold"), ("Crude WTI", "Crude (WTI)"), ("USD/INR", "USD/INR"), ("S&P 500", "S&P 500")]:
+        t = lc(nm)
+        if t: rows.append(f'<tr><td>{e(lab)}</td><td>{e(FMT.get(nm, "{:,.0f}").format(t["v"]))}</td><td class="{"up" if t["c"] >= 0 else "dn"}">{"▲" if t["c"] >= 0 else "▼"} {abs(t["c"]):.2f}%</td></tr>')
+    return "<table class=\"ct\">" + "".join(rows) + "</table>" if rows else ""
+BAN = ("predict", "forecast", "outlook", "expected to rise", "expected to fall", "likely to rise", "likely to fall", "price target", "tomorrow", "next session", "buy ", "sell ")
+for i in items:
+    for fld in ("title", "summary", "why"):
+        for w in BAN:
+            if w in str(i.get(fld, "")).lower(): print(f"WARNING: forward-looking or advice wording ({w.strip()!r}) in story: {i['title'][:60]}")
+
 watch = []
 def lvl(n_, txt):
     t = lc(n_)
@@ -77,8 +95,8 @@ lvl("Nifty 50", "Nifty 50 closed at {v} ({c:+.2f}%).")
 lvl("Sensex", "Sensex closed at {v} ({c:+.2f}%).")
 lvl("Crude WTI", "Crude (WTI) settled at {v} ({c:+.2f}%).")
 lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%.")
-btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>EXPLAIN ONE THING</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
-       '<div class="bx"><small>AT THE CLOSE</small><ul>'+''.join('<li>'+e(w)+'</li>' for w in watch[:3])+'</ul></div>'
+btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>SPROUT’S LESSON</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
+       '<div class="bx"><small>YESTERDAY’S CLOSE</small>'+closetbl()+'</div>'
        '<a class="bx bg" href="#" data-wt-sub><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
 teasers_unused = "".join(f'<a class="tz" href="#p{p}" data-go="{p-1}"><small>{t}</small><h4>{e(i["title"])}</h4><p>{e(short(i["summary"], 120))}</p><i>Page {p} →</i></a>' for p, t, i in inside)
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
@@ -87,7 +105,7 @@ p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")
       f'<p class="why dx"><b>WHY IT MATTERS</b> {e(lead["why"])}</p></div>'
       f'<aside class="fside"><div class="ins"><b>INSIDE TODAY</b>'
       + "".join(f'<a href="#p{p}" data-go="{p-1}"><i>PAGE {p}</i> {e(i["title"])}</a>' for p, t, i in inside)
-      + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · EXPLAIN ONE THING</i> {e(ex["title"])}</a></div></aside></div>'
+      + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · SPROUT’S LESSON</i> {e(ex["title"])}</a></div></aside></div>'
       + btm)
 mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg" alt=""><span class="m-wt">WealthyTrees</span></div>'
         f'<div class="m-c"><small>WEALTHYTREES</small><h1 class="mh">THE 9:15</h1></div><span>{e(edno)}</span></header>'
@@ -96,17 +114,17 @@ pages = [f'<section class="pg first" id="p1" data-title="Front Page">{mast}<div 
          f'<footer><span>wealthytrees.online · PAGE 1 OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
 def stories(lst, k_show=2, first_w=True, glance_html=""):
     return '<div class="stories">' + "".join(story(i, first_w and k == 0).replace('class="sty"', 'class="sty%s"' % (" dx" if k >= k_show else ""), 1) for k, i in enumerate(lst)) + glance_html + '</div>'
-pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])), "Markets"))
-pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", stories(ec[:3], glance_html=glance()) if ec else "<p>No economy stories today.</p>", "India & Economy"))
+pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])) + quiz(0), "Markets"))
+pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", (stories(ec[:3], glance_html=glance()) if ec else "<p>No economy stories today.</p>") + quiz(1), "India & Economy"))
 pages.append(page(4, "COMMODITIES &amp; WORLD", "Commodities &amp; World",
     f'<div class="strip">{card("Gold","GOLD")}{card("Crude WTI","CRUDE")}{card("USD/INR")}{card("S&P 500")}</div>'
-    + stories((cm[:2] + us[:2]), 2, False), "Commodities & World"))
+    + stories((cm[:2] + us[:2]), 2, False) + quiz(2), "Commodities & World"))
 wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", quote=True).replace(" ", "%20")
 steps = "".join(f'<div class="st"><span>{k+1}</span><div><h3>{e(s[0])}</h3><p>{e(s[1])}</p></div></div>' for k, s in enumerate(ex["steps"]))
-pages.append(page(5, "EXPLAIN ONE THING", e(ex["title"]),
-    f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Explain One Thing"))
-CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read()
-titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Explain One Thing"]
+pages.append(page(5, "SPROUT’S LESSON", e(ex["title"]),
+    f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Sprout’s Lesson"))
+CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read() + open(f"{R}/scripts/quiz.css").read()
+titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Sprout’s Lesson"]
 util = ('<div class="util"><a href="/">← WealthyTrees</a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))
         + '</nav><span class="arr"><button id="pv" aria-label="Previous page">←</button><button id="nx" aria-label="Next page">→</button></span></div>')
@@ -118,6 +136,7 @@ document.getElementById('pv').onclick=function(){show(i-1,1)};document.getElemen
 document.addEventListener('keydown',function(ev){if(!q.matches)return;if(ev.key==='ArrowRight')show(i+1,1);if(ev.key==='ArrowLeft')show(i-1,1)});
 q.addEventListener?q.addEventListener('change',init):0;init()})();"""
 JS += open(f"{R}/scripts/tools.js").read()
+JS += """document.addEventListener('click',function(ev){var b=ev.target.closest('.quiz .qo button');if(!b)return;var q=b.closest('.quiz');if(q.classList.contains('done'))return;q.classList.add('done');var a=+q.getAttribute('data-a'),i=+b.getAttribute('data-i');[].forEach.call(q.querySelectorAll('.qo button'),function(x,k){if(k===a)x.classList.add('ok');else if(k===i)x.classList.add('no')});var w=q.querySelector('.qw');w.hidden=false;w.insertAdjacentText('afterbegin',(i===a?'Correct. ':'Not quite. '))});"""
 out = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        f'<title>THE 9:15 · {e(edno)} · WealthyTrees</title><meta name="description" content="{e(lead["title"])}. Markets, simplified. In 2 minutes.">'
        f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'

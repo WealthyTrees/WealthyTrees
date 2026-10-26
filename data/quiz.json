@@ -1,0 +1,201 @@
+[
+ {
+  "q": "What time does normal trading start on NSE and BSE?",
+  "o": [
+   "9:00 AM",
+   "9:15 AM",
+   "10:00 AM"
+  ],
+  "a": 1,
+  "w": "Pre-open runs 9:00 to 9:15. Normal trading opens at 9:15."
+ },
+ {
+  "q": "When does the market close for the day?",
+  "o": [
+   "3:00 PM",
+   "3:30 PM",
+   "4:00 PM"
+  ],
+  "a": 1,
+  "w": "Trading ends at 3:30 PM and the close is recorded."
+ },
+ {
+  "q": "An FII is a...",
+  "o": [
+   "Foreign institutional investor",
+   "Fixed income fund",
+   "Fund of indices"
+  ],
+  "a": 0,
+  "w": "FII stands for foreign institutional investor."
+ },
+ {
+  "q": "If the repo rate rises, loans usually become...",
+  "o": [
+   "Cheaper",
+   "Costlier",
+   "No change"
+  ],
+  "a": 1,
+  "w": "Banks pay more to borrow, so lending rates tend to rise."
+ },
+ {
+  "q": "A P/E of 25 means you pay about...",
+  "o": [
+   "₹25 per ₹1 of yearly profit",
+   "₹25 per share",
+   "25% yearly profit"
+  ],
+  "a": 0,
+  "w": "P/E is price divided by earnings per share."
+ },
+ {
+  "q": "Market cap equals...",
+  "o": [
+   "Price × number of shares",
+   "Profit × 10",
+   "Revenue − cost"
+  ],
+  "a": 0,
+  "w": "Market cap is share price times total shares."
+ },
+ {
+  "q": "A SIP means investing...",
+  "o": [
+   "Only on market lows",
+   "A fixed amount at regular intervals",
+   "Only in gold"
+  ],
+  "a": 1,
+  "w": "SIP is a regular fixed investment, often monthly."
+ },
+ {
+  "q": "NAV is the price of one...",
+  "o": [
+   "Share",
+   "Mutual fund unit",
+   "Bond"
+  ],
+  "a": 1,
+  "w": "NAV is the value of a single fund unit."
+ },
+ {
+  "q": "In an IPO, a company...",
+  "o": [
+   "Offers shares to the public for the first time",
+   "Buys back shares",
+   "Pays a dividend"
+  ],
+  "a": 0,
+  "w": "IPO means initial public offering."
+ },
+ {
+  "q": "A dividend is...",
+  "o": [
+   "A loan",
+   "A share of profit paid out",
+   "A tax"
+  ],
+  "a": 1,
+  "w": "Companies may pay part of their profit to shareholders."
+ },
+ {
+  "q": "When bond yields rise, existing bond prices usually...",
+  "o": [
+   "Rise",
+   "Fall",
+   "Stay fixed"
+  ],
+  "a": 1,
+  "w": "Older, lower-paying bonds become less attractive."
+ },
+ {
+  "q": "A circuit breaker...",
+  "o": [
+   "Pauses trading after a big move",
+   "Raises prices",
+   "Stops dividends"
+  ],
+  "a": 0,
+  "w": "It halts trading to cool wild moves."
+ },
+ {
+  "q": "Diversification helps by...",
+  "o": [
+   "Guaranteeing profit",
+   "Spreading risk across holdings",
+   "Avoiding all taxes"
+  ],
+  "a": 1,
+  "w": "It reduces dependence on one stock or sector."
+ },
+ {
+  "q": "₹1,000 at 10% a year becomes how much after year two with compounding?",
+  "o": [
+   "₹1,200",
+   "₹1,210",
+   "₹1,100"
+  ],
+  "a": 1,
+  "w": "Year one gives 1,100. Year two adds 10% of 1,100, so 1,210."
+ },
+ {
+  "q": "EPS stands for...",
+  "o": [
+   "Earnings per share",
+   "Equity price scale",
+   "Exchange price slip"
+  ],
+  "a": 0,
+  "w": "EPS is profit divided by number of shares."
+ },
+ {
+  "q": "Which is an index?",
+  "o": [
+   "Nifty 50",
+   "Reliance",
+   "HDFC Bank"
+  ],
+  "a": 0,
+  "w": "Nifty 50 tracks 50 large companies."
+ },
+ {
+  "q": "Is a high VIX a prediction of direction?",
+  "o": [
+   "Yes",
+   "No, it shows expected swings"
+  ],
+  "a": 1,
+  "w": "VIX shows the expected size of moves, not direction."
+ },
+ {
+  "q": "Why does costly crude hurt India?",
+  "o": [
+   "India imports most of its oil",
+   "India exports most oil",
+   "Oil is free"
+  ],
+  "a": 0,
+  "w": "India imports most of its crude and pays in dollars."
+ },
+ {
+  "q": "A weaker rupee makes imports...",
+  "o": [
+   "Costlier",
+   "Cheaper",
+   "Unchanged"
+  ],
+  "a": 0,
+  "w": "More rupees are needed per dollar."
+ },
+ {
+  "q": "Which one is a closing price?",
+  "o": [
+   "The last price of the trading day",
+   "The first price of the day",
+   "The highest price of the day"
+  ],
+  "a": 0,
+  "w": "The close is the final price when trading ends."
+ }
+]
