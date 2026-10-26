@@ -144,10 +144,12 @@
     firstDraw = false;
   }
 
+  function newest(a) { return Math.max.apply(null, a.map(function (x) { return +x.t || 0; })); }
+  function quiet(a) { return a.length && Date.now() - newest(a) > 1800000; }
   function apply(j, instant) {
     stories = j.stories || []; loaded = true;
     note.textContent = !stories.length ? "No major stories right now. Please check back soon."
-      : j.ai ? (j.at ? "Sprout last checked the news " + ago(j.at) + ". " : "") + "Sprout writes these from headlines only, so double-check the source. Learning only, not investment advice."
+      : j.ai ? (quiet(stories) ? "No new major stories since " + ago(newest(stories)) + ". Sprout is still watching. " : "") + (j.at ? "Sprout last checked the news " + ago(j.at) + ". " : "") + "Sprout writes these from headlines only, so double-check the source. Learning only, not investment advice."
              : "Key headlines from established outlets. Each links to the original publisher.";
     introSay(j.ai ? j.lead : "", instant);
     draw();
