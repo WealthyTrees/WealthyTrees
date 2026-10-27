@@ -149,6 +149,9 @@ JS += """document.addEventListener('click',function(ev){var b=ev.target.closest(
 out = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        f'<title>THE 9:15 · {e(edno)} · WealthyTrees</title><meta name="description" content="{e(lead["title"])}. Markets, simplified. In 2 minutes.">'
        f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
+       '<link rel="canonical" href="https://wealthytrees.online/pages/the-915.html"><meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">'
+       '<meta property="og:title" content="THE 9:15 · The Morning Paper by WealthyTrees"><meta property="og:description" content="Yesterday’s closing prices, short market stories and a daily lesson. Free every weekday. Education only.">'
+       '<meta property="og:url" content="https://wealthytrees.online/pages/the-915.html"><meta property="og:image" content="https://wealthytrees.online/assets/logo.svg"><meta name="twitter:card" content="summary">'
        f'<style>{CSS}</style></head><body>{util}<main>{"".join(pages)}</main><script>{JS}</script></body></html>')
 os.makedirs(f"{R}/pages", exist_ok=True); os.makedirs(f"{R}/edition", exist_ok=True)
 open(f"{R}/pages/the-915.html", "w").write(out)
