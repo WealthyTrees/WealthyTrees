@@ -143,7 +143,8 @@ def yahoo_rows(sym):
             try:  # Yahoo often leaves the latest finished session out of the daily list; fill it from meta once that session is over
                 mt, cp = r["meta"], r["meta"].get("currentTradingPeriod", {}).get("regular", {})
                 sd = datetime.fromtimestamp(mt["regularMarketTime"] + off, timezone.utc).strftime("%Y-%m-%d")
-                if sd not in rows and rows and cp.get("end") and time.time() >= cp["end"] and mt["regularMarketTime"] >= cp.get("start", 0):
+                over = (cp.get("end") and time.time() >= cp["end"] and mt["regularMarketTime"] >= cp.get("start", 0)) or sd < datetime.fromtimestamp(time.time() + off, timezone.utc).strftime("%Y-%m-%d")  # a session dated before the exchange's local today is always finished (fixes the 6 AM run missing yesterday's close)
+                if sd not in rows and rows and over:
                     c = float(mt["regularMarketPrice"]); pc = rows[max(rows)]["close"]
                     if sd > max(rows) and 0 < c and abs(c / pc - 1) < 0.12:
                         hi, lo = float(mt.get("regularMarketDayHigh") or c), float(mt.get("regularMarketDayLow") or c)

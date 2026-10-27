@@ -21,7 +21,7 @@
    ]
   ],
   "oneline": "When you read “crude up”, read: India's costs went up today.",
-  "learn": "/learn/beginner/module-5.html"
+  "learn": "/learn/beginner/module-5.html#:~:text=3.%20Crude%20oil"
  },
  {
   "title": "What is India VIX?",
@@ -45,7 +45,7 @@
    ]
   ],
   "oneline": "VIX up means fear up. It tells you the mood, not where the market goes.",
-  "learn": "/learn/beginner/module-6.html"
+  "learn": "/learn/beginner/module-6.html#:~:text=1.%20Risk%20and%20reward"
  },
  {
   "title": "Why bank stocks fall first on red days",
@@ -69,7 +69,7 @@
    ]
   ],
   "oneline": "Banks are the market's mirror: they show the mood first.",
-  "learn": "/learn/intermediate/module-3.html?preview=1"
+  "learn": "/learn/intermediate/module-3.html?preview=1#:~:text=2.%20Banks"
  },
  {
   "title": "What is the rupee, and why does it move?",
@@ -93,7 +93,7 @@
    ]
   ],
   "oneline": "More dollars coming in means a stronger rupee.",
-  "learn": "/learn/beginner/module-5.html"
+  "learn": "/learn/beginner/module-5.html#:~:text=4.%20Connecting%20the%20dots"
  },
  {
   "title": "Sensex vs Nifty: what is the difference?",
@@ -117,7 +117,7 @@
    ]
   ],
   "oneline": "Sensex and Nifty are two scorecards for the same big companies.",
-  "learn": "/learn/beginner/module-1.html"
+  "learn": "/learn/beginner/module-1.html#:~:text=2.%20Indices"
  },
  {
   "title": "Why does the market open at 9:15?",
@@ -141,7 +141,7 @@
    ]
   ],
   "oneline": "Pre-open finds the price, 9:15 opens trading, 3:30 PM sets the close.",
-  "learn": "/learn/beginner/module-1.html"
+  "learn": "/learn/beginner/module-1.html#:~:text=3.%20How%20a%20trade%20works"
  },
  {
   "title": "Who are FIIs and DIIs?",
@@ -165,7 +165,7 @@
    ]
   ],
   "oneline": "FIIs are foreign funds, DIIs are Indian funds, and their daily buying and selling is public data.",
-  "learn": "/learn/beginner/module-1.html"
+  "learn": "/learn/beginner/module-1.html#:~:text=1.%20Stocks%20and%20exchanges"
  },
  {
   "title": "What is the repo rate?",
@@ -189,7 +189,7 @@
    ]
   ],
   "oneline": "The repo rate is the RBI's lending rate to banks, and it ripples into loans, deposits and markets.",
-  "learn": "/learn/beginner/module-5.html"
+  "learn": "/learn/beginner/module-5.html#:~:text=1.%20What%20the%20RBI%20does"
  },
  {
   "title": "What is inflation (CPI)?",
@@ -213,7 +213,7 @@
    ]
   ],
   "oneline": "Inflation is how much more the same basket of goods costs than a year ago.",
-  "learn": "/learn/beginner/module-5.html"
+  "learn": "/learn/beginner/module-5.html#:~:text=2.%20From%20interest%20rates"
  },
  {
   "title": "What is the P/E ratio?",
@@ -237,7 +237,7 @@
    ]
   ],
   "oneline": "P/E is the price paid for each rupee of profit, and it is best compared within a sector.",
-  "learn": "/learn/beginner/module-3.html"
+  "learn": "/learn/beginner/module-3.html#:~:text=1.%20P/E"
  },
  {
   "title": "What is market cap?",
@@ -261,7 +261,7 @@
    ]
   ],
   "oneline": "Market cap is share price times number of shares: the size of a company.",
-  "learn": "/learn/beginner/module-1.html"
+  "learn": "/learn/beginner/module-1.html#:~:text=2.%20Indices"
  },
  {
   "title": "What is a SIP?",
@@ -285,7 +285,7 @@
    ]
   ],
   "oneline": "A SIP is a fixed amount invested regularly, so you do not have to pick the right day.",
-  "learn": "/learn/intermediate/module-4.html?preview=1"
+  "learn": "/learn/intermediate/module-4.html?preview=1#:~:text=2.%20SIP"
  },
  {
   "title": "What is NAV?",
@@ -309,7 +309,7 @@
    ]
   ],
   "oneline": "NAV is the value of one fund unit, worked out after each day's close.",
-  "learn": "/learn/intermediate/module-4.html?preview=1"
+  "learn": "/learn/intermediate/module-4.html?preview=1#:~:text=1.%20What%20a%20mutual%20fund"
  },
  {
   "title": "What happens in an IPO?",
@@ -333,7 +333,7 @@
    ]
   ],
   "oneline": "An IPO is a company's first public share sale, after which its shares trade daily.",
-  "learn": "/learn/beginner/module-1.html"
+  "learn": "/learn/beginner/module-1.html#:~:text=1.%20Stocks%20and%20exchanges"
  },
  {
   "title": "What is a dividend?",
@@ -357,7 +357,7 @@
    ]
   ],
   "oneline": "A dividend is a share of profit paid to shareholders, not a free bonus.",
-  "learn": "/learn/beginner/module-2.html"
+  "learn": "/learn/beginner/module-2.html#:~:text=1.%20The%20profit"
  },
  {
   "title": "Why do bond prices fall when yields rise?",
@@ -381,7 +381,7 @@
    ]
   ],
   "oneline": "When new bonds pay more, old bonds must get cheaper, so price and yield move opposite ways.",
-  "learn": "/learn/beginner/module-5.html"
+  "learn": "/learn/beginner/module-5.html#:~:text=2.%20From%20interest%20rates"
  },
  {
   "title": "What is a circuit breaker?",
@@ -405,7 +405,7 @@
    ]
   ],
   "oneline": "Circuit breakers stop trading for a while when prices move too far, too fast.",
-  "learn": "/learn/beginner/module-1.html"
+  "learn": "/learn/beginner/module-1.html#:~:text=5.%20Who%20keeps%20it%20fair"
  },
  {
   "title": "What is diversification?",
@@ -429,7 +429,7 @@
    ]
   ],
   "oneline": "Diversification spreads money so one bad event hurts less.",
-  "learn": "/learn/beginner/module-6.html"
+  "learn": "/learn/beginner/module-6.html#:~:text=2.%20Spreading%20risk"
  },
  {
   "title": "What is compounding?",
@@ -453,7 +453,7 @@
    ]
   ],
   "oneline": "Compounding is growth on top of earlier growth, and it needs time.",
-  "learn": "/learn/beginner/module-6.html"
+  "learn": "/learn/intermediate/module-4.html?preview=1#:~:text=2.%20SIP"
  },
  {
   "title": "What is EPS?",
@@ -477,6 +477,6 @@
    ]
   ],
   "oneline": "EPS is a company's profit divided by its number of shares.",
-  "learn": "/learn/beginner/module-3.html"
+  "learn": "/learn/beginner/module-3.html#:~:text=1.%20P/E"
  }
 ]

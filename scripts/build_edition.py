@@ -63,11 +63,20 @@ while x <= d:
     n += x.weekday() < 5; x += dt.timedelta(days=1)
 edno = f"Edition No. {n} · {now.strftime('%a %d %b %Y')}"
 _n = lc("Nifty 50")
+_wd = now.date() - dt.timedelta(days=1)
+while _wd.weekday() >= 5: _wd -= dt.timedelta(days=1)
+if _n and _n["d"] < _wd.isoformat(): print(f"WARNING: latest Nifty close is {_n['d']}, expected {_wd.isoformat()} unless that day was an NSE holiday. Re-run the Daily brief workflow, then this one.")
 stamp = "Closing prices · " + (dt.date.fromisoformat(_n["d"]).strftime("%a %d %b") if _n else "last close")
 eq, ec, cm, us = by("Equity"), by("Economy"), by("Commodity"), by("US Markets")
 lead = eq[0] if eq else items[0]
 inside = [(2, "MARKETS", (eq[1:] or [lead])[0]), (3, "INDIA &amp; ECONOMY", (ec or [lead])[0]), (4, "COMMODITIES &amp; WORLD", (cm + us or [lead])[0])]
-ex = explain[(n - 1) % len(explain)] if n > 0 else explain[0]
+def _mod(t): return (t.get("learn") or "").split("#")[0].split("?")[0]
+_seq, _pool, _last = [], [], None
+for _k in range(max(n, 0) + 1):  # replay from Edition 0 so each day is new and never opens the same module two days running
+    if not _pool: _pool = list(range(len(explain)))
+    _c = [j for j in _pool if _mod(explain[j]) != _last] or _pool
+    _j = _c[0]; _pool.remove(_j); _last = _mod(explain[_j]); _seq.append(_j)
+ex = explain[_seq[-1]]
 
 def quiz(k):
     if not quizzes: return ""
@@ -125,7 +134,7 @@ pages.append(page(5, "SPROUT’S LESSON", e(ex["title"]),
     f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Sprout’s Lesson"))
 CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read() + open(f"{R}/scripts/quiz.css").read()
 titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Sprout’s Lesson"]
-util = ('<div class="util"><a href="/">← WealthyTrees</a><nav class="tabs9">'
+util = ('<div class="util"><a href="/" aria-label="WealthyTrees home">←<span class="ut"> WealthyTrees</span></a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))
         + '</nav><span class="arr"><button id="pv" aria-label="Previous page">←</button><button id="nx" aria-label="Next page">→</button></span></div>')
 JS = """(function(){var p=[].slice.call(document.querySelectorAll('.pg')),m=document.querySelector('main'),q=matchMedia('(min-width:900px)'),b=[].slice.call(document.querySelectorAll('.tabs9 button')),i=0;
