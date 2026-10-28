@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /cdn-cgi/
 Sitemap: https://wealthytrees.online/sitemap.xml

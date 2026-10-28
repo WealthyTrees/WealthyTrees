@@ -34,3 +34,33 @@
 # THE 9:15
 /the915 /pages/the-915.html 301
 /the-915 /pages/the-915.html 301
+
+# Same old URLs without .html (Google requested these and got 404)
+/learn-1 /learn/beginner/module-1.html 301
+/learn-2 /learn/beginner/module-2.html 301
+/learn-3 /learn/beginner/module-3.html 301
+/learn-4 /learn/beginner/module-4.html 301
+/learn-5 /learn/beginner/module-5.html 301
+/learn-6 /learn/beginner/module-6.html 301
+/learn/module-1 /learn/beginner/module-1.html 301
+/learn/module-2 /learn/beginner/module-2.html 301
+/learn/module-3 /learn/beginner/module-3.html 301
+/learn/module-4 /learn/beginner/module-4.html 301
+/learn/module-5 /learn/beginner/module-5.html 301
+/learn/module-6 /learn/beginner/module-6.html 301
+/about /pages/about.html 301
+/beginner /pages/beginner.html 301
+/contact /pages/contact.html 301
+/cost-of-delay-calculator /pages/cost-of-delay-calculator.html 301
+/direct-vs-regular-calculator /pages/direct-vs-regular-calculator.html 301
+/disclaimer /pages/disclaimer.html 301
+/emi-calculator /pages/emi-calculator.html 301
+/goal-planner /pages/goal-planner.html 301
+/intermediate /pages/intermediate.html 301
+/learn /pages/learn.html 301
+/lumpsum-calculator /pages/lumpsum-calculator.html 301
+/markets /pages/markets.html 301
+/privacy /pages/privacy.html 301
+/sip-calculator /pages/sip-calculator.html 301
+/terms /pages/terms.html 301
+/tools /pages/tools.html 301

@@ -1,0 +1,41 @@
+/* WealthyTrees motion layer v1: cursor grid, tree hover, playful characters, topic strip, card spotlight. Off for reduced motion. */
+@property --mx{syntax:"<length>";inherits:true;initial-value:50px}@property --my{syntax:"<length>";inherits:true;initial-value:200px}
+.wt-grid{position:fixed;inset:0;z-index:-1;pointer-events:none;--mx:50vw;--my:30vh}
+.wt-grid i{position:absolute;inset:0;display:block}
+.wt-grid .g0{opacity:.45;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
+.wt-grid .g1{background-image:linear-gradient(color-mix(in srgb,var(--up) 70%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--up) 70%,transparent) 1px,transparent 1px);background-size:44px 44px;opacity:0;transition:opacity .5s;-webkit-mask-image:radial-gradient(230px circle at var(--mx) var(--my),#000,transparent 75%);mask-image:radial-gradient(230px circle at var(--mx) var(--my),#000,transparent 75%)}
+.wt-grid .g2{opacity:0;transition:opacity .5s;background:radial-gradient(340px circle at var(--mx) var(--my),color-mix(in srgb,var(--up) 13%,transparent),transparent 70%)}
+.wt-grid.on .g1,.wt-grid.on .g2{opacity:1}
+@media(hover:none){.wt-grid .g1,.wt-grid .g2{opacity:1;animation:wtdrift 16s ease-in-out infinite alternate}@keyframes wtdrift{from{--mx:20vw;--my:18vh}to{--mx:80vw;--my:55vh}}}
+
+/* tree: float stays; hover adds lift, tilt, gold glow. Uses individual transform props so it never fights the float animation */
+.hero .herotree{cursor:pointer;transition:scale .45s var(--ease),rotate .45s var(--ease),translate .25s ease-out,filter .45s}
+@media(hover:hover){.hero .herotree:hover{scale:1.07;rotate:-4deg;filter:drop-shadow(0 22px 34px color-mix(in srgb,var(--gold) 45%,transparent))}}
+
+/* playful characters */
+.hero{--cx:0;--cy:0}
+.wt-chars{position:absolute;inset:0;pointer-events:none;z-index:1}
+.wt-chars b{position:absolute;font-size:clamp(1.3rem,2.6vw,2rem);font-weight:400;line-height:1;filter:drop-shadow(0 6px 8px rgba(0,0,0,.18));animation:wtbob var(--d,6s) ease-in-out infinite;animation-delay:var(--l,0s);translate:calc(var(--cx)*var(--p,10)*1px) calc(var(--cy)*var(--p,10)*1px);transition:translate .3s ease-out}
+@keyframes wtbob{50%{transform:translateY(-12px) rotate(8deg)}}
+@media(max-width:760px){.wt-chars b:nth-child(n+4),.wt-chars b:nth-child(1){display:none}}
+.wt-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.1rem 0 0}
+.wt-pills span{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem .9rem;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);font-size:.88rem;font-weight:600;transition:transform .25s var(--ease),border-color .25s}
+.wt-pills span em{font-style:normal;font-size:1.1rem;display:inline-block}
+@media(hover:hover){.wt-pills span:hover{transform:translateY(-3px) rotate(-1.5deg);border-color:var(--gold)}.wt-pills span:hover em{animation:wtwob .6s}}
+@keyframes wtwob{30%{transform:rotate(-18deg) scale(1.25)}60%{transform:rotate(14deg) scale(1.2)}}
+
+/* topic strip: fills the gap under the hero */
+.wt-strip{overflow:hidden;margin:.4rem 0 1.6rem;padding:.7rem 0;border-block:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.wt-strip div{display:flex;gap:2.2rem;width:max-content;animation:wtmq 38s linear infinite;font-size:.8rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.wt-strip span b{color:var(--up);margin-right:.5rem}
+.wt-strip:hover div{animation-play-state:paused}
+@keyframes wtmq{to{transform:translateX(-50%)}}
+
+/* card spotlight and arrow */
+.cardlink::after,.item::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(240px circle at var(--sx,50%) var(--sy,0%),color-mix(in srgb,var(--up) 16%,transparent),transparent 70%)}
+.item{position:relative}
+@media(hover:hover){.cardlink:hover::after,.item:hover::after{opacity:1}}
+.feat .cardlink h3::after{content:"\2197";display:inline-block;margin-left:.4rem;color:var(--up);transition:transform .3s var(--ease)}
+@media(hover:hover){.feat .cardlink:hover h3::after{transform:translate(4px,-4px)}}
+
+@media(prefers-reduced-motion:reduce){.wt-grid .g1,.wt-grid .g2{animation:none}.wt-chars b,.wt-strip div{animation:none}.hero .herotree{transition:none}}
