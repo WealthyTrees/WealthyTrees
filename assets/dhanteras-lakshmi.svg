@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 740" role="img" aria-labelledby="title desc">
+  <title id="title">Maa Lakshmi, illustrated for Dhanteras</title>
+  <desc id="desc">A graceful, stylised golden illustration of Goddess Lakshmi seated on a lotus, with four arms, lotus flowers, a radiant halo and falling coins.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff2c2"/><stop offset=".32" stop-color="#f5ce78"/><stop offset=".68" stop-color="#c98a35"/><stop offset="1" stop-color="#ffe7a0"/></linearGradient>
+    <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe9aa"/><stop offset="1" stop-color="#b97b2c"/></linearGradient>
+    <linearGradient id="sari" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8a05b"/><stop offset=".42" stop-color="#b94455"/><stop offset="1" stop-color="#5f1c43"/></linearGradient>
+    <linearGradient id="sariLight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe1a0"/><stop offset=".48" stop-color="#d9884f"/><stop offset="1" stop-color="#8d2e4b"/></linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe4ba"/><stop offset="1" stop-color="#c98357"/></linearGradient>
+    <linearGradient id="lotus" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd8df"/><stop offset=".55" stop-color="#dd8296"/><stop offset="1" stop-color="#973d69"/></linearGradient>
+    <radialGradient id="halo"><stop offset="0" stop-color="#eab75b" stop-opacity=".13"/><stop offset=".72" stop-color="#f7cf76" stop-opacity=".08"/><stop offset="1" stop-color="#f7cf76" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <circle cx="300" cy="292" r="247" fill="url(#halo)"/>
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round" opacity=".82">
+    <circle cx="300" cy="285" r="218" stroke-width="1.5" stroke-dasharray="2 10"/>
+    <circle cx="300" cy="285" r="201" stroke-width="1" stroke-dasharray="1 7"/>
+    <circle cx="300" cy="285" r="182" stroke-width="1.5" opacity=".56"/>
+    <path d="M300 48v24 M300 498v24 M63 285h24 M513 285h24 M133 118l17 17 M450 435l17 17 M467 118l-17 17 M150 435l-17 17" stroke-width="2"/>
+  </g>
+  <g fill="none" stroke="#eac16e" stroke-width="1.3" opacity=".58">
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(30 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(60 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(90 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(120 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(150 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(180 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(210 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(240 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(270 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(300 300 285)"/>
+    <path d="M300 72 C323 111 323 132 300 153 C277 132 277 111 300 72Z" transform="rotate(330 300 285)"/>
+  </g>
+  <!-- Rear arms and lotus flowers -->
+  <g stroke="url(#gold)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M252 321 C223 294 201 261 171 225"/>
+    <path d="M348 321 C377 294 399 261 429 225"/>
+  </g>
+  <g fill="url(#skin)" stroke="#f6d89a" stroke-width="2">
+    <ellipse cx="165" cy="216" rx="17" ry="22" transform="rotate(-26 165 216)"/>
+    <ellipse cx="435" cy="216" rx="17" ry="22" transform="rotate(26 435 216)"/>
+  </g>
+  <g stroke="#f1c875" stroke-width="2" stroke-linecap="round" fill="url(#lotus)">
+    <path d="M165 214 C126 202 128 170 149 158 C161 180 166 193 165 214Z"/>
+    <path d="M165 214 C143 182 153 152 176 145 C183 172 178 195 165 214Z"/>
+    <path d="M165 214 C177 180 198 174 214 187 C200 208 184 215 165 214Z"/>
+    <path d="M435 214 C396 202 398 170 419 158 C431 180 436 193 435 214Z" transform="translate(870 0) scale(-1 1)"/>
+    <path d="M435 214 C413 182 423 152 446 145 C453 172 448 195 435 214Z" transform="translate(870 0) scale(-1 1)"/>
+    <path d="M435 214 C447 180 468 174 484 187 C470 208 454 215 435 214Z" transform="translate(870 0) scale(-1 1)"/>
+  </g>
+  <path d="M166 216 Q165 230 169 242 M435 216 Q435 230 431 242" fill="none" stroke="#68a16a" stroke-width="4" stroke-linecap="round"/>
+  <!-- Hair, crown and ears -->
+  <path d="M247 202 C241 167 260 145 300 144 C340 145 359 167 353 202 L350 257 L250 257Z" fill="#422538" stroke="#f2c979" stroke-width="2"/>
+  <path d="M258 190 L258 146 L275 157 L300 126 L325 157 L342 146 L342 190Z" fill="url(#gold2)" stroke="#ffecb1" stroke-width="2"/>
+  <path d="M271 184 L282 159 L300 177 L318 159 L329 184Z" fill="#8c344e" stroke="#ffe1a0" stroke-width="1.5"/>
+  <circle cx="300" cy="154" r="7" fill="#f9e8af" stroke="#ae722b" stroke-width="2"/>
+  <path d="M258 190 Q300 207 342 190 L342 201 Q300 216 258 201Z" fill="url(#gold)" stroke="#fce8ab" stroke-width="1.2"/>
+  <g fill="url(#skin)" stroke="#efc777" stroke-width="2">
+    <ellipse cx="247" cy="247" rx="14" ry="22"/>
+    <ellipse cx="353" cy="247" rx="14" ry="22"/>
+  </g>
+  <g fill="none" stroke="url(#gold)" stroke-width="3">
+    <path d="M246 250 Q230 261 248 278 Q263 266 246 250Z"/>
+    <path d="M354 250 Q370 261 352 278 Q337 266 354 250Z"/>
+  </g>
+  <!-- Face -->
+  <path d="M263 201 Q300 184 337 201 L333 248 Q328 277 300 286 Q272 277 267 248Z" fill="url(#skin)" stroke="#f9d795" stroke-width="2"/>
+  <path d="M274 228 Q284 220 293 228 M307 228 Q316 220 326 228" fill="none" stroke="#633848" stroke-width="3" stroke-linecap="round"/>
+  <path d="M280 235 Q285 239 291 235 M309 235 Q315 239 320 235" fill="none" stroke="#502c3b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M300 232 L296 246 L301 248" fill="none" stroke="#a95f49" stroke-width="2" stroke-linecap="round"/>
+  <path d="M288 258 Q300 267 312 258 Q301 278 288 258Z" fill="#9f3c51"/>
+  <circle cx="300" cy="215" r="4" fill="#a02e4e"/>
+  <path d="M291 216h18" stroke="#8c2c48" stroke-width="1.2"/>
+  <!-- Neck and jewellery -->
+  <path d="M283 279 L283 304 Q300 319 317 304 L317 279Z" fill="url(#skin)" stroke="#efc777" stroke-width="1.5"/>
+  <path d="M269 296 Q300 320 331 296 L323 313 Q300 331 277 313Z" fill="url(#gold)" stroke="#ffe9a9" stroke-width="1.5"/>
+  <g fill="#a83451" stroke="#ffe1a0" stroke-width="1.5"><circle cx="300" cy="318" r="5"/><circle cx="288" cy="314" r="3"/><circle cx="312" cy="314" r="3"/></g>
+  <!-- Lower arms -->
+  <g stroke="url(#skin)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M253 326 C223 340 203 368 185 394"/>
+    <path d="M347 326 C377 340 397 368 415 394"/>
+  </g>
+  <g fill="url(#skin)" stroke="#f4d08a" stroke-width="2">
+    <path d="M177 382 C160 380 151 395 157 410 C162 422 180 425 189 414 C197 404 190 387 177 382Z"/>
+    <path d="M423 382 C440 380 449 395 443 410 C438 422 420 425 411 414 C403 404 410 387 423 382Z"/>
+  </g>
+  <g stroke="url(#gold)" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M233 336 Q243 346 250 349"/>
+    <path d="M367 336 Q357 346 350 349"/>
+    <path d="M166 394 Q175 401 188 398"/>
+    <path d="M434 394 Q425 401 412 398"/>
+  </g>
+  <!-- Torso and richly bordered sari -->
+  <path d="M272 306 Q300 291 328 306 L350 354 Q340 385 300 400 Q260 385 250 354Z" fill="url(#sari)" stroke="url(#gold)" stroke-width="3"/>
+  <path d="M278 307 Q300 326 322 307 L335 352 Q316 371 300 389 Q284 371 265 352Z" fill="url(#gold2)" stroke="#fff0b7" stroke-width="1.8"/>
+  <path d="M282 316 Q300 330 318 316 L325 348 Q310 364 300 374 Q290 364 275 348Z" fill="#a53e55" opacity=".9"/>
+  <g fill="none" stroke="#ffe9a7" stroke-width="1.3" opacity=".9">
+    <path d="M258 352 Q300 385 342 352"/>
+    <path d="M265 361 Q300 390 335 361"/>
+    <path d="M274 370 Q300 395 326 370"/>
+    <path d="M285 338l15 12 15-12"/>
+  </g>
+  <!-- Seated legs, ornate drape -->
+  <path d="M268 387 C233 403 207 444 222 477 C237 505 287 505 311 480 C337 458 357 424 341 398 L322 386Z" fill="url(#sari)" stroke="url(#gold)" stroke-width="3"/>
+  <path d="M278 397 C262 427 254 452 276 478 C292 494 321 478 340 456 L358 438 C370 420 359 405 341 398 L323 387Z" fill="url(#sariLight)" stroke="#f4d08a" stroke-width="2.3"/>
+  <path d="M286 404 Q310 438 340 448 M272 421 Q296 452 321 469 M263 444 Q284 464 302 480" fill="none" stroke="#ffe5a1" stroke-width="2" opacity=".8"/>
+  <path d="M222 465 C249 449 276 454 296 477 C312 496 339 493 361 465 Q372 495 345 515 C308 540 267 523 239 504 Q222 492 222 465Z" fill="url(#sari)" stroke="url(#gold)" stroke-width="3"/>
+  <path d="M239 484 Q274 515 310 516 Q339 516 359 486" fill="none" stroke="#ffe0a0" stroke-width="2"/>
+  <!-- Lotus seat -->
+  <g stroke="#edb86a" stroke-width="2">
+    <path d="M300 579 C262 558 236 531 248 511 C277 519 294 542 300 579Z" fill="url(#lotus)"/>
+    <path d="M300 579 C280 541 282 509 300 493 C318 509 320 541 300 579Z" fill="url(#lotus)"/>
+    <path d="M300 579 C338 558 364 531 352 511 C323 519 306 542 300 579Z" fill="url(#lotus)"/>
+    <path d="M300 579 C240 574 204 553 210 532 C252 532 282 552 300 579Z" fill="#b64e78"/>
+    <path d="M300 579 C360 574 396 553 390 532 C348 532 318 552 300 579Z" fill="#b64e78"/>
+    <path d="M300 580 C250 596 220 594 195 573 C232 563 270 568 300 580Z" fill="#913b67"/>
+    <path d="M300 580 C350 596 380 594 405 573 C368 563 330 568 300 580Z" fill="#913b67"/>
+    <path d="M199 590 Q300 621 401 590 Q380 618 300 624 Q220 618 199 590Z" fill="url(#gold2)"/>
+  </g>
+  <path d="M224 595 Q300 615 376 595" fill="none" stroke="#fff1bf" stroke-width="2" opacity=".8"/>
+  <!-- Fine gold detailing -->
+  <g fill="#ffe8a4" filter="url(#glow)">
+    <circle cx="218" cy="286" r="3"/><circle cx="382" cy="286" r="3"/>
+    <circle cx="232" cy="307" r="2"/><circle cx="368" cy="307" r="2"/>
+    <circle cx="300" cy="455" r="3"/><circle cx="269" cy="547" r="2"/><circle cx="331" cy="547" r="2"/>
+  </g>
+  <!-- A few coins pouring from the open palms -->
+  <g fill="url(#gold)" stroke="#fff1b7" stroke-width="1.6">
+    <circle cx="163" cy="444" r="10"/><circle cx="180" cy="466" r="8"/><circle cx="151" cy="489" r="7"/>
+    <circle cx="437" cy="444" r="10"/><circle cx="420" cy="466" r="8"/><circle cx="449" cy="489" r="7"/>
+  </g>
+  <g fill="#8d5c24" font-family="Georgia,serif" font-size="11" font-weight="700" text-anchor="middle">
+    <text x="163" y="448">₹</text><text x="180" y="470">₹</text><text x="437" y="448">₹</text><text x="420" y="470">₹</text>
+  </g>
+</svg>
