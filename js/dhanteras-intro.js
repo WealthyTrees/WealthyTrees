@@ -97,6 +97,7 @@
   }
 
   function initParticles(overlay) {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const canvas = overlay.querySelector(".wt-d-particle-canvas");
     if (!canvas || !canvas.getContext) return;
     let context;
