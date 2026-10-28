@@ -31,7 +31,7 @@
       "#wt-dhanteras-intro .wt-d-particle-canvas{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none}",
       "#wt-dhanteras-intro .wt-d-topline{position:absolute;z-index:5;top:max(21px,env(safe-area-inset-top));left:clamp(20px,4vw,54px);right:clamp(20px,4vw,54px);display:flex;align-items:center;justify-content:space-between;gap:18px;opacity:0;animation:wtDhanterasFadeUp .8s .2s ease-out forwards}",
       "#wt-dhanteras-intro .wt-d-overline,#wt-dhanteras-intro .wt-d-date{font-size:10px;line-height:1.3;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,241,205,.72)}",
-      "#wt-dhanteras-intro .wt-d-date{padding:9px 12px;border:1px solid rgba(240,198,110,.24);border-radius:999px;color:#f4d58f;background:rgba(255,255,255,.035);letter-spacing:.13em;white-space:nowrap}",
+      "#wt-dhanteras-intro .wt-d-date{position:absolute;top:calc(100% + 31px);right:0;padding:9px 12px;border:1px solid rgba(240,198,110,.24);border-radius:999px;color:#f4d58f;background:rgba(7,31,20,.75);letter-spacing:.13em;white-space:nowrap}",
       "#wt-dhanteras-intro .wt-d-sidecard{position:absolute;z-index:2;top:50%;width:clamp(150px,18vw,230px);padding:16px 17px;border:1px solid rgba(240,198,110,.18);border-radius:17px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));box-shadow:0 16px 60px rgba(0,0,0,.14);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);opacity:0;animation:wtDhanterasSideIn 1s 1.2s cubic-bezier(.2,.75,.2,1) forwards}",
       "#wt-dhanteras-intro .wt-d-sidecard--left{left:clamp(22px,5vw,74px);transform:translateY(calc(-50% + 14px))}",
       "#wt-dhanteras-intro .wt-d-sidecard--right{right:clamp(22px,5vw,74px);transform:translateY(calc(-50% + 14px));animation-delay:1.45s}",
@@ -186,6 +186,8 @@
     const skipButton = overlay.querySelector(".wt-d-skip");
     const enterButton = overlay.querySelector(".wt-d-enter");
     const spotlight = overlay.querySelector(".wt-d-spotlight");
+    const brandLogo = overlay.querySelector(".wt-d-brand img");
+    if (brandLogo) brandLogo.addEventListener("error", () => brandLogo.remove(), { once: true });
 
     function finishExperience() {
       if (finished) return;
@@ -220,7 +222,7 @@
     window.addEventListener("pointermove", onPointerMove, { passive: true });
     initParticles(overlay);
     try { skipButton.focus({ preventScroll: true }); } catch (_) { skipButton.focus(); }
-    exitTimer = window.setTimeout(finishExperience, AUTO_EXIT_MS);
+    if (!PREVIEW_MODE) exitTimer = window.setTimeout(finishExperience, AUTO_EXIT_MS);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
