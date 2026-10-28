@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T13:19:16+00:00",
+ "updated": "2026-10-28T01:29:50+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
@@ -35,15 +35,15 @@
   },
   "S&P 500": {
    "yahoo": "ok",
-   "rows": 500
+   "rows": 501
   },
   "Nasdaq": {
    "yahoo": "ok",
-   "rows": 500
+   "rows": 501
   },
   "Dow": {
    "yahoo": "ok",
-   "rows": 500
+   "rows": 501
   },
   "Gold": {
    "yahoo": "ok",
@@ -71,7 +71,7 @@
   },
   "USD/INR": {
    "yahoo": "ok",
-   "rows": 517
+   "rows": 518
   }
  }
 }
