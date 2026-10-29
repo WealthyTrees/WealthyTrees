@@ -3,43 +3,43 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,831",
-   "change": 0.36
+   "value": "22,937",
+   "change": 0.82
   },
   {
    "name": "SENSEX",
-   "value": "73,687",
-   "change": 0.12
+   "value": "74,151",
+   "change": 0.75
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,040",
-   "change": -0.29
+   "value": "4,037",
+   "change": -0.36
   },
   {
    "name": "CRUDE WTI",
-   "value": "$101.8",
-   "change": -0.94
+   "value": "$100.5",
+   "change": -2.24
   },
   {
    "name": "USD/INR",
-   "value": "95.33",
-   "change": 0.13
+   "value": "95.25",
+   "change": 0.04
   },
   {
    "name": "S&P 500",
-   "value": "7,744",
-   "change": 0.28
+   "value": "7,709",
+   "change": -0.45
   },
   {
    "name": "NASDAQ",
-   "value": "26,550",
-   "change": 0.27
+   "value": "26,151",
+   "change": -1.5
   },
   {
    "name": "DOW",
-   "value": "52,475",
-   "change": 0.19
+   "value": "52,295",
+   "change": -0.34
   }
  ],
  "items": [
