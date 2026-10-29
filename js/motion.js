@@ -91,4 +91,40 @@
     });
     feat.before(wrap);
   }
+
+  /* desktop: 3D hero. Icons orbit the tree; on hover the tree comes forward, icons swing behind, scene tilts with the mouse. */
+  var tree = hero.querySelector(".herotree"), dq = matchMedia("(min-width:761px)"), stage = null, home = [];
+  function build() {
+    if (stage || !tree) return;
+    stage = el("div", "wt-stage");
+    var orb = el("div", "wt-orbit"), rw = el("div", "wt-ringwrap"), ring = el("div", "wt-ring"), t3 = el("div", "wt-tree3d");
+    tree.before(stage);
+    for (var i = 3; i >= 1; i--) { var c = tree.cloneNode(false); c.removeAttribute("class"); c.className = "wt-layer"; c.alt = ""; c.setAttribute("aria-hidden", "true"); c.style.setProperty("--i", i); t3.append(c); }
+    t3.append(tree);
+    var sh = el("div", "wt-shade"), sg = el("div", "wt-sheen");
+    home = [].slice.call(ch.children);
+    home.forEach(function (tile, k) {
+      var slot = el("div", "wt-slot"); slot.style.setProperty("--k", k); slot.style.setProperty("--n", home.length); slot.style.setProperty("--dd", (3 + k * .45) + "s"); slot.append(tile); ring.append(slot);
+    });
+    rw.append(ring); orb.append(rw, t3, sg); stage.append(sh, orb);
+    stage.classList.add("on"); hero.classList.add("wt-3d");
+    if (fine && !rm) {
+      stage.addEventListener("pointermove", function (e) {
+        var r = stage.getBoundingClientRect();
+        stage.style.setProperty("--ry", (((e.clientX - r.left) / r.width - .5) * 34).toFixed(1) + "deg");
+        stage.style.setProperty("--rx", (((e.clientY - r.top) / r.height - .5) * -26).toFixed(1) + "deg");
+        stage.style.setProperty("--gx", (((e.clientX - r.left) / r.width) * 100).toFixed(0) + "%");
+        stage.style.setProperty("--gy", (((e.clientY - r.top) / r.height) * 100).toFixed(0) + "%");
+      });
+      stage.addEventListener("pointerleave", function () { stage.style.setProperty("--ry", "0deg"); stage.style.setProperty("--rx", "0deg"); });
+    }
+  }
+  function unbuild() {
+    if (!stage) return;
+    home.forEach(function (tile) { ch.append(tile); });
+    stage.before(tree); stage.remove(); stage = null; hero.classList.remove("wt-3d");
+  }
+  function sync() { if (dq.matches) build(); else unbuild(); }
+  sync();
+  if (dq.addEventListener) dq.addEventListener("change", sync); else if (dq.addListener) dq.addListener(sync);
 })();
