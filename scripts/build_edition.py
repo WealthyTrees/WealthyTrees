@@ -146,7 +146,8 @@ document.addEventListener('keydown',function(ev){if(!q.matches)return;if(ev.key=
 q.addEventListener?q.addEventListener('change',init):0;init()})();"""
 JS += open(f"{R}/scripts/tools.js").read()
 JS += """document.addEventListener('click',function(ev){var b=ev.target.closest('.quiz .qo button');if(!b)return;var q=b.closest('.quiz');if(q.classList.contains('done'))return;q.classList.add('done');var a=+q.getAttribute('data-a'),i=+b.getAttribute('data-i');[].forEach.call(q.querySelectorAll('.qo button'),function(x,k){if(k===a)x.classList.add('ok');else if(k===i)x.classList.add('no')});var w=q.querySelector('.qw');w.hidden=false;w.insertAdjacentText('afterbegin',(i===a?'Correct. ':'Not quite. '))});"""
-out = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+GA_TAG = '<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-4YSB382RQ0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4YSB382RQ0");</script>'
+out = (f'<!doctype html><html lang="en"><head>' + GA_TAG + f'<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        f'<title>THE 9:15 · {e(edno)} · WealthyTrees</title><meta name="description" content="{e(lead["title"])}. Markets, simplified. In 2 minutes.">'
        f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
        '<link rel="canonical" href="https://wealthytrees.online/pages/the-915.html"><meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">'
