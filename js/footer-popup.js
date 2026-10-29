@@ -51,12 +51,12 @@
       '<div class="wt-fl">For education only. Not investment advice. We are not SEBI-registered advisors. \u00a9 ' + new Date().getFullYear() + ' WealthyTrees</div></div>';
   }
 
-  /* ---- Subscribe popup: once per visit (tab session), after the intro ---- */
+  /* ---- Subscribe popup: once per 7 days, after 30s or 60% scroll, after the intro ---- */
   if (/404/.test(location.pathname)) return;
-  var auto = true; try { if (sessionStorage.getItem("wt-sub-shown") === "1") auto = false; } catch (e) {}
+  var auto = true; try { var lastShown = localStorage.getItem("wt-sub-shown-at"); if (lastShown && Date.now() - parseInt(lastShown, 10) < 7 * 24 * 60 * 60 * 1000) auto = false; } catch (e) {}
   function show() {
     if (document.getElementById("wt-sub")) return;
-    try { sessionStorage.setItem("wt-sub-shown", "1"); } catch (e) {}
+    try { localStorage.setItem("wt-sub-shown-at", String(Date.now())); } catch (e) {}
     var u = encodeURIComponent(BD), d = document.createElement("div");
     d.id = "wt-sub"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true");
     d.innerHTML = '<div class="b"><button class="x" aria-label="Close">\u00d7</button><div style="font-size:2rem">\ud83c\udf31</div>' +
@@ -72,7 +72,7 @@
     document.body.appendChild(d);
   }
   function wait() { if (document.getElementById("wt-dussehra-intro")) return setTimeout(wait, 500); setTimeout(show, 1500); }
-  if (auto) setTimeout(wait, 1200);
+  if (auto) { var fired = false; function fire() { if (fired) return; fired = true; wait(); } setTimeout(fire, 30000); window.addEventListener("scroll", function () { var h = document.documentElement; if ((window.scrollY + window.innerHeight) / h.scrollHeight >= 0.6) fire(); }, { passive: true }); }
   window.wtSubscribe = show;
   document.addEventListener("click", function (e) { var t = e.target.closest && e.target.closest("[data-wt-subscribe]"); if (t) { e.preventDefault(); show(); } });
   if (/[?&]subscribe=1/.test(location.search)) setTimeout(show, 400);
