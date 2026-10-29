@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,699",
-   "change": -0.24
+   "value": "22,831",
+   "change": 0.36
   },
   {
    "name": "SENSEX",
-   "value": "73,246",
-   "change": -0.49
+   "value": "73,687",
+   "change": 0.12
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,069",
-   "change": 0.42
+   "value": "4,040",
+   "change": -0.29
   },
   {
    "name": "CRUDE WTI",
-   "value": "$101.9",
-   "change": -0.87
+   "value": "$101.8",
+   "change": -0.94
   },
   {
    "name": "USD/INR",
-   "value": "95.21",
-   "change": 0.0
+   "value": "95.33",
+   "change": 0.13
   },
   {
    "name": "S&P 500",
@@ -44,68 +44,76 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Jio Platforms Surges Over Twenty Percent During Stock Exchange Debut",
-   "summary": "The newly listed company settled at ₹1,417.35 on its opening trading day. This performance pushed its total market valuation above that of Bharti Airtel.",
-   "why": "A stock's opening premium reflects initial public appetite and reshuffles industry market share rankings.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/jio-platforms-surges-21-on-debut-overtakes-bharti-airtel/articleshow/135285038.cms"
+   "category": "US Markets",
+   "title": "US Central Bank Maintains Policy Benchmark Following High Worldwide Ambiguity",
+   "summary": "The Federal Reserve opted to retain its benchmark borrowing rate between 3.75% and 4%. Policymakers cited persistent price pressures alongside broad global unpredictability for keeping conditions unchanged.",
+   "why": "Global borrowing costs heavily influence international foreign capital movements and domestic emerging market liquidity.",
+   "source": "Upstox",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOVGt5Y2VyUGY5S3JGbDVycnVsZHE0ZFVlWlZWeXNETTRZR3ZNRzdaQ2xGRXBLR3UtQlJWb1ZKdFJYTm5kaVdYUlJfekF5THpZSnBlX1Eta3pxSDlGNUxvWDEwc2pWX2t1c0x1aHJLSEdDRzNoRFZrUkZmTERsUDFLUzhaUU83bDV1UlBUc0xQNEJ3VEdzc2lTZ2dSMWo3bl9uVGtPeFUyQVRaRzRmc0c1TjMtdkR6ZWxIWHdRVVZrd3BId1otWDBwbEpEMkkzX0htU3pXeXdSRU1MU3Fqc2ZsN0JRbHRkVzlnaXdPLVpXY2syM0tKUHQ1ZGJNdkdRUUk?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Domestic Equity Benchmarks Slide Driven by Software Stocks and Oil Costs",
-   "summary": "Both the Sensex and Nifty ended the trading day in the red. Declines across the technology sector combined with rising energy prices dampened broader market sentiment.",
-   "why": "Indian equities often respond negatively to higher energy costs because fuel imports expand corporate expenses and pressure profit margins.",
+   "category": "US Markets",
+   "title": "Microsoft Artificial Intelligence Cloud Expansion Offsets Hardware and Gaming Weakness",
+   "summary": "Azure cloud computing demand is fueling top-line growth at Microsoft alongside elevated capital outlays for data centers. Concurrently, personal computing and video gaming hardware divisions have exhibited slower business momentum.",
+   "why": "Heavy spending on digital infrastructure directly impacts operating margins and serves as a barometer for enterprise tech investment.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/indian-equity-benchmarks-decline-as-it-stocks-rising-crude-oil-prices-weigh-on-market-sentiment/articleshow/135284084.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-azures-ai-boom-drive-microsoft-shares-higher/slideshow/135294307.cms"
   },
   {
    "category": "Commodity",
-   "title": "Discount on Western Canadian Heavy Crude Widens Past Thirty Dollars",
-   "summary": "Heavy petroleum grades from Alberta dropped to multi-year pricing lows relative to standard American crude benchmarks. The price gap widened amid persistent downstream refining constraints.",
-   "why": "Wide crude discounts affect export profitability for producers and alter feedstock costs for global refineries.",
+   "title": "Multi Commodity Exchange Schedules Festive Muhurat Trading Window",
+   "summary": "The domestic commodity bourse has slated its festive trading session for November 8, 2026. Activities will begin with a brief introductory window before general transactions occur between 2:20 pm and 3:30 pm.",
+   "why": "Muhurat trading is an annual cultural tradition where market participants make symbolic opening transactions during Diwali.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/canadian-oil-discount-exceeds-30-amid-gulf-coast-pressures-11793217749090.html"
+   "url": "https://www.livemint.com/market/stock-market-news/diwali-2026-mcx-muhurat-trading-date-is-8-nov-2026-check-time-for-special-trading-client-mode-modification-session-11793258582748.html"
   },
   {
-   "category": "Economy",
-   "title": "Patna Municipal Body Prepares Inaugural Debt Sale for Bihar",
-   "summary": "The municipal authority in Patna plans to issue ₹200 crore in bonds, with bidding scheduled to open on October 30. This initiative represents the first local civic bond offering from the state.",
-   "why": "Municipal bonds offer city administrations an alternative path to finance civic infrastructure beyond conventional state grants.",
+   "category": "Commodity",
+   "title": "Vedanta Aluminium Reports Significant Surge in Second-Quarter Operating Earnings",
+   "summary": "Operating earnings jumped 83% alongside a 41% top-line expansion for the metal producer during the recent quarter. The firm attributed performance gains to disciplined expenditure control and expects output expansion to sustain future operations.",
+   "why": "Operational efficiency and raw material costs are critical determinants of profitability in cyclical metal industries.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/patna-to-raise-rs-200-crore-via-municipal-bonds/articleshow/135285199.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/vedanta-aluminium-more-than-doubles-profit-cost-cuts-in-focus-to-drive-earnings/articleshow/135294042.cms"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Accepts Higher Cutoff Returns on Short-Term Paper",
-   "summary": "The Reserve Bank of India approved elevated cut-off rates across three-month, six-month, and one-year bills. The auction followed an earlier sale that had been called off.",
-   "why": "Treasury bill yields define short-term borrowing costs across the banking system and signal prevailing liquidity conditions.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/rbi-accepts-20-bps-higher-treasury-bill-cutoff-yields-than-last-auction/articleshow/135284706.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "Central Bank Sells Eighteen Billion Dollars to Counter Currency Pressures",
-   "summary": "Foreign exchange interventions reached an annual peak in October as external deficits challenged the domestic currency. The central authority parted with $18.2 billion to address balance of payments imbalances.",
-   "why": "Intervention in foreign exchange markets helps temper rapid currency depreciation when import bills expand.",
+   "title": "Central Bank Dollar Disposals Reach Calendar-Year Peak Under External Balance Pressure",
+   "summary": "The Reserve Bank offloaded 18.2 billion dollars during October to manage currency volatility. The substantial intervention reflects heightened external payment strains on the national accounts balance.",
+   "why": "Official foreign exchange operations help stabilize the domestic currency when international financial outflows strain the external account.",
    "source": "Moneycontrol.com",
    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNThuX3I4VXFjOXpYSGY3VklfX1hLWlN5RzJmZllmZmNFZWUwd0ptZDNMUkJtSmlKQlR6dkFGNUFaY1A0MHpMQWwtZFNzbVJDZnpCaXlSazdHb3o4Q2ZTOGYySGdHWHpnVk9NTll3dnRQNTgwRndwemNEaXNDRDRHWW83Vnp1dGJxU1c1azlsUGk3c3dnMUkyenM3TUZDUzRMajRaZ3M2TkZ1b1V2cWpleDRUZjFidWtNZEFOaExWNmJESEVHM2laZTRLSkFjZ2dHMlc5TkZQWXhybTNLMUpnbnl6dHVDZ9IB6wFBVV95cUxNWDkwblN6X1hUSGtJbElpdGNrblh6czM3aS16U0FoZ2IwNnV5S1BxN1lQZVlPdWZTbXpzbEV0SWJINmZicTVBNkoxQWN3NXdOMnNzdUU4NExGaEV2ai1PSS1BYV9VZl84Ylg4TXhHb0FOWTBqcDRrY2JfaVE4VU1YZDROS0Q0X285ZnRVc2o5MVBNZWFfblY2SWVJTGhJaHUwMDBsbzRVUWEzVU1abUd5Ynd0cG5pdDV5R1NNU0dVV1I5N29fMVlzR25CMHdIUkpnYVdLQmotZURtR3h2dDROQzVGY0xMLTVzTmUw?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "Federal Reserve Retains Policy Rates Following Split Committee Vote",
-   "summary": "The United States central bank held its benchmark interest rate between 3.75% and 4% with two members dissenting. Officials highlighted strong economic momentum alongside stubborn inflationary pressures.",
-   "why": "American interest rate decisions heavily steer global capital flows, overseas borrowing costs, and emerging market currency valuations.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/explained-why-us-fed-reserve-decided-to-not-hike-rate-after-fomc-meeting-what-chair-kevin-warsh-said-in-press-speech-11793215854245.html"
+   "category": "Economy",
+   "title": "Domestic Sovereign Debt Advances Following American Bond Gains and Cheaper Petroleum",
+   "summary": "Indian sovereign debt values improved in tandem with American counterparts and softer imported fuel costs. However, planned fresh issuance of paper and foreign exchange weakness limited the scale of the price advance.",
+   "why": "Sovereign bond yields reflect sovereign borrowing expenses and move inversely to bond prices based on crude oil imports and global rates.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-track-us-treasuries-higher-amid-oil-price-relief/articleshow/135294873.cms"
   },
   {
-   "category": "US Markets",
-   "title": "Short-Term American Treasury Yields Ease on Revised Meeting Schedule",
-   "summary": "Returns on short-dated American sovereign debt and the dollar retreated after monetary officials disclosed plans to hold fewer rate-setting gatherings starting next year. Investors adjusted their expectations for administrative rate reviews.",
-   "why": "Short-term government bond yields mirror immediate expectations regarding official monetary policy trajectories.",
+   "category": "Equity",
+   "title": "Hyundai Motor India Reports Highest Sales Volume Alongside Reduced Net Profit",
+   "summary": "The automaker posted all-time high quarterly sales figures alongside elevated total revenues. Nevertheless, rising manufacturing expenditures caused bottom-line earnings to contract by 23.9% during the same three-month term.",
+   "why": "High revenue does not always translate to bottom-line expansion when production expenses escalate faster than turnover.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/us-short-end-yields-fall-after-warsh-signals-fewer-fed-meetings-11793215570359.html"
+   "url": "https://www.livemint.com/market/stock-market-news/hyundai-motor-india-shares-gain-5-despite-profit-slump-why-brokerages-remain-bullish-check-target-prices-11793254220802.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Hindustan Unilever Posts Revenue Expansion for Second Financial Quarter",
+   "summary": "The consumer goods company posted a 15% increase in total revenue alongside a 4% increase in net earnings. Following the earnings release, the company's equity valuation witnessed an immediate uptick on the exchanges.",
+   "why": "Consumer staples earnings serve as a proxy for broad domestic household spending patterns across rural and urban markets.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/hul-shares-rise-3-after-q2-results-jefferies-nomura-cut-target-price-but-forecast-29-upside-potential/articleshow/135295044.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Brokerage Founder Warns Higher Transaction Levies Alter Derivatives Behavior",
+   "summary": "The chief of Zerodha indicated that increased securities transaction taxes may have caused individual derivative participants to adopt more speculative derivative structures. Internal platform records indicate that half of personal clients have altered their market exposure.",
+   "why": "Transaction taxation can unintentionally shift trading activity toward higher-risk derivative contracts rather than curbing speculation.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/stt-hikes-backfire-zerodhas-nithin-kamath-says-traders-are-moving-to-riskier-options-trades-11793255134366.html"
   }
  ]
 }
