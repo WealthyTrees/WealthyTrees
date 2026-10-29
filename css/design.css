@@ -87,3 +87,10 @@ header.sm .clock{height:34px;padding:0 .8rem}
 .page .learn,.page .callout{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 @media(hover:hover){.page .learn:hover,.page .callout:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(15,138,95,.14);border-color:var(--up)}}
 @media(prefers-reduced-motion:reduce){.page>h1.pt,.page>h1.pt::after{animation:none}.page>h1.pt::after{transform:scaleX(1)}.page .learn,.page .callout{transition:none}}
+
+/* theme bar: frosted strip, buttons at the far right edge */
+.themebar{background:color-mix(in srgb,var(--bg) 60%,transparent);-webkit-backdrop-filter:blur(10px) saturate(1.2);backdrop-filter:blur(10px) saturate(1.2);border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
+.themebar .wrap{max-width:none;width:100%;justify-content:flex-end;flex-wrap:wrap;gap:.5rem;padding-left:.8rem;padding-right:1.1rem}
+.tseg button{background:color-mix(in srgb,var(--paper) 55%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.tseg button[aria-pressed=true]{background:color-mix(in srgb,var(--paper) 90%,transparent)}
+@media(max-width:640px){.themebar .wrap{justify-content:flex-end;padding-right:.8rem;gap:.35rem}.tlabel{display:none}.tseg{gap:.25rem}.tseg button{padding:.2rem .55rem .2rem .25rem;font-size:.78rem}}
