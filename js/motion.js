@@ -93,29 +93,25 @@
   }
 
   /* desktop: 3D motion-graphic hero. One rAF loop drives the tree, glow, shadow and icons; the mouse steers it. */
-  var G0 = [], tree = hero.querySelector(".herotree"), dq = matchMedia("(min-width:761px)"), stage = null, home = [], raf = 0, vis = true, G = {}, srcOld = tree && tree.getAttribute("src");
+  var tree = hero.querySelector(".herotree"), dq = matchMedia("(min-width:761px)"), stage = null, home = [], raf = 0, vis = true, G = {}, srcOld = tree && tree.getAttribute("src");
   function lerp(a, b, k) { return a + (b - a) * k; }
   function frame(ts) {
     raf = 0; if (!stage) return;
     var dt = G.last ? Math.min(.05, (ts - G.last) / 1000) : 0; G.last = ts; G.t += dt;
     var k1 = 1 - Math.exp(-dt * 5), k2 = 1 - Math.exp(-dt * 7), k3 = 1 - Math.exp(-dt * 2.6), t = G.t;
-    G.h = lerp(G.h, G.hT, k1); G.px = lerp(G.px, G.pxT, k2); G.py = lerp(G.py, G.pyT, k2); G.pl *= Math.exp(-dt * 5);
-    var h = G.h, n = home.length, step = 6.2832 / n;
-    /* idle: slow orbit. hover/click: ring locks into a mirror-symmetric formation (front icon centred, equal icons each side) */
-    if (G.hT) { G.ang = lerp(G.ang, G.snap * step, 1 - Math.exp(-dt * 5.5)); G.vel = 0; }
-    else { G.vel = lerp(G.vel, .24, k3); G.ang += G.vel * dt; }
-    var S = stage.offsetWidth; if (G.rt == null || G.mw !== innerWidth) { var sr = stage.getBoundingClientRect(), mid = sr.left + sr.width / 2; G.mw = innerWidth; G.rt = Math.max(S * .44, Math.min(S * .66, (Math.min(mid, innerWidth - mid) - 46) / 1.12)); }
+    G.h = lerp(G.h, G.hT, k1); G.px = lerp(G.px, G.pxT, k2); G.py = lerp(G.py, G.pyT, k2);
+    var h = G.h, n = home.length, base = .24;
+    G.vel = lerp(G.vel, base * (1 - .6 * h), k3); G.pulse = (G.pulse || 0) * Math.exp(-dt * 3.5); G.ang += G.vel * dt;
+    var S = stage.offsetWidth, R = S * .38 * (1 - .06 * h), ringZ = -h * 170, bz = 12 * Math.sin(t * 1), by = 5 * Math.sin(t * 1.2), ps = 1 + .14 * (G.pulse || 0);
     home.forEach(function (tile, k) {
-      if (G.tg[k] !== G.hT && t - G.chg >= k * .045) G.tg[k] = G.hT;
-      var v = G.V[k] + (150 * (G.tg[k] - G.E[k]) - 15 * G.V[k]) * dt; G.V[k] = v; G.E[k] += v * dt;
-      var e = G.E[k], R = S * .44 + (G.rt - S * .44) * e, a = G.ang + k * step, c = Math.cos(a), f = (c + 1) / 2,
-          x = -R * Math.sin(a), z = R * c + 20 * (1 - h) * Math.sin(t * 1.1 + k * 1.7), y = R * c * .3 + 7 * (1 - h) * Math.sin(t * 1.3 + k * 2.1);
-      tile.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px," + z.toFixed(1) + "px) rotateY(" + (G.px * 16 * h).toFixed(1) + "deg) rotateX(" + (-G.py * 12 * h).toFixed(1) + "deg) scale(" + (.86 + .24 * Math.max(0, e)).toFixed(3) + ")";
-      tile.style.opacity = (.74 + .16 * h + (.26 - .16 * h) * f).toFixed(2);
+      var a = G.ang + k * 6.2832 / n, c = Math.cos(a), x = -R * Math.sin(a), z0 = R * c,
+          z = z0 + ringZ + bz, y = z0 * .2 + by, f = (c + 1) / 2;
+      tile.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px," + z.toFixed(1) + "px) rotateY(" + (G.px * 16 * h).toFixed(1) + "deg) rotateX(" + (-G.py * 12 * h).toFixed(1) + "deg) scale(" + ps.toFixed(3) + ")";
+      tile.style.opacity = (.74 + .26 * f).toFixed(2);
     });
-    var sw = Math.sin(t * .45) * 4 * (1 - h);
+    var sw = Math.sin(t * .45) * 4;
     G.orb.style.transform = "rotateX(" + (-G.py * 15 * (.3 + .7 * h)).toFixed(2) + "deg) rotateY(" + (G.px * 22 * (.3 + .7 * h) + sw).toFixed(2) + "deg)";
-    G.t3.style.transform = "translate3d(" + (G.px * 8 * h).toFixed(1) + "px," + (Math.sin(t * .8) * 5 + G.py * 6 * h).toFixed(1) + "px," + (h * 100).toFixed(1) + "px) scale(" + (1 + .035 * h + .04 * G.pl).toFixed(3) + ")";
+    G.t3.style.transform = "translate3d(" + (G.px * 8 * h).toFixed(1) + "px," + (Math.sin(t * .8) * 5 + G.py * 6 * h).toFixed(1) + "px," + (h * 100).toFixed(1) + "px) scale(" + (1 + .035 * h).toFixed(3) + ")";
     G.aura.style.opacity = (.8 + .12 * Math.sin(t * 1.2) + .1 * h).toFixed(2);
     G.aura.style.transform = "translateZ(-90px) scale(" + (1 + .03 * Math.sin(t * 1.2) + .1 * h).toFixed(3) + ")";
     G.sh.style.transform = "translateX(" + (-G.px * 16 * h).toFixed(1) + "px) scale(" + (1 - .16 * h + .03 * Math.sin(t * .8)).toFixed(3) + ")";
@@ -128,29 +124,18 @@
     stage = el("div", "wt-stage");
     var orb = el("div", "wt-orbit"), aura = el("div", "wt-aura"), t3 = el("div", "wt-tree3d"), sh = el("div", "wt-shade"), sg = el("div", "wt-sheen");
     tree.before(stage); tree.setAttribute("src", "/assets/logo-3d.svg"); t3.append(tree);
-    home = [].slice.call(ch.children); G0 = home.map(function (t) { return [t.style.left, t.style.top]; }); home.forEach(function (t) { t.style.left = ""; t.style.top = ""; }); orb.append(aura, t3); home.forEach(function (tile) { orb.append(tile); }); orb.append(sg);
+    home = [].slice.call(ch.children); home.forEach(function (tl) { tl._l = tl.style.left; tl._t = tl.style.top; tl.style.left = ""; tl.style.top = ""; }); orb.append(aura, t3); home.forEach(function (tile) { orb.append(tile); }); orb.append(sg);
     stage.append(sh, orb); hero.classList.add("wt-3d");
-    G = { t: 0, last: 0, h: 0, hT: 0, px: 0, py: 0, pxT: 0, pyT: 0, ang: 0, vel: .24, snap: 0, chg: 0, pl: 0, tg: home.map(function () { return 0; }), E: home.map(function () { return 0; }), V: home.map(function () { return 0; }), orb: orb, t3: t3, aura: aura, sh: sh };
-    var STEP = 6.2832 / home.length;
-    function hov(on) { if (G.hT === on) return; G.hT = on; G.chg = G.t; if (on) G.snap = Math.round(G.ang / STEP); }
-    if (!rm) {
-      if (fine) {
-        stage.addEventListener("pointerenter", function () { hov(1); });
-        stage.addEventListener("pointermove", function (e) {
-          var r = stage.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width, ny = (e.clientY - r.top) / r.height;
-          G.pxT = Math.max(-1, Math.min(1, (nx - .5) * 2)); G.pyT = Math.max(-1, Math.min(1, (ny - .5) * 2));
-          stage.style.setProperty("--gx", (nx * 100).toFixed(0) + "%"); stage.style.setProperty("--gy", (ny * 100).toFixed(0) + "%");
-        });
-        stage.addEventListener("pointerleave", function () { hov(0); G.pxT = 0; G.pyT = 0; });
-      }
-      /* click or tap: left half turns the ring one slot left, right half one slot right (equal, mirrored) */
-      stage.addEventListener("click", function (e) {
-        var r = stage.getBoundingClientRect(); hov(1);
-        G.snap += (e.clientX - r.left) < r.width / 2 ? 1 : -1; G.pl = 1;
-        for (var i = 0; i < G.V.length; i++) G.V[i] += 3;
-        if (!fine) { clearTimeout(G.to); G.to = setTimeout(function () { hov(0); }, 3000); }
-        go();
+    G = { t: 0, last: 0, h: 0, hT: 0, px: 0, py: 0, pxT: 0, pyT: 0, ang: 0, vel: .24, orb: orb, t3: t3, aura: aura, sh: sh };
+    if (fine && !rm) {
+      stage.addEventListener("pointerenter", function () { G.hT = 1; });
+      stage.addEventListener("pointermove", function (e) {
+        var r = stage.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width, ny = (e.clientY - r.top) / r.height;
+        G.pxT = Math.max(-1, Math.min(1, (nx - .5) * 2)); G.pyT = Math.max(-1, Math.min(1, (ny - .5) * 2));
+        stage.style.setProperty("--gx", (nx * 100).toFixed(0) + "%"); stage.style.setProperty("--gy", (ny * 100).toFixed(0) + "%");
       });
+      stage.addEventListener("pointerdown", function () { G.pulse = 1; });
+      stage.addEventListener("pointerleave", function () { G.hT = 0; G.pxT = 0; G.pyT = 0; });
     }
     if ("IntersectionObserver" in window) { G.io = new IntersectionObserver(function (l) { vis = l[0].isIntersecting; if (vis) go(); }, { threshold: 0 }); G.io.observe(stage); }
     frame(0); go();
@@ -158,7 +143,7 @@
   function unbuild() {
     if (!stage) return;
     if (raf) cancelAnimationFrame(raf); raf = 0; if (G.io) G.io.disconnect();
-    home.forEach(function (tile, i) { tile.style.transform = ""; tile.style.opacity = ""; tile.style.left = G0[i][0]; tile.style.top = G0[i][1]; ch.append(tile); });
+    home.forEach(function (tile) { tile.style.transform = ""; tile.style.opacity = ""; tile.style.left = tile._l || ""; tile.style.top = tile._t || ""; ch.append(tile); });
     tree.setAttribute("src", srcOld); stage.before(tree); stage.remove(); stage = null; hero.classList.remove("wt-3d");
   }
   function sync() { if (dq.matches) build(); else unbuild(); }
