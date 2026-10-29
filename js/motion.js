@@ -92,37 +92,58 @@
     feat.before(wrap);
   }
 
-  /* desktop: 3D hero. Icons orbit the tree; on hover the tree comes forward, icons swing behind, scene tilts with the mouse. */
-  var tree = hero.querySelector(".herotree"), dq = matchMedia("(min-width:761px)"), stage = null, home = [];
+  /* desktop: 3D motion-graphic hero. One rAF loop drives the tree, glow, shadow and icons; the mouse steers it. */
+  var tree = hero.querySelector(".herotree"), dq = matchMedia("(min-width:761px)"), stage = null, home = [], raf = 0, vis = true, G = {}, srcOld = tree && tree.getAttribute("src");
+  function lerp(a, b, k) { return a + (b - a) * k; }
+  function frame(ts) {
+    raf = 0; if (!stage) return;
+    var dt = G.last ? Math.min(.05, (ts - G.last) / 1000) : 0; G.last = ts; G.t += dt;
+    var k1 = 1 - Math.exp(-dt * 5), k2 = 1 - Math.exp(-dt * 7), k3 = 1 - Math.exp(-dt * 2.6), t = G.t;
+    G.h = lerp(G.h, G.hT, k1); G.px = lerp(G.px, G.pxT, k2); G.py = lerp(G.py, G.pyT, k2);
+    var h = G.h, n = home.length, base = .24;
+    G.vel = lerp(G.vel, base * (1 - .6 * h) - G.px * h * 1.7, k3); G.ang += G.vel * dt;
+    var S = stage.offsetWidth, R = S * .58 * (1 + .14 * h), ringZ = -h * 190;
+    home.forEach(function (tile, k) {
+      var a = G.ang + k * 6.2832 / n, c = Math.cos(a), x = -R * Math.sin(a) * (1 + .03 * Math.sin(t * .9 + k)), z0 = R * c,
+          z = z0 + ringZ + 20 * Math.sin(t * 1.1 + k * 1.7), y = z0 * .2 + 7 * Math.sin(t * 1.3 + k * 2.1), f = (c + 1) / 2;
+      tile.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px," + z.toFixed(1) + "px) rotateY(" + (G.px * 16 * h).toFixed(1) + "deg) rotateX(" + (-G.py * 12 * h).toFixed(1) + "deg)";
+      tile.style.opacity = (.74 + .26 * f).toFixed(2);
+    });
+    var sw = Math.sin(t * .45) * 4;
+    G.orb.style.transform = "rotateX(" + (-G.py * 15 * (.3 + .7 * h)).toFixed(2) + "deg) rotateY(" + (G.px * 22 * (.3 + .7 * h) + sw).toFixed(2) + "deg)";
+    G.t3.style.transform = "translate3d(" + (G.px * 8 * h).toFixed(1) + "px," + (Math.sin(t * .8) * 5 + G.py * 6 * h).toFixed(1) + "px," + (h * 100).toFixed(1) + "px) scale(" + (1 + .035 * h).toFixed(3) + ")";
+    G.aura.style.opacity = (.8 + .12 * Math.sin(t * 1.2) + .1 * h).toFixed(2);
+    G.aura.style.transform = "translateZ(-90px) scale(" + (1 + .03 * Math.sin(t * 1.2) + .1 * h).toFixed(3) + ")";
+    G.sh.style.transform = "translateX(" + (-G.px * 16 * h).toFixed(1) + "px) scale(" + (1 - .16 * h + .03 * Math.sin(t * .8)).toFixed(3) + ")";
+    G.sh.style.opacity = (.95 - .35 * h).toFixed(2);
+    if (!rm && vis) raf = requestAnimationFrame(frame);
+  }
+  function go() { if (!raf && stage && !rm && vis) { G.last = 0; raf = requestAnimationFrame(frame); } }
   function build() {
     if (stage || !tree) return;
     stage = el("div", "wt-stage");
-    var orb = el("div", "wt-orbit"), rw = el("div", "wt-ringwrap"), ring = el("div", "wt-ring"), t3 = el("div", "wt-tree3d");
-    tree.before(stage);
-    for (var i = 3; i >= 1; i--) { var c = tree.cloneNode(false); c.removeAttribute("class"); c.className = "wt-layer"; c.alt = ""; c.setAttribute("aria-hidden", "true"); c.style.setProperty("--i", i); t3.append(c); }
-    t3.append(tree);
-    var sh = el("div", "wt-shade"), sg = el("div", "wt-sheen");
-    home = [].slice.call(ch.children);
-    home.forEach(function (tile, k) {
-      var slot = el("div", "wt-slot"); slot.style.setProperty("--k", k); slot.style.setProperty("--n", home.length); slot.style.setProperty("--dd", (3 + k * .45) + "s"); slot.append(tile); ring.append(slot);
-    });
-    rw.append(ring); orb.append(rw, t3, sg); stage.append(sh, orb);
-    stage.classList.add("on"); hero.classList.add("wt-3d");
+    var orb = el("div", "wt-orbit"), aura = el("div", "wt-aura"), t3 = el("div", "wt-tree3d"), sh = el("div", "wt-shade"), sg = el("div", "wt-sheen");
+    tree.before(stage); tree.setAttribute("src", "/assets/logo-3d.svg"); t3.append(tree);
+    home = [].slice.call(ch.children); orb.append(aura, t3); home.forEach(function (tile) { orb.append(tile); }); orb.append(sg);
+    stage.append(sh, orb); hero.classList.add("wt-3d");
+    G = { t: 0, last: 0, h: 0, hT: 0, px: 0, py: 0, pxT: 0, pyT: 0, ang: 0, vel: .24, orb: orb, t3: t3, aura: aura, sh: sh };
     if (fine && !rm) {
+      stage.addEventListener("pointerenter", function () { G.hT = 1; });
       stage.addEventListener("pointermove", function (e) {
-        var r = stage.getBoundingClientRect();
-        stage.style.setProperty("--ry", (((e.clientX - r.left) / r.width - .5) * 34).toFixed(1) + "deg");
-        stage.style.setProperty("--rx", (((e.clientY - r.top) / r.height - .5) * -26).toFixed(1) + "deg");
-        stage.style.setProperty("--gx", (((e.clientX - r.left) / r.width) * 100).toFixed(0) + "%");
-        stage.style.setProperty("--gy", (((e.clientY - r.top) / r.height) * 100).toFixed(0) + "%");
+        var r = stage.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width, ny = (e.clientY - r.top) / r.height;
+        G.pxT = Math.max(-1, Math.min(1, (nx - .5) * 2)); G.pyT = Math.max(-1, Math.min(1, (ny - .5) * 2));
+        stage.style.setProperty("--gx", (nx * 100).toFixed(0) + "%"); stage.style.setProperty("--gy", (ny * 100).toFixed(0) + "%");
       });
-      stage.addEventListener("pointerleave", function () { stage.style.setProperty("--ry", "0deg"); stage.style.setProperty("--rx", "0deg"); });
+      stage.addEventListener("pointerleave", function () { G.hT = 0; G.pxT = 0; G.pyT = 0; });
     }
+    if ("IntersectionObserver" in window) { G.io = new IntersectionObserver(function (l) { vis = l[0].isIntersecting; if (vis) go(); }, { threshold: 0 }); G.io.observe(stage); }
+    frame(0); go();
   }
   function unbuild() {
     if (!stage) return;
-    home.forEach(function (tile) { ch.append(tile); });
-    stage.before(tree); stage.remove(); stage = null; hero.classList.remove("wt-3d");
+    if (raf) cancelAnimationFrame(raf); raf = 0; if (G.io) G.io.disconnect();
+    home.forEach(function (tile) { tile.style.transform = ""; tile.style.opacity = ""; ch.append(tile); });
+    tree.setAttribute("src", srcOld); stage.before(tree); stage.remove(); stage = null; hero.classList.remove("wt-3d");
   }
   function sync() { if (dq.matches) build(); else unbuild(); }
   sync();

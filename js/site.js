@@ -66,8 +66,8 @@
 (function () {
   var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/design.css?v=4"; document.head.appendChild(l);
   var s = document.createElement("script"); s.src = "/js/design.js?v=2"; s.defer = true; document.body.appendChild(s);
-  var m = document.createElement("link"); m.rel = "stylesheet"; m.href = "/css/motion.css?v=4"; document.head.appendChild(m);
-  var ms = document.createElement("script"); ms.src = "/js/motion.js?v=3"; ms.defer = true; document.body.appendChild(ms);
+  var m = document.createElement("link"); m.rel = "stylesheet"; m.href = "/css/motion.css?v=5"; document.head.appendChild(m);
+  var ms = document.createElement("script"); ms.src = "/js/motion.js?v=4"; ms.defer = true; document.body.appendChild(ms);
 })();
 
 (function () {

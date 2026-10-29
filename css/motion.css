@@ -66,34 +66,16 @@ body{overflow-x:clip}
 }
 @keyframes wtorbit{from{transform:rotate(0deg) translateX(var(--R)) rotate(0deg)}to{transform:rotate(360deg) translateX(var(--R)) rotate(-360deg)}}
 @media(max-width:760px) and (prefers-reduced-motion:reduce){.wt-st{animation:none!important;transform:rotate(calc(var(--k,0)*60deg)) translateX(var(--R)) rotate(calc(var(--k,0)*-60deg))}}
-/* desktop 3D hero: orbiting icons + hover depth (phones keep the flat orbit above) */
+/* desktop 3D hero: JS drives all motion (see motion.js); phones keep the flat orbit above */
 @media(min-width:761px){
-.hero.wt-3d .wt-chars{inset:auto;width:0;height:0;position:static}
-.wt-stage{--S:clamp(300px,30vw,390px);--R:calc(var(--S)*.6);--rx:0deg;--ry:0deg;--gx:50%;--gy:40%;position:relative;justify-self:center;align-self:center;width:var(--S);height:var(--S);perspective:1100px;perspective-origin:50% 40%;z-index:2}
-.wt-orbit{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(var(--rx)) rotateY(var(--ry));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.wt-tree3d{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
-.wt-tree3d img{position:absolute;left:6%;top:6%;width:88%;height:88%;max-width:none;order:0;margin:0}
-.hero .wt-stage .herotree{animation:wtfloat 7s ease-in-out infinite;transition:filter .5s;rotate:none;scale:1;cursor:pointer}
-.hero .wt-stage .herotree:hover{scale:1;rotate:none}
-.wt-layer{transform:translateZ(calc(var(--i)*-10px));opacity:calc(.3 - var(--i)*.06);filter:brightness(.8) saturate(.9);pointer-events:none;animation:none!important}
-.wt-ringwrap{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.wt-ring{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(-13deg);animation:wtspin 26s linear infinite}
-.wt-slot{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;transform:rotateY(calc(var(--k)*360deg/var(--n))) translateZ(var(--R));animation:wtdepth var(--dd) ease-in-out infinite alternate}
-.wt-stage .wt-st{position:absolute;left:-31px;top:-31px;margin:0;width:62px;translate:none;rotate:none;transition:none;animation:wtface 26s linear infinite}
+.hero.wt-3d .wt-chars{position:static;inset:auto;width:0;height:0}
+.wt-stage{--S:clamp(300px,30vw,390px);--gx:50%;--gy:40%;position:relative;justify-self:center;align-self:center;width:var(--S);height:var(--S);perspective:1100px;perspective-origin:50% 38%;z-index:2}
+.wt-orbit,.wt-tree3d{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.wt-aura{position:absolute;left:-6%;top:-6%;width:112%;height:112%;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 50% 46%,rgba(255,224,138,.5),rgba(62,207,142,.2) 42%,transparent 68%);filter:blur(6px);will-change:opacity,transform}
+.hero .wt-stage .herotree,.hero .wt-stage .herotree:hover{position:absolute;left:6%;top:6%;width:88%;height:88%;max-width:none;margin:0;order:0;animation:none;filter:none;rotate:none;scale:1;transition:none;cursor:pointer}
+.wt-stage .wt-st{position:absolute;left:50%;top:50%;margin:-31px 0 0 -31px;width:62px;translate:none;rotate:none;animation:none;transition:none;pointer-events:none;will-change:transform,opacity}
 .wt-stage .wt-st svg{width:56%;height:56%;padding:0;margin:0;background:none;max-width:none;border-radius:0;animation:none;filter:none}
-@keyframes wtspin{to{transform:rotateX(-13deg) rotateY(360deg)}}
-@keyframes wtface{from{transform:rotateX(13deg) rotateY(calc(var(--k)*-360deg/var(--n)))}to{transform:rotateX(13deg) rotateY(calc(var(--k)*-360deg/var(--n) - 360deg))}}
-@keyframes wtdepth{to{transform:rotateY(calc(var(--k)*360deg/var(--n))) translateZ(calc(var(--R) + 46px))}}
-.wt-shade{position:absolute;left:18%;right:18%;bottom:-2%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(11,46,34,.38),transparent);filter:blur(5px);transition:transform .7s,opacity .7s}
-.wt-sheen{position:absolute;left:6%;top:6%;width:88%;height:88%;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--gx) var(--gy),rgba(255,255,255,.35),transparent 45%);mix-blend-mode:soft-light;transform:translateZ(60px);transition:opacity .4s}
-@media(hover:hover){
-.wt-stage:hover .wt-tree3d{transform:translateZ(120px) scale(1.04)}
-.wt-stage:hover .wt-ringwrap{transform:translateZ(-210px) scale(.9)}
-.wt-stage:hover .wt-ring{animation-duration:44s}
-.wt-stage:hover .wt-st{animation-duration:44s}
-.wt-stage:hover .wt-sheen{opacity:1}
-.wt-stage:hover .wt-shade{transform:scale(1.25);opacity:.8}
-.wt-stage:hover .herotree{filter:drop-shadow(0 26px 36px color-mix(in srgb,var(--gold) 50%,transparent))}
-}
-@media(prefers-reduced-motion:reduce){.wt-ring,.wt-slot,.wt-stage .wt-st,.hero .wt-stage .herotree{animation:none!important}.wt-stage .wt-st{transform:rotateX(13deg) rotateY(calc(var(--k)*-360deg/var(--n)))}}
+.wt-shade{position:absolute;left:22%;right:22%;bottom:2%;height:7%;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--ink) 38%,transparent),transparent);filter:blur(3px);will-change:transform,opacity}
+.wt-sheen{position:absolute;left:6%;top:6%;width:88%;height:88%;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--gx) var(--gy),rgba(255,255,255,.3),transparent 42%);mix-blend-mode:soft-light;transform:translateZ(130px);transition:opacity .4s}
+@media(hover:hover){.wt-stage:hover .wt-sheen{opacity:1}}
 }
