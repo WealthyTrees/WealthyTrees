@@ -1,0 +1,34 @@
+/* WealthyTrees palette v1: "Night Forest + Hot Magenta".
+   2 bases: night green #0b2e22 + ink #0a0f0d. 1 bold accent: magenta #ff2e93.
+   Green/red stay reserved for market up/down. Magenta is used only for actions and attention. */
+:root{--accent:#d4146f;--accent-fg:#fff;--accent-hi:#b80f5e}
+[data-theme=dark]{
+ --bg:#0a0f0d;--paper:#0b2e22;--ink:#faf7f0;--mute:#b4c4ba;--line:#1d4636;
+ --up:#2fd68f;--down:#ff6b6b;--gold:#e0b04f;--deep:#060a08;
+ --accent:#ff2e93;--accent-fg:#0a0f0d;--accent-hi:#ff5aa8;
+ --btn:#ff2e93;--btn-fg:#0a0f0d}
+/* primary actions */
+.btn:hover{background:var(--accent-hi)}
+[data-theme=dark] .btn{box-shadow:0 0 18px rgba(255,46,147,.35)}
+[data-theme=dark] .btn:hover{box-shadow:0 0 26px rgba(255,46,147,.6)}
+.nl .btn,.fbtn,.fbtn.go{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.nl .btn:hover,.fbtn:hover{background:var(--accent-hi);border-color:var(--accent-hi)}
+html #wt-sub button.go{background:var(--accent);color:var(--accent-fg)}
+html #wt-sub button.go:hover{background:var(--accent-hi)}
+.wt-rot-btn{background:var(--accent);color:var(--accent-fg)}
+.wt-rot-card:hover .wt-rot-btn{background:var(--accent-hi)}
+/* attention points */
+nav a[aria-current]{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);border-color:var(--accent)}
+nav a::after{background:var(--accent)}
+.date,.pill.live{color:var(--accent)}
+.pill.live{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.wt-prog{background:linear-gradient(90deg,var(--up),var(--accent))}
+.tryb:hover,a.tryb:hover{border-color:var(--accent)}
+:focus-visible{outline-color:var(--accent)}
+::selection{background:var(--accent);color:var(--accent-fg)}
+nav a.navcta{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+nav a.navcta::after{border-color:var(--accent)}
+@media(hover:hover){nav a.navcta:hover{background:var(--accent-hi);color:var(--accent-fg);box-shadow:0 8px 22px rgba(255,46,147,.4)}}
+/* Learn and tools: small magenta touches */
+[data-theme=dark] .course-grid .cgo{color:var(--accent);text-shadow:0 0 10px rgba(255,46,147,.55)}
+.chip:hover,.tbtn:hover{border-color:var(--accent)}
