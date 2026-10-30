@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "22,937",
-   "change": 0.82
+   "value": "23,109",
+   "change": 1.81
   },
   {
    "name": "SENSEX",
-   "value": "74,151",
-   "change": 0.75
+   "value": "74,678",
+   "change": 1.96
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,015",
-   "change": -0.41
+   "value": "3,994",
+   "change": -0.92
   },
   {
    "name": "CRUDE WTI",
-   "value": "$102.8",
-   "change": 0.74
+   "value": "$103.4",
+   "change": 1.36
   },
   {
    "name": "USD/INR",
-   "value": "95.21",
-   "change": 0.0
+   "value": "95.06",
+   "change": -0.16
   },
   {
    "name": "S&P 500",
@@ -45,67 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Market Breadth Weakens to Seven-Month Low Despite Benchmark Gains",
-   "summary": "While headline indices advanced, fewer shares gained ground relative to those falling. Both mid-cap and small-cap segments recorded losses over the past month.",
-   "why": "Tracking the ratio of advancing to declining stocks reveals whether an index rally reflects broad market participation.",
+   "title": "Equitas Small Finance Bank Plummets Following Founder and Chief Executive Resignation",
+   "summary": "Shares of the private lender dropped sharply over two trading sessions after PN Vasudevan stepped down from his executive post. The departure followed an identified conflict of interest linked to a family member's financial firm.",
+   "why": "Sudden leadership departures at commercial banks can prompt market unease regarding corporate governance and institutional continuity.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-breadth-hits-seven-month-low-despite-nifty-sensex-gains/articleshow/135336784.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/equitas-sfb-shares-tumble-27-in-2-days-on-ceo-exit-more-pain-ahead/articleshow/135348776.cms"
   },
   {
    "category": "Equity",
-   "title": "Indian Benchmarks Rebound Sharply Driven by Banking and Consumer Shares",
-   "summary": "The Sensex climbed over 900 points while the Nifty moved beyond the 22,900 level. Strong performance across banking and consumer goods companies supported the day's recovery.",
-   "why": "Sectoral performance among heavyweight industries heavily steers benchmark index movements due to market-cap weighting.",
-   "source": "The Shillong Times",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWkVHb1VLbzdpcVE5MWt2Y3RHSElndXl4QUd6NmlUdlZzUVRQVkZZRUhNQktOY3VzdmYyQkdsaEViVndoa1BNX0VHTGJDNnRkTExFMzYxcW5QTTI3enVTQ0ZmdDNtMFdjY0hGNGhJbjdlTlJDZFMtT0lPVTZTemM3LThVM2w4bDhtTE5CWVVaU3pzV25GUU4xRGhEaVMtajdIVmdnRFVrM1Y?oc=5"
+   "title": "Individual Traders Tap Margin Financing for Jio Platforms Market Debut",
+   "summary": "Non-institutional participants acquired shares of Jio Platforms using over two thousand crore rupees in broker-backed leverage during its initial day of trade. This made the telecom entity one of the most heavily financed counters on October 28.",
+   "why": "Margin trading allows individuals to amplify purchasing scale with borrowed funds, which also magnifies their exposure to market volatility.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/jio-platforms-listing-retail-investors-mtf-funding-debut-11793336615040.html"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metal Prices Climb Across Indian Commodity Markets",
-   "summary": "Trading values for gold and silver marked fresh increases. Both metals witnessed upward movement during recent market sessions.",
-   "why": "Precious metals frequently serve as key portfolio diversifiers during periods of financial uncertainty and inflation.",
-   "source": "News On AIR",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBNVENCZGd3TU4yQzJrRTV3WnBhbDlhWFZmdDYzZUp1cVhlelg1dnY1Y1Q3RHROM2gzZmIzZ0ZzdzUtRHBSa29GZkZGUDd5QkZGWW02UE9IeGl5cWFGOFE?oc=5"
+   "title": "Crude Oil Crosses One Hundred Sixteen Dollars Pressuring Broader Stock Benchmarks",
+   "summary": "Global petroleum prices climbed past 116 dollars per barrel, contributing to downward momentum across domestic indices. Broader equity segments witnessed noticeable declines during the trading session.",
+   "why": "Because India relies heavily on energy imports, elevated fuel costs increase manufacturing expenses and expand the national trade shortfall.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOZEZkOUo3elRXQW41eS1KOUQ0S3NvWFE1OTNHVy04WW1BeHhDV3djcGFrem5PMS10dEVmamxsYjEwYnNJZ1BVbTNwVnQySHpKZ2RPd1NzempiTGp3UTMySEc5d011SkdOYzFXUzlPd0hRLTREMGRmQVZLS0FyNWUwaDNnUm1nSjhISzYtNGNsZEF6VWZVOEc0bjJ5azRJODFKWVZyZldCeUJtbUg4Z19GWEUtWFNQLVA4azNtVkZ6UWNMcDk0ZWdEYmdVS05WQ0RLZElsQ2I1RjVXbUZZaHBaSF9lay1BQzNuMlc5b2o5Uk1oWmNMLU84dmQzRnZub2RXbjVYVlZ4bjVKTVpkaHZLeDRZcjZVNnpocnRTMU00eGQxZHZUbGNGemN3SFl1T1NzbXBCTmdMU3BuYWZMc0pJbmVnOTFCb0dUeXFhRXU3bGNqUjNzamVGQ9IB9AFBVV95cUxOamxtQkl4aWpPQXZ3RXdZblRPa085YklxbVh2ZXczb1BhNGdoLWpOSWF6OEdHTjcydlA4eXlUOHpZMUdNMk45VDNGNXJacFBra25ycnNGQlFJT090el9yc3ZjZ3NYRmhZa0VHX1JEOER2RHQyV3RXRURtUnZrQk5Xci04Wk41X1RTSXhJN0haNmtVNUFpbmVMR0F6VzFPZHliV0dHMU9iR05WTWFPb29QazVvRXk0eVNLb1hfNXlIclJ6YWhfa0ZUc25Xdm5fLWZhWEhHUGk3SHZHNkxKUUpqRm9KdjdyREFhdV8xeXpkMll4aEZk?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold Prices Drop as Equity Selloff Fails to Spur Safety Purchases",
+   "summary": "Precious metal prices softened even as stock markets experienced a downturn. The bullion market did not observe typical defensive capital flows during the session.",
+   "why": "Investors track precious metal movements during market slides to determine if capital is seeking traditional defensive hedges.",
+   "source": "FXStreet",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUTM0OTBEV0Z0ZHR3RVAxQ1YxWEd3WmNzUGUxdjdScW5RMjRJd3o5c2YwNzkwN3dLak84MFd1c0oyMUtRMktCQmJ1NWRPNnRQQjA3MFhPZm9rY0VsanYzTWpscVdCWjRpU0loek11U3NPSG00aFlGSW1XZTIxdWl6UFR5OHFsVEowVnhWQ3M3aU9ZMW8xYmFBY2xQMnFpVy1Rd1dPNHRRcw?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Fixes Floating Rate Sovereign Bond Coupon at 7.26 Percent",
-   "summary": "The Reserve Bank announced the interest rate for sovereign floating-rate debt maturing in 2034. The payout stands at 7.26 percent per year for the upcoming six-month timeframe.",
-   "why": "Floating rate instruments help market participants manage interest rate risk by resetting returns periodically based on prevailing yields.",
+   "title": "Reserve Bank Conducts Underwriting Auctions for Thirty-Three Thousand Crore Sovereign Debt",
+   "summary": "The Indian central bank initiated an underwriting process to reissue sovereign securities totaling thirty-three thousand crore rupees. The auction mechanism ensures full allocation coverage for the fresh batch of government bonds.",
+   "why": "Sovereign debt sales reflect state funding requirements and help establish reference yield curves for borrowing across the broader economy.",
    "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63883"
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63880"
   },
   {
    "category": "Economy",
-   "title": "Rupee Strengthens Against Dollar While Elevated Oil Prices Pose Challenges",
-   "summary": "The domestic currency gained 11 paise to reach 95.17 against the American dollar. Meanwhile, sustained high global crude costs continue to pressure the currency's overall rebound.",
-   "why": "High reliance on imported energy means crude costs directly influence trade balances and domestic currency strength.",
-   "source": "PSU Watch",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOV3h6Vm1uSHNrT21jQUJvTFNxVlpXV0pYU0RfTk9VT25nU193dklwLVM4TFJmWG1TRzNzU2otdk41V0ZMUTBfcjJHTFdYVEt2amVrNkt0R25PS0xraC1tRVBzNUlzR0k5MW1qMU9wUl9RcFhuLTc3Tm9IVTFlUnB4Q2dSQjQ2Z05MR0FGaW1pSHNFY21SNkxJcW5BQmVOMkk3NzhlQUJON2lvNXB4OUh4dUEwbU12QlQ5NVZOOEh3a1U5MXAzZU11MzI1SG5wd3ZuRGt0dzJ3c9IB1wFBVV95cUxOV3h6Vm1uSHNrT21jQUJvTFNxVlpXV0pYU0RfTk9VT25nU193dklwLVM4TFJmWG1TRzNzU2otdk41V0ZMUTBfcjJHTFdYVEt2amVrNkt0R25PS0xraC1tRVBzNUlzR0k5MW1qMU9wUl9RcFhuLTc3Tm9IVTFlUnB4Q2dSQjQ2Z05MR0FGaW1pSHNFY21SNkxJcW5BQmVOMkk3NzhlQUJON2lvNXB4OUh4dUEwbU12QlQ5NVZOOEh3a1U5MXAzZU11MzI1SG5wd3ZuRGt0dzJ3cw?oc=5"
+   "title": "Indian Rupee Strengthens Modestly Against the American Dollar in Opening Session",
+   "summary": "The domestic currency gained seven paise during early dealings to reach 95.19 against the US dollar. This upward tick offered a brief reprieve from recent downward pressure in foreign exchange markets.",
+   "why": "Exchange rate variations alter the landed price of imported goods and influence the earnings margins of domestic exporters.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZzZnMkNpLTduSFNMaVg4cEVEc0txQ0FjdVFSamJSNk4yOVBKN19xeFJ3VnBoUzFVYm1fNTMwSVFvRTR6Z0xqMlNRcVl2dFR3cEdGS3NodkdPa0tZa3JqeUdXRVB3SnVDOEFBalFQM0F5YnZuajRaM1BadVloUnl1RGlZbE9jTUc4cmxsajh3dFpZeWhuanhUSjVlMXBhanNUOW5KX29Qc2NleVBnMkpobVJjS0HSAcIBQVVfeXFMT2NsbUJoOVZCSEZPRjdleWpNSThoZmd5bHc3aDhXQy05WnVweHNJRFZObWdmN0dxV1VXNlBKY3FZQkRPdklfQWdoUXJabWJmcy1NUG1CUHU3cUsybHlNcFV2UTFDUkZjdHlIZ211YnFoSHJIZWJ6bjNGdVhDMmxpeXlVUjl1cnMzTFVkMERHVUdRQWtQV0dzc1hrNmFzVmlBWUlqekFHaFFPVGJNZ0wxYVhVS1FNaDVIc2ZzOWRBd2x0NGc?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Banking Cash Levels Shrink During Central Bank Currency Support Measures",
-   "summary": "Available cash balances in the domestic banking system reduced recently. This drop coincided with interventions by the monetary authority to stabilize the local currency.",
-   "why": "Interventions by central banks to defend local currency values typically drain cash from domestic banking channels.",
+   "title": "Banking Cash Surplus Contracts as Central Bank Acts on Currency Volatility",
+   "summary": "Available cash balances within the domestic banking network registered a decline. This reduction occurred alongside foreign exchange operations by the central bank to stabilize the rupee.",
+   "why": "When monetary authorities intervene to support a domestic currency by releasing foreign reserves, cash is naturally drained from the commercial banking system.",
    "source": "TradingView",
    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPekxJSnpoa09DbVBlRERiRTZLZUhoQVIxblBxSGM4VF9uMXRMaW1fUEtzR0Zxa1Q1RE9hcDVZN0ZDUVdxMUJiWXotaWJjczIwNDJiMkU5NlpoM0h0dDVIdmE5WlJpY1dyVk81WmNzMXVaYjFFc2VCRlBvV1N6a3otSXZzaDlWb1VERkQzbnNJcXc0SUZlelRNSDlRSGRqcXppMThaYnFzcVRxQ2tIU2JRQmRHYjJFdmNE?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "American Stocks Slide as Tech Spending Worries Eclipse Earnings Results",
-   "summary": "Major US stock benchmarks closed lower following revenue shortfalls at Alphabet. Substantial capital expenditure on artificial intelligence triggered renewed investor apprehension across the technology sector.",
-   "why": "Substantial investments in new technologies require strong top-line growth to validate high public market valuations.",
+   "title": "Alphabet Financial Miss Ignites Broad Pullback in Major American Equity Indices",
+   "summary": "Stocks in New York finished lower following disappointing revenue figures from Alphabet. The results sparked renewed worries across Wall Street over the profitability of heavy artificial intelligence investments.",
+   "why": "Aggressive capital spending by technology heavyweights can rattle investors if matching revenue gains fail to emerge immediately.",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObTRZdktaNHNaUkc2SG45TFV3V3hKRlMwdWdFTEhyUVFSRnBodWFIM0gxSHh5NWZDVkp3WnJOX3RTZGFtUDVIN3ZPQnB6NlNOQ01OOXhTRnNhNjkyajZ2ejhEZkRBS1IxMkxjVWJmY3FYa3lqcHUxajVqRXpWdS1UWjdxZFZYTW8tUjBtN2NZTGlLSWFiRlpjTDNKaVlVbHRiLVRCcA?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Dollar Steady Following Split Federal Reserve Rate Pause Decision",
-   "summary": "The American dollar showed little variation after central bank policymakers decided to keep interest rates steady. The standstill occurred despite two voting members favoring an immediate rate hike.",
-   "why": "Divided votes within central bank leadership indicate evolving policy views that can shape international borrowing costs.",
-   "source": "www.tmgm.com",
-   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNYTFMdVJfa3d6a0g2bHo5dkxCVTh6T2dwc1ZObkZlbUIxbEwtLVBmYU4tdFh1YjZsTE9xRlpQSzFmYWtnZUlYSXdrS2ZxdU5PMGlQVzNYRUkyaVVkLXN2X0xpazJjVHlPOGk4NHoxcjNEeE1NVnBMam1fdDEwRkRqeHd5aGNFQkJjZWxoMnZaWjctdGZCLW55LU1iRzFwc0RnWnBPQXF1eXk5Yzk4Ym11NEFjYk9VcTJFUUlmeWhxMERiYXFkVTh5MU96S0o2RFNiOXlqbHE4UUFMVWdsTDQ5dXhRZFRncXZQSWNxNS1mNjJQaEhfVlJqS2ZsSDhYaklq?oc=5"
+   "title": "Federal Reserve Pauses Benchmark Borrowing Costs While Reducing Planned Policy Sessions",
+   "summary": "The United States central bank opted to leave its key lending rate unchanged at its recent meeting. A firm dollar trajectory linked to the decision placed continued headwinds on developing financial markets.",
+   "why": "Higher interest rate environments in advanced economies often draw global liquidity away from emerging markets toward dollar-based assets.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOSnJaM3RLTnl1NVVsMVFGQ3Flb2traENZQzl2OEJ4V3B2aGowc2trU1lhaDl2cUFBNjVwUXhOQmFpbFU2bGlmNmRjcHV5eUxidWFoNUdOcndfeUJmUzBqLXpJREN0SUpSUjlpZnFUY3kzMXYwdUs4S2VVYUhORlpCR1FTTUtKeExINmJRTG12NDFUbnBlbHBkWkx5WXYyTVNoU0RHdnhxR1hEdUxyQUpYTXQ2aUd1TnRiUzQ4bDhuN21FQlU3OGlPYVpFWXRldDYtVkpUY1U1cVdRZ3hPMzFLQ3A0d3MzWkQyZzkxaUY1b2NxQdIB-AFBVV95cUxNWVlnUHJrZFVSSFdlUm1jOFFhaW53Z0pZdjRCd0VuQjJBcVJoeTd3RHMzd3RaZ1hjak1PMklmMkdOSV92R2NtU1dWMk90am1VNE9fbmpSbmZnT1hDU213bVNoZjE3Ykg0QjZjcmc5Wkc0R19oVTIzdFExSDhUQ3RxNDJJOFI3cEUzMWpiU1lrR0RoRk51aU1LempnWnFvQno1NmJlbmdFRTdhZ215bmxaOU5WTFZzN2hmcWRTNks1a18zOHZFZzhmb1hBM3hGdU50aFV2bnpoSWg4MUl5Yk5yOGQ3Y1A2S3ppdGFBWWN2b1BjVFZlSFZubQ?oc=5"
   }
  ]
 }
