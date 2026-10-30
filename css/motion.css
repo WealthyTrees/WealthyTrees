@@ -79,3 +79,19 @@ body{overflow-x:clip}
 .wt-sheen{position:absolute;left:6%;top:6%;width:88%;height:88%;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--gx) var(--gy),rgba(255,255,255,.3),transparent 42%);mix-blend-mode:soft-light;transform:translateZ(130px);transition:opacity .4s}
 @media(hover:hover){.wt-stage:hover .wt-sheen{opacity:1}}
 }
+
+/* v3 (768px+ only, phones untouched): side slide-fade reveals, hover polish, icon labels */
+@media(min-width:768px){
+.js-rv .rv{transform:translateX(-64px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--r,0)*90ms)}
+.js-rv .rv:nth-child(even){transform:translateX(64px)}
+.js-rv h2.rv,.js-rv .page h2.rv{transform:translateX(-40px)}
+.js-rv .rv.in,.js-rv .rv:nth-child(even).in,.js-rv h2.rv.in{opacity:1;transform:none}
+.wt-bands{-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.btn,.cta a{translate:var(--bx,0) var(--by,0);transition:translate .25s ease-out,transform .3s var(--ease),box-shadow .3s}
+.tabs button,.tabs a{transition:transform .25s var(--ease),box-shadow .25s}
+.wt-stage .wt-tip{position:absolute;left:50%;top:calc(100% + 6px);translate:-50% 0;padding:.18rem .6rem;border-radius:999px;background:var(--ink);color:var(--paper);font:700 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.04em;white-space:nowrap;opacity:0;transition:opacity .25s,transform .25s;transform:translateY(-4px);pointer-events:none}
+.wt-stage .wt-st.hot .wt-tip{opacity:1;transform:none}
+.wt-stage .wt-st.hot{box-shadow:0 16px 28px rgba(11,46,34,.34),0 0 0 4px color-mix(in srgb,var(--gold) 55%,transparent)}
+}
+@media(min-width:768px) and (hover:hover){.tabs button:hover,.tabs a:hover{transform:translateY(-2px)}.themebar button:hover{transform:translateY(-2px) scale(1.06)}.item:hover h3,.cardlink:hover h3{color:var(--up)}}
+@media(min-width:768px) and (prefers-reduced-motion:reduce){.js-rv .rv,.js-rv .rv:nth-child(even){transform:none}}

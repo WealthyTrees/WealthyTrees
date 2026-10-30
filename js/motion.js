@@ -13,6 +13,7 @@
     chart: '<path d="M4 18l5-5 4 3 7-8"/><path d="M15 8h5v5"/>',
     coin: '<circle cx="12" cy="12" r="8.5"/><path d="M9 8h6M9 11h6M9 8h1.5a3 3 0 0 1 0 6H9l5 3.5"/>'
   };
+  var TIP = { sprout: "Grow", note: "Save", bulb: "Learn", spark: "Insights", chart: "Charts", coin: "Invest" };
   var COL = { sprout: ["#0f7b55", "#fff"], note: ["#c9a227", "#16241d"], bulb: ["#fff3c4", "#0f3d2e"], spark: ["#0f3d2e", "#c9a227"], chart: ["#8fdcb4", "#0b2e22"], coin: ["#c9a227", "#16241d"] };
   function svg(k) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + IC[k] + "</svg>"; }
   function tint(e, k) { e.style.setProperty("--bg1", COL[k][0]); e.style.setProperty("--fg1", COL[k][1]); }
@@ -66,11 +67,23 @@
     }
   }
 
+
+  /* magnetic buttons: pull slightly toward the cursor (mouse, 768px+) */
+  if (fine && !rm && matchMedia("(min-width:768px)").matches) {
+    var mb = null;
+    document.addEventListener("pointermove", function (e) {
+      var b = e.target.closest && e.target.closest(".btn,.cta a");
+      if (!b && mb) { mb.style.removeProperty("--bx"); mb.style.removeProperty("--by"); mb = null; }
+      if (!b) return; mb = b; var r = b.getBoundingClientRect();
+      b.style.setProperty("--bx", ((e.clientX - r.left - r.width / 2) * .18).toFixed(1) + "px"); b.style.setProperty("--by", ((e.clientY - r.top - r.height / 2) * .28).toFixed(1) + "px");
+    }, { passive: true });
+  }
+
   /* home page only */
   if (!hero) return;
   var ch = el("div", "wt-chars"); ch.setAttribute("aria-hidden", "true");
   [["sprout", "57%", "9%", 6, .2, 14, "-8deg"], ["note", "88%", "5%", 7, 1.1, -18, "10deg"], ["bulb", "94%", "32%", 5.5, .6, 22, "-6deg"], ["spark", "62%", "82%", 6.5, 1.6, -12, "8deg"], ["chart", "93%", "74%", 7.5, .3, 16, "-10deg"], ["coin", "76%", "91%", 6, 2, -20, "12deg"]].forEach(function (a) {
-    var b = el("b", "wt-st"); b.innerHTML = svg(a[0]); tint(b, a[0]);
+    var b = el("b", "wt-st"); b.innerHTML = svg(a[0]); tint(b, a[0]); b.append(el("span", "wt-tip", TIP[a[0]]));
     b.style.left = a[1]; b.style.top = a[2]; b.style.setProperty("--d", a[3] + "s"); b.style.setProperty("--l", a[4] + "s"); b.style.setProperty("--p", a[5]); b.style.setProperty("--r", a[6]); ch.append(b);
   });
   hero.append(ch);
@@ -100,14 +113,17 @@
     var dt = G.last ? Math.min(.05, (ts - G.last) / 1000) : 0; G.last = ts; G.t += dt;
     var k1 = 1 - Math.exp(-dt * 5), k2 = 1 - Math.exp(-dt * 7), k3 = 1 - Math.exp(-dt * 2.6), t = G.t;
     G.h = lerp(G.h, G.hT, k1); G.px = lerp(G.px, G.pxT, k2); G.py = lerp(G.py, G.pyT, k2);
-    var h = G.h, n = home.length, base = .24;
-    G.vel = lerp(G.vel, base * (1 - .6 * h), k3); G.pulse = (G.pulse || 0) * Math.exp(-dt * 3.5); G.ang += G.vel * dt;
-    var S = stage.offsetWidth, R = S * .38 * (1 - .06 * h), ringZ = -h * 170, bz = 12 * Math.sin(t * 1), by = 5 * Math.sin(t * 1.2), ps = 1 + .14 * (G.pulse || 0);
+    var h = G.h, n = home.length, base = .24, ringZ = 0, bz = 0, by = 0;
+    G.vel = lerp(G.vel, base * (1 - .5 * h), k3); G.pulse = (G.pulse || 0) * Math.exp(-dt * 3.5); G.ang += G.vel * dt;
+    var S = stage.offsetWidth, Rx = S * (.52 + .07 * h), ps = 1 + .14 * (G.pulse || 0), hot = -1, hd = 1e9;
+    if (h > .3 && G.cx != null) home.forEach(function (tl, k) { var r = tl.getBoundingClientRect(), d = Math.hypot(G.cx - (r.left + r.width / 2), G.cy - (r.top + r.height / 2)); if (d < hd && d < 90) { hd = d; hot = k; } });
     home.forEach(function (tile, k) {
-      var a = G.ang + k * 6.2832 / n, c = Math.cos(a), x = -R * Math.sin(a), z0 = R * c,
-          z = z0 + ringZ + bz, y = z0 * .2 + by, f = (c + 1) / 2;
-      tile.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px," + z.toFixed(1) + "px) rotateY(" + (G.px * 16 * h).toFixed(1) + "deg) rotateX(" + (-G.py * 12 * h).toFixed(1) + "deg) scale(" + ps.toFixed(3) + ")";
-      tile.style.opacity = (.74 + .26 * f).toFixed(2);
+      var a = G.ang + k * 6.2832 / n, c = Math.cos(a), f = (c + 1) / 2,
+          x = -Rx * Math.sin(a) + S * .035 * h * Math.sin(t * 1.3 + k * 1.7),
+          y = S * (-.12 + .36 * c) + S * .03 * h * Math.sin(t * 1.1 + k * 2.1) + 5 * Math.sin(t * 1.2 + k),
+          z = 150 * c, sc = (.8 + .28 * f) * ps * (k === hot ? 1.3 : 1);
+      tile.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px," + z.toFixed(1) + "px) rotateY(" + (G.px * 16 * h).toFixed(1) + "deg) rotateX(" + (-G.py * 12 * h).toFixed(1) + "deg) scale(" + sc.toFixed(3) + ")";
+      tile.style.opacity = (.88 + .12 * f).toFixed(2); tile.classList.toggle("hot", k === hot);
     });
     var sw = Math.sin(t * .45) * 4;
     G.orb.style.transform = "rotateX(" + (-G.py * 15 * (.3 + .7 * h)).toFixed(2) + "deg) rotateY(" + (G.px * 22 * (.3 + .7 * h) + sw).toFixed(2) + "deg)";
@@ -129,13 +145,14 @@
     G = { t: 0, last: 0, h: 0, hT: 0, px: 0, py: 0, pxT: 0, pyT: 0, ang: 0, vel: .24, orb: orb, t3: t3, aura: aura, sh: sh };
     if (fine && !rm) {
       stage.addEventListener("pointerenter", function () { G.hT = 1; });
+      addEventListener("pointermove", function (e) { G.cx = e.clientX; G.cy = e.clientY; }, { passive: true });
       stage.addEventListener("pointermove", function (e) {
         var r = stage.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width, ny = (e.clientY - r.top) / r.height;
         G.pxT = Math.max(-1, Math.min(1, (nx - .5) * 2)); G.pyT = Math.max(-1, Math.min(1, (ny - .5) * 2));
         stage.style.setProperty("--gx", (nx * 100).toFixed(0) + "%"); stage.style.setProperty("--gy", (ny * 100).toFixed(0) + "%");
       });
       stage.addEventListener("pointerdown", function () { G.pulse = 1; });
-      stage.addEventListener("pointerleave", function () { G.hT = 0; G.pxT = 0; G.pyT = 0; });
+      stage.addEventListener("pointerleave", function () { G.hT = 0; G.pxT = 0; G.pyT = 0; G.cx = null; });
     }
     if ("IntersectionObserver" in window) { G.io = new IntersectionObserver(function (l) { vis = l[0].isIntersecting; if (vis) go(); }, { threshold: 0 }); G.io.observe(stage); }
     frame(0); go();
