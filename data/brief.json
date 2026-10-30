@@ -1,5 +1,5 @@
 {
- "date": "Thursday, 29 October 2026",
+ "date": "Friday, 30 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,107 +13,99 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,037",
-   "change": -0.36
+   "value": "4,015",
+   "change": -0.41
   },
   {
    "name": "CRUDE WTI",
-   "value": "$100.5",
-   "change": -2.24
+   "value": "$102.8",
+   "change": 0.74
   },
   {
    "name": "USD/INR",
-   "value": "95.25",
-   "change": 0.04
+   "value": "95.21",
+   "change": 0.0
   },
   {
    "name": "S&P 500",
-   "value": "7,709",
-   "change": -0.45
+   "value": "7,720",
+   "change": -0.3
   },
   {
    "name": "NASDAQ",
-   "value": "26,151",
-   "change": -1.5
+   "value": "26,185",
+   "change": -1.38
   },
   {
    "name": "DOW",
-   "value": "52,295",
-   "change": -0.34
+   "value": "52,343",
+   "change": -0.25
   }
  ],
  "items": [
   {
-   "category": "US Markets",
-   "title": "US Central Bank Maintains Policy Benchmark Following High Worldwide Ambiguity",
-   "summary": "The Federal Reserve opted to retain its benchmark borrowing rate between 3.75% and 4%. Policymakers cited persistent price pressures alongside broad global unpredictability for keeping conditions unchanged.",
-   "why": "Global borrowing costs heavily influence international foreign capital movements and domestic emerging market liquidity.",
-   "source": "Upstox",
-   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOVGt5Y2VyUGY5S3JGbDVycnVsZHE0ZFVlWlZWeXNETTRZR3ZNRzdaQ2xGRXBLR3UtQlJWb1ZKdFJYTm5kaVdYUlJfekF5THpZSnBlX1Eta3pxSDlGNUxvWDEwc2pWX2t1c0x1aHJLSEdDRzNoRFZrUkZmTERsUDFLUzhaUU83bDV1UlBUc0xQNEJ3VEdzc2lTZ2dSMWo3bl9uVGtPeFUyQVRaRzRmc0c1TjMtdkR6ZWxIWHdRVVZrd3BId1otWDBwbEpEMkkzX0htU3pXeXdSRU1MU3Fqc2ZsN0JRbHRkVzlnaXdPLVpXY2syM0tKUHQ1ZGJNdkdRUUk?oc=5"
+   "category": "Equity",
+   "title": "Market Breadth Weakens to Seven-Month Low Despite Benchmark Gains",
+   "summary": "While headline indices advanced, fewer shares gained ground relative to those falling. Both mid-cap and small-cap segments recorded losses over the past month.",
+   "why": "Tracking the ratio of advancing to declining stocks reveals whether an index rally reflects broad market participation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-breadth-hits-seven-month-low-despite-nifty-sensex-gains/articleshow/135336784.cms"
   },
   {
-   "category": "US Markets",
-   "title": "Microsoft Artificial Intelligence Cloud Expansion Offsets Hardware and Gaming Weakness",
-   "summary": "Azure cloud computing demand is fueling top-line growth at Microsoft alongside elevated capital outlays for data centers. Concurrently, personal computing and video gaming hardware divisions have exhibited slower business momentum.",
-   "why": "Heavy spending on digital infrastructure directly impacts operating margins and serves as a barometer for enterprise tech investment.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-azures-ai-boom-drive-microsoft-shares-higher/slideshow/135294307.cms"
+   "category": "Equity",
+   "title": "Indian Benchmarks Rebound Sharply Driven by Banking and Consumer Shares",
+   "summary": "The Sensex climbed over 900 points while the Nifty moved beyond the 22,900 level. Strong performance across banking and consumer goods companies supported the day's recovery.",
+   "why": "Sectoral performance among heavyweight industries heavily steers benchmark index movements due to market-cap weighting.",
+   "source": "The Shillong Times",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWkVHb1VLbzdpcVE5MWt2Y3RHSElndXl4QUd6NmlUdlZzUVRQVkZZRUhNQktOY3VzdmYyQkdsaEViVndoa1BNX0VHTGJDNnRkTExFMzYxcW5QTTI3enVTQ0ZmdDNtMFdjY0hGNGhJbjdlTlJDZFMtT0lPVTZTemM3LThVM2w4bDhtTE5CWVVaU3pzV25GUU4xRGhEaVMtajdIVmdnRFVrM1Y?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Multi Commodity Exchange Schedules Festive Muhurat Trading Window",
-   "summary": "The domestic commodity bourse has slated its festive trading session for November 8, 2026. Activities will begin with a brief introductory window before general transactions occur between 2:20 pm and 3:30 pm.",
-   "why": "Muhurat trading is an annual cultural tradition where market participants make symbolic opening transactions during Diwali.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/diwali-2026-mcx-muhurat-trading-date-is-8-nov-2026-check-time-for-special-trading-client-mode-modification-session-11793258582748.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Vedanta Aluminium Reports Significant Surge in Second-Quarter Operating Earnings",
-   "summary": "Operating earnings jumped 83% alongside a 41% top-line expansion for the metal producer during the recent quarter. The firm attributed performance gains to disciplined expenditure control and expects output expansion to sustain future operations.",
-   "why": "Operational efficiency and raw material costs are critical determinants of profitability in cyclical metal industries.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/vedanta-aluminium-more-than-doubles-profit-cost-cuts-in-focus-to-drive-earnings/articleshow/135294042.cms"
+   "title": "Precious Metal Prices Climb Across Indian Commodity Markets",
+   "summary": "Trading values for gold and silver marked fresh increases. Both metals witnessed upward movement during recent market sessions.",
+   "why": "Precious metals frequently serve as key portfolio diversifiers during periods of financial uncertainty and inflation.",
+   "source": "News On AIR",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBNVENCZGd3TU4yQzJrRTV3WnBhbDlhWFZmdDYzZUp1cVhlelg1dnY1Y1Q3RHROM2gzZmIzZ0ZzdzUtRHBSa29GZkZGUDd5QkZGWW02UE9IeGl5cWFGOFE?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Dollar Disposals Reach Calendar-Year Peak Under External Balance Pressure",
-   "summary": "The Reserve Bank offloaded 18.2 billion dollars during October to manage currency volatility. The substantial intervention reflects heightened external payment strains on the national accounts balance.",
-   "why": "Official foreign exchange operations help stabilize the domestic currency when international financial outflows strain the external account.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNThuX3I4VXFjOXpYSGY3VklfX1hLWlN5RzJmZllmZmNFZWUwd0ptZDNMUkJtSmlKQlR6dkFGNUFaY1A0MHpMQWwtZFNzbVJDZnpCaXlSazdHb3o4Q2ZTOGYySGdHWHpnVk9NTll3dnRQNTgwRndwemNEaXNDRDRHWW83Vnp1dGJxU1c1azlsUGk3c3dnMUkyenM3TUZDUzRMajRaZ3M2TkZ1b1V2cWpleDRUZjFidWtNZEFOaExWNmJESEVHM2laZTRLSkFjZ2dHMlc5TkZQWXhybTNLMUpnbnl6dHVDZ9IB6wFBVV95cUxNWDkwblN6X1hUSGtJbElpdGNrblh6czM3aS16U0FoZ2IwNnV5S1BxN1lQZVlPdWZTbXpzbEV0SWJINmZicTVBNkoxQWN3NXdOMnNzdUU4NExGaEV2ai1PSS1BYV9VZl84Ylg4TXhHb0FOWTBqcDRrY2JfaVE4VU1YZDROS0Q0X285ZnRVc2o5MVBNZWFfblY2SWVJTGhJaHUwMDBsbzRVUWEzVU1abUd5Ynd0cG5pdDV5R1NNU0dVV1I5N29fMVlzR25CMHdIUkpnYVdLQmotZURtR3h2dDROQzVGY0xMLTVzTmUw?oc=5"
+   "title": "Central Bank Fixes Floating Rate Sovereign Bond Coupon at 7.26 Percent",
+   "summary": "The Reserve Bank announced the interest rate for sovereign floating-rate debt maturing in 2034. The payout stands at 7.26 percent per year for the upcoming six-month timeframe.",
+   "why": "Floating rate instruments help market participants manage interest rate risk by resetting returns periodically based on prevailing yields.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63883"
   },
   {
    "category": "Economy",
-   "title": "Domestic Sovereign Debt Advances Following American Bond Gains and Cheaper Petroleum",
-   "summary": "Indian sovereign debt values improved in tandem with American counterparts and softer imported fuel costs. However, planned fresh issuance of paper and foreign exchange weakness limited the scale of the price advance.",
-   "why": "Sovereign bond yields reflect sovereign borrowing expenses and move inversely to bond prices based on crude oil imports and global rates.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-track-us-treasuries-higher-amid-oil-price-relief/articleshow/135294873.cms"
+   "title": "Rupee Strengthens Against Dollar While Elevated Oil Prices Pose Challenges",
+   "summary": "The domestic currency gained 11 paise to reach 95.17 against the American dollar. Meanwhile, sustained high global crude costs continue to pressure the currency's overall rebound.",
+   "why": "High reliance on imported energy means crude costs directly influence trade balances and domestic currency strength.",
+   "source": "PSU Watch",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOV3h6Vm1uSHNrT21jQUJvTFNxVlpXV0pYU0RfTk9VT25nU193dklwLVM4TFJmWG1TRzNzU2otdk41V0ZMUTBfcjJHTFdYVEt2amVrNkt0R25PS0xraC1tRVBzNUlzR0k5MW1qMU9wUl9RcFhuLTc3Tm9IVTFlUnB4Q2dSQjQ2Z05MR0FGaW1pSHNFY21SNkxJcW5BQmVOMkk3NzhlQUJON2lvNXB4OUh4dUEwbU12QlQ5NVZOOEh3a1U5MXAzZU11MzI1SG5wd3ZuRGt0dzJ3c9IB1wFBVV95cUxOV3h6Vm1uSHNrT21jQUJvTFNxVlpXV0pYU0RfTk9VT25nU193dklwLVM4TFJmWG1TRzNzU2otdk41V0ZMUTBfcjJHTFdYVEt2amVrNkt0R25PS0xraC1tRVBzNUlzR0k5MW1qMU9wUl9RcFhuLTc3Tm9IVTFlUnB4Q2dSQjQ2Z05MR0FGaW1pSHNFY21SNkxJcW5BQmVOMkk3NzhlQUJON2lvNXB4OUh4dUEwbU12QlQ5NVZOOEh3a1U5MXAzZU11MzI1SG5wd3ZuRGt0dzJ3cw?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Hyundai Motor India Reports Highest Sales Volume Alongside Reduced Net Profit",
-   "summary": "The automaker posted all-time high quarterly sales figures alongside elevated total revenues. Nevertheless, rising manufacturing expenditures caused bottom-line earnings to contract by 23.9% during the same three-month term.",
-   "why": "High revenue does not always translate to bottom-line expansion when production expenses escalate faster than turnover.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/hyundai-motor-india-shares-gain-5-despite-profit-slump-why-brokerages-remain-bullish-check-target-prices-11793254220802.html"
+   "category": "Economy",
+   "title": "Banking Cash Levels Shrink During Central Bank Currency Support Measures",
+   "summary": "Available cash balances in the domestic banking system reduced recently. This drop coincided with interventions by the monetary authority to stabilize the local currency.",
+   "why": "Interventions by central banks to defend local currency values typically drain cash from domestic banking channels.",
+   "source": "TradingView",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPekxJSnpoa09DbVBlRERiRTZLZUhoQVIxblBxSGM4VF9uMXRMaW1fUEtzR0Zxa1Q1RE9hcDVZN0ZDUVdxMUJiWXotaWJjczIwNDJiMkU5NlpoM0h0dDVIdmE5WlJpY1dyVk81WmNzMXVaYjFFc2VCRlBvV1N6a3otSXZzaDlWb1VERkQzbnNJcXc0SUZlelRNSDlRSGRqcXppMThaYnFzcVRxQ2tIU2JRQmRHYjJFdmNE?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Hindustan Unilever Posts Revenue Expansion for Second Financial Quarter",
-   "summary": "The consumer goods company posted a 15% increase in total revenue alongside a 4% increase in net earnings. Following the earnings release, the company's equity valuation witnessed an immediate uptick on the exchanges.",
-   "why": "Consumer staples earnings serve as a proxy for broad domestic household spending patterns across rural and urban markets.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/hul-shares-rise-3-after-q2-results-jefferies-nomura-cut-target-price-but-forecast-29-upside-potential/articleshow/135295044.cms"
+   "category": "US Markets",
+   "title": "American Stocks Slide as Tech Spending Worries Eclipse Earnings Results",
+   "summary": "Major US stock benchmarks closed lower following revenue shortfalls at Alphabet. Substantial capital expenditure on artificial intelligence triggered renewed investor apprehension across the technology sector.",
+   "why": "Substantial investments in new technologies require strong top-line growth to validate high public market valuations.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObTRZdktaNHNaUkc2SG45TFV3V3hKRlMwdWdFTEhyUVFSRnBodWFIM0gxSHh5NWZDVkp3WnJOX3RTZGFtUDVIN3ZPQnB6NlNOQ01OOXhTRnNhNjkyajZ2ejhEZkRBS1IxMkxjVWJmY3FYa3lqcHUxajVqRXpWdS1UWjdxZFZYTW8tUjBtN2NZTGlLSWFiRlpjTDNKaVlVbHRiLVRCcA?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Brokerage Founder Warns Higher Transaction Levies Alter Derivatives Behavior",
-   "summary": "The chief of Zerodha indicated that increased securities transaction taxes may have caused individual derivative participants to adopt more speculative derivative structures. Internal platform records indicate that half of personal clients have altered their market exposure.",
-   "why": "Transaction taxation can unintentionally shift trading activity toward higher-risk derivative contracts rather than curbing speculation.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/stt-hikes-backfire-zerodhas-nithin-kamath-says-traders-are-moving-to-riskier-options-trades-11793255134366.html"
+   "category": "US Markets",
+   "title": "US Dollar Steady Following Split Federal Reserve Rate Pause Decision",
+   "summary": "The American dollar showed little variation after central bank policymakers decided to keep interest rates steady. The standstill occurred despite two voting members favoring an immediate rate hike.",
+   "why": "Divided votes within central bank leadership indicate evolving policy views that can shape international borrowing costs.",
+   "source": "www.tmgm.com",
+   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNYTFMdVJfa3d6a0g2bHo5dkxCVTh6T2dwc1ZObkZlbUIxbEwtLVBmYU4tdFh1YjZsTE9xRlpQSzFmYWtnZUlYSXdrS2ZxdU5PMGlQVzNYRUkyaVVkLXN2X0xpazJjVHlPOGk4NHoxcjNEeE1NVnBMam1fdDEwRkRqeHd5aGNFQkJjZWxoMnZaWjctdGZCLW55LU1iRzFwc0RnWnBPQXF1eXk5Yzk4Ym11NEFjYk9VcTJFUUlmeWhxMERiYXFkVTh5MU96S0o2RFNiOXlqbHE4UUFMVWdsTDQ5dXhRZFRncXZQSWNxNS1mNjJQaEhfVlJqS2ZsSDhYaklq?oc=5"
   }
  ]
 }
