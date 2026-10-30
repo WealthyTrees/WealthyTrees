@@ -55,7 +55,7 @@ h2.sec.in::after{width:100%}
 }
 
 .hero .herotree{width:100%;max-width:320px;height:auto;justify-self:center}
-@media(max-width:760px){.hero .herotree{max-width:min(62vw,250px);order:-1;margin:0 auto}}
+@media(max-width:760px){.hero .herotree{max-width:min(66vw,268px);order:-1;margin:0 auto}}
 /* theme bar under the header */
 .themebar{position:relative;z-index:5;border-bottom:1px solid var(--line);background:var(--bg)}
 .themebar .wrap{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;padding-top:.35rem;padding-bottom:.35rem}

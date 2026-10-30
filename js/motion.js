@@ -1,4 +1,4 @@
-/* WealthyTrees motion.js v2: cursor grid, SVG stickers, slanted bands, 3D tilt cards (mouse hover, touch press) */
+/* WealthyTrees motion.js v3: cursor grid, SVG stickers, slanted bands, 3D tilt cards (mouse hover, touch press) */
 (function () {
   "use strict";
   if (document.querySelector(".wt-grid")) return;
@@ -115,7 +115,7 @@
     G.h = lerp(G.h, G.hT, k1); G.px = lerp(G.px, G.pxT, k2); G.py = lerp(G.py, G.pyT, k2);
     var h = G.h, n = home.length, base = .24, ringZ = 0, bz = 0, by = 0;
     G.vel = lerp(G.vel, base * (1 - .5 * h), k3); G.pulse = (G.pulse || 0) * Math.exp(-dt * 3.5); G.ang += G.vel * dt;
-    var S = stage.offsetWidth, Rx = S * (.52 + .07 * h), ps = 1 + .14 * (G.pulse || 0), hot = -1, hd = 1e9;
+    var S = stage.offsetWidth, Rx = S * ((S < 380 ? .43 : .52) + .07 * h), ps = 1 + .14 * (G.pulse || 0), hot = -1, hd = 1e9;
     if (h > .3 && G.cx != null) home.forEach(function (tl, k) { var r = tl.getBoundingClientRect(), d = Math.hypot(G.cx - (r.left + r.width / 2), G.cy - (r.top + r.height / 2)); if (d < hd && d < 90) { hd = d; hot = k; } });
     home.forEach(function (tile, k) {
       var a = G.ang + k * 6.2832 / n, c = Math.cos(a), f = (c + 1) / 2,
@@ -153,6 +153,20 @@
       });
       stage.addEventListener("pointerdown", function () { G.pulse = 1; });
       stage.addEventListener("pointerleave", function () { G.hT = 0; G.pxT = 0; G.pyT = 0; G.cx = null; });
+    }
+    if (!rm) {
+      /* tablets and touch screens: a finger steers the tree like the mouse does */
+      var tp = null;
+      function tilt(e) {
+        var r = stage.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width, ny = (e.clientY - r.top) / r.height;
+        G.pxT = Math.max(-1, Math.min(1, (nx - .5) * 2)); G.pyT = Math.max(-1, Math.min(1, (ny - .5) * 2));
+        G.cx = e.clientX; G.cy = e.clientY;
+        stage.style.setProperty("--gx", (nx * 100).toFixed(0) + "%"); stage.style.setProperty("--gy", (ny * 100).toFixed(0) + "%");
+      }
+      function tend(e) { if (tp === null || e.pointerId !== tp) return; tp = null; G.hT = 0; G.pxT = 0; G.pyT = 0; G.cx = null; stage.classList.remove("wt-touch"); }
+      stage.addEventListener("pointerdown", function (e) { if (e.pointerType !== "touch") return; tp = e.pointerId; G.hT = 1; G.pulse = 1; stage.classList.add("wt-touch"); tilt(e); go(); });
+      stage.addEventListener("pointermove", function (e) { if (e.pointerType === "touch" && e.pointerId === tp) tilt(e); });
+      stage.addEventListener("pointerup", tend); stage.addEventListener("pointercancel", tend);
     }
     if ("IntersectionObserver" in window) { G.io = new IntersectionObserver(function (l) { vis = l[0].isIntersecting; if (vis) go(); }, { threshold: 0 }); G.io.observe(stage); }
     frame(0); go();

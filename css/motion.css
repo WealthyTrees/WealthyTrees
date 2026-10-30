@@ -69,7 +69,7 @@ body{overflow-x:clip}
 /* desktop 3D hero: JS drives all motion (see motion.js); phones keep the flat orbit above */
 @media(min-width:761px){
 .hero.wt-3d .wt-chars{position:static;inset:auto;width:0;height:0}
-.wt-stage{--S:clamp(300px,30vw,390px);--gx:50%;--gy:40%;position:relative;justify-self:center;align-self:center;width:var(--S);height:var(--S);perspective:1100px;perspective-origin:50% 38%;z-index:2}
+.wt-stage{--S:clamp(340px,32vw,415px);touch-action:pan-y;-webkit-tap-highlight-color:transparent;--gx:50%;--gy:40%;position:relative;justify-self:center;align-self:center;width:var(--S);height:var(--S);perspective:1100px;perspective-origin:50% 38%;z-index:2}
 .wt-orbit,.wt-tree3d{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
 .wt-aura{position:absolute;left:-6%;top:-6%;width:112%;height:112%;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 50% 46%,rgba(255,224,138,.5),rgba(62,207,142,.2) 42%,transparent 68%);filter:blur(6px);will-change:opacity,transform}
 .hero .wt-stage .herotree,.hero .wt-stage .herotree:hover{position:absolute;left:6%;top:6%;width:88%;height:88%;max-width:none;margin:0;order:0;animation:none;filter:none;rotate:none;scale:1;transition:none;cursor:pointer}
@@ -78,6 +78,7 @@ body{overflow-x:clip}
 .wt-shade{position:absolute;left:22%;right:22%;bottom:2%;height:7%;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--ink) 38%,transparent),transparent);filter:blur(3px);will-change:transform,opacity}
 .wt-sheen{position:absolute;left:6%;top:6%;width:88%;height:88%;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--gx) var(--gy),rgba(255,255,255,.3),transparent 42%);mix-blend-mode:soft-light;transform:translateZ(130px);transition:opacity .4s}
 @media(hover:hover){.wt-stage:hover .wt-sheen{opacity:1}}
+.wt-stage.wt-touch .wt-sheen{opacity:1}
 }
 
 /* v3 (768px+ only, phones untouched): side slide-fade reveals, hover polish, icon labels */
