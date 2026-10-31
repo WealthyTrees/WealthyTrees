@@ -1,5 +1,5 @@
 {
- "date": "Friday, 30 October 2026",
+ "date": "Saturday, 31 October 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,954",
-   "change": -1.92
+   "value": "3,885",
+   "change": -3.63
   },
   {
    "name": "CRUDE WTI",
-   "value": "$103.8",
-   "change": 1.75
+   "value": "$103.0",
+   "change": 0.93
   },
   {
    "name": "USD/INR",
@@ -28,92 +28,84 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,720",
-   "change": -0.3
+   "value": "7,580",
+   "change": -1.82
   },
   {
    "name": "NASDAQ",
-   "value": "26,185",
-   "change": -1.38
+   "value": "25,437",
+   "change": -2.86
   },
   {
    "name": "DOW",
-   "value": "52,343",
-   "change": -0.25
+   "value": "51,770",
+   "change": -1.09
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Bank of Baroda Quarterly Net Profit Expands Thirty-Six Percent",
-   "summary": "The state-owned lender recorded a 35.8 percent increase in standalone net profit to 6,532 crore rupees for the second quarter. Net interest income climbed 9 percent alongside improvements in overall bad loan ratios.",
-   "why": "Tracking core interest income and credit quality helps investors gauge the operational stability of commercial lenders.",
+   "category": "US Markets",
+   "title": "Hardware Manufacturer Tumbles Following Subdued Projections and Negative Cash Outlook",
+   "summary": "Intel experienced a sharp valuation drop after projecting softer fourth-quarter revenues and negative yearly cash flows. This announcement prompted a widespread retreat across international semiconductor producers.",
+   "why": "Financial health and forward guidance from major semiconductor firms heavily influence global risk appetite and technology sector valuations.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/bank-of-baroda-q2-results-standalone-profit-jumps-36-yoy-to-rs-6532-crore-nii-up-9/articleshow/135359927.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/intel-plunges-25-as-weak-pc-demand-and-ai-costs-trigger-global-chip-selloff/articleshow/135371230.cms"
   },
   {
-   "category": "Equity",
-   "title": "Nifty Advances as Declining Equities Outnumber Advancing Shares",
-   "summary": "India's headline index gained for a second straight day, powered by technology, healthcare, and financial counters. However, broader market performance was subdued as declining stocks exceeded those moving higher.",
-   "why": "Analyzing market breadth shows whether an index rally reflects broad market strength or just gains in a few heavyweights.",
+   "category": "US Markets",
+   "title": "Tech Benchmark Enters Another Technical Correction Following Weak Corporate Results",
+   "summary": "The Nasdaq 100 benchmark slid into correction territory as market participants pulled back from major technology names after lackluster quarterly updates.",
+   "why": "A technical correction occurs when an index declines ten percent from recent peaks, signaling shifting sentiment among institutional market players.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nifty-rises-but-most-sectors-fall-why-the-stock-markets-headline-rally-may-not-reflect-your-portfolio-11793350286513.html"
+   "url": "https://www.livemint.com/market/nasdaq-100-hits-third-correction-of-2026-on-unwinding-tech-stock-bets-11793388066834.html"
   },
   {
    "category": "Equity",
-   "title": "Sensex Advances Three Hundred Points Powered by Prominent Large-Cap Shares",
-   "summary": "Benchmark domestic indices closed higher, with the Sensex rising 308 points and the Nifty finishing above 23,000. Key contributors to the advance included Trent, InterGlobe Aviation, and Infosys.",
-   "why": "Large-cap movements heavily influence benchmark indices and reflect the posture of major institutional investors.",
-   "source": "NDTV Profit",
-   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQZTFyMk9sdFl3QmJnUDd2OGhhdDNIZ3FwcDQwclFmNE1Ba3ZsakV0RzN0RHlKUkRYZnJST19SVDlqZmp5UGV0OGdOYzlLTkNNMTFqaEhNZGQ5cmctT2JzTEtZNzk4N1lfb2lyc2NuVU1ETHNWU0ZBZWpxX29hVWxxNUp4VE5pNndCVFVDeWtmZWNPQkh4U2xFeFp6NEd0am1jV2FBSWZIb215bUxTVnc2LTdhQ0lmM21KSHUtQjVSVlVpajhPdkZYdHQwTEgyc01tMFdxLXZBZkUwSUdGdXNkUjl4NGVMeHNWNzVROXhhSDUxT1BJSXo1enlzR3VVNXpyeWRaeTc4YmLSAZACQVVfeXFMTUltcFpOMzllTWlGSzAweENGY0Nob0tmTk96eV9wOVB1cGlDeTRuN1hRRFI4RS1KTVoyUW5xdWxpU24ySVIzWk9JV2F6bks2bVJ4TlZidVFqQk1LU3pOYlNEV2Qyc1JVSGlhVDhyb19xQlpQbWFmUmdXakhsUDZtSUEzSXlnQVA1SEhXV1BzZURDVnJablhfSk1FUzVCSmEwQmpZczltQVRON3otMzV4MnUzVGxsTlNJMGt3ZU5fWlhrcU53YzdHTE92UGx0QjdBTkdfOUVobGVib3VCcDR2MGZ4Ulk4R1haZkJZdEQxalExRDZqT01DMjlQbEE4RVJ4b0Z0UGh1c05kX1A3bnNOWFQ?oc=5"
+   "title": "Reliance Industries Achieves Peak Quarterly Profit Backed by Petrochemical Strength",
+   "summary": "Reliance Industries registered a quarterly profit of 29,550 crore rupees due to an upturn in its oil-to-chemicals division. Simultaneously, digital arm Jio Platforms demonstrated expansion in revenues, earnings, and average revenue per user.",
+   "why": "As one of the largest constituents in domestic indices, Reliance's performance heavily sways overall benchmark movements.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/ril-jpl-q2-results-2026-impact-reliance-industries-jio-platforms-shares-in-focus-on-monday-2-nov-what-to-expect-11793373081405.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Legal Charges and Deal Expenses Contract Sun Pharma Second-Quarter Bottom Line",
+   "summary": "Sun Pharma's net earnings contracted by thirty-six percent to 1,989 crore rupees, weighed down by legal settlements and takeover outlays. Nevertheless, top-line sales expanded nearly twelve percent, supported by domestic and developing regions.",
+   "why": "Extraordinary one-time expenses can distort headline profitability even when underlying operational sales remain steady.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/sun-pharma-q2-profit-falls-36-as-litigation-costs-hit-earnings/articleshow/135370217.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Domestic Benchmarks Rebound Behind Advances in Pharmaceutical and Software Equities",
+   "summary": "Indian equity indices advanced, with the Sensex rising 308 points and the Nifty moving past 23,000. Strength in healthcare and software firms supported the broader recovery.",
+   "why": "Sector rotation into defensive industries like healthcare and software often provides stability during broader market fluctuations.",
+   "source": "The Indian Awaaz",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNlo0QnpXclVoY0VJMFg4c2FMUlRzOGpTcElSVzNscEh2Q18zdXpwZXIyVjh3bzAzZVNoNk1pSlNweFJ3TW1BMDVidmJLZzV0cU9KQnZYcjhjZ2VHQmtjUGlnRllmT3QydWdneklFSVQzdWlVdG5leVZCdEZ4NHdMOTZUX0ZCQ3daaXhSQWV4RGphRnJKMkJ2X0VSNlB2XzJIaTk5TE1PejdrOTZzX2N3?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Domestic Gold Drops Below Key Thresholds Following Strong US Data",
-   "summary": "Gold prices fell on the MCX to under 1.43 lakh rupees per 10 grams, mirroring international rates that hit multi-month lows. Selling picked up after robust growth and inflation numbers emerged from the United States.",
-   "why": "Bullion demand often contracts when strong economic numbers reduce interest in traditional safe-haven assets.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/india-gold-price-october-30-mcx-rate-crashes-below-rs-1-42-lakh-ahead-of-dhanteras-whats-triggering-selloff-11793360090751.html"
+   "title": "Silver Slumps to Multi-Month Low While Gold Also Experiences Declines",
+   "summary": "Domestic silver prices tumbled by 8,300 rupees to reach an eleven-month low point. Gold rates also retreated by 1,300 rupees during the same period.",
+   "why": "Precious metals often face downward price pressure when industrial demand softens or currency dynamics shift.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU2pUUjlqSlN4eENQYncwckpRQkdzMjhBYm9GSjllSHJhbjJsUTBIOGdMT3h2NTZ5aVRtZV94SHNzSHl4NDVwdkR5V3dFRXEtNDlGME1IZUN0QVVxWDlfVjg2SGV1LXBTSzlLd1pFdHE3Rzk0OU1yNS1Za2J2akhBbUVvelpsbUV4NVFJck9zdHhFTFA2LUhqSUJlaFhpSXBHRmVPbDcwR3NoRmsxSlFmUmVOOGNyakdVWllicGdkLWFZRGdlaUxicmJuTjBXc2w0WnRvcDhYdFhLN2RZSFktVjFRT1lkNHFS0gHuAUFVX3lxTE1LNXh1TF9IYUNhRVBDUXVMUWJLYmlrbHZQNlNOVzlZRHZQQkUwc3JYc0JGS3pxOEJDN2ZSNk5nRGFlczQ4a3M0OHFJSlVVaTlFS1FqcDZ5RkFhcWVpblZ5SGhreU1LZDlHNjZncEg4Ri1WcXIyMTZMUGFOUVY3YVU5cVRiS1dmZVZ1bVNIMDVRM3RvZVV4TEw2djRxVFpTY3BlUThwYlVCdktuaUFpZGdrRjJpNktyU283MFNtUTVzRklHcU5rMm5CNzhaSmZxX3RmWWZVRm9DcHZvalhETE01NHFmZTIxa2FVVmR0OHc?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Government Debt Buckles Under Pressure From Rising Oil Prices",
-   "summary": "Sovereign bond values dropped for a fourth consecutive month in October as international crude prices marched higher. Elevated energy costs generated fresh worries regarding domestic inflationary pressures.",
-   "why": "Higher oil prices typically raise domestic inflation expectations, which directly influences government borrowing costs.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-buckle-for-fourth-straight-month-on-oils-climb/articleshow/135361502.cms"
+   "title": "Foreign Currency Buffer Contracts for Seventh Consecutive Week",
+   "summary": "The central bank's foreign currency reserves dropped to their lowest mark in more than two months. This marks the seventh week in a row that the reserves balance has contracted.",
+   "why": "Foreign exchange holdings act as an essential cushion for stabilizing domestic currency during cross-border trade and capital flows.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMVdhVU9LVWhlNTdlQmJFYjdoWS15Nzd4YW1uZFM0UDlDbTNUcnFQMmtLWFRtU3A0WWN3S2pjd25KR1Vfc3NucHBMSGs2UDZJSVRhM0dETTg0WDlQcjRVUjNfWXc0eG1hOVY2Yk9KNl9PX2swM3lpR0J3cWxXZklZUl9acDFsQng4aHR5bi1JUEpBeVpZZzhUMUtIMEZoRWF3Nnpkdzd1ZlQ5bjZZckxwRmtSeXBsUQ?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Rupee Recovers Twenty-Six Paise Aided by Weaker Dollar and RBI Support",
-   "summary": "The Indian currency climbed 26 paise to settle at 94.96 against the greenback amid broader softness in the dollar. Timely intervention by the central bank helped bolster the local currency's turnaround.",
-   "why": "Central bank market activity provides crucial support to stabilize currency volatility during shifting global trade conditions.",
+   "title": "Indian Rupee Strengthens Against Dollar Aided by Central Bank Intervention",
+   "summary": "The Indian rupee strengthened by 26 paise to settle at 94.96 per US dollar. The rise was supported by a softer American currency alongside protective interventions from the central bank.",
+   "why": "Central banks frequently intervene in currency markets to smooth volatility and prevent disorderly domestic exchange rate fluctuations.",
    "source": "Moneycontrol.com",
    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNUEQ5T3BpdEptX01oRHN3SjRsMjBRZ1U1TXJsOC1NYXM5b3JBbDVZaEFzMmlhVVhIQjh0YjUzVTd2bFh5UHp0bzdXVFUzcGhXc2R5TFZmYmVrT29QS1JqQVBOa0ptLXhrN0V2bUFxZV9HLWlaRWpOMHZ5b195djR6bXNOMzBudjBpZEFnb1plZXlBdHNEYWpMTXAtb1oxT0hxMEh2WFFSXzNMT2ZaMG4zN1FEeUYtTmRMNHBpUlRocGNqRFA2Z1RhY0xiUUUxa25iQzBwVXI1VnpDUXJzWjc00gHkAUFVX3lxTE0xZG5QMTQ5NEo0S2dDejlVX2tFU3I1Yk9tcTRHRVNTMTItWUdiNm15SVNRUVVhcTNWS0dPVnBnc1FSYkMxWmp6UnpYRFdaRFA4bGxUTTFiZVB2bVdMMnFSOUt4WGFHcmZ3SlMyVl8yWlRUOGhuODFIbTh0bjFOcEMzTjN2MUF0V1BCQWtVOFNYV3ZEdnJrUUZ1eXhOamNsWlZmeXJSOEkzb1k2OXA2ZmtyYjduNC1wNHVkc3V1RVhHalJONVZiMHJ0NDlwT1FyVlU3UDZQTmdrM1RVTno3dEtaQVQxMQ?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "High Dividend Payouts in US Markets Mask Underlying Capital Risks",
-   "summary": "Certain Wall Street firms, including mortgage trusts, offer yields above 16 percent even as their share valuations tumble. Severe price depreciation shows the potential downside of prioritizing dividend yield over underlying balance-sheet health.",
-   "why": "Excessively high dividend yields can signal underlying business distress rather than sustainable shareholder returns.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/big-dividends-bigger-losses-the-hidden-risk-in-wall-streets-highest-yielding-stocks/articleshow/135362488.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Major Technology Equities Retreat Premarket on Escalating AI Outlays",
-   "summary": "Amazon lost over 7 percent and Intel dropped 25 percent in early trading following subdued guidance and elevated capital budgets. Mounting expenditures on artificial intelligence led to broad weakness across the semiconductor sector.",
-   "why": "Substantial capital expenditure can compress near-term corporate margins when financial returns from new technology take time to materialize.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/amazon-intel-shares-crash-up-to-25-in-premarket-trade-as-ai-spending-concerns-trigger-tech-sell-off-whats-next-11793359621019.html"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Drops as Slower Alphabet Revenue Renews Spending Concerns",
-   "summary": "Major American indices ended lower after Alphabet missed revenue forecasts, reigniting debate over corporate tech outlays. Investors reacted cautiously to the ongoing financial demands of artificial intelligence infrastructure.",
-   "why": "Quarterly earnings misses by mega-cap technology firms can drag down entire indices due to their massive market weight.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObTRZdktaNHNaUkc2SG45TFV3V3hKRlMwdWdFTEhyUVFSRnBodWFIM0gxSHh5NWZDVkp3WnJOX3RTZGFtUDVIN3ZPQnB6NlNOQ01OOXhTRnNhNjkyajZ2ejhEZkRBS1IxMkxjVWJmY3FYa3lqcHUxajVqRXpWdS1UWjdxZFZYTW8tUjBtN2NZTGlLSWFiRlpjTDNKaVlVbHRiLVRCcA?oc=5"
   }
  ]
 }
