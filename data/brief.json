@@ -1,5 +1,5 @@
 {
- "date": "Sunday, 01 November 2026",
+ "date": "Monday, 02 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,899",
-   "change": -3.29
+   "value": "3,916",
+   "change": 0.44
   },
   {
    "name": "CRUDE WTI",
-   "value": "$104.1",
-   "change": 2.08
+   "value": "$101.7",
+   "change": -2.35
   },
   {
    "name": "USD/INR",
-   "value": "94.95",
-   "change": -0.27
+   "value": "94.94",
+   "change": 0.0
   },
   {
    "name": "S&P 500",
@@ -45,75 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "State Oil Retailers Post Strong Quarterly Earnings Reversal",
-   "summary": "Three government-owned oil marketing companies registered a combined net income of ₹30,106 crore between July and September. This performance marks a turnaround from an ₹18,150 crore loss recorded in the comparative period.",
-   "why": "Corporate earnings recoveries in major public sector energy companies directly influence broad market indices and sector sentiment.",
+   "title": "Overseas Investors Resume Net Purchasing In Indian Stock Market",
+   "summary": "Foreign portfolio participants turned into net purchasers, injecting roughly 1.2 billion dollars into equities over ten trading days. This marks a pivot from recent persistent offloading, with funds prioritizing prominent large-cap companies.",
+   "why": "Tracking cross-border capital flows helps beginners understand institutional liquidity and broad sentiment towards domestic shares.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/ioc-bpcl-hpcl-clock-rs-30106-cr-q2-profit-nearly-39-pc-of-last-years-annual-earnings/articleshow/135420177.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-turn-net-buyers-as-ai-trade-worries-trigger-allocation-shift/articleshow/135441107.cms"
   },
   {
    "category": "Equity",
-   "title": "Sun Pharma Reports Revenue Growth Despite Lower Quarterly Profit",
-   "summary": "The pharmaceutical manufacturer posted an 11.9% increase in quarterly revenue to ₹16,198.7 crore, supported by its domestic operations and innovative medicines. At the same time, net profit dropped 36.4% year-on-year to ₹1,988.5 crore.",
-   "why": "Analyzing both top-line revenue and bottom-line earnings helps investors evaluate operational performance beyond headline profit changes.",
+   "title": "Varun Beverages Volume Expansion Dampened By Rising Packaging Costs",
+   "summary": "The beverage bottler expanded delivery volumes by 28.7 percent during the third quarter. Despite this operational uptick, higher packaging materials reduced profitability margins.",
+   "why": "Evaluating both volume expansion and production overhead illustrates why top-line growth does not always translate to equal bottom-line performance.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/sun-pharma-shares-gain-despite-q2-profit-slips-36-yoy-should-you-buy-sell-or-hold-what-brokerage-says-target-price-11793533331740.html"
+   "url": "https://www.livemint.com/market/mark-to-market/varun-beverages-carbonated-soft-drinks-sting-pepsico-price-hikes-packaging-costs-11793513498775.html"
   },
   {
    "category": "Commodity",
-   "title": "Domestic Gold and Silver Rates Witness Substantial Drops",
-   "summary": "Spot prices for gold declined by ₹3,200 to ₹1,42,000 per 10 grams on November 1. Over the same timeframe, silver prices dropped to ₹1,86,000 per kilogram amid broader macroeconomic headwinds.",
-   "why": "Precious metals serve as traditional stores of value, making their price adjustments important for portfolio diversification and inflation tracking.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-silver-rates-approaching-dec-2025-levels-energy-prices-inflation-fed-weighing-on-investor-sentiments-details-11793521144409.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Reserve Bank Opens Early Redemption for Sovereign Gold Bond Tranche",
-   "summary": "The central bank scheduled the early redemption facility for the 2021-22 Series VII Sovereign Gold Bond on November 2. Eligible holders of this issue can surrender units ahead of the final maturity date under official guidelines.",
-   "why": "Sovereign gold bonds provide paper gold exposure with periodic exit options that reflect underlying bullion market values.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63897"
+   "title": "Domestic Precious Metals Witness Substantial Single-Day Pullback",
+   "summary": "Local bullion trading saw silver register a drop near five percent. Gold values also recorded a decline exceeding one and a half percent.",
+   "why": "Precious metals can experience notable short-term fluctuations driven by liquidity shifts and macroeconomic variables.",
+   "source": "The Indian Awaaz",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQc28zaFdyNTlTazA2c1VSSXROSUtCMEpVYnNqVE9xcWFDYm9UX1NHdTZBV0JhbVVUX3d3SU1pd0lqay1HREZKa3V1Ui1QTkRyOENfdUUtaU9lNmRXWG1MX29OaldTb3pNSE1yLUZtN0NfM1NscVIzWWc4U2JvT3ZBa2I0Y2FHOVA0b2VHMjZ3NGhTRmU2?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Foreign Portfolio Investors Pull Capital from Domestic Equities in October",
-   "summary": "Overseas funds withdrew ₹34,843 crore from Indian shares during October amid rising economic concerns. Despite the overall monthly outflow, foreign institutions turned into net buyers during the final week.",
-   "why": "Tracking foreign capital movements helps market participants assess international liquidity trends and institutional demand.",
+   "title": "Outflows From Indian Sovereign Bonds Ease During October",
+   "summary": "Offshore funds significantly lowered their pace of unloading Indian government debt securities compared to the preceding month. However, elevated crude petroleum costs and worldwide yields remain external pressure points.",
+   "why": "Changes in sovereign debt holdings signal how global investors evaluate a nation's interest rate trajectory and currency stability.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-pull-out-rs-34843-cr-from-equities-in-oct-turn-net-buyers-last-week/articleshow/135419712.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/foreign-g-sec-selling-halves-but-oil-and-global-yields-pose-risks/articleshow/135441142.cms"
   },
   {
    "category": "Economy",
-   "title": "Government Adjusts Export Duties Across Key Petroleum Products",
-   "summary": "Authorities increased export tariffs on diesel and aviation turbine fuel while reducing the export levy on petrol to zero. These duty revisions take effect for the initial two-week cycle starting in November.",
-   "why": "Changes in fuel export levies directly affect refining margins and cash flows for domestic petroleum refiners.",
+   "title": "Central Bank Utilizes Foreign Reserves To Stabilize National Currency",
+   "summary": "India's foreign currency holdings declined by 55 billion dollars across a seven-week period. The decrease stems from official dollar sales intended to cushion downward pressure on the rupee.",
+   "why": "Understanding central bank market interventions helps investors assess how exchange rates are managed against external pressures.",
+   "source": "Mumbai Mirror",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMVpQWUNzakxuQ01yNDdvUjBrUFYzWmE5NnJnTnRITHFQc09qTER4V1BrbDl5ZXByZWoyUGJIS043bjg1bHJ3NUh3T2h1RE84NnJRbWlFS0RrSkhyS0JJaGtvcUhiMUpXVk5ubHNWTFlyV1I0ZUE4OGlDX3dYeWs4S3Q0Sk1GaEQ4QjRzcC1DeUhxVEdCN2FxTw?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "US Treasury Readies Substantial Revisions To Government Debt Auctions",
+   "summary": "Financial institutions are preparing for significant structural changes in how American sovereign debt is issued. This follows policy signals indicating a willingness to manage bond yields directly.",
+   "why": "The mechanics of sovereign borrowing determine baseline borrowing rates across the globe, impacting asset valuations internationally.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/tax-twist-for-omc-stocks-indian-oil-bpcl-hpcl-shares-in-2-nov-focus-after-this-decision-by-govt-on-petrol-diesel-11793531837968.html"
-  },
-  {
-   "category": "Economy",
-   "title": "Reserve Bank Announces Upcoming Sovereign Treasury Bill Auctions",
-   "summary": "The monetary authority scheduled auctions for short-term sovereign paper across three distinct maturities: 91 days, 182 days, and 364 days. These issuances assist the central government in managing short-term cash flow needs.",
-   "why": "Treasury bill auctions establish benchmark short-term interest rates and offer insight into banking system liquidity.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63895"
+   "url": "https://www.livemint.com/market/wall-street-braces-for-biggest-treasury-sales-overhaul-in-years-11793564884387.html"
   },
   {
    "category": "US Markets",
-   "title": "Artificial Intelligence Expenditure Worries Trigger US Technology Sell-Off",
-   "summary": "Technology equities on American exchanges experienced heavy selling pressure as market participants grew cautious over mounting capital investments in artificial intelligence. The decline reflected broader concerns regarding when these large outlays will yield returns.",
-   "why": "Major drawdowns in mega-cap American technology firms typically influence global risk sentiment and spill over into international tech sectors.",
-   "source": "Livemint",
-   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOaHVTb3FyRTVPWkVzTDhpTjZLZVk5bC13dFp4cFEySmF3enQxOGNqT0Z3WDF4T09rd0RpQWxYSmV5a3E3ZFNWM3NEYTZyaG9teXRfU1hTYnk1VzlSQVZrZGVWcmV0MlpOcHBLUE9GM1hEVkYxNm5yRzVKeEQ3VnpTZllmVGhvZS1LT3ZvVFFzN2NVSGo5ZmduMjNYUk5OUVQ1Zzd6NmNhSlY1OWRVNzN1a2g4bVBIcVp6TVFkN2c2V1hTTjRUNG9XaDlLWkZtZzFtcEVGa0hYc3VOMGdhM3pfeUpmRVVYNFpPNy1xQ01hVktYX3BXVUVGZm0xT1Ftd9IBgwJBVV95cUxObnFVMy1wQ2M5eFg1eHNQSFVWZHFIQ0FndUZvUjlpNExTTjU3UkJRV3Z4MktQN1lvX2JDa1BtanlEWlByRmlFVUg2cF9tMm1FSGlCMlF6V256eUQ1SC1PYmx2aERiRmUwR0NmOHNjemRWbXhyeXVJLWcwZG1KRDRXdXUxOHFVVjlhWmt1TTFudEhCVms1QU5Mbk5pX0s5S1pWYUt5eXVVMG9JbE95dWJKX1N5QzZTc2VnV0k5RjN1cTNyUndEcFBsTVQyZGs4NHE2QjVqTFJkRWpncENTajQ0VzZveXhHRC13N3V0X1o1MjZ5T0tWV2FjVUR4Mmh2OVluZjJv?oc=5"
+   "title": "Tech Sector Retreat Triggers Steep Nasdaq Drop",
+   "summary": "The tech-heavy benchmark fell 2.86 percent as major names like Alphabet and Intel experienced notable declines. This downturn highlights vulnerabilities stemming from heavy market weighting in artificial intelligence firms.",
+   "why": "Index concentration risk means the weakness of a handful of heavyweight companies can cause broader market declines.",
+   "source": "BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14dGpiT2p0Vm53VW9qek1hX2xneXd4VURZUzdZS1JpczE0czRYVk1hSWM1dmhIWXpqeld5V3I1aDBoaDFvdGVrZ3E4cnNBd3hqZHA5Xzc2dXJjejdOXzQ1VzJaZUlSTlJoTkRDc04tNzJpaGVSU0E?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "American and European Government Bond Yields Drop Following Rate Freezes",
-   "summary": "Yields on United States Treasuries and European government debt eased after their respective central banks kept benchmark interest rates unchanged. The decline reflects shifting investor expectations for borrowing costs across advanced economies.",
-   "why": "Sovereign bond yield fluctuations influence worldwide borrowing costs and act as a barometer for monetary policy directions.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMVJzTU8waHdld3FnbVROOGw4ZEtGS2g3UHpKYVFXTXhzdW9DeW8xYmJrY1RmWGFvNUlqWThQR2FWaTRuaklmYWlhbTNQV0lfa3BNNmFjSHBUaTk0NDVNSHRFLUg5MFFhTFZZMWZrTHh5ZHpYVnVzMlpNZ2hqaEM3LVJuOUhrUV9kc3NGRHpfdFNkUEhTX2oyTzVRMUhvS1dyNkF1UVV4eEtFM3VXTXJvUG9Lc3dnRjRDc190d0Vzem5ZNmxfNktGcUl3?oc=5"
+   "title": "US Federal Reserve Increases Benchmark Interest Rate By A Quarter Point",
+   "summary": "American central bank policymakers unanimously decided to raise policy rates to a target corridor of 3.75 to 4.00 percent. The policy shift proceeded despite political discussions surrounding borrowing costs.",
+   "why": "Decisions by the US Federal Reserve influence global capital movements and borrowing conditions worldwide.",
+   "source": "BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiUlVZRmEyWHF1andZbE5mUUV6TmFIX1VZZkVQd0RkbDJDRTlqMGVGRzg5ZV90QjV4dWU2Z012eWhpYkxyYkE3UDdJSFZWcXhnSjMyek5ycVViRVNQZmNtMGh5MF9VQmpTWGhXd1RCUUNGejZ3M0E?oc=5"
   }
  ]
 }
