@@ -8,15 +8,22 @@
   function safe(u) { return typeof u === "string" && /^https?:\/\//i.test(u) ? u : ""; }
   function jget(u, ms) { var c = new AbortController(), t = setTimeout(function () { c.abort(); }, ms); return fetch(u, { signal: c.signal }).then(function (r) { clearTimeout(t); if (!r.ok) throw 0; return r.json(); }); }
 
-  // Show the greeting opening slide on Vijayadashami only; query flags enable preview.
+  // Greeting opening slide: Vijayadashami (20 Oct 2026) and Dhanteras (6 Nov 2026) only; query flags enable preview.
   var query = new URLSearchParams(window.location.search);
   var festivalPreview = ["previewDussehra", "previewDussehraEdition"].some(function (key) { return query.get(key) === "1"; });
+  var dhanterasPreview = ["previewDhanteras", "previewDhanterasEdition"].some(function (key) { return query.get(key) === "1"; });
   var indiaParts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"
   }).formatToParts(new Date());
   var indiaPart = function (type) { return (indiaParts.find(function (item) { return item.type === type; }) || {}).value || ""; };
   var indiaDate = indiaPart("year") + "-" + indiaPart("month") + "-" + indiaPart("day");
-  var SHOW_FESTIVAL_GREETING = festivalPreview || indiaDate === "2026-10-20";
+  var GREETING = null;
+  if (dhanterasPreview || indiaDate === "2026-11-06") {
+    GREETING = { src: "/assets/dhanteras-greeting.mp4?v=20261105", poster: "/assets/dhanteras-greeting-poster.jpg?v=1", label: "WealthyTrees Dhanteras greeting video" };
+  } else if (festivalPreview || indiaDate === "2026-10-20") {
+    GREETING = { src: "/assets/dussehra-greeting.mp4?v=20261017-inline3", poster: "/assets/dussehra-greeting-poster.svg?v=1", label: "WealthyTrees Dussehra greeting video" };
+  }
+  var SHOW_FESTIVAL_GREETING = !!GREETING;
 
 
   var now = new Date(), hour = +new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", hour: "2-digit", hourCycle: "h23" }).format(now);
@@ -61,11 +68,11 @@
       greeting.setAttribute("playsinline", "");
       greeting.setAttribute("webkit-playsinline", "");
       greeting.setAttribute("loop", "");
-      greeting.setAttribute("aria-label", "WealthyTrees Dussehra greeting video");
-      greeting.poster = "/assets/dussehra-greeting-poster.svg?v=1";
-      greeting.setAttribute("poster", "/assets/dussehra-greeting-poster.svg?v=1");
+      greeting.setAttribute("aria-label", GREETING.label);
+      greeting.poster = GREETING.poster;
+      greeting.setAttribute("poster", GREETING.poster);
       // Version the media URL so a previously cached, failed/partial MP4 is not reused.
-      greeting.src = "/assets/dussehra-greeting.mp4?v=20261017-inline3";
+      greeting.src = GREETING.src;
       // Keep the greeting artwork unobstructed: no title banner or bottom hint over the video.
       s.append(greeting);
       slides.push(s);
