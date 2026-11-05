@@ -1,4 +1,4 @@
-/* WealthyTrees - Dhanteras greeting (6 Nov 2026 IST). Theme strip + Sprout + first-open shower + festive ticker frame and diya row + photo kalash badge that fills and overflows with coins. The ticker's own markup and data are untouched - only a gold frame around it and a diya row below it. Preview any day: ?dhanteras=1 */
+/* WealthyTrees - Dhanteras greeting (6 Nov 2026 IST). Theme strip + Sprout + first-open shower + festive ticker frame and diya row + photo kalash badge that fills and overflows with coins + natural glowing diya row. The ticker's own markup and data are untouched - only a gold frame around it and a diya row below it. Preview any day: ?dhanteras=1 */
 (function () {
  'use strict';
  var DATE_IST = '2026-11-06';
@@ -36,11 +36,18 @@
   "@keyframes wt-dh-fill{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}" +
   "@keyframes wt-dh-ov{0%{transform:translate(0,10px) scale(.5);opacity:0}25%{opacity:1}55%{transform:translate(var(--ox,0),-6px) scale(1)}100%{transform:translate(calc(var(--ox,0)*1.6),12px) scale(.75);opacity:0}}" +
   "#ticker.wt-dh-tk{outline:2px solid #c98a12;outline-offset:-2px;box-shadow:0 0 0 1px rgba(255,215,0,.45),0 4px 18px rgba(180,120,0,.30)}" +
-  "#wt-dh-diyas{display:flex;justify-content:space-evenly;align-items:flex-end;height:20px;padding:0 12px;background:linear-gradient(180deg,#fff3d2,#ffe3ae);overflow:hidden;pointer-events:none}" +
-  ".wt-dh-diya{position:relative;flex:0 0 16px;width:16px;height:9px;background:radial-gradient(circle at 50% 0,#c05a1e,#7c2d12 72%);border-radius:2px 2px 10px 10px/2px 2px 9px 9px;box-shadow:0 1px 2px rgba(120,60,0,.45)}" +
-  ".wt-dh-diya::before{content:\"\";position:absolute;left:50%;bottom:8px;width:7px;height:11px;margin-left:-3.5px;background:radial-gradient(circle at 50% 78%,#fff7ae,#ffb400 55%,#ff7a00);border-radius:50% 50% 50% 50%/62% 62% 38% 38%;transform-origin:50% 100%;animation:wt-dh-dflame 1.1s ease-in-out infinite alternate}" +
-  "@keyframes wt-dh-dflame{from{transform:scale(1) rotate(-3deg);opacity:.9}to{transform:scale(1.14) rotate(3deg);opacity:1}}" +
+  "#wt-dh-diyas{position:relative;display:flex;justify-content:space-evenly;align-items:flex-end;height:26px;padding:0 12px;background:linear-gradient(180deg,#fff3d2,#ffe3ae);border-bottom:1px solid rgba(201,138,18,.35);pointer-events:none}" +
+  ".wt-dh-diya{position:relative;z-index:1;flex:0 0 18px;width:18px;height:10px;background:radial-gradient(circle at 50% 0,#d4692a,#a34a18 55%,#6e2a10);border-radius:2px 2px 10px 10px/2px 2px 9px 9px;box-shadow:0 1px 2px rgba(120,60,0,.45),inset 0 2px 0 rgba(255,210,105,.65)}" +
+  ".wt-dh-diya::before{content:\"\";position:absolute;left:50%;bottom:9px;width:8px;height:13px;margin-left:-4px;background:radial-gradient(circle at 50% 78%,#fffbe0,#ffe27a 35%,#ffb400 62%,#ff7a00);border-radius:50% 50% 50% 50%/62% 62% 38% 38%;transform-origin:50% 100%;box-shadow:0 0 7px 2px rgba(255,170,40,.35);animation:wt-dh-dflame 1.6s ease-in-out infinite}" +
+  ".wt-dh-diya::after{content:\"\";position:absolute;left:50%;top:-14px;width:26px;height:26px;margin-left:-13px;background:radial-gradient(circle,rgba(255,200,80,.5),rgba(255,160,40,.18) 55%,transparent 70%);border-radius:50%;pointer-events:none;animation:wt-dh-glow 2.8s ease-in-out infinite}" +
+  ".wt-dh-diya:nth-child(odd)::before{animation-duration:1.3s}.wt-dh-diya:nth-child(3n)::before{animation-duration:1.9s;animation-delay:.4s}.wt-dh-diya:nth-child(even)::after{animation-delay:.9s}" +
+  "@keyframes wt-dh-dflame{0%{transform:scale(1) rotate(-2deg);opacity:.92}20%{transform:scale(1.06,1.12) rotate(2deg);opacity:1}40%{transform:scale(.96,1.02) rotate(-3deg);opacity:.9}60%{transform:scale(1.08,1.15) rotate(1deg);opacity:1}80%{transform:scale(.98,.95) rotate(-1deg);opacity:.94}100%{transform:scale(1) rotate(-2deg);opacity:.92}}" +
+  "@keyframes wt-dh-glow{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}" +
+  "@keyframes wt-dh-amb{0%,100%{opacity:.75}50%{opacity:1}}" +
   "[data-theme=dark] #wt-dh-diyas{background:linear-gradient(180deg,#fff3d2,#ffe3ae)}" +
+  "[data-theme=dark] #wt-dh-diyas::before{content:\"\";position:absolute;left:-2%;right:-2%;top:-36px;bottom:-18px;background:radial-gradient(ellipse 55% 100% at 50% 65%,rgba(255,180,60,.22),rgba(255,150,40,.09) 55%,transparent 78%);pointer-events:none;animation:wt-dh-amb 3.2s ease-in-out infinite}" +
+  "[data-theme=dark] #ticker.wt-dh-tk{box-shadow:0 0 0 1px rgba(255,215,0,.45),0 4px 18px rgba(180,120,0,.30),0 0 70px 14px rgba(255,170,40,.10)}" +
+  "[data-theme=dark] .wt-dh-diya::before{box-shadow:0 0 12px 4px rgba(255,180,60,.5)}" +
   "#wt-dh.wt-dh-paused *,#wt-dh.wt-dh-offscreen *,#wt-dh-shower.wt-dh-paused *{animation-play-state:paused!important}" +
   "@keyframes wt-dh-shimmer{0%{transform:translate3d(-120%,0,0);opacity:.95}85%{transform:translate3d(120%,0,0);opacity:.95}100%{transform:translate3d(120%,0,0);opacity:0}}" +
   "@keyframes wt-dh-fall{0%{transform:translate3d(0,-14px,0) rotateY(0) scaleX(1);opacity:0}12%,88%{opacity:.9}50%{transform:translate3d(var(--wt-dh-dx,5px),calc(var(--wt-dh-y,64px)*.5),0) rotateY(180deg) scaleX(.62);opacity:.9}100%{transform:translate3d(calc(var(--wt-dh-dx,5px)*-.7),var(--wt-dh-y,64px),0) rotateY(360deg) scaleX(.82);opacity:0}}" +
@@ -48,7 +55,7 @@
   "@media (max-width:860px){#wt-dh{gap:8px;padding:2px 8px}.wt-dh-l1{font-size:23px;min-width:150px;height:40px;line-height:40px}.wt-dh-l1-t{line-height:34px}.wt-dh-l3{height:14px;line-height:14px;font-size:10.5px}}" +
   "@media (max-width:640px){.themebar.wt-dh-on{flex-wrap:wrap}#wt-dh{flex:0 0 100%;width:100%;max-height:54px;height:54px;gap:6px;padding:2px 8px}.themebar.wt-dh-on>.wrap{flex:0 0 100%;width:100%;justify-content:flex-end}.wt-dh-badge{flex:0 0 46px;width:46px;height:46px}.wt-dh-l1{font-size:20px;min-width:125px;height:36px;line-height:36px}.wt-dh-l1-t{padding-top:3px;line-height:30px}.wt-dh-ov{top:9px;width:8px;height:8px;margin-left:-4px}.wt-dh-l3{font-size:8.6px;height:13px;line-height:13px}}" +
   "@media (max-width:360px){#wt-dh{max-height:68px;height:auto}.wt-dh-l3{white-space:normal;height:auto;line-height:13px}}" +
-  "@media (prefers-reduced-motion:reduce){#wt-dh *,#wt-dh-shower *{animation:none!important}.wt-dh-coins,#wt-dh-shower,.wt-dh-shim{display:none!important}.wt-dh-diya::before{animation:none!important}.wt-dh-ov{display:none!important}}";
+  "@media (prefers-reduced-motion:reduce){#wt-dh *,#wt-dh-shower *{animation:none!important}.wt-dh-coins,#wt-dh-shower,.wt-dh-shim{display:none!important}.wt-dh-diya::before{animation:none!important}.wt-dh-ov{display:none!important}#wt-dh-diyas *,#wt-dh-diyas::before{animation:none!important}}";
 
  var BG_SVG =
   '<svg viewBox="0 0 600 64" preserveAspectRatio="none" aria-hidden="true">' +
