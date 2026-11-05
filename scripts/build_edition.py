@@ -12,6 +12,13 @@ brief, explain, charts, quizzes = J("brief.json"), J("explain.json"), J("charts.
 e = lambda s: html.escape(str(s))
 tk = {t["name"]: t for t in brief["ticker"]}
 items = brief["items"]
+DH_DATE = "2026-11-06"
+DH_ITEM = {"category": "Equity", "title": "Happy Dhanteras: why India buys gold today",
+ "summary": "Dhanteras, also called Dhantrayodashi, falls on the thirteenth day of the waning moon in the month of Kartik, and opens the five days of Diwali. The name joins \u2018dhan\u2019, wealth, with \u2018teras\u2019, thirteen. Families traditionally mark the day by bringing home something new \u2014 often gold, silver or a utensil \u2014 as a sign of prosperity for the year ahead.",
+ "why": "Festival days move a lot of gold buying, so the tradition behind the headlines is worth knowing first. A custom is not a market signal, and this paper never treats it as one.",
+ "source": "WealthyTrees"}
+if TODAY == DH_DATE:
+    items.insert(0, DH_ITEM)
 by = lambda *c: [i for i in items if i["category"] in c]
 
 def short(s, n=230):
@@ -77,10 +84,15 @@ for _k in range(max(n, 0) + 1):  # replay from Edition 0 so each day is new and 
     _c = [j for j in _pool if _mod(explain[j]) != _last] or _pool
     _j = _c[0]; _pool.remove(_j); _last = _mod(explain[_j]); _seq.append(_j)
 ex = explain[_seq[-1]]
+if TODAY == DH_DATE:
+    ex = next((x for x in explain if x["title"].startswith("Gold as an asset")), ex)
 
 def quiz(k):
     if not quizzes: return ""
-    z = quizzes[(n * 3 + k) % len(quizzes)]
+    if TODAY == DH_DATE and k == 2:
+        z = next((x for x in quizzes if x["q"].startswith("Paper gold")), quizzes[(n * 3 + k) % len(quizzes)])
+    else:
+        z = quizzes[(n * 3 + k) % len(quizzes)]
     opts = "".join(f'<button type="button" data-i="{j}">{e(o)}</button>' for j, o in enumerate(z["o"]))
     return (f'<div class="quiz" data-a="{z["a"]}"><div class="qh"><small>SPROUT QUIZ</small><h4>{e(z["q"])}</h4></div>'
             f'<div class="qo">{opts}</div><p class="qw" hidden>{e(z["w"])}</p></div>')
@@ -116,9 +128,25 @@ p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")
       + "".join(f'<a href="#p{p}" data-go="{p-1}"><i>PAGE {p}</i> {e(i["title"])}</a>' for p, t, i in inside)
       + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · SPROUT’S LESSON</i> {e(ex["title"])}</a></div></aside></div>'
       + btm)
+DH_CSS = """.wt-dh-ep-mast{border-top:3px double #c9a227;padding:6px 12px 4px;text-align:center;background:linear-gradient(90deg,rgba(250,247,240,0) 0%,rgba(255,241,207,0.65) 50%,rgba(250,247,240,0) 100%);font-variant-numeric:lining-nums;opacity:0;animation:wt-dh-ep-fade 0.8s ease-out 0.05s 1 forwards;}
+.wt-dh-ep-badge{display:inline-flex;align-items:center;gap:8px;padding:3px 14px;border:1px solid #c9a227;border-radius:999px;background:linear-gradient(90deg,#fff6dc 0%,#ffe3a3 50%,#fff6dc 100%);color:#16241d;}
+.wt-dh-ep-orn{width:22px;height:18px;display:inline-block;vertical-align:middle;color:#0f3d2e;flex:none;}
+.wt-dh-ep-txt{font-family:'Playfair Display','Inter',serif;font-size:11.5px;font-weight:700;letter-spacing:0.08em;color:#0f3d2e;line-height:1.3;}
+.wt-dh-ep-hi{font-family:'Noto Serif Devanagari',serif;font-weight:700;color:#7a1f00;letter-spacing:0.02em;}
+.wt-dh-ep-sep{color:#c9a227;margin:0 4px;}
+@keyframes wt-dh-ep-fade{0%{opacity:0;}100%{opacity:1;}}
+@media (prefers-reduced-motion:reduce){.wt-dh-ep-mast{animation:none;opacity:1;}}
+@media print{.wt-dh-ep-mast{animation:none!important;opacity:1!important;background:#faf7f0!important;border-top:3px double #c9a227!important;}.wt-dh-ep-badge{background:#faf7f0!important;border:1px solid #c9a227!important;color:#16241d!important;}}"""
+DH_MAST = """<div class="wt-dh-ep-mast" role="region" aria-label="Shubh Dhanteras">
+  <span class="wt-dh-ep-badge">
+    <svg class="wt-dh-ep-orn" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2,28 Q10,20 18,28 T34,28 T46,28" stroke="#c9a227" stroke-width="1.2" stroke-linecap="round"/><path d="M12,15 L22,15 L20,18 L14,18 Z" stroke="currentColor" stroke-width="1.2" fill="#c9a227"/><path d="M14,18 C9,20 9,28 15,30 L19,30 C25,28 25,20 20,18 Z" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="14" cy="12" r="2" fill="#c9a227"/><circle cx="17" cy="11" r="2.2" fill="#c9a227"/><circle cx="20" cy="12" r="2" fill="#c9a227"/><path d="M29,22 Q35,28 41,22 L39.5,25.5 Q35,27 30.5,25.5 Z" stroke="currentColor" stroke-width="1.3" fill="#c9a227"/><path d="M35,13 C37,16 37,19 35,21 C33,19 33,16 35,13 Z" fill="#c9a227" stroke="currentColor" stroke-width="0.9"/></svg>
+    <span class="wt-dh-ep-txt"><span class="wt-dh-ep-hi">शुभ धनतेरस</span><span class="wt-dh-ep-sep">·</span>SHUBH DHANTERAS</span>
+  </span>
+</div>"""
 mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg" alt=""><span class="m-wt">WealthyTrees</span></div>'
         f'<div class="m-c"><small>WEALTHYTREES</small><h1 class="mh">THE 9:15</h1></div><span>{e(edno)}</span></header>'
-        f'<p class="tagl">The Morning Paper — Markets, simplified. In 2 minutes.</p>')
+        + (DH_MAST if TODAY == DH_DATE else "")
+        + f'<p class="tagl">The Morning Paper — Markets, simplified. In 2 minutes.</p>')
 pages = [f'<section class="pg first" id="p1" data-title="Front Page">{mast}<div class="in">{p1}</div>'
          f'<footer><span>wealthytrees.online · PAGE 1 OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
 def stories(lst, k_show=2, first_w=True, glance_html=""):
@@ -132,7 +160,7 @@ wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Marke
 steps = "".join(f'<div class="st"><span>{k+1}</span><div><h3>{e(s[0])}</h3><p>{e(s[1])}</p></div></div>' for k, s in enumerate(ex["steps"]))
 pages.append(page(5, "SPROUT’S LESSON", e(ex["title"]),
     f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Sprout’s Lesson"))
-CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read() + open(f"{R}/scripts/quiz.css").read()
+CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read() + open(f"{R}/scripts/quiz.css").read() + (DH_CSS if TODAY == DH_DATE else "")
 titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Sprout’s Lesson"]
 util = ('<div class="util"><a href="/" aria-label="WealthyTrees home">←<span class="ut"> WealthyTrees</span></a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))

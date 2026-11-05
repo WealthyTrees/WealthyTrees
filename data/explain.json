@@ -478,5 +478,29 @@
   ],
   "oneline": "EPS is a company's profit divided by its number of shares.",
   "learn": "/learn/beginner/module-3.html#:~:text=1.%20P/E"
+ },
+ {
+  "title": "Gold as an asset: physical vs paper gold",
+  "intro": "On Dhanteras, gold is everywhere — in shops, in homes, and in market headlines. But “gold” can mean two very different things. Four steps.",
+  "steps": [
+   [
+    "Physical gold you can hold",
+    "Coins, bars and jewellery. You can touch it, wear it, and pass it on — but you must store it safely, and jewellery carries making charges."
+   ],
+   [
+    "Paper gold you hold in an account",
+    "Gold ETFs and sovereign gold bonds track gold's price without a locker. You own units in an account, not metal in your hand."
+   ],
+   [
+    "The costs are different",
+    "Physical gold has making and storage costs. Paper gold has fund charges or bond terms of its own. Compare the full cost, not just the price tag."
+   ],
+   [
+    "The price still moves",
+    "Both forms follow gold's market price, which rises and falls. Changing the form does not remove that risk — it only changes how you hold it."
+   ]
+  ],
+  "oneline": "Same gold, different form: physical gold you store, paper gold you hold as units — the price moves either way.",
+  "learn": "/learn/beginner/module-6.html#:~:text=2.%20Spreading%20risk"
  }
 ]

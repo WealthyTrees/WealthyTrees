@@ -80,6 +80,16 @@
   "w": "NAV is the value of a single fund unit."
  },
  {
+  "q": "Paper gold, such as a gold ETF, means you own…",
+  "o": [
+   "Physical coins in a locker",
+   "Units that track gold's price",
+   "A fixed bank deposit"
+  ],
+  "a": 1,
+  "w": "Paper gold is held as units in an account and tracks gold's price. You do not hold the metal itself."
+ },
+ {
   "q": "In an IPO, a company...",
   "o": [
    "Offers shares to the public for the first time",
