@@ -150,7 +150,7 @@ nav{margin-left:auto}
 .cpop[hidden]{display:none}.cpop h4{margin:0 0 .6rem;font:700 1.05rem Fraunces,Georgia,serif}
 .cpop .row{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px solid var(--line)}
 .cpop .cs{margin:.7rem 0 .4rem;font-weight:700;color:var(--up)}.cpop small{color:var(--mute);line-height:1.45;display:block}
-@media(max-width:640px){.clockbox{position:absolute;right:3.8rem;top:.55rem;margin:0}.clock{height:40px;padding:0 .8rem}.cz{display:none}
+@media(max-width:640px){.clockbox{position:absolute;right:.6rem;top:.55rem;margin:0}.clock{height:40px;padding:0 .8rem}.cz{display:none}.logo span{font-size:1.25rem}
  .cpop{position:fixed;left:1rem;right:1rem;top:4.4rem;width:auto}}
 @media(prefers-reduced-motion:reduce){.dot.open{animation:none}.clock{transition:none}}
 

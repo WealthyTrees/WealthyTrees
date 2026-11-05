@@ -61,6 +61,7 @@ body{overflow-x:clip}
 .wt-chars{inset:auto;left:50%;top:calc(2rem + min(62vw,250px)/2);width:0;height:0;--R:calc(min(62vw,250px)/2 + 12px)}
 .wt-st,.wt-st:nth-child(n+4),.wt-st:nth-child(1){display:grid;width:34px;left:-17px!important;top:-17px!important;translate:none;rotate:none;animation:wtorbit 18s linear infinite;animation-delay:calc(var(--k,0)*-3s)}
 .wt-st svg{width:58%;height:58%;max-width:none;padding:0;margin:0;background:none;border-radius:0;animation:none;filter:none;order:0}
+.wt-st .wt-tip{display:none}
 .hero .herotree{margin:0 auto 30px}
 .wt-st:nth-child(1){--k:0}.wt-st:nth-child(2){--k:1}.wt-st:nth-child(3){--k:2}.wt-st:nth-child(4){--k:3}.wt-st:nth-child(5){--k:4}.wt-st:nth-child(6){--k:5}
 }
