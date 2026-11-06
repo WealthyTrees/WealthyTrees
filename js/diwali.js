@@ -51,8 +51,8 @@
 
   /* ---------- CSS ---------- */
   var CSS =
-    "#wt-dw-toran{position:relative;overflow:hidden;pointer-events:none;border-bottom:1px solid rgba(201,138,18,.35);z-index:3;line-height:0}" +
-    "#wt-dw-toran img{width:100%;height:auto;display:block}" +
+    "#wt-dw-toran{position:relative;overflow:hidden;pointer-events:none;border-bottom:1px solid rgba(201,138,18,.35);z-index:3;height:64px;background-image:url(/assets/diwali-toran.png);background-repeat:repeat-x;background-size:600px auto;background-position:top left}" +
+    "@media(max-width:640px){#wt-dw-toran{height:48px;background-size:450px auto}}" +
     ".wt-dw-side{position:fixed;top:0;bottom:0;width:34px;z-index:4;pointer-events:none;background-image:url(/assets/diwali-side.png);background-repeat:repeat-y;background-size:34px auto;background-position:top center}" +
     ".wt-dw-side.left{left:8px}.wt-dw-side.right{right:8px}" +
     ".wt-dw-side img{position:absolute;bottom:0;left:0;width:34px;height:auto;display:block}" +
@@ -131,9 +131,6 @@
     if (!header) return;
     var toran = document.createElement('div');
     toran.id = 'wt-dw-toran'; toran.setAttribute('aria-hidden', 'true');
-    var img = document.createElement('img');
-    img.src = '/assets/diwali-toran.png'; img.alt = '';
-    toran.appendChild(img);
     header.after(toran);
   }
 
