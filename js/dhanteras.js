@@ -1,9 +1,10 @@
-/* WealthyTrees - Dhanteras greeting (6 Nov 2026 IST). Theme strip + Sprout + first-open shower + festive ticker frame and diya row + photo kalash badge that fills and overflows with coins + natural glowing diya row. The ticker's own markup and data are untouched - only a gold frame around it and a diya row below it. Preview any day: ?dhanteras=1 */
+/* WealthyTrees - Dhanteras greeting (6 Nov 2026 IST). Theme strip + Sprout + first-open shower + festive ticker frame and diya row + photo kalash badge that fills and overflows with coins + natural glowing diya row + Mukta webfont for body Hindi. The ticker's own markup and data are untouched - only a gold frame around it and a diya row below it. Preview any day: ?dhanteras=1 */
 (function () {
  'use strict';
  var DATE_IST = '2026-11-06';
  var KEY_SHOWER = 'wt-dh-shower-2026-11-06';
  var FONT_HREF = 'https://fonts.googleapis.com/css2?family=Yatra+One&display=swap&text=%E0%A4%B6%E0%A5%81%E0%A4%AD%E0%A4%A7%E0%A4%A8%E0%A4%A4%E0%A5%87%E0%A4%B0%E0%A4%B8';
+ var FONT_BODY_HREF = 'https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&display=swap';
 
  var preview = false, isDate = false, reduceMotion = false;
  try { preview = new URLSearchParams(window.location.search).get('dhanteras') === '1'; } catch (e) {}
@@ -28,7 +29,7 @@
   ".wt-dh-l3{font-family:'Inter','Noto Serif Devanagari','Mukta',sans-serif;font-size:11px;font-weight:500;overflow:hidden}" +
   ".wt-dh-coin{position:absolute;top:0;left:var(--wt-dh-x,50%);width:var(--wt-dh-s,12px);height:var(--wt-dh-s,12px);border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff9c4,#ffd700 45%,#d48800 82%,#8c5000);box-shadow:inset 0 0 0 1px rgba(140,80,0,.55);pointer-events:none;opacity:0;transform:translate3d(0,-14px,0);animation:wt-dh-fall var(--wt-dh-d,4.2s) linear var(--wt-dh-dl,0s) infinite}" +
   ".wt-dh-sp1,.wt-dh-sp2,.wt-dh-sp3{animation:wt-dh-twinkle 2.2s ease-in-out infinite}.wt-dh-sp2{animation-delay:.8s}.wt-dh-sp3{animation-delay:.4s}" +
-  ".wt-dh-sp{margin:8px 0 0;padding:8px 12px;background:#fff4d6;color:#7a1f00;border:1px solid #e8a33d;border-radius:12px;font-size:13px;line-height:1.45;font-variant-numeric:lining-nums}" +
+  ".wt-dh-sp{margin:8px 0 0;padding:8px 12px;background:#fff4d6;color:#7a1f00;border:1px solid #e8a33d;border-radius:12px;font-family:'Inter','Mukta',sans-serif;font-size:13px;line-height:1.45;font-variant-numeric:lining-nums}" +
   ".wt-dh-sp-t{background:linear-gradient(90deg,#d61f0a,#ff6a00 55%,#c78d00);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:15px}" +
   "#wt-dh-shower{position:fixed;inset:0;pointer-events:none;z-index:60;overflow:hidden}" +
   ".wt-dh-ov{position:absolute;left:50%;top:12px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff9c4,#ffd700 45%,#d48800 82%,#8c5000);box-shadow:inset 0 0 0 1px rgba(140,80,0,.55);opacity:0;animation:wt-dh-ov 2.6s ease-in-out infinite}" +
@@ -137,6 +138,11 @@
      var l = document.createElement('link');
      l.id = 'wt-dh-font'; l.rel = 'stylesheet'; l.href = FONT_HREF;
      document.head.appendChild(l);
+    }
+    if (!document.getElementById('wt-dh-font-body')) {
+     var lb = document.createElement('link');
+     lb.id = 'wt-dh-font-body'; lb.rel = 'stylesheet'; lb.href = FONT_BODY_HREF;
+     document.head.appendChild(lb);
     }
     if (!document.getElementById('wt-dh-style')) {
      var st = document.createElement('style');
