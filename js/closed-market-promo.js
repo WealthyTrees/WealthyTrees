@@ -37,6 +37,26 @@
     };
   }
 
+  function indiaTime() {
+    const parts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+    }).formatToParts(new Date());
+    return {
+      h: +(parts.find(p => p.type === "hour") || {}).value || 0,
+      m: +(parts.find(p => p.type === "minute") || {}).value || 0
+    };
+  }
+
+  /* Muhurat Trading: the market IS open 2:05-3:30 PM on the Muhurat date
+     (window.WT_HOL.muhurat), so the closed-day promo must stand down and
+     let the live ticker show. */
+  function muhuratOpen() {
+    const mu = (window.WT_HOL && window.WT_HOL.muhurat) || "2026-11-08"; /* fallback if holidays.js has not loaded yet */
+    if (indiaDay().date !== mu) return false;
+    const t = indiaTime(), n = t.h * 60 + t.m;
+    return n >= 14 * 60 + 5 && n < 15 * 60 + 30;
+  }
+
   function indiaMarketClosed() {
     const d = indiaDay();
     if (d.weekday === "Sat" || d.weekday === "Sun") return true;
@@ -74,7 +94,7 @@
 
     const day = indiaDay();
     const dussehra = day.date === DUSSEHRA_DATE || FESTIVE_PREVIEW;
-    const shouldPromote = !dussehra && !WEEKDAY_PREVIEW && (PREVIEW || indiaMarketClosed());
+    const shouldPromote = !dussehra && !WEEKDAY_PREVIEW && (PREVIEW || (indiaMarketClosed() && !muhuratOpen()));
 
     if (shouldPromote) {
       setChip(day);
