@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T13:38:00+00:00",
+ "updated": "2026-11-07T01:30:25+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
@@ -31,7 +31,7 @@
   },
   "India VIX": {
    "yahoo": "ok",
-   "rows": 492
+   "rows": 491
   },
   "S&P 500": {
    "yahoo": "ok",
