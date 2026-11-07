@@ -1,13 +1,17 @@
 /* WealthyTrees - Diwali / Muhurat Trading (7-8 Nov 2026 IST) + holiday status (10 Nov).
-   Photo garland (the user's marigold photo, background removed): toran +
- side garlands with tassels, plus tree diyas + Shubh Diwali heading, a Diwali strip
- (same look as the Dhanteras strip, title 'Shubh Diwali', big diya badge instead
- of the kalash photo) with falling coins + a 3s shower, and opening fireworks:
- a cracker bursts, then a finance word appears (Learn, Invest, Grow, Save).
- Also a market-status
-   override so the clock shows the Muhurat session (not 'closed') and the
-   Balipratipada holiday (not 'open'). The live ticker's markup and data are
-   untouched - only the clock pill / popup (site.js status UI) is corrected.
+   Toran: an even SVG bandhanwar (marigold + mango leaf, gentle drape, danglers),
+   drawn to the page width so every flower is evenly spaced. Side garlands
+   (the user's marigold photo) hang on every main page, flowing and swaying,
+   and they swing when you hover or drag a finger over them. Plus tree diyas +
+   Shubh Diwali heading, a Diwali strip (same look as the Dhanteras strip,
+   title 'Shubh Diwali', big diya badge instead of the kalash photo) with
+   falling petals + a 3s shower, and opening fireworks: a cracker bursts, then
+   a finance word appears (Learn, Invest, Grow, Save). Fireworks also run on
+   the About / Founder's story page, where an orange 'Happy Diwali' pill sits
+   under the Founder's story heading. Also a market-status override so the
+   clock shows the Muhurat session (not 'closed') and the Balipratipada
+   holiday (not 'open'). The live ticker's markup and data are untouched -
+   only the clock pill / popup (site.js status UI) is corrected.
    Preview any day: ?diwali=1 (8 Nov, Muhurat 2:30 PM), ?diwali=7, ?diwali=10. */
 (function () {
   'use strict';
@@ -42,6 +46,13 @@
   var isStatus = N.date === MUHURAT_DATE || N.date === HOLIDAY_DATE || preview === '1' || preview === '8' || preview === '10';
   if (!isDecor && !isStatus) return;
 
+  /* Which page is this? Toran + side garlands run on every main page;
+     fireworks run on the homepage and on About (Founder's story). */
+  var path = '';
+  try { path = window.location.pathname || ''; } catch (e) {}
+  var isHome = path === '/' || path === '/index.html' || path.slice(-11) === '/index.html';
+  var isAbout = path.indexOf('about') !== -1;
+
   function special() {
     var n = now(), mins = n.h * 60 + n.m;
     if (n.date === MUHURAT_DATE && mins >= MU_START && mins < MU_END) return 'muhurat';
@@ -51,12 +62,20 @@
 
   /* ---------- CSS ---------- */
   var CSS =
-    "#wt-dw-toran{position:relative;overflow:hidden;pointer-events:none;border-bottom:1px solid rgba(201,138,18,.35);z-index:3;height:64px;background-image:url(/assets/diwali-toran.png);background-repeat:repeat-x;background-size:600px auto;background-position:top left}" +
-    "@media(max-width:640px){#wt-dw-toran{height:48px;background-size:450px auto}}" +
-    ".wt-dw-side{position:fixed;top:0;bottom:0;width:34px;z-index:4;pointer-events:none;background-image:url(/assets/diwali-side.png);background-repeat:repeat-y;background-size:34px auto;background-position:top center}" +
+    "#wt-dw-toran{position:relative;overflow:hidden;pointer-events:none;border-bottom:1px solid rgba(201,138,18,.35);z-index:3;height:72px}" +
+    "#wt-dw-toran svg{display:block;width:100%;height:72px}" +
+    "@media(max-width:640px){#wt-dw-toran{height:60px}#wt-dw-toran svg{height:60px}}" +
+    ".wt-dw-side{position:fixed;top:0;bottom:0;width:34px;z-index:4;pointer-events:auto;touch-action:none;cursor:pointer;transform-origin:top center}" +
+    ".wt-dw-side.wt-dw-side-kick{animation:wt-dw-kick 1.3s ease-in-out}" +
+    "@keyframes wt-dw-kick{0%{transform:rotate(0)}25%{transform:rotate(7deg)}55%{transform:rotate(-5deg)}80%{transform:rotate(2.5deg)}100%{transform:rotate(0)}}" +
     ".wt-dw-side.left{left:8px}.wt-dw-side.right{right:8px}" +
-    ".wt-dw-side img{position:absolute;bottom:0;left:0;width:34px;height:auto;display:block}" +
+    ".wt-dw-side-in{position:absolute;inset:0;background-image:url(/assets/diwali-side.png);background-repeat:repeat-y;background-size:34px auto;background-position:top center;transform-origin:top center;animation:wt-dw-sway 5s ease-in-out infinite,wt-dw-flow 14s linear infinite}" +
+    ".wt-dw-side-in img{position:absolute;bottom:0;left:0;width:34px;height:auto;display:block}" +
+    "@keyframes wt-dw-sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}" +
+    "@keyframes wt-dw-flow{from{background-position-y:0}to{background-position-y:236px}}" +
     "@media(max-width:1199px){.wt-dw-side{display:none}}" +
+    ".wt-dw-founder-pill{display:inline-block;background:linear-gradient(90deg,#ff6a00,#ffb400);color:#fff;font-family:'Inter','Mukta',sans-serif;font-weight:700;font-size:15px;line-height:1;border-radius:999px;padding:.55rem 1.1rem;margin:.35rem 0 .9rem;box-shadow:0 4px 16px rgba(255,106,0,.35);animation:wt-dw-pillglow 2.4s ease-in-out infinite}" +
+    "@keyframes wt-dw-pillglow{0%,100%{box-shadow:0 4px 16px rgba(255,106,0,.35)}50%{box-shadow:0 4px 24px rgba(255,140,0,.6)}}" +
     ".wt-st.wt-dw-diya{background:radial-gradient(circle at 50% 30%,#fff3c4,#ffd76a 55%,#e8a33d);border-color:#c98a12}" +
     ".wt-st.wt-dw-diya svg{width:62%;height:62%}" +
     ".wt-dw-diya .wt-dw-flame{transform-box:fill-box;transform-origin:50% 100%;animation:wt-dw-flick 1.8s ease-in-out infinite}" +
@@ -89,7 +108,9 @@
   ".wt-dw-ov:nth-child(2){--ox:-11px}.wt-dw-ov:nth-child(3){--ox:0;animation-delay:.85s;background:linear-gradient(135deg,#ffd76a,#ffb400)}.wt-dw-ov:nth-child(4){--ox:11px;animation-delay:1.7s;background:linear-gradient(135deg,#ff8c42,#ff6a00)}" +
   "@keyframes wt-dw-fill{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}" +
   "@keyframes wt-dw-ov{0%{transform:translate(0,10px) scale(.5);opacity:0}25%{opacity:1}55%{transform:translate(var(--ox,0),-6px) scale(1)}100%{transform:translate(calc(var(--ox,0)*1.6),12px) scale(.75);opacity:0}}" +
-  "#ticker.wt-dw-tk{outline:2px solid #c98a12;outline-offset:-2px;box-shadow:0 0 0 1px rgba(255,215,0,.45),0 4px 18px rgba(180,120,0,.30)}" +
+  "#ticker.wt-dw-tk{margin:10px 14px 0;border-radius:14px;border:2px solid #c98a12;outline:0;box-shadow:0 0 0 1px rgba(255,215,0,.5),0 8px 28px rgba(180,120,0,.35),inset 0 0 0 1px rgba(255,215,0,.28);overflow:hidden;-webkit-mask-image:none;mask-image:none}" +
+  "[data-theme=dark] #ticker.wt-dw-tk{box-shadow:0 0 0 1px rgba(255,215,0,.5),0 8px 28px rgba(180,120,0,.35),inset 0 0 0 1px rgba(255,215,0,.28),0 0 60px 10px rgba(255,170,40,.12)}" +
+  "@media(max-width:640px){#ticker.wt-dw-tk{margin:8px 8px 0;border-radius:10px}}" +
   "@keyframes wt-dw-shimmer{0%{transform:translate3d(-120%,0,0);opacity:.95}85%{transform:translate3d(120%,0,0);opacity:.95}100%{transform:translate3d(120%,0,0);opacity:0}}" +
   "@keyframes wt-dw-petalfall{0%{transform:translate3d(0,-14px,0) rotate(0deg);opacity:0}12%,88%{opacity:.95}50%{transform:translate3d(var(--wt-dw-dx,8px),calc(var(--wt-dw-y,64px)*.5),0) rotate(160deg);opacity:.95}100%{transform:translate3d(calc(var(--wt-dw-dx,8px)*-.6),var(--wt-dw-y,64px),0) rotate(320deg);opacity:0}}" +
   "@keyframes wt-dw-twinkle{0%,100%{opacity:.25}50%{opacity:1}}" +
@@ -124,7 +145,47 @@
     '<path d="M3.5 12.5h17" stroke="#e8a33d" stroke-width="1.4" fill="none"/>' +
     '</svg>';
 
-  /* ---------- toran (under the header) ---------- */
+  /* ---------- toran (under the header): an even SVG bandhanwar ----------
+     Marigold pom-poms (orange / yellow alternating) strung on a gold thread
+     with a gentle drape, green mango leaves every 5th flower, and little
+     2-flower danglers every 6th. Flowers are placed at exact even intervals
+     from the real page width, so the toran is perfectly even on any screen. */
+  function drawToran(toran) {
+    var W = toran.clientWidth || window.innerWidth || 1200;
+    if (W < 200) W = window.innerWidth || 1200;
+    var small = false;
+    try { small = window.matchMedia('(max-width:640px)').matches; } catch (e) {}
+    var H = small ? 60 : 72, sag = small ? 7 : 9, r = small ? 11 : 13, gap = small ? 30 : 34;
+    var N = Math.max(8, Math.round(W / gap));
+    var step = W / N;
+    function yAt(x) { var t = (2 * x / W) - 1; return 22 + sag * (1 - t * t); }
+    var s = '<svg width="100%" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true"><defs>';
+    s += '<radialGradient id="wt-dw-mgo" cx="42%" cy="38%" r="65%"><stop offset="0%" stop-color="#ffb400"/><stop offset="55%" stop-color="#ff6a00"/><stop offset="100%" stop-color="#d61f0a"/></radialGradient>';
+    s += '<radialGradient id="wt-dw-mgy" cx="42%" cy="38%" r="65%"><stop offset="0%" stop-color="#fff3c4"/><stop offset="55%" stop-color="#ffb400"/><stop offset="100%" stop-color="#e67300"/></radialGradient>';
+    s += '<g id="wt-dw-mg-o">' +
+      '<circle cx="0" cy="-11" r="4" fill="#e67300"/><circle cx="7.8" cy="-7.8" r="4" fill="#e67300"/><circle cx="11" cy="0" r="4" fill="#e67300"/><circle cx="7.8" cy="7.8" r="4" fill="#e67300"/><circle cx="0" cy="11" r="4" fill="#e67300"/><circle cx="-7.8" cy="7.8" r="4" fill="#e67300"/><circle cx="-11" cy="0" r="4" fill="#e67300"/><circle cx="-7.8" cy="-7.8" r="4" fill="#e67300"/>' +
+      '<circle r="13" fill="url(#wt-dw-mgo)"/><circle r="7.5" fill="#ff8c42" opacity=".5"/><circle r="3" fill="#8a1f00" opacity=".5"/></g>';
+    s += '<g id="wt-dw-mg-y">' +
+      '<circle cx="0" cy="-11" r="4" fill="#ffb400"/><circle cx="7.8" cy="-7.8" r="4" fill="#ffb400"/><circle cx="11" cy="0" r="4" fill="#ffb400"/><circle cx="7.8" cy="7.8" r="4" fill="#ffb400"/><circle cx="0" cy="11" r="4" fill="#ffb400"/><circle cx="-7.8" cy="7.8" r="4" fill="#ffb400"/><circle cx="-11" cy="0" r="4" fill="#ffb400"/><circle cx="-7.8" cy="-7.8" r="4" fill="#ffb400"/>' +
+      '<circle r="13" fill="url(#wt-dw-mgy)"/><circle r="7.5" fill="#ffd76a" opacity=".6"/><circle r="3" fill="#7a3a00" opacity=".45"/></g>';
+    s += '<g id="wt-dw-leaf"><path d="M0 0 C 6 -2, 14 2, 16 10 C 10 14, 2 10, 0 0 Z" fill="#2e7d32"/><path d="M2 1 C 7 4, 11 7, 13 10" stroke="#1b5e20" stroke-width="1" fill="none"/></g>';
+    s += '</defs>';
+    var pts = [], i, x, y;
+    for (i = 0; i < N; i++) { x = (i + 0.5) * step; pts.push(x.toFixed(1) + ',' + (yAt(x) - r - 1).toFixed(1)); }
+    s += '<polyline points="' + pts.join(' ') + '" fill="none" stroke="#c98a12" stroke-width="1.6"/>';
+    for (i = 0; i < N; i++) {
+      x = (i + 0.5) * step; y = yAt(x);
+      s += '<use href="#wt-dw-mg-' + (i % 2 === 0 ? 'o' : 'y') + '" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '"/>';
+      if (i % 5 === 4) s += '<use href="#wt-dw-leaf" x="' + (x + 9).toFixed(1) + '" y="' + (y + 8).toFixed(1) + '"/>';
+      if (i % 6 === 5) {
+        s += '<line x1="' + x.toFixed(1) + '" y1="' + (y + r - 1).toFixed(1) + '" x2="' + x.toFixed(1) + '" y2="' + (y + r + 11).toFixed(1) + '" stroke="#c98a12" stroke-width="1.2"/>';
+        s += '<circle cx="' + (x - 4).toFixed(1) + '" cy="' + (y + r + 15).toFixed(1) + '" r="5" fill="url(#wt-dw-mgy)"/>';
+        s += '<circle cx="' + (x + 4).toFixed(1) + '" cy="' + (y + r + 17).toFixed(1) + '" r="5" fill="url(#wt-dw-mgo)"/>';
+      }
+    }
+    s += '</svg>';
+    toran.innerHTML = s;
+  }
   function buildToran() {
     if (document.getElementById('wt-dw-toran')) return;
     var header = document.querySelector('header');
@@ -132,19 +193,59 @@
     var toran = document.createElement('div');
     toran.id = 'wt-dw-toran'; toran.setAttribute('aria-hidden', 'true');
     header.after(toran);
+    drawToran(toran);
+    var rt;
+    window.addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { drawToran(toran); }, 200);
+    });
   }
 
   /* ---------- side garlands (desktop only) ---------- */
+  /* ---------- side garlands (desktop only): flow, sway, and swing ----------
+     The garland flows (its flower string drifts slowly down) and sways gently.
+     Hover with a mouse, or drag a finger over it on a tablet, and it swings
+     toward your pointer like a real hanging garland, then springs back. */
+  function bindSideSwing(g) {
+    var lastKick = 0;
+    function kick() {
+      var t = Date.now();
+      if (t - lastKick < 1200) return;
+      lastKick = t;
+      g.classList.remove('wt-dw-side-kick');
+      void g.offsetWidth; /* restart the swing animation */
+      g.classList.add('wt-dw-side-kick');
+    }
+    g.addEventListener('pointerenter', kick);
+    g.addEventListener('pointerdown', kick);
+    g.addEventListener('pointermove', kick);
+    g.addEventListener('animationend', function () { g.classList.remove('wt-dw-side-kick'); });
+  }
   function buildSides() {
     if (document.querySelector('.wt-dw-side')) return;
     ['left', 'right'].forEach(function (side) {
       var g = document.createElement('div');
       g.className = 'wt-dw-side ' + side; g.setAttribute('aria-hidden', 'true');
+      var inner = document.createElement('div');
+      inner.className = 'wt-dw-side-in';
       var ts = document.createElement('img');
       ts.src = '/assets/diwali-tassel.png'; ts.alt = '';
-      g.appendChild(ts);
+      inner.appendChild(ts);
+      g.appendChild(inner);
       document.body.appendChild(g);
+      bindSideSwing(g);
     });
+  }
+
+  /* ---------- Founder's story: orange 'Happy Diwali' pill ---------- */
+  function buildFounderPill() {
+    if (!isAbout) return;
+    var h = document.getElementById('founder');
+    if (!h || document.querySelector('.wt-dw-founder-pill')) return;
+    var pill = document.createElement('div');
+    pill.className = 'wt-dw-founder-pill';
+    pill.textContent = '🪔 Happy Diwali';
+    h.after(pill);
   }
 
   /* ---------- tree: floating tiles -> floating diyas + greeting ---------- */
@@ -180,10 +281,12 @@
     hero.insertBefore(g, tree);
     greetPlaced = true;
   }
+  var treeTries = 0;
   function pollTree() {
     swapTiles();
     placeGreet();
-    if (!swapped || !greetPlaced) setTimeout(pollTree, 300);
+    treeTries++;
+    if ((!swapped || !greetPlaced) && treeTries < 20) setTimeout(pollTree, 300);
   }
 
   /* ---------- market status: Muhurat open, holiday closed ---------- */
@@ -312,7 +415,7 @@
     } catch (e) {}
     launchShowerDw();
     var bar = document.querySelector('.themebar');
-    if (bar) {
+    if (bar && isHome) {
       bar.classList.add('wt-dw-on');
       if (!document.getElementById('wt-dw')) {
         var el = document.createElement('div');
@@ -350,8 +453,11 @@
     var isPreview = preview === '1' || preview === '7' || preview === '8';
     if (!isPreview) {
       try {
-        if (window.sessionStorage.getItem(KEY_FW)) return;
-        window.sessionStorage.setItem(KEY_FW, '1');
+        /* Homepage and About each get their own once-per-session show,
+           so the Founder's story firecrackers still fire after the homepage. */
+        var fwKey = KEY_FW + (isAbout ? '-about' : '');
+        if (window.sessionStorage.getItem(fwKey)) return;
+        window.sessionStorage.setItem(fwKey, '1');
       } catch (e) {}
     }
     var cv = document.createElement('canvas');
@@ -432,7 +538,9 @@
       buildSides();
       pollTree();
       buildStrip();
-      runFireworks();
+      /* Fireworks on the homepage and on About / Founder's story only. */
+      if (isHome || isAbout) runFireworks();
+      buildFounderPill();
     }
     if (isStatus) {
       observeClock();
