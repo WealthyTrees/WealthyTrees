@@ -13,6 +13,7 @@ e = lambda s: html.escape(str(s))
 tk = {t["name"]: t for t in brief["ticker"]}
 items = brief["items"]
 DH_DATE = "2026-11-06"
+DW_DATE = "2026-11-07"  # Diwali weekend special: front page gets Diwali animation + Learn promo
 DH_ITEM = {"category": "Equity", "title": "Happy Dhanteras: why India buys gold today",
  "summary": "Dhanteras, also called Dhantrayodashi, falls on the thirteenth day of the waning moon in the month of Kartik, and opens the five days of Diwali. The name joins \u2018dhan\u2019, wealth, with \u2018teras\u2019, thirteen. Families traditionally mark the day by bringing home something new \u2014 often gold, silver or a utensil \u2014 as a sign of prosperity for the year ahead.",
  "why": "Festival days move a lot of gold buying, so the tradition behind the headlines is worth knowing first. A custom is not a market signal, and this paper never treats it as one.",
@@ -69,6 +70,9 @@ d0, d, n, x = dt.date(2026, 10, 27), now.date(), 0, dt.date(2026, 10, 27)
 while x <= d:
     n += x.weekday() < 5; x += dt.timedelta(days=1)
 edno = f"Edition No. {n} · {now.strftime('%a %d %b %Y')}"
+if TODAY == DW_DATE:
+    # Weekend special: no weekday number (Monday's run is still No. 10).
+    edno = f"Diwali Weekend Special · {now.strftime('%a %d %b %Y')}"
 _n = lc("Nifty 50")
 _wd = now.date() - dt.timedelta(days=1)
 while _wd.weekday() >= 5: _wd -= dt.timedelta(days=1)
@@ -119,6 +123,7 @@ lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%.")
 btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>SPROUT’S LESSON</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
        '<div class="bx"><small>YESTERDAY’S CLOSE</small>'+closetbl()+'</div>'
        '<a class="bx bg" href="#" data-wt-sub><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
+LEARN_STRIP = """<a class="learn9" href="/pages/learn.html"><small>NEW TO MARKETS? · LEARN, FREE</small><h4>Start with Learn — 6 beginner modules, 23 short lessons, about 35 minutes</h4><p>Market basics, reading a company, key ratios, charts, RBI to portfolio, risk &amp; behaviour. Plain English, no tips, no predictions.</p><i>Start learning →</i></a>"""
 teasers_unused = "".join(f'<a class="tz" href="#p{p}" data-go="{p-1}"><small>{t}</small><h4>{e(i["title"])}</h4><p>{e(short(i["summary"], 120))}</p><i>Page {p} →</i></a>' for p, t, i in inside)
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
       f'<p class="stamp">{e(stamp)}</p><div class="fwrap"><div class="fmain"><small class="tag">THE LEAD</small>'
@@ -127,7 +132,7 @@ p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")
       f'<aside class="fside"><div class="ins"><b>INSIDE TODAY</b>'
       + "".join(f'<a href="#p{p}" data-go="{p-1}"><i>PAGE {p}</i> {e(i["title"])}</a>' for p, t, i in inside)
       + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · SPROUT’S LESSON</i> {e(ex["title"])}</a></div></aside></div>'
-      + btm)
+      + btm + (LEARN_STRIP if TODAY == DW_DATE else ""))
 DH_CSS = """.wt-dh-ep-mast{border-top:3px double #c9a227;padding:6px 12px 4px;text-align:center;background:linear-gradient(90deg,rgba(250,247,240,0) 0%,rgba(255,241,207,0.65) 50%,rgba(250,247,240,0) 100%);font-variant-numeric:lining-nums;opacity:0;animation:wt-dh-ep-fade 0.8s ease-out 0.05s 1 forwards;}
 .wt-dh-ep-badge{display:inline-flex;align-items:center;gap:8px;padding:3px 14px;border:1px solid #c9a227;border-radius:999px;background:linear-gradient(90deg,#fff6dc 0%,#ffe3a3 50%,#fff6dc 100%);color:#16241d;}
 .wt-dh-ep-orn{width:22px;height:18px;display:inline-block;vertical-align:middle;color:#0f3d2e;flex:none;}
@@ -143,9 +148,41 @@ DH_MAST = """<div class="wt-dh-ep-mast" role="region" aria-label="Shubh Dhantera
     <span class="wt-dh-ep-txt"><span class="wt-dh-ep-hi">शुभ धनतेरस</span><span class="wt-dh-ep-sep">·</span>SHUBH DHANTERAS</span>
   </span>
 </div>"""
+DW_CSS = """.wt-dw-ep-mast{position:relative;overflow:hidden;border-top:3px double #c9a227;padding:10px 12px 8px;text-align:center;background:linear-gradient(90deg,#fdf6dd 0%,#ffe9a8 50%,#fdf6dd 100%);}
+.wt-dw-ep-row{display:flex;align-items:center;justify-content:center;gap:14px;position:relative;z-index:2;}
+.wt-dw-ep-diya{width:30px;height:26px;flex:none;}
+.wt-dw-ep-flame{transform-box:fill-box;transform-origin:50% 100%;animation:wt-dw-ep-flick 1.6s ease-in-out infinite;}
+.wt-dw-ep-diya:nth-child(3) .wt-dw-ep-flame{animation-delay:.5s;}
+@keyframes wt-dw-ep-flick{0%,100%{transform:scale(1);opacity:1}30%{transform:scale(1.1,1.18);opacity:.92}60%{transform:scale(.94,1.02);opacity:1}}
+.wt-dw-ep-txt{font-family:'Playfair Display',Georgia,serif;font-size:15px;font-weight:800;letter-spacing:.06em;color:#0f3d2e;line-height:1.35;}
+.wt-dw-ep-txt span{background:linear-gradient(90deg,#d61f0a,#ff6a00 55%,#c78d00);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.wt-dw-ep-sub{display:block;font-family:Inter,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#7a5b00;}
+.wt-dw-ep-petal{position:absolute;top:-8px;width:9px;height:9px;border-radius:85% 0 85% 0;opacity:0;z-index:1;animation:wt-dw-ep-fall 5s ease-in infinite;}
+@keyframes wt-dw-ep-fall{0%{transform:translateY(-6px) rotate(0deg);opacity:0}12%{opacity:.9}100%{transform:translateY(64px) rotate(320deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.wt-dw-ep-flame,.wt-dw-ep-petal{animation:none!important}.wt-dw-ep-petal{display:none!important}}
+@media print{.wt-dw-ep-flame,.wt-dw-ep-petal{animation:none!important;opacity:1!important;}}
+.learn9{display:block;margin-top:1.6rem;background:#e8f1ea;border:1px solid #bcd5c4;border-top:4px solid #0f3d2e;padding:1.1rem 1.4rem;color:inherit;text-decoration:none;}
+.learn9 small{display:block;font:700 .68rem Inter,sans-serif;letter-spacing:.16em;color:#0f7b55;}
+.learn9 h4{font:800 1.25rem/1.3 "Playfair Display",Georgia,serif;margin:.35rem 0 .3rem;}
+.learn9 p{font-size:.95rem;line-height:1.55;color:#33453b;margin:0;}
+.learn9 i{display:inline-block;margin-top:.5rem;font:700 .8rem Inter,sans-serif;color:#9a7b12;font-style:normal;}
+a.learn9:hover h4{color:#0f7b55;}
+@media(max-width:899.98px){.learn9{border-radius:10px;padding:1rem;}}"""
+DW_MAST = """<div class="wt-dw-ep-mast" role="region" aria-label="Shubh Diwali">
+  <span class="wt-dw-ep-petal" style="left:12%;background:#ff6a00;animation-delay:0s"></span>
+  <span class="wt-dw-ep-petal" style="left:28%;background:#ffb400;animation-delay:1.2s"></span>
+  <span class="wt-dw-ep-petal" style="left:70%;background:#d61f0a;animation-delay:.6s"></span>
+  <span class="wt-dw-ep-petal" style="left:86%;background:#ff8c42;animation-delay:1.8s"></span>
+  <div class="wt-dw-ep-row">
+    <svg class="wt-dw-ep-diya" viewBox="0 0 24 24" aria-hidden="true"><path class="wt-dw-ep-flame" d="M12 4c1.9 2.4 2.9 4.1 2.9 5.9a2.9 2.9 0 1 1-5.8 0c0-1.8 1-3.5 2.9-5.9z" fill="#ff7a00"/><path class="wt-dw-ep-flame" d="M12 6.6c1 1.3 1.5 2.2 1.5 3a1.5 1.5 0 1 1-3 0c0-.8.5-1.7 1.5-3z" fill="#ffd23e"/><path d="M3.5 12.5h17c0 3.6-3.8 6.2-8.5 6.2s-8.5-2.6-8.5-6.2z" fill="#b34a1a"/><path d="M3.5 12.5h17" stroke="#e8a33d" stroke-width="1.4" fill="none"/></svg>
+    <span class="wt-dw-ep-txt"><span>शुभ दीवाली</span> · SHUBH DIWALI<span class="wt-dw-ep-sub">DIWALI WEEKEND SPECIAL · MARKETS CLOSED, LEARNING OPEN</span></span>
+    <svg class="wt-dw-ep-diya" viewBox="0 0 24 24" aria-hidden="true"><path class="wt-dw-ep-flame" d="M12 4c1.9 2.4 2.9 4.1 2.9 5.9a2.9 2.9 0 1 1-5.8 0c0-1.8 1-3.5 2.9-5.9z" fill="#ff7a00"/><path class="wt-dw-ep-flame" d="M12 6.6c1 1.3 1.5 2.2 1.5 3a1.5 1.5 0 1 1-3 0c0-.8.5-1.7 1.5-3z" fill="#ffd23e"/><path d="M3.5 12.5h17c0 3.6-3.8 6.2-8.5 6.2s-8.5-2.6-8.5-6.2z" fill="#b34a1a"/><path d="M3.5 12.5h17" stroke="#e8a33d" stroke-width="1.4" fill="none"/></svg>
+  </div>
+</div>"""
 mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg" alt=""><span class="m-wt">WealthyTrees</span></div>'
         f'<div class="m-c"><small>WEALTHYTREES</small><h1 class="mh">THE 9:15</h1></div><span>{e(edno)}</span></header>'
         + (DH_MAST if TODAY == DH_DATE else "")
+        + (DW_MAST if TODAY == DW_DATE else "")
         + f'<p class="tagl">The Morning Paper — Markets, simplified. In 2 minutes.</p>')
 pages = [f'<section class="pg first" id="p1" data-title="Front Page">{mast}<div class="in">{p1}</div>'
          f'<footer><span>wealthytrees.online · PAGE 1 OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
@@ -160,7 +197,7 @@ wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Marke
 steps = "".join(f'<div class="st"><span>{k+1}</span><div><h3>{e(s[0])}</h3><p>{e(s[1])}</p></div></div>' for k, s in enumerate(ex["steps"]))
 pages.append(page(5, "SPROUT’S LESSON", e(ex["title"]),
     f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Sprout’s Lesson"))
-CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read() + open(f"{R}/scripts/quiz.css").read() + (DH_CSS if TODAY == DH_DATE else "")
+CSS = open(f"{R}/scripts/edition.css").read() + open(f"{R}/scripts/edition-desk.css").read() + open(f"{R}/scripts/tools.css").read() + open(f"{R}/scripts/mobile.css").read() + open(f"{R}/scripts/quiz.css").read() + (DH_CSS if TODAY == DH_DATE else "") + (DW_CSS if TODAY == DW_DATE else "")
 titles = ["Front Page", "Markets", "India & Economy", "Commodities & World", "Sprout’s Lesson"]
 util = ('<div class="util"><a href="/" aria-label="WealthyTrees home">←<span class="ut"> WealthyTrees</span></a><nav class="tabs9">'
         + "".join(f'<button data-go="{k}">{e(t)}</button>' for k, t in enumerate(titles))
