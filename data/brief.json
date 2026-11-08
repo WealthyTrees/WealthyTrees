@@ -3,13 +3,13 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,030",
-   "change": 2.01
+   "value": "24,986",
+   "change": 1.83
   },
   {
    "name": "SENSEX",
-   "value": "81,028",
-   "change": 2.17
+   "value": "80,999",
+   "change": 2.13
   },
   {
    "name": "GOLD $/oz",
