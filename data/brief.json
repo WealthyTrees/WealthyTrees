@@ -1,5 +1,5 @@
 {
- "date": "Friday, 06 November 2026",
+ "date": "Sunday, 08 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -44,76 +44,76 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Indian Equities Post Strongest Single-Day Advance in Several Months",
-   "summary": "Domestic benchmark indices recorded sizable gains, driven by revitalized foreign portfolio participation. The broad-based rally provided Indian shares their most pronounced one-day surge in seven months.",
-   "why": "Tracking foreign institutional flows helps beginners comprehend how external liquidity influences domestic share prices.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVmJaMVVmaUE0cUtPUW9iRklDNUNCV2k4c1NXYzllRGYzeUdXOFJkeGVEOUNsdkhwc0pfc3pkSVdvb3Nwc3FMSE0xTVBnbEtiQ29Gd2NzbmFtMU9rVXNoNXF3MkRrMEtHczdSX0VGUExrTDkyNHAxYWI0SGFWbVRSZWhDaGlvNkhLdUtiZGdDaWVQaFJ0NkRkckJvQ0ZzSnM2dmFUd2tZXzdQaWZBaFN4Y3BNYXo0UkVZRGpQTkdTUQ?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Paras Healthcare Reports Multi-Fold Rise in Quarterly Net Income",
-   "summary": "In its initial earnings release after listing on stock exchanges, the healthcare provider booked a quarterly net profit of 40.35 crore rupees. This outcome reflects substantial growth compared to the 12.38 crore rupees earned during the corresponding period last year.",
-   "why": "Quarterly earnings reports enable investors to assess whether newly listed companies can sustain their post-IPO operational performance.",
+   "category": "US Markets",
+   "title": "American Equities Drop Sharply as Technology Enthusiasm Cools",
+   "summary": "United States indices experienced an extensive contraction totaling trillions of dollars in value as enthusiasm for artificial intelligence hardware wavered. Shifts in governance and skepticism regarding capital expenditures on technology infrastructure fueled the broader retreat.",
+   "why": "Extensive swings in major overseas exchanges frequently influence international liquidity and affect risk appetite across emerging territories.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/paras-healthcare-posts-rs-40-crore-q2-net-profit-in-first-results-after-listing/articleshow/135580435.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-street-grapples-with-5-7-trillion-rout-as-ai-bets-unwind/articleshow/135628032.cms"
   },
   {
-   "category": "Commodity",
-   "title": "International Crude Contracts Ease to Ninety Dollars",
-   "summary": "Petroleum prices eased to $90.34 per barrel, down 0.20%, after Thursday's climb. The dip offers slight relief on imported price pressures ahead of the central bank's upcoming policy review.",
-   "why": "Because India imports most of its energy needs, crude prices feed directly into inflation and trade pressures — a softer barrel eases both.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdURvbjVoTkxiVktNM1ZXRjZfZkF5WXBjVmx6eHRScElweDliX2x2czFrWjJrdy1FU3FaUFRUYnk3Ukh1cjVySExkZ0ZhY3RZUU0tYVlsZ1RCeHp5cURUSEd5UXJKM29KLUVFV0pKMkY3SHRFalg4TlRCTGg3ZXZjVGJvQkpUSmJtQkxYR0R5RHJ6bnpmbFhaTHVFaDNDUC1RLTJ3Y29kVjhseW9MTVJNZmJuNG52MFh5amx3ZWhNaV9GUGtmbUlYVExmazTSAdIBQVVfeXFMTXdYRmhYUV9zbXF2aUs3MGZ5VzlXZU52SG5QYUJzT0ZzZ1pQOXdyVHhiZlZVUjZJbDk0SEpDb0VXMkxrN0lsNDVrZzNYRGNWdTdHSTdUWE93elBXS1h3M1NmcUdPaHVWcW9LWm14aWNRSnhnMnZfQUxNaXQ4bU5hZENkOTQ4dUNtMmF2eEh4TDVVNXgtMzRiZ1pCTmFvVTVpVjEtcjVuUjNteXV1cUV6T2tlUUk1TGhETl9pbUxFMGhGc2NHMld0UzFzOWNSS21IaWV3?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Chinese Copper Supply Deficit Drives Physical Cash Premiums Higher",
-   "summary": "Industrial purchasers across China are facing sudden physical shortages, causing delivery premiums to jump dramatically. Inventories have compressed rapidly inside the globe's foremost consumer of the industrial metal.",
-   "why": "Copper availability serves as an essential gauge of manufacturing health and industrial activity across global supply chains.",
+   "category": "US Markets",
+   "title": "United States Markets Track Inflation Data After Tech Volatility",
+   "summary": "Market participants in the United States are monitoring forthcoming consumer price metrics and enterprise reports after an intense decline and subsequent recovery. Political changes after legislative balloting have introduced skepticism over regulatory approvals and construction schedules for computing facilities.",
+   "why": "Developments within premier overseas economies often set the tone for global risk assets and foreign institutional flows.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/chinas-copper-squeeze-deepens-as-buyers-scramble-for-metal-11793921664348.html"
+   "url": "https://www.livemint.com/market/us-markets-next-week-9-14-nov-after-crash-and-bounce-back-investors-eye-inflation-data-tech-earnings-and-more-11794072283036.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold Values Soften as US Labor Numbers Strengthen Dollar",
+   "summary": "Prices for the yellow metal dropped after American employment additions beat forecasts, supporting both bond yields and the greenback. A resilient hiring environment encouraged views that borrowing costs could stay higher for longer.",
+   "why": "Gold typically faces headwinds when yields and currency valuations rise, as non-yielding assets become comparatively less attractive.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-drops-as-strong-us-payrolls-boost-dollar-yields/articleshow/135626183.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Crude Oil Plunges Significantly While Gold Records Strong Week",
+   "summary": "Crude petroleum experienced a sharp decline exceeding twelve percent over the week, even as bullion marked its best weekly advance since late summer.",
+   "why": "Energy price shifts directly influence transportation expenses, manufacturing overhead, and broader retail inflation in importing countries.",
+   "source": "The Hawk",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZ0FKTFlDUFV3STRYTGQ4bWtZUjJyZVNQOHB0N3ZYTEJ0cWQ3S0dzVV9VMW9EN3pETXVfeFFreXFhampNY3RERjhHVHNPWExqcU04RGxfd3Y5TFNacTV5YUNta3pPQmdhMm5BVVpIYWFkTjhqbnozZURCeUk3SC0zU1k5T3BxZFQxLUlORUlZQnFZWDhCNy05SEVla0tZR2g1VkhacHI3cFZxWE5aTVJRUWdaalY4cllPQ3RqRThTVG00Y0U?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Overseas Capital Rotates Into Asian Equities Amid Global Tech Shifts",
+   "summary": "A reduction in artificial intelligence holdings following American midterm voting has prompted global fund managers to reevaluate Asian portfolios. This shift has restored buying interest in previously discounted shares across India and China.",
+   "why": "Changes in global asset concentration can trigger foreign capital inflows that provide substantial support to domestic bourses.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/how-anti-ai-trade-after-us-midterm-election-results-is-reviving-indian-chinese-stocks-11794101102138.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Beverage Bottling Giant Submits Paperwork for Public Share Sale",
+   "summary": "A major soft-drink packaging partner in India submitted preliminary documentation to execute a secondary public share offering. The planned transaction involves offloading up to fifteen percent equity by the primary owner, providing zero new funding to corporate coffers.",
+   "why": "In pure secondary offerings, proceeds flow to existing shareholders rather than expanding the company's operational treasury.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo/upcoming-ipo-coca-cola-india-bottler-hcch-files-drhp-for-public-issue-majority-shareholder-to-sell-up-to-15-stake-11794070690577.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Domestic Indices Post Exceptional Weekly Gains in Broad Advance",
+   "summary": "The Sensex surged over eight percent to surpass eighty-one thousand, while the Nifty crossed the twenty-five thousand mark again. Total investor valuation climbed by nearly twenty-nine lakh crore rupees during the five-day trading period.",
+   "why": "Sharp weekly index rallies reflect broad-based market capitalization growth across listed domestic firms.",
+   "source": "HDFC Sky",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRTMyUGpWS0Y4aFFwV0RNU01HRnZTdlBFZW9rcWYwT1Vod2lSVnpHeDZZbWtKWFZuMlJZblN5SHlUMWxpWnY1bnVmYk5XQW9ubEdSTnZzY016d1lOVl9rejdqcm9SdF9KTm54cjYwU3lpUWxDbC12VE1BR3J2emdRbnFJbVJoWGlsbTZiQWlkekdmWFRaQUo3ZkJnZFg5Y3NpTU96UW9XRFVDX0RydjNVVUpWNnZpYjFSRHljZG9kVFJwZTZMNk05ZW5B?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee and Sovereign Bonds Advance on Calmer Inflation Outlook",
-   "summary": "The domestic currency and local government bonds appreciated as softer energy prices mitigated retail inflation concerns. Market sentiment improved on expectations that reduced import expenses will alleviate broader macroeconomic strain.",
-   "why": "Sovereign debt yields and currency strength are directly tied to national inflation expectations and import costs.",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQV0I2SkYxWVZzQ1hBczdHalpiWkdXSHZNc2tqRDVtUDV0cUZ5dlJjWVJPNERZMUJLanRiQkR6UHk2c3A0cmJiMkpMaWZJQTg2UjBXRTdObHREZlpIY2loQVgyMGxITGVKZ0E0dWlOemUtTEstUzVOeXFXRmhmOW5yeGItWEt1OUMzU2w3OFd6N09rN01tOEY2aHZKS2ZHdlVBdS0wOW9pQ3lESWFvc0lVZ3Jn?oc=5"
+   "title": "Financial Watchdog Decreases Position Ceilings for Currency Derivatives",
+   "summary": "The securities regulator curtailed trading allowances on unhedged foreign currency derivatives from one hundred million dollars to five million dollars. This intervention aims to rein in speculative positions, support the declining rupee, and protect authentic commercial hedging activity.",
+   "why": "Limiting speculative derivative exposure helps minimize excessive foreign exchange volatility that can disrupt cross-border trade planning.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/will-sebi-s-new-rules-on-currency-derivatives-help-the-falling-rupee-11793955300780.html"
   },
   {
    "category": "Economy",
-   "title": "Central Bank Schedules Variable Rate Reverse Repo to Absorb Cash",
-   "summary": "The Reserve Bank of India scheduled a three-day auction to temporarily withdraw excess funds from the banking channel. The operation forms part of the central bank's ongoing routine assessment of system liquidity.",
-   "why": "Reverse repo auctions show how monetary authorities fine-tune circulating cash to keep short-term interest rates stable.",
+   "title": "Central Bank Announces Short Term Auction to Manage Cash Needs",
+   "summary": "The Reserve Bank of India announced a four-day variable rate repo auction under its liquidity adjustment facility. The measure follows an assessment of short-term cash balances across the banking sector.",
+   "why": "Variable rate repo auctions help monetary authorities smooth short-term cash deficits across the commercial banking system.",
    "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63932"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq Bounces Back as Chip Stocks Lead Friday Recovery",
-   "summary": "American tech equities recovered part of Thursday's steep drop, with the Nasdaq Composite rising 1.09% to 24,579.42 as chip stocks bounced back. The rebound recovered only a fraction of the week's losses.",
-   "why": "Big moves on Wall Street frequently alter risk appetite across global financial centers, impacting foreign equity investments.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObTdYYmZaZmRqRUt0TDhBbERraDF2VlpSTDJ4M1NyZ2dRRkNUUVJ0OVFHdzJyc01uNDZOV2YzZFprbU90aUNzTEtYTEdNWU5Jc19VVVlHc24tNkZ2VFhqOWg3b0swVDFnY2hHaGxuNVZXVkE5S09xZXV2eGRQb1kwdWFEZWxpeGMybDZRcGtyWW52Q1JfaHY4MVo1YmJfRW9KZmNsdVJqS24zeGRZVUpaV3VB?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Apple Prepares Multi-Billion Dollar-Denominated Corporate Bond Offering",
-   "summary": "Technology major Apple is aiming to raise roughly seven billion dollars via a fresh issue of corporate bonds. The move aligns with a broader pattern of prominent technology corporations accessing fixed-income debt markets.",
-   "why": "Large-scale bond offerings demonstrate how established corporations raise institutional capital without diluting equity ownership.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/apple-seeks-about-7-billion-from-bond-sale-bloomberg-news-reports/articleshow/135578897.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "United States Long-Term Mortgage Borrowing Costs Drop Further",
-   "summary": "Average interest rates on standard thirty-year fixed residential mortgages in the United States declined to 7.18 percent from 7.24 percent. This downward adjustment represents the third consecutive week of softening borrowing expenses for homebuyers.",
-   "why": "Mortgage benchmarks offer insight into consumer debt conditions and the overall health of the residential property sector.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/the-average-us-30-year-mortgage-rate-falls-to-7-18-this-week-its-third-straight-decline-/articleshow/135585420.cms"
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63943"
   }
  ]
 }
