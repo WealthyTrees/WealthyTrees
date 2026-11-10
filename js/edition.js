@@ -12,6 +12,7 @@
   var query = new URLSearchParams(window.location.search);
   var festivalPreview = ["previewDussehra", "previewDussehraEdition"].some(function (key) { return query.get(key) === "1"; });
   var dhanterasPreview = ["previewDhanteras", "previewDhanterasEdition"].some(function (key) { return query.get(key) === "1"; });
+  var govardhanPreview = ["previewGovardhan", "previewGovardhanEdition"].some(function (key) { return query.get(key) === "1"; });
   var indiaParts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"
   }).formatToParts(new Date());
@@ -22,6 +23,8 @@
     GREETING = { src: "/assets/dhanteras-greeting.mp4?v=20261105", poster: "/assets/dhanteras-greeting-poster.jpg?v=1", label: "WealthyTrees Dhanteras greeting video" };
   } else if (festivalPreview || indiaDate === "2026-10-20") {
     GREETING = { src: "/assets/dussehra-greeting.mp4?v=20261017-inline3", poster: "/assets/dussehra-greeting-poster.svg?v=1", label: "WealthyTrees Dussehra greeting video" };
+  } else if (govardhanPreview || indiaDate === "2026-11-10") {
+    GREETING = { img: "/assets/govardhan-puja.jpg", label: "Shubh Govardhan — Shrinathji adorned with flowers" };
   }
   var SHOW_FESTIVAL_GREETING = !!GREETING;
 
@@ -55,6 +58,15 @@
     N = L.length + 2 + (SHOW_FESTIVAL_GREETING ? 1 : 0);
     if (SHOW_FESTIVAL_GREETING) {
       s = slide("sfestival", slides.length);
+      if (GREETING.img) {
+        s.classList.add("fimg");
+        var greetingImg = el("img", "ed-greeting-img");
+        greetingImg.src = GREETING.img;
+        greetingImg.alt = GREETING.label;
+        greetingImg.setAttribute("aria-label", GREETING.label);
+        // Keep the greeting artwork unobstructed: no title banner or bottom hint over the image.
+        s.append(greetingImg);
+      } else {
       var greeting = el("video", "ed-greeting-video");
       // This is an embedded story slide, not a separate video-player UI.
       greeting.autoplay = true;
@@ -75,6 +87,7 @@
       greeting.src = GREETING.src;
       // Keep the greeting artwork unobstructed: no title banner or bottom hint over the video.
       s.append(greeting);
+      }
       slides.push(s);
     }
     s = slide("s0", slides.length);
@@ -125,7 +138,7 @@
       if (longp || Math.abs(dx) > 10 || Math.abs(dy) > 10) { nc = true; setTimeout(function () { nc = false; }, 350); }
       if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
         go(cur + (dx < 0 ? 1 : -1));
-      } else if (!longp && Math.abs(dx) <= 12 && Math.abs(dy) <= 12 && slides[cur] && slides[cur].querySelector(".ed-greeting-video")) {
+      } else if (!longp && Math.abs(dx) <= 12 && Math.abs(dy) <= 12 && slides[cur] && slides[cur].querySelector(".ed-greeting-video, .ed-greeting-img")) {
         // Tap anywhere on the greeting slide to move directly to the next Story card.
         go(cur + 1);
       }
