@@ -82,8 +82,8 @@
 .hm-gtiles{display:flex;flex-wrap:wrap;gap:3px}
 .hm-tile{border:0;border-radius:8px;padding:8px 10px;min-width:0;text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:center;gap:1px;font-family:Inter,system-ui,sans-serif;transition:transform .15s ease,box-shadow .15s ease,background-color .5s ease,color .5s ease;overflow:hidden}
 .hm-tile b{font-size:13px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hm-tc{font-size:13px;font-weight:700;white-space:nowrap}
-.hm-tp{font-size:11px;opacity:.85;white-space:nowrap}
+.hm-tc{font-size:11px;font-weight:600;white-space:nowrap}
+.hm-tp{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hm-tile.compact .hm-tp{display:none}
 .hm-tile.tiny .hm-tc,.hm-tile.tiny .hm-tp{display:none}
 .hm-tile.tiny b{font-size:12px}
