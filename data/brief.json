@@ -4,7 +4,7 @@
   {
    "name": "NIFTY 50",
    "value": "25,045",
-   "change": 0.23
+   "change": 0.06
   },
   {
    "name": "SENSEX",
@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,150",
-   "change": 1.83
+   "value": "4,127",
+   "change": 0.31
   },
   {
    "name": "CRUDE WTI",
-   "value": "$86.4",
-   "change": -4.9
+   "value": "$85.6",
+   "change": -1.44
   },
   {
    "name": "USD/INR",
    "value": "93.92",
-   "change": 0.03
+   "change": -0.0
   },
   {
    "name": "S&P 500",
