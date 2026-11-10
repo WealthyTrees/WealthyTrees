@@ -128,7 +128,7 @@ function weatherKind(){
 }
 function weatherSVG(kind){
  if(kind==="sun")return '<svg viewBox="0 0 64 64" width="58" height="58" role="img" aria-label="Sunny"><g class="hm-rays" stroke="#e0b04f" stroke-width="3" stroke-linecap="round"><line x1="32" y1="4" x2="32" y2="12"/><line x1="32" y1="52" x2="32" y2="60"/><line x1="4" y1="32" x2="12" y2="32"/><line x1="52" y1="32" x2="60" y2="32"/><line x1="12" y1="12" x2="18" y2="18"/><line x1="46" y1="46" x2="52" y2="52"/><line x1="52" y1="12" x2="46" y2="18"/><line x1="18" y1="46" x2="12" y2="52"/></g><circle cx="32" cy="32" r="15" fill="#e0b04f"/></svg>';
- if(kind==="partly")return '<svg viewBox="0 0 64 64" width="58" height="58" role="img" aria-label="Partly cloudy"><g class="hm-rays" stroke="#e0b04f" stroke-width="3" stroke-linecap="round"><line x1="20" y1="6" x2="20" y2="12"/><line x1="6" y1="20" x2="12" y2="20"/><line x1="34" y1="6" x2="34" y2="12"/></g><circle cx="22" cy="22" r="11" fill="#e0b04f"/><g class="hm-cloud" fill="#dfe5dc"><ellipse cx="38" cy="44" rx="20" ry="12"/><ellipse cx="26" cy="40" rx="12" ry="9"/><ellipse cx="48" cy="40" rx="11" ry="8"/></g></svg>';
+ if(kind==="partly")return '<svg viewBox="0 0 64 64" width="58" height="58" role="img" aria-label="Partly cloudy"><g class="hm-rays" style="transform-origin:24px 24px" stroke="#e0b04f" stroke-width="3" stroke-linecap="round"><line x1="24" y1="6" x2="24" y2="12"/><line x1="24" y1="36" x2="24" y2="42"/><line x1="6" y1="24" x2="12" y2="24"/><line x1="36" y1="24" x2="42" y2="24"/><line x1="11" y1="11" x2="15" y2="15"/><line x1="33" y1="33" x2="37" y2="37"/><line x1="37" y1="11" x2="33" y2="15"/><line x1="15" y1="33" x2="11" y2="37"/></g><circle cx="24" cy="24" r="11" fill="#e0b04f"/><g class="hm-cloud" fill="#dfe5dc"><ellipse cx="40" cy="46" rx="20" ry="12"/><ellipse cx="28" cy="42" rx="12" ry="9"/><ellipse cx="50" cy="42" rx="11" ry="8"/></g></svg>';
  if(kind==="rain")return '<svg viewBox="0 0 64 64" width="58" height="58" role="img" aria-label="Rainy"><g class="hm-cloud" fill="#b9c4bb"><ellipse cx="32" cy="28" rx="22" ry="13"/><ellipse cx="20" cy="24" rx="12" ry="9"/><ellipse cx="44" cy="24" rx="11" ry="8"/></g><g class="hm-rain" stroke="#5b8db8" stroke-width="3" stroke-linecap="round"><line x1="22" y1="46" x2="20" y2="54"/><line x1="32" y1="46" x2="30" y2="54"/><line x1="42" y1="46" x2="40" y2="54"/></g></svg>';
  return '<svg viewBox="0 0 64 64" width="58" height="58" role="img" aria-label="Cloudy"><g class="hm-cloud" fill="#dfe5dc"><ellipse cx="32" cy="34" rx="22" ry="13"/><ellipse cx="20" cy="30" rx="12" ry="9"/><ellipse cx="44" cy="30" rx="11" ry="8"/></g></svg>';
 }
@@ -156,8 +156,9 @@ function buildMood(){
   +'<path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="var(--mood)" stroke-width="10" stroke-linecap="round" stroke-dasharray="126 252" opacity=".55"/>'
   +'<g class="hm-needle" style="--ang:'+ang+'deg;transform-origin:100px 100px;transform:rotate(-90deg)"><line x1="100" y1="100" x2="100" y2="30" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="100" r="6" fill="var(--ink)"/></g></svg>';
  var gw=el("div","hm-gauge-wrap"); gw.innerHTML=svg; box.appendChild(gw);
- /* face + text */
- var face=el("div","hm-mood-face", e?e.face:"");
+ /* Sprout's face stays the same green bud in every mood — never another face */
+ var face=el("div","hm-mood-face");
+ face.innerHTML=sproutSVG();
  var text=el("div","hm-mood-text");
  text.appendChild(txt("b","","Market mood: "));
  text.appendChild(document.createTextNode(e?e.text:""));
@@ -169,7 +170,7 @@ function buildMood(){
  /* floating particles in the mood colour */
  if(!REDUCED){
   var parts=el("div","hm-particles");
-  for(var i=0;i<10;i++){
+  for(var i=0;i<14;i++){
    var p=document.createElement("i");
    p.style.left=(5+Math.random()*90)+"%";
    p.style.setProperty("--pd",(2.5+Math.random()*3)+"s");
@@ -375,7 +376,7 @@ function confetti(box){
 /* ---------- Sprout takeover ---------- */
 var sproutOpen=false;
 function sproutSVG(){
- return '<svg viewBox="0 0 64 64" width="52" height="52" role="img" aria-label="Sprout"><circle cx="32" cy="46" r="14" fill="#0f7b55"/><path d="M32 46 C32 30 30 20 22 12 C30 14 34 22 34 30 C34 22 38 14 46 12 C40 20 38 30 38 46 Z" fill="#2fae6e"/><circle cx="27" cy="44" r="2.4" fill="#fff"/><circle cx="37" cy="44" r="2.4" fill="#fff"/><path d="M28 50 Q32 53 36 50" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+ return '<svg class="hm-sprout-svg" viewBox="0 0 64 64" width="52" height="52" role="img" aria-label="Sprout"><path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/><path d="M29 34 C24 29 19 23 14 17" stroke="#d9f0b4" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/><path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>';
 }
 function sparkSVG(name,pct){
  if(!chartsCache||!chartsCache[name])return "";
@@ -493,11 +494,15 @@ function endTour(){
 /* ---------- loading intro ---------- */
 function runIntro(done){
  var I=$("hm-intro"); if(!I){done();return}
+ /* ?intro=1 forces the intro (the Markets-page button links here) so it is
+    always visible when you arrive from the Markets page, even if you have
+    already seen it once this visit */
+ var force=false; try{force=/[?&]intro=1/.test(location.search)}catch(e){}
  var seen=false; try{seen=sessionStorage.getItem("wt-hm-intro")==="1"}catch(e){}
- if(seen||REDUCED){I.innerHTML="";done();return}
+ if((seen&&!force)||REDUCED){I.innerHTML="";done();return}
  var lines=(SPROUT&&SPROUT.intro&&SPROUT.intro.length)?SPROUT.intro:["Warming up the heatmap…"];
  var card=el("div","hm-intro-card");
- card.innerHTML='<div class="hm-intro-sprout">🌱</div>';
+ card.innerHTML='<div class="hm-intro-sprout">'+sproutSVG()+'</div>';
  var lineEl=txt("p","hm-intro-line",lines[0]);
  card.appendChild(lineEl);
  var grid=el("div","hm-intro-grid");
@@ -513,6 +518,14 @@ function runIntro(done){
   I.classList.add("hm-fade");
   setTimeout(function(){I.innerHTML="";I.classList.remove("on","hm-fade");done()},REDUCED?0:450);
   try{sessionStorage.setItem("wt-hm-intro","1")}catch(e){}
+  /* strip ?intro=1 so a refresh does not replay the intro; the Markets
+     button sets it fresh each time it is clicked */
+  try{
+   if(force&&window.history&&history.replaceState){
+    var u=new URL(location.href); u.searchParams.delete("intro");
+    history.replaceState(null,"",u.pathname+u.search+u.hash);
+   }
+  }catch(e){}
  }
  var to=setTimeout(finish,2100);
  function skip(e){if(e&&e.key&&e.key!=="Escape")return;clearTimeout(to);finish()}
@@ -540,7 +553,7 @@ function buildNotes(){
     if(!en.isIntersecting)return;
     io.unobserve(en.target);
     wrap.querySelectorAll(".hm-note").forEach(function(c,i){
-     setTimeout(function(){c.classList.add("hm-write")},i*140);
+     setTimeout(function(){c.classList.add("hm-write")},i*100);
     });
    });
   },{threshold:0.2});
@@ -548,6 +561,30 @@ function buildNotes(){
  }else{
   wrap.querySelectorAll(".hm-note").forEach(function(c){c.classList.add("hm-write")});
  }
+}
+/* ---------- guide: How to read a heatmap, led by Sprout ---------- */
+function buildGuide(){
+ var app=$("hm-app"); if(!app)return;
+ var old=$("hm-guide"); if(old)old.parentNode.removeChild(old);
+ if(!SPROUT||!SPROUT.tour||!SPROUT.tour.length)return;
+ var sec=el("section","hm-guide"); sec.id="hm-guide";
+ var head=el("div","hm-guide-head");
+ head.innerHTML=sproutSVG();
+ var ht=el("div","hm-guide-title");
+ ht.appendChild(txt("h2","hm-guide-h","How to read a heatmap"));
+ ht.appendChild(txt("p","hm-guide-sub","Sprout walks you through it — four things to look for."));
+ head.appendChild(ht);
+ sec.appendChild(head);
+ var list=el("ol","hm-guide-list");
+ SPROUT.tour.forEach(function(step,i){
+  var li=el("li","hm-guide-step");
+  li.appendChild(txt("span","hm-guide-n",String(i+1)));
+  li.appendChild(txt("p","",step.text));
+  list.appendChild(li);
+ });
+ sec.appendChild(list);
+ var notes=$("hm-notes");
+ if(notes)app.insertBefore(sec,notes); else app.appendChild(sec);
 }
 /* ---------- foot ---------- */
 function buildFoot(){
@@ -587,7 +624,7 @@ function init(){
   TILES=d.tiles; MOOD=d.mood||0; FETCHED=d.fetched||"";
   runIntro(function(){
    var app=$("hm-app"); if(app)app.hidden=false;
-   buildHero(); buildLegend(); buildMood(); buildGame(); layoutMap(); buildNotes(); buildFoot();
+   buildHero(); buildLegend(); buildMood(); buildGame(); layoutMap(); buildGuide(); buildNotes(); buildFoot();
    if(revealed){/* game already played this session: colours are on */}
    var first=false; try{first=!localStorage.getItem("wt-hm-tour")}catch(e){}
    if(first)setTimeout(function(){startTour()},600);
