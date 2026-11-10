@@ -13,6 +13,16 @@
 @media(hover:hover){.mk-tile:hover{transform:translateY(-2px);border-color:var(--up);box-shadow:0 4px 14px rgba(0,0,0,.15)}}
 .mk-tile[aria-pressed=true]{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
 [data-theme=dark] .mk-tile[aria-pressed=true]{box-shadow:0 0 0 2px var(--up),0 0 16px rgba(62,207,142,.35)}
+/* filler card: fills a short tile row with a plain-English fact instead of blank space; tap to shuffle tips */
+.mk-tile.fill{border-style:dashed;border-color:var(--gold);background:color-mix(in srgb,var(--gold) 12%,var(--paper));cursor:pointer;text-decoration:none}
+.mk-tile.fill b{color:var(--gold)}
+.mk-tile.fill .f{font-size:.85rem;font-weight:400;line-height:1.35}
+.mk-tile.fill .c{color:var(--gold)}
+.mk-tile.fill .c a{color:var(--gold);text-decoration:none;font-weight:700}
+.mk-tile.fill .tap{font-size:.75rem;font-weight:600;color:var(--mute)}
+@keyframes mkpop{0%{transform:scale(1)}40%{transform:scale(1.05) rotate(-1deg)}100%{transform:scale(1)}}
+.mk-tile.fill.pop{animation:mkpop .35s ease}
+@media(prefers-reduced-motion:reduce){.mk-tile.fill.pop{animation:none}}
 .mk-card{margin-top:1.1rem;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:visible;box-shadow:0 6px 22px rgba(0,0,0,.06)}
 .mk-head{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.2rem;padding:.8rem 1rem;border-bottom:1px solid var(--line)}
 .mk-title{font-size:1.15rem;font-weight:700;margin:0}.mk-flag{margin-right:.35rem}

@@ -59,11 +59,29 @@ function stat(k){var d=data&&data[k];if(!d||d.length<2){var z=liveQ[k];return z&
  if(q&&q.price){price=q.price;if(q.day>l.time)pc=l.close}
  var c=(price-pc)/pc*100;if(q&&q.prev&&Math.abs(c)>20)c=(price-q.prev)/q.prev*100;return{price:price,chg:c}}
 /* ---------- tabs and tiles ---------- */
+/* Sprout tip pool: tap a filler card to shuffle to the next tip (playful, keeps the row full) */
+var TIPS=[
+["An index is a basket of shares. Nifty 50 tracks 50 big companies; Sensex tracks 30. One number, many companies.","/learn/beginner/module-1.html"],
+["A sector index tracks one part of the market, like banks or IT. Compare sectors to see which part is moving.","/learn/beginner/module-2.html"],
+["India VIX is the fear gauge. High means traders expect big moves; low means they expect calm. It shows the mood, not the direction.","/learn/beginner/module-4.html"],
+["The S&P 500 tracks 500 big US companies. It is the main benchmark for America, like Nifty 50 is for India.","/learn/beginner/module-1.html"],
+["Gold is priced in dollars per ounce. When the dollar rises, gold often gets costlier in rupees.","/learn/beginner/module-5.html"],
+["Crude oil is priced in dollars per barrel. India imports most of its oil, so costlier crude can push up inflation.","/learn/beginner/module-5.html"],
+["USD/INR is how many rupees one dollar buys. A higher number means a weaker rupee.","/learn/beginner/module-5.html"],
+["A dividend is a share of a company\u2019s profit, paid out to shareholders. Not every company pays one.","/learn/beginner/module-2.html"]];
+var FILLSEC={"Broad indices":0,"Sectors":1,"Fear gauge":2,"Stock indices":3,"Metals":4,"Energy":5,"Currency pair":6};
+var fillCur={};
+function fillCard(sec){var i=fillCur[sec];if(i===undefined)i=fillCur[sec]=FILLSEC[sec]||0;var tp=TIPS[i%TIPS.length];
+ return '<div class="mk-tile fill" role="button" tabindex="0" data-sec="'+esc(sec)+'"><b>\uD83C\uDF31 Sprout says</b><span class="f">'+esc(tp[0])+'</span><span class="c"><a href="'+tp[1]+'">Learn \u2192</a></span><span class="tap">Tap for another tip \u21BB</span></div>'}
+function cycleTip(card){var sec=card.dataset.sec, nx=((fillCur[sec]||0)+1)%TIPS.length; fillCur[sec]=nx; var tp=TIPS[nx];
+ card.querySelector(".f").textContent=tp[0]; card.querySelector(".c a").href=tp[1];
+ card.classList.remove("pop"); void card.offsetWidth; card.classList.add("pop");}
 function drawTabs(){var h="";Object.keys(GROUPS).forEach(function(g){h+='<button class="mk-tab" role="tab" data-g="'+g+'" aria-selected="'+(g===group)+'">'+(g==="India"?'<i class="fl fl-in"></i>':g==="US"?'<i class="fl fl-us"></i>':g==="Commodities"?"\uD83D\uDEE2\uFE0F ":"\uD83D\uDCB1 ")+g+'</button>'});$("tabs").innerHTML=h}
-function drawTiles(){var h="";GROUPS[group].forEach(function(sec){var t="";sec[1].forEach(function(k){
+function drawTiles(){var h="";GROUPS[group].forEach(function(sec){var ts=[];sec[1].forEach(function(k){
   if(data&&Object.keys(data).length&&!data[k]&&!liveQ[k])return;var s=stat(k),cls=s?(s.chg>=0?"u":"d"):"",a=s?Math.min(32,10+Math.abs(s.chg)*9):10;
-  t+='<button class="mk-tile '+cls+'" data-k="'+esc(k)+'" aria-pressed="'+(k===key)+'" style="--a:'+a.toFixed(0)+'%"><b>'+esc(k)+'</b><span class="p">'+(s?f(s.price):"&mdash;")+'</span><span class="c">'+(s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"%":"")+'</span></button>'});
- if(t)h+='<div class="mk-sec">'+sec[0]+'</div><div class="mk-tiles">'+t+'</div>'});$("tiles").innerHTML=h}
+  ts.push('<button class="mk-tile '+cls+'" data-k="'+esc(k)+'" aria-pressed="'+(k===key)+'" style="--a:'+a.toFixed(0)+'%"><b>'+esc(k)+'</b><span class="p">'+(s?f(s.price):"&mdash;")+'</span><span class="c">'+(s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"%":"")+'</span></button>')});
+ if(ts.length){if(ts.length%2===1)ts.push(fillCard(sec[0]));
+  h+='<div class="mk-sec">'+sec[0]+'</div><div class="mk-tiles">'+ts.join("")+'</div>'}});$("tiles").innerHTML=h}
 function drawHead(){var a=A[key]||["","",""],s=stat(key);
  $("ttl").innerHTML='<span class="mk-flag">'+FL(a[0])+'</span>'+esc(key);
  $("prc").textContent=s?f(s.price):"";var c=$("chg");c.className="mk-chg "+(s&&s.chg>=0?"up":"dn");c.textContent=s?(s.chg>=0?"▲ +":"▼ ")+s.chg.toFixed(2)+"% today":"";
@@ -137,7 +155,9 @@ function initDraw(){cv=$("draw");ctx=cv.getContext("2d");var start=null;
 function seg(id,cb){$(id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;this.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});cb(b.dataset.v)})}
 seg("rng",function(v){range=v;build()});seg("typ",function(v){type=v;build()});
 $("tabs").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;group=b.dataset.g;drawTabs();drawTiles()});
-$("tiles").addEventListener("click",function(e){var b=e.target.closest(".mk-tile");if(!b)return;key=b.dataset.k;setTool("cursor");drawTiles();build();var c=$("chartcard");if(c.getBoundingClientRect().top>innerHeight*.6)c.scrollIntoView({behavior:"smooth",block:"start"})});
+$("tiles").addEventListener("click",function(e){var f=e.target.closest(".mk-tile.fill");if(f){if(e.target.closest("a"))return;cycleTip(f);return}
+var b=e.target.closest(".mk-tile");if(!b)return;key=b.dataset.k;setTool("cursor");drawTiles();build();var c=$("chartcard");if(c.getBoundingClientRect().top>innerHeight*.6)c.scrollIntoView({behavior:"smooth",block:"start"})});
+$("tiles").addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("fill")){e.preventDefault();cycleTip(e.target)}});
 $("tools").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;if(b.id==="clr"){D[key]=[];redraw();return}setTool(b.dataset.t)});
 $("inds").addEventListener("change",function(e){var i=e.target;on[i.value]=i.checked;$("ihelp").innerHTML="<h3>"+esc(i.parentNode.textContent.trim())+"</h3><p>"+INFO[i.value]+"</p><p class=\"note\">Indicators describe the past. They are not buy or sell signals.</p>";build()});
 document.addEventListener("click",function(e){var d=document.querySelector(".dd[open]");if(d&&!d.contains(e.target))d.removeAttribute("open")});
