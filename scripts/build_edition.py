@@ -187,7 +187,24 @@ mast = (f'<header class="mast"><div class="m-l"><img src="/assets/logo-dark.svg"
 pages = [f'<section class="pg first" id="p1" data-title="Front Page">{mast}<div class="in">{p1}</div>'
          f'<footer><span>wealthytrees.online · PAGE 1 OF 5</span><span>EDUCATION ONLY · NOT INVESTMENT ADVICE</span></footer></section>']
 def stories(lst, k_show=2, first_w=True, glance_html=""):
-    return '<div class="stories">' + "".join(story(i, first_w and k == 0).replace('class="sty"', 'class="sty%s"' % (" dx" if k >= k_show else ""), 1) for k, i in enumerate(lst)) + glance_html + '</div>'
+    items = "".join(story(i, first_w and k == 0).replace('class="sty"', 'class="sty%s"' % (" dx" if k >= k_show else ""), 1) for k, i in enumerate(lst))
+    total = len(lst) + (1 if glance_html else 0)
+    if total == 2:
+        items += filler()
+    return '<div class="stories">' + items + glance_html + '</div>'
+WORDS = [
+ ("Circuit breaker", "A pause button for the market. If an index falls too far, too fast, trading stops for a while so everyone can calm down.", "/learn/beginner/module-1.html"),
+ ("Market cap", "A company\u2019s total value on the stock market. One share\u2019s price, times all the shares. It tells you the size of a company, not the quality.", "/learn/beginner/module-2.html"),
+ ("P/E ratio", "Price divided by earnings per share. It tells you how much you pay for every \u20b91 the company earns.", "/learn/beginner/module-3.html"),
+ ("Sensex", "Thirty big, well-established companies on the Bombay Stock Exchange. India\u2019s oldest index.", "/learn/beginner/module-1.html"),
+ ("Dividend", "A share of a company\u2019s profit, paid out to shareholders. It is usually paid in cash, per share. Not every company pays one.", "/learn/beginner/module-2.html"),
+ ("Nifty 50", "The fifty largest companies on the National Stock Exchange. The most-watched gauge of the Indian market.", "/learn/beginner/module-1.html"),
+ ("IPO", "Initial Public Offering: the first time a company sells its shares to the public. That is when it lists on the exchange.", "/learn/beginner/module-1.html"),
+]
+def filler():
+    t, d, u = WORDS[n % len(WORDS)]
+    return (f'<article class="sty fill"><small class="tag">SPROUT\u2019S MARKET WORD</small><h3>{e(t)}</h3>'
+            f'<p class="s-lg">{e(d)}</p><p class="src"><a href="{e(u)}">Learn \u2192</a></p></article>')
 pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])) + quiz(0), "Markets"))
 pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", (stories(ec[:3], glance_html=glance()) if ec else "<p>No economy stories today.</p>") + quiz(1), "India & Economy"))
 pages.append(page(4, "COMMODITIES &amp; WORLD", "Commodities &amp; World",

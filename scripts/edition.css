@@ -2,3 +2,4 @@
 body{margin:0;background:#e9e6dd;font:16px/1.5 Inter,system-ui,sans-serif;color:#1b2a22}
 .util{display:flex;padding:.5rem .9rem;background:#0b2e22;font-size:.8rem}.util a{color:#c9a227;text-decoration:none;font-weight:600}.tabs9,.arr,.dx,.btm,.glance,.m-wt,.s-lg,.w-lg,.m-off,.m-l small,.fwrap~.dx{display:none}.fwrap{display:block}
 main{max-width:540px;margin:0 auto;display:flex;flex-direction:column;gap:14px;padding:14px 0}
+.sty.fill{background:#f6ead0}
