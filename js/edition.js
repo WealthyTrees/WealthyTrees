@@ -24,7 +24,7 @@
   } else if (festivalPreview || indiaDate === "2026-10-20") {
     GREETING = { src: "/assets/dussehra-greeting.mp4?v=20261017-inline3", poster: "/assets/dussehra-greeting-poster.svg?v=1", label: "WealthyTrees Dussehra greeting video" };
   } else if (govardhanPreview || indiaDate === "2026-11-10") {
-    GREETING = { img: "/assets/govardhan-puja.jpg", label: "Shubh Govardhan — Shrinathji adorned with flowers" };
+    GREETING = { img: "/assets/Goverdhan-puja.jpg", label: "Shubh Govardhan — Shrinathji adorned with flowers" };
   }
   var SHOW_FESTIVAL_GREETING = !!GREETING;
 

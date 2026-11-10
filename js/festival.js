@@ -22,7 +22,7 @@
   document.head.appendChild(st);
   if (key === "2026-11-10") { var fl = document.createElement("link"); fl.rel = "stylesheet"; fl.href = "https://fonts.googleapis.com/css2?family=Yatra+One&display=swap"; document.head.appendChild(fl); }
   var b = document.createElement("div"); b.className = "wt-fest" + (key === "2026-11-10" ? " gov" : ""); b.setAttribute("role", "status");
-  b.innerHTML = (key === "2026-11-10" ? '<img class="gov-img" src="/assets/govardhan-puja.jpg" alt="Shubh Govardhan">' : '<span class="big">' + f.e[0] + '</span>') + '<h3></h3>' + (note ? "<p></p>" : "") + '<button type="button" aria-label="Close">\u00D7</button>';
+  b.innerHTML = (key === "2026-11-10" ? '<img class="gov-img" src="/assets/Goverdhan-puja.jpg" alt="Shubh Govardhan">' : '<span class="big">' + f.e[0] + '</span>') + '<h3></h3>' + (note ? "<p></p>" : "") + '<button type="button" aria-label="Close">\u00D7</button>';
   var h3 = b.querySelector("h3"); if (key === "2026-11-10") { h3.innerHTML = '<span class="sh">शुभ</span><span class="gv">गोवर्धन</span>'; } else { h3.textContent = f.t; } if (note) b.querySelector("p").textContent = note;
   document.body.appendChild(b);
   var gi = b.querySelector("img.gov-img"); if (gi) gi.onerror = function () { gi.remove(); };
