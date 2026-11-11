@@ -27,7 +27,7 @@ var STEPS=[
 function colorFor(p){for(var i=0;i<STEPS.length;i++){if(p>=STEPS[i].min)return STEPS[i]}return STEPS[STEPS.length-1]}
 /* ---------- state ---------- */
 var TILES=[], MOOD=0, FETCHED="", SPROUT=null, GROUPS=["India","Sectors","US Markets","Commodities & Currency"];
-var played=false, revealed=false, tourStep=0, lastFocus=null, chartsCache=null;
+var played=false, revealed=true, tourStep=0, lastFocus=null, chartsCache=null;
 var XP=0, STREAK=0;
 try{XP=parseInt(localStorage.getItem("wt-hm-xp")||"0",10)||0;STREAK=parseInt(localStorage.getItem("wt-hm-streak")||"0",10)||0}catch(e){}
 try{played=sessionStorage.getItem("wt-hm-played")==="1"}catch(e){}
@@ -285,18 +285,7 @@ function showTip(b,t){
 function hideTip(){if(tipEl&&tipEl.parentNode)tipEl.parentNode.removeChild(tipEl);tipEl=null}
 /* ---------- reveal (after the game) ---------- */
 function revealMap(){
- revealed=true;
- var map=$("hm-map");
- map.querySelectorAll(".hm-tile").forEach(function(b,i){
-  var t=groupOf(b.dataset.name); if(!t)return;
-  var c=colorFor(t.pct);
-  if(REDUCED){b.style.background=c.bg;b.style.color=c.fg;return}
-  b.style.transitionDelay=(i*45)+"ms";
-  b.classList.add("hm-flip");
-  setTimeout(function(){b.style.background=c.bg;b.style.color=c.fg},40);
-  setTimeout(function(){b.classList.remove("hm-flip");b.style.transitionDelay=""},700+i*45);
- });
- /* draw the eye to the biggest mover with a gentle pulse */
+ /* Colours are on from the start now, so a guess only draws the eye to the biggest mover. */
  var bm=biggestMover();
  if(bm&&!REDUCED){
   var tile=document.querySelector('.hm-tile[data-id="'+bm.id+'"]');
@@ -323,9 +312,8 @@ function buildGame(){
  chips.appendChild(txt("span","hm-chip","⭐ XP: "+XP));
  chips.appendChild(txt("span","hm-chip","🔥 Streak: "+STREAK));
  box.appendChild(chips);
- box.appendChild(txt("p","hm-game-note","One guess per visit. The map colours reveal after you pick."));
+ box.appendChild(txt("p","hm-game-note","One guess per visit. Look at the colours — the darkest green rose the most."));
  G.appendChild(box);
- revealed=false;
 }
 function pickGroup(name,box){
  if(played)return;
