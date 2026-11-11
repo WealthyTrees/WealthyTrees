@@ -58,17 +58,22 @@
     if (spPopTimer) { clearTimeout(spPopTimer); spPopTimer = null; }
     if (spPop) { spPop.classList.remove("on"); spPop.classList.remove("above"); spPopAnchor = null; }
   }
-  function showSproutPop(anchor) {
-    var p = sproutPopEl();
-    if (spPopAnchor === anchor && p.classList.contains("on")) { hideSproutPop(); return; }
-    spPopAnchor = anchor;
-    p.classList.add("on"); p.classList.remove("above");
+  function placeSproutPop(anchor) {
+    var p = spPop;
+    p.classList.remove("above");
     var r = anchor.getBoundingClientRect();
     var pw = p.offsetWidth, ph = p.offsetHeight;
     var left = Math.max(8, Math.min(window.innerWidth - pw - 8, r.left));
     var top = r.bottom + 10;
     if (top + ph > window.innerHeight - 8) { top = Math.max(8, r.top - 10 - ph); p.classList.add("above"); }
     p.style.left = left + "px"; p.style.top = top + "px";
+  }
+  function showSproutPop(anchor) {
+    var p = sproutPopEl();
+    if (spPopAnchor === anchor && p.classList.contains("on")) { hideSproutPop(); return; }
+    spPopAnchor = anchor;
+    p.classList.add("on");
+    placeSproutPop(anchor);
     if (spPopTimer) clearTimeout(spPopTimer);
     spPopTimer = setTimeout(hideSproutPop, 6000);
   }
@@ -77,7 +82,16 @@
     if (av) { showSproutPop(av); return; }
     hideSproutPop();
   });
-  addEventListener("scroll", function () { if (spPop && spPop.classList.contains("on")) hideSproutPop(); }, { passive: true });
+  addEventListener("scroll", function () {
+    /* The pop-up stays glued to its card while the card is on screen — so the
+       scroll the opening click itself causes (the browser scrolling the bud
+       into view) moves the pop-up with the card instead of closing it.
+       Once the card scrolls off screen, the pop-up goes away. */
+    if (!spPop || !spPop.classList.contains("on") || !spPopAnchor) return;
+    var r = spPopAnchor.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < window.innerHeight) placeSproutPop(spPopAnchor);
+    else hideSproutPop();
+  }, { passive: true });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") hideSproutPop();
     if ((e.key === "Enter" || e.key === " ") && e.target && e.target.classList && e.target.classList.contains("sp-av")) {
