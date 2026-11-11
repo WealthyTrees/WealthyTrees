@@ -25,6 +25,7 @@ STRICT — NEVER BREAK THESE:
 6. If the user asks for a calculation, use the "Calculated result" in the context exactly — do not recompute it.
 7. Reply in the same language as the question (Hindi questions get a simple Hindi-English mix is fine, but keep it simple).
 8. "Why did it move?" questions (why gold, Nifty, Bank Nifty, the rupee or crude rose or fell TODAY) are about the past, so ALWAYS explain them — never refuse, and never answer with "no one can know". Use the headlines in the context to find the trigger and the live price for how much it moved, and explain the mechanism in plain English — for example, a weaker dollar often lifts gold; an RBI step moves banks; foreign-investor buying lifts indices. If the headlines name a trigger (an RBI decision, a global cue, a foreign-investor flow figure), use it and say so. If they do not, explain the usual drivers and say plainly that today's exact trigger is not in the news, then point to the Learn module that explains the cause in detail.
+9. Never start an answer with a greeting ("Hello", "Hi", "Hey", "Namaste") — the chat already greets the user. Begin directly with the answer itself.
 Return ONLY the answer text (plain text with <a href="...">links</a> where useful). No markdown, no JSON.`;
 
 const CALCS = [
@@ -259,6 +260,17 @@ const json = (obj, status) => new Response(JSON.stringify(obj), {
   headers: { "content-type": "application/json", "cache-control": "no-store" },
 });
 
+// The chat already says hi — strip a leading greeting so answers start with the content.
+function stripGreeting(t) {
+  var s = t || "";
+  for (var i = 0; i < 2; i++) {
+    var n = s.replace(/^(hello|hi|hey|namaste|good\s+(morning|afternoon|evening))[!,.]?\s+/i, "");
+    if (n === s) break;
+    s = n;
+  }
+  return s.trim() ? s : t;
+}
+
 export async function onRequestPost(ctx) {
   const env = ctx.env || {};
   let body = {};
@@ -318,7 +330,7 @@ export async function onRequestPost(ctx) {
   if (!text) {
     return json({ answer: "Sprout is taking a short break right now. Try one of the quick questions, or come back in a minute — the Learn pages and calculators are always there.", links: LEARN.slice(0, 3) });
   }
-  return json({ answer: text });
+  return json({ answer: stripGreeting(text) });
 }
 
 export async function onRequestGet(ctx) {

@@ -56,12 +56,16 @@
   var chat = el("div", "sp-chat");
   chat.id = "spChat"; chat.setAttribute("role", "dialog"); chat.setAttribute("aria-label", "Ask Sprout");
   var head = el("div", "sp-head");
+  /* Sprout's logo in the header: the same green two-leaf bud, 30px. */
+  var logo = el("span", "sp-logo");
+  logo.style.cssText = "flex:0 0 auto;display:flex;align-items:center";
+  logo.innerHTML = '<svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false"><path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/><path d="M29 34 C24 29 19 23 14 17" stroke="#d9f0b4" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/><path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>';
   var tt = el("div");
   tt.append(el("b", "", "Ask Sprout"));
-  var sm = el("small", "", "Your finance friend · replies in plain English");
+  var sm = el("small", "", "Your finance friend");
   tt.append(sm);
   var x = el("button", "x"); x.type = "button"; x.setAttribute("aria-label", "Close"); x.textContent = "×";
-  head.append(tt, x);
+  head.append(logo, tt, x);
   var msgs = el("div", "sp-msgs"); msgs.id = "spMsgs";
   var chips = el("div", "chips");
   renderChips(CHIPS); // fallback chips first; today's questions replace them when the panel opens

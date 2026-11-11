@@ -7,6 +7,18 @@
 
   var stories = [], topic = "All", seen = {}, firstDraw = true, open = {}, xp = {}, loaded = false;
 
+  /* Sprout's face is always the same green two-leaf bud — never another face.
+     The bud is a picture on each card; it does nothing when tapped (no pop-up). */
+  function face() {
+    return '<svg class="sp-bud" viewBox="0 0 64 64" aria-hidden="true" focusable="false">'
+      + '<path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>'
+      + '<path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>'
+      + '<path d="M29 34 C24 29 19 23 14 17" stroke="#d9f0b4" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+      + '<path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/>'
+      + '<path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+      + '</svg>';
+  }
+
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
   function ago(ms) {
     var m = Math.round((Date.now() - ms) / 60000);
@@ -17,7 +29,8 @@
   var intro = el("div", "sp-row sp-intro");
   var im = el("div", "sp-main"), imeta = el("div", "sp-meta"), ib = el("div", "sp-bub"), say = el("p", "sp-say");
   imeta.append(el("b", "", "Sprout"), el("span", "pill live", "\u25CF LIVE"));
-  ib.append(say); im.append(imeta, ib); intro.append(im); ol.before(intro);
+  var iav = el("span", "sp-av"); iav.innerHTML = face();
+  ib.append(say); im.append(imeta, ib); intro.append(iav, im); ol.before(intro);
   var typed = "", born = Date.now();
   function dots() { say.innerHTML = '<span class="dots3" role="status" aria-label="Sprout is typing"><i></i><i></i><i></i></span>'; }
   function typeOut(text, instant) {
@@ -38,6 +51,7 @@
     ol.innerHTML = "";
     for (var i = 0; i < 3; i++) {
       var li = el("li", "sp-row sp-skel");
+      var sav = el("span", "sp-av"); sav.innerHTML = face(); li.append(sav);
       var m = el("div", "sp-main"), b = el("div", "sp-bub");
       b.innerHTML = '<span class="sk" style="width:35%"></span><span class="sk" style="width:92%"></span><span class="sk" style="width:78%"></span>';
       if (i === 0) { b.setAttribute("role", "status"); b.append(el("span", "sp-ty", "Sprout is pulling the latest\u2026")); }
@@ -48,6 +62,7 @@
   function row(s, idx, fresh) {
     var id = s.id, li = el("li", "sp-row" + (fresh ? " pop" : ""));
     if (fresh) li.style.animationDelay = Math.min(idx, 8) * 60 + "ms";
+    var av = el("span", "sp-av"); av.innerHTML = face(); li.append(av);
     var main = el("div", "sp-main"), meta = el("div", "sp-meta"), tm = el("time", "", ago(s.t)); tm.dataset.t = s.t;
     meta.append(el("b", "", "Sprout"), tm);
     var hot = Date.now() - s.t < 1800000;

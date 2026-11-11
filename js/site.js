@@ -88,5 +88,5 @@
    Loads on every page that loads site.js. */
 (function () {
   var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/sprout-ai.css?v=4"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/js/sprout-ai.js?v=3"; s.defer = true; document.body.appendChild(s);
+  var s = document.createElement("script"); s.src = "/js/sprout-ai.js?v=4"; s.defer = true; document.body.appendChild(s);
 })();
