@@ -9,7 +9,10 @@
   /* timings: Markets is slower and calmer than Learn */
   var T = M ? { lift: 3300, type: 1900, spawn: 2.6, tape: 12, stag: 80, draw: 2.6, chip: 1.5, vy: .7, safe: 5000 } : { lift: 1500, type: 1100, spawn: 1.25, tape: 7, stag: 45, draw: 1.5, chip: .9, vy: 1, safe: 3200 };
   var TXT = M ? "Welcome to the world of markets" : "Let's learn the markets";
-  var CH = M ? ["Interactive charts", "Practice game", "free"] : ["6 modules", "23 lessons", "free"];
+  /* Learn shows no chips: "6 modules / 23 lessons" only counted the Beginner track and
+     understated the course (Intermediate adds 6 more modules / 36 lessons), so it misled
+     readers. Markets keeps its chips — they are accurate for that page. */
+  var CH = M ? ["Interactive charts", "Practice game", "free"] : [];
   var INK = dk ? "#e8f1ec" : "#16231d", BG = M ? "#0b1612" : dk ? "#101b16" : "#fffdf6", LN = dk ? "rgba(15,138,95,.16)" : "rgba(15,138,95,.14)";
   var css = ".wti-lock,.wti-lock body{overflow:hidden!important}.wti{position:fixed;inset:0;z-index:99999;overflow:hidden;cursor:pointer;pointer-events:auto}"
     + ".wti-c{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background-color:" + BG + ";will-change:transform;transition:transform .85s cubic-bezier(.7,0,.25,1);border-bottom:10px solid #e0a82e;box-shadow:0 12px 30px rgba(0,0,0,.35);"
@@ -43,7 +46,7 @@
     extra = '<div class="wti-tape" aria-hidden="true"><div>' + tp + tp + '</div></div><svg class="wti-ch" viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true">' + k + '<path class="ma" pathLength="1" d="' + ma + '"/></svg>';
   }
   var o = document.createElement("div"); o.className = "wti"; o.setAttribute("role", "status"); o.setAttribute("aria-label", TXT);
-  o.innerHTML = '<div class="wti-c">' + extra + '<div class="wti-in"><img src="/assets/logo' + (dk ? "-dark" : "") + '.svg" alt=""><h2><span></span><i></i></h2><div class="wti-chips">' + CH.map(function (c) { return "<span>" + c + "</span>"; }).join("") + '</div><div class="wti-skip">Tap to skip</div></div></div><canvas class="wti-cv"></canvas>';
+  o.innerHTML = '<div class="wti-c">' + extra + '<div class="wti-in"><img src="/assets/logo' + (dk ? "-dark" : "") + '.svg" alt=""><h2><span></span><i></i></h2>' + (CH.length ? '<div class="wti-chips">' + CH.map(function (c) { return "<span>" + c + "</span>"; }).join("") + '</div>' : '') + '<div class="wti-skip">Tap to skip</div></div></div><canvas class="wti-cv"></canvas>';
   root.appendChild(o); root.classList.add("wti-lock");
   var sp = o.querySelector("h2 span"), n = 0, ty = setInterval(function () { sp.textContent = TXT.slice(0, ++n); if (n >= TXT.length) clearInterval(ty); }, Math.round(T.type / TXT.length));
   /* falling coins: sprites are drawn once, then only copied each frame (cheap) */
