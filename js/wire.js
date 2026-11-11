@@ -27,16 +27,52 @@
     return '<g class="sp-badge">' + c + g + '</g>';
   }
   function face(m, topic) {
-    var mouth = m === "up" ? "M18 34q6 6.5 12 0" : m === "down" ? "M19 37q5 -4.5 10 0" : "M19.5 35.4q4.5 2.4 9 0";
-    return '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">' +
-      '<circle cx="24" cy="27" r="14" class="sp-body"/>' +
-      '<g class="sp-eye"><circle cx="18.6" cy="27.6" r="3.5" fill="#fff"/><circle class="sp-pu" cx="18.8" cy="27.9" r="1.7" fill="#0e1f1a"/></g>' +
-      '<g class="sp-eye"><circle cx="29.4" cy="27.6" r="3.5" fill="#fff"/><circle class="sp-pu" cx="29.6" cy="27.9" r="1.7" fill="#0e1f1a"/></g>' +
-      '<path d="' + mouth + '" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>' +
-      '<g class="sp-cap"><path d="M12.2 20.6Q12 9.4 24 9.4Q36 9.4 35.8 20.6Z" class="sp-cp"/><path d="M10 20.4Q24 25 38 20.4L38 22.4Q24 27 10 22.4Z" class="sp-cp"/><rect x="12.4" y="16.6" width="23.2" height="2.2" fill="#e0b04f"/><path d="M24 11.2L24.9 13.1L27 13.3L25.4 14.6L25.9 16.6L24 15.5L22.1 16.6L22.6 14.6L21 13.3L23.1 13.1Z" fill="#e0b04f"/></g>' +
-      '<g class="sp-mic"><path d="M8.6 38.2L5.4 45.2" class="sp-mh"/><circle cx="9.4" cy="36.2" r="3.3" fill="#e0b04f"/><path class="sp-wave" d="M4.6 33.4q-1.8 2.8 0 5.6M2.4 32q-3 4.2 0 8.4" fill="none"/></g>' +
-      badge(topic) + '</svg>';
+    /* Sprout's face is always the same green two-leaf bud — never another face. */
+    return '<svg class="sp-bud" viewBox="0 0 64 64" aria-hidden="true" focusable="false">'
+      + '<path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>'
+      + '<path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>'
+      + '<path d="M29 34 C24 29 19 23 14 17" stroke="#d9f0b4" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+      + '<path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/>'
+      + '<path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+      + '</svg>';
   }
+  /* Sprout says hello: tap the golden bud for a small playful pop-up. */
+  var spPop = null, spPopAnchor = null;
+  function sproutPopEl() {
+    if (spPop) return spPop;
+    spPop = document.createElement("div");
+    spPop.className = "sp-pop";
+    spPop.setAttribute("role", "dialog");
+    spPop.setAttribute("aria-label", "Sprout says hello");
+    spPop.innerHTML = '<button type="button" class="sp-pop-x" aria-label="Close">\u00D7</button><span class="sp-pop-bud">' + face("calm", "") + '</span><p>Hi! I\u2019m Sprout, your personal news reporter.</p>';
+    document.body.appendChild(spPop);
+    return spPop;
+  }
+  function hideSproutPop() { if (spPop) { spPop.classList.remove("on"); spPop.classList.remove("above"); spPopAnchor = null; } }
+  function showSproutPop(anchor) {
+    var p = sproutPopEl();
+    if (spPopAnchor === anchor && p.classList.contains("on")) { hideSproutPop(); return; }
+    spPopAnchor = anchor;
+    p.classList.add("on"); p.classList.remove("above");
+    var r = anchor.getBoundingClientRect();
+    var pw = p.offsetWidth, ph = p.offsetHeight;
+    var left = Math.max(8, Math.min(window.innerWidth - pw - 8, r.left));
+    var top = r.bottom + 10;
+    if (top + ph > window.innerHeight - 8) { top = Math.max(8, r.top - 10 - ph); p.classList.add("above"); }
+    p.style.left = left + "px"; p.style.top = top + "px";
+  }
+  document.addEventListener("click", function (e) {
+    if (e.target.closest && e.target.closest(".sp-pop-x")) { hideSproutPop(); return; }
+    var av = e.target.closest ? e.target.closest(".sp-av") : null;
+    if (av) { showSproutPop(av); return; }
+    if (spPop && spPop.classList.contains("on") && !e.target.closest(".sp-pop")) hideSproutPop();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") hideSproutPop();
+    if ((e.key === "Enter" || e.key === " ") && e.target && e.target.classList && e.target.classList.contains("sp-av")) {
+      e.preventDefault(); showSproutPop(e.target);
+    }
+  });
   // eyes follow the cursor (only on devices with a mouse)
   (function () {
     if (!window.matchMedia || !matchMedia("(hover:hover)").matches) return;
@@ -58,7 +94,7 @@
   var safe = function (u) { return /^https?:\/\//i.test(u || ""); };
 
   var intro = el("div", "sp-row sp-intro");
-  intro.innerHTML = '<span class="sp-av">' + face("up", "live") + "</span>";
+  intro.innerHTML = '<span class="sp-av" tabindex="0" role="button" aria-label="Sprout — tap to say hello">' + face("up", "live") + "</span>";
   var im = el("div", "sp-main"), imeta = el("div", "sp-meta"), ib = el("div", "sp-bub"), say = el("p", "sp-say");
   imeta.append(el("b", "", "Sprout"), el("span", "pill live", "\u25CF LIVE"));
   ib.append(say); im.append(imeta, ib); intro.append(im); ol.before(intro);
@@ -81,7 +117,7 @@
   function skeleton() {
     ol.innerHTML = "";
     for (var i = 0; i < 3; i++) {
-      var li = el("li", "sp-row sp-skel"); li.innerHTML = '<span class="sp-av">' + face("calm", "") + "</span>";
+      var li = el("li", "sp-row sp-skel"); li.innerHTML = '<span class="sp-av" tabindex="0" role="button" aria-label="Sprout — tap to say hello">' + face("calm", "") + "</span>";
       var m = el("div", "sp-main"), b = el("div", "sp-bub");
       b.innerHTML = '<span class="sk" style="width:35%"></span><span class="sk" style="width:92%"></span><span class="sk" style="width:78%"></span>';
       if (i === 0) { b.setAttribute("role", "status"); b.append(el("span", "sp-ty", "Sprout is pulling the latest\u2026")); }
@@ -92,7 +128,7 @@
   function row(s, idx, fresh) {
     var id = s.id, li = el("li", "sp-row" + (fresh ? " pop" : ""));
     if (fresh) li.style.animationDelay = Math.min(idx, 8) * 60 + "ms";
-    var av = el("span", "sp-av"); av.innerHTML = face(moodOf(s), s.topic || "News"); li.append(av);
+    var av = el("span", "sp-av"); av.tabIndex = 0; av.setAttribute("role", "button"); av.setAttribute("aria-label", "Sprout — tap to say hello"); av.innerHTML = face(moodOf(s), s.topic || "News"); li.append(av);
     var main = el("div", "sp-main"), meta = el("div", "sp-meta"), tm = el("time", "", ago(s.t)); tm.dataset.t = s.t;
     meta.append(el("b", "", "Sprout"), tm);
     var hot = Date.now() - s.t < 1800000;
