@@ -3,6 +3,9 @@
 // removes tips, predictions, price-update cards and live blogs, and caches for 5 minutes.
 // getHeadlines() is also used by /api/pulse. No AI is used here.
 //
+// v20: Google News was the lag — it took 7–9s and often answered 503 (blocked), while the
+// eight publisher feeds all answer in under 0.3s. So Google News now gets 3s (was 9s) and the
+// overall wait is 6s (was 12s). The wire now loads in ~1s instead of ~9s when the cache is cold.
 // v19: added RBI and PIB direct feeds, Google News gets 9s, lifestyle/routine items filtered.
 // v18b: removed Business Standard and Financial Express feeds (they answered 403 'blocked'; their stories still arrive via Google News).
 // v18: publishers first, Google News last and only twice, at most 5 requests at once, a 12-second overall limit,
@@ -100,7 +103,7 @@ function parse(xml, cat) {
   return out.slice(0, 15);
 }
 
-const CONCURRENCY = 5, FEED_MS = 5000, GN_MS = 9000, TOTAL_MS = 12000, LAST = "headlines:last";
+const CONCURRENCY = 5, FEED_MS = 5000, GN_MS = 3000, TOTAL_MS = 6000, LAST = "headlines:last";
 
 async function pullFeed(f, t00) {
   const t0 = Date.now(), ctl = new AbortController(), ms_ = f.name.startsWith("Google") ? GN_MS : FEED_MS, timer = setTimeout(() => ctl.abort(), ms_);
