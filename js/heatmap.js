@@ -601,6 +601,30 @@ function showError(){
  msg.appendChild(a);
  (map||document.querySelector("main")).appendChild(msg);
 }
+/* ---------- auto-refresh: prices tick on their own, every minute ---------- */
+function refreshPrices(){
+ if(document.hidden||sproutOpen)return;
+ var dataP=null;
+ try{dataP=window.WTHM.load()}catch(e){return}
+ dataP.then(function(d){
+  if(!d||!d.tiles||d.tiles.length<6)return;
+  TILES=d.tiles; MOOD=d.mood||0; FETCHED=d.fetched||"";
+  var e=moodEntry();
+  var heroEl=$("hm-hero");
+  var curHero=heroEl?heroEl.textContent.replace(/\s+/g," ").trim():"";
+  var newHero=e?e.hero:"";
+  layoutMap(); buildMood(); buildFoot();
+  if(newHero&&newHero!==curHero)buildHero();
+  /* keep the winner's gold outline after a guess */
+  if(played){
+   var win=bestIndian();
+   if(win){
+    var tile=document.querySelector('.hm-tile[data-id="'+win.id+'"]');
+    if(tile){tile.classList.add("hm-winner-tile");tile.classList.add("hm-pulse")}
+   }
+  }
+ }).catch(function(){/* keep the last good prices if a refresh fails */});
+}
 /* ---------- init ---------- */
 function init(){
  var sproutP=fetch("/data/heatmap-sprout.json").then(function(r){return r.json()}).then(function(j){SPROUT=j}).catch(function(){SPROUT=null});
@@ -629,6 +653,10 @@ function init(){
  }else{
   window.addEventListener("resize",function(){layoutMap()});
  }
+ /* prices refresh on their own: every minute, when the tab comes back, and when back online */
+ setInterval(refreshPrices,60000);
+ document.addEventListener("visibilitychange",function(){if(!document.hidden)refreshPrices()});
+ window.addEventListener("online",refreshPrices);
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
