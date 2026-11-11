@@ -1,119 +1,127 @@
 {
- "date": "Sunday, 08 November 2026",
+ "date": "Wednesday, 11 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,319",
-   "change": 1.1
+   "value": "25,255",
+   "change": 0.84
   },
   {
    "name": "SENSEX",
-   "value": "82,303",
-   "change": 1.48
+   "value": "81,879",
+   "change": 0.95
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,063",
-   "change": 0.81
+   "value": "4,039",
+   "change": 0.21
   },
   {
    "name": "CRUDE WTI",
-   "value": "$86.7",
-   "change": 0.71
+   "value": "$87.1",
+   "change": 1.27
   },
   {
    "name": "USD/INR",
-   "value": "93.81",
-   "change": -0.12
+   "value": "93.68",
+   "change": -0.25
   },
   {
    "name": "S&P 500",
-   "value": "7,521",
-   "change": -0.38
+   "value": "7,591",
+   "change": 0.94
   },
   {
    "name": "NASDAQ",
-   "value": "25,066",
-   "change": -0.74
+   "value": "25,459",
+   "change": 1.57
   },
   {
    "name": "DOW",
-   "value": "52,232",
-   "change": -0.3
+   "value": "52,169",
+   "change": -0.12
   }
  ],
  "items": [
   {
-   "category": "US Markets",
-   "title": "American Equities Drop Sharply as Technology Enthusiasm Cools",
-   "summary": "United States indices experienced an extensive contraction totaling trillions of dollars in value as enthusiasm for artificial intelligence hardware wavered. Shifts in governance and skepticism regarding capital expenditures on technology infrastructure fueled the broader retreat.",
-   "why": "Extensive swings in major overseas exchanges frequently influence international liquidity and affect risk appetite across emerging territories.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-street-grapples-with-5-7-trillion-rout-as-ai-bets-unwind/articleshow/135628032.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "United States Markets Track Inflation Data After Tech Volatility",
-   "summary": "Market participants in the United States are monitoring forthcoming consumer price metrics and enterprise reports after an intense decline and subsequent recovery. Political changes after legislative balloting have introduced skepticism over regulatory approvals and construction schedules for computing facilities.",
-   "why": "Developments within premier overseas economies often set the tone for global risk assets and foreign institutional flows.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/us-markets-next-week-9-14-nov-after-crash-and-bounce-back-investors-eye-inflation-data-tech-earnings-and-more-11794072283036.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Gold Values Soften as US Labor Numbers Strengthen Dollar",
-   "summary": "Prices for the yellow metal dropped after American employment additions beat forecasts, supporting both bond yields and the greenback. A resilient hiring environment encouraged views that borrowing costs could stay higher for longer.",
-   "why": "Gold typically faces headwinds when yields and currency valuations rise, as non-yielding assets become comparatively less attractive.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-drops-as-strong-us-payrolls-boost-dollar-yields/articleshow/135626183.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "Crude Oil Plunges Significantly While Gold Records Strong Week",
-   "summary": "Crude petroleum experienced a sharp decline exceeding twelve percent over the week, even as bullion marked its best weekly advance since late summer.",
-   "why": "Energy price shifts directly influence transportation expenses, manufacturing overhead, and broader retail inflation in importing countries.",
-   "source": "The Hawk",
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZ0FKTFlDUFV3STRYTGQ4bWtZUjJyZVNQOHB0N3ZYTEJ0cWQ3S0dzVV9VMW9EN3pETXVfeFFreXFhampNY3RERjhHVHNPWExqcU04RGxfd3Y5TFNacTV5YUNta3pPQmdhMm5BVVpIYWFkTjhqbnozZURCeUk3SC0zU1k5T3BxZFQxLUlORUlZQnFZWDhCNy05SEVla0tZR2g1VkhacHI3cFZxWE5aTVJRUWdaalY4cllPQ3RqRThTVG00Y0U?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Overseas Capital Rotates Into Asian Equities Amid Global Tech Shifts",
-   "summary": "A reduction in artificial intelligence holdings following American midterm voting has prompted global fund managers to reevaluate Asian portfolios. This shift has restored buying interest in previously discounted shares across India and China.",
-   "why": "Changes in global asset concentration can trigger foreign capital inflows that provide substantial support to domestic bourses.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/how-anti-ai-trade-after-us-midterm-election-results-is-reviving-indian-chinese-stocks-11794101102138.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Beverage Bottling Giant Submits Paperwork for Public Share Sale",
-   "summary": "A major soft-drink packaging partner in India submitted preliminary documentation to execute a secondary public share offering. The planned transaction involves offloading up to fifteen percent equity by the primary owner, providing zero new funding to corporate coffers.",
-   "why": "In pure secondary offerings, proceeds flow to existing shareholders rather than expanding the company's operational treasury.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/upcoming-ipo-coca-cola-india-bottler-hcch-files-drhp-for-public-issue-majority-shareholder-to-sell-up-to-15-stake-11794070690577.html"
-  },
-  {
-   "category": "Equity",
-   "title": "Domestic Indices Post Exceptional Weekly Gains in Broad Advance",
-   "summary": "The Sensex surged over eight percent to surpass eighty-one thousand, while the Nifty crossed the twenty-five thousand mark again. Total investor valuation climbed by nearly twenty-nine lakh crore rupees during the five-day trading period.",
-   "why": "Sharp weekly index rallies reflect broad-based market capitalization growth across listed domestic firms.",
-   "source": "HDFC Sky",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRTMyUGpWS0Y4aFFwV0RNU01HRnZTdlBFZW9rcWYwT1Vod2lSVnpHeDZZbWtKWFZuMlJZblN5SHlUMWxpWnY1bnVmYk5XQW9ubEdSTnZzY016d1lOVl9rejdqcm9SdF9KTm54cjYwU3lpUWxDbC12VE1BR3J2emdRbnFJbVJoWGlsbTZiQWlkekdmWFRaQUo3ZkJnZFg5Y3NpTU96UW9XRFVDX0RydjNVVUpWNnZpYjFSRHljZG9kVFJwZTZMNk05ZW5B?oc=5"
-  },
-  {
    "category": "Economy",
-   "title": "Financial Watchdog Decreases Position Ceilings for Currency Derivatives",
-   "summary": "The securities regulator curtailed trading allowances on unhedged foreign currency derivatives from one hundred million dollars to five million dollars. This intervention aims to rein in speculative positions, support the declining rupee, and protect authentic commercial hedging activity.",
-   "why": "Limiting speculative derivative exposure helps minimize excessive foreign exchange volatility that can disrupt cross-border trade planning.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/will-sebi-s-new-rules-on-currency-derivatives-help-the-falling-rupee-11793955300780.html"
+   "title": "Dollar firms as hot inflation, hawkish Fed talk lift rate-hike bets",
+   "summary": "The US dollar has gained against multiple currencies due to expectations of Federal Reserve interest rate hikes. Inflation data revealed an increase in consumer prices, prompting trader speculation ab",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-firms-as-hot-inflation-hawkish-fed-talk-lift-rate-hike-bets/articleshow/135739033.cms"
   },
   {
-   "category": "Economy",
-   "title": "Central Bank Announces Short Term Auction to Manage Cash Needs",
-   "summary": "The Reserve Bank of India announced a four-day variable rate repo auction under its liquidity adjustment facility. The measure follows an assessment of short-term cash balances across the banking sector.",
-   "why": "Variable rate repo auctions help monetary authorities smooth short-term cash deficits across the commercial banking system.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63943"
+   "category": "US Markets",
+   "title": "Nasdaq futures rise nearly 2% as CoreWeave earnings calm AI spending fears",
+   "summary": "Futures for the S&amp;P 500 and Nasdaq 100 have shown gains following CoreWeave's impressive earnings announcement. Investors reacted positively as CoreWeave predicts profitability by the first half o",
+   "why": "US markets set the mood for global trading.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-futures-rise-nearly-2-as-coreweave-earnings-calm-ai-spending-fears/articleshow/135738901.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "S&amp;P 500, Nasdaq futures gain as CoreWeave results ease AI jitters: Stock",
+   "summary": "S&amp;P 500, Nasdaq futures gain as CoreWeave results ease AI jitters: Stock Market Live Updates",
+   "why": "US markets set the mood for global trading.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-fed-anthropic-ipo-coreweave-nvidia-marvell-ai-chip-fed-rate-inflation-treasury-yield-news-11th-november-2026/liveblog/135739245.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Fairfax Financial likely to exit IIFL Finance, sources say",
+   "summary": "Canada's Fairfax Financial Holdings intends to divest its nearly 11% stake in IIFL Finance soon. The sale aims to raise funds for acquiring a significant stake in IDBI Bank from the Indian government.",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fairfax-financial-likely-to-exit-iifl-finance-sources-say/articleshow/135738516.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Sterling drops against firmer dollar as markets price in a hawkish Fed",
+   "summary": "The pound fell against the dollar following strong US inflation data and comments from Federal Reserve officials. Despite recent hawkish expectations supporting the pound, crude oil prices are rising,",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/sterling-drops-against-firmer-dollar-as-markets-price-in-a-hawkish-fed/articleshow/135738659.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Anthropic IPO: A $1.4 trillion bet on the future of AI",
+   "summary": "Anthropic IPO: A $1.4 trillion bet on the future of AI",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/anthropic-ipo-a-1-4-trillion-bet-on-the-future-of-ai/videoshow/135738282.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Realty firms' land acquisition falls 56% to 1,445 acres in Jan-Sep: Anarock",
+   "summary": "In the first nine months of 2026, a notable drop in land acquisition activities by Indian real estate firms has been observed. Anarock attributes this decline to developers adopting a cautious strateg",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/realty-firms-land-acquisition-falls-56-to-1445-acres-in-jan-sep-anarock/articleshow/135736891.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "US Treasury rout hands India's 10-year bond its worst day in a",
+   "summary": "On Wednesday, the Indian rupee gained strength against the dollar, reaching its highest point since April. This improvement was influenced by foreign investments in local stocks and upbeat sentiment i",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-rout-hands-indias-10-year-bond-its-worst-day-in-a-month/articleshow/135736836.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Nifty 50 target: Index in sweet spot? 28,000 soon? HSBC, Citi and",
+   "summary": "Citi raised its Nifty 50 target to 28,000, while HSBC upgraded Indian equities to overweight and Bernstein lifted its target to 26,100.",
+   "why": "Share prices move on news like this.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/nifty-50-target-index-in-sweet-spot-28-000-soon-hsbc-citi-and-bernstein-raise-targets-after-sharp-13-5-recovery-11794402943483.html"
+  },
+  {
+   "category": "Equity",
+   "title": "EAAA India Alternatives Q2 results 2026: Net profit jumps 27%; 140% interim",
+   "summary": "EAAA India Alternatives reported a 26.9% year-on-year rise in Q2 FY27 net profit to  ₹88.10 crore, while revenue grew 12.9% to  ₹251.49 crore. Funds managed increased 28% to  ₹49,164 crore. The compan",
+   "why": "Share prices move on news like this.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/eaaa-india-alternatives-q2-results-2026-net-profit-jumps-27-140-interim-dividend-of-rs-7-share-check-record-date-11794399717392.html"
   }
  ]
 }
