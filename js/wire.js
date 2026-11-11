@@ -36,8 +36,9 @@
       + '<path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
       + '</svg>';
   }
-  /* Sprout says hello: tap the golden bud for a small playful pop-up. */
-  var spPop = null, spPopAnchor = null;
+  /* Sprout says hello: tap the golden bud for a small playful pop-up.
+     It disappears by itself: after 6 seconds, on scroll, or on any tap that is not the bud. */
+  var spPop = null, spPopAnchor = null, spPopTimer = null;
   function sproutPopEl() {
     if (spPop) return spPop;
     spPop = document.createElement("div");
@@ -48,7 +49,10 @@
     document.body.appendChild(spPop);
     return spPop;
   }
-  function hideSproutPop() { if (spPop) { spPop.classList.remove("on"); spPop.classList.remove("above"); spPopAnchor = null; } }
+  function hideSproutPop() {
+    if (spPopTimer) { clearTimeout(spPopTimer); spPopTimer = null; }
+    if (spPop) { spPop.classList.remove("on"); spPop.classList.remove("above"); spPopAnchor = null; }
+  }
   function showSproutPop(anchor) {
     var p = sproutPopEl();
     if (spPopAnchor === anchor && p.classList.contains("on")) { hideSproutPop(); return; }
@@ -60,13 +64,15 @@
     var top = r.bottom + 10;
     if (top + ph > window.innerHeight - 8) { top = Math.max(8, r.top - 10 - ph); p.classList.add("above"); }
     p.style.left = left + "px"; p.style.top = top + "px";
+    if (spPopTimer) clearTimeout(spPopTimer);
+    spPopTimer = setTimeout(hideSproutPop, 6000);
   }
   document.addEventListener("click", function (e) {
-    if (e.target.closest && e.target.closest(".sp-pop-x")) { hideSproutPop(); return; }
     var av = e.target.closest ? e.target.closest(".sp-av") : null;
     if (av) { showSproutPop(av); return; }
-    if (spPop && spPop.classList.contains("on") && !e.target.closest(".sp-pop")) hideSproutPop();
+    hideSproutPop();
   });
+  addEventListener("scroll", function () { if (spPop && spPop.classList.contains("on")) hideSproutPop(); }, { passive: true });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") hideSproutPop();
     if ((e.key === "Enter" || e.key === " ") && e.target && e.target.classList && e.target.classList.contains("sp-av")) {
