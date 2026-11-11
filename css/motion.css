@@ -23,11 +23,13 @@ body{overflow-x:clip}
 @keyframes wtbob{50%{transform:translateY(-14px) rotate(7deg) scale(1.05)}}
 @media(max-width:760px){.wt-st{width:40px}.wt-st:nth-child(n+4),.wt-st:nth-child(1){display:none}}
 .wt-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.1rem 0 0}
-.wt-pills span{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem .35rem .4rem;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);font-size:.88rem;font-weight:600;transition:transform .25s var(--ease),border-color .25s}
-.wt-pills span i{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg1);color:var(--fg1)}
-.wt-pills span svg{width:60%;height:60%}
-@media(hover:hover){.wt-pills span:hover{transform:translateY(-3px) rotate(-1.5deg);border-color:var(--gold)}.wt-pills span:hover i{animation:wtwob .6s}}
-@keyframes wtwob{30%{transform:rotate(-18deg) scale(1.25)}60%{transform:rotate(14deg) scale(1.2)}}
+.wt-pills .wt-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem .35rem .4rem;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);font:inherit;font-size:.88rem;font-weight:600;color:inherit;text-decoration:none;cursor:pointer;transition:border-color .25s}
+.wt-pills .wt-pill i{flex:0 0 auto;display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg1);color:var(--fg1)}
+/* The icon is fixed (no float, no wobble) and sized explicitly. The hero's broad
+   ".hero svg" rules (padding/background/max-width) leaked into these icons and made
+   them invisible inside their circle on phones — so every leaking property is reset here. */
+.wt-pills .wt-pill svg{width:1.15rem;height:1.15rem;max-width:none;padding:0;margin:0;background:none;border-radius:0;order:0;justify-self:auto;animation:none;filter:none}
+@media(hover:hover){.wt-pills .wt-pill:hover{border-color:var(--gold)}}
 
 /* slanted crossing bands: thick, bold, opposite directions */
 .wt-bands{position:relative;width:100vw;margin:1.4rem 0 2.2rem calc(50% - 50vw);height:clamp(120px,15vw,168px);overflow:hidden;pointer-events:auto}

@@ -90,7 +90,13 @@
   var cta = hero.querySelector(".cta");
   if (cta) {
     var pills = el("div", "wt-pills");
-    [["bulb", "Big words? We decode them."], ["sprout", "Small steps. Smarter habits."]].forEach(function (p) { var s = el("span"), i = el("i"); i.innerHTML = svg(p[0]); tint(i, p[0]); s.append(i, document.createTextNode(p[1])); pills.append(s); });
+    /* "Big words? We decode them." opens Ask Sprout; "Small steps. Smarter habits." goes to Learn. */
+    var d = el("button", "wt-pill"); d.type = "button"; d.setAttribute("aria-label", "Ask Sprout — decode big words");
+    var di = el("i"); di.innerHTML = svg("bulb"); tint(di, "bulb"); d.append(di, document.createTextNode("Big words? We decode them."));
+    d.addEventListener("click", function () { var b = document.getElementById("spFloat"); if (b) b.click(); });
+    var l = el("a", "wt-pill"); l.href = "/pages/learn.html";
+    var li = el("i"); li.innerHTML = svg("sprout"); tint(li, "sprout"); l.append(li, document.createTextNode("Small steps. Smarter habits."));
+    pills.append(d, l);
     cta.after(pills);
   }
   var feat = document.querySelector(".feat");
