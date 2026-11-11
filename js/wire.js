@@ -7,10 +7,32 @@
 
   var stories = [], topic = "All", seen = {}, firstDraw = true, open = {}, xp = {}, loaded = false;
 
+  /* The card bud + pop-up styles travel with this file, so a stale cached
+     homepage can never leave the buds unstyled (an empty gold box). */
+  (function () {
+    if (document.getElementById("wt-wire-style")) return;
+    var st = document.createElement("style"); st.id = "wt-wire-style";
+    st.textContent = ".sp-av{flex:none;width:46px;height:46px;border-radius:14px;background:linear-gradient(160deg,#fdf6dd,#f3df9a);border:2px solid #e0b04f;overflow:hidden;display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 10px rgba(224,176,79,.4),0 0 0 3px rgba(224,176,79,.14)}"
+      + ".sp-av svg{width:38px;height:38px;animation:spfloat 2.8s ease-in-out infinite}"
+      + "@keyframes spfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}"
+      + ".sp-av:focus-visible{outline:3px solid var(--up);outline-offset:2px}"
+      + "@media(max-width:640px){.sp-av{width:40px;height:40px}.sp-av svg{width:34px;height:34px}}"
+      + ".sp-pop{position:fixed;z-index:90;max-width:min(280px,calc(100vw - 32px));background:#fffdf6;border:2px solid #e0b04f;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.25);padding:14px 16px 14px 14px;display:none}"
+      + ".sp-pop.on{display:block;animation:sppop .35s cubic-bezier(.2,1.4,.4,1) both}"
+      + "@keyframes sppop{from{opacity:0;transform:translateY(8px) scale(.92)}to{opacity:1;transform:none}}"
+      + ".sp-pop::before{content:'';position:absolute;top:-7px;left:22px;width:12px;height:12px;background:#fffdf6;border-left:2px solid #e0b04f;border-top:2px solid #e0b04f;transform:rotate(45deg)}"
+      + ".sp-pop.above::before{top:auto;bottom:-7px;transform:rotate(225deg)}"
+      + ".sp-pop-bud{float:left;width:40px;height:40px;margin-right:10px}"
+      + ".sp-pop-bud svg{width:40px;height:40px;animation:spfloat 2.8s ease-in-out infinite}"
+      + ".sp-pop p{margin:2px 0 0;font-size:1rem;line-height:1.45;font-weight:600;color:var(--ink)}"
+      + ".sp-pop-x{position:absolute;top:6px;right:8px;border:0;background:none;font-size:18px;line-height:1;color:var(--mute);cursor:pointer;padding:4px}";
+    document.head.appendChild(st);
+  })();
+
   /* Sprout's face is always the same green two-leaf bud — never another face.
      The bud is a picture on each card; it does nothing when tapped (no pop-up). */
   function face() {
-    return '<svg class="sp-bud" viewBox="0 0 64 64" aria-hidden="true" focusable="false">'
+    return '<svg class="sp-bud" viewBox="0 0 64 64" width="38" height="38" aria-hidden="true" focusable="false">'
       + '<path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>'
       + '<path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>'
       + '<path d="M29 34 C24 29 19 23 14 17" stroke="#d9f0b4" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
@@ -18,6 +40,50 @@
       + '<path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
       + '</svg>';
   }
+
+  /* Sprout says hello: tap the golden bud for a small playful pop-up.
+     It disappears by itself: after 6 seconds, on scroll, or on any tap that is not the bud. */
+  var spPop = null, spPopAnchor = null, spPopTimer = null;
+  function sproutPopEl() {
+    if (spPop) return spPop;
+    spPop = document.createElement("div");
+    spPop.className = "sp-pop";
+    spPop.setAttribute("role", "dialog");
+    spPop.setAttribute("aria-label", "Sprout says hello");
+    spPop.innerHTML = '<button type="button" class="sp-pop-x" aria-label="Close">\u00D7</button><span class="sp-pop-bud">' + face() + '</span><p>Hi! I\u2019m Sprout, your personal news reporter.</p>';
+    document.body.appendChild(spPop);
+    return spPop;
+  }
+  function hideSproutPop() {
+    if (spPopTimer) { clearTimeout(spPopTimer); spPopTimer = null; }
+    if (spPop) { spPop.classList.remove("on"); spPop.classList.remove("above"); spPopAnchor = null; }
+  }
+  function showSproutPop(anchor) {
+    var p = sproutPopEl();
+    if (spPopAnchor === anchor && p.classList.contains("on")) { hideSproutPop(); return; }
+    spPopAnchor = anchor;
+    p.classList.add("on"); p.classList.remove("above");
+    var r = anchor.getBoundingClientRect();
+    var pw = p.offsetWidth, ph = p.offsetHeight;
+    var left = Math.max(8, Math.min(window.innerWidth - pw - 8, r.left));
+    var top = r.bottom + 10;
+    if (top + ph > window.innerHeight - 8) { top = Math.max(8, r.top - 10 - ph); p.classList.add("above"); }
+    p.style.left = left + "px"; p.style.top = top + "px";
+    if (spPopTimer) clearTimeout(spPopTimer);
+    spPopTimer = setTimeout(hideSproutPop, 6000);
+  }
+  document.addEventListener("click", function (e) {
+    var av = e.target.closest ? e.target.closest(".sp-av") : null;
+    if (av) { showSproutPop(av); return; }
+    hideSproutPop();
+  });
+  addEventListener("scroll", function () { if (spPop && spPop.classList.contains("on")) hideSproutPop(); }, { passive: true });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") hideSproutPop();
+    if ((e.key === "Enter" || e.key === " ") && e.target && e.target.classList && e.target.classList.contains("sp-av")) {
+      e.preventDefault(); showSproutPop(e.target);
+    }
+  });
 
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
   function ago(ms) {
@@ -29,7 +95,7 @@
   var intro = el("div", "sp-row sp-intro");
   var im = el("div", "sp-main"), imeta = el("div", "sp-meta"), ib = el("div", "sp-bub"), say = el("p", "sp-say");
   imeta.append(el("b", "", "Sprout"), el("span", "pill live", "\u25CF LIVE"));
-  var iav = el("span", "sp-av"); iav.innerHTML = face();
+  var iav = el("span", "sp-av"); iav.tabIndex = 0; iav.setAttribute("role", "button"); iav.setAttribute("aria-label", "Sprout \u2014 tap to say hello"); iav.innerHTML = face();
   ib.append(say); im.append(imeta, ib); intro.append(iav, im); ol.before(intro);
   var typed = "", born = Date.now();
   function dots() { say.innerHTML = '<span class="dots3" role="status" aria-label="Sprout is typing"><i></i><i></i><i></i></span>'; }
@@ -51,7 +117,7 @@
     ol.innerHTML = "";
     for (var i = 0; i < 3; i++) {
       var li = el("li", "sp-row sp-skel");
-      var sav = el("span", "sp-av"); sav.innerHTML = face(); li.append(sav);
+      var sav = el("span", "sp-av"); sav.tabIndex = 0; sav.setAttribute("role", "button"); sav.setAttribute("aria-label", "Sprout \u2014 tap to say hello"); sav.innerHTML = face(); li.append(sav);
       var m = el("div", "sp-main"), b = el("div", "sp-bub");
       b.innerHTML = '<span class="sk" style="width:35%"></span><span class="sk" style="width:92%"></span><span class="sk" style="width:78%"></span>';
       if (i === 0) { b.setAttribute("role", "status"); b.append(el("span", "sp-ty", "Sprout is pulling the latest\u2026")); }
@@ -62,7 +128,7 @@
   function row(s, idx, fresh) {
     var id = s.id, li = el("li", "sp-row" + (fresh ? " pop" : ""));
     if (fresh) li.style.animationDelay = Math.min(idx, 8) * 60 + "ms";
-    var av = el("span", "sp-av"); av.innerHTML = face(); li.append(av);
+    var av = el("span", "sp-av"); av.tabIndex = 0; av.setAttribute("role", "button"); av.setAttribute("aria-label", "Sprout \u2014 tap to say hello"); av.innerHTML = face(); li.append(av);
     var main = el("div", "sp-main"), meta = el("div", "sp-meta"), tm = el("time", "", ago(s.t)); tm.dataset.t = s.t;
     meta.append(el("b", "", "Sprout"), tm);
     var hot = Date.now() - s.t < 1800000;
