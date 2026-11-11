@@ -2,6 +2,9 @@
 // Ask Sprout — the floating finance friend. One-stop answers for markets, all finance
 // and the site's calculators, in plain English. Uses Gemini (same key as /api/pulse),
 // with live prices + today's headlines as context, and exact maths for SIP / EMI / lumpsum.
+// Answers stay in the chat; a "Learn more" link points to the module for going deeper.
+// Fast paths: evergreen questions get an instant pre-written answer (no AI call), and
+// GET ?suggest=1 returns today's suggested questions, which change with the market.
 // Educational only: no tips, no predictions, no buy/sell talk.
 //
 // Needs (set in Cloudflare): secret GEMINI_API_KEY, optional text GEMINI_MODEL,
@@ -17,7 +20,7 @@ STRICT — NEVER BREAK THESE:
 1. NEVER give a tip, a stock/fund pick, or a buy/sell recommendation of any kind.
 2. NEVER predict where a price, an index or the market will go. Never say what will happen. If asked, explain that no one can know and offer to teach the concept instead.
 3. Educational only. No investment advice. No hype, no fear-mongering. No guaranteed returns.
-4. Keep it short: 2–4 short sentences, then one helpful link from the list when it fits. Use the exact link text given.
+4. Keep it short: 2–4 short sentences, answered right here in the chat. Then add a clear "For more on this, visit the learning module →" line with the matching Learn module or calculator link when one fits — the link is only for going deeper, never a replacement for the answer.
 5. Money amounts in ₹. Percentages as %.
 6. If the user asks for a calculation, use the "Calculated result" in the context exactly — do not recompute it.
 7. Reply in the same language as the question (Hindi questions get a simple Hindi-English mix is fine, but keep it simple).
@@ -97,30 +100,117 @@ function calc(q) {
   return null;
 }
 
-// ---- live context: prices + headlines ----
+// ---- live data helpers ----
+async function getQuotes() {
+  try {
+    var r = await fetch("https://wealthytrees.online/api/quotes", { cf: { cacheTtl: 60 } });
+    if (!r.ok) return {};
+    var j = await r.json();
+    return j.quotes || {};
+  } catch (e) { return {}; }
+}
+async function getTopHeads(env) {
+  try {
+    var h = await getHeadlines(null, env);
+    return (h || []).slice(0, 8);
+  } catch (e) { return []; }
+}
+function moveOf(quotes, k) {
+  var v = quotes && quotes[k];
+  if (!v || v.prev == null) return null;
+  return { price: v.price, ch: ((v.price - v.prev) / v.prev) * 100 };
+}
+function fmtMove(m) {
+  if (!m) return "";
+  return m.price + " (" + (m.ch >= 0 ? "+" : "") + m.ch.toFixed(2) + "%)";
+}
+
+// ---- instant answers (evergreen questions, no AI call — they answer at once) ----
+// Each ends with a clear "For more on this, visit the learning module →" line.
+const MORE = '<br><br>For more on this, visit the learning module → ';
+function quickAnswer(q, quotes) {
+  var s = q.toLowerCase().trim();
+  // Only plain "what is X" questions — anything with why/how-much/will/fall/rise goes to the AI.
+  if (/why|how much|how many|will|fall|rise|move|today|yesterday|crash|rally/.test(s)) return null;
+  if (/\bnifty\b/.test(s)) {
+    var n = moveOf(quotes, "NIFTY 50");
+    var line = n ? " Today, Nifty 50 is at " + fmtMove(n) + "." : "";
+    return "Nifty 50 is an index — a basket of the 50 biggest companies on the NSE, tracked together to show how the market is doing. When people say \"the market is up\", they often mean Nifty is up." + line + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bsensex\b/.test(s)) {
+    var sx = moveOf(quotes, "SENSEX");
+    var lx = sx ? " Today, Sensex is at " + fmtMove(sx) + "." : "";
+    return "Sensex is the BSE's index — a basket of 30 big companies listed on the Bombay Stock Exchange. It is the older of India's two main indices." + lx + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bsip\b/.test(s)) {
+    return "A SIP is a fixed amount you invest every month into a mutual fund, on a fixed date — instead of one big lump sum. It builds the habit of investing regularly, and you buy more units when prices are low." + MORE + '<a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>. You can also try it with numbers on the <a href="/pages/sip-calculator.html">SIP calculator</a>.';
+  }
+  if (/\bemi\b/.test(s)) {
+    return "EMI is the fixed amount you pay every month to repay a loan — part of it is interest, part of it pays back the amount you borrowed. A longer loan means a smaller EMI but more total interest." + MORE + '<a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>. Work out your own number on the <a href="/pages/emi-calculator.html">EMI calculator</a>.';
+  }
+  if (/\bshare\b/.test(s) && !/market share/.test(s)) {
+    return "A share is a small slice of a company. When you buy one, you own a tiny part of that business — its profits and its risks. Companies split themselves into shares so many people can own a piece." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bmutual fund\b|\bmf\b/.test(s)) {
+    return "A mutual fund pools money from many people and invests it in shares, bonds or both, managed by a professional. You buy units of the fund instead of picking shares yourself." + MORE + '<a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>.';
+  }
+  if (/\bp\/e\b|price.to.earnings|price earning/.test(s)) {
+    return "The P/E ratio tells you how much investors are paying for each rupee of a company's yearly profit. A P/E of 20 means paying ₹20 for ₹1 of profit. It is a way to judge whether a share looks expensive or cheap — never a reason to buy on its own." + MORE + '<a href="/learn/beginner/module-3.html">Beginner 3: Key ratios</a>.';
+  }
+  if (/\bgold\b/.test(s) && !/price|rate|today/.test(s)) {
+    return "Gold is a precious metal people buy as a store of value — in jewellery, coins, bars, and also as gold funds. Its price moves with global demand, the dollar, and how safe investors feel." + MORE + '<a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>.';
+  }
+  return null;
+}
+
+// ---- today's suggested questions (change with the market, day to day) ----
+function suggestQuestions(quotes, heads) {
+  var out = [];
+  function push(q) { if (out.indexOf(q) === -1 && out.length < 5) out.push(q); }
+  // The day's biggest mover becomes a "why did it move?" question.
+  var movers = [
+    ["NIFTY 50", "Nifty"], ["SENSEX", "Sensex"], ["GOLD $/oz", "gold"],
+    ["CRUDE WTI", "crude oil"], ["BANK NIFTY", "Bank Nifty"], ["USD/INR", "the rupee"],
+  ];
+  var best = null, bestAbs = 0.5;
+  movers.forEach(function (pair) {
+    var m = moveOf(quotes, pair[0]);
+    if (m && Math.abs(m.ch) > bestAbs) { bestAbs = Math.abs(m.ch); best = { name: pair[1], ch: m.ch }; }
+  });
+  if (best) {
+    push("Why did " + best.name + (best.ch > 0 ? " rise" : " fall") + " today?");
+  } else {
+    push("What happened in the market today?");
+  }
+  push("What is Nifty?");
+  push("What is a SIP?");
+  // A second market question from the day's top headline, if it names a market.
+  var h0 = heads && heads[0] && heads[0].title ? heads[0].title : "";
+  if (/gold/i.test(h0)) push("Why is gold moving?");
+  else if (/crude|oil/i.test(h0)) push("Why is crude oil moving?");
+  else if (/rupee|dollar/i.test(h0)) push("Why is the rupee moving?");
+  else if (/rbi|rate/i.test(h0)) push("What did the RBI do?");
+  push("How does the SIP calculator work?");
+  push("What is EMI?");
+  return out.slice(0, 5);
+}
+
+// ---- live context: prices + headlines (for the AI) ----
 async function context(env) {
+  var quotes = await getQuotes();
+  var heads = await getTopHeads(env);
   var parts = [];
-  try {
-    var q = await fetch(new URL("/api/quotes", "https://wealthytrees.online").toString(), { cf: { cacheTtl: 60 } });
-    if (q.ok) {
-      var jq = await q.json();
-      var keep = ["NIFTY 50", "SENSEX", "BANK NIFTY", "GOLD $/oz", "CRUDE WTI", "USD/INR"];
-      var lines = keep.map(function (k) {
-        var v = jq.quotes && jq.quotes[k]; if (!v) return null;
-        var ch = v.prev ? (((v.price - v.prev) / v.prev) * 100) : 0;
-        return k + " " + v.price + " (" + (ch >= 0 ? "+" : "") + ch.toFixed(2) + "%)";
-      }).filter(Boolean);
-      if (lines.length) parts.push("Live prices: " + lines.join(" · ") + ".");
-    }
-  } catch (e) {}
-  try {
-    var heads = await getHeadlines(null, env);
-    var top = heads.slice(0, 8).map(function (h) { return h.title + " (" + h.source + ")"; });
-    if (top.length) parts.push("Today's headlines: " + top.join(" | "));
-  } catch (e) {}
+  var keep = ["NIFTY 50", "SENSEX", "BANK NIFTY", "GOLD $/oz", "CRUDE WTI", "USD/INR"];
+  var lines = keep.map(function (k) {
+    var m = moveOf(quotes, k);
+    return m ? k + " " + fmtMove(m) : null;
+  }).filter(Boolean);
+  if (lines.length) parts.push("Live prices: " + lines.join(" · ") + ".");
+  var top = heads.map(function (h) { return h.title + " (" + h.source + ")"; });
+  if (top.length) parts.push("Today's headlines: " + top.join(" | "));
   parts.push("Calculators: " + CALCS.map(function (c) { return c.name + " (" + c.url + ") — " + c.what; }).join("; "));
   parts.push("Learn: " + LEARN.map(function (l) { return l.name + " (" + l.url + ")"; }).join("; "));
-  return parts.join("\n");
+  return { text: parts.join("\n"), quotes: quotes, heads: heads };
 }
 
 async function viaGemini(env, prompt) {
@@ -174,6 +264,23 @@ export async function onRequestPost(ctx) {
   if (TIP.test(q)) return json({ answer: TIP_REFUSAL });
 
   // Simple rate limit: 30 questions an hour per IP, so one person cannot run up the AI bill.
+  // Instant answers and calculations do not count — they cost nothing.
+  var instant = null;
+  try {
+    var quotes0 = await getQuotes();
+    instant = quickAnswer(q, quotes0);
+    if (instant) return json({ answer: instant, instant: true });
+    var calcResult0 = calc(q);
+    if (calcResult0) {
+      // A pure sum: answer at once with the exact number + a Learn-more line.
+      var learn = /sip|monthly/.test(q.toLowerCase())
+        ? ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>. Or try your own numbers on the <a href="/pages/sip-calculator.html">SIP calculator</a>.'
+        : /emi|loan/.test(q.toLowerCase())
+          ? ' <br><br>For more on this, visit the learning module → <a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>. Or try your own numbers on the <a href="/pages/emi-calculator.html">EMI calculator</a>.'
+          : ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>.';
+      return json({ answer: calcResult0 + learn, instant: true });
+    }
+  } catch (e) {}
   try {
     var kv = env.PULSE;
     if (kv) {
@@ -185,10 +292,8 @@ export async function onRequestPost(ctx) {
     }
   } catch (e) {}
 
-  var calcResult = calc(q);
-  var ctxText = await context(env);
-  var prompt = "Context (facts only, use these and nothing else for numbers):\n" + ctxText
-    + (calcResult ? "\nCalculated result: " + calcResult : "")
+  var ctxData = await context(env);
+  var prompt = "Context (facts only, use these and nothing else for numbers):\n" + ctxData.text
     + "\n\nQuestion: " + q;
   var text = "";
   try {
@@ -208,5 +313,13 @@ export async function onRequestPost(ctx) {
 }
 
 export async function onRequestGet(ctx) {
-  return json({ ok: true, hint: "POST {q} to ask Sprout a finance question." });
+  const env = ctx.env || {};
+  var url = new URL(ctx.request.url);
+  if (url.searchParams.get("suggest") === "1") {
+    // Today's suggested questions — change with the market, day to day.
+    var quotes = await getQuotes();
+    var heads = await getTopHeads(env);
+    return json({ questions: suggestQuestions(quotes, heads) });
+  }
+  return json({ ok: true, hint: "POST {q} to ask Sprout a finance question. GET ?suggest=1 for today's suggested questions." });
 }

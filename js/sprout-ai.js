@@ -13,6 +13,39 @@
     + '<path d="M35 34 C40 29 45 23 50 17" stroke="#e2f4bd" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
     + '</svg>';
   var CHIPS = ["What is Nifty?", "What is a SIP?", "What is EMI?", "How does the SIP calculator work?", "Why did gold move today?"];
+  /* Preloaded answers, keyed by question — so a visible chip answers at once. */
+  var cache = {};
+  var preloads = {};
+  function preload(q) {
+    if (cache[q] || preloads[q]) return preloads[q];
+    preloads[q] = fetch("/api/ask", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ q: q }),
+    }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j.answer) cache[q] = j.answer;
+      return j;
+    }).catch(function () { return null; });
+    return preloads[q];
+  }
+  function renderChips(list) {
+    chips.innerHTML = "";
+    (list || CHIPS).forEach(function (c) {
+      var b = el("button", "chip"); b.type = "button"; b.textContent = c;
+      b.onclick = function () { ask(c); };
+      chips.append(b);
+    });
+    // Preload the visible questions in the background, so tapping one is instant.
+    (list || CHIPS).forEach(function (c) { preload(c); });
+  }
+  var chipsLoaded = false;
+  function loadChips() {
+    if (chipsLoaded) return;
+    chipsLoaded = true;
+    fetch("/api/ask?suggest=1").then(function (r) { return r.json(); }).then(function (j) {
+      if (j.questions && j.questions.length) renderChips(j.questions);
+    }).catch(function () { /* keep the fallback chips */ });
+  }
 
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
 
@@ -61,11 +94,7 @@
   head.append(bud, tt, x);
   var msgs = el("div", "sp-msgs"); msgs.id = "spMsgs";
   var chips = el("div", "chips");
-  CHIPS.forEach(function (c) {
-    var b = el("button", "chip"); b.type = "button"; b.textContent = c;
-    b.onclick = function () { ask(c); };
-    chips.append(b);
-  });
+  renderChips(CHIPS); // fallback chips first; today's questions replace them when the panel opens
   var form = el("form", "sp-in");
   var inp = el("input"); inp.id = "spInput"; inp.type = "text"; inp.placeholder = "Ask anything about money…"; inp.setAttribute("autocomplete", "off");
   var send = el("button"); send.type = "submit"; send.textContent = "Ask";
@@ -86,15 +115,29 @@
     q = q.trim();
     addMsg(esc(q), "user");
     inp.value = "";
-    var t = addMsg('<span class="dots3" role="status" aria-label="Sprout is thinking"><i></i><i></i><i></i></span>', "bot");
+    // A preloaded answer appears at once; otherwise Sprout "brews" it live.
+    if (cache[q]) {
+      var m = addMsg(cache[q], "bot");
+      msgs.scrollTop = msgs.scrollHeight;
+      inp.focus();
+      return;
+    }
+    var t = addMsg('<span class="brew" role="status" aria-label="Sprout is thinking"><span class="brew-bud">' + BUD + '</span><span class="brew-txt">Sprout is brewing your answer</span><span class="dots3"><i></i><i></i><i></i></span></span>', "bot");
     busy = true;
-    fetch("/api/ask", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ q: q }),
-    }).then(function (r) { return r.json(); }).then(function (j) {
-      if (j.answer) t.innerHTML = j.answer;
-      else t.innerHTML = esc(j.error || "Sprout is taking a short break. Try again in a minute.");
+    function fresh() {
+      return fetch("/api/ask", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ q: q }),
+      }).then(function (r) { return r.json(); });
+    }
+    // Use the preloaded answer if it arrived; if the preload failed, ask again fresh.
+    var done = preloads[q]
+      ? preloads[q].then(function (j) { return (j && j.answer) ? j : fresh(); })
+      : fresh();
+    done.then(function (j) {
+      if (j && j.answer) { t.innerHTML = j.answer; cache[q] = j.answer; }
+      else t.innerHTML = esc((j && j.error) || "Sprout is taking a short break. Try again in a minute.");
     }).catch(function () {
       t.innerHTML = "Sprout is taking a short break right now. Check your connection and try again — the Learn pages and calculators are always there.";
     }).finally(function () { busy = false; msgs.scrollTop = msgs.scrollHeight; inp.focus(); });
@@ -103,10 +146,13 @@
     var on = open !== undefined ? open : !chat.classList.contains("on");
     chat.classList.toggle("on", on);
     btn.setAttribute("aria-expanded", String(on));
-    if (on && !msgs.children.length) {
-      addMsg("Hi! I'm Sprout — your one-stop finance friend. Ask me anything: markets, saving, tax, insurance, or how any calculator works. I'll explain it in plain English.", "bot");
+    if (on) {
+      loadChips(); // today's questions, which change with the market
+      if (!msgs.children.length) {
+        addMsg("Hi! I'm Sprout — your one-stop finance friend. Ask me anything: markets, saving, tax, insurance, or how any calculator works. I'll explain it in plain English.", "bot");
+      }
+      inp.focus();
     }
-    if (on) inp.focus();
   }
   btn.onclick = function () { toggle(); };
   x.onclick = function () { toggle(false); };
