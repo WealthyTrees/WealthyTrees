@@ -185,10 +185,10 @@ export async function onRequestPost(ctx) {
     }
   } catch (e) {}
 
-  var calc = calc(q);
+  var calcResult = calc(q);
   var ctxText = await context(env);
   var prompt = "Context (facts only, use these and nothing else for numbers):\n" + ctxText
-    + (calc ? "\nCalculated result: " + calc : "")
+    + (calcResult ? "\nCalculated result: " + calcResult : "")
     + "\n\nQuestion: " + q;
   var text = "";
   try {
