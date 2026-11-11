@@ -1,0 +1,42 @@
+/* Ask Sprout — floating finance friend. Small golden bud + compact chat panel.
+   Loaded on every page by site.js. Keep it self-contained: fixed colours, not theme vars,
+   so the panel reads the same in Light, Dark and Paper. */
+.sp-float-wrap{position:fixed;right:16px;bottom:16px;z-index:90;width:54px;height:54px}
+.sp-float{position:relative;width:54px;height:54px;border-radius:16px;border:2px solid #e0b04f;background:linear-gradient(160deg,#fdf6dd,#f3df9a);box-shadow:0 6px 20px rgba(224,176,79,.5),0 0 0 3px rgba(224,176,79,.16);cursor:pointer;display:grid;place-items:center;padding:0;animation:spbob 3s ease-in-out infinite;-webkit-tap-highlight-color:transparent}
+.sp-float svg{width:40px;height:40px}
+.sp-float::after{content:"";position:absolute;inset:-6px;border-radius:20px;border:2px solid rgba(224,176,79,.55);animation:spping 2.6s ease-out infinite;pointer-events:none}
+.sp-hide{position:absolute;top:-7px;right:-7px;width:19px;height:19px;border-radius:50%;border:1.5px solid #e0b04f;background:#fffdf6;color:#6b5312;font-size:13px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:2}
+.sp-tab{position:fixed;right:16px;bottom:16px;z-index:90;display:none;align-items:center;gap:.35rem;border:1.5px solid #e0b04f;background:#fdf6dd;color:#6b5312;border-radius:999px;padding:.32rem .7rem .32rem .4rem;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(224,176,79,.4)}
+.sp-tab .sp-tab-bud{width:20px;height:20px;display:grid;place-items:center}
+.sp-tab .sp-tab-bud svg{width:20px;height:20px}
+@keyframes spbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes spping{0%{opacity:.8;transform:scale(.94)}70%,100%{opacity:0;transform:scale(1.12)}}
+.sp-float:focus-visible{outline:3px solid #0f7b55;outline-offset:2px}
+.sp-chat{position:fixed;right:16px;bottom:82px;z-index:91;width:min(340px,calc(100vw - 32px));height:min(480px,calc(100dvh - 120px));background:#fffdf6;border:2px solid #e0b04f;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.28);display:none;flex-direction:column;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#14201b}
+.sp-chat.on{display:flex;animation:sppop .3s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes sppop{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+.sp-chat .sp-head{display:flex;align-items:center;gap:.6rem;background:#0f3d2e;color:#fff;padding:.7rem .9rem}
+.sp-chat .sp-head .bud{width:32px;height:32px;border-radius:10px;background:linear-gradient(160deg,#fdf6dd,#f3df9a);border:1.5px solid #e0b04f;display:grid;place-items:center;flex:none}
+.sp-chat .sp-head .bud svg{width:26px;height:26px}
+.sp-chat .sp-head b{font-size:.98rem;display:block}
+.sp-chat .sp-head small{display:block;font-size:.72rem;color:#bfe3cf;font-weight:400}
+.sp-chat .sp-head .x{margin-left:auto;border:0;background:none;color:#fff;font-size:20px;line-height:1;cursor:pointer;padding:4px}
+.sp-chat .sp-msgs{flex:1;overflow-y:auto;padding:.8rem;display:flex;flex-direction:column;gap:.55rem}
+.sp-chat .msg{max-width:88%;padding:.55rem .75rem;border-radius:12px;font-size:.92rem;line-height:1.5;overflow-wrap:break-word}
+.sp-chat .msg.bot{background:#f3efe0;border:1px solid #e3dcc8;border-bottom-left-radius:4px;align-self:flex-start}
+.sp-chat .msg.user{background:#0f7b55;color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.sp-chat .msg a{color:#0f7b55;font-weight:700}
+.sp-chat .msg.user a{color:#fff}
+.sp-chat .chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 .8rem .6rem}
+.sp-chat .chip{border:1.5px solid #e0b04f;background:#fdf6dd;color:#6b5312;border-radius:999px;padding:.3rem .65rem;font:inherit;font-size:.8rem;font-weight:600;cursor:pointer}
+.sp-chat .sp-in{display:flex;gap:.5rem;padding:.6rem .8rem;border-top:1px solid #e3dcc8;background:#fff}
+.sp-chat .sp-in input{flex:1;min-width:0;border:1.5px solid #e3dcc8;border-radius:999px;padding:.55rem .8rem;font:inherit;font-size:.92rem;outline:none;color:#14201b;background:#fff}
+.sp-chat .sp-in input:focus{border-color:#0f7b55}
+.sp-chat .sp-in button{border:0;background:#0f7b55;color:#fff;border-radius:999px;padding:.55rem .95rem;font:inherit;font-weight:700;cursor:pointer;flex:none}
+.sp-chat .sp-disc{font-size:.7rem;color:#5c6b64;text-align:center;padding:.35rem .8rem .6rem;background:#fff}
+.sp-chat .dots3{display:inline-flex;gap:4px;vertical-align:middle}
+.sp-chat .dots3 i{width:6px;height:6px;border-radius:50%;background:#5c6b64;animation:spbob2 1.1s infinite}
+.sp-chat .dots3 i:nth-child(2){animation-delay:.15s}.sp-chat .dots3 i:nth-child(3){animation-delay:.3s}
+@keyframes spbob2{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-3px);opacity:1}}
+@media(max-width:640px){.sp-float-wrap{right:12px;bottom:12px;width:50px;height:50px}.sp-float{width:50px;height:50px}.sp-float svg{width:37px;height:37px}.sp-tab{right:12px;bottom:12px}.sp-chat{right:12px;bottom:74px}}
+@media(prefers-reduced-motion:reduce){.sp-float,.sp-float::after,.sp-chat.on,.sp-chat .dots3 i{animation:none}}
