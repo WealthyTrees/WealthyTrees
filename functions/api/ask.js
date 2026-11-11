@@ -26,6 +26,7 @@ STRICT — NEVER BREAK THESE:
 7. Reply in the same language as the question (Hindi questions get a simple Hindi-English mix is fine, but keep it simple).
 8. "Why did it move?" questions (why gold, Nifty, Bank Nifty, the rupee or crude rose or fell TODAY) are about the past, so ALWAYS explain them — never refuse, and never answer with "no one can know". Use the headlines in the context to find the trigger and the live price for how much it moved, and explain the mechanism in plain English — for example, a weaker dollar often lifts gold; an RBI step moves banks; foreign-investor buying lifts indices. If the headlines name a trigger (an RBI decision, a global cue, a foreign-investor flow figure), use it and say so. If they do not, explain the usual drivers and say plainly that today's exact trigger is not in the news, then point to the Learn module that explains the cause in detail.
 9. Never start an answer with a greeting ("Hello", "Hi", "Hey", "Namaste") — the chat already greets the user. Begin directly with the answer itself.
+10. If the user asks for a return calculation with an amount, a rate and a time, work the number out right here in the chat — never just point them to a calculator. If they do not say whether it is a one-time investment or a monthly SIP, ask them to choose between the two, then work it out once they choose. A calculator link is only a small line at the end for going deeper, never a replacement for the answer.
 Return ONLY the answer text (plain text with <a href="...">links</a> where useful). No markdown, no JSON.`;
 
 const CALCS = [
@@ -99,7 +100,21 @@ function calc(q) {
     var fvl = amt * Math.pow(1 + rate / 100, yrs);
     return "A lumpsum of " + inr(amt) + " for " + yrs + " years at " + rate + "% grows to about " + inr(fvl) + ".";
   }
-  return null;
+  // No type word at all (no sip / monthly / emi / loan / lumpsum / lump) — the amount,
+  // rate and years are there, but we cannot tell whether it is a one-time investment
+  // or a monthly SIP. Ask the user to choose (two tappable options) instead of
+  // guessing or pointing them to a calculator. This is a two-way conversation, not
+  // a one-way deflection. Each option carries the full follow-up question, so tapping
+  // it runs the calculation at once.
+  var qLump = "lumpsum " + amt + " at " + rate + "% for " + yrs + " years";
+  var qSip = "sip " + amt + " a month at " + rate + "% for " + yrs + " years";
+  return {
+    clarify: true,
+    answer: "I can work that out for you — but first, one quick question: is this a <b>one-time</b> investment, or a <b>monthly</b> one?"
+      + "<br><br>"
+      + '<button type="button" class="sp-opt" data-q="' + qLump + '">One-time (lumpsum)</button> '
+      + '<button type="button" class="sp-opt" data-q="' + qSip + '">Monthly SIP</button>'
+  };
 }
 
 // ---- live data helpers ----
@@ -291,12 +306,18 @@ export async function onRequestPost(ctx) {
     // 10 years" gets the sum, not the "what is a SIP" definition.
     var calcResult0 = calc(q);
     if (calcResult0) {
+      // A clarifying question (amount + rate + years, but no SIP/lumpsum word):
+      // ask the user to choose — do not guess, and do not point to a calculator.
+      // The options are tappable, so one tap runs the calculation.
+      if (calcResult0.clarify) return json({ answer: calcResult0.answer, instant: true });
       // A pure sum: answer at once with the exact number + a Learn-more line.
+      // The calculator link is a small line at the end for going deeper — never a
+      // replacement for the answer itself.
       var learn = /sip|monthly/.test(q.toLowerCase())
-        ? ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>. Or try your own numbers on the <a href="/pages/sip-calculator.html">SIP calculator</a>.'
+        ? ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>. Or try your own numbers on the <a href="/pages/sip-calculator.html">SIP calculator</a> — and see all our calculators on the <a href="/pages/tools.html">Tools</a> page.'
         : /emi|loan/.test(q.toLowerCase())
-          ? ' <br><br>For more on this, visit the learning module → <a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>. Or try your own numbers on the <a href="/pages/emi-calculator.html">EMI calculator</a>.'
-          : ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>.';
+          ? ' <br><br>For more on this, visit the learning module → <a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>. Or try your own numbers on the <a href="/pages/emi-calculator.html">EMI calculator</a> — and see all our calculators on the <a href="/pages/tools.html">Tools</a> page.'
+          : ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>. Or try your own numbers on the <a href="/pages/lumpsum-calculator.html">Lumpsum calculator</a> — and see all our calculators on the <a href="/pages/tools.html">Tools</a> page.';
       return json({ answer: calcResult0 + learn, instant: true });
     }
     instant = quickAnswer(q, quotes0);

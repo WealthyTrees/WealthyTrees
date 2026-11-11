@@ -146,5 +146,12 @@
   btn.onclick = function () { toggle(); };
   x.onclick = function () { toggle(false); };
   form.addEventListener("submit", function (e) { e.preventDefault(); ask(inp.value); });
+  /* Tappable options inside an answer — for example, the "One-time / Monthly SIP"
+     question Sprout asks when a calculation does not say which it is. Tapping one
+     sends that choice as the next question, so the two of you work it out together. */
+  msgs.addEventListener("click", function (e) {
+    var b = e.target && e.target.closest ? e.target.closest(".sp-opt") : null;
+    if (b && b.dataset && b.dataset.q) ask(b.dataset.q);
+  });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") toggle(false); });
 })();

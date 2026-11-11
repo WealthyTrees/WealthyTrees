@@ -24,6 +24,10 @@
 .sp-chat .msg.user a{color:#fff}
 .sp-chat .chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 .8rem .6rem}
 .sp-chat .chip{border:1.5px solid #e0b04f;background:#fdf6dd;color:#6b5312;border-radius:999px;padding:.3rem .65rem;font:inherit;font-size:.8rem;font-weight:600;cursor:pointer}
+/* Tappable options inside an answer (the "One-time / Monthly SIP" question). Same
+   pill look as the chips, so they read as something to tap, not plain text. */
+.sp-chat .sp-opt{display:inline-block;margin:.2rem .3rem .2rem 0;border:1.5px solid #0f8a5f;background:#eaf7f0;color:#0b5c40;border-radius:999px;padding:.35rem .8rem;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer}
+.sp-chat .sp-opt:hover{background:#d3efe1}
 .sp-chat .sp-in{display:flex;gap:.5rem;padding:.6rem .8rem;border-top:1px solid #e3dcc8;background:#fff}
 .sp-chat .sp-in input{flex:1;min-width:0;border:1.5px solid #e3dcc8;border-radius:999px;padding:.55rem .8rem;font:inherit;font-size:.92rem;outline:none;color:#14201b;background:#fff}
 .sp-chat .sp-in input:focus{border-color:#0f7b55}
