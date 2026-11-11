@@ -268,8 +268,8 @@ export async function onRequestPost(ctx) {
   var instant = null;
   try {
     var quotes0 = await getQuotes();
-    instant = quickAnswer(q, quotes0);
-    if (instant) return json({ answer: instant, instant: true });
+    // A calculation first (exact number), then a definition — so "SIP of 5000 for
+    // 10 years" gets the sum, not the "what is a SIP" definition.
     var calcResult0 = calc(q);
     if (calcResult0) {
       // A pure sum: answer at once with the exact number + a Learn-more line.
@@ -280,6 +280,8 @@ export async function onRequestPost(ctx) {
           : ' <br><br>For more on this, visit the learning module → <a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>.';
       return json({ answer: calcResult0 + learn, instant: true });
     }
+    instant = quickAnswer(q, quotes0);
+    if (instant) return json({ answer: instant, instant: true });
   } catch (e) {}
   try {
     var kv = env.PULSE;
