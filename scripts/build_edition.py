@@ -235,7 +235,7 @@ out = (f'<!doctype html><html lang="en"><head>' + GA_TAG + f'<meta charset="utf-
        '<link rel="canonical" href="https://wealthytrees.online/pages/the-915.html"><meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">'
        '<meta property="og:title" content="THE 9:15 · The Morning Paper by WealthyTrees"><meta property="og:description" content="Yesterday’s closing prices, short market stories and a daily lesson. Free every weekday. Education only.">'
        '<meta property="og:url" content="https://wealthytrees.online/pages/the-915.html"><meta property="og:image" content="https://wealthytrees.online/assets/logo.svg"><meta name="twitter:card" content="summary">'
-       f'<style>{CSS}</style><link rel="stylesheet" href="/css/sprout-ai.css?v=2"></head><body>{util}<main>{"".join(pages)}</main><script>{JS}</script><script src="/js/sprout-ai.js?v=2" defer></script></body></html>')
+       f'<style>{CSS}</style><link rel="stylesheet" href="/css/sprout-ai.css?v=3"></head><body>{util}<main>{"".join(pages)}</main><script>{JS}</script><script src="/js/sprout-ai.js?v=3" defer></script></body></html>')
 os.makedirs(f"{R}/pages", exist_ok=True); os.makedirs(f"{R}/edition", exist_ok=True)
 open(f"{R}/pages/the-915.html", "w").write(out)
 open(f"{R}/edition/{now.strftime('%Y-%m-%d')}.html", "w").write(out)
