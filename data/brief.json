@@ -1,5 +1,5 @@
 {
- "date": "Wednesday, 11 November 2026",
+ "date": "Thursday, 12 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "4,039",
-   "change": 0.21
+   "value": "3,998",
+   "change": -0.8
   },
   {
    "name": "CRUDE WTI",
-   "value": "$87.1",
-   "change": 1.27
+   "value": "$86.4",
+   "change": 0.46
   },
   {
    "name": "USD/INR",
@@ -28,21 +28,77 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,591",
-   "change": 0.94
+   "value": "7,629",
+   "change": 1.44
   },
   {
    "name": "NASDAQ",
-   "value": "25,459",
-   "change": 1.57
+   "value": "25,543",
+   "change": 1.9
   },
   {
    "name": "DOW",
-   "value": "52,169",
-   "change": -0.12
+   "value": "52,480",
+   "change": 0.47
   }
  ],
  "items": [
+  {
+   "category": "Equity",
+   "title": "Yes Bank bondholders press for compliance with Supreme Court's AT-1 order",
+   "summary": "Yes Bank bondholders filed a contempt petition in the Supreme Court regarding the restoration of AT-1 bonds. The Supreme Court upheld a ruling that set aside the lender's write-off of 84 billion rupee",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/yes-bank-bondholders-press-for-compliance-with-supreme-courts-at-1-order/articleshow/135744450.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Anthropic’s IPO is said to be multiple times oversubscribed",
+   "summary": "Anthropic PBC is witnessing an overwhelming response for its initial public offering, potentially accumulating up to $90.4 billion. This bullish sentiment reflects a staggering anticipated market valu",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropics-ipo-is-said-to-be-multiple-times-oversubscribed/articleshow/135743507.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Market Trading Guide: Astra Microwave among 3 stock recommendations for Thursday",
+   "summary": "Indian equities opened higher on positive global cues but surrendered gains amid rising bond yields and hawkish Fed commentary. Smallcaps outperformed as risk appetite improved. Analysts highlighted s",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-astra-microwave-among-3-stock-recommendations-for-thursday/slideshow/135742034.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "US stocks: S&amp;P 500, Nasdaq rise as CoreWeave results ease AI spending",
+   "summary": "The S&amp;P 500 and Nasdaq indices showed positive growth as CoreWeave posted impressive financial results, calming fears regarding AI expenditure. Following its projection of reaching profitability b",
+   "why": "US markets set the mood for global trading.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-higher-as-coreweave-lifts-ai-trade/articleshow/135741336.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Baird downgrades Nvidia on China curbs, AI demand worries",
+   "summary": "Baird downgraded Nvidia's stock and cut its price target significantly due to various market risks. Concerns over US restrictions on chip sales to China have emerged, affecting Nvidia's revenue outloo",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/baird-downgrades-nvidia-on-china-curbs-ai-demand-worries/articleshow/135740853.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "EasyJet shareholders approve £5.7 billion Apollo takeover",
+   "summary": "EasyJet's shareholders voted to approve a £5.7 billion takeover by Apollo on Wednesday. This decision marks a major step towards removing EasyJet from the London stock market. With 97.07% of scheme sh",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/easyjet-shareholders-approve-5-7-billion-apollo-takeover/articleshow/135740460.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "India to switch bonds worth 250 billion rupees next week",
+   "summary": "On November 16, the Reserve Bank of India will initiate a significant switch auction worth 250 billion rupees. This maneuver involves replacing six bonds that are set to mature between 2027 and 2029 w",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-to-switch-bonds-worth-250-billion-rupees-next-week/articleshow/135740426.cms"
+  },
   {
    "category": "Economy",
    "title": "Dollar firms as hot inflation, hawkish Fed talk lift rate-hike bets",
@@ -52,76 +108,20 @@
    "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-firms-as-hot-inflation-hawkish-fed-talk-lift-rate-hike-bets/articleshow/135739033.cms"
   },
   {
-   "category": "US Markets",
-   "title": "Nasdaq futures rise nearly 2% as CoreWeave earnings calm AI spending fears",
-   "summary": "Futures for the S&amp;P 500 and Nasdaq 100 have shown gains following CoreWeave's impressive earnings announcement. Investors reacted positively as CoreWeave predicts profitability by the first half o",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-futures-rise-nearly-2-as-coreweave-earnings-calm-ai-spending-fears/articleshow/135738901.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "S&amp;P 500, Nasdaq futures gain as CoreWeave results ease AI jitters: Stock",
-   "summary": "S&amp;P 500, Nasdaq futures gain as CoreWeave results ease AI jitters: Stock Market Live Updates",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-fed-anthropic-ipo-coreweave-nvidia-marvell-ai-chip-fed-rate-inflation-treasury-yield-news-11th-november-2026/liveblog/135739245.cms"
-  },
-  {
    "category": "Equity",
-   "title": "Fairfax Financial likely to exit IIFL Finance, sources say",
-   "summary": "Canada's Fairfax Financial Holdings intends to divest its nearly 11% stake in IIFL Finance soon. The sale aims to raise funds for acquiring a significant stake in IDBI Bank from the Indian government.",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fairfax-financial-likely-to-exit-iifl-finance-sources-say/articleshow/135738516.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Sterling drops against firmer dollar as markets price in a hawkish Fed",
-   "summary": "The pound fell against the dollar following strong US inflation data and comments from Federal Reserve officials. Despite recent hawkish expectations supporting the pound, crude oil prices are rising,",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/sterling-drops-against-firmer-dollar-as-markets-price-in-a-hawkish-fed/articleshow/135738659.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Anthropic IPO: A $1.4 trillion bet on the future of AI",
-   "summary": "Anthropic IPO: A $1.4 trillion bet on the future of AI",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/anthropic-ipo-a-1-4-trillion-bet-on-the-future-of-ai/videoshow/135738282.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Realty firms' land acquisition falls 56% to 1,445 acres in Jan-Sep: Anarock",
-   "summary": "In the first nine months of 2026, a notable drop in land acquisition activities by Indian real estate firms has been observed. Anarock attributes this decline to developers adopting a cautious strateg",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/realty-firms-land-acquisition-falls-56-to-1445-acres-in-jan-sep-anarock/articleshow/135736891.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "US Treasury rout hands India's 10-year bond its worst day in a",
-   "summary": "On Wednesday, the Indian rupee gained strength against the dollar, reaching its highest point since April. This improvement was influenced by foreign investments in local stocks and upbeat sentiment i",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-rout-hands-indias-10-year-bond-its-worst-day-in-a-month/articleshow/135736836.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Nifty 50 target: Index in sweet spot? 28,000 soon? HSBC, Citi and",
-   "summary": "Citi raised its Nifty 50 target to 28,000, while HSBC upgraded Indian equities to overweight and Bernstein lifted its target to 26,100.",
+   "title": "London Aluminum Market Faces Biggest Supply Squeeze in Decades",
+   "summary": "Aluminum buyers on the London Metal Exchange are facing the most severe squeeze in decades as inventories backing contracts plunge and much of the remaining stock comes under the control of just two t",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nifty-50-target-index-in-sweet-spot-28-000-soon-hsbc-citi-and-bernstein-raise-targets-after-sharp-13-5-recovery-11794402943483.html"
+   "url": "https://www.livemint.com/market/london-aluminum-market-faces-biggest-supply-squeeze-in-decades-11794422775412.html"
   },
   {
    "category": "Equity",
-   "title": "EAAA India Alternatives Q2 results 2026: Net profit jumps 27%; 140% interim",
-   "summary": "EAAA India Alternatives reported a 26.9% year-on-year rise in Q2 FY27 net profit to  ₹88.10 crore, while revenue grew 12.9% to  ₹251.49 crore. Funds managed increased 28% to  ₹49,164 crore. The compan",
+   "title": "Multibagger Cupid to be in focus on Thursday after Q2 net profit",
+   "summary": "Cupid reported strong Q2 and first-half FY27 results, with H1 net profit up 156% to  ₹100.37 crore and revenue up 137% to  ₹342.58 crore. Growth was driven by domestic consumer healthcare and FMCG, wh",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/eaaa-india-alternatives-q2-results-2026-net-profit-jumps-27-140-interim-dividend-of-rs-7-share-check-record-date-11794399717392.html"
+   "url": "https://www.livemint.com/market/stock-market-news/multibagger-cupid-to-be-in-focus-on-thursday-after-q2-net-profit-more-than-doubles-to-rs-56-crore-raises-fy27-guidance-11794420911955.html"
   }
  ]
 }
