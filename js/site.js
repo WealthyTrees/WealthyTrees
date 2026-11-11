@@ -1,7 +1,7 @@
 /* WealthyTrees site.js v19: theme bar (under header), IST clock + market status, newsletter box, design + Daily Edition loaders */
 (function () {
   "use strict";
-  var BD = "arorapriyansh"; /* <- put your Buttondown username between the quotes */
+  var BD = "arorapriyansh";
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   var wrap = document.querySelector("header .wrap");
 
@@ -73,7 +73,7 @@
 (function () {
   if (!document.getElementById("p-live")) return;
   var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/edition.css?v=12"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/js/edition.js?v=14"; s.defer = true; document.body.appendChild(s);
+  var s = document.createElement("script"); s.src = "/js/edition.js?v=15"; s.defer = true; document.body.appendChild(s);
 })();
 
 
@@ -82,7 +82,7 @@
   add("holidays", function () { add("festival"); });
 })();
 
-(function(){var s=document.createElement("script");s.src="/js/footer-popup.js?v=1";s.defer=true;document.body.appendChild(s);})();
+(function(){var s=document.createElement("script");s.src="/js/footer-popup.js?v=2";s.defer=true;document.body.appendChild(s);})();
 
 /* Ask Sprout — floating finance friend (one-stop: markets, all finance, calculators).
    Loads on every page that loads site.js. */

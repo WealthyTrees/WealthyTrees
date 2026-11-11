@@ -303,8 +303,40 @@ def summarize(items):
     text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
     return json.loads(text)
 
+def fallback_items(items):
+    """No-AI fallback: build brief items straight from the raw headlines so the
+    brief never goes stale when the AI call fails. Less polished than the AI
+    rewrite (no plain-English summary), but always fresh — fresh real news
+    beats a 3-day-old polished brief."""
+    def cat(t):
+        w = t.lower()
+        if any(k in w for k in ("gold", "silver", "crude", "oil", "brent", "natural gas", "copper")):
+            return "Commodity"
+        if any(k in w for k in ("wall street", "s&p", "nasdaq", "dow jones", "federal reserve", "u.s.", "us markets")):
+            return "US Markets"
+        if any(k in w for k in ("rbi", "rupee", "inflation", "gdp", "economy", "repo rate", "interest rate")):
+            return "Economy"
+        return "Equity"
+    WHY = {
+        "Equity": "Share prices move on news like this.",
+        "Commodity": "Commodity prices feed into costs and inflation.",
+        "Economy": "Policy and economic news shape rates and the rupee.",
+        "US Markets": "US markets set the mood for global trading.",
+    }
+    out = []
+    for x in items[:10]:
+        title = " ".join(x["title"].split()[:12])
+        summ = (x.get("desc") or "").strip() or x["title"]
+        c = cat(x["title"])
+        out.append({"category": c, "title": title, "summary": summ, "why": WHY[c],
+                    "source": x["source"], "url": x["url"]})
+    return out
+
 def keep_old(msg):
-    print(msg + " Keeping the previous brief.", file=sys.stderr)  # job still passes; charts and ticker were already saved
+    # Fail the workflow (exit 1) so a stale brief is visible, never silent.
+    # Charts and ticker were already saved before this point, so they still update.
+    print(msg + " Keeping the previous brief.", file=sys.stderr)
+    sys.exit(1)
 
 def main():
     chart_data()
@@ -324,16 +356,20 @@ def main():
     try:
         picked = summarize(items)
     except Exception as e:
-        return keep_old(f"AI summary failed ({type(e).__name__}: {str(e)[:200]}).")
-    out = []
-    for p in picked:
-        try:
-            n = int(p["n"])
-            if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy", "US Markets"):
-                out.append({"category": p["category"], "title": p["title"], "summary": p["summary"],
-                            "why": p["why"], "source": items[n]["source"], "url": items[n]["url"]})
-        except Exception:
-            continue
+        print(f"AI summary failed ({type(e).__name__}: {str(e)[:200]}). Falling back to raw headlines.", file=sys.stderr)
+        picked = None
+    if picked is None:
+        out = fallback_items(items)
+    else:
+        out = []
+        for p in picked:
+            try:
+                n = int(p["n"])
+                if 0 <= n < len(items) and p.get("category") in ("Equity", "Commodity", "Economy", "US Markets"):
+                    out.append({"category": p["category"], "title": p["title"], "summary": p["summary"],
+                                "why": p["why"], "source": items[n]["source"], "url": items[n]["url"]})
+            except Exception:
+                continue
     if len(out) < 3:
         return keep_old("Too few valid items.")
     ist = datetime.now(timezone(timedelta(hours=5, minutes=30)))

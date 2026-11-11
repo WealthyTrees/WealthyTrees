@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Builds THE 9:15 (mobile pages + desktop broadsheet) from data/brief.json, charts.json, explain.json. No dependencies."""
-import json, html, datetime as dt, os, sys
+import json, html, datetime as dt, os, sys, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 now = dt.datetime.now(IST)
@@ -10,7 +10,6 @@ if now.weekday() >= 5 and not os.environ.get("FORCE"):
 J = lambda f, d=None: json.load(open(f"{R}/data/{f}")) if os.path.exists(f"{R}/data/{f}") else d
 brief, explain, charts, quizzes = J("brief.json"), J("explain.json"), J("charts.json", {}), J("quiz.json", [])
 e = lambda s: html.escape(str(s))
-tk = {t["name"]: t for t in brief["ticker"]}
 items = brief["items"]
 DH_DATE = "2026-11-06"
 DW_DATE = "2026-11-07"  # Diwali weekend special: front page gets Diwali animation + Learn promo
@@ -121,10 +120,9 @@ lvl("Sensex", "Sensex closed at {v} ({c:+.2f}%).")
 lvl("Crude WTI", "Crude (WTI) settled at {v} ({c:+.2f}%).")
 lvl("S&P 500", "Wall Street’s S&P 500 ended {c:+.2f}%.")
 btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>SPROUT’S LESSON</small><h4>'+e(ex['title'])+'</h4><p>'+e(ex['intro'])+'</p><i>Page 5 →</i></a>'
-       '<div class="bx"><small>YESTERDAY’S CLOSE</small>'+closetbl()+'</div>'
-       '<a class="bx bg" href="#" data-wt-sub><small>GET IT FREE</small><h4>THE 9:15, every weekday at 8:30 AM</h4><p>Get it in your inbox before the bell. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
+       '<div class="bx"><small>LATEST CLOSE</small>'+closetbl()+'</div>'
+       '<a class="bx bg" href="#" data-wt-sub><small>GET IT FREE</small><h4>THE 9:15, every weekday morning</h4><p>Get it in your inbox every weekday morning. Free, learning only, no tips.</p><i>Subscribe free →</i></a></div>')
 LEARN_STRIP = """<a class="learn9" href="/pages/learn.html"><small>NEW TO MARKETS? · LEARN, FREE</small><h4>Start with Learn — 6 beginner modules, 23 short lessons, about 35 minutes</h4><p>Market basics, reading a company, key ratios, charts, RBI to portfolio, risk &amp; behaviour. Plain English, no tips, no predictions.</p><i>Start learning →</i></a>"""
-teasers_unused = "".join(f'<a class="tz" href="#p{p}" data-go="{p-1}"><small>{t}</small><h4>{e(i["title"])}</h4><p>{e(short(i["summary"], 120))}</p><i>Page {p} →</i></a>' for p, t, i in inside)
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
       f'<p class="stamp">{e(stamp)}</p><div class="fwrap"><div class="fmain"><small class="tag">THE LEAD</small>'
       f'<h1>{e(lead["title"])}</h1><p class="lead s-sm">{e(short(lead["summary"], 135))}</p><p class="lead s-lg dc">{e(lead["summary"])}</p>'
@@ -210,7 +208,7 @@ pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", (stories(ec[:
 pages.append(page(4, "COMMODITIES &amp; WORLD", "Commodities &amp; World",
     f'<div class="strip">{card("Gold","GOLD")}{card("Crude WTI","CRUDE")}{card("USD/INR")}{card("S&P 500")}</div>'
     + stories((cm[:2] + us[:2]), 2, False) + quiz(2), "Commodities & World"))
-wa = "https://wa.me/?text=" + html.escape("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", quote=True).replace(" ", "%20")
+wa = "https://wa.me/?text=" + urllib.parse.quote("THE 9:15 — The Morning Paper. Markets, simplified. In 2 minutes. https://wealthytrees.online/the915", safe="")
 steps = "".join(f'<div class="st"><span>{k+1}</span><div><h3>{e(s[0])}</h3><p>{e(s[1])}</p></div></div>' for k, s in enumerate(ex["steps"]))
 pages.append(page(5, "SPROUT’S LESSON", e(ex["title"]),
     f'<div class="xwrap"><div class="xl"><p class="lead">{e(ex["intro"])}</p><p class="why one"><b>THE ONE-LINE VERSION</b> {e(ex["oneline"])}</p><a class="share cta9" href="{e(ex.get("learn", "/pages/learn.html"))}">Learn this properly, free →</a> <a class="share" style="margin-top:.9rem" href="{wa}" rel="noopener">Share this paper on WhatsApp</a></div><div class="xr">{steps}</div></div>', "Sprout’s Lesson"))
@@ -232,9 +230,9 @@ GA_TAG = '<!-- Google tag (gtag.js) --><script async src="https://www.googletagm
 out = (f'<!doctype html><html lang="en"><head>' + GA_TAG + f'<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        f'<title>THE 9:15 · {e(edno)} · WealthyTrees</title><meta name="description" content="{e(lead["title"])}. Markets, simplified. In 2 minutes.">'
        f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
-       '<link rel="canonical" href="https://wealthytrees.online/pages/the-915.html"><meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">'
+       '<link rel="canonical" href="https://wealthytrees.online/pages/the-915"><meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">'
        '<meta property="og:title" content="THE 9:15 · The Morning Paper by WealthyTrees"><meta property="og:description" content="Yesterday’s closing prices, short market stories and a daily lesson. Free every weekday. Education only.">'
-       '<meta property="og:url" content="https://wealthytrees.online/pages/the-915.html"><meta property="og:image" content="https://wealthytrees.online/assets/logo.svg"><meta name="twitter:card" content="summary">'
+       '<meta property="og:url" content="https://wealthytrees.online/pages/the-915"><meta property="og:image" content="https://wealthytrees.online/assets/og-card.png"><meta name="twitter:card" content="summary">'
        f'<style>{CSS}</style><link rel="stylesheet" href="/css/sprout-ai.css?v=4"></head><body>{util}<main>{"".join(pages)}</main><script>{JS}</script><script src="/js/sprout-ai.js?v=4" defer></script></body></html>')
 os.makedirs(f"{R}/pages", exist_ok=True); os.makedirs(f"{R}/edition", exist_ok=True)
 open(f"{R}/pages/the-915.html", "w").write(out)

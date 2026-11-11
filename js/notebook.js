@@ -17,7 +17,7 @@
   if (/\/learn\/intermediate\/module-/.test(location.pathname) && !prev && !begDone()) { location.replace("/pages/intermediate.html"); return; }
   var lb = document.getElementById("lvbar");
   if (lb) { var t = 0; for (var i = 1; i <= 6; i++) t += prog(i).pct;
-    var bp = Math.round(t / 6), it = 0, ap; for (var j = 1; j <= 6; j++) it += prog("i" + j).pct; ap = Math.round((t + it) / 18);
+    var bp = Math.round(t / 6), it = 0, ap; for (var j = 1; j <= 6; j++) it += prog("i" + j).pct; ap = Math.round((t + it) / 12);
     lb.style.width = bp + "%"; document.getElementById("lvpct").textContent = bp + "%";
     document.getElementById("obar").style.width = ap + "%"; document.getElementById("opct").textContent = ap + "%"; }
   var ic = document.getElementById("lvint");

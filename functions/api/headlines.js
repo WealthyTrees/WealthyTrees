@@ -93,7 +93,9 @@ function parse(xml, cat) {
     const g = (t) => { const x = b.match(new RegExp("<" + t + "[^>]*>([\\s\\S]*?)</" + t + ">")); return x ? dec(x[1]) : ""; };
     const sm = b.match(/<source[^>]*?url="([^"]*)"[^>]*>([\s\S]*?)<\/source>/);
     let title = g("title");
-    const url = g("link"), t = Date.parse(g("pubDate") || g("dc:date") || g("published"));
+    const url = g("link");
+    let t = Date.parse(g("pubDate") || g("dc:date") || g("published"));
+    if (t && t > Date.now()) t = Date.now(); // a feed timezone can read hours ahead; never sort a story as "just now" from the future
     let source, host;
     if (sm) { source = dec(sm[2]); host = hostOf(dec(sm[1])); }          // Google News item
     else { host = hostOf(url); source = NAMES[host] || host || "News"; }   // publisher's own feed

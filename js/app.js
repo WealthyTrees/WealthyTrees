@@ -2,10 +2,10 @@ const $=id=>document.getElementById(id);
 function spark(v,up){const w=200,h=44,mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
 const p=v.map((y,i)=>(i*w/(v.length-1)).toFixed(1)+','+(h-4-(y-mn)/r*(h-8)).toFixed(1)).join(' ');
 return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${p}" fill="none" stroke="${up?'#0f8a5f':'#d64b3a'}" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`}
+(function(){var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',weekday:'long',day:'numeric',month:'long',year:'numeric'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});$('date').textContent=p.weekday+', '+p.day+' '+p.month+' '+p.year;})();
 fetch('/data/brief.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{
-  (function(){var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',weekday:'long',day:'numeric',month:'long',year:'numeric'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});$('date').textContent=p.weekday+', '+p.day+' '+p.month+' '+p.year;})();
-  window.__tkBrief=d.ticker;tkFallback();if(false){const t=d.ticker.map(x=>`<span class="tk"><b>${x.name}</b><i class="v">${x.value}</i><span class="c ${x.change>=0?'up':'dn'}">${x.change>=0?'▲':'▼'} ${Math.abs(x.change).toFixed(2)}%</span></span>`).join('');$('track').innerHTML=t+t;}
-}).catch(()=>{$('date').textContent='Brief unavailable. Please check back soon.'});
+  window.__tkBrief=d.ticker;tkFallback();
+}).catch(()=>{});
 
 /* Market bar (NSE style). Shows one group by time of day, in IST:
    India indices 6:00 AM to 3:30 PM, commodities from 3:30 PM until the US market opens, US indices from the US open until 6:00 AM. */

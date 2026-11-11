@@ -17,7 +17,7 @@ h+='<div class="tt-card tt-q"><h2 class="hw">Questions investors ask</h2><div id
 h+='<div class="tt-note"><h2 class="hw">Sprout\'s notebook</h2><ul>'+T.notes.map(function(n){return'<li>'+n+'</li>'}).join('')+'</ul></div>';
 app.innerHTML=h;
 function $(i){return document.getElementById(i)}
-var cur=null,r=null,act=null;
+var cur=null,r=null,act=null,prev=null;
 function fmtv(k,x){return(F[k]||F.inr)(x)}
 function fm(){var s=T.formula.replace(/\{(\w+)\}/g,function(m,k){return'<button class="chip'+(act==k?' on':'')+'" data-k="'+k+'">'+k+'</button>'});$('fm').innerHTML=s;
  $('pl').innerHTML='Your numbers: '+T.formula.replace(/\{(\w+)\}/g,function(m,k){return'<em>'+T.terms[k].g(v,r)+'</em>'});
@@ -28,17 +28,17 @@ function bars(){var s=r.series,mx=0;s.forEach(function(a){mx=Math.max(mx,a[1])})
 function tip(i){var a=r.series[i];$('bt').textContent='Year '+(i+1)+': '+T.legend[0]+' '+F.inr(a[0])+' \u00B7 '+T.legend[1]+' '+F.inr(a[1]-a[0])+' \u00B7 total '+F.inr(a[1]);
  var c=$('bars').children;for(var j=0;j<c.length;j++)c[j].className=j==i?'on':''}
 function qa(){var o=$('qa'),open={};[].forEach.call(o.querySelectorAll('details'),function(d,i){if(d.open)open[i]=1});
- o.innerHTML=T.qa.map(function(x,i){return'<details'+(open[i]?' open':'')+'><summary>'+x.q+'</summary><div class="a">'+x.a(v,r)+(x.set?'<div><button class="tt-btn ghost try" data-i="'+i+'">Try it in the sliders</button></div>':'')+'</div></details>'}).join('')}
+ o.innerHTML=T.qa.map(function(x,i){return'<details'+(open[i]?' open':'')+'><summary>'+x.q+'</summary><div class="a">'+x.a(v,r,prev)+(x.set?'<div><button class="tt-btn ghost try" data-i="'+i+'">Try it in the sliders</button></div>':'')+'</div></details>'}).join('')}
 function run(){if(T.fix){T.fix(v);T.inputs.forEach(function(d){$('i_'+d.k).value=v[d.k]})}T.inputs.forEach(function(d){$('o_'+d.k).textContent=fmtv(d.f,v[d.k])});
  r=T.compute(v);var m=T.main(r);$('ml').textContent=m[0];$('mv').textContent=fmtv(m[2],m[1]);
  $('rows').innerHTML=r.rows.map(function(x){return'<div class="tt-row"><span>'+x[0]+'</span><b>'+fmtv(x[2],x[1])+'</b></div>'}).join('');
  $('bub').textContent=r.story;var st=r.ratio<1.6?0:r.ratio<2.6?1:r.ratio<4.5?2:3;$('sp').textContent=['\uD83C\uDF31','\uD83C\uDF3F','\uD83C\uDF33','\uD83C\uDF34'][st];
  bars();fm();qa();var p=new URLSearchParams();T.inputs.forEach(function(d){p.set(d.k,v[d.k])});try{history.replaceState(null,'','?'+p)}catch(e){}}
-T.inputs.forEach(function(d){$('i_'+d.k).addEventListener('input',function(e){v[d.k]=+e.target.value;run()})});
+T.inputs.forEach(function(d){$('i_'+d.k).addEventListener('input',function(e){prev=null;v[d.k]=+e.target.value;run()})});
 $('lg').innerHTML='<span>'+T.legend[0]+'</span><span>'+T.legend[1]+'</span>';
 $('bars').addEventListener('click',function(e){var t=e.target.closest('[data-i]');if(t)tip(+t.getAttribute('data-i'))});
 $('fm').addEventListener('click',function(e){var c=e.target.closest('.chip');if(c){act=c.getAttribute('data-k');fm()}});
-$('qa').addEventListener('click',function(e){var b=e.target.closest('.try');if(!b)return;var s=T.qa[+b.getAttribute('data-i')].set;Object.keys(s).forEach(function(k){v[k]=s[k];$('i_'+k).value=s[k]});run();window.scrollTo({top:app.offsetTop,behavior:'smooth'})});
+$('qa').addEventListener('click',function(e){var b=e.target.closest('.try');if(!b)return;var s=T.qa[+b.getAttribute('data-i')].set;prev={};Object.keys(v).forEach(function(k){prev[k]=v[k]});Object.keys(s).forEach(function(k){v[k]=s[k];$('i_'+k).value=s[k]});run();window.scrollTo({top:app.offsetTop,behavior:'smooth'})});
 $('wa').addEventListener('click',function(){var t=r.share+' Try yours: '+location.href;if(navigator.share){navigator.share({text:t}).catch(function(){})}else window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank')});
 $('cp').addEventListener('click',function(){var b=this;try{navigator.clipboard.writeText(location.href);b.textContent='Copied!'}catch(e){b.textContent='Copy from address bar'}setTimeout(function(){b.textContent='Copy my link'},1800)});
 run();

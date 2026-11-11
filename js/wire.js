@@ -30,7 +30,7 @@
   })();
 
   /* Sprout's face is always the same green two-leaf bud — never another face.
-     The bud is a picture on each card; it does nothing when tapped (no pop-up). */
+     The bud is a button on each card; tapping it opens the 'Hi! I'm Sprout' pop-up. */
   function face() {
     return '<svg class="sp-bud" viewBox="0 0 64 64" width="38" height="38" aria-hidden="true" focusable="false">'
       + '<path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>'
@@ -102,7 +102,7 @@
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
   function ago(ms) {
     var m = Math.round((Date.now() - ms) / 60000);
-    return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.floor(m / 60) + " h ago" : "yesterday";
+    return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.floor(m / 60) + " h ago" : Math.floor(m / 1440) + " d ago";
   }
   var safe = function (u) { return /^https?:\/\//i.test(u || ""); };
 
@@ -225,7 +225,7 @@
         var c = null; try { c = JSON.parse(localStorage.getItem("wt-pulse") || "null"); } catch (e) {}
         if (!(loaded && stories.length && stories[0].summary)) {
           if (c && c.j && c.j.stories && c.j.stories.length && Date.now() - c.at < 24 * 3600e3) apply(c.j, true);
-          else if (tries >= 1) plain().catch(function () { if (!loaded) { ol.innerHTML = ""; typeOut("Sprout here. The newsroom feed is down for a moment. Try Today\u2019s brief.", true); note.textContent = ""; } });
+          else if (tries >= 1) plain().catch(function () { if (!loaded) { ol.innerHTML = ""; typeOut("Sprout here. The newsroom feed is down for a moment. Try THE 9:15.", true); note.textContent = ""; } });
         }
         if (tries++ < 3) setTimeout(load, 4000 * tries);
       });

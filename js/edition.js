@@ -126,7 +126,7 @@
     hd.append(pp);
     var sw = el("div", "slides"); slides.forEach(function (s) { sw.append(s); });
     var l = el("button", "tz l"), r = el("button", "tz r"); l.type = r.type = "button"; l.setAttribute("aria-label", "Previous slide"); r.setAttribute("aria-label", "Next slide"); l.tabIndex = r.tabIndex = -1;
-    story.append(bw, hd, sw, l, r); root.append(story, el("p", "ednote", ED[0] + " Edition \u00B7 3 editions a day (Morning 6 AM, Afternoon 12 PM, Night 6 PM, the last). Education only, not investment advice."));
+    story.append(bw, hd, sw, l, r); root.append(story, el("p", "ednote", ED[0] + " Edition \u00B7 3 editions a day (Morning 6 AM, Afternoon 12 PM, Night 6 PM). Education only, not investment advice."));
     panel.innerHTML = ""; panel.append(root); upd();
     l.onclick = function () { if (!nc) go(cur - 1); }; r.onclick = function () { if (!nc) go(cur + 1); }; pp.onclick = function () { playing = !playing; upd(); };
     var sx = null, sy = 0, st = 0, nc = false;

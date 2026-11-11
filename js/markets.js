@@ -173,7 +173,7 @@ function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){
   /* chart and live price disagree: if the quote's own previous close matches the chart, the quote is the odd one out, so ignore it and keep the chart; otherwise the chart is stale, so reload it */
   if(z.prev&&Math.abs(lc/z.prev-1)<.35){delete liveQ[k];return}
   delete data[k];if(k===key){mainSeries=null;lastBar=null;build()}});
- var q=Q[LIVE[key]];if(q&&q.price&&mainSeries&&lastBar){var day=liveQ[key].day;
+ var q=Q[LIVE[key]];if(q&&q.price&&mainSeries&&lastBar&&liveQ[key]){var day=liveQ[key].day;
   if(day===lastBar.time){lastBar.close=q.price;lastBar.high=Math.max(lastBar.high,q.high||q.price);lastBar.low=Math.min(lastBar.low,q.low||q.price);mainSeries.update(type==="Candles"?{time:lastBar.time,open:lastBar.open,high:lastBar.high,low:lastBar.low,close:lastBar.close}:{time:lastBar.time,value:lastBar.close})}}
  drawTiles();drawHead()}).catch(function(){})}
 setInterval(live,60000);setTimeout(live,200);document.addEventListener("visibilitychange",function(){if(!document.hidden)live()});window.addEventListener("online",live);

@@ -32,8 +32,8 @@
 /tools.html /pages/tools.html 301
 
 # THE 9:15
-/the915 /pages/the-915.html 301
-/the-915 /pages/the-915.html 301
+/the915 /pages/the-915 301
+/the-915 /pages/the-915 301
 
 # Same old URLs without .html (Google requested these and got 404)
 /learn-1 /learn/beginner/module-1.html 301
