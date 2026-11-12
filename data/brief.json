@@ -3,125 +3,125 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,255",
-   "change": 0.84
+   "value": "25,247",
+   "change": -0.03
   },
   {
    "name": "SENSEX",
-   "value": "81,879",
-   "change": 0.95
+   "value": "81,878",
+   "change": -0.0
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,998",
+   "value": "3,968",
    "change": -0.8
   },
   {
    "name": "CRUDE WTI",
-   "value": "$86.4",
-   "change": 0.46
+   "value": "$86.9",
+   "change": 0.42
   },
   {
    "name": "USD/INR",
-   "value": "93.68",
-   "change": -0.25
+   "value": "93.94",
+   "change": 0.27
   },
   {
    "name": "S&P 500",
-   "value": "7,629",
-   "change": 1.44
+   "value": "7,619",
+   "change": 1.31
   },
   {
    "name": "NASDAQ",
-   "value": "25,543",
-   "change": 1.9
+   "value": "25,466",
+   "change": 1.6
   },
   {
    "name": "DOW",
-   "value": "52,480",
-   "change": 0.47
+   "value": "52,486",
+   "change": 0.49
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Yes Bank bondholders press for compliance with Supreme Court's AT-1 order",
-   "summary": "Yes Bank bondholders filed a contempt petition in the Supreme Court regarding the restoration of AT-1 bonds. The Supreme Court upheld a ruling that set aside the lender's write-off of 84 billion rupee",
+   "title": "Mahindra &amp; Mahindra among 5 stocks showing White Marubozu Pattern",
+   "summary": "Five stocks in the Nifty500 with a change of more than 5% appeared on the ‘White Marubozu’ bullish scanner, according to StockEdge’s technical scan data.",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/yes-bank-bondholders-press-for-compliance-with-supreme-courts-at-1-order/articleshow/135744450.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/mahindra-amp-mahindra-among-5-stocks-showing-white-marubozu-pattern/slideshow/135758580.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Indian bonds drift as US debt rout saps oil relief before CPI",
+   "summary": "On Thursday morning, Indian government bonds remained stable, reflecting a pause after recent volatility. Market sentiment is influenced by declining oil prices and climbing US Treasury yields, with i",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-drift-as-us-debt-rout-saps-oil-relief-before-cpi/articleshow/135758028.cms"
   },
   {
    "category": "Equity",
-   "title": "Anthropic’s IPO is said to be multiple times oversubscribed",
-   "summary": "Anthropic PBC is witnessing an overwhelming response for its initial public offering, potentially accumulating up to $90.4 billion. This bullish sentiment reflects a staggering anticipated market valu",
+   "title": "FIIs are back! Jefferies lists 11 stocks that can be the biggest",
+   "summary": "In November, foreign institutional investors unexpectedly shifted to become net buyers of Indian equities, indicating a noteworthy change in market dynamics. Jefferies has pinpointed 11 stocks poised",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropics-ipo-is-said-to-be-multiple-times-oversubscribed/articleshow/135743507.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fiis-are-back-jefferies-lists-11-stocks-that-can-be-the-biggest-beneficiaries/slideshow/135758277.cms"
   },
   {
    "category": "Equity",
-   "title": "Market Trading Guide: Astra Microwave among 3 stock recommendations for Thursday",
-   "summary": "Indian equities opened higher on positive global cues but surrendered gains amid rising bond yields and hawkish Fed commentary. Smallcaps outperformed as risk appetite improved. Analysts highlighted s",
+   "title": "From SpaceX to Anthropic, markets have a new playbook for mega-share debuts",
+   "summary": "Anthropic is gearing up for its highly anticipated IPO, aiming to raise as much as $64.4 billion with share prices ranging from $70 to $78. The company is targeting inclusion in major indexes soon aft",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-astra-microwave-among-3-stock-recommendations-for-thursday/slideshow/135742034.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "US stocks: S&amp;P 500, Nasdaq rise as CoreWeave results ease AI spending",
-   "summary": "The S&amp;P 500 and Nasdaq indices showed positive growth as CoreWeave posted impressive financial results, calming fears regarding AI expenditure. Following its projection of reaching profitability b",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-higher-as-coreweave-lifts-ai-trade/articleshow/135741336.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/from-spacex-to-anthropic-markets-have-a-new-playbook-for-mega-share-debuts/articleshow/135756798.cms"
   },
   {
    "category": "Equity",
-   "title": "Baird downgrades Nvidia on China curbs, AI demand worries",
-   "summary": "Baird downgraded Nvidia's stock and cut its price target significantly due to various market risks. Concerns over US restrictions on chip sales to China have emerged, affecting Nvidia's revenue outloo",
+   "title": "Vishal Mega Mart among 5 stocks showing RSI trending up",
+   "summary": "Five Nifty500 stocks that gained over 4.5% on November 11 featured in StockEdge’s RSI Trending Up scan, with their Relative Strength Index (RSI) crossing above 50 from below, signalling strengthening",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/baird-downgrades-nvidia-on-china-curbs-ai-demand-worries/articleshow/135740853.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/vishal-mega-mart-among-5-stocks-showing-rsi-trending-up/slideshow/135755604.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Oil India among 6 stocks closing above VWAP",
+   "summary": "Six Nifty500 stocks closed more than 1.5% above their respective volume-weighted average prices on November 11, according to StockEdge’s technical scan, indicating positive price action during the ses",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/oil-india-among-6-stocks-closing-above-vwap/slideshow/135755140.cms"
   },
   {
    "category": "Equity",
-   "title": "EasyJet shareholders approve £5.7 billion Apollo takeover",
-   "summary": "EasyJet's shareholders voted to approve a £5.7 billion takeover by Apollo on Wednesday. This decision marks a major step towards removing EasyJet from the London stock market. With 97.07% of scheme sh",
+   "title": "Tech Mahindra Share Price Live Updates: Tech Mahindra's Financial Snapshot",
+   "summary": "Tech Mahindra Share Price Live Updates: Tech Mahindra's Financial Snapshot",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/easyjet-shareholders-approve-5-7-billion-apollo-takeover/articleshow/135740460.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "India to switch bonds worth 250 billion rupees next week",
-   "summary": "On November 16, the Reserve Bank of India will initiate a significant switch auction worth 250 billion rupees. This maneuver involves replacing six bonds that are set to mature between 2027 and 2029 w",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-to-switch-bonds-worth-250-billion-rupees-next-week/articleshow/135740426.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "Dollar firms as hot inflation, hawkish Fed talk lift rate-hike bets",
-   "summary": "The US dollar has gained against multiple currencies due to expectations of Federal Reserve interest rate hikes. Inflation data revealed an increase in consumer prices, prompting trader speculation ab",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-firms-as-hot-inflation-hawkish-fed-talk-lift-rate-hike-bets/articleshow/135739033.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tech-mahindra-share-price-today-live-updates-12-nov-2026/liveblog/135754851.cms"
   },
   {
    "category": "Equity",
-   "title": "London Aluminum Market Faces Biggest Supply Squeeze in Decades",
-   "summary": "Aluminum buyers on the London Metal Exchange are facing the most severe squeeze in decades as inventories backing contracts plunge and much of the remaining stock comes under the control of just two t",
+   "title": "Tata Motors PV Share Price Live Updates: Tata Motors PV Market Update:",
+   "summary": "Tata Motors PV Share Price Live Updates: Tata Motors PV Market Update: Price and Change",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-motors-pv-stock-price-today-live-12-nov-2026/liveblog/135754348.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "147% up in five years! Multibagger stock TGV SRAAC rally 8% today",
+   "summary": "TGV SRAAC share price opened at  ₹125.50 apiece on BSE today, as compared to previous close of  ₹120.65 on Wednesday and touched an intraday high of  ₹137.80 on November 12.",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/london-aluminum-market-faces-biggest-supply-squeeze-in-decades-11794422775412.html"
+   "url": "https://www.livemint.com/market/stock-market-news/147-up-in-five-years-multibagger-stock-tgv-sraac-rally-8-today-whats-behind-the-rally-q2-results-returns-11794466155809.html"
   },
   {
    "category": "Equity",
-   "title": "Multibagger Cupid to be in focus on Thursday after Q2 net profit",
-   "summary": "Cupid reported strong Q2 and first-half FY27 results, with H1 net profit up 156% to  ₹100.37 crore and revenue up 137% to  ₹342.58 crore. Growth was driven by domestic consumer healthcare and FMCG, wh",
+   "title": "Netweb Technologies share price rebounds over 13% in four sessions after long",
+   "summary": "Netweb Technologies shares rose over 3% on Thursday, extending a four-session rebound of more than 13%. The company reported Q2 FY27 profit of  ₹136.7 crore and revenue of  ₹1,323.3 crore, while its",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/multibagger-cupid-to-be-in-focus-on-thursday-after-q2-net-profit-more-than-doubles-to-rs-56-crore-raises-fy27-guidance-11794420911955.html"
+   "url": "https://www.livemint.com/market/stock-market-news/netweb-technologies-share-price-rebounds-over-13-in-four-sessions-after-long-downtrend-relief-rally-or-trend-reversal-11794466462093.html"
   }
  ]
 }
