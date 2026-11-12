@@ -27,6 +27,8 @@ STRICT — NEVER BREAK THESE:
 8. "Why did it move?" questions (why gold, Nifty, Bank Nifty, the rupee or crude rose or fell TODAY) are about the past, so ALWAYS explain them — never refuse, and never answer with "no one can know". Use the headlines in the context to find the trigger and the live price for how much it moved, and explain the mechanism in plain English — for example, a weaker dollar often lifts gold; an RBI step moves banks; foreign-investor buying lifts indices. If the headlines name a trigger (an RBI decision, a global cue, a foreign-investor flow figure), use it and say so. If they do not, explain the usual drivers and say plainly that today's exact trigger is not in the news, then point to the Learn module that explains the cause in detail.
 9. Never start an answer with a greeting ("Hello", "Hi", "Hey", "Namaste") — the chat already greets the user. Begin directly with the answer itself.
 10. If the user asks for a return calculation with an amount, a rate and a time, work the number out right here in the chat — never just point them to a calculator. If they do not say whether it is a one-time investment or a monthly SIP, ask them to choose between the two, then work it out once they choose. A calculator link is only a small line at the end for going deeper, never a replacement for the answer.
+11. When the user asks about this website itself — its features, its founder, how to find something, or what WealthyTrees is — answer from the "About this website" context and always link to the right page. Never say the context does not mention a feature that is listed there. The heatmap, the stock screener, Live Wire, THE 9:15, the Learn courses and the founder's story are all part of this website.
+12. The "For more on this" line must always include a real <a href="...">link</a> to a page from the context. Never write a page name as plain text without a link — a link the reader cannot tap is not a link.
 Return ONLY the answer text (plain text with <a href="...">links</a> where useful). No markdown, no JSON.`;
 
 const CALCS = [
@@ -53,6 +55,20 @@ const LEARN = [
   { name: "Markets page", url: "/pages/markets.html" },
   { name: "Live Wire", url: "/#p-live" },
   { name: "THE 9:15", url: "/pages/the-915.html" },
+];
+// What this website itself offers — so Sprout can answer questions about WealthyTrees
+// (its features, its founder, how to find something) instead of saying the context
+// does not mention it. This is the site's own map; keep it current when a feature
+// is added or removed.
+const SITE = [
+  { name: "Markets heatmap", url: "/pages/heatmap.html", what: "a colour map of 18 Indian and world markets — green means up, red means down; tap any box to learn more; open it from the Markets page" },
+  { name: "Stock screener", url: "/pages/markets.html", what: "sort companies by market cap, P/E and change % on the Markets page" },
+  { name: "Live Wire", url: "/#p-live", what: "real-time market news on the homepage" },
+  { name: "Today's Brief", url: "/#p-brief", what: "9 plain-English stories a day on the homepage" },
+  { name: "THE 9:15", url: "/pages/the-915.html", what: "the morning e-newspaper, every weekday" },
+  { name: "Learn", url: "/pages/learn.html", what: "Beginner (6 modules, 23 lessons) and Intermediate (6 modules, 36 lessons), free" },
+  { name: "Tools", url: "/pages/tools.html", what: "all the calculators in one place — SIP, lumpsum, EMI, goal planner, cost of delay, direct vs regular" },
+  { name: "Founder's story", url: "/pages/about.html", what: "Priyansh, a finance student, started WealthyTrees because market news needed a dictionary — his idea: learn the concept first, then read the headline" },
 ];
 
 // STRICT: no tips, no predictions. These are never answered by the AI — they get a
@@ -149,6 +165,25 @@ function quickAnswer(q, quotes) {
   var s = q.toLowerCase().trim();
   // Only plain "what is X" questions — anything with why/how-much/will/fall/rise goes to the AI.
   if (/why|how much|how many|will|fall|rise|move|today|yesterday|crash|rally/.test(s)) return null;
+  // ---- this website itself: answer at once, always correctly, with a real link ----
+  if (/\bheatmap\b/.test(s)) {
+    return "A heatmap shows values as colours — green means up, red means down, so you can see at a glance which markets are doing well. And yes, WealthyTrees has one: the Markets heatmap covers 18 Indian and world markets in one picture, and you can tap any box to learn more about it." + MORE + '<a href="/pages/heatmap.html">Markets heatmap</a>. You can also open it from the <a href="/pages/markets.html">Markets page</a>.';
+  }
+  if (/\bfounder\b|who (founded|started|created|made)\b.{0,20}(wealthytrees|wealthy trees|this (website|site)|it|this)\b/.test(s)) {
+    return "WealthyTrees was started by Priyansh, a finance student. He got tired of market news that needs a dictionary, so he built this site on one idea: learn the concept first, then read the headline. It is a learning project, not a tip service." + MORE + '<a href="/pages/about.html">Founder\'s story</a>.';
+  }
+  if (/live ?wire/.test(s)) {
+    return "Live Wire is the real-time news feed on the homepage — the latest market headlines as they come in, in plain English. It sits at the top of the Newsroom, next to Today's Brief and the Daily Edition." + MORE + '<a href="/#p-live">Live Wire on the homepage</a>.';
+  }
+  if (/who (is|are) (you|sprout)\b|what is sprout\b/.test(s)) {
+    return "I am Sprout, your friendly finance teacher here at WealthyTrees. I explain money, markets and investing in simple, easy-to-understand words — and I can work out sums with you, right here in the chat." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\b(guide|navigate|show (me|us) around|tour|how (do i|to) use (this|the) (website|site)|where (is|do i find))\b/.test(s)) {
+    return "Happy to show you around. Start on the <a href=\"/\">homepage</a>: Live Wire for the latest news, Today's Brief for 9 plain-English stories, and the Daily Edition for the morning paper. The <a href=\"/pages/markets.html\">Markets page</a> has live prices, charts, the stock screener and the <a href=\"/pages/heatmap.html\">heatmap</a>. The <a href=\"/pages/learn.html\">Learn page</a> has the free Beginner and Intermediate courses, and the <a href=\"/pages/tools.html\">Tools page</a> has all the calculators.";
+  }
+  if (/wealthy?trees|about (this|the) (website|site)|what (is|do you know about) (this|the) (website|site)/.test(s)) {
+    return "WealthyTrees is a learning site for Indian students and beginners. It teaches finance in plain English — free Learn courses from market basics to taxes, live market prices and charts, a daily morning paper called THE 9:15, and calculators for SIPs, lumpsums, EMIs and goals. No noise, no tips — education only." + MORE + '<a href="/pages/learn.html">Learn page</a>. Or see <a href="/pages/the-915.html">THE 9:15</a> and the <a href="/pages/markets.html">Markets page</a>.';
+  }
   if (/\bnifty\b/.test(s)) {
     var n = moveOf(quotes, "NIFTY 50");
     var line = n ? " Today, Nifty 50 is at " + fmtMove(n) + "." : "";
@@ -233,6 +268,7 @@ async function context(env) {
   if (top.length) parts.push("Today's headlines: " + top.join(" | "));
   parts.push("Calculators: " + CALCS.map(function (c) { return c.name + " (" + c.url + ") — " + c.what; }).join("; "));
   parts.push("Learn: " + LEARN.map(function (l) { return l.name + " (" + l.url + ")"; }).join("; "));
+  parts.push("About this website: " + SITE.map(function (f) { return f.name + " (" + f.url + ") — " + f.what; }).join("; "));
   return { text: parts.join("\n"), quotes: quotes, heads: heads };
 }
 
