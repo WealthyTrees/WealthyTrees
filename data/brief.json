@@ -3,125 +3,125 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,247",
-   "change": -0.03
+   "value": "25,299",
+   "change": 1.02
   },
   {
    "name": "SENSEX",
-   "value": "81,878",
-   "change": -0.0
+   "value": "81,911",
+   "change": 0.99
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,968",
-   "change": -0.8
+   "value": "3,864",
+   "change": -3.42
   },
   {
    "name": "CRUDE WTI",
-   "value": "$86.9",
-   "change": 0.42
+   "value": "$87.3",
+   "change": 0.86
   },
   {
    "name": "USD/INR",
-   "value": "93.94",
-   "change": 0.27
+   "value": "94.03",
+   "change": 0.38
   },
   {
    "name": "S&P 500",
-   "value": "7,619",
-   "change": 1.31
+   "value": "7,591",
+   "change": -0.38
   },
   {
    "name": "NASDAQ",
-   "value": "25,466",
-   "change": 1.6
+   "value": "25,306",
+   "change": -0.63
   },
   {
    "name": "DOW",
-   "value": "52,486",
-   "change": 0.49
+   "value": "52,433",
+   "change": -0.1
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Mahindra &amp; Mahindra among 5 stocks showing White Marubozu Pattern",
-   "summary": "Five stocks in the Nifty500 with a change of more than 5% appeared on the ‘White Marubozu’ bullish scanner, according to StockEdge’s technical scan data.",
+   "title": "US stocks: US market opens lower after Nvidia CEO steps down",
+   "summary": "Wall Street's main indexes opened lower on Thursday after Nvidia said CEO Jensen Huang was stepping down, leaving the AI industry without its biggest champion.",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/mahindra-amp-mahindra-among-5-stocks-showing-white-marubozu-pattern/slideshow/135758580.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-lower-after-nvidia-ceo-steps-down/articleshow/135773944.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Nebius beats quarterly revenue estimates on strong AI demand",
+   "summary": "In the latest quarterly report, Nebius achieved impressive revenue of $981 million, exceeding analyst projections of $907.5 million. The company is optimistic about future sales, forecasting between $",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nebius-beats-quarterly-revenue-estimates-on-strong-ai-demand/articleshow/135771184.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Nasdaq, S&amp;P 500 futures fall as Nvidia turbulence unsettles AI stocks",
+   "summary": "Futures tracking the Nasdaq 100 fell significantly after Nvidia shares plummeted due to leadership concerns. Reports about CEO Jensen Huang led to a decline in investor sentiment towards AI-linked sto",
+   "why": "US markets set the mood for global trading.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-sp-500-futures-fall-as-nvidia-turbulence-unsettles-ai-stocks/articleshow/135771074.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Clean Max Enviro Energy pledges Rs 50,000 crore investment in Andhra Pradesh",
+   "summary": "Clean Max Enviro Energy Solutions has signed an MoU to invest Rs 50,000 crore in Andhra Pradesh. This investment will focus on developing 3GW of integrated power generation facilities using wind and s",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/companies/clean-max-enviro-energy-pledges-rs-50000-crore-investment-in-andhra-pradesh/articleshow/135771043.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Nasdaq, S&amp;P 500 edge lower as Nvidia turbulence rattles AI stocks: Stock",
+   "summary": "Nasdaq, S&amp;P 500 edge lower as Nvidia turbulence rattles AI stocks: Stock Market Live Updates",
+   "why": "US markets set the mood for global trading.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-intel-micron-ai-stocks-marvell-coreweave-ai-chip-stocks-treasury-yield-news-12th-november-2026/liveblog/135771380.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "India bonds track Treasury weakness ahead of debt supply",
+   "summary": "Indian government bonds are currently facing losses as traders brace for an influx of debt supply and mounting inflation pressures. The 10-year US Treasury yield is nearing the 5% mark, fueled by pred",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-track-treasury-weakness-ahead-of-debt-supply/articleshow/135769595.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Punjab National Bank among 4 stocks hitting 52-week highs; rally up to",
+   "summary": "Four BSE 100 stocks, including Punjab National Bank, Federal Bank and Kotak Mahindra Bank, hit fresh 52-week highs, with monthly gains ranging from 10% to 22%.",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/punjab-national-bank-among-4-stocks-hitting-52-week-highs-rally-up-to-22-in-a-month/slideshow/135769519.cms"
   },
   {
    "category": "Commodity",
-   "title": "Indian bonds drift as US debt rout saps oil relief before CPI",
-   "summary": "On Thursday morning, Indian government bonds remained stable, reflecting a pause after recent volatility. Market sentiment is influenced by declining oil prices and climbing US Treasury yields, with i",
+   "title": "Nvidia Boardroom Turmoil: What's Happening to Jensen Huang?",
+   "summary": "Nvidia Boardroom Turmoil: What's Happening to Jensen Huang?",
    "why": "Commodity prices feed into costs and inflation.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-drift-as-us-debt-rout-saps-oil-relief-before-cpi/articleshow/135758028.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nvidia-boardroom-turmoil-whats-happening-to-jensen-huang/videoshow/135769095.cms"
   },
   {
    "category": "Equity",
-   "title": "FIIs are back! Jefferies lists 11 stocks that can be the biggest",
-   "summary": "In November, foreign institutional investors unexpectedly shifted to become net buyers of Indian equities, indicating a noteworthy change in market dynamics. Jefferies has pinpointed 11 stocks poised",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fiis-are-back-jefferies-lists-11-stocks-that-can-be-the-biggest-beneficiaries/slideshow/135758277.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "From SpaceX to Anthropic, markets have a new playbook for mega-share debuts",
-   "summary": "Anthropic is gearing up for its highly anticipated IPO, aiming to raise as much as $64.4 billion with share prices ranging from $70 to $78. The company is targeting inclusion in major indexes soon aft",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/from-spacex-to-anthropic-markets-have-a-new-playbook-for-mega-share-debuts/articleshow/135756798.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Vishal Mega Mart among 5 stocks showing RSI trending up",
-   "summary": "Five Nifty500 stocks that gained over 4.5% on November 11 featured in StockEdge’s RSI Trending Up scan, with their Relative Strength Index (RSI) crossing above 50 from below, signalling strengthening",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/vishal-mega-mart-among-5-stocks-showing-rsi-trending-up/slideshow/135755604.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "Oil India among 6 stocks closing above VWAP",
-   "summary": "Six Nifty500 stocks closed more than 1.5% above their respective volume-weighted average prices on November 11, according to StockEdge’s technical scan, indicating positive price action during the ses",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/oil-india-among-6-stocks-closing-above-vwap/slideshow/135755140.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Tech Mahindra Share Price Live Updates: Tech Mahindra's Financial Snapshot",
-   "summary": "Tech Mahindra Share Price Live Updates: Tech Mahindra's Financial Snapshot",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tech-mahindra-share-price-today-live-updates-12-nov-2026/liveblog/135754851.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Tata Motors PV Share Price Live Updates: Tata Motors PV Market Update:",
-   "summary": "Tata Motors PV Share Price Live Updates: Tata Motors PV Market Update: Price and Change",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-motors-pv-stock-price-today-live-12-nov-2026/liveblog/135754348.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "147% up in five years! Multibagger stock TGV SRAAC rally 8% today",
-   "summary": "TGV SRAAC share price opened at  ₹125.50 apiece on BSE today, as compared to previous close of  ₹120.65 on Wednesday and touched an intraday high of  ₹137.80 on November 12.",
+   "title": "Meesho block deal: SVF II Meerkat to offload 1% stake at ₹246",
+   "summary": "Meesho shares may be in focus after a SoftBank affiliate reportedly planned to sell a 1% stake for about  ₹1,174 crore at a 3.1% discount.&amp;nbsp;",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/147-up-in-five-years-multibagger-stock-tgv-sraac-rally-8-today-whats-behind-the-rally-q2-results-returns-11794466155809.html"
+   "url": "https://www.livemint.com/market/stock-market-news/meesho-block-deal-svf-ii-meerkat-to-offload-1-stake-at-rs-246-apiece-deal-size-rs-1-174-crore-11794493326642.html"
   },
   {
    "category": "Equity",
-   "title": "Netweb Technologies share price rebounds over 13% in four sessions after long",
-   "summary": "Netweb Technologies shares rose over 3% on Thursday, extending a four-session rebound of more than 13%. The company reported Q2 FY27 profit of  ₹136.7 crore and revenue of  ₹1,323.3 crore, while its",
+   "title": "Nvidia stock plunges 14% to over one-year low as Jensen Huang quits",
+   "summary": "Nvidia shares fell 14.3% to $148.80 after CEO Jensen Huang resigned, ending his 33-year tenure. CFO Colette Kress was named interim CEO as the board searches for a permanent successor. Harvey C. Jones",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/netweb-technologies-share-price-rebounds-over-13-in-four-sessions-after-long-downtrend-relief-rally-or-trend-reversal-11794466462093.html"
+   "url": "https://www.livemint.com/market/stock-market-news/nvidia-stock-plunges-14-to-over-one-year-low-as-jensen-huang-quits-market-cap-falls-below-4-trillion-11794493911909.html"
   }
  ]
 }
