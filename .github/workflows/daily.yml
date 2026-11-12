@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: "30 0 * * *"    # 6:00 AM IST  (Morning Edition)
     - cron: "30 6 * * *"    # 12:00 PM IST (Afternoon Edition)
-    - cron: "30 12 * * *"   # 6:00 PM IST  (Night Edition)
+    - cron: "30 12 * * *"   # 6:00 PM IST (Night Edition)
   workflow_dispatch:        # lets you run it by hand
 permissions:
   contents: write
@@ -14,7 +14,14 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
       - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
