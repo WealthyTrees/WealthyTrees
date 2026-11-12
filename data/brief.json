@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,864",
-   "change": -3.42
+   "value": "3,878",
+   "change": -3.06
   },
   {
    "name": "CRUDE WTI",
-   "value": "$87.3",
-   "change": 0.86
+   "value": "$87.6",
+   "change": 1.23
   },
   {
    "name": "USD/INR",
@@ -28,100 +28,92 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,591",
-   "change": -0.38
+   "value": "7,627",
+   "change": 0.1
   },
   {
    "name": "NASDAQ",
-   "value": "25,306",
-   "change": -0.63
+   "value": "25,444",
+   "change": -0.09
   },
   {
    "name": "DOW",
-   "value": "52,433",
-   "change": -0.1
+   "value": "52,674",
+   "change": 0.36
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "US stocks: US market opens lower after Nvidia CEO steps down",
-   "summary": "Wall Street's main indexes opened lower on Thursday after Nvidia said CEO Jensen Huang was stepping down, leaving the AI industry without its biggest champion.",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-lower-after-nvidia-ceo-steps-down/articleshow/135773944.cms"
+   "category": "Economy",
+   "title": "Indian Consumer Inflation Climbs Past Central Bank Tolerance Ceiling in October",
+   "summary": "India's headline retail inflation reached 6.09% last month, marking its highest point in two years. This increase pushed price pressures above the central bank's prescribed upper threshold.",
+   "why": "Elevated consumer price readings reduce household purchasing power and make interest rate cuts less likely.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTEdUeDhTQnVnX0Q1MUVGUFNMaTRySGFjUWNTWElGNDZyZnhyRXI1Yzg4b0N0ZjZiRTdRc2N5X2hGcnVnVEpmMWFqSjBTYm5ORUs1NmxGVHBXOVVoOUJzeEJLLWpYOVFkeVlzTDhjQlAzc3ZQS2JvaDlvVmFfamExS3ZJcFlJemUxT3NId29MZTQyZE1lLXhocGtBbUtqQmtUZ3dESmwzOGNyY0xxT3BlalVzZWlFT1lhMkdrd25KWjY0SkxpWFg2dGIydC02d9IB2wFBVV95cUxOZk1YVmFBaWc0c1Z1ZWp5MHBZcHRQRWhsYXdtNjVrSVY3U2xRVlBOYkszQVBtQ0JJdWZRQnlOei1KelR1MlZhXzlpNHZIWnFhNFpVZHFscHdlM1FpR2w4Y1pLQnNyM1dxQmdqYm5SckhQbW1COG41RUYweDY2RVRIUFhkY1VLRlhTYkxXUkR6SXNmcV9TWlowV1B3OEw1UkVzVTJRaFM3X3l4YVZMZlA4RTVBeXl4aDMzU3VHYy1JSm9Jc2huU19OekFTMXR0ZEc0ZDJGbk85TUU0TTQ?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Nebius beats quarterly revenue estimates on strong AI demand",
-   "summary": "In the latest quarterly report, Nebius achieved impressive revenue of $981 million, exceeding analyst projections of $907.5 million. The company is optimistic about future sales, forecasting between $",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nebius-beats-quarterly-revenue-estimates-on-strong-ai-demand/articleshow/135771184.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq, S&amp;P 500 futures fall as Nvidia turbulence unsettles AI stocks",
-   "summary": "Futures tracking the Nasdaq 100 fell significantly after Nvidia shares plummeted due to leadership concerns. Reports about CEO Jensen Huang led to a decline in investor sentiment towards AI-linked sto",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-sp-500-futures-fall-as-nvidia-turbulence-unsettles-ai-stocks/articleshow/135771074.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Clean Max Enviro Energy pledges Rs 50,000 crore investment in Andhra Pradesh",
-   "summary": "Clean Max Enviro Energy Solutions has signed an MoU to invest Rs 50,000 crore in Andhra Pradesh. This investment will focus on developing 3GW of integrated power generation facilities using wind and s",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/companies/clean-max-enviro-energy-pledges-rs-50000-crore-investment-in-andhra-pradesh/articleshow/135771043.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq, S&amp;P 500 edge lower as Nvidia turbulence rattles AI stocks: Stock",
-   "summary": "Nasdaq, S&amp;P 500 edge lower as Nvidia turbulence rattles AI stocks: Stock Market Live Updates",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-intel-micron-ai-stocks-marvell-coreweave-ai-chip-stocks-treasury-yield-news-12th-november-2026/liveblog/135771380.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "India bonds track Treasury weakness ahead of debt supply",
-   "summary": "Indian government bonds are currently facing losses as traders brace for an influx of debt supply and mounting inflation pressures. The 10-year US Treasury yield is nearing the 5% mark, fueled by pred",
-   "why": "Share prices move on news like this.",
+   "category": "Economy",
+   "title": "Domestic Sovereign Debt Slumps as American Yields Advance Toward Five Percent",
+   "summary": "Prices of Indian government securities fell under pressure from upcoming debt issuance and rising inflation concerns. Meanwhile, benchmark ten-year borrowing costs in the United States approached five percent.",
+   "why": "Higher global bond yields often prompt capital outflows from emerging economies and lift domestic borrowing costs.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-track-treasury-weakness-ahead-of-debt-supply/articleshow/135769595.cms"
   },
   {
    "category": "Equity",
-   "title": "Punjab National Bank among 4 stocks hitting 52-week highs; rally up to",
-   "summary": "Four BSE 100 stocks, including Punjab National Bank, Federal Bank and Kotak Mahindra Bank, hit fresh 52-week highs, with monthly gains ranging from 10% to 22%.",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/punjab-national-bank-among-4-stocks-hitting-52-week-highs-rally-up-to-22-in-a-month/slideshow/135769519.cms"
+   "title": "Indian Equities Reclaim Fifth Spot Globally After Surpassing Taiwan Valuation",
+   "summary": "The Indian equity market has expanded sufficiently to move ahead of Taiwan in global rankings. This marks India's return among the five most valuable equity bourses in the world.",
+   "why": "Market capitalization rankings highlight the expanding weight of a country's listed corporate sector relative to global peers.",
+   "source": "BusinessLine",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbVE4bFZULUE4cHVQbXhoUWFTVnNVMXBWbm5CbFNiSkFNNzVkRjhfcGhpRjlJQmNSVjZqaHVEYnZnMlR0dFAtdUg0WGRRSEFfX0RGcElib00tX0oyVHl0Um5CQWYtRDRnRDNTd1lDUkN5OThRcE9qeUZielA1R0Y0MU95ekY1RFRXREEtUldTYmtJdG9nb0xkRG15RW5xMXNaelY4bHlFNXVBMXJrMEhVNldVT05aZXo2LXYwQU1qdnlRc1VNTThrOVh3bHl0R3FGWnM4UVViWVA0SXBsUnUzUW1KakFJMThrOHJPdkdn0gH0AUFVX3lxTFBPZTQ1N0ZDdERlc2xZU0tITmVQdm5rdHZxdk9xQ0V4NllSR1lWSXVUdDJQd0tzQWVHVVYwZEh5SEw4bUNHUXZIZ1BmemFhWTI2TmlIbENGZ0t3cldTRERaVE9kRlVzWVY3RmVxa25SSTI0TjhwV2lzeExLRFNoc05WRW1fNEE1LWpWS1pta25Zb1NoeEhDTWpTcGhKbjAwWVcybW41aDBjTEVwdlYyVUNNdHFWM25VNGFpZ09pYmpfM3hWZlYyN01wdUJpaklWY2xmQ19DUE1kUDJMQXlaYy0tb1Uzd3F3Vkl0QUdHSWgzeXlGYjU?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Four Domestic Firms Gain Entry into Flagship Global Benchmark Index",
+   "summary": "Index administrator MSCI included four additional Indian corporations in its key international benchmark during its latest cyclical evaluation. The changes take effect following the November periodic review.",
+   "why": "Inclusion in major international benchmarks typically prompts index-tracking mutual funds and exchange-traded portfolios to purchase the newly added shares.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQU2JLY091dUN4WGdnbWpzMnNJUGxqSm1hVVNmWGs0RDZpcUFHa0dUZHBPcWxoVC1tUW1NMmo3SVY0NzZkaGY0TDN3UW1BNU1OVS1kTkJEbHl4aW1kWUxXNEVkVGVGdVR6R1dXUlFKQVNYZU9abklQVnJUUW9UdVM4NEJnZV9nM2V5R1dCZGh5QzNPb0FldlhuSVZiMmljLWRMNzAxTFd4SlJTa3dnSE9qQWppcXc?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "HAL Posts Sixteen Percent Earnings Expansion Even as Operating Margins Compress",
+   "summary": "Hindustan Aeronautics recorded a 16% annual jump in quarterly net profit alongside a nearly 15% revenue gain. However, its operating margin contracted to 24.1%, causing the share price to decline two percent.",
+   "why": "Investors closely evaluate operational profit margins because top-line growth can sometimes mask increasing underlying operational expenses.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/hal-shares-edge-lower-after-q2-results-despite-16-yoy-profit-growth-why-did-investors-turn-cautious-decoded-11794486814737.html"
   },
   {
    "category": "Commodity",
-   "title": "Nvidia Boardroom Turmoil: What's Happening to Jensen Huang?",
-   "summary": "Nvidia Boardroom Turmoil: What's Happening to Jensen Huang?",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nvidia-boardroom-turmoil-whats-happening-to-jensen-huang/videoshow/135769095.cms"
+   "title": "Gold and Silver Retract Locally Amid Ongoing Bullion Market Pullback",
+   "summary": "Domestic gold prices slipped below 1.39 lakh rupees per ten grams during recent trading. Concurrently, silver prices fell by 1.3% as precious metals extended their downward correction.",
+   "why": "Tracking bullion price shifts helps investors observe how market participants adjust their exposure to non-yielding safe-haven assets.",
+   "source": "CNBC TV18",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUW9ibV80cXotWW9hNHBNVWVSNUF3Rk4xalozOW5rdTdmOEd1X2JXV2ZhS1NEekt3dTlkYV9Ed2FQcm9vWUtiRzJOSGkzUGcyZm5ibk8zMkxWbHZnZVowTlcxUDVZM3VIYzF5VUlqVDd0RUFUdHkzTDZzT3ByZHRrQUNrQWNMaVl3TkFlUHpTaVBHUmVtRW1jWUdsRGxzQjBzX3ZCajd4WWkycTZPWERDYUZSRFZBUlZtSEk0dFdvYTd6V1HSAcgBQVVfeXFMUExldWlsVkNSM0VsVmV4QXBaMHBDS0hwVlFXTFM4d19aTUpRc0ZZV29wcGxFWHFvcGlCcVAtd1kxblU0Z2dXaFZ4YVlZYTUzZ2pYRXBoaE9rM0JQV3d2cC14d085MFRuWnFVelpoQTFNMFF5TU5rcUZJLWY4SVhCVGE4c3FwYnNfanJKcnI5TVpOejRNOWpOd3o2NkFMSXNFeEpPZXpmcnYwTlRIaEdmT1MyRDZTVkFIZlRMb3JNXzJ6Snh2SjFZamI?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Meesho block deal: SVF II Meerkat to offload 1% stake at ₹246",
-   "summary": "Meesho shares may be in focus after a SoftBank affiliate reportedly planned to sell a 1% stake for about  ₹1,174 crore at a 3.1% discount.&amp;nbsp;",
-   "why": "Share prices move on news like this.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/meesho-block-deal-svf-ii-meerkat-to-offload-1-stake-at-rs-246-apiece-deal-size-rs-1-174-crore-11794493326642.html"
+   "category": "Commodity",
+   "title": "Reserve Bank Sets Redemption Terms for Maturing 2018 Gold Bonds",
+   "summary": "The Reserve Bank of India has fixed the payout details for the Sovereign Gold Bond tranche issued in 2018. Investors holding this series will receive their terminal repayment as the maturity date arrives.",
+   "why": "Sovereign Gold Bonds offer retail buyers paper exposure to physical bullion price appreciation alongside government-backed terminal redemption.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63964"
   },
   {
-   "category": "Equity",
-   "title": "Nvidia stock plunges 14% to over one-year low as Jensen Huang quits",
-   "summary": "Nvidia shares fell 14.3% to $148.80 after CEO Jensen Huang resigned, ending his 33-year tenure. CFO Colette Kress was named interim CEO as the board searches for a permanent successor. Harvey C. Jones",
-   "why": "Share prices move on news like this.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nvidia-stock-plunges-14-to-over-one-year-low-as-jensen-huang-quits-market-cap-falls-below-4-trillion-11794493911909.html"
+   "category": "US Markets",
+   "title": "Major American Indexes Drop as Nvidia Leadership Departure Rattles Technology Sector",
+   "summary": "United States equity markets began trading lower following the resignation of Nvidia's chief executive officer. The sudden executive transition prompted a broad pullback across technology company shares.",
+   "why": "Major benchmark-heavy firms exert a disproportionate influence over broader market indices when sudden leadership changes trigger institutional reallocations.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWTd1OUZ3V3VrckpGZlk1R1J3TW1UM3pZTDVvWW5GNWpfRXp4RWVER2tUWWVUeTJoMTlIRlFrMk9jWFY1YU91VjNtdmREY1M4YWtHZkxUQ2FULW9qdWU3b28tcENpZ01jZGpGSzVfS3Vvb1ptNl84ZTVReDVHY1hyVnZRbEw0OVFIQy1DQUNsNUxqTlYtTUIxeTFYT0puVzFaMUNpX1Y1dzhyeTVYTy1jam1KNE9ONjBXRXU0eG04VlEyTXRyT3lrUWJlX01kdUhzcEsw0gHYAUFVX3lxTFBZSFBLc1ctcW0zSG1Jd1UzbEVUZ2RqMEpacTUxTm8yVUp4YkdDbi04RUFHaldxbF9pWnIzSVdoZ1p3RHFMNTJDV2tuLVhFSVJRbU5IVlJqM1IwUFhPNUNKbWJmQnlZckZFZlNSTTg5SWVwSk0zclJVUzd2VENnYVlJZ2FDTUNHQURMVHdyWHBxS1I4cEdSWVNlbUVXRDNVTm5ITFQ5ekQ0NGZvRmtFVnp4V01FOTZRZHc4MGlKeFBMak5FSGcyTVZvTFhqbHRXWWgyR1ZFSmoyTQ?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Weekly American Unemployment Filings Increase Past Wall Street Consensus Projections",
+   "summary": "New applications for state unemployment assistance in the United States climbed above anticipated levels over the past week. The pickup signals a potential softening in the domestic employment environment.",
+   "why": "Labor market statistics provide central bankers and investors with direct insight into the pace of underlying economic activity.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOb0tmSnlkTmUtZkx0ZWpiVEg5bVZuQkJCcG5mOE5CbkFWWGNlQUx2Z3Z2S0MtdTlnd1RzVUhkb0diNk9ERUlvcm9DZ2N2TE5md0N1RUp4OU5sVmFPU3VBaGVCeXF6MElLOWZIaXpkT0pET1RhdnlTT3hBVmUwQXpHbC15Qk1leVZ4MExPY004c2M4QUJOSGh0X2NUNW0?oc=5"
   }
  ]
 }
