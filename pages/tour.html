@@ -920,14 +920,23 @@
           stopNarration();
           onDone();
         }
-        /* Sound blocked: stop the show (never race ahead silently) and let
-           the user tap Play again — a fresh gesture — to retry. */
+        /* Sound blocked: the phone/browser would not play the recorded voice.
+           Do NOT leave the tour stuck — show a short note, then keep the tour
+           moving visually so the user still sees every building and caption.
+           Each new segment retries the audio, so the voice starts as soon as
+           the phone allows it. The user can also tap Play at any time to
+           retry the sound for the current segment. */
         function audioBlocked(){
           if (finished) return; finished = true;
           if (my !== state.speakToken) return;
           clearFallback();
           if (retryTimer){ clearTimeout(retryTimer); retryTimer = null; }
-          showAudioBlocked();
+          setCaption("Sound is off on this device — the tour will keep walking silently. Tap Play to try the voice again.");
+          nowLabel.textContent = "Sound off — walking silently";
+          miniLabel.innerHTML = "<b>Playing</b> · sound off";
+          /* Keep walking: advance after the estimated time for this segment.
+             (Reset finished first — advance() returns early while it is set.) */
+          state.fallbackTimer = setTimeout(function(){ finished = false; advance(); }, state.segDuration);
         }
         var src = AUDIO[state.idx];
         if (src){
@@ -1214,9 +1223,17 @@
                 if (attempts < 2){
                   setTimeout(tryResume, 300);
                 } else {
-                  /* Still blocked: stay paused and tell the user to tap again. */
+                  /* Still blocked: do not leave the tour stuck — keep walking
+                     visually so the user still sees every building. The next
+                     segment will retry the voice. */
                   clearFallback();
-                  showAudioBlocked();
+                  setCaption("Sound is off on this device — the tour will keep walking silently. Tap Play to try the voice again.");
+                  nowLabel.textContent = "Sound off — walking silently";
+                  miniLabel.innerHTML = "<b>Playing</b> · sound off";
+                  state.fallbackTimer = setTimeout(function(){
+                    if (my !== state.speakToken || state.mode !== "playing") return;
+                    nextSegment();
+                  }, state.pausedRemaining || state.segDuration || 3000);
                 }
               });
             }
