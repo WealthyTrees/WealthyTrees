@@ -3,125 +3,125 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,106",
-   "change": -0.76
+   "value": "25,144",
+   "change": -0.44
   },
   {
    "name": "SENSEX",
-   "value": "81,369",
-   "change": -0.66
+   "value": "81,592",
+   "change": -0.35
   },
   {
    "name": "GOLD $/oz",
    "value": "3,900",
-   "change": 0.37
+   "change": 0.39
   },
   {
    "name": "CRUDE WTI",
-   "value": "$88.9",
-   "change": 0.23
+   "value": "$89.2",
+   "change": 0.57
   },
   {
    "name": "USD/INR",
-   "value": "94.21",
-   "change": 0.18
+   "value": "94.23",
+   "change": 0.2
   },
   {
    "name": "S&P 500",
-   "value": "7,592",
-   "change": -0.35
+   "value": "7,575",
+   "change": -0.23
   },
   {
    "name": "NASDAQ",
-   "value": "25,366",
-   "change": -0.39
+   "value": "25,240",
+   "change": -0.5
   },
   {
    "name": "DOW",
-   "value": "52,297",
-   "change": -0.36
+   "value": "52,369",
+   "change": 0.14
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "MSCI rejig: Which stocks may see the biggest inflows &amp; outflows?",
-   "summary": "In a significant update, MSCI has revealed modifications to its indices, impacting several Indian stocks starting November 30. This shift is predicted to boost India's representation within the MSCI E",
+   "title": "US Treasury chief says Fed should not hike rates over energy shock",
+   "summary": "During his speech, US Treasury Secretary Scott Bessent advocated for the Federal Reserve to keep an open mind about interest rate adjustments. He pointed out that the current economic indicators could",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/msci-rejig-which-stocks-may-see-the-biggest-inflows-amp-outflows/slideshow/135792280.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-treasury-chief-says-fed-should-not-hike-rates-over-energy-shock-tied-to-iran-war/articleshow/135806960.cms"
   },
   {
    "category": "Equity",
-   "title": "Carlsberg said to start road show for $600 million India IPO",
-   "summary": "Carlsberg is preparing a potential $600 million IPO of its Indian business, targeting a $4 billion valuation. The offering could launch as early as January 2027, comprising a 15% stake sale by its Dan",
+   "title": "MAN Industries PAT rises to Rs 82 cr in Q2",
+   "summary": "MAN Industries (India) Ltd has announced a substantial increase in consolidated profit after tax during the September quarter. The company's revenue from operations also saw a notable rise year-on-yea",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/carlsberg-said-to-start-road-show-for-600-million-india-ipo/articleshow/135790402.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Top pension fund to buy more India state bonds on high yields",
-   "summary": "SBI Pension Fund plans to increase investments in state government bonds, expecting higher yields amid rising supply. The $64 billion fund is pursuing a carry-focused strategy, favouring state and cor",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/top-pension-fund-to-buy-more-india-state-bonds-on-high-yields/articleshow/135789980.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/man-industries-pat-rises-to-rs-82-cr-in-q2/articleshow/135806024.cms"
   },
   {
    "category": "Economy",
-   "title": "India bonds under pressure before debt supply; hot inflation prints pinch further",
-   "summary": "Indian government bonds experienced significant selling pressure ahead of a major auction for the benchmark paper. The yield on the 6.94% 2036 bond rose notably due to rising inflation in both India a",
+   "title": "US stocks rise at open after softer producer inflation data: Stock Market",
+   "summary": "US stocks rise at open after softer producer inflation data: Stock Market Live Updates",
    "why": "Policy and economic news shape rates and the rupee.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-under-pressure-before-debt-supply-hot-inflation-prints-pinch-further/articleshow/135789760.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-microsoft-cerebras-amd-micron-treasury-yield-news-13th-november-2026/liveblog/135804970.cms"
   },
   {
    "category": "Equity",
-   "title": "Aditya Birla Capital among 9 stocks showing White Marubozu Pattern",
-   "summary": "On November 12, nine stocks in the Nifty500 that rose over 5.5% appeared on the ‘White Marubozu’ bullish scanner, according to StockEdge’s technical scan data. A White Marubozu is a bullish candlestic",
+   "title": "Godrej Properties buys 31-acre land in Indore for Rs 130 cr to",
+   "summary": "Godrej Properties Ltd has successfully purchased a sprawling 31 acres of land in Indore for approximately Rs 130 crore. The company is set to embark on the creation of residential plots, providing an",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/aditya-birla-capital-among-9-stocks-showing-white-marubozu-pattern/slideshow/135788959.cms"
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/godrej-properties-buys-31-acre-land-in-indore-for-rs-130-cr-to-build-housing-project/articleshow/135804198.cms"
   },
   {
    "category": "Equity",
-   "title": "One97 Communications among 3 stocks closing above VWAP",
-   "summary": "Three Nifty500 stocks closed more than 2% above their respective volume-weighted average prices on November 12, according to StockEdge’s technical scan.",
+   "title": "German yields set for biggest weekly rise in two months",
+   "summary": "As traders ramp up their expectations for European Central Bank interest rate hikes, yields on German government bonds are climbing steadily. This shift follows US inflation figures that were unexpect",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/one97-communications-among-3-stocks-closing-above-vwap/slideshow/135788620.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/german-yields-set-for-biggest-weekly-rise-in-two-months/articleshow/135804160.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "India 10-year bond yield reverses half of last week's drop on elevated",
+   "summary": "Indian government bonds fell for a third consecutive session, driven by inflation and interest-rate outlook concerns. The benchmark yield increased to 7.3079%, reversing much of last week's gains. Ret",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-10-year-bond-yield-reverses-half-of-last-weeks-drop-on-elevated-inflation/articleshow/135804127.cms"
   },
   {
    "category": "Equity",
-   "title": "Godrej Industries among 4 stocks showing RSI trending up",
-   "summary": "Four Nifty500 stocks that gained over 7% on November 12 featured in StockEdge’s RSI Trending Up scan, with their Relative Strength Index (RSI) crossing above 50 from below, signalling strengthening pr",
+   "title": "How US tech pain is European stock markets' gain",
+   "summary": "European stock markets, particularly the STOXX 600, are performing well as tech turmoil affects global markets. This relative stability is attributed to Europe's lower exposure to tech giants compared",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/godrej-industries-among-4-stocks-showing-rsi-trending-up/slideshow/135788392.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/how-us-tech-pain-is-european-stock-markets-gain/articleshow/135804056.cms"
   },
   {
    "category": "Equity",
-   "title": "Adani Ports SEZ Share Price Live Updates: Adani Ports SEZ Price and",
-   "summary": "Adani Ports SEZ Share Price Live Updates: Adani Ports SEZ Price and Trend Overview",
+   "title": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs",
+   "summary": "Razorpay Software Ltd and Sembcorp Green Infra recently received approval from Sebi for their initial public offerings, marking a major milestone in their growth journeys. Razorpay aims to secure Rs 5",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/adani-ports-sez-share-price-live-updates-13-nov-2026/liveblog/135788172.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/razorpay-sembcorp-green-infra-get-sebi-nod-to-float-ipos/articleshow/135803228.cms"
   },
   {
    "category": "Equity",
-   "title": "After IPO listing, NSE shares hit ₹2,000 mark for the first time",
-   "summary": "NSE share price today climbed to a new peak of  ₹2007.60 per share on the BSE, crossing the psychological  ₹2000 mark for the first time after the IPO listing",
+   "title": "Warships, aircraft or missiles? GRSE vs HAL vs BDL: Which defence PSU",
+   "summary": "GRSE and HAL reported year-on-year second-quarter profit growth of 12% and 16%, respectively, while BDL’s profit fell 15%. Revenue rose at all three companies, but BDL’s EBITDA dropped sharply.",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/after-ipo-listing-nse-shares-hit-rs-2-000-mark-for-the-first-time-buy-sell-or-hold-what-stock-market-experts-say-11794550519441.html"
+   "url": "https://www.livemint.com/market/stock-market-news/warships-aircraft-or-missiles-grse-vs-hal-vs-bdl-which-defence-psu-wins-the-post-q2-results-race-technical-outlook-11794571751718.html"
   },
   {
-   "category": "Equity",
-   "title": "Zee Entertainment buyback: What happened with ZEEL stock after ₹600 cr announcement?",
-   "summary": "Zee Entertainment approved a  ₹600 crore share buyback of up to 6.59 crore shares at  ₹91 apiece through a proportionate tender offer. Shareholders on record as of November 25, 2026, are eligible. Pro",
-   "why": "Share prices move on news like this.",
+   "category": "Economy",
+   "title": "Pulse of the Street: Dalal Street’s winning streak faces an inflation test",
+   "summary": "Stronger earnings and foreign buying extended the market’s rally, but rising inflation and continued domestic institutional selling could limit further gains.",
+   "why": "Policy and economic news shape rates and the rupee.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/zee-entertainment-announces-rs-600-cr-share-buyback-stock-down-3-check-record-date-price-other-key-things-to-know-11794549332632.html"
+   "url": "https://www.livemint.com/market/stock-market-news/pulse-of-the-street-dalal-street-s-winning-streak-faces-an-inflation-test-11794572591011.html"
   }
  ]
 }
