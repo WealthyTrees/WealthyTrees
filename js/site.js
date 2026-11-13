@@ -82,7 +82,7 @@
   add("holidays", function () { add("festival"); });
 })();
 
-(function(){var s=document.createElement("script");s.src="/js/footer-popup.js?v=2";s.defer=true;document.body.appendChild(s);})();
+(function(){var s=document.createElement("script");s.src="/js/footer-popup.js?v=3";s.defer=true;document.body.appendChild(s);})();
 
 /* Ask Sprout — floating finance friend (one-stop: markets, all finance, calculators).
    Loads on every page that loads site.js. */
