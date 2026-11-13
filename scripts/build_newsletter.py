@@ -21,7 +21,7 @@ FORCE = os.environ.get("FORCE") == "1"
 BUD_GIF = "https://wealthytrees.online/assets/sprout-bob.gif"
 SITE = "https://wealthytrees.online"
 PAPER_URL = SITE + "/pages/the-915.html"
-TOUR_URL = "https://muse.ai/s/wealthytrees-website-tour-xgi6cxwxixwkxwoxi/GZDl1iozoz4Or9lcZI1Adihh5KW7chf6MMQGg3uaKl4"
+TOUR_URL = "https://wealthytrees.online/pages/tour.html"
 
 WORDS = [
     ("Dividend", "When a company earns a profit, it can share a part of it with its shareholders. That share is called a <b>dividend</b> — money paid to you simply for owning the share."),

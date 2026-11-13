@@ -64,7 +64,7 @@ const SITE = [
   { name: "Markets heatmap", url: "/pages/heatmap.html", what: "a colour map of 18 Indian and world markets — green means up, red means down; tap any box to learn more; open it from the Markets page" },
   { name: "Stock screener", url: "/pages/markets.html", what: "sort companies by market cap, P/E and change % on the Markets page" },
   { name: "Live Wire", url: "/#p-live", what: "real-time market news on the homepage" },
-  { name: "Website tour", url: "https://muse.ai/s/wealthytrees-website-tour-xgi6cxwxixwkxwoxi/GZDl1iozoz4Or9lcZI1Adihh5KW7chf6MMQGg3uaKl4", what: "a 2-minute guided tour of the whole website — Sprout walks you through Live Wire, THE 9:15, Markets, Learn, the calculators and Ask Sprout; press Play and it plays itself with music" },
+  { name: "Website tour", url: "/pages/tour.html", what: "a 2-minute guided tour of the whole website — Sprout walks you through Live Wire, THE 9:15, Markets, Learn, the calculators and Ask Sprout; press Play and it plays itself with music" },
   { name: "THE 9:15", url: "/pages/the-915.html", what: "the morning e-newspaper, every weekday" },
   { name: "Learn", url: "/pages/learn.html", what: "Beginner (6 modules, 23 lessons) and Intermediate (6 modules, 36 lessons), free" },
   { name: "Tools", url: "/pages/tools.html", what: "all the calculators in one place — SIP, lumpsum, EMI, goal planner, cost of delay, direct vs regular" },
@@ -179,7 +179,7 @@ function quickAnswer(q, quotes) {
     return "I am Sprout, your friendly finance teacher here at WealthyTrees. I explain money, markets and investing in simple, easy-to-understand words — and I can work out sums with you, right here in the chat." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
   }
   if (/\btour\b/.test(s)) {
-    return "New here? Take the 2-minute tour — Sprout walks you through the whole website: Live Wire, THE 9:15, Markets, Learn, the calculators and me. Press Play and it plays itself, with music." + MORE + '<a href="https://muse.ai/s/wealthytrees-website-tour-xgi6cxwxixwkxwoxi/GZDl1iozoz4Or9lcZI1Adihh5KW7chf6MMQGg3uaKl4">Take the tour \u2192</a>.';
+    return "New here? Take the 2-minute tour — Sprout walks you through the whole website: Live Wire, THE 9:15, Markets, Learn, the calculators and me. Press Play and it plays itself, with music." + MORE + '<a href="/pages/tour.html">Take the tour \u2192</a>.';
   }
   if (/\b(guide|navigate|show (me|us) around|tour|how (do i|to) use (this|the) (website|site)|where (is|do i find))\b/.test(s)) {
     return "Happy to show you around. Start on the <a href=\"/\">homepage</a>: Live Wire for the latest news and THE 9:15 for the morning paper. The <a href=\"/pages/markets.html\">Markets page</a> has live prices, charts, the stock screener and the <a href=\"/pages/heatmap.html\">heatmap</a>. The <a href=\"/pages/learn.html\">Learn page</a> has the free Beginner and Intermediate courses, and the <a href=\"/pages/tools.html\">Tools page</a> has all the calculators.";

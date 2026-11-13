@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="WealthyTrees Street — a guided tour of WealthyTrees with Sprout, your finance friend. Live Wire, THE 9:15, Markets, Learn, Calculators and more." />
+    <link rel="icon" href="data:," />
+    <title>WealthyTrees Street — Take the Tour</title>
+    <style>
+      :root{
+        --paper:#faf5e9;
+        --paper-2:#f2ead3;
+        --card:#fffdf4;
+        --card-2:#fdf6dd;
+        --ink:#22332b;
+        --ink-soft:#50645a;
+        --green:#0f3d2e;
+        --green-2:#17573f;
+        --emerald:#1e7a4f;
+        --gold:#e0b04f;
+        --gold-deep:#a87f24;
+        --gold-soft:#f3df9a;
+        --line:#e2d5b4;
+        --win-off:#33584a;
+        --shadow:0 12px 32px rgba(15,61,46,.14);
+        --radius:18px;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark){
+        :root{
+          --paper:#0a1c14;
+          --paper-2:#0e251a;
+          --card:#122b1f;
+          --card-2:#1a2f1c;
+          --ink:#eef2e0;
+          --ink-soft:#b3c4ae;
+          --line:#2a4636;
+          --win-off:#1d3a2d;
+          --shadow:0 12px 32px rgba(0,0,0,.45);
+        }
+      }
+      *{ box-sizing:border-box; }
+      html{ scroll-behavior:smooth; }
+      html.calm{ scroll-behavior:auto; }
+      body{
+        margin:0;
+        background:var(--paper);
+        color:var(--ink);
+        font-family:ui-rounded, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+        line-height:1.55;
+        padding-bottom:84px;
+      }
+      h1,h2,h3,.serif{
+        font-family:Georgia, "Iowan Old Style", "Times New Roman", serif;
+        color:var(--green);
+        line-height:1.15;
+        margin:0;
+      }
+      @media (prefers-color-scheme: dark){
+        h1,h2,h3,.serif{ color:#cfe6b8; }
+      }
+      button{ font:inherit; cursor:pointer; min-height:40px; }
+      a{ color:var(--emerald); }
+      .wrap{ max-width:1120px; margin:0 auto; padding:0 18px; }
+
+      /* ---------- Sprout bud ---------- */
+      .bud-box{
+        background:linear-gradient(160deg,#fdf6dd,#f3df9a);
+        border:2px solid #e0b04f;
+        border-radius:22px;
+        display:flex; align-items:center; justify-content:center;
+        flex:none;
+      }
+      .bud{ display:block; }
+      @keyframes bob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-5px); } }
+      .bob{ animation:bob 2.8s ease-in-out infinite; }
+      html.calm .bob{ animation:none; }
+      @media (prefers-reduced-motion: reduce){
+        .bob{ animation:none; }
+        html{ scroll-behavior:auto; }
+      }
+
+      /* ---------- Hero ---------- */
+      .hero{ padding:34px 0 8px; }
+      .hero-top{ display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+      .hero .bud-box{ width:104px; height:104px; }
+      .hero h1{ font-size:clamp(2rem,5.4vw,3.2rem); letter-spacing:.2px; }
+      .hero .sub{ color:var(--ink-soft); font-size:1.06rem; margin-top:6px; max-width:560px; }
+      .bubble{
+        margin-top:20px;
+        background:var(--card);
+        border:1.5px solid var(--line);
+        border-radius:16px;
+        padding:14px 18px;
+        max-width:640px;
+        box-shadow:var(--shadow);
+        position:relative;
+        font-size:1.05rem;
+      }
+      .bubble strong{ color:var(--green-2); }
+      @media (prefers-color-scheme: dark){ .bubble strong{ color:#a9d18a; } }
+      .bubble::before{
+        content:""; position:absolute; top:-9px; left:44px;
+        width:16px; height:16px; background:var(--card);
+        border-left:1.5px solid var(--line); border-top:1.5px solid var(--line);
+        transform:rotate(45deg);
+      }
+
+      /* ---------- Player ---------- */
+      .player{
+        margin-top:22px;
+        background:var(--green);
+        color:#f4efdc;
+        border-radius:var(--radius);
+        padding:16px 18px;
+        box-shadow:var(--shadow);
+      }
+      .player-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+      .pbtn{
+        border:none; border-radius:999px; padding:9px 18px;
+        font-weight:700; display:inline-flex; align-items:center; gap:8px;
+        background:#f7ead0; color:var(--green); min-height:44px;
+      }
+      .pbtn.primary{ background:var(--gold); color:#2c1f04; }
+      .pbtn.ghost{ background:rgba(255,255,255,.12); color:#f4efdc; border:1.5px solid rgba(255,255,255,.35); }
+      .pbtn[aria-pressed="true"]{ background:var(--gold-soft); color:#2c1f04; }
+      .pbtn:focus-visible, .building:focus-visible, .path-card:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
+      .player .now{ font-size:.95rem; opacity:.92; }
+      .progress{ height:8px; background:rgba(255,255,255,.18); border-radius:99px; margin-top:14px; overflow:hidden; }
+      .progress > div{ height:100%; width:0%; background:linear-gradient(90deg,var(--gold-soft),var(--gold)); border-radius:99px; transition:width .5s ease; }
+      html.calm .progress > div{ transition:none; }
+      .caption{
+        margin-top:12px; font-size:1.08rem; line-height:1.5;
+        background:rgba(0,0,0,.22); border-radius:12px; padding:10px 14px; min-height:52px;
+      }
+      .caption .who{ color:var(--gold-soft); font-weight:700; margin-right:6px; }
+      .player .hint{ font-size:.85rem; opacity:.75; margin-top:10px; }
+
+      /* ---------- Street ---------- */
+      .street-sec{ padding:26px 0 4px; }
+      .street-head{ display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+      .street-head h2{ font-size:clamp(1.5rem,3.4vw,2.1rem); }
+      .street-head p{ color:var(--ink-soft); margin:4px 0 0; }
+      .street{
+        margin-top:18px;
+        display:flex; align-items:flex-end; gap:10px; flex-wrap:wrap;
+        padding:26px 14px 0;
+        background:linear-gradient(180deg, transparent 0%, var(--paper-2) 78%);
+        border-radius:20px 20px 0 0;
+      }
+      .building{
+        position:relative;
+        flex:1 1 96px; max-width:132px; min-width:92px;
+        border:none; background:none; padding:0; text-align:center;
+        -webkit-tap-highlight-color:transparent;
+      }
+      .building .perch{
+        position:absolute; left:50%; top:-30px; transform:translateX(-50%) scale(.5);
+        opacity:0; transition:opacity .35s ease, transform .35s ease; z-index:3; pointer-events:none;
+      }
+      .building.active .perch{ opacity:1; transform:translateX(-50%) scale(1); }
+      .street.complete .building .perch{ opacity:0 !important; }
+      html.calm .building .perch{ transition:none; }
+      .b-body{
+        border-radius:10px 10px 4px 4px;
+        padding:10px 8px 0;
+        display:flex; flex-direction:column; align-items:center;
+        border:2px solid rgba(0,0,0,.18);
+        transition:box-shadow .35s ease, transform .35s ease;
+      }
+      html.calm .b-body{ transition:none; }
+      .building.active .b-body{ box-shadow:0 0 0 3px var(--gold), 0 14px 28px rgba(224,176,79,.35); transform:translateY(-4px); }
+      html.calm .building.active .b-body{ transform:none; }
+      .b-icon{ color:#ffe9a8; margin-bottom:6px; }
+      .b-name{
+        font-family:Georgia, "Times New Roman", serif; font-weight:700;
+        color:#fdf6dd; font-size:.86rem; line-height:1.2; min-height:2.05em;
+        display:flex; align-items:center;
+      }
+      .b-wins{ display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin:9px 0 10px; width:100%; }
+      .b-win{ height:11px; border-radius:2.5px; background:var(--win-off); transition:background .3s ease, box-shadow .3s ease; }
+      html.calm .b-win{ transition:none; }
+      .building.visited .b-win.lit{ background:#f7cf6b; box-shadow:0 0 5px rgba(247,207,107,.55); }
+      .building.active .b-win{ background:linear-gradient(180deg,#ffeaa6,#f2c14e); box-shadow:0 0 7px rgba(242,193,78,.85); }
+      .building.done .b-win{ background:#f7cf6b; box-shadow:0 0 4px rgba(247,207,107,.4); }
+      .building.done .b-win:nth-child(3n+2){ background:#e9b84e; }
+      .b-door{ width:22px; height:30px; border-radius:11px 11px 0 0; background:#0a2a1e; border:1.5px solid rgba(255,255,255,.25); border-bottom:none; }
+      .building.active .b-door{ background:linear-gradient(180deg,#ffe9a8,#e9b84e); box-shadow:0 0 12px rgba(242,193,78,.8); }
+      .b-tag{ font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-top:7px; min-height:1em; }
+      .building.active .b-tag{ color:var(--gold-deep); }
+      .building.done .b-tag{ color:var(--emerald); }
+      .road{
+        height:16px; margin:0 4px;
+        background:repeating-linear-gradient(90deg, var(--ink-soft) 0 26px, transparent 26px 52px) center/100% 3px no-repeat, var(--paper-2);
+        border-radius:0 0 14px 14px; opacity:.85;
+      }
+      .finish{
+        flex:0 0 auto; align-self:center;
+        width:104px; height:104px; border-radius:50%;
+        border:3px dashed var(--gold);
+        display:flex; flex-direction:column; align-items:center; justify-content:center;
+        color:var(--gold-deep); font-weight:700; font-size:.8rem; letter-spacing:.05em;
+        text-transform:uppercase; text-align:center; padding:8px;
+        background:var(--card);
+        position:relative;
+      }
+      .finish .f-bud{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(.4); transition:opacity .45s ease, transform .45s ease; }
+      .finish.on{ border-style:solid; box-shadow:0 0 0 6px rgba(224,176,79,.22), 0 0 34px rgba(224,176,79,.55); color:var(--gold-deep); }
+      .finish.on .f-bud{ opacity:1; transform:scale(1); }
+      .finish.on .f-word{ opacity:0; }
+      html.calm .finish .f-bud{ transition:none; }
+
+      /* ---------- Stop panel ---------- */
+      .panel{
+        margin-top:22px; background:var(--card); border:1.5px solid var(--line);
+        border-radius:var(--radius); padding:22px; box-shadow:var(--shadow);
+        display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start;
+      }
+      .panel .bud-box{ width:76px; height:76px; border-radius:18px; }
+      .panel-main{ flex:1 1 300px; min-width:260px; }
+      .panel h3{ font-size:1.55rem; }
+      .panel .says{ font-style:italic; color:var(--ink-soft); margin:6px 0 0; }
+      .panel .desc{ margin:10px 0 0; font-size:1.03rem; }
+      .panel-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+      .btn{
+        display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+        border-radius:999px; padding:10px 20px; font-weight:700; min-height:44px;
+        background:var(--green); color:#fdf6dd; border:none;
+      }
+      .btn.gold{ background:linear-gradient(160deg,#fdf6dd,#f3df9a); color:#4a3405; border:2px solid #e0b04f; }
+      .btn.line{ background:transparent; color:var(--green-2); border:2px solid var(--green-2); }
+      @media (prefers-color-scheme: dark){ .btn.line{ color:#a9d18a; border-color:#a9d18a; } }
+
+      /* ---------- Sections ---------- */
+      section.block{ padding:44px 0 6px; }
+      .kicker{ font-size:.8rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep); }
+      section.block h2{ font-size:clamp(1.6rem,3.6vw,2.2rem); margin-top:6px; }
+      section.block .lede{ color:var(--ink-soft); max-width:640px; margin-top:8px; }
+
+      .chapter{
+        display:flex; gap:18px; background:var(--card); border:1.5px solid var(--line);
+        border-radius:var(--radius); padding:20px; margin-top:16px; align-items:flex-start;
+        transition:box-shadow .3s ease, border-color .3s ease;
+      }
+      html.calm .chapter{ transition:none; }
+      .chapter.active{ border-color:var(--gold); box-shadow:0 0 0 3px rgba(224,176,79,.3), var(--shadow); }
+      .chapter .num{
+        font-family:Georgia, serif; font-size:1.7rem; font-weight:700; color:var(--gold-deep);
+        background:var(--card-2); border:2px solid var(--gold); border-radius:14px;
+        width:56px; height:56px; flex:none; display:flex; align-items:center; justify-content:center;
+      }
+      .chapter h3{ font-size:1.3rem; }
+      .chapter p{ margin:6px 0 0; }
+      .chapter .quote{ color:var(--ink-soft); font-style:italic; }
+      .chapter .visit{ display:inline-block; margin-top:10px; font-weight:700; padding:6px 2px; min-height:36px; }
+
+      .paths{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:18px; }
+      .path-card{
+        text-align:left; background:var(--card); border:1.5px solid var(--line); border-radius:var(--radius);
+        padding:18px; color:var(--ink); min-height:44px;
+      }
+      .path-card:hover{ border-color:var(--gold); }
+      .path-card .p-t{ font-family:Georgia, serif; font-size:1.12rem; font-weight:700; color:var(--green); display:block; }
+      @media (prefers-color-scheme: dark){ .path-card .p-t{ color:#cfe6b8; } }
+      .path-card .p-d{ color:var(--ink-soft); font-size:.94rem; display:block; margin-top:5px; }
+      .path-card .p-go{ color:var(--gold-deep); font-weight:800; display:block; margin-top:10px; font-size:.9rem; }
+
+      .map-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:18px; }
+      .map-card{ background:var(--card); border:1.5px solid var(--line); border-radius:var(--radius); padding:18px; text-decoration:none; color:var(--ink); display:block; }
+      .map-card:hover{ border-color:var(--gold); }
+      .map-card .m-t{ font-family:Georgia, serif; font-weight:700; font-size:1.1rem; color:var(--green); display:block; }
+      @media (prefers-color-scheme: dark){ .map-card .m-t{ color:#cfe6b8; } }
+      .map-card .m-d{ color:var(--ink-soft); font-size:.93rem; margin-top:4px; display:block; }
+      .map-card .m-go{ color:var(--gold-deep); font-weight:800; font-size:.88rem; margin-top:10px; display:block; overflow-wrap:anywhere; }
+
+      .timeline{ margin-top:18px; border-left:3px solid var(--gold); padding-left:22px; display:grid; gap:20px; }
+      .tl-item{ position:relative; }
+      .tl-item::before{ content:""; position:absolute; left:-29.5px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--gold); border:2.5px solid var(--paper); }
+      .tl-time{ font-weight:800; color:var(--gold-deep); font-size:.88rem; letter-spacing:.05em; text-transform:uppercase; }
+      .tl-item h3{ font-size:1.15rem; margin-top:2px; }
+      .tl-item p{ margin:3px 0 0; color:var(--ink-soft); }
+
+      .promise{
+        margin-top:18px; background:var(--green); color:#f1ecd8; border-radius:var(--radius);
+        padding:28px; display:flex; gap:22px; flex-wrap:wrap; align-items:center;
+      }
+      .promise h2{ color:#fdf6dd; }
+      .promise p{ color:#d9dfc9; max-width:600px; margin:8px 0 0; }
+      .promise .big{ font-family:Georgia, serif; font-size:clamp(1.5rem,3.4vw,2rem); color:#fdf6dd; }
+      .promise ul{ margin:10px 0 0; padding-left:20px; color:#d9dfc9; }
+
+      .finale{ text-align:center; padding:56px 0 30px; }
+      .finale .bud-box{ width:120px; height:120px; margin:0 auto; border-radius:26px; }
+      .finale h2{ font-size:clamp(1.9rem,4.6vw,2.8rem); margin-top:20px; }
+      .finale p{ color:var(--ink-soft); max-width:520px; margin:10px auto 0; }
+      .finale .panel-actions{ justify-content:center; }
+
+      footer{ border-top:1.5px solid var(--line); margin-top:44px; padding:20px 0 8px; color:var(--ink-soft); font-size:.9rem; text-align:center; }
+
+      /* ---------- Sticky mini player ---------- */
+      .mini{
+        position:fixed; left:0; right:0; bottom:0; z-index:50;
+        background:var(--green); color:#f4efdc;
+        padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+        display:flex; align-items:center; gap:10px;
+        box-shadow:0 -6px 24px rgba(0,0,0,.25);
+      }
+      .mini .m-label{ flex:1 1 auto; min-width:0; font-size:.92rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+      .mini .m-label b{ color:var(--gold-soft); }
+      .mini button{
+        border:none; border-radius:999px; min-width:44px; min-height:44px;
+        display:inline-flex; align-items:center; justify-content:center; padding:0 14px;
+        background:rgba(255,255,255,.14); color:#f4efdc; font-weight:700;
+      }
+      .mini button.main{ background:var(--gold); color:#2c1f04; }
+      .mini button[aria-pressed="true"]{ background:var(--gold-soft); color:#2c1f04; }
+      @media (max-width:560px){
+        .hero .bud-box{ width:84px; height:84px; }
+        .building{ flex-basis:29%; max-width:none; }
+        .finish{ width:92px; height:92px; }
+        .chapter{ flex-direction:column; gap:12px; }
+        .mini .m-label{ font-size:.84rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <!-- ================= HERO + PLAYER ================= -->
+      <header class="hero">
+        <div class="hero-top">
+          <div class="bud-box" aria-hidden="true">
+            <svg class="bud bob" width="72" height="72" viewBox="0 0 64 64" role="img" aria-label="Sprout, the WealthyTrees bud">
+              <path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>
+              <path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/>
+            </svg>
+          </div>
+          <div>
+            <h1>WealthyTrees Street</h1>
+            <p class="sub">A short walk through everything on WealthyTrees — the news, the morning paper, the markets, the lessons and the tools. Sprout will show you around.</p>
+          </div>
+        </div>
+
+        <div class="bubble" id="bubble">
+          <strong>Sprout says:</strong> “Hi! I’m Sprout — your finance friend at WealthyTrees. Welcome to our street. Let me show you around.”
+        </div>
+
+        <div class="player" aria-label="Tour player">
+          <div class="player-row">
+            <button class="pbtn primary" id="btnPlay" type="button">▶&nbsp; Play the tour</button>
+            <button class="pbtn ghost" id="btnReplay" type="button">↺&nbsp; Replay</button>
+            <button class="pbtn ghost" id="btnMusic" type="button" aria-pressed="true">♪&nbsp; Music: on</button>
+            <button class="pbtn ghost" id="btnCalm" type="button" aria-pressed="false">Calm mode</button>
+            <span class="now" id="nowLabel">Ready when you are — the whole tour takes about two minutes.</span>
+          </div>
+          <div class="progress" aria-hidden="true"><div id="progressBar"></div></div>
+          <div class="caption" id="caption" aria-live="polite"><span class="who">Sprout:</span><span id="captionText">Press Play and I’ll walk you down the street, one building at a time.</span></div>
+          <p class="hint">Sprout’s voice is your device’s own built-in voice, and the soft music is made live by this page — nothing is downloaded. Touching any building or control pauses the show.</p>
+        </div>
+      </header>
+
+      <!-- ================= STREET ================= -->
+      <section class="street-sec" id="streetSec" aria-label="WealthyTrees Street">
+        <div class="street-head">
+          <div>
+            <h2>The Street</h2>
+            <p>Tap any building to light it up and see what’s inside. Visited buildings stay warmly lit.</p>
+          </div>
+        </div>
+
+        <div class="street" id="street"><!-- buildings are built by the script below --></div>
+        <div class="road" aria-hidden="true"></div>
+
+        <!-- Stop panel -->
+        <div class="panel" id="panel">
+          <div class="bud-box" aria-hidden="true">
+            <svg class="bud" width="52" height="52" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>
+              <path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/>
+            </svg>
+          </div>
+          <div class="panel-main">
+            <h3 id="panelTitle">Welcome to the street</h3>
+            <p class="says" id="panelSays">“Hi! I’m Sprout — your finance friend at WealthyTrees.”</p>
+            <p class="desc" id="panelDesc">Eight buildings, everything WealthyTrees offers. Press Play above for the full guided tour, or tap any building to peek inside.</p>
+            <div class="panel-actions">
+              <button class="btn gold" id="btnListen" type="button">♪&nbsp; Listen to this stop</button>
+              <a class="btn" id="panelVisit" href="https://wealthytrees.online/" target="_blank" rel="noopener">Visit on WealthyTrees&nbsp;→</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SCROLL STORY ================= -->
+      <main>
+      <section class="block" id="story">
+        <p class="kicker">The tour, stop by stop</p>
+        <h2>Walk the street with Sprout</h2>
+        <p class="lede">Scroll through each stop — the street above follows along as you read. Or press Play up top and Sprout will read it all to you.</p>
+
+        <article class="chapter" data-stop="0">
+          <div class="num">1</div>
+          <div>
+            <h3>Live Wire</h3>
+            <p>Real-time market headlines as they come in, in plain English, on the homepage. No noise — just what happened, as it happens.</p>
+            <p class="quote">Sprout: “First stop, Live Wire. The latest market news, as it happens, in plain English.”</p>
+            <a class="visit" href="https://wealthytrees.online/" target="_blank" rel="noopener">See Live Wire →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="1">
+          <div class="num">2</div>
+          <div>
+            <h3>Daily Edition</h3>
+            <p>The day’s stories, told one by one, like a little story — swipe through the day instead of drowning in a feed.</p>
+            <p class="quote">Sprout: “Next, the Daily Edition. The day’s stories, told one by one, like a little story.”</p>
+            <a class="visit" href="https://wealthytrees.online/" target="_blank" rel="noopener">Open the Daily Edition →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="2">
+          <div class="num">3</div>
+          <div>
+            <h3>THE 9:15</h3>
+            <p>The morning e-newspaper — “Markets, simplified. In 2 minutes.” The whole market on a few calm pages, out every weekday morning.</p>
+            <p class="quote">Sprout: “Then, THE 9:15 — our morning paper. The whole market in two minutes, every weekday.”</p>
+            <a class="visit" href="https://wealthytrees.online/pages/the-915" target="_blank" rel="noopener">Read today’s paper →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="3">
+          <div class="num">4</div>
+          <div>
+            <h3>Markets</h3>
+            <p>Live prices, charts, a stock screener, and a colourful heatmap of 18 Indian and world markets — green where things rose, red where they fell.</p>
+            <p class="quote">Sprout: “This is Markets. Live prices, charts, and a colourful heatmap of eighteen markets.”</p>
+            <a class="visit" href="https://wealthytrees.online/" target="_blank" rel="noopener">See the Markets page →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="4">
+          <div class="num">5</div>
+          <div>
+            <h3>Learn</h3>
+            <p>Free courses that teach you the market one small step at a time — Beginner (6 modules, 23 lessons) and Intermediate (6 modules, 36 lessons).</p>
+            <p class="quote">Sprout: “Over here is Learn. Free lessons that teach you the market, one small step at a time.”</p>
+            <a class="visit" href="https://wealthytrees.online/" target="_blank" rel="noopener">Start learning →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="5">
+          <div class="num">6</div>
+          <div>
+            <h3>Calculators</h3>
+            <p>SIP, lumpsum, EMI, goal planner, cost of delay, direct vs regular — work out your numbers right there, in seconds. All free.</p>
+            <p class="quote">Sprout: “And Calculators. Work out your SIP, your loan, or your goal — right here, in seconds.”</p>
+            <a class="visit" href="https://wealthytrees.online/" target="_blank" rel="noopener">Try the calculators →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="6">
+          <div class="num">7</div>
+          <div>
+            <h3>Ask Sprout</h3>
+            <p>The AI finance friend — ask anything about money and get it explained simply, with real numbers worked out for you. No tips, no predictions.</p>
+            <p class="quote">Sprout: “That’s me — Ask Sprout. Ask me anything about money, and I’ll explain it simply. No tips, no predictions — just understanding.”</p>
+            <a class="visit" href="https://wealthytrees.online/" target="_blank" rel="noopener">Ask Sprout a question →</a>
+          </div>
+        </article>
+
+        <article class="chapter" data-stop="7">
+          <div class="num">8</div>
+          <div>
+            <h3>THE 9:15 email newsletter</h3>
+            <p>The morning paper in your inbox every weekday at 8 AM — free. The two-minute read that starts the day, delivered before the market opens.</p>
+            <p class="quote">Sprout: “And finally, the newsletter. THE 9:15 in your inbox every morning, free.”</p>
+            <a class="visit" href="https://wealthytrees.online/pages/the-915" target="_blank" rel="noopener">Get the newsletter →</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================= PATH PICKER ================= -->
+      <section class="block" id="paths">
+        <p class="kicker">Start where you like</p>
+        <h2>Not sure where to begin?</h2>
+        <p class="lede">Pick what sounds like you — Sprout will take you straight to that building.</p>
+        <div class="paths">
+          <button class="path-card" type="button" data-goto="2">
+            <span class="p-t">“I have two minutes with my morning coffee.”</span>
+            <span class="p-d">Start with THE 9:15 — the whole market, simplified, before the day begins.</span>
+            <span class="p-go">Go to THE 9:15 →</span>
+          </button>
+          <button class="path-card" type="button" data-goto="4">
+            <span class="p-t">“I’m new and want to actually understand this.”</span>
+            <span class="p-d">Start with Learn — free lessons, one small step at a time, no jargon.</span>
+            <span class="p-go">Go to Learn →</span>
+          </button>
+          <button class="path-card" type="button" data-goto="5">
+            <span class="p-t">“I have a number I want to work out.”</span>
+            <span class="p-d">Start with Calculators — SIP, loan EMI, or a savings goal, answered in seconds.</span>
+            <span class="p-go">Go to Calculators →</span>
+          </button>
+          <button class="path-card" type="button" data-goto="6">
+            <span class="p-t">“I just have a question.”</span>
+            <span class="p-d">Start with Ask Sprout — ask in your own words, get a simple explanation back.</span>
+            <span class="p-go">Go to Ask Sprout →</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SITE MAP ================= -->
+      <section class="block" id="map">
+        <p class="kicker">Everything, in one place</p>
+        <h2>The whole site map</h2>
+        <p class="lede">Every stop on the street, and where it lives on wealthytrees.online.</p>
+        <div class="map-grid">
+          <a class="map-card" href="https://wealthytrees.online/" target="_blank" rel="noopener"><span class="m-t">Live Wire</span><span class="m-d">Real-time market headlines as they come in, in plain English, on the homepage.</span><span class="m-go">wealthytrees.online →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/" target="_blank" rel="noopener"><span class="m-t">Daily Edition</span><span class="m-d">The day’s stories told one by one, like a story player.</span><span class="m-go">wealthytrees.online →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/pages/the-915" target="_blank" rel="noopener"><span class="m-t">THE 9:15</span><span class="m-d">The morning e-newspaper — “Markets, simplified. In 2 minutes.” — every weekday.</span><span class="m-go">wealthytrees.online/pages/the-915 →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/" target="_blank" rel="noopener"><span class="m-t">Markets</span><span class="m-d">Live prices, charts, a stock screener, and a heatmap of 18 markets.</span><span class="m-go">wealthytrees.online →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/" target="_blank" rel="noopener"><span class="m-t">Learn</span><span class="m-d">Free courses — Beginner (6 modules, 23 lessons) and Intermediate (6 modules, 36 lessons).</span><span class="m-go">wealthytrees.online →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/" target="_blank" rel="noopener"><span class="m-t">Calculators</span><span class="m-d">SIP, lumpsum, EMI, goal planner, cost of delay, direct vs regular — all free.</span><span class="m-go">wealthytrees.online →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/" target="_blank" rel="noopener"><span class="m-t">Ask Sprout</span><span class="m-d">The AI finance friend — ask anything about money, explained simply.</span><span class="m-go">wealthytrees.online →</span></a>
+          <a class="map-card" href="https://wealthytrees.online/pages/the-915" target="_blank" rel="noopener"><span class="m-t">THE 9:15 newsletter</span><span class="m-d">The morning paper in your inbox every weekday at 8 AM, free.</span><span class="m-go">wealthytrees.online/pages/the-915 →</span></a>
+        </div>
+      </section>
+
+      <!-- ================= A DAY WITH WEALTHYTREES ================= -->
+      <section class="block" id="day">
+        <p class="kicker">How readers use it</p>
+        <h2>A day with WealthyTrees</h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">8:00 AM · In your inbox</div>
+            <h3>THE 9:15 newsletter arrives</h3>
+            <p>The morning paper lands in your email before the market opens — two calm minutes with your coffee.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">9:15 AM · Market opens</div>
+            <h3>THE 9:15 morning paper</h3>
+            <p>The full paper is on the site: what moved, why it moved, and what it means — no noise.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">All day · As it happens</div>
+            <h3>Live Wire &amp; Markets</h3>
+            <p>Headlines flow in on Live Wire while the Markets page tracks live prices, charts and the heatmap.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">Evening · Wind down</div>
+            <h3>The Daily Edition</h3>
+            <p>The day’s stories, told one by one like a little story — the gentle way to catch up.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">Any time · Your pace</div>
+            <h3>Learn, calculate, ask</h3>
+            <p>A five-minute lesson, a quick SIP calculation, or a question for Sprout — whenever it suits you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROMISE ================= -->
+      <section class="block" id="promise">
+        <div class="promise">
+          <div>
+            <p class="big">No noise. No tips. No predictions.</p>
+            <p>WealthyTrees is an education site. Everything on the street follows the same promise:</p>
+            <ul>
+              <li>Market news and numbers, explained in plain English.</li>
+              <li>Lessons and tools that build your understanding — never stock tips.</li>
+              <li>No “buy this, sell that”, no hype, no fear. Just clarity.</li>
+            </ul>
+          </div>
+          <div class="bud-box" style="width:96px;height:96px;" aria-hidden="true">
+            <svg class="bud bob" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>
+              <path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FINALE ================= -->
+      <section class="finale" id="finale">
+        <div class="bud-box" aria-hidden="true">
+          <svg class="bud bob" width="82" height="82" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>
+            <path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/>
+          </svg>
+        </div>
+        <h2>That’s the whole street.</h2>
+        <p>Have a look around — and welcome to WealthyTrees. Learn · Grow · Prosper.</p>
+        <div class="panel-actions">
+          <a class="btn" href="https://wealthytrees.online/" target="_blank" rel="noopener">Visit wealthytrees.online&nbsp;→</a>
+          <button class="btn gold" id="btnReplay2" type="button">↺&nbsp; Replay the tour</button>
+        </div>
+      </section>
+      </main>
+
+      <footer>
+        WealthyTrees — markets, simplified. Education only; not investment advice. This tour page is fully self-contained: voice, music and pictures are all made by your browser, on the spot.
+      </footer>
+    </div>
+
+    <!-- ================= STICKY MINI PLAYER ================= -->
+    <div class="mini" role="region" aria-label="Tour controls">
+      <button class="main" id="btnPlayMini" type="button" aria-label="Play or pause the tour">▶</button>
+      <span class="m-label" id="miniLabel"><b>Sprout’s tour</b> · ready</span>
+      <button id="btnReplayMini" type="button" aria-label="Replay the tour">↺</button>
+      <button id="btnMusicMini" type="button" aria-label="Toggle music" aria-pressed="true">♪</button>
+    </div>
+
+    <script>
+    (function(){
+      "use strict";
+
+      /* ================= DATA ================= */
+      var SITE = "https://wealthytrees.online/";
+      var PAPER = "https://wealthytrees.online/pages/the-915";
+
+      var STOPS = [
+        { name:"Live Wire", tag:"Live news",
+          desc:"Real-time market headlines as they come in, in plain English, on the homepage.",
+          seg:"First stop, Live Wire. The latest market news, as it happens, in plain English.",
+          url:SITE },
+        { name:"Daily Edition", tag:"Story player",
+          desc:"The day’s stories told one by one, like a story player.",
+          seg:"Next, the Daily Edition. The day’s stories, told one by one, like a little story.",
+          url:SITE },
+        { name:"THE 9:15", tag:"Morning paper",
+          desc:"The morning e-newspaper — “Markets, simplified. In 2 minutes.” — out every weekday morning.",
+          seg:"Then, THE 9:15 — our morning paper. The whole market in two minutes, every weekday.",
+          url:PAPER },
+        { name:"Markets", tag:"Prices & charts",
+          desc:"Live prices, charts, a stock screener, and a colourful heatmap of 18 Indian and world markets.",
+          seg:"This is Markets. Live prices, charts, and a colourful heatmap of eighteen markets.",
+          url:SITE },
+        { name:"Learn", tag:"Free courses",
+          desc:"Free courses — Beginner (6 modules, 23 lessons) and Intermediate (6 modules, 36 lessons).",
+          seg:"Over here is Learn. Free lessons that teach you the market, one small step at a time.",
+          url:SITE },
+        { name:"Calculators", tag:"Money tools",
+          desc:"SIP, lumpsum, EMI, goal planner, cost of delay, direct vs regular — all free.",
+          seg:"And Calculators. Work out your SIP, your loan, or your goal — right here, in seconds.",
+          url:SITE },
+        { name:"Ask Sprout", tag:"AI finance friend",
+          desc:"The AI finance friend — ask anything about money, explained simply; no tips, no predictions.",
+          seg:"That’s me — Ask Sprout. Ask me anything about money, and I’ll explain it simply. No tips, no predictions — just understanding.",
+          url:SITE },
+        { name:"THE 9:15 Newsletter", tag:"In your inbox",
+          desc:"THE 9:15 in your inbox every weekday at 8 AM, free.",
+          seg:"And finally, the newsletter. THE 9:15 in your inbox every morning, free.",
+          url:PAPER }
+      ];
+
+      var SHORT = ["Live Wire", "Daily Edition", "THE 9:15", "Markets", "Learn", "Calculators", "Ask Sprout", "Newsletter"];
+      function miniFor(seg){
+        if (seg.kind === "intro") return "<b>Sprout’s tour</b> · Welcome";
+        if (seg.kind === "finale") return "<b>Sprout’s tour</b> · The finish";
+        return "<b>Stop " + (seg.stop + 1) + " of 8</b> · " + SHORT[seg.stop];
+      }
+
+      var SEGMENTS = [ { kind:"intro", label:"Welcome",
+        text:"Hi! I’m Sprout — your finance friend at WealthyTrees. Welcome to our street. Let me show you around." } ];
+      STOPS.forEach(function(s, i){ SEGMENTS.push({ kind:"stop", stop:i, label:"Stop " + (i+1) + " of 8 — " + s.name, text:s.seg }); });
+      SEGMENTS.push({ kind:"finale", label:"The finish",
+        text:"That’s the whole street. Have a look around — and welcome to WealthyTrees." });
+
+      var BUD = '<svg class="bud bob" viewBox="0 0 64 64" aria-hidden="true" width="__S__" height="__S__">'
+        + '<path d="M32 62 C30 52 30 44 32 36" stroke="#58a34a" stroke-width="4" fill="none" stroke-linecap="round"/>'
+        + '<path d="M32 38 C18 38 8 30 6 14 C18 14 28 24 32 38 Z" fill="#7cc46a"/>'
+        + '<path d="M32 38 C46 38 56 30 58 14 C46 14 36 24 32 38 Z" fill="#8fd07a"/></svg>';
+      function bud(size){ return BUD.split("__S__").join(size); }
+
+      var ICONS = [
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.2 15.5 12 10 14.8z" fill="currentColor" stroke="none"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="15" height="14" rx="2"/><path d="M18 10h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2"/><path d="M7 9.5h7M7 13h7M7 16.5h5"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16h16"/><path d="M7.5 15 11 10l3 3 4.5-6.5"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17H8.5A2.5 2.5 0 0 1 6 18.5z"/><path d="M6 18.5A2.5 2.5 0 0 1 8.5 16H19"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9.5 7h5"/><path d="M9.5 12h.01M12 12h.01M14.5 12h.01M9.5 15.5h.01M12 15.5h.01M14.5 15.5h.01M9.5 19h.01M12 19h.01M14.5 19h.01"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4z"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>'
+      ];
+
+      /* ================= ELEMENTS ================= */
+      function $(id){ return document.getElementById(id); }
+      var streetEl = $("street"), streetSec = $("streetSec"), panelTitle = $("panelTitle"),
+          panelSays = $("panelSays"), panelDesc = $("panelDesc"), panelVisit = $("panelVisit"),
+          captionText = $("captionText"), nowLabel = $("nowLabel"), progressBar = $("progressBar"),
+          btnPlay = $("btnPlay"), btnPlayMini = $("btnPlayMini"), miniLabel = $("miniLabel"),
+          btnMusic = $("btnMusic"), btnMusicMini = $("btnMusicMini"), btnCalm = $("btnCalm"),
+          finaleEl = $("finale");
+      var finishEl = null;
+
+      /* ================= BUILD THE STREET ================= */
+      var HEIGHTS = [150, 134, 170, 158, 140, 150, 138, 162];
+      var ROWS    = [4, 3, 5, 4, 3, 4, 3, 5];
+      var COLORS  = ["#17573f", "#0f3d2e", "#1a6a44", "#123f31", "#1e7a4f", "#0f3d2e", "#17573f", "#14503a"];
+      var buildingEls = [];
+
+      STOPS.forEach(function(s, i){
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "building"; b.setAttribute("data-stop", i);
+        b.setAttribute("aria-label", s.name + " — " + s.tag);
+        var wins = "";
+        var total = ROWS[i] * 3;
+        for (var k = 0; k < total; k++){ wins += '<span class="b-win' + (k % 2 === 0 || k === 5 ? " lit" : "") + '"></span>'; }
+        b.innerHTML =
+          '<span class="perch">' + bud(34) + '</span>' +
+          '<span class="b-body" style="height:' + HEIGHTS[i] + 'px;background:linear-gradient(180deg,' + COLORS[i] + ',' + COLORS[i] + ' 70%,rgba(0,0,0,.22));">' +
+            '<span class="b-icon">' + ICONS[i] + '</span>' +
+            '<span class="b-name">' + s.name + '</span>' +
+            '<span class="b-wins">' + wins + '</span>' +
+            '<span class="b-door"></span>' +
+          '</span>' +
+          '<span class="b-tag"></span>';
+        b.addEventListener("click", function(){ userSelect(i, true); });
+        streetEl.appendChild(b);
+        buildingEls.push(b);
+      });
+
+      finishEl = document.createElement("div");
+      finishEl.className = "finish"; finishEl.id = "finishCircle";
+      finishEl.setAttribute("role", "img");
+      finishEl.setAttribute("aria-label", "Finish circle — Sprout sits here when the tour is complete");
+      finishEl.innerHTML = '<span class="f-bud">' + bud(56) + '</span><span class="f-word">Finish</span>';
+      streetEl.appendChild(finishEl);
+
+      var chapterEls = Array.prototype.slice.call(document.querySelectorAll(".chapter"));
+
+      /* ================= STATE ================= */
+      var state = {
+        mode: "idle",        // idle | playing | pausedMid | complete
+        idx: 0,              // current segment index
+        resumeFrom: 0,       // segment to start from when Play is pressed
+        selected: -1,        // selected stop (-1 = welcome)
+        visited: {},
+        speakToken: 0,
+        fallbackTimer: null,
+        segStartedAt: 0,
+        segDuration: 0,
+        pausedRemaining: 0,
+        calm: false
+      };
+
+      /* Calm mode: on by default for reduced-motion users */
+      if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){ setCalm(true); }
+      function setCalm(on){
+        state.calm = on;
+        document.documentElement.classList.toggle("calm", on);
+        btnCalm.setAttribute("aria-pressed", on ? "true" : "false");
+        btnCalm.textContent = on ? "Calm mode: on" : "Calm mode";
+      }
+      btnCalm.addEventListener("click", function(){ setCalm(!state.calm); });
+
+      /* ================= SPEECH ================= */
+      var synth = ("speechSynthesis" in window) ? window.speechSynthesis : null;
+      var voice = null;
+      function pickVoice(){
+        if (!synth) return;
+        var vs = synth.getVoices(); if (!vs.length) return;
+        var i, v;
+        for (i = 0; i < vs.length; i++){ if (/en[-_]IN/i.test(vs[i].lang)) { voice = vs[i]; return; } }
+        for (i = 0; i < vs.length; i++){ if (/^en/i.test(vs[i].lang) && /female|zira|samantha|google uk english/i.test(vs[i].name)) { voice = vs[i]; return; } }
+        for (i = 0; i < vs.length; i++){ if (/^en/i.test(vs[i].lang)) { voice = vs[i]; return; } }
+        voice = vs[0];
+      }
+      if (synth){ pickVoice(); synth.addEventListener("voiceschanged", pickVoice); }
+
+      function estimateMs(text){
+        var words = text.split(/\s+/).length;
+        return Math.max(2800, words * 430 + 1000);
+      }
+      function speechText(text){ return text.replace(/SIP/g, "S. I. P."); }
+
+      function clearFallback(){ if (state.fallbackTimer){ clearTimeout(state.fallbackTimer); state.fallbackTimer = null; } }
+
+      function speakSegment(onDone){
+        var seg = SEGMENTS[state.idx];
+        var my = ++state.speakToken;
+        clearFallback();
+        state.segDuration = estimateMs(seg.text);
+        state.segStartedAt = Date.now();
+        var finished = false;
+        function advance(){
+          if (finished) return; finished = true;
+          if (my !== state.speakToken) return;   // a newer instruction owns the voice now
+          clearFallback();
+          onDone();
+        }
+        if (synth){
+          try {
+            synth.cancel();
+            var u = new SpeechSynthesisUtterance(speechText(seg.text));
+            if (voice) u.voice = voice;
+            u.rate = 0.98; u.pitch = 1.08;
+            u.onend = advance; u.onerror = advance;
+            synth.speak(u);
+            /* safety net: some browsers drop onend — never let the show stall */
+            state.fallbackTimer = setTimeout(advance, state.segDuration + 5000);
+            return;
+          } catch (e) { /* fall through to the timer show */ }
+        }
+        state.fallbackTimer = setTimeout(advance, state.segDuration);
+      }
+
+      /* ================= MUSIC (Web Audio, no files) ================= */
+      var AC = window.AudioContext || window.webkitAudioContext || null;
+      var actx = null, master = null, chordIdx = 0, musicOn = true, bellTimer = null;
+      var CHORDS = [
+        [261.63, 329.63, 392.00, 493.88],   // Cmaj7
+        [220.00, 261.63, 329.63, 392.00],   // Am7
+        [174.61, 220.00, 261.63, 329.63],   // Fmaj7
+        [196.00, 246.94, 293.66, 392.00]    // G
+      ];
+      var BELLS = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50];
+
+      function ensureAudio(){
+        if (!AC) return;
+        if (!actx){
+          actx = new AC();
+          master = actx.createGain();
+          master.gain.value = 0;
+          master.connect(actx.destination);
+          master.gain.linearRampToValueAtTime(0.05, actx.currentTime + 1.6);
+          schedulePad();
+          setInterval(schedulePad, 9000);
+          scheduleBellSoon();
+        }
+        if (actx.state === "suspended" && musicOn) actx.resume();
+      }
+      function schedulePad(){
+        if (!actx || !musicOn) return;
+        var t = actx.currentTime, chord = CHORDS[chordIdx % CHORDS.length]; chordIdx++;
+        chord.forEach(function(f, i){
+          var o = actx.createOscillator(), g = actx.createGain();
+          o.type = i < 2 ? "sine" : "triangle";
+          o.frequency.value = f;
+          var peak = i < 2 ? 0.15 : 0.05;
+          g.gain.setValueAtTime(0, t);
+          g.gain.linearRampToValueAtTime(peak, t + 2.6);
+          g.gain.setValueAtTime(peak, t + 6.4);
+          g.gain.linearRampToValueAtTime(0, t + 9.6);
+          o.connect(g); g.connect(master);
+          o.start(t); o.stop(t + 9.7);
+        });
+      }
+      function bell(){
+        if (!actx || !musicOn) return;
+        var t = actx.currentTime;
+        var o = actx.createOscillator(), g = actx.createGain();
+        o.type = "sine";
+        o.frequency.value = BELLS[Math.floor(Math.random() * BELLS.length)];
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(0.10, t + 0.03);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 2.8);
+        o.connect(g); g.connect(master);
+        o.start(t); o.stop(t + 3);
+      }
+      function scheduleBellSoon(){
+        bellTimer = setTimeout(function(){
+          if (actx && actx.state === "running") bell();
+          scheduleBellSoon();
+        }, 5200 + Math.random() * 5200);
+      }
+      function setMusic(on){
+        musicOn = on;
+        btnMusic.setAttribute("aria-pressed", on ? "true" : "false");
+        btnMusic.innerHTML = on ? "♪&nbsp; Music: on" : "♪&nbsp; Music: off";
+        btnMusicMini.setAttribute("aria-pressed", on ? "true" : "false");
+        if (!AC) return;
+        if (on){ ensureAudio(); if (actx && actx.state === "suspended") actx.resume(); }
+        else if (actx && actx.state === "running"){ actx.suspend(); }
+      }
+      btnMusic.addEventListener("click", function(){ setMusic(!musicOn); });
+      btnMusicMini.addEventListener("click", function(){ setMusic(!musicOn); });
+
+      /* ================= VISUAL SYNC ================= */
+      function refreshTags(){
+        buildingEls.forEach(function(b, i){
+          var tag = b.querySelector(".b-tag");
+          if (state.mode === "complete"){ tag.textContent = "✓ Done"; }
+          else if (i === state.selected){ tag.textContent = "● You are here"; }
+          else if (state.visited[i]){ tag.textContent = "Visited"; }
+          else { tag.textContent = ""; }
+        });
+      }
+      function setCaption(text){ captionText.textContent = text; }
+      function setProgress(){
+        var pct = state.mode === "complete" ? 100 : Math.round((state.idx / SEGMENTS.length) * 100);
+        progressBar.style.width = pct + "%";
+      }
+      function setPlayUI(){
+        if (state.mode === "playing"){ btnPlay.innerHTML = "⏸&nbsp; Pause"; btnPlayMini.textContent = "⏸"; }
+        else if (state.mode === "pausedMid"){ btnPlay.innerHTML = "▶&nbsp; Resume"; btnPlayMini.textContent = "▶"; }
+        else if (state.mode === "complete"){ btnPlay.innerHTML = "↺&nbsp; Play again"; btnPlayMini.textContent = "↺"; }
+        else { btnPlay.innerHTML = state.resumeFrom > 0 ? "▶&nbsp; Continue the tour" : "▶&nbsp; Play the tour"; btnPlayMini.textContent = "▶"; }
+      }
+      function streetInView(){
+        var r = streetSec.getBoundingClientRect();
+        return r.bottom > 60 && r.top < window.innerHeight - 40;
+      }
+      function maybeFollow(seg){
+        if (streetInView()) return;
+        var target = null;
+        if (seg.kind === "stop") target = chapterEls[seg.stop];
+        else if (seg.kind === "finale") target = streetSec;
+        if (target) target.scrollIntoView({ behavior: state.calm ? "auto" : "smooth", block: "center" });
+      }
+
+      function selectStop(i, fromShow){
+        state.selected = i;
+        buildingEls.forEach(function(b, k){
+          b.classList.toggle("active", k === i && state.mode !== "complete");
+        });
+        chapterEls.forEach(function(c, k){ c.classList.toggle("active", k === i); });
+        var s = STOPS[i];
+        panelTitle.textContent = s.name;
+        panelSays.textContent = "Sprout: “" + s.seg + "”";
+        panelDesc.textContent = s.desc;
+        panelVisit.href = s.url;
+        panelVisit.innerHTML = "Visit " + s.name + " on WealthyTrees&nbsp;→";
+        refreshTags();
+      }
+      function showWelcomePanel(){
+        state.selected = -1;
+        buildingEls.forEach(function(b){ b.classList.remove("active"); });
+        chapterEls.forEach(function(c){ c.classList.remove("active"); });
+        panelTitle.textContent = "Welcome to the street";
+        panelSays.textContent = "“Hi! I’m Sprout — your finance friend at WealthyTrees.”";
+        panelDesc.textContent = "Eight buildings, everything WealthyTrees offers. Press Play above for the full guided tour, or tap any building to peek inside.";
+        panelVisit.href = SITE;
+        panelVisit.innerHTML = "Visit on WealthyTrees&nbsp;→";
+        refreshTags();
+      }
+      function markVisited(i){
+        state.visited[i] = true;
+        buildingEls[i].classList.add("visited");
+      }
+
+      function applySegmentVisual(seg){
+        nowLabel.textContent = seg.label;
+        miniLabel.innerHTML = miniFor(seg);
+        setCaption(seg.text);
+        setProgress();
+        if (seg.kind === "intro"){ showWelcomePanel(); }
+        else if (seg.kind === "stop"){ markVisited(seg.stop); selectStop(seg.stop, true); }
+        else if (seg.kind === "finale"){ completeStreet(); }
+        maybeFollow(seg);
+      }
+
+      function completeStreet(){
+        buildingEls.forEach(function(b){ b.classList.remove("active"); b.classList.add("done"); });
+        streetEl.classList.add("complete");
+        finishEl.classList.add("on");
+        panelTitle.textContent = "That’s the whole street";
+        panelSays.textContent = "Sprout: “That’s the whole street. Have a look around — and welcome to WealthyTrees.”";
+        panelDesc.textContent = "You’ve seen all eight buildings. Scroll on for where to begin, the full site map, and how a day with WealthyTrees looks.";
+        panelVisit.href = SITE;
+        panelVisit.innerHTML = "Visit on WealthyTrees&nbsp;→";
+        refreshTags();
+      }
+
+      /* ================= SHOW CONTROL ================= */
+      function startShow(fromIdx){
+        if (state.mode === "complete"){ resetTour(); }
+        ensureAudio();
+        state.mode = "playing";
+        state.idx = fromIdx;
+        setPlayUI();
+        var seg = SEGMENTS[state.idx];
+        applySegmentVisual(seg);
+        speakSegment(nextSegment);
+      }
+      function nextSegment(){
+        if (state.mode !== "playing") return;
+        state.idx++;
+        if (state.idx >= SEGMENTS.length){ finishShow(); return; }
+        var seg = SEGMENTS[state.idx];
+        applySegmentVisual(seg);
+        speakSegment(nextSegment);
+      }
+      function finishShow(){
+        state.mode = "complete";
+        state.resumeFrom = 0;
+        refreshTags();
+        setProgress(); setPlayUI();
+        nowLabel.textContent = "Tour complete — nicely walked!";
+        miniLabel.innerHTML = "<b>Tour complete</b> ✓";
+        setTimeout(function(){
+          finaleEl.scrollIntoView({ behavior: state.calm ? "auto" : "smooth", block: "center" });
+        }, 2600);
+      }
+      function hardStopShow(){
+        state.speakToken++;
+        clearFallback();
+        if (synth){ try { synth.cancel(); } catch (e) {} }
+        if (state.mode === "playing" || state.mode === "pausedMid"){ state.mode = "idle"; }
+        setPlayUI();
+      }
+      function pauseMid(){
+        if (state.mode !== "playing") return;
+        state.mode = "pausedMid";
+        if (synth && synth.speaking){ try { synth.pause(); } catch (e) {} }
+        else {
+          /* timer-driven show: remember what is left of this segment */
+          var elapsed = Date.now() - state.segStartedAt;
+          state.pausedRemaining = Math.max(700, state.segDuration - elapsed);
+          clearFallback();
+        }
+        setPlayUI();
+        nowLabel.textContent = "Paused — " + SEGMENTS[state.idx].label;
+      }
+      function resumeMid(){
+        if (state.mode !== "pausedMid") return;
+        state.mode = "playing";
+        setPlayUI();
+        nowLabel.textContent = SEGMENTS[state.idx].label;
+        if (synth && synth.paused){ try { synth.resume(); return; } catch (e) {} }
+        if (!synth || !synth.speaking){
+          var my = state.speakToken;
+          state.segStartedAt = Date.now();
+          state.fallbackTimer = setTimeout(function(){
+            if (my !== state.speakToken || state.mode !== "playing") return;
+            nextSegment();
+          }, state.pausedRemaining || 1200);
+        }
+      }
+      function resetTour(){
+        state.speakToken++;
+        clearFallback();
+        if (synth){ try { synth.cancel(); } catch (e) {} }
+        state.mode = "idle"; state.idx = 0; state.resumeFrom = 0; state.visited = {};
+        buildingEls.forEach(function(b){ b.classList.remove("visited", "done", "active"); });
+        streetEl.classList.remove("complete");
+        finishEl.classList.remove("on");
+        showWelcomePanel();
+        setProgress(); setPlayUI();
+        setCaption("Press Play and I’ll walk you down the street, one building at a time.");
+        nowLabel.textContent = "Ready when you are — the whole tour takes about two minutes.";
+        miniLabel.innerHTML = "<b>Sprout’s tour</b> · ready";
+      }
+
+      function onPlayPressed(){
+        if (state.mode === "playing"){ pauseMid(); return; }
+        if (state.mode === "pausedMid"){ resumeMid(); return; }
+        startShow(state.mode === "complete" ? 0 : state.resumeFrom);
+      }
+      btnPlay.addEventListener("click", onPlayPressed);
+      btnPlayMini.addEventListener("click", onPlayPressed);
+
+      function onReplayPressed(){
+        resetTour();
+        streetSec.scrollIntoView({ behavior: state.calm ? "auto" : "smooth", block: "start" });
+        startShow(0);
+      }
+      $("btnReplay").addEventListener("click", onReplayPressed);
+      $("btnReplayMini").addEventListener("click", onReplayPressed);
+      $("btnReplay2").addEventListener("click", onReplayPressed);
+
+      /* Touching a building pauses the show and selects that stop */
+      function userSelect(i, scrollPanel){
+        var wasActive = (state.mode === "playing" || state.mode === "pausedMid");
+        if (wasActive){ hardStopShow(); }
+        markVisited(i);
+        selectStop(i, false);
+        state.resumeFrom = i + 1;   // Play continues the tour from this building
+        setPlayUI();
+        if (wasActive){
+          nowLabel.textContent = "Show paused — press Play to continue from " + STOPS[i].name + ".";
+          miniLabel.innerHTML = "<b>Paused</b> · " + SHORT[i];
+        }
+        if (scrollPanel){
+          $("panel").scrollIntoView({ behavior: state.calm ? "auto" : "smooth", block: "nearest" });
+        }
+      }
+
+      /* Path picker: jump Sprout to that building */
+      Array.prototype.forEach.call(document.querySelectorAll(".path-card"), function(card){
+        card.addEventListener("click", function(){
+          var i = parseInt(card.getAttribute("data-goto"), 10);
+          userSelect(i, false);
+          streetSec.scrollIntoView({ behavior: state.calm ? "auto" : "smooth", block: "start" });
+        });
+      });
+
+      /* Listen to just this stop */
+      $("btnListen").addEventListener("click", function(){
+        hardStopShow();
+        ensureAudio();
+        var segIdx = state.selected >= 0 ? state.selected + 1 : 0;
+        state.idx = segIdx;
+        var seg = SEGMENTS[segIdx];
+        setCaption(seg.text);
+        nowLabel.textContent = seg.label;
+        miniLabel.innerHTML = miniFor(seg);
+        state.mode = "idle";
+        speakSegment(function(){ /* single stop: stop here */ });
+        state.resumeFrom = segIdx;
+        setPlayUI();
+      });
+
+      /* Scroll-story follows along when the show is not playing */
+      if ("IntersectionObserver" in window){
+        var io = new IntersectionObserver(function(entries){
+          if (state.mode === "playing" || state.mode === "pausedMid") return;
+          entries.forEach(function(en){
+            if (en.isIntersecting){
+              var i = parseInt(en.target.getAttribute("data-stop"), 10);
+              if (i !== state.selected) selectStop(i, false);
+            }
+          });
+        }, { rootMargin: "-42% 0px -42% 0px" });
+        chapterEls.forEach(function(c){ io.observe(c); });
+      }
+
+      setPlayUI();
+    })();
+    </script>
+  </body>
+</html>
