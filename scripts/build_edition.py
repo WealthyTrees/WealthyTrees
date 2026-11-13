@@ -9,7 +9,7 @@ if now.weekday() >= 5 and not os.environ.get("FORCE"):
     print("weekend: edition not rebuilt"); sys.exit(0)
 J = lambda f, d=None: json.load(open(f"{R}/data/{f}")) if os.path.exists(f"{R}/data/{f}") else d
 brief, explain, charts, quizzes = J("brief.json"), J("explain.json"), J("charts.json", {}), J("quiz.json", [])
-e = lambda s: html.escape(str(s))
+e = lambda s: html.escape(html.unescape(str(s)))  # brief titles may already carry &amp; — unescape first so & is escaped exactly once
 items = brief["items"]
 DH_DATE = "2026-11-06"
 DW_DATE = "2026-11-07"  # Diwali weekend special: front page gets Diwali animation + Learn promo
@@ -189,6 +189,8 @@ def stories(lst, k_show=2, first_w=True, glance_html=""):
     total = len(lst) + (1 if glance_html else 0)
     if total == 2:
         items += filler()
+    elif total == 0:
+        items += filler(1)  # empty page: fill with the next Market Word, not the same one as a 2-item page
     return '<div class="stories">' + items + glance_html + '</div>'
 WORDS = [
  ("Circuit breaker", "A pause button for the market. If an index falls too far, too fast, trading stops for a while so everyone can calm down.", "/learn/beginner/module-1.html"),
@@ -199,8 +201,8 @@ WORDS = [
  ("Nifty 50", "The fifty largest companies on the National Stock Exchange. The most-watched gauge of the Indian market.", "/learn/beginner/module-1.html"),
  ("IPO", "Initial Public Offering: the first time a company sells its shares to the public. That is when it lists on the exchange.", "/learn/beginner/module-1.html"),
 ]
-def filler():
-    t, d, u = WORDS[n % len(WORDS)]
+def filler(off=0):
+    t, d, u = WORDS[(n + off) % len(WORDS)]
     return (f'<article class="sty fill"><small class="tag">SPROUT\u2019S MARKET WORD</small><h3>{e(t)}</h3>'
             f'<p class="s-lg">{e(d)}</p><p class="src"><a href="{e(u)}">Learn \u2192</a></p></article>')
 pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])) + quiz(0), "Markets"))
