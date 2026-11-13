@@ -41,7 +41,10 @@ def call(method, path, payload=None, extra_headers=None):
     req = urllib.request.Request(API + path, data=data, headers=headers, method=method)
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            return r.status, json.load(r)
+            raw = r.read()
+            if raw.strip():
+                return r.status, json.loads(raw.decode("utf-8"))
+            return r.status, {}
     except urllib.error.HTTPError as e:
         err = e.read().decode("utf-8", "replace")
         print("Buttondown %s %s -> HTTP %s" % (method, path, e.code))
