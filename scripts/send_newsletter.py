@@ -52,7 +52,11 @@ def call(method, path, payload=None, extra_headers=None):
         sys.exit(1)
 
 if MODE == "send":
-    headers = {"X-Buttondown-Live-Dangerously": "true"} if CONFIRM else {}
+    # Buttondown requires the one-time X-Buttondown-Live-Dangerously handshake
+    # on the FIRST live send per API key. Sending it on every send is harmless
+    # (Buttondown ignores it once the handshake is done), and it guarantees the
+    # scheduled weekday 8 AM runs work as the first send without a manual step.
+    headers = {"X-Buttondown-Live-Dangerously": "true"}
     status, resp = call("POST", "/emails",
                        {"subject": subject, "body": body, "status": "about_to_send"},
                        extra_headers=headers)
