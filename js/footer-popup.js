@@ -1,4 +1,4 @@
-/* WealthyTrees footer-popup.js v2 (runs after DOM ready, creates footer if missing): new footer (no logo) + once-per-visit subscribe popup */
+/* WealthyTrees footer-popup.js v3 (runs after DOM ready, creates footer if missing): new footer (no logo) + once-per-visit subscribe popup */
 (function () {
   function boot() {
   var BD = "arorapriyansh";
@@ -44,8 +44,8 @@
       '<div><a class="wt-lg" href="/"><img src="/assets/logo-dark.svg" alt=""><span>WealthyTrees</span></a><p class="wt-tg">Markets, simplified. Daily.</p><p class="wt-ds">Indian stock and commodity news in plain language, plus a learning path that respects your pace.</p>' +
       '<div class="wt-fn"><em>Built by Priyansh</em>A finance student who got tired of market news that needs a dictionary. WealthyTrees is his attempt to fix that: learn the concept, then read the headline.</div></div>' +
       '<div><h4>Explore</h4><ul><li><a href="/">Newsroom</a></li><li><a href="/pages/markets.html">Markets</a></li><li><a href="/pages/learn.html">Learn</a></li><li><a href="/pages/about.html">About</a></li></ul></div>' +
-      '<div><h4>Learn</h4><ul><li><a href="/pages/beginner.html">Beginner path</a></li><li><a href="/pages/intermediate.html">Intermediate path</a></li><li class="wt-soon">Advanced path, coming soon</li></ul></div>' +
-      '<div><h4>WealthyTrees</h4><ul><li><a href="/pages/about.html">About</a></li><li><a href="/pages/about.html#founder">Founder\u2019s story</a></li><li><a href="mailto:priyansharora@wealthytrees.online?subject=Hello%20from%20WealthyTrees">priyansharora@wealthytrees.online</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href=\"/pages/tools.html\">Tools</a></li><li><a href=\"/pages/privacy.html\">Privacy</a></li><li><a href=\"/pages/terms.html\">Terms</a></li></ul></div>' +
+      '<div><h4>Learn</h4><ul><li><a href="/pages/beginner.html">Beginner path</a></li><li><a href="/pages/intermediate.html">Intermediate path</a></li><li><a href="/pages/tools.html">Tools</a></li><li class="wt-soon">Advanced path, coming soon</li></ul></div>' +
+      '<div><h4>WealthyTrees</h4><ul><li><a href="/pages/about.html">About</a></li><li><a href="/pages/about.html#founder">Founder\u2019s story</a></li><li><a href="mailto:priyansharora@wealthytrees.online?subject=Hello%20from%20WealthyTrees">Contact</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms &amp; Privacy</a></li></ul></div>' +
       '</div><div class="wt-sf" id="nl"><div><h4>Get the daily brief</h4><p>One short, clear email a day. Learning only, no tips.</p></div>' +
       '<form action="https://buttondown.com/api/emails/embed-subscribe/' + encodeURIComponent(BD) + '" method="post" target="popupwindow" onsubmit="window.open(\'https://buttondown.com/' + encodeURIComponent(BD) + '\',\'popupwindow\')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe</button></form></div>' +
       '<div class="wt-fl">For education only. Not investment advice. We are not SEBI-registered advisors. \u00a9 ' + new Date().getFullYear() + ' WealthyTrees</div></div>';
