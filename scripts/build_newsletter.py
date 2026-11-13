@@ -21,6 +21,7 @@ FORCE = os.environ.get("FORCE") == "1"
 BUD_GIF = "https://wealthytrees.online/assets/sprout-bob.gif"
 SITE = "https://wealthytrees.online"
 PAPER_URL = SITE + "/pages/the-915.html"
+TOUR_URL = "https://muse.ai/s/wealthytrees-website-tour-xgi6cxwxixwkxwoxi/GZDl1iozoz4Or9lcZI1Adihh5KW7chf6MMQGg3uaKl4"
 
 WORDS = [
     ("Dividend", "When a company earns a profit, it can share a part of it with its shareholders. That share is called a <b>dividend</b> — money paid to you simply for owning the share."),
@@ -220,7 +221,7 @@ html_doc = f"""<!DOCTYPE html>
 <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#b98a2e;text-transform:uppercase;">🌱 Today&rsquo;s lesson · Sprout&rsquo;s Market Word</div>
 <div style="font-family:Georgia,serif;font-size:19px;font-weight:bold;color:#0e2a20;margin:6px 0 4px;">{html.escape(word)}</div>
 <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#3d4a44;">{word_def}</div>
-<div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;margin-top:10px;"><a href="{SITE}/pages/learn.html" style="display:inline-block;background:#0e2a20;color:#ffffff;font-weight:bold;text-decoration:none;padding:10px 20px;border-radius:999px;">Start learning →</a></div>
+<div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;margin-top:10px;"><a href="{SITE}/pages/learn.html" style="display:inline-block;background:#0e2a20;color:#ffffff;font-weight:bold;text-decoration:none;padding:10px 20px;border-radius:999px;">Start learning →</a> <a href="{TOUR_URL}" style="display:inline-block;background:#fdf6dd;color:#0e2a20;font-weight:bold;text-decoration:none;padding:10px 20px;border-radius:999px;border:2px solid #e0b04f;">🌱 Take the tour →</a></div>
 </td></tr></table></td></tr>
 <tr><td style="padding:6px 24px 0;"><div style="border-top:2px solid #0e2a20;"></div></td></tr>
 
