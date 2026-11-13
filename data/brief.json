@@ -3,125 +3,125 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,299",
-   "change": 1.02
+   "value": "25,106",
+   "change": -0.76
   },
   {
    "name": "SENSEX",
-   "value": "81,911",
-   "change": 0.99
+   "value": "81,369",
+   "change": -0.66
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,888",
-   "change": -2.8
+   "value": "3,900",
+   "change": 0.37
   },
   {
    "name": "CRUDE WTI",
-   "value": "$89.0",
-   "change": 2.85
+   "value": "$88.9",
+   "change": 0.23
   },
   {
    "name": "USD/INR",
-   "value": "94.03",
-   "change": 0.38
+   "value": "94.21",
+   "change": 0.18
   },
   {
    "name": "S&P 500",
-   "value": "7,594",
-   "change": -0.33
+   "value": "7,592",
+   "change": -0.35
   },
   {
    "name": "NASDAQ",
-   "value": "25,332",
-   "change": -0.53
+   "value": "25,366",
+   "change": -0.39
   },
   {
    "name": "DOW",
-   "value": "52,388",
-   "change": -0.19
+   "value": "52,297",
+   "change": -0.36
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Kalshi ends Donald Trump Jr's advisory contract due to Polymarket conflict",
-   "summary": "Prediction-market platform Kalshi has ended Donald Trump Jr.’s advisory role by mutual agreement after his venture-capital firm, 1789 Capital, increased its investment in rival Polymarket. Discussions",
+   "title": "MSCI rejig: Which stocks may see the biggest inflows &amp; outflows?",
+   "summary": "In a significant update, MSCI has revealed modifications to its indices, impacting several Indian stocks starting November 30. This shift is predicted to boost India's representation within the MSCI E",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/kalshi-ends-donald-trump-jrs-advisory-contract-due-to-polymarket-conflict/articleshow/135780903.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/msci-rejig-which-stocks-may-see-the-biggest-inflows-amp-outflows/slideshow/135792280.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Carlsberg said to start road show for $600 million India IPO",
+   "summary": "Carlsberg is preparing a potential $600 million IPO of its Indian business, targeting a $4 billion valuation. The offering could launch as early as January 2027, comprising a 15% stake sale by its Dan",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/carlsberg-said-to-start-road-show-for-600-million-india-ipo/articleshow/135790402.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Top pension fund to buy more India state bonds on high yields",
+   "summary": "SBI Pension Fund plans to increase investments in state government bonds, expecting higher yields amid rising supply. The $64 billion fund is pursuing a carry-focused strategy, favouring state and cor",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/top-pension-fund-to-buy-more-india-state-bonds-on-high-yields/articleshow/135789980.cms"
   },
   {
    "category": "Economy",
-   "title": "October retail inflation surge may weigh on housing demand, raise rate hike",
-   "summary": "Rising retail inflation could weaken household purchasing power and constrain discretionary spending, including housing expenditure, while increasing the possibility of further monetary tightening by",
+   "title": "India bonds under pressure before debt supply; hot inflation prints pinch further",
+   "summary": "Indian government bonds experienced significant selling pressure ahead of a major auction for the benchmark paper. The yield on the 6.94% 2036 bond rose notably due to rising inflation in both India a",
    "why": "Policy and economic news shape rates and the rupee.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/october-retail-inflation-surge-may-weigh-on-housing-demand-raise-rate-hike-concerns-knight-frank-phdcci/articleshow/135776096.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-under-pressure-before-debt-supply-hot-inflation-prints-pinch-further/articleshow/135789760.cms"
   },
   {
    "category": "Equity",
-   "title": "Nvidia default risk nears record high as board weighs CEO’s fate",
-   "summary": "The cost of insuring Nvidia’s debt against default climbed close to a recent high as its board considered CEO Jensen Huang’s future. The board is reportedly evaluating interim and permanent successors",
+   "title": "Aditya Birla Capital among 9 stocks showing White Marubozu Pattern",
+   "summary": "On November 12, nine stocks in the Nifty500 that rose over 5.5% appeared on the ‘White Marubozu’ bullish scanner, according to StockEdge’s technical scan data. A White Marubozu is a bullish candlestic",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-default-risk-nears-record-high-as-board-weighs-ceos-fate/articleshow/135775893.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "US stocks: S&amp;P 500, Nasdaq fall as Nvidia CEO exit rattles AI",
-   "summary": "Nvidia's stock took a hit after CEO Jensen Huang stepped down, amid swirling personal controversies. This turmoil added noticeable pressure to the AI sector, dragging down the value of related stocks.",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-lower-after-nvidia-ceo-steps-down/articleshow/135773944.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/aditya-birla-capital-among-9-stocks-showing-white-marubozu-pattern/slideshow/135788959.cms"
   },
   {
    "category": "Equity",
-   "title": "Nebius beats quarterly revenue estimates on strong AI demand",
-   "summary": "In the latest quarterly report, Nebius achieved impressive revenue of $981 million, exceeding analyst projections of $907.5 million. The company is optimistic about future sales, forecasting between $",
+   "title": "One97 Communications among 3 stocks closing above VWAP",
+   "summary": "Three Nifty500 stocks closed more than 2% above their respective volume-weighted average prices on November 12, according to StockEdge’s technical scan.",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nebius-beats-quarterly-revenue-estimates-on-strong-ai-demand/articleshow/135771184.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq, S&amp;P 500 futures fall as Nvidia turbulence unsettles AI stocks",
-   "summary": "Futures tracking the Nasdaq 100 fell significantly after Nvidia shares plummeted due to leadership concerns. Reports about CEO Jensen Huang led to a decline in investor sentiment towards AI-linked sto",
-   "why": "US markets set the mood for global trading.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-sp-500-futures-fall-as-nvidia-turbulence-unsettles-ai-stocks/articleshow/135771074.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/one97-communications-among-3-stocks-closing-above-vwap/slideshow/135788620.cms"
   },
   {
    "category": "Equity",
-   "title": "Clean Max Enviro Energy pledges Rs 50,000 crore investment in Andhra Pradesh",
-   "summary": "Clean Max Enviro Energy Solutions has signed an MoU to invest Rs 50,000 crore in Andhra Pradesh. This investment will focus on developing 3GW of integrated power generation facilities using wind and s",
+   "title": "Godrej Industries among 4 stocks showing RSI trending up",
+   "summary": "Four Nifty500 stocks that gained over 7% on November 12 featured in StockEdge’s RSI Trending Up scan, with their Relative Strength Index (RSI) crossing above 50 from below, signalling strengthening pr",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/companies/clean-max-enviro-energy-pledges-rs-50000-crore-investment-in-andhra-pradesh/articleshow/135771043.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "US stocks edge lower as Nvidia, oil volatility weighs on sentiment: Stock",
-   "summary": "US stocks edge lower as Nvidia, oil volatility weighs on sentiment: Stock Market Live Updates",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-intel-micron-ai-stocks-marvell-coreweave-ai-chip-stocks-treasury-yield-news-12th-november-2026/liveblog/135771380.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "Gold drops to over one-year low as fading Middle East peace hopes",
-   "summary": "GLOBAL-PRECIOUS/ (UPDATE 7, GRAPHIC):PRECIOUS-Gold drops to over one-year low as fading Middle East peace hopes fan inflation fears",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-drops-to-over-one-year-low-as-fading-middle-east-peace-hopes-fan-inflation-fears-11794511222562.html"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/godrej-industries-among-4-stocks-showing-rsi-trending-up/slideshow/135788392.cms"
   },
   {
    "category": "Equity",
-   "title": "Rail Vikas Nigam in focus today after mixed Q2 performance; stock down",
-   "summary": "Rail Vikas Nigam reported Q2 FY27 net profit growth of 10% to  ₹253.71 crore, despite an 8.24% revenue decline. Operating profit rose 19.51%. For H1, net profit increased 13.25% and operating profit s",
+   "title": "Adani Ports SEZ Share Price Live Updates: Adani Ports SEZ Price and",
+   "summary": "Adani Ports SEZ Share Price Live Updates: Adani Ports SEZ Price and Trend Overview",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/adani-ports-sez-share-price-live-updates-13-nov-2026/liveblog/135788172.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "After IPO listing, NSE shares hit ₹2,000 mark for the first time",
+   "summary": "NSE share price today climbed to a new peak of  ₹2007.60 per share on the BSE, crossing the psychological  ₹2000 mark for the first time after the IPO listing",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/rail-vikas-nigam-in-focus-today-after-mixed-q2-performance-stock-down-68-from-record-peak-11794506076322.html"
+   "url": "https://www.livemint.com/market/stock-market-news/after-ipo-listing-nse-shares-hit-rs-2-000-mark-for-the-first-time-buy-sell-or-hold-what-stock-market-experts-say-11794550519441.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Zee Entertainment buyback: What happened with ZEEL stock after ₹600 cr announcement?",
+   "summary": "Zee Entertainment approved a  ₹600 crore share buyback of up to 6.59 crore shares at  ₹91 apiece through a proportionate tender offer. Shareholders on record as of November 25, 2026, are eligible. Pro",
+   "why": "Share prices move on news like this.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/zee-entertainment-announces-rs-600-cr-share-buyback-stock-down-3-check-record-date-price-other-key-things-to-know-11794549332632.html"
   }
  ]
 }
