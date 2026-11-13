@@ -1,5 +1,5 @@
 {
- "date": "Friday, 13 November 2026",
+ "date": "Saturday, 14 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,900",
-   "change": 0.39
+   "value": "3,878",
+   "change": -0.19
   },
   {
    "name": "CRUDE WTI",
-   "value": "$89.2",
-   "change": 0.57
+   "value": "$88.6",
+   "change": -0.15
   },
   {
    "name": "USD/INR",
@@ -28,21 +28,53 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,575",
-   "change": -0.23
+   "value": "7,547",
+   "change": -0.6
   },
   {
    "name": "NASDAQ",
-   "value": "25,240",
-   "change": -0.5
+   "value": "25,096",
+   "change": -1.06
   },
   {
    "name": "DOW",
-   "value": "52,369",
-   "change": 0.14
+   "value": "52,285",
+   "change": -0.02
   }
  ],
  "items": [
+  {
+   "category": "Equity",
+   "title": "Anthropic IPO share orders from China are said to be rebuffed",
+   "summary": "Investors based in mainland China and Hong Kong are excluded from placing orders in Anthropic's IPO. This decision reflects the strategic sensitivities between Washington and Beijing regarding technol",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ipo-share-orders-from-china-are-said-to-be-rebuffed/articleshow/135809948.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "BofA adds January Fed hike to forecast, says quarterly pace no longer",
+   "summary": "BofA Global Research anticipates that the Federal Reserve will implement a rate hike in January 2027. This adjustment follows the unexpectedly high Consumer Price Index report for October. Expectation",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/bofa-adds-january-fed-hike-to-forecast-says-quarterly-pace-no-longer-enough/articleshow/135808910.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "US stocks: US stocks reverse early gains as Nvidia turmoil hits tech",
+   "summary": "US stocks fell as Nvidia’s leadership turmoil triggered a broad technology selloff, sending the Nasdaq down 1.42% and the S&amp;P 500 nearly 1% lower. Softer-than-expected producer inflation offered l",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-higher-after-soft-producer-prices-data/articleshow/135807296.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Chicago Fed's Goolsbee says on CNBC the Fed needs to guard against",
+   "summary": "Chicago Fed president Austan Goolsbee stated that inflation has moved beyond temporary energy and tariff-related price shocks. He highlighted that increased demand from the AI buildout is pushing pric",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/chicago-feds-goolsbee-says-on-cnbc-the-fed-needs-to-guard-against-demand-overheating/articleshow/135807011.cms"
+  },
   {
    "category": "Equity",
    "title": "US Treasury chief says Fed should not hike rates over energy shock",
@@ -60,10 +92,10 @@
    "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/man-industries-pat-rises-to-rs-82-cr-in-q2/articleshow/135806024.cms"
   },
   {
-   "category": "Economy",
-   "title": "US stocks rise at open after softer producer inflation data: Stock Market",
-   "summary": "US stocks rise at open after softer producer inflation data: Stock Market Live Updates",
-   "why": "Policy and economic news shape rates and the rupee.",
+   "category": "US Markets",
+   "title": "Nasdaq, S&amp;P 500 dip as Nvidia overhang weighs on tech stocks: Stock",
+   "summary": "Nasdaq, S&amp;P 500 dip as Nvidia overhang weighs on tech stocks: Stock Market Live Updates",
+   "why": "US markets set the mood for global trading.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-microsoft-cerebras-amd-micron-treasury-yield-news-13th-november-2026/liveblog/135804970.cms"
   },
@@ -76,52 +108,20 @@
    "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/godrej-properties-buys-31-acre-land-in-indore-for-rs-130-cr-to-build-housing-project/articleshow/135804198.cms"
   },
   {
-   "category": "Equity",
-   "title": "German yields set for biggest weekly rise in two months",
-   "summary": "As traders ramp up their expectations for European Central Bank interest rate hikes, yields on German government bonds are climbing steadily. This shift follows US inflation figures that were unexpect",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/german-yields-set-for-biggest-weekly-rise-in-two-months/articleshow/135804160.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "India 10-year bond yield reverses half of last week's drop on elevated",
-   "summary": "Indian government bonds fell for a third consecutive session, driven by inflation and interest-rate outlook concerns. The benchmark yield increased to 7.3079%, reversing much of last week's gains. Ret",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-10-year-bond-yield-reverses-half-of-last-weeks-drop-on-elevated-inflation/articleshow/135804127.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "How US tech pain is European stock markets' gain",
-   "summary": "European stock markets, particularly the STOXX 600, are performing well as tech turmoil affects global markets. This relative stability is attributed to Europe's lower exposure to tech giants compared",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/how-us-tech-pain-is-european-stock-markets-gain/articleshow/135804056.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs",
-   "summary": "Razorpay Software Ltd and Sembcorp Green Infra recently received approval from Sebi for their initial public offerings, marking a major milestone in their growth journeys. Razorpay aims to secure Rs 5",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/razorpay-sembcorp-green-infra-get-sebi-nod-to-float-ipos/articleshow/135803228.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Warships, aircraft or missiles? GRSE vs HAL vs BDL: Which defence PSU",
-   "summary": "GRSE and HAL reported year-on-year second-quarter profit growth of 12% and 16%, respectively, while BDL’s profit fell 15%. Revenue rose at all three companies, but BDL’s EBITDA dropped sharply.",
-   "why": "Share prices move on news like this.",
+   "category": "Commodity",
+   "title": "Rate-hike bets keep gold on track for worst week in four months",
+   "summary": "GLOBAL-PRECIOUS/ (UPDATE 8):PRECIOUS-Rate-hike bets keep gold on track for worst week in four months",
+   "why": "Commodity prices feed into costs and inflation.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/warships-aircraft-or-missiles-grse-vs-hal-vs-bdl-which-defence-psu-wins-the-post-q2-results-race-technical-outlook-11794571751718.html"
+   "url": "https://www.livemint.com/market/ratehike-bets-keep-gold-on-track-for-worst-week-in-four-months-11794598496469.html"
   },
   {
-   "category": "Economy",
-   "title": "Pulse of the Street: Dalal Street’s winning streak faces an inflation test",
-   "summary": "Stronger earnings and foreign buying extended the market’s rally, but rising inflation and continued domestic institutional selling could limit further gains.",
-   "why": "Policy and economic news shape rates and the rupee.",
+   "category": "Commodity",
+   "title": "Oil prices set for second straight weekly decline on growing signs of",
+   "summary": "GLOBAL-OIL:Oil prices set for second straight weekly decline on growing signs of supply surplus",
+   "why": "Commodity prices feed into costs and inflation.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/pulse-of-the-street-dalal-street-s-winning-streak-faces-an-inflation-test-11794572591011.html"
+   "url": "https://www.livemint.com/market/oil-prices-set-for-second-straight-weekly-decline-on-growing-signs-of-supply-surplus-11794595284142.html"
   }
  ]
 }
