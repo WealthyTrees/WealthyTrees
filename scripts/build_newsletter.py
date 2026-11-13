@@ -260,7 +260,7 @@ html_doc = f"""<!DOCTYPE html>
 <a href="{SITE}" style="color:#f5c26b;text-decoration:none;">wealthytrees.online</a> &nbsp;·&nbsp; <a href="{SITE}/pages/learn.html" style="color:#f5c26b;text-decoration:none;">Learn</a> &nbsp;·&nbsp; <a href="{SITE}/pages/markets.html" style="color:#f5c26b;text-decoration:none;">Markets</a> &nbsp;·&nbsp; <a href="{PAPER_URL}" style="color:#f5c26b;text-decoration:none;">THE 9:15</a></div>
 <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#93a89c;margin-top:12px;line-height:1.7;">For education only. Not investment advice. We are not SEBI-registered advisors.<br>
 You are receiving this because you subscribed to the WealthyTrees daily brief.<br>
-<a href="{{{{unsubscribe}}}}" style="color:#93a89c;text-decoration:underline;">Unsubscribe</a></div>
+<a href="{{{{ unsubscribe_url }}}}" style="color:#93a89c;text-decoration:underline;">Unsubscribe</a></div>
 </td></tr>
 
 </table>
