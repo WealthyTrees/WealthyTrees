@@ -848,6 +848,54 @@
         }
       }
 
+      /* Preloaded narration Audio objects, one per segment, so Sprout's voice
+         is decoded and ready before Play is pressed. Reusing the same object
+         for a segment keeps pause/resume working on the very same audio. */
+      var audioCache = {};
+      function preloadNarration(){
+        if (!AUDIO) return;
+        for (var i = 0; i < SEGMENTS.length; i++){
+          if (audioCache[i] || !AUDIO[i]) continue;
+          try {
+            var au = new Audio(AUDIO[i]);
+            au.preload = "auto";
+            au.load();
+            audioCache[i] = au;
+          } catch (e) { /* a segment that fails to preload still plays on demand */ }
+        }
+      }
+      function getAudio(idx, src){
+        var a = audioCache[idx];
+        if (a){
+          try { a.currentTime = 0; } catch (e) {}
+          return a;
+        }
+        a = new Audio(src);
+        a.preload = "auto";
+        audioCache[idx] = a;
+        return a;
+      }
+      /* The phone blocked the sound. Pause the tour — never race ahead
+         silently — and invite the user to tap Play again (a fresh gesture) to
+         retry. The narration Audio object is left in place (paused) so that
+         Resume can retry the very same audio. No robot voice is ever used. */
+      function showAudioBlocked(){
+        clearFallback();
+        /* The whole segment is still ahead (the audio never started), unless
+           the narration was paused part-way — then only what is left remains.
+           Resume uses this so the safety timer never cuts a segment short. */
+        if (narration && narration.duration && isFinite(narration.duration)){
+          state.pausedRemaining = Math.max(700, (narration.duration - (narration.currentTime || 0)) * 1000);
+        } else {
+          state.pausedRemaining = state.segDuration;
+        }
+        state.mode = "pausedMid";
+        setPlayUI();
+        setCaption("Tap Play to hear Sprout — your phone may have blocked the sound.");
+        nowLabel.textContent = "Sound blocked — tap Play to hear Sprout";
+        miniLabel.innerHTML = "<b>Paused</b> · sound blocked";
+      }
+
       function estimateMs(text){
         var words = text.split(/\s+/).length;
         return Math.max(2800, words * 430 + 1000);
@@ -863,32 +911,64 @@
         state.segDuration = estimateMs(seg.text);
         state.segStartedAt = Date.now();
         var finished = false;
+        var retryTimer = null;
         function advance(){
           if (finished) return; finished = true;
           if (my !== state.speakToken) return;   /* a newer instruction owns the voice now */
           clearFallback();
+          if (retryTimer){ clearTimeout(retryTimer); retryTimer = null; }
           stopNarration();
           onDone();
+        }
+        /* Sound blocked: stop the show (never race ahead silently) and let
+           the user tap Play again — a fresh gesture — to retry. */
+        function audioBlocked(){
+          if (finished) return; finished = true;
+          if (my !== state.speakToken) return;
+          clearFallback();
+          if (retryTimer){ clearTimeout(retryTimer); retryTimer = null; }
+          showAudioBlocked();
         }
         var src = AUDIO[state.idx];
         if (src){
           try {
-            var a = new Audio(src);
+            var a = getAudio(state.idx, src);
             narration = a;
-            a.preload = "auto";
             a.onended = advance;
-            a.onerror = advance;
+            a.onerror = audioBlocked;
             a.onloadedmetadata = function(){
               if (a.duration && isFinite(a.duration)){
                 state.segDuration = Math.ceil(a.duration * 1000);
+              }
+            };
+            var attempts = 0;
+            (function tryPlay(){
+              attempts++;
+              var p;
+              try { p = a.play(); } catch (e) { p = Promise.reject(e); }
+              if (p && p.then){
+                p.then(function(){
+                  /* Audio is really playing now — only now arm the safety net
+                     in case 'ended' is ever missed. The timer must NOT be
+                     armed while a play() retry is still pending. */
+                  if (my !== state.speakToken || finished) return;
+                  clearFallback();
+                  state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
+                }).catch(function(){
+                  if (my !== state.speakToken || finished) return;
+                  if (attempts < 2){
+                    retryTimer = setTimeout(tryPlay, 300);
+                  } else {
+                    audioBlocked();
+                  }
+                });
+              } else {
+                /* Older browsers return no Promise from play(): assume it
+                   started and arm the safety net. */
                 clearFallback();
                 state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
               }
-            };
-            var p = a.play();
-            if (p && p.catch){ p.catch(function(){ advance(); }); }
-            /* safety net: never let the show stall if ended is missed */
-            state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
+            })();
             return;
           } catch (e) { /* fall through to the timer show */ }
         }
@@ -913,7 +993,7 @@
           master = actx.createGain();
           master.gain.value = 0;
           master.connect(actx.destination);
-          master.gain.linearRampToValueAtTime(0.05, actx.currentTime + 1.6);
+          master.gain.linearRampToValueAtTime(0.22, actx.currentTime + 1.6);
           schedulePad();
           setInterval(schedulePad, 9000);
           scheduleBellSoon();
@@ -927,7 +1007,7 @@
           var o = actx.createOscillator(), g = actx.createGain();
           o.type = i < 2 ? "sine" : "triangle";
           o.frequency.value = f;
-          var peak = i < 2 ? 0.15 : 0.05;
+          var peak = i < 2 ? 0.28 : 0.12;
           g.gain.setValueAtTime(0, t);
           g.gain.linearRampToValueAtTime(peak, t + 2.6);
           g.gain.setValueAtTime(peak, t + 6.4);
@@ -943,7 +1023,7 @@
         o.type = "sine";
         o.frequency.value = BELLS[Math.floor(Math.random() * BELLS.length)];
         g.gain.setValueAtTime(0, t);
-        g.gain.linearRampToValueAtTime(0.10, t + 0.03);
+        g.gain.linearRampToValueAtTime(0.22, t + 0.03);
         g.gain.exponentialRampToValueAtTime(0.0001, t + 2.8);
         o.connect(g); g.connect(master);
         o.start(t); o.stop(t + 3);
@@ -960,7 +1040,7 @@
         btnMusic.innerHTML = on ? "♪&nbsp; Music: on" : "♪&nbsp; Music: off";
         btnMusicMini.setAttribute("aria-pressed", on ? "true" : "false");
         if (!AC) return;
-        if (on){ ensureAudio(); if (actx && actx.state === "suspended") actx.resume(); }
+        if (on){ ensureAudio(); if (actx && actx.state === "suspended") actx.resume(); schedulePad(); }
         else if (actx && actx.state === "running"){ actx.suspend(); }
       }
       btnMusic.addEventListener("click", function(){ setMusic(!musicOn); });
@@ -1115,6 +1195,7 @@
         state.mode = "playing";
         setPlayUI();
         nowLabel.textContent = SEGMENTS[state.idx].label;
+        setCaption(SEGMENTS[state.idx].text);
         var my = state.speakToken;
         state.segStartedAt = Date.now();
         if (narration && narration.paused){
@@ -1122,8 +1203,24 @@
             if (my !== state.speakToken || state.mode !== "playing") return;
             nextSegment();
           }, state.pausedRemaining || 1200);
-          var p = narration.play();
-          if (p && p.catch){ p.catch(function(){}); }
+          var attempts = 0;
+          (function tryResume(){
+            attempts++;
+            var p;
+            try { p = narration.play(); } catch (e) { p = Promise.reject(e); }
+            if (p && p.catch){
+              p.catch(function(){
+                if (my !== state.speakToken || state.mode !== "playing") return;
+                if (attempts < 2){
+                  setTimeout(tryResume, 300);
+                } else {
+                  /* Still blocked: stay paused and tell the user to tap again. */
+                  clearFallback();
+                  showAudioBlocked();
+                }
+              });
+            }
+          })();
           return;
         }
         if (!narration){
@@ -1255,6 +1352,27 @@
         try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
         applyTheme(saved);
       })();
+
+      /* ================= AUDIO UNLOCK (phones) ================= */
+      /* Phones (iOS Safari / Android Chrome) keep audio locked until a real
+         tap. The first tap anywhere unlocks it — decode the narration and
+         create/resume the music AudioContext — so Play is never the first
+         thing that has to fight the lock. This listener removes itself. */
+      function unlockAudio(){
+        preloadNarration();
+        ensureAudio();
+        if (actx && actx.state === "suspended" && musicOn){ actx.resume(); }
+      }
+      function unlockOnce(){
+        unlockAudio();
+        document.removeEventListener("pointerdown", unlockOnce);
+        document.removeEventListener("touchstart", unlockOnce);
+      }
+      document.addEventListener("pointerdown", unlockOnce);
+      document.addEventListener("touchstart", unlockOnce);
+      /* Decode the narration shortly after load too, so it is ready even
+         before the first tap. */
+      setTimeout(preloadNarration, 400);
 
       setPlayUI();
     })();
