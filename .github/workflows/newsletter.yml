@@ -1,0 +1,62 @@
+# THE 9:15 — daily newsletter (Buttondown)
+# Builds the newsletter from data/brief.json + live prices, then sends it via
+# the Buttondown API. Weekday mornings, after the 7:15 AM paper build.
+#  - Scheduled run (Mon-Fri 8:00 AM IST): sends to the whole subscriber list.
+#  - Manual run (Run workflow): defaults to DRAFT mode — it creates a draft
+#    and sends that draft ONLY to the test email you type in. Nothing reaches
+#    subscribers. Use mode=send + confirm_first_send=true for the first live send.
+# Secrets needed: BUTTONDOWN_API_KEY (Buttondown dashboard -> Settings -> API).
+# The builder refuses to run on a stale brief (<3 stories, or a weekend),
+# so a bad email never goes out.
+name: Newsletter (THE 9:15 by email)
+
+on:
+  schedule:
+    - cron: "30 2 * * 1-5"   # 8:00 AM IST, Mon-Fri
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "draft = test to one email only (safe) | send = whole list"
+        required: true
+        default: "draft"
+        type: choice
+        options:
+          - draft
+          - send
+      test_email:
+        description: "Email that receives the test draft (draft mode only)"
+        required: false
+        default: ""
+      confirm_first_send:
+        description: "Tick ONLY for the very first live send (one-time Buttondown handshake)"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+jobs:
+  build-and-send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the newsletter
+        run: python3 scripts/build_newsletter.py
+
+      - name: Send via Buttondown
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          # Scheduled runs always send; manual runs use the chosen mode.
+          MODE: ${{ github.event_name == 'schedule' && 'send' || inputs.mode }}
+          TEST_EMAIL: ${{ inputs.test_email }}
+          CONFIRM_FIRST_SEND: ${{ inputs.confirm_first_send }}
+        run: python3 scripts/send_newsletter.py
