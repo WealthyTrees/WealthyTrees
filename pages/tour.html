@@ -163,6 +163,7 @@
       .pbtn[aria-pressed="true"]{ background:var(--gold-soft); color:#2c1f04; }
       .pbtn:focus-visible, .building:focus-visible, .path-card:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
       .player .now{ font-size:.95rem; opacity:.92; }
+      .player .test-note{ font-size:.9rem; opacity:.85; }
       .progress{ height:8px; background:rgba(255,255,255,.18); border-radius:99px; margin-top:14px; overflow:hidden; }
       .progress > div{ height:100%; width:0%; background:linear-gradient(90deg,var(--gold-soft),var(--gold)); border-radius:99px; transition:width .5s ease; }
       html.calm .progress > div{ transition:none; }
@@ -416,6 +417,8 @@
             <button class="pbtn ghost" id="btnReplay" type="button">↺&nbsp; Replay</button>
             <button class="pbtn ghost" id="btnMusic" type="button" aria-pressed="true">♪&nbsp; Music: on</button>
             <button class="pbtn ghost" id="btnCalm" type="button" aria-pressed="false">Calm mode</button>
+            <button class="pbtn ghost" id="btnTest" type="button">🔊&nbsp; Test sound</button>
+            <span class="test-note" id="testNote" aria-live="polite"></span>
             <span class="now" id="nowLabel">Ready when you are — the whole tour takes about two minutes.</span>
           </div>
           <div class="progress" aria-hidden="true"><div id="progressBar"></div></div>
@@ -771,6 +774,7 @@
           captionText = $("captionText"), nowLabel = $("nowLabel"), progressBar = $("progressBar"),
           btnPlay = $("btnPlay"), btnPlayMini = $("btnPlayMini"), miniLabel = $("miniLabel"),
           btnMusic = $("btnMusic"), btnMusicMini = $("btnMusicMini"), btnCalm = $("btnCalm"),
+          btnTest = $("btnTest"), testNote = $("testNote"),
           finaleEl = $("finale");
       var finishEl = null;
 
@@ -835,65 +839,136 @@
       }
       btnCalm.addEventListener("click", function(){ setCalm(!state.calm); });
 
-      /* ================= NARRATION (recorded voice) ================= */
+      /* ================= NARRATION (recorded voice, Web Audio) ================= */
       /* Sprout's voice is recorded for this tour (Aria) and embedded in this
          page as data URIs — no SpeechSynthesis, no downloads. Segment 0 is
-         the intro, 1-8 are the eight stops, 9 is the finale. */
-      var narration = null;
+         the intro, 1-8 are the eight stops, 9 is the finale.
+         WHY WEB AUDIO: an HTML Audio element created on page load (outside a
+         user tap) is refused by iOS Safari / some Android browsers even when
+         play() is later called inside a tap. The Web Audio path decodes and
+         starts everything from inside the tap, through the same AudioContext
+         the music already uses, so the phone treats it as the user's own
+         gesture. Each segment is decoded lazily — when it is about to play —
+         and cached as an AudioBuffer. Nothing is decoded on page load. */
+      var narration = null;      // active playback handle (see below) or null
+      var narrBuf = {};          // idx -> decoded AudioBuffer (lazy cache)
+      var narrBufPromise = {};   // idx -> in-flight decode Promise
 
+      /* base64 data URI -> ArrayBuffer, for decodeAudioData. */
+      function dataUriToArrayBuffer(uri){
+        var comma = uri.indexOf(",");
+        var b64 = comma >= 0 ? uri.slice(comma + 1) : uri;
+        var bin = atob(b64);
+        var len = bin.length;
+        var bytes = new Uint8Array(len);
+        for (var i = 0; i < len; i++) bytes[i] = bin.charCodeAt(i);
+        return bytes.buffer;
+      }
+      /* Decode one segment into an AudioBuffer, lazily. Returns a Promise.
+         A decode that never settles (some browsers neither return a promise
+         nor call back) times out after 8s so the caller can fall back. */
+      function decodeSegment(idx){
+        if (narrBuf[idx]) return Promise.resolve(narrBuf[idx]);
+        if (narrBufPromise[idx]) return narrBufPromise[idx];
+        var p = new Promise(function(resolve, reject){
+          var settled = false, timer = null;
+          function ok(buf){
+            if (settled) return; settled = true;
+            if (timer) clearTimeout(timer);
+            if (!buf){ reject(new Error("empty decode")); return; }
+            narrBuf[idx] = buf;
+            resolve(buf);
+          }
+          function bad(err){
+            if (settled) return; settled = true;
+            if (timer) clearTimeout(timer);
+            reject(err || new Error("decode failed"));
+          }
+          timer = setTimeout(function(){ bad(new Error("decode timeout")); }, 8000);
+          try {
+            ensureAudio();
+            if (!actx){ bad(new Error("no AudioContext")); return; }
+            if (!AUDIO[idx]){ bad(new Error("no segment")); return; }
+            var ab = dataUriToArrayBuffer(AUDIO[idx]);
+            var r = null;
+            try { r = actx.decodeAudioData(ab, ok, bad); }
+            catch (e){ bad(e); return; }
+            if (r && typeof r.then === "function"){ r.then(ok, bad); }
+          } catch (e){ bad(e); }
+        });
+        narrBufPromise[idx] = p;
+        p.catch(function(){ delete narrBufPromise[idx]; });
+        return p;
+      }
+
+      /* The narration handle. kind "wa" = Web Audio BufferSource (preferred);
+         kind "html" = a fresh HTML Audio element (fallback). Both expose the
+         same small API so pause / resume / stop work either way. */
+      function waHandle(buf, onEnded){
+        var g = actx.createGain();
+        g.gain.value = 1.0;
+        g.connect(master);
+        var h = {
+          kind: "wa",
+          duration: buf.duration,
+          _paused: false,
+          _offset: 0,        // seconds already played (for resume)
+          _startedAt: 0,     // actx.currentTime when (re)started
+          _src: null,
+          _onEnded: onEnded,
+          durationSec: function(){ return this.duration; },
+          playedSec: function(){
+            if (this._paused) return this._offset;
+            return this._offset + Math.max(0, actx.currentTime - this._startedAt);
+          },
+          isPaused: function(){ return this._paused; },
+          start: function(off){
+            this._offset = off || 0;
+            this._startedAt = actx.currentTime;
+            this._paused = false;
+            var s = actx.createBufferSource();
+            s.buffer = buf;
+            s.connect(g);
+            s.onended = this._onEnded;
+            s.start(0, this._offset);
+            this._src = s;
+          },
+          pause: function(){
+            if (this._paused) return;
+            this._offset = this.playedSec();
+            this._paused = true;
+            try { if (this._src){ this._src.onended = null; this._src.stop(); } } catch (e) {}
+          },
+          resume: function(){
+            if (!this._paused) return;
+            this.start(this._offset);
+          },
+          stop: function(){
+            try { if (this._src){ this._src.onended = null; this._src.stop(); } } catch (e) {}
+            this._src = null;
+          }
+        };
+        return h;
+      }
+      function htmlHandle(a){
+        return {
+          kind: "html",
+          el: a,
+          durationSec: function(){ return (a.duration && isFinite(a.duration)) ? a.duration : 0; },
+          playedSec: function(){ return a.currentTime || 0; },
+          isPaused: function(){ return a.paused; },
+          pause: function(){ try { a.pause(); } catch (e) {} },
+          resume: function(){ return a.play(); },
+          stop: function(){
+            try { a.onended = null; a.onerror = null; a.pause(); } catch (e) {}
+          }
+        };
+      }
       function stopNarration(){
         if (narration){
-          try { narration.onended = null; narration.onerror = null; narration.pause(); } catch (e) {}
+          try { narration.stop(); } catch (e) {}
           narration = null;
         }
-      }
-
-      /* Preloaded narration Audio objects, one per segment, so Sprout's voice
-         is decoded and ready before Play is pressed. Reusing the same object
-         for a segment keeps pause/resume working on the very same audio. */
-      var audioCache = {};
-      function preloadNarration(){
-        if (!AUDIO) return;
-        for (var i = 0; i < SEGMENTS.length; i++){
-          if (audioCache[i] || !AUDIO[i]) continue;
-          try {
-            var au = new Audio(AUDIO[i]);
-            au.preload = "auto";
-            au.load();
-            audioCache[i] = au;
-          } catch (e) { /* a segment that fails to preload still plays on demand */ }
-        }
-      }
-      function getAudio(idx, src){
-        var a = audioCache[idx];
-        if (a){
-          try { a.currentTime = 0; } catch (e) {}
-          return a;
-        }
-        a = new Audio(src);
-        a.preload = "auto";
-        audioCache[idx] = a;
-        return a;
-      }
-      /* The phone blocked the sound. Pause the tour — never race ahead
-         silently — and invite the user to tap Play again (a fresh gesture) to
-         retry. The narration Audio object is left in place (paused) so that
-         Resume can retry the very same audio. No robot voice is ever used. */
-      function showAudioBlocked(){
-        clearFallback();
-        /* The whole segment is still ahead (the audio never started), unless
-           the narration was paused part-way — then only what is left remains.
-           Resume uses this so the safety timer never cuts a segment short. */
-        if (narration && narration.duration && isFinite(narration.duration)){
-          state.pausedRemaining = Math.max(700, (narration.duration - (narration.currentTime || 0)) * 1000);
-        } else {
-          state.pausedRemaining = state.segDuration;
-        }
-        state.mode = "pausedMid";
-        setPlayUI();
-        setCaption("Tap Play to hear Sprout — your phone may have blocked the sound.");
-        nowLabel.textContent = "Sound blocked — tap Play to hear Sprout";
-        miniLabel.innerHTML = "<b>Paused</b> · sound blocked";
       }
 
       function estimateMs(text){
@@ -912,11 +987,14 @@
         state.segStartedAt = Date.now();
         var finished = false;
         var retryTimer = null;
+        var decodeTimer = null;
+        var started = false;   // true once one playback path has really started
         function advance(){
           if (finished) return; finished = true;
           if (my !== state.speakToken) return;   /* a newer instruction owns the voice now */
           clearFallback();
           if (retryTimer){ clearTimeout(retryTimer); retryTimer = null; }
+          if (decodeTimer){ clearTimeout(decodeTimer); decodeTimer = null; }
           stopNarration();
           onDone();
         }
@@ -931,6 +1009,7 @@
           if (my !== state.speakToken) return;
           clearFallback();
           if (retryTimer){ clearTimeout(retryTimer); retryTimer = null; }
+          if (decodeTimer){ clearTimeout(decodeTimer); decodeTimer = null; }
           setCaption("Sound is off on this device — the tour will keep walking silently. Tap Play to try the voice again.");
           nowLabel.textContent = "Sound off — walking silently";
           miniLabel.innerHTML = "<b>Playing</b> · sound off";
@@ -938,11 +1017,59 @@
              (Reset finished first — advance() returns early while it is set.) */
           state.fallbackTimer = setTimeout(function(){ finished = false; advance(); }, state.segDuration);
         }
+        /* Prefetch the next segment in the background so the walk never waits
+           for a decode. One at a time, lazily — never all ten on load. */
+        function prefetchNext(){
+          var n = state.idx + 1;
+          if (n < SEGMENTS.length && AUDIO[n] && !narrBuf[n]){ decodeSegment(n).catch(function(){}); }
+        }
         var src = AUDIO[state.idx];
-        if (src){
+        if (!src){
+          state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
+          return;
+        }
+        /* ---- Path 1: Web Audio (preferred). Decode lazily, play a
+           BufferSource through the shared master gain. ---- */
+        decodeTimer = setTimeout(function(){
+          if (started || finished || my !== state.speakToken) return;
+          playHtmlFallback();
+        }, 5000);
+        decodeSegment(state.idx).then(function(buf){
+          if (started || finished || my !== state.speakToken) return;
+          if (decodeTimer){ clearTimeout(decodeTimer); decodeTimer = null; }
           try {
-            var a = getAudio(state.idx, src);
-            narration = a;
+            ensureAudio();
+            if (!actx){ playHtmlFallback(); return; }
+            if (actx.state === "suspended"){ actx.resume(); }
+            var h = waHandle(buf, advance);
+            narration = h;
+            if (buf.duration && isFinite(buf.duration)){
+              state.segDuration = Math.ceil(buf.duration * 1000);
+            }
+            h.start(0);
+            started = true;
+            clearFallback();
+            state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
+            prefetchNext();
+          } catch (e){
+            playHtmlFallback();
+          }
+        }).catch(function(){
+          if (started || finished || my !== state.speakToken) return;
+          if (decodeTimer){ clearTimeout(decodeTimer); decodeTimer = null; }
+          playHtmlFallback();
+        });
+        /* ---- Path 2: HTML Audio fallback. A FRESH element, created right
+           here inside the Play gesture's call chain — never a cached element
+           made on load. ---- */
+        function playHtmlFallback(){
+          if (started || finished || my !== state.speakToken) return;
+          started = true;
+          if (decodeTimer){ clearTimeout(decodeTimer); decodeTimer = null; }
+          try {
+            var a = new Audio(src);
+            a.preload = "auto";
+            narration = htmlHandle(a);
             a.onended = advance;
             a.onerror = audioBlocked;
             a.onloadedmetadata = function(){
@@ -957,9 +1084,6 @@
               try { p = a.play(); } catch (e) { p = Promise.reject(e); }
               if (p && p.then){
                 p.then(function(){
-                  /* Audio is really playing now — only now arm the safety net
-                     in case 'ended' is ever missed. The timer must NOT be
-                     armed while a play() retry is still pending. */
                   if (my !== state.speakToken || finished) return;
                   clearFallback();
                   state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
@@ -972,21 +1096,19 @@
                   }
                 });
               } else {
-                /* Older browsers return no Promise from play(): assume it
-                   started and arm the safety net. */
                 clearFallback();
                 state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
               }
             })();
-            return;
-          } catch (e) { /* fall through to the timer show */ }
+          } catch (e){
+            audioBlocked();
+          }
         }
-        state.fallbackTimer = setTimeout(advance, state.segDuration + 2000);
       }
 
       /* ================= MUSIC (Web Audio, no files) ================= */
       var AC = window.AudioContext || window.webkitAudioContext || null;
-      var actx = null, master = null, chordIdx = 0, musicOn = true, bellTimer = null;
+      var actx = null, master = null, musicGain = null, chordIdx = 0, musicOn = true, bellTimer = null;
       var CHORDS = [
         [261.63, 329.63, 392.00, 493.88],   // Cmaj7
         [220.00, 261.63, 329.63, 392.00],   // Am7
@@ -1003,11 +1125,17 @@
           master.gain.value = 0;
           master.connect(actx.destination);
           master.gain.linearRampToValueAtTime(0.22, actx.currentTime + 1.6);
+          /* Music has its own gain after master, so turning the music off
+             silences only the music — the narration (which also feeds master)
+             keeps playing. */
+          musicGain = actx.createGain();
+          musicGain.gain.value = musicOn ? 1 : 0;
+          musicGain.connect(master);
           schedulePad();
           setInterval(schedulePad, 9000);
           scheduleBellSoon();
         }
-        if (actx.state === "suspended" && musicOn) actx.resume();
+        if (actx.state === "suspended") actx.resume();
       }
       function schedulePad(){
         if (!actx || !musicOn) return;
@@ -1021,7 +1149,7 @@
           g.gain.linearRampToValueAtTime(peak, t + 2.6);
           g.gain.setValueAtTime(peak, t + 6.4);
           g.gain.linearRampToValueAtTime(0, t + 9.6);
-          o.connect(g); g.connect(master);
+          o.connect(g); g.connect(musicGain);
           o.start(t); o.stop(t + 9.7);
         });
       }
@@ -1034,7 +1162,7 @@
         g.gain.setValueAtTime(0, t);
         g.gain.linearRampToValueAtTime(0.22, t + 0.03);
         g.gain.exponentialRampToValueAtTime(0.0001, t + 2.8);
-        o.connect(g); g.connect(master);
+        o.connect(g); g.connect(musicGain);
         o.start(t); o.stop(t + 3);
       }
       function scheduleBellSoon(){
@@ -1049,11 +1177,51 @@
         btnMusic.innerHTML = on ? "♪&nbsp; Music: on" : "♪&nbsp; Music: off";
         btnMusicMini.setAttribute("aria-pressed", on ? "true" : "false");
         if (!AC) return;
-        if (on){ ensureAudio(); if (actx && actx.state === "suspended") actx.resume(); schedulePad(); }
-        else if (actx && actx.state === "running"){ actx.suspend(); }
+        if (on){
+          ensureAudio();
+          if (actx && actx.state === "suspended") actx.resume();
+          if (musicGain && actx){ musicGain.gain.setTargetAtTime(1, actx.currentTime, 0.3); }
+          schedulePad();
+        } else if (musicGain && actx){
+          musicGain.gain.setTargetAtTime(0, actx.currentTime, 0.3);
+        }
       }
       btnMusic.addEventListener("click", function(){ setMusic(!musicOn); });
       btnMusicMini.addEventListener("click", function(){ setMusic(!musicOn); });
+
+      /* ---- Test sound: one bell chime + the first second of Sprout's intro,
+         both through the same Web Audio path the tour uses. The bell and the
+         voice feed master directly (not the music gain) so the test works
+         even with the music toggled off. If the phone stays silent, the note
+         tells the user to check the silent switch and the media volume. ---- */
+      function testSound(){
+        ensureAudio();
+        if (!actx || !master){
+          testNote.textContent = "No sound? Check your phone\u2019s silent switch and media volume, then tap again.";
+          return;
+        }
+        if (actx.state === "suspended"){ actx.resume(); }
+        var t = actx.currentTime + 0.05;
+        var o = actx.createOscillator(), g = actx.createGain();
+        o.type = "sine"; o.frequency.value = 880;
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(0.25, t + 0.03);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 1.2);
+        o.connect(g); g.connect(master);
+        o.start(t); o.stop(t + 1.3);
+        testNote.textContent = "Playing a test sound\u2026";
+        decodeSegment(0).then(function(buf){
+          var s = actx.createBufferSource();
+          s.buffer = buf;
+          var g2 = actx.createGain(); g2.gain.value = 1.0;
+          s.connect(g2); g2.connect(master);
+          s.start(0, 0, 1.0);
+          testNote.textContent = "Did you hear a chime and Sprout\u2019s voice? If not, check your phone\u2019s silent switch and media volume, then tap again.";
+        }).catch(function(){
+          testNote.textContent = "No sound? Check your phone\u2019s silent switch and media volume, then tap again.";
+        });
+      }
+      btnTest.addEventListener("click", testSound);
 
       /* ================= VISUAL SYNC ================= */
       function refreshTags(){
@@ -1180,16 +1348,18 @@
       function pauseMid(){
         if (state.mode !== "playing") return;
         state.mode = "pausedMid";
-        if (narration && !narration.paused){
-          narration.pause();
+        if (narration && !narration.isPaused()){
           var rem = 0;
-          if (narration.duration && isFinite(narration.duration)){
-            rem = Math.max(700, (narration.duration - narration.currentTime) * 1000);
+          var dur = narration.durationSec();
+          var played = narration.playedSec();
+          if (dur && isFinite(dur) && dur > 0){
+            rem = Math.max(700, (dur - played) * 1000);
           } else {
             var elapsed = Date.now() - state.segStartedAt;
             rem = Math.max(700, state.segDuration - elapsed);
           }
           state.pausedRemaining = rem;
+          narration.pause();
         } else {
           /* audio already ended or timer-driven: remember what is left */
           var elapsed2 = Date.now() - state.segStartedAt;
@@ -1207,7 +1377,7 @@
         setCaption(SEGMENTS[state.idx].text);
         var my = state.speakToken;
         state.segStartedAt = Date.now();
-        if (narration && narration.paused){
+        if (narration && narration.isPaused()){
           state.fallbackTimer = setTimeout(function(){
             if (my !== state.speakToken || state.mode !== "playing") return;
             nextSegment();
@@ -1215,17 +1385,20 @@
           var attempts = 0;
           (function tryResume(){
             attempts++;
-            var p;
-            try { p = narration.play(); } catch (e) { p = Promise.reject(e); }
-            if (p && p.catch){
-              p.catch(function(){
+            var r = null;
+            try { r = narration.resume(); } catch (e) { r = null; }
+            /* Web Audio resume() restarts the BufferSource and returns
+               nothing; HTML Audio resume() returns a play() promise that can
+               reject. Only a promise can fail here. */
+            if (r && r.then){
+              r.then(function(){
+                if (my !== state.speakToken || state.mode !== "playing") return;
+                /* Voice is back — the safety net already covers the rest. */
+              }).catch(function(){
                 if (my !== state.speakToken || state.mode !== "playing") return;
                 if (attempts < 2){
                   setTimeout(tryResume, 300);
                 } else {
-                  /* Still blocked: do not leave the tour stuck — keep walking
-                     visually so the user still sees every building. The next
-                     segment will retry the voice. */
                   clearFallback();
                   setCaption("Sound is off on this device — the tour will keep walking silently. Tap Play to try the voice again.");
                   nowLabel.textContent = "Sound off — walking silently";
@@ -1236,6 +1409,13 @@
                   }, state.pausedRemaining || state.segDuration || 3000);
                 }
               });
+            } else {
+              /* Web Audio path: the source was restarted at the saved offset.
+                 Make sure the context is running so it is actually heard. */
+              try {
+                ensureAudio();
+                if (actx && actx.state === "suspended"){ actx.resume(); }
+              } catch (e) {}
             }
           })();
           return;
@@ -1376,9 +1556,11 @@
          create/resume the music AudioContext — so Play is never the first
          thing that has to fight the lock. This listener removes itself. */
       function unlockAudio(){
-        preloadNarration();
         ensureAudio();
-        if (actx && actx.state === "suspended" && musicOn){ actx.resume(); }
+        if (actx && actx.state === "suspended"){ actx.resume(); }
+        /* Warm the intro narration so Play starts instantly. Decoded here, on
+           this first real tap — never on page load. */
+        if (AUDIO[0] && !narrBuf[0]){ decodeSegment(0).catch(function(){}); }
       }
       function unlockOnce(){
         unlockAudio();
@@ -1387,9 +1569,6 @@
       }
       document.addEventListener("pointerdown", unlockOnce);
       document.addEventListener("touchstart", unlockOnce);
-      /* Decode the narration shortly after load too, so it is ready even
-         before the first tap. */
-      setTimeout(preloadNarration, 400);
 
       setPlayUI();
     })();
