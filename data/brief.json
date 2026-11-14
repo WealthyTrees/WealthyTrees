@@ -13,115 +13,115 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,878",
-   "change": -0.19
+   "value": "3,886",
+   "change": 0.03
   },
   {
    "name": "CRUDE WTI",
    "value": "$88.6",
-   "change": -0.15
+   "change": -0.2
   },
   {
    "name": "USD/INR",
-   "value": "94.23",
-   "change": 0.2
+   "value": "94.24",
+   "change": 0.21
   },
   {
    "name": "S&P 500",
-   "value": "7,547",
-   "change": -0.6
+   "value": "7,562",
+   "change": -0.4
   },
   {
    "name": "NASDAQ",
-   "value": "25,096",
-   "change": -1.06
+   "value": "25,136",
+   "change": -0.91
   },
   {
    "name": "DOW",
-   "value": "52,285",
-   "change": -0.02
+   "value": "52,348",
+   "change": 0.1
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Anthropic IPO share orders from China are said to be rebuffed",
-   "summary": "Investors based in mainland China and Hong Kong are excluded from placing orders in Anthropic's IPO. This decision reflects the strategic sensitivities between Washington and Beijing regarding technol",
+   "title": "6 out of 10 top performing largecap stocks in November delivered multibagger",
+   "summary": "Here are the 10 largecap stocks that recorded the biggest jump in November so far, including six who have delivered multibagger returns in the longer run.",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ipo-share-orders-from-china-are-said-to-be-rebuffed/articleshow/135809948.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/6-out-of-10-top-performing-largecap-stocks-in-november-delivered-multibagger-returns-in-long-run-do-you-own-any/slideshow/135824732.cms"
   },
   {
    "category": "Equity",
-   "title": "BofA adds January Fed hike to forecast, says quarterly pace no longer",
-   "summary": "BofA Global Research anticipates that the Federal Reserve will implement a rate hike in January 2027. This adjustment follows the unexpectedly high Consumer Price Index report for October. Expectation",
+   "title": "Anthropic IPO buyers have more influence on price than SpaceX",
+   "summary": "Anthropic PBC is gearing up for its initial public offering, setting ambitious price targets to capture investor interest. The firm aspires to achieve record fundraising that could eclipse SpaceX's pr",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/bofa-adds-january-fed-hike-to-forecast-says-quarterly-pace-no-longer-enough/articleshow/135808910.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "US stocks: US stocks reverse early gains as Nvidia turmoil hits tech",
-   "summary": "US stocks fell as Nvidia’s leadership turmoil triggered a broad technology selloff, sending the Nasdaq down 1.42% and the S&amp;P 500 nearly 1% lower. Softer-than-expected producer inflation offered l",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-us-market-opens-higher-after-soft-producer-prices-data/articleshow/135807296.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Chicago Fed's Goolsbee says on CNBC the Fed needs to guard against",
-   "summary": "Chicago Fed president Austan Goolsbee stated that inflation has moved beyond temporary energy and tariff-related price shocks. He highlighted that increased demand from the AI buildout is pushing pric",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/chicago-feds-goolsbee-says-on-cnbc-the-fed-needs-to-guard-against-demand-overheating/articleshow/135807011.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "US Treasury chief says Fed should not hike rates over energy shock",
-   "summary": "During his speech, US Treasury Secretary Scott Bessent advocated for the Federal Reserve to keep an open mind about interest rate adjustments. He pointed out that the current economic indicators could",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-treasury-chief-says-fed-should-not-hike-rates-over-energy-shock-tied-to-iran-war/articleshow/135806960.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "MAN Industries PAT rises to Rs 82 cr in Q2",
-   "summary": "MAN Industries (India) Ltd has announced a substantial increase in consolidated profit after tax during the September quarter. The company's revenue from operations also saw a notable rise year-on-yea",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/man-industries-pat-rises-to-rs-82-cr-in-q2/articleshow/135806024.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ipo-buyers-have-more-influence-on-price-than-spacex/articleshow/135823355.cms"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq, S&amp;P 500 dip as Nvidia overhang weighs on tech stocks: Stock",
-   "summary": "Nasdaq, S&amp;P 500 dip as Nvidia overhang weighs on tech stocks: Stock Market Live Updates",
+   "title": "Wall Street’s wild ride delivers big paydays and bigger bruises",
+   "summary": "Market volatility continues as investors navigate significant fluctuations in stock and bond prices this month. Despite challenging conditions, billions are flowing into both index funds and speculati",
    "why": "US markets set the mood for global trading.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-microsoft-cerebras-amd-micron-treasury-yield-news-13th-november-2026/liveblog/135804970.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-streets-wild-ride-delivers-big-paydays-and-bigger-bruises/articleshow/135822826.cms"
   },
   {
    "category": "Equity",
-   "title": "Godrej Properties buys 31-acre land in Indore for Rs 130 cr to",
-   "summary": "Godrej Properties Ltd has successfully purchased a sprawling 31 acres of land in Indore for approximately Rs 130 crore. The company is set to embark on the creation of residential plots, providing an",
+   "title": "Nvidia has worst week since Trump tariff selloff as Huang exits",
+   "summary": "Nvidia Corp. has witnessed a drastic stock plunge after the ousting of CEO Jensen Huang amid scandals. A staggering 13% decrease in stock value within a week represents its most significant drop since",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/godrej-properties-buys-31-acre-land-in-indore-for-rs-130-cr-to-build-housing-project/articleshow/135804198.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nvidia-has-worst-week-since-trump-tariff-selloff-as-huang-exits/articleshow/135822623.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Bitcoin’s billion-dollar wipeouts are becoming a familiar sight",
+   "summary": "Bitcoin liquidation events exceeding $500 million have become common, reflecting significant market volatility. Recent trading sessions have seen large losses, including a $1.3 billion liquidation. Fa",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/cryptocurrency/crypto-news/bitcoins-billion-dollar-wipeouts-are-becoming-a-familiar-sight/articleshow/135822462.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "5 world market themes for the week ahead",
+   "summary": "Nvidia's recent leadership change and the upcoming IPO of Anthropic could significantly influence the AI market dynamics. US-China relations are set for discussions as Trump and Xi meet amid various g",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/5-world-market-themes-for-the-week-ahead/articleshow/135822113.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "AI rockets to top of worries about financial system in latest Fed",
+   "summary": "Artificial intelligence has emerged as a top concern for financial stability, according to a recent report from the Federal Reserve. A staggering 87% of respondents cited AI as a key risk, bringing at",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/ai-rockets-to-top-of-worries-about-financial-system-in-latest-fed-survey/articleshow/135821841.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Fed's Jefferson says he is taking his policy cues from inflation",
+   "summary": "Federal Reserve Vice Chair Philip Jefferson emphasized inflation as the main factor in determining monetary policy. He highlighted that economic growth and a stable labor market have been observed. Je",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/feds-jefferson-says-he-is-taking-his-policy-cues-from-inflation/articleshow/135821792.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Rekha Jhunjhunwala stock VA Tech Wabag: ₹2,400 cr Saudi project cancelled -",
+   "summary": "Rekha Jhunjhunwala portfolio stock VA Tech Wabag said Saudi Water Authority cancelled its approximately  ₹2,400 crore Yanbu desalination project for internal reasons.&amp;nbsp;",
+   "why": "Share prices move on news like this.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/rekha-jhunjhunwala-stock-va-tech-wabag-rs-2-400-cr-saudi-project-cancelled-should-you-buy-after-18-rise-in-6-months-11794636173819.html"
   },
   {
    "category": "Commodity",
-   "title": "Rate-hike bets keep gold on track for worst week in four months",
-   "summary": "GLOBAL-PRECIOUS/ (UPDATE 8):PRECIOUS-Rate-hike bets keep gold on track for worst week in four months",
+   "title": "Germany Has an Edge in a Lower Oil Price World: Taking Stock",
+   "summary": "The German stock market has a lot going for it right now, with lower oil prices and a broadening rally from software to chemicals and consumer stocks powering the country’s shares.",
    "why": "Commodity prices feed into costs and inflation.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/ratehike-bets-keep-gold-on-track-for-worst-week-in-four-months-11794598496469.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Oil prices set for second straight weekly decline on growing signs of",
-   "summary": "GLOBAL-OIL:Oil prices set for second straight weekly decline on growing signs of supply surplus",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/oil-prices-set-for-second-straight-weekly-decline-on-growing-signs-of-supply-surplus-11794595284142.html"
+   "url": "https://www.livemint.com/market/germany-has-an-edge-in-a-lower-oil-price-world-taking-stock-11794636529660.html"
   }
  ]
 }

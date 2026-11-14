@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T19:55:55+00:00",
+ "updated": "2026-11-14T06:53:15+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
@@ -35,43 +35,43 @@
   },
   "S&P 500": {
    "yahoo": "ok",
-   "rows": 502
+   "rows": 501
   },
   "Nasdaq": {
    "yahoo": "ok",
-   "rows": 502
+   "rows": 501
   },
   "Dow": {
    "yahoo": "ok",
-   "rows": 502
+   "rows": 501
   },
   "Gold": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 502
   },
   "Silver": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 502
   },
   "Crude WTI": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 502
   },
   "Brent": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 502
   },
   "Natural Gas": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 502
   },
   "Copper": {
    "yahoo": "ok",
-   "rows": 503
+   "rows": 502
   },
   "USD/INR": {
    "yahoo": "ok",
-   "rows": 518
+   "rows": 519
   }
  }
 }
