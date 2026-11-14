@@ -907,7 +907,10 @@
       function waHandle(buf, onEnded){
         var g = actx.createGain();
         g.gain.value = 1.0;
-        g.connect(master);
+        /* Voice at FULL volume: straight to the destination, NOT through the
+           quiet master (0.22) the music uses. The music stays a soft bed
+           under Sprout; the voice must be clear even at full phone volume. */
+        g.connect(actx.destination);
         var h = {
           kind: "wa",
           duration: buf.duration,
@@ -1126,14 +1129,19 @@
           master.connect(actx.destination);
           master.gain.linearRampToValueAtTime(0.22, actx.currentTime + 1.6);
           /* Music has its own gain after master, so turning the music off
-             silences only the music — the narration (which also feeds master)
-             keeps playing. */
+             silences only the music. The narration feeds the destination
+             directly at full volume, so it keeps playing either way. */
           musicGain = actx.createGain();
           musicGain.gain.value = musicOn ? 1 : 0;
           musicGain.connect(master);
           schedulePad();
           setInterval(schedulePad, 9000);
           scheduleBellSoon();
+          /* Warm the first two voice segments now, so Play and Test sound
+             start instantly with no decode lag. Decoding an AudioBuffer needs
+             no user gesture (only HTML Audio elements are gesture-gated). */
+          if (AUDIO[0] && !narrBuf[0]){ decodeSegment(0).catch(function(){}); }
+          if (AUDIO[1] && !narrBuf[1]){ decodeSegment(1).catch(function(){}); }
         }
         if (actx.state === "suspended") actx.resume();
       }
@@ -1569,6 +1577,11 @@
       }
       document.addEventListener("pointerdown", unlockOnce);
       document.addEventListener("touchstart", unlockOnce);
+
+      /* Create the audio system now (page load) so the intro voice is already
+         decoded by the time the user taps Play — no lag. The context stays
+         suspended (silent) until the first tap resumes it. */
+      ensureAudio();
 
       setPlayUI();
     })();
