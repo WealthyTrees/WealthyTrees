@@ -1,15 +1,15 @@
 {
- "date": "Saturday, 14 November 2026",
+ "date": "Sunday, 15 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
    "value": "25,144",
-   "change": -0.61
+   "change": -0.44
   },
   {
    "name": "SENSEX",
    "value": "81,592",
-   "change": -0.39
+   "change": -0.35
   },
   {
    "name": "GOLD $/oz",
@@ -109,19 +109,19 @@
   },
   {
    "category": "Equity",
-   "title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6%",
-   "summary": "Several lesser-known Indian stocks delivered high dividend yields in FY26. CyberTech Systems led the listed examples at 19.6%, followed by Majestic Auto at 16.4%, Jagran Prakashan at 16.1%, IL&amp;amp",
+   "title": "Tata Motors shares: 22% down in 2026, right time to buy famous",
+   "summary": "Tata Motors PV reported a Q2 FY27 consolidated loss of  ₹5,531 cr, including exceptional charges of  ₹6,738 cr, even as revenue rose 34% and EBITDA margin improved. Brokerages are divided: Motilal Osw",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/beyond-coal-india-ongc-10-lesser-known-dividend-stocks-with-up-to-19-yield-premco-gocl-accelya-to-d-link-list-11794671719253.html"
+   "url": "https://www.livemint.com/market/stock-market-news/tata-motors-shares-22-down-in-2026-right-time-to-buy-famous-auto-stock-what-brokerages-say-after-loss-narrows-in-q2-11794720978958.html"
   },
   {
    "category": "Equity",
-   "title": "Small-cap stock rallies 70% in a year: Motilal Oswal sees another 47%",
-   "summary": "GNG Electronics shares rose 0.91% to  ₹577.10 on Friday after early-week losses. Motilal Oswal maintained a Buy rating and  ₹840 target, citing the company’s distribution scale, expanding network and",
+   "title": "Kamarajar Port picks SBI Capital, IDBI Capital and ICICI Securities for IPO",
+   "summary": "Kamarajar Port valuation discussions are still some time away, but the IPO is likely to be completed within calendar 2027",
    "why": "Share prices move on news like this.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/smallcap-stock-rallies-70-in-a-year-motilal-oswal-sees-another-47-upside-should-you-buy-check-target-price-11794666328017.html"
+   "url": "https://www.livemint.com/market/ipo/kamarajar-port-ipo-2027-sbi-capital-idbi-icici-securities-11794716933859.html"
   }
  ]
 }
