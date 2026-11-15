@@ -93,6 +93,56 @@
     return d;
   }
   function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  /* Answers arrive as HTML so they can carry links and choice buttons, but the
+     text comes from an AI fed by the visitor's question and outside headlines.
+     Only a short safe list may reach the page: line breaks, bold/italic, links
+     that start with / (our own pages), and the sp-opt choice buttons. Anything
+     else (images, scripts, event handlers, outside links) is replaced by its
+     plain words, so no markup from outside can run. */
+  function sanitizeAnswer(html) {
+    var tmp = document.createElement("div");
+    tmp.innerHTML = html;
+    var ALLOWED = { BR: 1, B: 1, STRONG: 1, I: 1, EM: 1, A: 1, BUTTON: 1 };
+    function clean(node) {
+      var kids = Array.prototype.slice.call(node.childNodes);
+      for (var i = 0; i < kids.length; i++) {
+        var k = kids[i];
+        if (k.nodeType === 3) continue; // plain text is safe
+        if (k.nodeType !== 1) { node.removeChild(k); continue; }
+        var tag = k.tagName;
+        if (!ALLOWED[tag]) { // not on the safe list: keep its words, drop the markup
+          node.replaceChild(document.createTextNode(k.textContent), k);
+          continue;
+        }
+        if (tag === "A") {
+          var href = k.getAttribute("href") || "";
+          if (href.charAt(0) !== "/") { // outside links are not allowed
+            node.replaceChild(document.createTextNode(k.textContent), k);
+            continue;
+          }
+          var aAttrs = Array.prototype.slice.call(k.attributes);
+          aAttrs.forEach(function (a) { if (a.name !== "href") k.removeAttribute(a.name); });
+        } else if (tag === "BUTTON") {
+          if (k.className !== "sp-opt") { // only the choice buttons
+            node.replaceChild(document.createTextNode(k.textContent), k);
+            continue;
+          }
+          var q = k.getAttribute("data-q") || "";
+          var bAttrs = Array.prototype.slice.call(k.attributes);
+          bAttrs.forEach(function (a) { k.removeAttribute(a.name); });
+          k.setAttribute("class", "sp-opt");
+          k.setAttribute("type", "button");
+          if (q) k.setAttribute("data-q", q);
+        } else { // BR, B, STRONG, I, EM: no attributes at all
+          var oAttrs = Array.prototype.slice.call(k.attributes);
+          oAttrs.forEach(function (a) { k.removeAttribute(a.name); });
+        }
+        clean(k);
+      }
+    }
+    clean(tmp);
+    return tmp.innerHTML;
+  }
   var busy = false;
   function ask(q) {
     if (!q || !q.trim() || busy) return;
@@ -101,7 +151,7 @@
     inp.value = "";
     // A preloaded answer appears at once; otherwise Sprout "brews" it live.
     if (cache[q]) {
-      var m = addMsg(cache[q], "bot");
+      var m = addMsg(sanitizeAnswer(cache[q]), "bot");
       qEl.classList.add("faded");
       showAnswer(m);
       afterAnswer();
@@ -121,7 +171,7 @@
       ? preloads[q].then(function (j) { return (j && j.answer) ? j : fresh(); })
       : fresh();
     done.then(function (j) {
-      if (j && j.answer) { t.innerHTML = j.answer; cache[q] = j.answer; }
+      if (j && j.answer) { t.innerHTML = sanitizeAnswer(j.answer); cache[q] = j.answer; }
       else t.innerHTML = esc((j && j.error) || "Sprout is taking a short break. Try again in a minute.");
       qEl.classList.add("faded");
       showAnswer(t);

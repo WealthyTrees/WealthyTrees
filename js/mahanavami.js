@@ -30,7 +30,7 @@
     if (!host || host.classList.contains('wt-mn-on')) return !!host;
     host.classList.add('wt-mn-on');
     var card = document.createElement('div'); card.id = 'wt-mn';
-    card.innerHTML = '<img id="wt-mn-img" src="assets/matarani.jpg" alt="Maa Durga"><div class="t"><div class="h">शुभ महानवमी 🙏</div><div class="e">Shubh Mahanavami</div><div class="s">WealthyTrees Private Limited की ओर से सभी को हार्दिक शुभकामनाएँ</div></div>';
+    card.innerHTML = '<img id="wt-mn-img" src="assets/matarani.jpg" alt="Maa Durga"><div class="t"><div class="h">शुभ महानवमी 🙏</div><div class="e">Shubh Mahanavami</div><div class="s">WealthyTrees की ओर से सभी को हार्दिक शुभकामनाएँ</div></div>';
     host.insertBefore(card, host.firstChild);
     var box = document.createElement('div'); box.className = 'wt-mn-petals';
     var cols = ['#ffb703', '#ff7aa2', '#ff9f1c', '#ffd6e0', '#fb8500'];
@@ -53,7 +53,7 @@
     if (!b) return false;
     if (!b.querySelector('.wt-mn-sp')) {
       var d = document.createElement('p'); d.className = 'wt-mn-sp';
-      d.textContent = 'शुभ महानवमी! 🙏 WealthyTrees Private Limited की ओर से आप सभी को महानवमी की हार्दिक शुभकामनाएँ। — Sprout 🌱';
+      d.textContent = 'शुभ महानवमी! 🙏 WealthyTrees की ओर से आप सभी को महानवमी की हार्दिक शुभकामनाएँ। — Sprout 🌱';
       b.appendChild(d);
     }
     return true;

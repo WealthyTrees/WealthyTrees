@@ -165,7 +165,7 @@
       '<div class="wt-dh-txt"><div class="wt-dh-l1"><span class="wt-dh-l1-t">शुभ धनतेरस</span>' +
       (reduceMotion ? '' : '<span class="wt-dh-shim" aria-hidden="true"></span>') +
       '</div>' +
-      '<div class="wt-dh-l3">WealthyTrees Private Limited की ओर से सभी को धनतेरस की हार्दिक शुभकामनाएँ</div></div>';
+      '<div class="wt-dh-l3">WealthyTrees की ओर से सभी को धनतेरस की हार्दिक शुभकामनाएँ</div></div>';
      el.insertBefore(makeCoins(14, '64px', 10, 6), el.children[1]);
      bar.insertBefore(el, bar.firstChild);
      setupPause(el);
@@ -190,7 +190,7 @@
     if (!bub.querySelector('.wt-dh-sp')) {
      var p = document.createElement('p');
      p.className = 'wt-dh-sp';
-     p.innerHTML = '<b class="wt-dh-sp-t">शुभ धनतेरस!</b> 🪔 WealthyTrees Private Limited की ओर से आप सभी को धनतेरस की हार्दिक शुभकामनाएँ। — Sprout 🌱';
+     p.innerHTML = '<b class="wt-dh-sp-t">शुभ धनतेरस!</b> 🪔 WealthyTrees की ओर से आप सभी को धनतेरस की हार्दिक शुभकामनाएँ। — Sprout 🌱';
      bub.appendChild(p);
     }
     okSp = true;

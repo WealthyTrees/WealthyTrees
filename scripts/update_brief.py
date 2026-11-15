@@ -25,6 +25,16 @@ SYMBOLS = [("NIFTY 50", "^NSEI", "{:,.0f}"), ("SENSEX", "^BSESN", "{:,.0f}"),
            ("USD/INR", "USDINR=X", "{:.2f}"),
            ("S&P 500", "^GSPC", "{:,.0f}"), ("NASDAQ", "^IXIC", "{:,.0f}"), ("DOW", "^DJI", "{:,.0f}")]
 
+def cut_words(s, n=200):
+    """Truncate to at most n chars at a word boundary, with an ellipsis if cut.
+    Stops stories being cut mid-word (e.g. '...poised', '...soon aft')."""
+    s = (s or "").strip()
+    if len(s) <= n:
+        return s
+    cut = s[:n].rsplit(" ", 1)[0]
+    return cut + "\u2026"
+
+
 def get(url):
     return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25).read()
 
@@ -44,7 +54,7 @@ def headlines():
                     t = re.sub(r"\s+-\s+[^-]+$", "", t)
                     d = ""
                 else:
-                    d = re.sub(r"<[^>]+>", "", it.findtext("description") or "").strip()[:200]
+                    d = cut_words(re.sub(r"<[^>]+>", "", it.findtext("description") or ""), 200)
                 key = t.lower()[:60]
                 if t and l and key not in seen:
                     seen.add(key)
@@ -318,17 +328,26 @@ def fallback_items(items):
             return "Economy"
         return "Equity"
     WHY = {
-        "Equity": "Share prices move on news like this.",
-        "Commodity": "Commodity prices feed into costs and inflation.",
-        "Economy": "Policy and economic news shape rates and the rupee.",
-        "US Markets": "US markets set the mood for global trading.",
+        "Equity": ["Share prices move on news like this.",
+                   "A company's share price reacts to its own news first.",
+                   "News changes what investors think a business is worth."],
+        "Commodity": ["Commodity prices feed into costs and inflation.",
+                      "Raw material prices shape what everything else costs.",
+                      "Energy and metal prices move first, and the rest follows."],
+        "Economy": ["Policy and economic news shape rates and the rupee.",
+                    "What the RBI and the government do reaches your money.",
+                    "Growth and inflation numbers set the mood for rates."],
+        "US Markets": ["US markets set the mood for global trading.",
+                       "When Wall Street moves, world markets notice.",
+                       "US trading often leads the next morning in India."],
     }
     out = []
     for x in items[:10]:
         title = " ".join(x["title"].split()[:12])
         summ = (x.get("desc") or "").strip() or x["title"]
         c = cat(x["title"])
-        out.append({"category": c, "title": title, "summary": summ, "why": WHY[c],
+        variants = WHY[c]
+        out.append({"category": c, "title": title, "summary": summ, "why": variants[len(out) % len(variants)],
                     "source": x["source"], "url": x["url"]})
     return out
 

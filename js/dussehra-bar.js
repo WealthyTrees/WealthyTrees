@@ -145,7 +145,7 @@
     addStyles();
     ticker.dataset.wtDussehraTextReady = "1";
     ticker.classList.add("wt-dussehra-text-ticker");
-    ticker.setAttribute("aria-label", "We wish you a very शुभ विजयादशमी — WealthyTrees Private Limited");
+    ticker.setAttribute("aria-label", "We wish you a very शुभ विजयादशमी — WealthyTrees");
     track.dataset.wtPromoActive = "1";
     track.dataset.wtFestival = "1";
     track.dataset.sig = "wt-dussehra-text";
@@ -154,12 +154,12 @@
     if (label) label.setAttribute("aria-hidden", "true");
 
     track.innerHTML = `
-      <div class="wt-dussehra-sequence" aria-label="We wish you a very शुभ विजयादशमी — WealthyTrees Private Limited">
+      <div class="wt-dussehra-sequence" aria-label="We wish you a very शुभ विजयादशमी — WealthyTrees">
         <span class="wt-dussehra-greeting">We wish you a very</span>
         <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 64 32" role="presentation"><path class="wt-bow" d="M8 2 Q28 16 8 30"/><path class="wt-bowstring" d="M8 2 L8 30"/><path class="wt-arrow-shaft" d="M8 16 H57"/><path class="wt-arrowhead" d="M47 6 L60 16 L47 26"/><path class="wt-fletching" d="M15 16 L21 10 M15 16 L21 22"/></svg></span>
         <span class="wt-dussehra-hindi">शुभ विजयादशमी</span>
         <span class="wt-dussehra-arrow" aria-hidden="true"><svg viewBox="0 0 64 32" role="presentation"><path class="wt-bow" d="M8 2 Q28 16 8 30"/><path class="wt-bowstring" d="M8 2 L8 30"/><path class="wt-arrow-shaft" d="M8 16 H57"/><path class="wt-arrowhead" d="M47 6 L60 16 L47 26"/><path class="wt-fletching" d="M15 16 L21 10 M15 16 L21 22"/></svg></span>
-        <span class="wt-dussehra-company">WealthyTrees Private Limited</span>
+        <span class="wt-dussehra-company">WealthyTrees</span>
       </div>
 `;
 

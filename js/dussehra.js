@@ -5,7 +5,7 @@
    2. Ram Ji draws & fires the divine Brahmastra arrow ("Jai Shri Ram") [4.2s - 6.85s]
    3. Arrow strikes Ravan; Ravan's 10 heads & body burst into festive crackers [6.85s - 12.5s]
    4. Flowers of all varieties (Marigold, Rose, Lotus, Jasmine) rain on Ram Ji & across screen [11.8s - 24.0s]
-   5. "Happy Dussehra!", Dussehra quote & "WealthyTrees Private Limited wishes you a very Happy Dussehra" + smooth sliding close [16.0s - 24.0s]
+   5. "Happy Dussehra!", Dussehra quote & "WealthyTrees wishes you a very Happy Dussehra" + smooth sliding close [16.0s - 24.0s]
    Started by festival.js on 20 Oct. Preview any time: add ?fest=2026-10-20 to a page address. */
 (function () {
   var G = 380;
@@ -13,7 +13,7 @@
     [640, 140, 22], [603, 128, 17], [677, 128, 17], [572, 110, 15], [708, 110, 15],
     [610, 96, 15],  [670, 96, 15],  [588, 74, 13],  [692, 74, 13],  [640, 66, 16]
   ];
-  var NAME = "WealthyTrees Private Limited";
+  var NAME = "WealthyTrees";
   var WISH_LINE = NAME + " wishes you a very Happy Dussehra";
 
   function ravHead(h, i) {

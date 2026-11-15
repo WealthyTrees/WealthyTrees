@@ -11,6 +11,9 @@ J = lambda f, d=None: json.load(open(f"{R}/data/{f}")) if os.path.exists(f"{R}/d
 brief, explain, charts, quizzes = J("brief.json"), J("explain.json"), J("charts.json", {}), J("quiz.json", [])
 e = lambda s: html.escape(html.unescape(str(s)))  # brief titles may already carry &amp; — unescape first so & is escaped exactly once
 items = brief["items"]
+# Drop liveblog stubs: stories whose summary is just the headline again, so they
+# never become a story-less slot with the headline printed three times.
+items = [i for i in items if (i.get("summary") or "").strip() and i["summary"].strip() != (i.get("title") or "").strip()]
 DH_DATE = "2026-11-06"
 DW_DATE = "2026-11-07"  # Diwali weekend special: front page gets Diwali animation + Learn promo
 DH_ITEM = {"category": "Equity", "title": "Happy Dhanteras: why India buys gold today",
@@ -55,9 +58,15 @@ def glance():
 
 def story(i, w=True):
     src = f'<a href="{e(i["url"])}" rel="noopener">{e(i["source"])}</a>' if i.get("url") else e(i.get("source", ""))
-    return (f'<article class="sty"><h3>{e(i["title"])}</h3><p class="s-sm">{e(short(i["summary"], 165))}</p>'
-            f'<p class="s-lg">{e(i["summary"])}</p>'
-            f'<p class="why{"" if w else " m-off"}"><b>WHY IT MATTERS</b> <span class="w-sm">{e(short(i["why"], 120))}</span><span class="w-lg">{e(i["why"])}</span></p>'
+    # Short and long spans exist so phones show the short text and desktops the full
+    # text. When the text is already short they are identical, so render only one
+    # span — otherwise any view that shows both prints the line twice.
+    s_sum = short(i["summary"], 165)
+    sum_html = f'<p class="s-sm">{e(s_sum)}</p><p class="s-lg">{e(i["summary"])}</p>' if s_sum != i["summary"] else f'<p>{e(i["summary"])}</p>'
+    s_why = short(i["why"], 120)
+    why_html = f'<span class="w-sm">{e(s_why)}</span><span class="w-lg">{e(i["why"])}</span>' if s_why != i["why"] else f'<span>{e(i["why"])}</span>'
+    return (f'<article class="sty"><h3>{e(i["title"])}</h3>{sum_html}'
+            f'<p class="why{"" if w else " m-off"}"><b>WHY IT MATTERS</b> {why_html}</p>'
             f'<p class="src">Source: {src}</p></article>')
 
 def page(n, tag, head, body, title):

@@ -428,7 +428,7 @@
           '<div class="wt-dw-txt"><div class="wt-dw-l1"><span class="wt-dw-l1-t">शुभ दीवाली</span>' +
           (reduceMotion ? '' : '<span class="wt-dw-shim" aria-hidden="true"></span>') +
           '</div>' +
-          '<div class="wt-dw-l3">WealthyTrees Private Limited की ओर से सभी को दीवाली की हार्दिक शुभकामनाएँ</div></div>';
+          '<div class="wt-dw-l3">WealthyTrees की ओर से सभी को दीवाली की हार्दिक शुभकामनाएँ</div></div>';
         el.insertBefore(makePetalsDw(24, '64px', 8, 6), el.children[1]);
         bar.insertBefore(el, bar.firstChild);
       }
@@ -440,7 +440,7 @@
     if (bub && !bub.querySelector('.wt-dw-sp')) {
       var p = document.createElement('p');
       p.className = 'wt-dw-sp';
-      p.innerHTML = '<b class="wt-dw-sp-t">शुभ दीवाली!</b> 🪔 WealthyTrees Private Limited की ओर से आप सभी को दीवाली की हार्दिक शुभकामनाएँ। — Sprout 🌱';
+      p.innerHTML = '<b class="wt-dw-sp-t">शुभ दीवाली!</b> 🪔 WealthyTrees की ओर से आप सभी को दीवाली की हार्दिक शुभकामनाएँ। — Sprout 🌱';
       bub.appendChild(p);
     }
   }

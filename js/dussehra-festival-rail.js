@@ -142,7 +142,7 @@
           <div class="wt-fest-copy">
             <h2>Happy Vijayadashami</h2>
             <p>अधर्म पर धर्म की विजय आपके जीवन में सुख, शांति और समृद्धि लाए।</p>
-            <strong>WealthyTrees Private Limited</strong>
+            <strong>WealthyTrees</strong>
           </div>
           <span class="wt-fest-card-flower" aria-hidden="true">✿</span>
         </div>
