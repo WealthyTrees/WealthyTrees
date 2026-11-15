@@ -45,83 +45,75 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Yes Bank moves SC seeking review of order on writing off of",
-   "summary": "Yes Bank has filed a petition with the Supreme Court to review an order from October 15. This order upheld a Bombay High Court ruling that quashed the bank's decision to write off AT-1 bonds. These bo",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/yes-bank-moves-sc-seeking-review-of-order-on-writing-off-of-rs-8415-cr-at-1-bonds/articleshow/135830873.cms"
+   "title": "Foreign Portfolio Investors Pour Massive Capital Into Indian Stocks During November",
+   "summary": "Overseas institutional investors injected over 84,291 crore rupees into domestic equities within the first part of November. This persistent buying has supported major benchmark indices like the Sensex and Nifty.",
+   "why": "Tracking foreign institutional flows helps market participants understand external liquidity and global appetite for domestic shares.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/sensex-nifty-cheer-as-bulls-fpis-back-in-indian-stock-market-pump-in-over-rs-84k-cr-in-nov-so-far-more-rally-ahead-11794736253974.html"
   },
   {
    "category": "Equity",
-   "title": "RHI Magnesita Q2 net profit jumps 62 pc to over Rs 62",
-   "summary": "RHI Magnesita has reported a remarkable surge in net profit, soaring to Rs 62.09 crore for the September quarter. The consolidated revenues experienced a modest increase, hitting Rs 1,038.26 crore thi",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/rhi-magnesita-q2-net-profit-jumps-62-pc-to-over-rs-62-cr/articleshow/135830890.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Mahanadi Coalfields files RHP for proposed IPO worth nearly Rs 9,500 crore",
-   "summary": "Mahanadi Coalfields Ltd has filed its Red Herring Prospectus for an initial public offering with regulatory bodies. This IPO features an offer for sale of roughly 66.18 crore equity shares from Coal I",
-   "why": "Share prices move on news like this.",
+   "title": "Mahanadi Coalfields Submits Prospectus for 9,500 Crore Rupee Public Offering",
+   "summary": "Mahanadi Coalfields has submitted its draft papers for an initial public offering to market regulators. The issue consists of Coal India divesting approximately 66.18 crore equity shares via an offer for sale.",
+   "why": "Initial public offerings allow state-owned enterprises to raise public capital and provide fresh investment opportunities in key primary sectors.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/mahanadi-coalfields-files-rhp-for-proposed-ipo-worth-nearly-rs-9500-crore/articleshow/135829640.cms"
   },
   {
    "category": "Equity",
-   "title": "Dalal Street Week Ahead: Can Nifty bulls overcome key resistance levels?",
-   "summary": "The Nifty's current technical structure remains positive. Although a sharp rebound from the vicinity of the 200-week moving average has significantly improved the near-term technical setup, the Index",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/dalal-street-week-ahead-can-nifty-bulls-overcome-key-resistance-levels/articleshow/135829497.cms"
+   "title": "Market Regulator Outlines Upcoming Artificial Intelligence Guidelines for Securities Ecosystem",
+   "summary": "The Securities and Exchange Board of India is preparing regulatory standards governing automated technology in market operations. The upcoming rules will prioritize investor safeguards, operational transparency, and compulsory human oversight.",
+   "why": "Clear guidelines on emerging technology prevent unchecked algorithmic errors and ensure accountability within financial markets.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/sebi-to-issue-ai-guidelines-for-capital-markets-soon-focus-on-investor-protection-and-human-oversight-11794737481977.html"
   },
   {
    "category": "Equity",
-   "title": "Concurrent Gainers: 8 stocks gain for 5 days in a row",
-   "summary": "Of these, we shortlisted 8 stocks that consistently gained throughout the period, delivering cumulative returns ranging from 7% to 11%.",
-   "why": "Share prices move on news like this.",
+   "title": "Yes Bank Appeals Bond Write-Off Decision in Apex Court",
+   "summary": "Yes Bank has submitted a review plea to the Supreme Court regarding an earlier judgment on perpetual debt instruments. The previous verdict had blocked the lender's attempt to cancel Additional Tier-1 bonds worth 8,415 crore rupees.",
+   "why": "Legal outcomes on bank capital structures directly influence lender balance sheets and investor confidence in subordinated hybrid debt.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/concurrent-gainers-8-stocks-gain-for-5-days-in-a-row/slideshow/135828499.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/yes-bank-moves-sc-seeking-review-of-order-on-writing-off-of-rs-8415-cr-at-1-bonds/articleshow/135830873.cms"
   },
   {
-   "category": "Equity",
-   "title": "Binance targets full reopening of withdrawals by next week",
-   "summary": "Binance is set to restore withdrawals across all networks and assets by the end of next week. This decision comes after recovering 95% of the $6.3 billion lost in the October hack, which the FBI attri",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/news/binance-targets-full-reopening-of-withdrawals-by-next-week/articleshow/135828102.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Base metals lose momentum amid strong dollar and demand concerns",
-   "summary": "One of the key reasons behind the weakness in base metals is the strength of the US dollar. The Dollar Index (DXY) has climbed to the 103-104 range, supported by resilient US economic data, elevated T",
-   "why": "Share prices move on news like this.",
+   "category": "Commodity",
+   "title": "Industrial Base Metals Retreat as Strong American Currency Dents Demand",
+   "summary": "Base metals experienced downward pressure as the US Dollar Index hovered between 103 and 104 points. Sustained US macroeconomic data and high bond yields contributed to currency strength and dampened global purchasing interest.",
+   "why": "Because globally traded metals are priced in US dollars, dollar appreciation increases import costs for buyers, dampening overall demand.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/commodities/news/base-metals-lose-momentum-amid-strong-dollar-and-demand-concerns/articleshow/135827655.cms"
   },
   {
-   "category": "Equity",
-   "title": "6 out of 10 top performing largecap stocks in November delivered multibagger",
-   "summary": "Here are the 10 largecap stocks that recorded the biggest jump in November so far, including six who have delivered multibagger returns in the longer run.",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/6-out-of-10-top-performing-largecap-stocks-in-november-delivered-multibagger-returns-in-long-run-do-you-own-any/slideshow/135824732.cms"
+   "category": "Commodity",
+   "title": "Precious Metals Slide Over Four Percent Amid Escalating Rate Expectations",
+   "summary": "Gold and silver experienced weekly declines surpassing four percent despite a modest late-week bounce. Higher US inflation statistics and rising debt yields strengthened assumptions of additional central bank monetary tightening.",
+   "why": "Precious metals generate no yield, making them sensitive to higher interest rates and firmer foreign exchange benchmarks.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/commodities/gold-silver-prices-ahead-of-wedding-season-down-over-4-this-week-investors-guide-before-us-fed-dec-meeting-11794742802767.html"
   },
   {
-   "category": "Equity",
-   "title": "Tata Motors shares: 22% down in 2026, right time to buy famous",
-   "summary": "Tata Motors PV reported a Q2 FY27 consolidated loss of  ₹5,531 cr, including exceptional charges of  ₹6,738 cr, even as revenue rose 34% and EBITDA margin improved. Brokerages are divided: Motilal Osw",
-   "why": "Share prices move on news like this.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/tata-motors-shares-22-down-in-2026-right-time-to-buy-famous-auto-stock-what-brokerages-say-after-loss-narrows-in-q2-11794720978958.html"
+   "category": "Economy",
+   "title": "State Governments Offer 23,300 Crore Rupees in Securities Auction",
+   "summary": "Multiple state administrations across India have scheduled an auction to issue debt paper worth an aggregate 23,300 crore rupees face value. The Reserve Bank of India manages these market operations to fulfill state borrowing programs.",
+   "why": "State government bond auctions reveal borrowing costs across regions and indicate institutional demand for sub-sovereign public debt.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63976"
   },
   {
-   "category": "Equity",
-   "title": "Kamarajar Port picks SBI Capital, IDBI Capital and ICICI Securities for IPO",
-   "summary": "Kamarajar Port valuation discussions are still some time away, but the IPO is likely to be completed within calendar 2027",
-   "why": "Share prices move on news like this.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/kamarajar-port-ipo-2027-sbi-capital-idbi-icici-securities-11794716933859.html"
+   "category": "US Markets",
+   "title": "Wall Street Technology Shares Decline Ahead of Critical Sector Checks",
+   "summary": "American technology stocks registered declines as market participants prepared for major milestones in computing infrastructure investments. The retreat mirrors caution surrounding capital spending and near-term corporate developments.",
+   "why": "Major tech companies represent a large share of US indices, making their valuation shifts influential for global risk sentiment.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdk9KSVZ5ZlN6RFNmNnlQVEZmYzB4RkxuXzVlaGEzMDdoZ1REdGkxNnhJdW9CMmszTEtpWGlWMUZUTkNLV3FSdll5S0ZiT29JWS1FZHVuSDJpeGxfQjNoUmZPOHdFcFJWUFlSQzdhN085Mld6ZDRJLU1jODF1dmRkQ0hKSWcxTGp4dUF5eENRTkYyLWYtZktxM2VmSnNBN2l2MUVTNHFLU3BzR00?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Federal Reserve Flags Valuation Risks in Technology Stocks and Leverage",
+   "summary": "The US central bank raised concerns about elevated equity valuations linked to artificial intelligence development alongside rising debt levels. The alert highlights potential vulnerabilities in the financial system if market conditions reverse.",
+   "why": "Central bank risk assessments help investors gauge systemic leverage and whether asset prices match broader economic fundamentals.",
+   "source": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcTB2YzlHWlA4UHJ1d19RQ0lkaU1MbTVKdGE4UTFKZWpZaVN6ZmRWNnVSQl85aVdZNVN6bDdGZl9RaVhHT3Zsa2FEbElFZjdfUGpJQTFJeWNZNUNOaW5zM0tuQUlxV3p1SjFlN3dHeEdtbDB3bDg3NXZ4VFRTVXRiYUk3UEtxX05GRDBiT21R?oc=5"
   }
  ]
 }
