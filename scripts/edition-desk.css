@@ -29,7 +29,7 @@ footer{display:flex;justify-content:space-between;padding:.8rem 3rem;border-top:
 h2{font:900 3.4rem/1.02 "Playfair Display",Georgia,serif;margin:0 0 1.4rem;padding-bottom:.9rem;border-bottom:3px solid var(--ink)}
 h3{font:800 1.5rem/1.18 "Playfair Display",Georgia,serif;margin:0 0 .6rem}
 p{font-size:1.02rem;line-height:1.62}.s-sm,.w-sm{display:none}.s-lg,.w-lg{display:inline}.s-lg{display:block}
-.src{font:600 .75rem Inter,sans-serif;color:#6b7a70;letter-spacing:.03em;margin-top:.6rem}.src a{color:var(--em)}
+.src{margin-top:.85rem}.src a{display:inline-block;padding:.55rem 1rem;border:1.5px solid var(--em);border-radius:999px;font:700 .82rem Inter,sans-serif;color:var(--em);text-decoration:none;letter-spacing:.02em}
 .why{background:none;border-left:4px solid var(--gold);padding:.15rem 0 .15rem 1rem;margin:.9rem 0;font-style:italic;font-size:1.02rem;border-radius:0}
 .why b{display:block;font:700 .68rem Inter,sans-serif;letter-spacing:.16em;color:var(--em);font-style:normal;margin-bottom:.2rem}
 .m-off{display:block!important}.dx,.glance{display:block!important}

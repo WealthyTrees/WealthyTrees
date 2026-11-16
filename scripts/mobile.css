@@ -24,7 +24,7 @@ h2{font:900 2rem/1.08 "Playfair Display",Georgia,serif;margin:0 0 1rem;padding-b
 h3{font:800 1.28rem/1.22 "Playfair Display",Georgia,serif;margin:0 0 .5rem}
 p{font-size:1.02rem;line-height:1.62}
 .s-sm,.w-sm,.m-only{display:none!important}.s-lg{display:block}.w-lg{display:inline}.dx,.glance,.m-off{display:block!important}
-.src{font:600 .72rem Inter,sans-serif;color:#6b7a70;letter-spacing:.03em;margin-top:.6rem}.src a{color:var(--em);text-decoration:underline;text-underline-offset:2px}
+.src{margin-top:.85rem}.src a{display:inline-block;padding:.6rem 1.05rem;border:1.5px solid var(--em);border-radius:999px;font:700 .85rem Inter,sans-serif;color:var(--em);text-decoration:none;letter-spacing:.02em}
 .why{background:none;border-left:3px solid var(--gold);border-radius:0;padding:.1rem 0 .1rem .85rem;margin:.8rem 0;font-style:italic;font-size:1rem}
 .why b{display:block;font:700 .62rem Inter,sans-serif;letter-spacing:.16em;color:var(--em);font-style:normal;margin-bottom:.15rem}
 .strip{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin:1rem 0 .4rem}

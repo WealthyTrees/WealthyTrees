@@ -57,7 +57,7 @@ def glance():
     return f'<article class="sty glance"><small class="tag">AT A GLANCE</small><h3>Sector scoreboard</h3><p class="src">Last close, % change</p><div class="rows">{body}</div>{foot}</article>'
 
 def story(i, w=True):
-    src = f'<a href="{e(i["url"])}" rel="noopener">{e(i["source"])}</a>' if i.get("url") else e(i.get("source", ""))
+    src = f'<a href="{e(i["url"])}" rel="noopener">Source: {e(i["source"])} →</a>' if i.get("url") else f'Source: {e(i.get("source", ""))}'
     # Short and long spans exist so phones show the short text and desktops the full
     # text. When the text is already short they are identical, so render only one
     # span — otherwise any view that shows both prints the line twice.
@@ -67,7 +67,7 @@ def story(i, w=True):
     why_html = f'<span class="w-sm">{e(s_why)}</span><span class="w-lg">{e(i["why"])}</span>' if s_why != i["why"] else f'<span>{e(i["why"])}</span>'
     return (f'<article class="sty"><h3>{e(i["title"])}</h3>{sum_html}'
             f'<p class="why{"" if w else " m-off"}"><b>WHY IT MATTERS</b> {why_html}</p>'
-            f'<p class="src">Source: {src}</p></article>')
+            f'<p class="src">{src}</p></article>')
 
 def page(n, tag, head, body, title):
     return (f'<section class="pg" id="p{n}" data-title="{e(title)}"><div class="bar"><b>THE 9:15</b><span>{e(edno)}</span></div>'
@@ -136,7 +136,7 @@ p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")
       f'<p class="stamp">{e(stamp)}</p><div class="fwrap"><div class="fmain"><small class="tag">THE LEAD</small>'
       f'<h1>{e(lead["title"])}</h1><p class="lead">{e(lead["summary"])}</p>'
       f'<p class="why dx"><b>WHY IT MATTERS</b> {e(lead["why"])}</p>'
-      f'<p class="src">Source: {(f'<a href="{e(lead["url"])}" rel="noopener">{e(lead["source"])}</a>' if lead.get("url") else e(lead.get("source", "")))}</p></div>'
+      f'<p class="src">{(f'<a href="{e(lead["url"])}" rel="noopener">Source: {e(lead["source"])} →</a>' if lead.get("url") else f"Source: {e(lead.get('source', ''))}")}</p></div>'
       f'<aside class="fside"><div class="ins"><b>INSIDE TODAY</b>'
       + "".join(f'<a href="#p{p}" data-go="{p-1}"><i>PAGE {p}</i> {e(i["title"])}</a>' for p, t, i in inside)
       + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · SPROUT’S LESSON</i> {e(ex["title"])}</a></div></aside></div>'
