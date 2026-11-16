@@ -19,6 +19,8 @@ GOOGLE_FEEDS = {  # Google News search feeds: headline + publisher, work from se
     "gn4": GN + "crude+oil+rupee+RBI+when:1d",
     "gn5": GN + "Wall+Street+S%26P+500+Nasdaq+when:1d",
     "gn6": GN + "Federal+Reserve+US+economy+markets+when:1d",
+    "gn7": GN + "WPI+OR+wholesale+inflation+India+when:1d",
+    "gn8": GN + "RBI+repo+rate+interest+rate+India+when:1d",
 }
 SYMBOLS = [("NIFTY 50", "^NSEI", "{:,.0f}"), ("SENSEX", "^BSESN", "{:,.0f}"),
            ("GOLD $/oz", "GC=F", "{:,.0f}"), ("CRUDE WTI", "CL=F", "${:,.1f}"),
@@ -38,6 +40,10 @@ def cut_words(s, n=200):
 def get(url):
     return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25).read()
 
+# Auto-generated stock live-price pages, not news. They flood the ET markets
+# feed (all 8 slots) and would crowd real stories out of the brief.
+SKIP_PHRASES = ("share price live updates", "stock live updates", "live updates: ")
+
 def headlines():
     items, seen = [], set()
     allfeeds = [(n, u, False) for n, u in FEEDS.items()] + [(n, u, True) for n, u in GOOGLE_FEEDS.items()]
@@ -56,6 +62,8 @@ def headlines():
                 else:
                     d = cut_words(re.sub(r"<[^>]+>", "", it.findtext("description") or ""), 200)
                 key = t.lower()[:60]
+                if any(p in t.lower() for p in SKIP_PHRASES):
+                    continue
                 if t and l and key not in seen:
                     seen.add(key)
                     items.append({"source": src, "title": t, "desc": d, "url": l})
@@ -271,7 +279,7 @@ def ask_gemini(prompt, model, gkey):
         data=json.dumps({"contents": [{"parts": [{"text": prompt}]}],
                          "generationConfig": {"responseMimeType": "application/json"}}).encode(),
         headers={"x-goog-api-key": gkey, "content-type": "application/json"})
-    return json.loads(urllib.request.urlopen(req, timeout=180).read())["candidates"][0]["content"]["parts"][0]["text"]
+    return json.loads(urllib.request.urlopen(req, timeout=90).read())["candidates"][0]["content"]["parts"][0]["text"]
 
 def ask_llm(prompt):
     gkey = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -292,7 +300,7 @@ def ask_llm(prompt):
                          "messages": [{"role": "user", "content": prompt}]}).encode(),
         headers={"x-api-key": os.environ.get("ANTHROPIC_API_KEY", ""), "anthropic-version": "2023-06-01",
                  "content-type": "application/json"})
-    return json.loads(urllib.request.urlopen(req, timeout=180).read())["content"][0]["text"]
+    return json.loads(urllib.request.urlopen(req, timeout=90).read())["content"][0]["text"]
 
 def summarize(items):
     body = "\n".join(f"{i}. [{x['source']}] {x['title']} | {x['desc']}" for i, x in enumerate(items))
@@ -322,10 +330,12 @@ def fallback_items(items):
         w = t.lower()
         if any(k in w for k in ("gold", "silver", "crude", "oil", "brent", "natural gas", "copper")):
             return "Commodity"
+        if any(k in w for k in ("rbi", "rupee", "inflation", "gdp", "economy", "repo rate", "interest rate",
+                             "wpi", "wholesale", "cpi", "consumer price", "iip", "industrial production",
+                             "fiscal", "trade deficit", "current account", "unemployment")):
+            return "Economy"
         if any(k in w for k in ("wall street", "s&p", "nasdaq", "dow jones", "federal reserve", "u.s.", "us markets")):
             return "US Markets"
-        if any(k in w for k in ("rbi", "rupee", "inflation", "gdp", "economy", "repo rate", "interest rate")):
-            return "Economy"
         return "Equity"
     WHY = {
         "Equity": ["Share prices move on news like this.",
@@ -341,8 +351,26 @@ def fallback_items(items):
                        "When Wall Street moves, world markets notice.",
                        "US trading often leads the next morning in India."],
     }
+    # Balanced pick: take a quota from each category instead of the first 10
+    # raw headlines in feed order (which were all ET's top stories, mostly
+    # "Share Price Live Updates" filler, so Economy/Commodity/US pages came
+    # out empty). Quotas: 2 Economy, 2 Commodity, 2 US Markets, 4 Equity.
+    # Any shortfall is filled from whatever is left, so we still get 10.
+    by_cat = {"Economy": [], "Commodity": [], "US Markets": [], "Equity": []}
+    for x in items:
+        by_cat[cat(x["title"])].append(x)
+    # Data releases first inside Economy: a WPI/CPI/GDP/IIP print is the day's
+    # biggest economy story and should win the Economy slots over routine notices.
+    DATA_WORDS = ("wpi", "cpi", "gdp", "iip", "inflation", "repo rate", "interest rate")
+    by_cat["Economy"].sort(key=lambda x: 0 if any(k in x["title"].lower() for k in DATA_WORDS) else 1)
+    picked_items = []
+    for c, q in (("Economy", 2), ("Commodity", 2), ("US Markets", 2), ("Equity", 4)):
+        picked_items.extend(by_cat[c][:q])
+    if len(picked_items) < 10:
+        rest = [x for x in items if x not in picked_items]
+        picked_items.extend(rest[:10 - len(picked_items)])
     out = []
-    for x in items[:10]:
+    for x in picked_items[:10]:
         title = " ".join(x["title"].split()[:12])
         summ = (x.get("desc") or "").strip() or x["title"]
         c = cat(x["title"])
