@@ -359,10 +359,17 @@ def fallback_items(items):
     by_cat = {"Economy": [], "Commodity": [], "US Markets": [], "Equity": []}
     for x in items:
         by_cat[cat(x["title"])].append(x)
-    # Data releases first inside Economy: a WPI/CPI/GDP/IIP print is the day's
-    # biggest economy story and should win the Economy slots over routine notices.
-    DATA_WORDS = ("wpi", "cpi", "gdp", "iip", "inflation", "repo rate", "interest rate")
-    by_cat["Economy"].sort(key=lambda x: 0 if any(k in x["title"].lower() for k in DATA_WORDS) else 1)
+    # Data prints first inside Economy: a specific WPI/CPI/GDP/IIP number is the
+    # day's biggest economy story and should win the Economy slots over general
+    # rate talk and routine notices.
+    def eco_rank(x):
+        t = x["title"].lower()
+        if any(k in t for k in ("wpi", "cpi", "gdp", "iip")):
+            return 0
+        if any(k in t for k in ("inflation", "repo rate", "interest rate")):
+            return 1
+        return 2
+    by_cat["Economy"].sort(key=eco_rank)
     picked_items = []
     for c, q in (("Economy", 2), ("Commodity", 2), ("US Markets", 2), ("Equity", 4)):
         picked_items.extend(by_cat[c][:q])
