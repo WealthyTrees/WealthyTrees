@@ -15,7 +15,7 @@ const modelOf = (env) => env.GEMINI_MODEL || "gemini-3.5-flash-lite";
 const cfModelOf = (env) => env.WORKERS_AI_MODEL || "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 const clip = (s, n) => String(s == null ? "" : s).replace(/\s+/g, " ").trim().slice(0, n);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const SYS = `You are Sprout, the friendly finance teacher at WealthyTrees, a learning site for Indian students and beginners. Answer the user's question in plain, simple English — short sentences, no jargon, and define any finance word you use. Use the context given (live prices, today's headlines, the calculator list, the Learn modules) for all numbers, names and events — never invent those. You may also explain, in plain English, the publicly-known ways markets work (for example, how the dollar, interest rates, foreign-investor flows and global cues usually move gold, banks and indices) — that is general education, not a guess about today. If the context does not have a specific fact, say so plainly and point to the closest page below instead of guessing.
+const SYS = `You are Sprout, the friendly finance teacher at WealthyTrees, a learning site for Indian students and beginners. Answer the user's question in plain, simple English — short sentences, no jargon, and define any finance word you use. Use the context given (live prices, today's headlines, the calculator list, the Learn modules) for all numbers, names and events — never invent those. You may also explain, in plain English, the publicly-known ways markets work (for example, how the dollar, interest rates, foreign-investor flows and global cues usually move gold, banks and indices) — that is general education, not a guess about today. If the context does not have a specific number, a today's event, or a fact that needs live data, say so plainly and point to the closest page below instead of guessing. But for general, well-known concepts — what SEBI, RBI, NSE, BSE, an IPO, a dividend, inflation, an index or a market is — always explain them in plain English from general knowledge; these are public facts, not guesses, and never refuse a 'what is X' question about a basic concept.
 STRICT — NEVER BREAK THESE:
 1. NEVER give a tip, a stock/fund pick, or a buy/sell recommendation of any kind.
 2. NEVER predict where a price, an index or the market will go. Never say what will happen. "No one can know" is ONLY for questions about the future — never use it for a question about what already happened.
@@ -187,6 +187,11 @@ function quickAnswer(q, quotes) {
   if (/wealthy?trees|about (this|the) (website|site)|what (is|do you know about) (this|the) (website|site)/.test(s)) {
     return "WealthyTrees is a learning site for Indian students and beginners. It teaches finance in plain English — free Learn courses from market basics to taxes, live market prices and charts, a daily morning paper called THE 9:15, and calculators for SIPs, lumpsums, EMIs and goals. No noise, no tips — education only." + MORE + '<a href="/pages/learn.html">Learn page</a>. Or see <a href="/pages/the-915.html">THE 9:15</a> and the <a href="/pages/markets.html">Markets page</a>.';
   }
+  if (/\bbank nifty\b/.test(s)) {
+    var bn = moveOf(quotes, "BANK NIFTY");
+    var bl = bn ? " Today, Bank Nifty is at " + fmtMove(bn) + "." : "";
+    return "Bank Nifty is an index of the 12 biggest banking stocks on the NSE — it shows how the banking sector is doing. When banks move, Bank Nifty moves. It is one of the most watched indices after Nifty 50 and Sensex." + bl + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
   if (/\bnifty\b/.test(s)) {
     var n = moveOf(quotes, "NIFTY 50");
     var line = n ? " Today, Nifty 50 is at " + fmtMove(n) + "." : "";
@@ -214,6 +219,63 @@ function quickAnswer(q, quotes) {
   }
   if (/\bgold\b/.test(s) && !/price|rate|today/.test(s)) {
     return "Gold is a precious metal people buy as a store of value — in jewellery, coins, bars, and also as gold funds. Its price moves with global demand, the dollar, and how safe investors feel." + MORE + '<a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>.';
+  }
+  // ---- the Learn course, as instant answers: the core concepts every beginner asks ----
+  // These are evergreen definitions from the Learn modules, so they answer at once,
+  // always correctly, with a link to the module that teaches them in depth.
+  if (/\bsebi\b/.test(s) && !/\bdid\b/.test(s)) {
+    return "SEBI is the market regulator — the Securities and Exchange Board of India. It sets the rules for stock exchanges, brokers and companies, so that trading stays fair and investors are protected. Think of it as the referee of the Indian stock market." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\brbi\b/.test(s) && !/\bdid\b/.test(s)) {
+    return "RBI is the Reserve Bank of India — the country's central bank. It sets interest rates, controls how much money flows in the economy, and keeps the banking system stable. When RBI changes its rate, it affects loans, savings and the stock market." + MORE + '<a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>.';
+  }
+  if (/\bnse\b/.test(s)) {
+    return "NSE is the National Stock Exchange — India's biggest stock exchange, where shares of companies are bought and sold. Nifty 50 is its main index. Most of the trading in India happens on the NSE." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bbse\b/.test(s)) {
+    return "BSE is the Bombay Stock Exchange — India's oldest stock exchange, started in 1875. Sensex is its main index of 30 big companies. Together, NSE and BSE are India's two main exchanges." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bstock exchange\b/.test(s)) {
+    return "A stock exchange is a marketplace where shares of companies are bought and sold — like a mandi for shares. In India the two main ones are NSE and BSE. You buy and sell through a broker, and your shares sit in a demat account." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bdemat\b/.test(s)) {
+    return "A demat account holds your shares in electronic form — like a bank account, but for shares instead of money. When you buy a share, it comes into your demat account; when you sell, it goes out. You need one to invest in the stock market." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bipo\b/.test(s)) {
+    return "An IPO is when a company sells its shares to the public for the first time — Initial Public Offering. Before an IPO the company is private; after it, anyone can buy its shares on the stock exchange. It is how a company raises money from the public." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\bdividend\b/.test(s)) {
+    return "A dividend is a share of a company's profit paid out to its shareholders. If a company earns well, it may give part of the profit back to the people who own its shares. Not every company pays a dividend — some reinvest all the profit to grow." + MORE + '<a href="/learn/beginner/module-2.html">Beginner 2: Reading a company</a>.';
+  }
+  if (/\bmarket cap\b/.test(s)) {
+    return "Market cap is the total value of a company on the stock market — its share price multiplied by the number of shares. A company with a big market cap is a big company. It is one of the first things to look at when reading a company." + MORE + '<a href="/learn/beginner/module-3.html">Beginner 3: Key ratios</a>.';
+  }
+  if (/\broe\b/.test(s)) {
+    return "ROE — Return on Equity — tells you how much profit a company makes for every rupee its owners put in. A higher ROE usually means the company uses its owners' money well. It is one of the key ratios for reading a company." + MORE + '<a href="/learn/beginner/module-3.html">Beginner 3: Key ratios</a>.';
+  }
+  if (/\binflation\b/.test(s)) {
+    return "Inflation is when prices rise over time, so the same money buys less. If inflation is 6%, something that cost \u20b9100 last year costs about \u20b9106 now. That is why money kept idle loses value — and why investing aims to beat inflation." + MORE + '<a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>.';
+  }
+  if (/\brepo\b|interest rate/.test(s)) {
+    return "The repo rate is the interest rate at which the RBI lends money to banks. When RBI raises it, loans get costlier and saving earns more; when it cuts it, loans get cheaper. It is RBI's main tool to control inflation." + MORE + '<a href="/learn/beginner/module-5.html">Beginner 5: RBI to your portfolio</a>.';
+  }
+  if (/\betf\b/.test(s)) {
+    return "An ETF is a fund that is bought and sold on the stock exchange like a share, but it holds a basket of many shares (for example, all of Nifty 50). It gives you diversification in one buy, and usually costs less than a regular mutual fund." + MORE + '<a href="/learn/intermediate/module-4.html">Intermediate 4: Mutual funds, SIPs, ETFs</a>.';
+  }
+  if (/\bbull\b|\bbear\b/.test(s)) {
+    return "A bull market is when prices keep rising and people feel confident; a bear market is when prices keep falling and people feel fearful. Both are normal parts of the market — they come and go. What matters is understanding the cycle, not predicting the turn." + MORE + '<a href="/learn/beginner/module-6.html">Beginner 6: Risk and behaviour</a>.';
+  }
+  if (/\bcompound/.test(s)) {
+    return "Compounding is when your returns also start earning returns — your money grows on its own growth. It is why starting early matters so much: even a small amount, left to compound for many years, can grow large. Time is the biggest ingredient." + MORE + '<a href="/learn/beginner/module-6.html">Beginner 6: Risk and behaviour</a>.';
+  }
+  if (/\bindex\b/.test(s)) {
+    return "An index is a basket of selected shares tracked together to show how a part of the market is doing. Nifty 50 tracks 50 big companies on the NSE; Sensex tracks 30 on the BSE. When people say 'the market is up', they usually mean an index is up." + MORE + '<a href="/learn/beginner/module-1.html">Beginner 1: Market basics</a>.';
+  }
+  if (/\brisk\b/.test(s)) {
+    return "Risk in investing means the chance that what you get back is less than what you put in — or less than you hoped. Every investment has some risk; the key is to understand it and not take more than you can handle. Higher returns usually come with higher risk." + MORE + '<a href="/learn/beginner/module-6.html">Beginner 6: Risk and behaviour</a>.';
+  }
+  if (/\bcapital gain|\btax\b/.test(s)) {
+    return "When you sell an investment for more than you bought it for, that profit is called a capital gain — and you pay tax on it. How much depends on how long you held it and what kind of investment it was." + MORE + '<a href="/learn/intermediate/module-6.html">Intermediate 6: Taxes and costs</a>.';
   }
   return null;
 }
