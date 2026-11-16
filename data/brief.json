@@ -3,23 +3,23 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,264",
-   "change": 0.47
+   "value": "25,255",
+   "change": 0.44
   },
   {
    "name": "SENSEX",
-   "value": "82,040",
-   "change": 0.55
+   "value": "82,046",
+   "change": 0.56
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,861",
-   "change": -0.66
+   "value": "3,860",
+   "change": -0.68
   },
   {
    "name": "CRUDE WTI",
    "value": "$88.8",
-   "change": 0.33
+   "change": 0.23
   },
   {
    "name": "USD/INR",
@@ -46,7 +46,7 @@
   {
    "category": "Economy",
    "title": "WPI inflation rises to 12.29% in October as fuel prices surge",
-   "summary": "WPI inflation rises to 12.29% in October as fuel prices surge",
+   "summary": "WPI inflation rises to 12.29% in October as fuel prices surge  Fortune India",
    "why": "Policy and economic news shape rates and the rupee.",
    "source": "Fortune India",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNd25wdEV2cXJrZUNEalJsRFVKcWx4dG1IWUlCYk1EeFJmWjJlV05DQUJwM3M2NHAzS2NtWXd1MkFCbUtvWDFMb3o3V1p0NEVSU0g4a2s1WnVLS3dEb3RvSGtRNXM1V3BGWU5DUHVXTzJ2eWRibk0yZHJtU2VZREZHbDdHNmI3elYxbFFvaXQzNjNoQXJMU2hSV1VLY2IyM0dvcjhGTNIBsgFBVV95cUxQcXFSNGhGVHhNZk81YW5lQ0d1TzJ2anhCU0taYi1FMF9XOTkzYXQtelJtVkU3ZE8zcEJqZG1sMzZNaWhBNFlqY2tEblJRWE5RS2Y3Nmp6SmpUX0dpTG8tMG4zRndtM0VsYnF4VDdndURXLTB2djBRd0xuRDZJVnF5VS1WaEVkVV9TLXVpWmRFU2o3blpSbUxfaldJY1JnRU54c2M3SnVJeGFLcDR0cERka19B?oc=5"
@@ -54,31 +54,31 @@
   {
    "category": "Economy",
    "title": "Weekly policy watch: PM Modi's Asean visit and WPI inflation in focus",
-   "summary": "Weekly policy watch: PM Modi's Asean visit and WPI inflation in focus",
+   "summary": "Weekly policy watch: PM Modi's Asean visit and WPI inflation in focus  Business Standard",
    "why": "What the RBI and the government do reaches your money.",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPYVVDSW0yQVlCcjY2OXlkX2NodnVNS3NhMG5Td2dBZVdWcndDRXk0el9pQmk4RkJkX1ZLTkJwVzgwY3JZSTQwTUhQdzh5NXZ4VmJHRE1NczV2eU94OVlPS0xlaGFWQUdzc25uQjFDVmMyNmFKRXBDTkRWdWIxaXFwelBodUVaSlhIeUFwcmpoNGRvWEtGNndmX3MydEM1V2ZNSTFjWlNVSWNjWGZPNHpuYk9yVkYyUzgwenFJNHhBa01PWktDWUhSMU5ISUI2SWo4WEVV0gHYAUFVX3lxTE4xSVVYVlF6MElpT1E1d1dQVXpCM1l4SEVRSTAzTm5mYWJaME1SeU9mQmMxWHd4c3JfUXZRRUpHR0JwcHFiN0xuWHZwYmp2N004TEZPWmxUZG1faXBhb3dSbEVEME0wcVF3d3QwT0lmX1JWZ1hqOFAzV0hzUkhNSWZtUE8yQnRmSFBCTkxnbFRKWWtCdVVWdk8zdU1Oa0V6VWhNUzZQazVWUVZacXVZTUR3WnhFZExQS1N3QWpqQlFkZ1BoWnFhN2kzamdBSWJwQ2V2REF3YUtLMQ?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "MCX gold, silver prices drop: What led to rates slide; multi-month lows",
-   "summary": "MCX gold and silver prices fell to multi-month lows as expectations of a US Federal Reserve rate hike, a stronger dollar and higher Treasury yields pressured precious metals. Silver hit a one-year…",
-   "why": "Energy and metal prices move first, and the rest follows.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/mcx-gold-silver-prices-drop-what-led-to-rates-slide-multi-month-lows-ahead-of-wedding-season-details-for-investors-11794801621038.html"
-  },
-  {
-   "category": "Commodity",
    "title": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost",
-   "summary": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost sentiment",
-   "why": "Commodity prices feed into costs and inflation.",
+   "summary": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost sentiment  DD News",
+   "why": "Energy and metal prices move first, and the rest follows.",
    "source": "DD News",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYUlkdmh2U3J0QnUyUDR5TmZ5ZzlBS0FCN19CaFlHS0FkcTFsVkJuVEJhZG16S2dNS0J1LW9oOHE1ZV80TWxGcWZkVjZBRXItWVU4cmtvRi12d2hjS0dsRkNZclA1R3JMQmRqdzZCQ1VYcGRibDlueElUQ1UwRTJFZjBTdGtsSXQxOS1JTW4taTFhS1k5eTM5WHhBZVdqSG9ORFlQUjdZUjJKblM3N3Fr?oc=5"
   },
   {
+   "category": "Commodity",
+   "title": "Stock markets rally in early trade led by foreign fund inflows, lower",
+   "summary": "Stock markets rally in early trade led by foreign fund inflows, lower crude oil  The Hindu",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVFhsNHVIZkRrWnBIQzlxOXFnaHVtemx3R3NCMDUyNzVXU2FwcHdwOVdRSGZQYjJOZzJ1c1BjTTNTdl9zd0hfLWtFNDNtTWJpbnZNR0hrLU1WenMtd2hkNk15VlQzVGlfZ1lrUXBGTDEzRnJCampjYy1SQ3A1dzVCZzNqRnlSRE52NjhuMlhtbUx6VXVyZFZ3N1JfU3I1Vkk0c244bnRpWExaa1lGOXJqMmlHUzNaXzExQmZJb3JJSVU4UzdjczA3QWFhQXrSAdMBQVVfeXFMTlhTX3pmMUJuLWM1UlN0Q2Q0Z1hFTkZISmFiQWdoVXJQbkN2OUpYMDRLXzlrWVVMc2U1Ny1mLUxoRmk3MlZvamFOTV9OZHFPM1ZyZnZhbDlMSzRJNG9OOHE5S19wWDQzdklOY2tDZ0U4VFVRay1lRWFOcEVxSnBGMEtHQ0hlRlg1d0JtZkVUc1V0eGR2c2RLcjBJOUJaYnRRaWVLR3VIWkxOTWZ4NkpWLUNwamJHNmdiNUxGdl90UmNhSHBZdVVqWHhYWVh3bk80MXc3SQ?oc=5"
+  },
+  {
    "category": "US Markets",
    "title": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty,",
-   "summary": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty, Kospi, Nikkei, Taiwan cues",
+   "summary": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty, Kospi, Nikkei, Taiwan cues  TradingView",
    "why": "When Wall Street moves, world markets notice.",
    "source": "TradingView",
    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOVlpORHBoTUk5Z0c4aWdYdmNCS25yTXFTb0M2QWJJdTVjUTE2TWl2YmdEaDBSakN6TVQ2WXJzZHJXemZsOEN5bGs3UFNWZ3JRTnhQY1FIdFVzTFN1YkNZX29Zei10MHhzLTg3MU1TM2JpQ0YwaXdUSnY5ekd5cUxCMk5oaWRzTGQzbF9UOURONjFUdG5UVkV1V1E4RnlKcXRFT29rVjgxa2hMQkNZMVUxNlBpRkU2ZkhINERoSzdaMGdsRS1MeXE0Z082N1MzS0RRTkE4amJrVXlxcEIyUzhSMWdoV3FvZHN2c2dhZUh4ZHhQR0dLQTN1NE9B?oc=5"
@@ -86,7 +86,7 @@
   {
    "category": "US Markets",
    "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-   "summary": "Stock Market: Will S&P 500 Open Up or Down Today?",
+   "summary": "Stock Market: Will S&P 500 Open Up or Down Today?  Yahoo Finance",
    "why": "US trading often leads the next morning in India.",
    "source": "Yahoo Finance",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMVRGSEZsR3d2ZTF0SHVyekdjcnpDWnNpajFsbG9SckFuTzUyZXplQndRRVB3N3VuSHcyOFJPeHhIYjI1LVliNzRsaWZGekRrN1VzSGlua0doZ0wzTFJyUnJPQVNWdUZtQmc5LVhHbVhXTkNGWVByWFNYZGpTU2IxcndOR3J5T2NVQWp6RVphTjJaZw?oc=5"
