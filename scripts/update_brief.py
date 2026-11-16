@@ -293,7 +293,11 @@ def ask_llm(prompt):
                 return ask_gemini(prompt, model, gkey)
             except urllib.error.HTTPError as e:
                 last = e
-                print(f"Gemini {model} failed: HTTP {e.code}", file=sys.stderr)
+                try:
+                    detail = e.read().decode("utf-8", "replace")[:400]
+                except Exception:
+                    detail = ""
+                print(f"Gemini {model} failed: HTTP {e.code} {detail}", file=sys.stderr)
                 if e.code not in (404, 429, 500, 502, 503, 504):
                     raise
         if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
