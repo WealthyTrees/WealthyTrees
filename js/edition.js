@@ -38,9 +38,7 @@
   /* tab + panel */
   var tb = el("button", "tab de-btn", null); tb.id = "t-ed"; tb.type = "button"; tb.setAttribute("role", "tab"); tb.setAttribute("aria-selected", "false"); tb.setAttribute("aria-controls", "p-ed"); tb.setAttribute("aria-label", "Daily Edition");
   var reel = el("span", "de-reel", null); reel.setAttribute("aria-hidden", "true");
-  var segs = el("span", "de-segs", null);
-  segs.appendChild(el("span", "de-seg", null)); segs.appendChild(el("span", "de-seg", null)); segs.appendChild(el("span", "de-seg", null));
-  reel.appendChild(segs); reel.appendChild(el("span", "de-play", "\u25b6"));
+  reel.innerHTML = '<svg width="18" height="20" viewBox="0 0 18 20" aria-hidden="true"><rect class="de-seg" x="2.5" y="2.5" width="3.5" height="2" rx="1" fill="#c9a227"/><rect class="de-seg" x="7.25" y="2.5" width="3.5" height="2" rx="1" fill="#c9a227"/><rect class="de-seg" x="12" y="2.5" width="3.5" height="2" rx="1" fill="#c9a227"/><polygon class="de-play" points="7,8 13,10 7,13" fill="#f3df9a"/></svg>';
   var lab = el("span", "de-label", null), deTxt = el("span", "de-text", null), deCaret = el("span", "de-caret", null);
   deCaret.setAttribute("aria-hidden", "true"); lab.appendChild(deTxt); lab.appendChild(deCaret);
   tb.appendChild(reel); tb.appendChild(lab);
