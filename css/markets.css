@@ -18,7 +18,7 @@
 .mk-tile.fill b{color:var(--gold)}
 .mk-tile.fill .f{font-size:.85rem;font-weight:400;line-height:1.35}
 .mk-tile.fill .c{color:var(--gold)}
-.mk-tile.fill .c a{color:var(--gold);text-decoration:none;font-weight:700}
+.mk-tile.fill .c a{display:inline-block;padding:.45rem .9rem;border:1.5px solid var(--gold);border-radius:999px;font:700 .82rem Inter,sans-serif;color:var(--gold);text-decoration:none}
 .mk-tile.fill .tap{font-size:.75rem;font-weight:600;color:var(--mute)}
 @keyframes mkpop{0%{transform:scale(1)}40%{transform:scale(1.05) rotate(-1deg)}100%{transform:scale(1)}}
 .mk-tile.fill.pop{animation:mkpop .35s ease}
@@ -45,7 +45,8 @@
 .mk-tools button[aria-pressed=true]{background:var(--btn);color:var(--btn-fg)}
 .mk-tools svg{width:20px;height:20px}.mk-tools hr{width:100%;border:0;border-top:1px solid var(--line);margin:.2rem 0}
 .mk-stage{position:relative;flex:1;min-width:0;height:440px}
-.mk-stage canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#draw{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#chartbox,#rsibox{touch-action:none}
 .mk-sub{padding:.5rem 1rem;border-top:1px solid var(--line);font-size:.84rem;color:var(--mute)}
 .mk-rsi{height:150px;border-top:1px solid var(--line)}
 .mk-about{display:flex;gap:.8rem;align-items:flex-start;margin-top:1rem;padding:1rem 1.2rem;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--paper)}
@@ -135,7 +136,7 @@ button.tryb{cursor:pointer;font-family:inherit;margin:0}
 
 .sqs{color:var(--up);letter-spacing:.1em;font-size:1.8rem;margin-left:.4rem}.sqn{margin:0 0 .3rem}
 .sql{list-style:none;padding:0!important;margin:.3rem 0 0!important}.sql li{display:flex;gap:.7rem;align-items:flex-start;margin:.1rem 0}
-.sql a{color:var(--up);font-weight:700;white-space:nowrap}.sql li.ok span{opacity:.6;text-decoration:line-through}
+.sql a{display:inline-block;padding:.45rem .9rem;border:1.5px solid var(--up);border-radius:999px;font:700 .82rem Inter,sans-serif;color:var(--up);text-decoration:none;white-space:nowrap}.sql li.ok span{opacity:.6;text-decoration:line-through}
 .sqb{flex:none;width:1.5rem;height:1.5rem;margin-top:.15rem;border:2px solid var(--up);border-radius:6px;background:var(--paper);cursor:pointer;padding:0;position:relative}
 .sqb[aria-pressed=true]::after{content:"\2713";position:absolute;inset:-.25rem 0 0 .1rem;color:var(--up);font-size:1.5rem;font-weight:700;line-height:1.5rem}
 .sqb:focus-visible{outline:2px solid var(--ink);outline-offset:2px}

@@ -41,7 +41,7 @@ var A={ // about: [flag, country, one-line meaning]
 var INFO={SMA20:"SMA 20 is the average close of the last 20 days. It smooths daily noise.",SMA50:"SMA 50 averages the last 50 days, a medium-term view.",SMA200:"SMA 200 averages roughly the last 10 months. The classic long-term trend line.",EMA20:"EMA 20 is a 20-day average that gives more weight to recent days, so it reacts faster.",BB:"Bollinger Bands sit 2 standard deviations around a 20-day average. Wide means volatile, narrow means calm.",RSI:"RSI (0 to 100) measures the speed of recent moves. Above 70 is often called overbought, below 30 oversold.",VOL:"Volume shows how much traded each day."};
 var COL={SMA20:"#2a7de1",SMA50:"#e08a00",SMA200:"#8e44ad",EMA20:"#00a3a3",BB:"#7f8c8d"};
 var COUNT={"1M":22,"3M":66,"6M":126,"1Y":252,"2Y":9999};
-var TOOLHINT={cursor:"Cursor: drag to move the chart, scroll to zoom.",h:"Horizontal line: click once to mark a support or resistance level.",t:"Trend line: press, drag and release to connect two points.",r:"Zone: press and drag to shade a box, for example a support area.",x:"Eraser: click a drawing to remove it."};
+var TOOLHINT={cursor:"Drag to move the chart, scroll or pinch to zoom.",h:"Horizontal line: click once to mark a support or resistance level.",t:"Trend line: press, drag and release to connect two points.",r:"Zone: press and drag to shade a box, for example a support area.",x:"Eraser: click a drawing to remove it."};
 var data=null,key="Nifty 50",group="India",range="1Y",type="Candles",on={SMA50:true,VOL:true},main=null,rsiC=null,mainSeries=null,lastBar=null,guard=false,tried={},liveQ={},tool="cursor",D={},prev=null,sig="";
 (function(){var q=new URLSearchParams(location.search).get("i");if(q&&LIVE[q]){key=q;for(var g in GROUPS)GROUPS[g].forEach(function(s){if(s[1].indexOf(q)>-1)group=g})}})();
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
@@ -53,7 +53,7 @@ function sma(a,n){var o=[],s=0;for(var i=0;i<a.length;i++){s+=a[i].close;if(i>=n
 function ema(a,n){var k=2/(n+1),o=[],e=null;for(var i=0;i<a.length;i++){e=e===null?a[i].close:a[i].close*k+e*(1-k);if(i>=n-1)o.push({time:a[i].time,value:e})}return o}
 function bb(a,n,m){var u=[],l=[];for(var i=n-1;i<a.length;i++){var s=0,q=0,j;for(j=i-n+1;j<=i;j++)s+=a[j].close;var mean=s/n;for(j=i-n+1;j<=i;j++)q+=Math.pow(a[j].close-mean,2);var sd=Math.sqrt(q/n);u.push({time:a[i].time,value:mean+m*sd});l.push({time:a[i].time,value:mean-m*sd})}return[u,l]}
 function rsi(a,n){var o=[],g=0,l=0;for(var i=1;i<a.length;i++){var d=a[i].close-a[i-1].close,up=d>0?d:0,dn=d<0?-d:0;if(i<=n){g+=up;l+=dn;if(i===n){g/=n;l/=n;o.push({time:a[i].time,value:l===0?100:100-100/(1+g/l)})}}else{g=(g*(n-1)+up)/n;l=(l*(n-1)+dn)/n;o.push({time:a[i].time,value:l===0?100:100-100/(1+g/l)})}}return o}
-function base(el,h){return{width:Math.max(200,el.clientWidth),height:h,layout:{background:{color:"transparent"},textColor:css("--mute")},grid:{vertLines:{color:css("--line")},horzLines:{color:css("--line")}},rightPriceScale:{borderColor:css("--line")},timeScale:{borderColor:css("--line")}}}
+function base(el,h){return{width:Math.max(200,el.clientWidth),height:h,layout:{background:{color:"transparent"},textColor:css("--mute")},grid:{vertLines:{color:css("--line")},horzLines:{color:css("--line")}},rightPriceScale:{borderColor:css("--line")},timeScale:{borderColor:css("--line")},handleScroll:{mouseWheel:true,pressedMouseMove:true,horzTouchDrag:false,vertTouchDrag:false},handleScale:{mouseWheel:true,pinch:true,axisPressedMouseMove:true,axisDoubleClickReset:true}}}
 /* numbers for a key: last price and change % (uses live quote when present) */
 function stat(k){var d=data&&data[k];if(!d||d.length<2){var z=liveQ[k];return z&&z.price&&z.prev?{price:z.price,chg:(z.price-z.prev)/z.prev*100}:null}var n=d.length,l=d[n-1],p=d[n-2],price=l.close,pc=p.close,q=liveQ[k];
  if(q&&q.price){price=q.price;if(q.day>l.time)pc=l.close}
@@ -139,6 +139,23 @@ function dist(s,x,y){if(s.t==="h"){var py=mainSeries.priceToCoordinate(s.p);retu
  if(s.t==="r"){var x1=Math.min(a.x,b.x),x2=Math.max(a.x,b.x),y1=Math.min(a.y,b.y),y2=Math.max(a.y,b.y);return(x>=x1&&x<=x2&&y>=y1&&y<=y2)?0:1e9}
  var dx=b.x-a.x,dy=b.y-a.y,L=dx*dx+dy*dy,t=L?Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/L)):0;return Math.hypot(x-(a.x+t*dx),y-(a.y+t*dy))}
 function setTool(t){tool=t;prev=null;document.querySelectorAll("#tools [data-t]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.t===t)});cv.style.pointerEvents=t==="cursor"?"none":"auto";cv.style.cursor=t==="x"?"pointer":"crosshair";$("hint").textContent=TOOLHINT[t];redraw()}
+/* Touch-drag pan (phones/tablets): the library's own touch drag does not move the
+   visible range on this page, so pan manually with one finger. The draw canvas sits
+   above #chartbox when a drawing tool is active, so drawing still captures the touch. */
+function initTouchPan(){var bx=$("chartbox");if(!bx||bx.__wtTouch)return;bx.__wtTouch=1;
+ var sx=null, sf=null, st=null;
+ bx.addEventListener("touchstart",function(e){if(e.touches.length!==1||!main)return;
+  var r=main.timeScale().getVisibleLogicalRange();if(!r)return;
+  sx=e.touches[0].clientX;sf=r.from;st=r.to;},{passive:true});
+ bx.addEventListener("touchmove",function(e){if(sx===null||e.touches.length!==1||!main)return;
+  var w=bx.clientWidth||1, dx=e.touches[0].clientX-sx;
+  if(!dx)return;
+  var bars=(st-sf)*dx/w;
+  main.timeScale().setVisibleLogicalRange({from:sf-bars,to:st-bars});
+  sx=e.touches[0].clientX;sf=sf-bars;st=st-bars;},{passive:true});
+ var end=function(){sx=null;sf=null;st=null;};
+ bx.addEventListener("touchend",end,{passive:true});
+ bx.addEventListener("touchcancel",end,{passive:true});}
 function initDraw(){cv=$("draw");ctx=cv.getContext("2d");var start=null;
  function xy(e){var r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
  cv.addEventListener("pointerdown",function(e){if(tool==="cursor"||!mainSeries)return;var m=xy(e),p=pt(m.x,m.y);if(!p)return;
@@ -178,7 +195,7 @@ function live(){if(document.hidden)return;fetch("/api/quotes").then(function(r){
  drawTiles();drawHead()}).catch(function(){})}
 setInterval(live,60000);setTimeout(live,200);document.addEventListener("visibilitychange",function(){if(!document.hidden)live()});window.addEventListener("online",live);
 /* ---------- start ---------- */
-drawTabs();initDraw();
+drawTabs();initDraw();initTouchPan();
 fetch("/data/charts.json?t="+Date.now()).then(function(r){return r.json()}).then(function(j){data=j;Object.keys(data).forEach(function(k){data[k]=clean(data[k],k)})}).catch(function(){data={}}).then(function(){drawTiles();build()});
 /* ---------- tooltips and indicator explanations ---------- */
 (function(){
