@@ -3,13 +3,13 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,193",
-   "change": 0.19
+   "value": "25,207",
+   "change": 0.25
   },
   {
    "name": "SENSEX",
-   "value": "82,000",
-   "change": 0.5
+   "value": "81,785",
+   "change": 0.24
   },
   {
    "name": "GOLD $/oz",
@@ -18,13 +18,13 @@
   },
   {
    "name": "CRUDE WTI",
-   "value": "$89.1",
-   "change": 0.58
+   "value": "$88.6",
+   "change": 0.06
   },
   {
    "name": "USD/INR",
-   "value": "93.99",
-   "change": -0.25
+   "value": "93.92",
+   "change": -0.32
   },
   {
    "name": "S&P 500",
@@ -44,68 +44,68 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Foreign Fund Inflows Lift Domestic Indices",
-   "summary": "Indian benchmark indices posted strong gains during early trade sessions, supported by fresh foreign capital moving into local equities.",
-   "why": "Foreign institutional investor participation significantly influences daily liquidity and direction in domestic share markets.",
-   "source": "Telegraph India",
-   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNRVRDQnpIOWRYNmlBR2l4NWp5aGRPR0ZUdlU4dzVWWW83MW1vYXZFYnYxd3J3ck84RUVjTGVWUmM2WmZxeUFzZjFkUWhLS2F1dFl4Z2Y1MWVVRWhuZ0R6aGJlZkxnamJZMG1JeG1nOXNDb2h5SkdLRjZGRWdUYkRxUkEtQVVJaUFkOHNMWEo0XzcxeDJjM3hMMnQzejcydjEyZnphY3lMakQ2amtpdG1WSnYxeXhFRzREaEdyUkRWTEp5dnlheWFrNnZzMXo3b1FzZHpnT1JkWDN1SjhrNXBZYmpjSU5OMkhRNXfSAe8BQVVfeXFMTlVjbG9ONU40VXVFcFhJcVczV2VTT3pKR1E3Y0djaW1SX3pQVGk3WlFlU0NzRWdzb29FR0FjU0NIWWx4Uk9BTHVxTnIweUxjVWFRRk9BQ09FWjhuWURDRHdaNWFtTVhrYTFpOFA0QUpHSVBuSWxWVG9jaEtzNTQ4WWtDc2pLSzZxV3RqUWd6OU13WnV5NmxCVk1NcGNZckpqXzRNa3NxTnI1VEg4LS1tT3Btb3RuR0pXSVZJOGYyWGpvWUU5bTM3bVhKVTNLZ0NBa2ZSOElTUHFuaHc4eXY3U3pyWkZDZU1jYmZJSHR6ZmM?oc=5"
+   "category": "Economy",
+   "title": "October Wholesale Inflation Jumps to 12.29%",
+   "summary": "India's wholesale price index inflation accelerated sharply to 12.29% in October. This jump was primarily driven by surging prices in the fuel, power, and food sectors. Higher wholesale costs often translate into increased production expenses for businesses, which can eventually impact retail prices and consumer spending.",
+   "why": "Tracking wholesale inflation gives investors insight into upcoming cost pressures on manufacturing and corporate profit margins.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNc1RsdDJySjJyLV9hTTE5c0lyRGg5WmVpTEo2RzJZcjhCNGxmQ2VIM0dkSEpkZXNTQWNBV2hINHA4dlZ0ZDVRbzY2VFRFaE9hVGRYTXg4aHRUcE5jM05UaG9vZkgyQW1YRGZYck9tbWRmZEk1RjZFUEE3MlNsMVVUWUQ3Q04yX2JEMG1JRG1rNUIxM1VuRkdYLTM1Z3F3R2hKR0hsV1VIODlzaUNyS1RYRzY3Nm82VjI3X1B1OHZaZXotSUlWMldNN0NQeTVEZ9IB0wFBVV95cUxOMjVxd25qclJLaTVxbWNXSmUySmZEd3ZKcUExbnBERlJKMlA3WkJzUGtublBaYWljUzhMSmRYMExmY2todlA0eGJ2SUl5V3NJaVlrb19WVFBSLVQ4dTN0MGZrYnIyM2NYQWVLZmthUjlYX01CNHlSbThhWXE0M216a3hPemhqSWFyYTFGQzJFdFBkR0JMWXJaVkNwRE5LM3I3VEhzdlVVQ2JIcF8wOFFVV1dfU2VKclBwTjBXaXhERjJEQTViTFV6X0tZOVlJSmNCaGtB?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Lower Petroleum Rates Support Market Recovery",
-   "summary": "Domestic shares advanced significantly as declining global crude oil costs improved sentiment and reduced import cost pressures.",
-   "why": "Lower energy input costs benefit manufacturing margins and help control broader economic inflation metrics.",
-   "source": "DD News",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYUlkdmh2U3J0QnUyUDR5TmZ5ZzlBS0FCN19CaFlHS0FkcTFsVkJuVEJhZG16S2dNS0J1LW9oOHE1ZV80TWxGcWZkVjZBRXItWVU4cmtvRi12d2hjS0dsRkNZclA1R3JMQmRqdzZCQ1VYcGRibDlueElUQ1UwRTJFZjBTdGtsSXQxOS1JTW4taTFhS1k5eTM5WHhBZVdqSG9ORFlQUjdZUjJKblM3N3Fr?oc=5"
+   "title": "Domestic Equities Climb on Foreign Funds and Lower Crude",
+   "summary": "Indian stock benchmarks rallied in early trade, with the Nifty crossing key psychological thresholds. Market participants attributed the positive momentum to sustained purchases by foreign institutional investors and declining crude oil prices globally. These combined factors created a favorable environment for broader market participation.",
+   "why": "Foreign capital inflows and lower commodity input costs are major drivers of short-term direction in Indian equities.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVFhsNHVIZkRrWnBIQzlxOXFnaHVtemx3R3NCMDUyNzVXU2FwcHdwOVdRSGZQYjJOZzJ1c1BjTTNTdl9zd0hfLWtFNDNtTWJpbnZNR0hrLU1WenMtd2hkNk15VlQzVGlfZ1lrUXBGTDEzRnJCampjYy1SQ3A1dzVCZzNqRnlSRE52NjhuMlhtbUx6VXVyZFZ3N1JfU3I1Vkk0c244bnRpWExaa1lGOXJqMmlHUzNaXzExQmZJb3JJSVU4UzdjczA3QWFhQXrSAdMBQVVfeXFMTlhTX3pmMUJuLWM1UlN0Q2Q0Z1hFTkZISmFiQWdoVXJQbkN2OUpYMDRLXzlrWVVMc2U1Ny1mLUxoRmk3MlZvamFOTV9OZHFPM1ZyZnZhbDlMSzRJNG9OOHE5S19wWDQzdklOY2tDZ0U4VFVRay1lRWFOcEVxSnBGMEtHQ0hlRlg1d0JtZkVUc1V0eGR2c2RLcjBJOUJaYnRRaWVLR3VIWkxOTWZ4NkpWLUNwamJHNmdiNUxGdl90UmNhSHBZdVVqWHhYWVh3bk80MXc3SQ?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Register Sharp Declines",
-   "summary": "Gold and silver values dropped notably on commodity exchanges following shifting economic indicators and international market cues.",
-   "why": "Precious metal prices fluctuate based on global currency strength, safe-haven demand, and domestic inflation figures.",
-   "source": "The Times of India",
-   "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxObm1CaXhjRzFVN0tFVVljWURZem96bXo4MDJlVi1TNHU3WU1rWFhZb2ZqLW5hN2FkSTIzcE9qRVA1Wm14ZzdSaFZFWF9rVFNCNzJVNVpfMVBENkl1SGZ5bms0YlJvaFhBR2o2WlhjbmNlS0k0VktmYkxvQ0QtM3NzaUl5c1Z2OWNNX0o3YkRDUVB4ZFg5S1Z3S2hibHhiOHJWQzZUb2tzSE1FTS1vSk1XVjNaS0Vyc3B4VU9QRW5oWVpZdTBHZllMY1FPcjZYakxSaTU2NnFfd1JQcGtpcml3SW5hbG1KWVZNRk1oU2VEWDJmNllZYU52MEZVQ1JPR3BmUXNOWmxvcUctQVFCUVQ2ZTN1ekNXRGFSamRBaVU4VTJzLVFNOVp6bmplc3V2bEVLdWM5eDdBNWJPdnpERkRUMXN6VTJtdFhXd1RPSzZzT21SRk1TY2l3RHNJREdBa1pheXJUNDlhUHhORm_SAfACQVVfeXFMTi10ZVNUb0N4Y2tOeERWalV6OWFXTlpxUmt1U0l0ZlBnSWU3Zy1VX1g0Yy1fUE5lal96Q0t6RUlyWnV6d0c3WE9qdjZPakVubmVYNHdCamtVNy0zTkxxOGd4Yk9MVnFXU003WEliQS1GNjBYVkdLWk5kUUh1SjJIbnlfR056d2dwYVhJd3ljRjZxMWpxMFEzYmJhMGdwNV9aeWlIN0RPeWxoNVJTc1RKc0puc2Z2NHVqRUtlZTJWMGVocnBQS1pNa0d5SFJvYmhkLTI1VVhEQnNhd2pQb0s3VURmTHY5S1hWZDg0YlV2WThXTUZCUWFCZVpUMERLeEVjMDdLa2gwWkVrUUFuV3lWSWZSUU8yYkdtZ2ZIN1BKUFhoOXNLNmlYUkFJLU52UElkVi16UldNTmpDaERJWnhDS29ZNTBSdDZROUdzc3VQdTFXYy1ydnlBUUJCeXRJRzdtdGQ0VXBtcExZdFA2Z3I0TG4?oc=5"
+   "title": "Gold and Silver Prices Experience Steep Declines",
+   "summary": "Precious metals saw significant downward movement, with retail silver sliding toward an eleven-month low and gold shedding substantial value from its recent peaks. The drop followed a broader global sell-off in precious metals as market participants reacted to shifting currency valuations and macroeconomic data. Retail investors across major cities faced heavily reduced bullion rates.",
+   "why": "Commodity price swings reflect changing safe-haven demand and shifting global monetary policy expectations.",
+   "source": "Dainik Bhaskar",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZmUtVHR4YmJHcC04Qm1NcmlVUndlc2huZkd4eFBWYmE4WTh3eERjRkJWV3kxYlNiMVJsRHlHZ2stcUljLXkzZEo4clBMM1ZQcXhvWDBOLVprTFdxMnZpRXBjdjY4bTJpeEhXSlNsd09oU3RnTmlLSWNsTXVYdUxjVjJEZ2hMR3diNHVwSVJXMUs1SnFsQ0g2WEd6M01sb0tSV1NhTDZna1pUNTM1NDVBd3I3bnBNMFIyd3ZwNEpyNVJUUQ?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Wholesale Price Inflation Accelerates in October",
-   "summary": "India's wholesale inflation rate climbed to 12.29 percent during October, driven primarily by rising energy and fuel expenses.",
-   "why": "Wholesale price tracking provides early visibility into producer cost pressures that eventually influence retail consumer inflation.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTZCYmwwajlmSXIyWWx2WXhZaE81VjdHTS1vc0wtdUpBNG01WnFDdVF1bXlmNXNwalQ2N2lKT1hXODMydGtUY25fcDgxQW5jVnFTVUNXQ09NN2twb1hiNE9kVHowRUZhenVIY2dDUzhPTkFaTzBqaUF5emNlaHdLc3JEcWhrTlBuemFxR01HNUNJV1FjVnlxYTJ0bWpIcks0YUFv?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Economic Growth Projected Steady for Quarter",
-   "summary": "Market surveys estimate India's second-quarter economic expansion at 7.7 percent, maintaining a stable trajectory for the full financial year.",
-   "why": "Gross domestic product growth updates are critical benchmarks for assessing overall economic health and corporate earnings potential.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQaEhORU1GMTZmR25ZZzM4VzBYV2dSWEJBUEhpbzN3NGxMUGhlTlhrQ3lWOEt5a1RLbVJ5UVVwUDFMVkNkR2F1dHltQnJ3ZkVKaDZtU1J0MndHWWpKbENiMDR3VEUxenpwUkREQ3BDb1NXTlgyVFk5U2hyR1NPVi1aWTl1N1RlSVhiOG40cURmdnExRk9yUmVIMFB4eDZMaEZWUThnNlgyNk03MGtrTzRvSjF2WjZVVWNfaHM3bDlPNW1VZlBhWkRWNzh0Vml5NVdLWUNSNkJDZ9IB3AFBVV95cUxNanViN0F1dHdSNDR0QTBTaWIyVXVhb0dyUU13WlBjclM0dmdJUEhRQ0ZGTC13X0dLdHBYaUROTExLeFN2a2d6Z0VrcDdTb0R3UDBBN25Rb3dYbmtIdTgzTkpZblBuaXcwb3N5bjlNTHc0NWVReF9FUmhybktzbWEweXZ3X05DcVNpVWdsRHZURDhPeFR3V0poRTdDWEdjcnNZbWo1NDlpRWdLNjRLVmlvVmQ4aWhqMDVmNlBBdXdkYndTZnFZWF94enBmZy04cktWNW5QZUFEYVNiTDJf?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Reserve Bank Revokes Non-Banking Entity Registrations",
-   "summary": "The central bank formally cancelled the operational licenses of multiple non-banking financial companies under statutory regulatory provisions.",
-   "why": "Regulatory oversight ensures financial system stability by removing entities failing to meet compliance standards.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63979"
+   "title": "Indian Rupee Gains Slightly Against the US Dollar",
+   "summary": "The domestic currency appreciated marginally during early trading sessions, hovering around the 94.13 mark against the US dollar. Analysts pointed to steady foreign fund inflows and corporate dollar sales as the primary supports for the local unit. Despite global headwinds, the currency managed to maintain a relatively steady posture.",
+   "why": "Exchange rate fluctuations directly impact import bills, foreign debt servicing, and macroeconomic stability.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPaXlvaHJZeFIydHdfY0k5NHJibVlwYllxQm00UEhGWldZU1RZcmk1ZXRlZDk2Ti1rbC1Vc1REYUlDaUVRVnZEY3NEV18xU2JXQTNIRnRzT2ZfZ1ZUQlhYS203UmVlSVFkR2E2ZzJUWU1YblFOMm5kS2tjMkVsNjB2dURDemc1ZDQzdjlybnpFSzN4NWVqa2dLWjJlQ0gyN0dIakpFc0d4eWIxRGJFLVgxV3cwelBpQ3JubDRKREJHUTBibzZ6NUFyTHFOSGFaTF9ETFHSAdIBQVVfeXFMT2l5b2hyWXhSMnR3X2NJOTRyYm1ZcGJZcUJtNFBIRlpXWVNUWXJpNWV0ZWQ5Nk4ta2wtVXNURGFJQ2lFUVZ2RGNzRFdfMVNiV0EzSEZ0c09mX2dWVEJYWEttN1JlZUlRZEdhNmcyVFlNWG5RTjJuZEtrYzJFbDYwdnVEQ3pnNWQ0M3Y5cm56RUszeDVlamtnS1oyZUNIMjdHSGpKRXNHeHliMURiRS1YMVd3MHpQaUNybmw0SkRCR1EwYm82ejVBckxxTkhhWkxfRExR?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Technology Earnings and Initial Public Offerings Eyed",
-   "summary": "Wall Street participants prepared for major upcoming corporate financial reports and prominent new public listings focused on artificial intelligence.",
-   "why": "Performance updates from dominant technology firms heavily dictate sentiment across global equity exchanges.",
-   "source": "BigGo Finance",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Hekk0ZGdVemJjUks5NzZMeUpwaGRWN05WTDBzWTc4QlhlWThjRXRCenFsMHd6dEhmZnc4a1lmWnB4REJzWndkNUg3eDZKTkJWYl9CNmVtSXBjOXZhS285eWdtZXh1Y29PSW1mTDZTZEJaVTRPc1E?oc=5"
+   "title": "Wall Street Futures Slip as Markets Await Key Triggers",
+   "summary": "Major US stock index futures edged lower as investors prepared for a heavy calendar of corporate earnings and economic releases. Market focus remained squarely on upcoming financial results from semiconductor giant Nvidia, alongside upcoming central bank meeting minutes and new public offerings. Cautious sentiment prevailed as traders assessed technology sector valuations.",
+   "why": "US market movements and technology bellwether earnings frequently set the tone for global risk sentiment.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPd2FWcktJLVd2aW9ObWxWUGJ4MVBiNDJ6clFlSmRTSjhNSVZrbHlCamNBYUZfeTJ2cjdtZVFZMU40a1Q0dkdRcHlibDJjS20zdW1jYmtOcnkweEx0QzFOUGpFZ2JWN3Jmc1dNakJITW45VG4waDNGU285TlN3el93ZUxzYWxXdUg3eVk0U2NSUGJySFE?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Central Bank Highlights Sector Vulnerabilities",
-   "summary": "Federal Reserve commentary pointed toward potential financial vulnerabilities emerging from rapid expansion in artificial intelligence technologies.",
-   "why": "Monetary authority risk assessments help investors evaluate systemic threats across international financial markets.",
-   "source": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSENGWlpId0p5YlRod0tMckM5aDRiR3lHSENXeEdVV3dlVHNmby1fel9oYjBSUm9IdzZHcHBoRGFYblBXU3lSeHdKQ3Z3Nm1kRXZjdDA2QlBqWnRVQk16MUNSUHZjeF90emdfejMyMjdhVWJwZm5tamFoeU5WWUZnWnVTbEhCb3BWOHkxOVFn?oc=5"
+   "title": "Federal Reserve Official Signals Gradual Interest Rate Path",
+   "summary": "A top US Federal Reserve official indicated that policymakers are likely to implement gradual interest rate increases going forward. The proposed path aims to cool persistent inflation while carefully managing overall economic growth and labor market conditions. Financial markets closely analyze such commentary to gauge future borrowing costs.",
+   "why": "Federal Reserve monetary policy dictates global liquidity conditions and influences foreign portfolio flows into emerging markets.",
+   "source": "Livemint",
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOaFZIQmhjLXdrcDBDdVkwVzRfMHJLSFhCc3czUjI1andRTjlxWXp6aTNBaTREOGc3dFNwUFF4WFdmaDlsV0U1MHJqRlRmYzV3aHNDUW1RVEZLeWZwZVI0eW1qUzE5SWlFZmNKSy04RVluLVhnMjBtSjdvZmItZGJ5c0RRakhNbjhTZkpPY3JyNFozUVV5ODAwYjUwZUZmd292SVR3SFRxRkdBVHFfRHNEbGdLYTljNlQ1QVEyVG83b29Mck1pMUQxWTdaRWNtVlc4WGt2X3JWcDJmenk2VzNUQk5fTFdhcTFsdVZRcDg3dHBlb01NNmliZy1DTdIBgAJBVV95cUxPeTJWM25CelhDSjlieTEydGpRVVE4TUdoWVlvR3pHWG40bGNIOXdmdEpEdnBkRUdSdFowOW0wSHhNVzJPR2Z4Ny0wVVF6RmpwUWZfb1FsVmQyWloxTmdZNi1MTEdXeWtJcnAtSkJzZkNISE5pX2xtdmhnVkJLeUg5N3FJZ2drQ0ZYMmx1ZkdzN0o4VXdfTlJVOU0tTmdwYlZXdW9PMU9VZFhKOVpCQ3RUbnJzalJPb25HT243Tk1HRTg5enJ6NEd0cGtOdWxseEQ5M3pUY2Y2UzN0SXEwTFlrMElUMlFJOFVZano2ZUZwc0F6eGI4c2sxVFZUU3d5Qmtr?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Kaynes Technology Shares Crash Following Weak Q2 Results",
+   "summary": "Shares of Kaynes Technology hit their lower circuit after reporting a steep year-on-year drop in quarterly net profit, despite registering modest revenue growth. Brokerage reports highlighted underlying weaknesses in the smart metering segment and rising corporate debt levels as key concerns. The sharp sell-off in the stock also dragged down sentiment across related electronics manufacturing peers.",
+   "why": "Earnings misses and rising debt metrics can trigger rapid repricing in high-growth technology and manufacturing stocks.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/why-kaynes-technology-shares-crashed-20-to-52-week-low-stock-down-54-in-a-year-what-stock-market-experts-say-11794807033272.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Mahanadi Coalfields IPO Opens with Modest Grey Market Premium",
+   "summary": "Mahanadi Coalfields fixed its initial public offering price band for an offer for sale, attracting attention from retail and institutional investors. Early trading indicators in the unofficial grey market pointed to a modest estimated listing gain over the issue price. The massive share offering adds a large public sector undertaking to the market roster.",
+   "why": "IPO activity offers retail participants a channel for direct equity participation and gauges broader market liquidity.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo/coal-india-s-mahanadi-coalfields-ipo-expected-profit-calculator-on-gmp-what-retail-hni-investors-can-gain-on-listing-11794806101034.html"
   }
  ]
 }
