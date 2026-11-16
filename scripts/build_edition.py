@@ -198,7 +198,7 @@ def stories(lst, k_show=2, first_w=True, glance_html=""):
     total = len(lst) + (1 if glance_html else 0)
     if total == 2:
         items += filler()
-    elif total == 0:
+    if len(lst) == 0:
         items += filler(1)  # empty page: fill with the next Market Word, not the same one as a 2-item page
     return '<div class="stories">' + items + glance_html + '</div>'
 WORDS = [
@@ -215,7 +215,7 @@ def filler(off=0):
     return (f'<article class="sty fill"><small class="tag">SPROUT\u2019S MARKET WORD</small><h3>{e(t)}</h3>'
             f'<p class="s-lg">{e(d)}</p><p class="src"><a href="{e(u)}">Learn \u2192</a></p></article>')
 pages.append(page(2, "MARKETS", "Markets", stories((eq[1:5] or eq[:1])) + quiz(0), "Markets"))
-pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", (stories(ec[:3], glance_html=glance()) if ec else "<p>No economy stories today.</p>") + quiz(1), "India & Economy"))
+pages.append(page(3, "INDIA &amp; ECONOMY", "India &amp; Economy", stories(ec[:3], glance_html=glance()) + quiz(1), "India & Economy"))
 pages.append(page(4, "COMMODITIES &amp; WORLD", "Commodities &amp; World",
     f'<div class="strip">{card("Gold","GOLD")}{card("Crude WTI","CRUDE")}{card("USD/INR")}{card("S&P 500")}</div>'
     + stories((cm[:2] + us[:2]), 2, False) + quiz(2), "Commodities & World"))

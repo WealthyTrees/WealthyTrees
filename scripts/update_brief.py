@@ -270,7 +270,7 @@ def chart_data():
     with open("data/chart_status.json", "w", encoding="utf-8") as f:
         json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "charts": status}, f, indent=1)
 
-GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]  # real model names only; each has its own free quota
+GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-1.5-flash"]  # newest first; each has its own free quota
 
 def ask_gemini(prompt, model, gkey):
     req = urllib.request.Request(
