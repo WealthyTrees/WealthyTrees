@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,216",
-   "change": 0.28
+   "value": "25,193",
+   "change": 0.19
   },
   {
    "name": "SENSEX",
-   "value": "82,006",
-   "change": 0.51
+   "value": "82,000",
+   "change": 0.5
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,864",
-   "change": -0.57
+   "value": "3,863",
+   "change": -0.6
   },
   {
    "name": "CRUDE WTI",
-   "value": "$88.9",
-   "change": 0.4
+   "value": "$89.1",
+   "change": 0.58
   },
   {
    "name": "USD/INR",
-   "value": "94.01",
-   "change": -0.24
+   "value": "93.99",
+   "change": -0.25
   },
   {
    "name": "S&P 500",
@@ -44,84 +44,68 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "WPI inflation climbs to 12.29% in October on higher fuel, food prices",
-   "summary": "WPI inflation climbs to 12.29% in October on higher fuel, food prices  The New Indian Express",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "The New Indian Express",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRU52OGVNUF8xcHBaTlFFWm1wc2ptTjVsd2ZpdEk2Zl9hNWg2V2ZLbWVUV2pyS1VRa0hLVUZIRlp0N1RCaHBuVnd1dUNVUTRRdGlwV3pFRklfRkxMVnVoU192eWZKeWdKZHpHOFpRSHFrTlpyZHJtSFQxT193TXRBQmtneGhGSmQxTVNSdUFCSTBUZzFQMDZ0U0dNLVZrX1FfRW9CX29MelJWbldXV09jYlNyREtoWGlCUDBvZdIBygFBVV95cUxOLTdTWEpBb1hYV3k0NnV3TzBIV1ZxM1o1blcwZEtxck5WSDZUVnBPV0oyS2lJT2tOR3g5b2pJOEJGUlgwX2dLeFhHSmFidVlHcmJVRWhITi1xUlcwdU00c0ZBNEdfdUNCRlFEQ09Sa1hCXzRRSU96REYxV0xSUkl3MVhUcS02WWtycmtaRm1KWmVVUEdCMzN6YW1kRTVuRXlHbmJtMFI1ZTdrN0wwSTMyNlFBMHVSVlV2QnNLa2lITGNWdEQ0cDh0NWxB?oc=5"
+   "category": "Equity",
+   "title": "Foreign Fund Inflows Lift Domestic Indices",
+   "summary": "Indian benchmark indices posted strong gains during early trade sessions, supported by fresh foreign capital moving into local equities.",
+   "why": "Foreign institutional investor participation significantly influences daily liquidity and direction in domestic share markets.",
+   "source": "Telegraph India",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNRVRDQnpIOWRYNmlBR2l4NWp5aGRPR0ZUdlU4dzVWWW83MW1vYXZFYnYxd3J3ck84RUVjTGVWUmM2WmZxeUFzZjFkUWhLS2F1dFl4Z2Y1MWVVRWhuZ0R6aGJlZkxnamJZMG1JeG1nOXNDb2h5SkdLRjZGRWdUYkRxUkEtQVVJaUFkOHNMWEo0XzcxeDJjM3hMMnQzejcydjEyZnphY3lMakQ2amtpdG1WSnYxeXhFRzREaEdyUkRWTEp5dnlheWFrNnZzMXo3b1FzZHpnT1JkWDN1SjhrNXBZYmpjSU5OMkhRNXfSAe8BQVVfeXFMTlVjbG9ONU40VXVFcFhJcVczV2VTT3pKR1E3Y0djaW1SX3pQVGk3WlFlU0NzRWdzb29FR0FjU0NIWWx4Uk9BTHVxTnIweUxjVWFRRk9BQ09FWjhuWURDRHdaNWFtTVhrYTFpOFA0QUpHSVBuSWxWVG9jaEtzNTQ4WWtDc2pLSzZxV3RqUWd6OU13WnV5NmxCVk1NcGNZckpqXzRNa3NxTnI1VEg4LS1tT3Btb3RuR0pXSVZJOGYyWGpvWUU5bTM3bVhKVTNLZ0NBa2ZSOElTUHFuaHc4eXY3U3pyWkZDZU1jYmZJSHR6ZmM?oc=5"
   },
   {
-   "category": "Economy",
-   "title": "India faces a more painful return to higher interest rates",
-   "summary": "India faces a more painful return to higher interest rates  The Economic Times",
-   "why": "What the RBI and the government do reaches your money.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPaTlKUHlaSTd1R21qZGhZTk5nTHpZMDFrQlBDVno5bHNiaWdMVEliYWt1cXl1YWcySzdBVmdJcmRhUTA3QnhwajNPTkJpSEpqS21taS1TNTQ3LTd3RVJ4d1JGNGI5anhQcTVTR3Q4RXVZb3hzQmNLT0Q0RndnQk1obVJMR1NmUThpbG93QS1yS3l0Q2tFMmJrVE1mYWJwSHhqYXJsMlg0RVprR1BHdldRWDZvLXJtWWpNc3dzbjJaYWg2bnVNNFNGbF9tcFJBY0NjbGZOOVd4dkRCbUc2aTI5NEZISzJqcXZ0WVlldmJmb24xNkZOTzBGMjNVbjc2ZW9xNnfSAfsBQVVfeXFMT1BlcjhvWUE4aWZleHpCdmlDTm1YRk5mdXRIa1ZWcFVlSExZQWFTRFp4UDlVbjFudllRM21qMW9DVU1JZzVmbzZNamN5QVF0eWNYQ3BkZnZIN0FpMVlDbVRCMDA5cG9LZm9EUVNtS091Q09aM3ZyYXVrbWRuUENlalE1N2daMDR2YkV2Rkc2YVFHR2l2NU9MYWpaYjBleTc5SGpYSjNLVC15YWJpQ1lydlZQVGRyTXh3aXQ5OS1kX1l1TzdyQWpBTUZvSHdZUFNFWHFXZFZzQUhfUkNvMi1kQzJqT1c5ZUFCYzNvMHVGY3pJbDhVYUxQRE1UWHc?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost",
-   "summary": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost sentiment  DD News",
-   "why": "Energy and metal prices move first, and the rest follows.",
+   "category": "Equity",
+   "title": "Lower Petroleum Rates Support Market Recovery",
+   "summary": "Domestic shares advanced significantly as declining global crude oil costs improved sentiment and reduced import cost pressures.",
+   "why": "Lower energy input costs benefit manufacturing margins and help control broader economic inflation metrics.",
    "source": "DD News",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYUlkdmh2U3J0QnUyUDR5TmZ5ZzlBS0FCN19CaFlHS0FkcTFsVkJuVEJhZG16S2dNS0J1LW9oOHE1ZV80TWxGcWZkVjZBRXItWVU4cmtvRi12d2hjS0dsRkNZclA1R3JMQmRqdzZCQ1VYcGRibDlueElUQ1UwRTJFZjBTdGtsSXQxOS1JTW4taTFhS1k5eTM5WHhBZVdqSG9ORFlQUjdZUjJKblM3N3Fr?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Stock markets rally in early trade led by foreign fund inflows, lower",
-   "summary": "Stock markets rally in early trade led by foreign fund inflows, lower crude oil  The Hindu",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVFhsNHVIZkRrWnBIQzlxOXFnaHVtemx3R3NCMDUyNzVXU2FwcHdwOVdRSGZQYjJOZzJ1c1BjTTNTdl9zd0hfLWtFNDNtTWJpbnZNR0hrLU1WenMtd2hkNk15VlQzVGlfZ1lrUXBGTDEzRnJCampjYy1SQ3A1dzVCZzNqRnlSRE52NjhuMlhtbUx6VXVyZFZ3N1JfU3I1Vkk0c244bnRpWExaa1lGOXJqMmlHUzNaXzExQmZJb3JJSVU4UzdjczA3QWFhQXrSAdMBQVVfeXFMTlhTX3pmMUJuLWM1UlN0Q2Q0Z1hFTkZISmFiQWdoVXJQbkN2OUpYMDRLXzlrWVVMc2U1Ny1mLUxoRmk3MlZvamFOTV9OZHFPM1ZyZnZhbDlMSzRJNG9OOHE5S19wWDQzdklOY2tDZ0U4VFVRay1lRWFOcEVxSnBGMEtHQ0hlRlg1d0JtZkVUc1V0eGR2c2RLcjBJOUJaYnRRaWVLR3VIWkxOTWZ4NkpWLUNwamJHNmdiNUxGdl90UmNhSHBZdVVqWHhYWVh3bk80MXc3SQ?oc=5"
+   "title": "Precious Metals Register Sharp Declines",
+   "summary": "Gold and silver values dropped notably on commodity exchanges following shifting economic indicators and international market cues.",
+   "why": "Precious metal prices fluctuate based on global currency strength, safe-haven demand, and domestic inflation figures.",
+   "source": "The Times of India",
+   "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxObm1CaXhjRzFVN0tFVVljWURZem96bXo4MDJlVi1TNHU3WU1rWFhZb2ZqLW5hN2FkSTIzcE9qRVA1Wm14ZzdSaFZFWF9rVFNCNzJVNVpfMVBENkl1SGZ5bms0YlJvaFhBR2o2WlhjbmNlS0k0VktmYkxvQ0QtM3NzaUl5c1Z2OWNNX0o3YkRDUVB4ZFg5S1Z3S2hibHhiOHJWQzZUb2tzSE1FTS1vSk1XVjNaS0Vyc3B4VU9QRW5oWVpZdTBHZllMY1FPcjZYakxSaTU2NnFfd1JQcGtpcml3SW5hbG1KWVZNRk1oU2VEWDJmNllZYU52MEZVQ1JPR3BmUXNOWmxvcUctQVFCUVQ2ZTN1ekNXRGFSamRBaVU4VTJzLVFNOVp6bmplc3V2bEVLdWM5eDdBNWJPdnpERkRUMXN6VTJtdFhXd1RPSzZzT21SRk1TY2l3RHNJREdBa1pheXJUNDlhUHhORm_SAfACQVVfeXFMTi10ZVNUb0N4Y2tOeERWalV6OWFXTlpxUmt1U0l0ZlBnSWU3Zy1VX1g0Yy1fUE5lal96Q0t6RUlyWnV6d0c3WE9qdjZPakVubmVYNHdCamtVNy0zTkxxOGd4Yk9MVnFXU003WEliQS1GNjBYVkdLWk5kUUh1SjJIbnlfR056d2dwYVhJd3ljRjZxMWpxMFEzYmJhMGdwNV9aeWlIN0RPeWxoNVJTc1RKc0puc2Z2NHVqRUtlZTJWMGVocnBQS1pNa0d5SFJvYmhkLTI1VVhEQnNhd2pQb0s3VURmTHY5S1hWZDg0YlV2WThXTUZCUWFCZVpUMERLeEVjMDdLa2gwWkVrUUFuV3lWSWZSUU8yYkdtZ2ZIN1BKUFhoOXNLNmlYUkFJLU52UElkVi16UldNTmpDaERJWnhDS29ZNTBSdDZROUdzc3VQdTFXYy1ydnlBUUJCeXRJRzdtdGQ0VXBtcExZdFA2Z3I0TG4?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Wholesale Price Inflation Accelerates in October",
+   "summary": "India's wholesale inflation rate climbed to 12.29 percent during October, driven primarily by rising energy and fuel expenses.",
+   "why": "Wholesale price tracking provides early visibility into producer cost pressures that eventually influence retail consumer inflation.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTZCYmwwajlmSXIyWWx2WXhZaE81VjdHTS1vc0wtdUpBNG01WnFDdVF1bXlmNXNwalQ2N2lKT1hXODMydGtUY25fcDgxQW5jVnFTVUNXQ09NN2twb1hiNE9kVHowRUZhenVIY2dDUzhPTkFaTzBqaUF5emNlaHdLc3JEcWhrTlBuemFxR01HNUNJV1FjVnlxYTJ0bWpIcks0YUFv?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Economic Growth Projected Steady for Quarter",
+   "summary": "Market surveys estimate India's second-quarter economic expansion at 7.7 percent, maintaining a stable trajectory for the full financial year.",
+   "why": "Gross domestic product growth updates are critical benchmarks for assessing overall economic health and corporate earnings potential.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQaEhORU1GMTZmR25ZZzM4VzBYV2dSWEJBUEhpbzN3NGxMUGhlTlhrQ3lWOEt5a1RLbVJ5UVVwUDFMVkNkR2F1dHltQnJ3ZkVKaDZtU1J0MndHWWpKbENiMDR3VEUxenpwUkREQ3BDb1NXTlgyVFk5U2hyR1NPVi1aWTl1N1RlSVhiOG40cURmdnExRk9yUmVIMFB4eDZMaEZWUThnNlgyNk03MGtrTzRvSjF2WjZVVWNfaHM3bDlPNW1VZlBhWkRWNzh0Vml5NVdLWUNSNkJDZ9IB3AFBVV95cUxNanViN0F1dHdSNDR0QTBTaWIyVXVhb0dyUU13WlBjclM0dmdJUEhRQ0ZGTC13X0dLdHBYaUROTExLeFN2a2d6Z0VrcDdTb0R3UDBBN25Rb3dYbmtIdTgzTkpZblBuaXcwb3N5bjlNTHc0NWVReF9FUmhybktzbWEweXZ3X05DcVNpVWdsRHZURDhPeFR3V0poRTdDWEdjcnNZbWo1NDlpRWdLNjRLVmlvVmQ4aWhqMDVmNlBBdXdkYndTZnFZWF94enBmZy04cktWNW5QZUFEYVNiTDJf?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Reserve Bank Revokes Non-Banking Entity Registrations",
+   "summary": "The central bank formally cancelled the operational licenses of multiple non-banking financial companies under statutory regulatory provisions.",
+   "why": "Regulatory oversight ensures financial system stability by removing entities failing to meet compliance standards.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63979"
   },
   {
    "category": "US Markets",
-   "title": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty,",
-   "summary": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty, Kospi, Nikkei, Taiwan cues  TradingView",
-   "why": "When Wall Street moves, world markets notice.",
-   "source": "TradingView",
-   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOVlpORHBoTUk5Z0c4aWdYdmNCS25yTXFTb0M2QWJJdTVjUTE2TWl2YmdEaDBSakN6TVQ2WXJzZHJXemZsOEN5bGs3UFNWZ3JRTnhQY1FIdFVzTFN1YkNZX29Zei10MHhzLTg3MU1TM2JpQ0YwaXdUSnY5ekd5cUxCMk5oaWRzTGQzbF9UOURONjFUdG5UVkV1V1E4RnlKcXRFT29rVjgxa2hMQkNZMVUxNlBpRkU2ZkhINERoSzdaMGdsRS1MeXE0Z082N1MzS0RRTkE4amJrVXlxcEIyUzhSMWdoV3FvZHN2c2dhZUh4ZHhQR0dLQTN1NE9B?oc=5"
+   "title": "Technology Earnings and Initial Public Offerings Eyed",
+   "summary": "Wall Street participants prepared for major upcoming corporate financial reports and prominent new public listings focused on artificial intelligence.",
+   "why": "Performance updates from dominant technology firms heavily dictate sentiment across global equity exchanges.",
+   "source": "BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Hekk0ZGdVemJjUks5NzZMeUpwaGRWN05WTDBzWTc4QlhlWThjRXRCenFsMHd6dEhmZnc4a1lmWnB4REJzWndkNUg3eDZKTkJWYl9CNmVtSXBjOXZhS285eWdtZXh1Y29PSW1mTDZTZEJaVTRPc1E?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-   "summary": "Stock Market: Will S&P 500 Open Up or Down Today?  Yahoo Finance",
-   "why": "US trading often leads the next morning in India.",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMVRGSEZsR3d2ZTF0SHVyekdjcnpDWnNpajFsbG9SckFuTzUyZXplQndRRVB3N3VuSHcyOFJPeHhIYjI1LVliNzRsaWZGekRrN1VzSGlua0doZ0wzTFJyUnJPQVNWdUZtQmc5LVhHbVhXTkNGWVByWFNYZGpTU2IxcndOR3J5T2NVQWp6RVphTjJaZw?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Technical picks: ABB India among 5 stocks to buy this week for",
-   "summary": "The recent market activity indicates a bullish trend, albeit with minor profit booking influencing trading patterns. Investors are keenly observing macroeconomic factors and international cues.…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/tech-picks-abb-india-among-5-stocks-to-buy-this-week-for-healthy-returns/slideshow/135872688.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Yes Bank moves SC seeking review of order on writing off of",
-   "summary": "Yes Bank has filed a petition with the Supreme Court to review an order from October 15. This order upheld a Bombay High Court ruling that quashed the bank's decision to write off AT-1 bonds. These…",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/yes-bank-moves-sc-seeking-review-of-order-on-writing-off-of-rs-8415-cr-at-1-bonds/articleshow/135830873.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "RHI Magnesita Q2 net profit jumps 62 pc to over Rs 62",
-   "summary": "RHI Magnesita has reported a remarkable surge in net profit, soaring to Rs 62.09 crore for the September quarter. The consolidated revenues experienced a modest increase, hitting Rs 1,038.26 crore…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/rhi-magnesita-q2-net-profit-jumps-62-pc-to-over-rs-62-cr/articleshow/135830890.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Mahanadi Coalfields files RHP for proposed IPO worth nearly Rs 9,500 crore",
-   "summary": "Mahanadi Coalfields Ltd has filed its Red Herring Prospectus for an initial public offering with regulatory bodies. This IPO features an offer for sale of roughly 66.18 crore equity shares from Coal…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/mahanadi-coalfields-files-rhp-for-proposed-ipo-worth-nearly-rs-9500-crore/articleshow/135829640.cms"
+   "title": "Central Bank Highlights Sector Vulnerabilities",
+   "summary": "Federal Reserve commentary pointed toward potential financial vulnerabilities emerging from rapid expansion in artificial intelligence technologies.",
+   "why": "Monetary authority risk assessments help investors evaluate systemic threats across international financial markets.",
+   "source": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSENGWlpId0p5YlRod0tMckM5aDRiR3lHSENXeEdVV3dlVHNmby1fel9oYjBSUm9IdzZHcHBoRGFYblBXU3lSeHdKQ3Z3Nm1kRXZjdDA2QlBqWnRVQk16MUNSUHZjeF90emdfejMyMjdhVWJwZm5tamFoeU5WWUZnWnVTbEhCb3BWOHkxOVFn?oc=5"
   }
  ]
 }
