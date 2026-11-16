@@ -38,21 +38,33 @@
   /* tab + panel */
   var tb = el("button", "tab de-btn", null); tb.id = "t-ed"; tb.type = "button"; tb.setAttribute("role", "tab"); tb.setAttribute("aria-selected", "false"); tb.setAttribute("aria-controls", "p-ed"); tb.setAttribute("aria-label", "Daily Edition");
   var reel = el("span", "de-reel", null); reel.setAttribute("aria-hidden", "true");
-  reel.appendChild(el("span", "de-play", "\u25b6"));
-  reel.appendChild(el("span", "de-bar", null)); reel.appendChild(el("span", "de-bar", null)); reel.appendChild(el("span", "de-bar", null));
+  var segs = el("span", "de-segs", null);
+  segs.appendChild(el("span", "de-seg", null)); segs.appendChild(el("span", "de-seg", null)); segs.appendChild(el("span", "de-seg", null));
+  reel.appendChild(segs); reel.appendChild(el("span", "de-play", "\u25b6"));
   var lab = el("span", "de-label", null), deTxt = el("span", "de-text", null), deCaret = el("span", "de-caret", null);
   deCaret.setAttribute("aria-hidden", "true"); lab.appendChild(deTxt); lab.appendChild(deCaret);
   tb.appendChild(reel); tb.appendChild(lab);
-  /* Variant A moment: tiny reel flick, then the label types itself out. */
+  /* Variant A moment: tiny reel flick, then the label types itself out.
+     Plays when the button scrolls into view (not on page load, when nobody is looking at it). */
   (function () {
     var label = "Daily Edition";
-    if (RM) { deTxt.textContent = label; if (deCaret) deCaret.remove(); return; }
-    var i = 0;
-    function type() {
-      if (i <= label.length) { deTxt.textContent = label.slice(0, i); i++; setTimeout(type, 55); }
-      else if (deCaret) { deCaret.style.display = "none"; }
+    function startDe() {
+      if (tb.classList.contains("de-go")) return;
+      tb.classList.add("de-go");
+      var i = 0;
+      function type() {
+        if (i <= label.length) { deTxt.textContent = label.slice(0, i); i++; setTimeout(type, 55); }
+        else if (deCaret) { deCaret.style.display = "none"; }
+      }
+      setTimeout(type, 600);
     }
-    setTimeout(type, 950);
+    if (RM) { deTxt.textContent = label; if (deCaret) deCaret.remove(); tb.classList.add("de-go"); return; }
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0] && entries[0].isIntersecting) { io.disconnect(); startDe(); }
+      }, { threshold: 0.5 });
+      io.observe(tb);
+    } else { startDe(); }
   })();
   var panel = el("section"); panel.id = "p-ed"; panel.setAttribute("role", "tabpanel"); panel.setAttribute("aria-labelledby", "t-ed"); panel.hidden = true;
   var a0 = document.getElementById("t-reads"); if (a0) tabs.insertBefore(tb, a0); else tabs.append(tb); live.after(panel);
