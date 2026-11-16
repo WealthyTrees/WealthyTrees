@@ -19,10 +19,10 @@ var STEPS=[
  {min:2,   bg:"#0d6e33", fg:"#ffffff", label:"+2%"},
  {min:1,   bg:"#127a3c", fg:"#ffffff", label:"+1%"},
  {min:0.3, bg:"#a8dba8", fg:"#0b2e22", label:"+0.3%"},
- {min:-0.3,bg:"#eef0ea", fg:"#0b2e22", label:"Flat"},
+ {min:-0.3,bg:"#d3e2d0", fg:"#0b2e22", label:"Flat"},
  {min:-1,  bg:"#f9c5b0", fg:"#0b2e22", label:"−1%"},
  {min:-2,  bg:"#c93a2b", fg:"#ffffff", label:"−2%"},
- {min:-99, bg:"#8f1d12", fg:"#ffffff", label:"−3% or more"}
+ {min:-99, bg:"#a02618", fg:"#ffffff", label:"−3% or more"}
 ];
 function colorFor(p){for(var i=0;i<STEPS.length;i++){if(p>=STEPS[i].min)return STEPS[i]}return STEPS[STEPS.length-1]}
 /* ---------- state ---------- */
