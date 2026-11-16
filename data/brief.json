@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,251",
-   "change": 0.42
+   "value": "25,216",
+   "change": 0.28
   },
   {
    "name": "SENSEX",
-   "value": "82,056",
-   "change": 0.57
+   "value": "82,006",
+   "change": 0.51
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,857",
-   "change": -0.74
+   "value": "3,864",
+   "change": -0.57
   },
   {
    "name": "CRUDE WTI",
-   "value": "$88.7",
-   "change": 0.16
+   "value": "$88.9",
+   "change": 0.4
   },
   {
    "name": "USD/INR",
-   "value": "94.02",
-   "change": -0.23
+   "value": "94.01",
+   "change": -0.24
   },
   {
    "name": "S&P 500",
@@ -45,11 +45,11 @@
  "items": [
   {
    "category": "Economy",
-   "title": "WPI inflation rises to 12.29% in October as fuel prices surge",
-   "summary": "WPI inflation rises to 12.29% in October as fuel prices surge  Fortune India",
+   "title": "WPI inflation climbs to 12.29% in October on higher fuel, food prices",
+   "summary": "WPI inflation climbs to 12.29% in October on higher fuel, food prices  The New Indian Express",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Fortune India",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcXFSNGhGVHhNZk81YW5lQ0d1TzJ2anhCU0taYi1FMF9XOTkzYXQtelJtVkU3ZE8zcEJqZG1sMzZNaWhBNFlqY2tEblJRWE5RS2Y3Nmp6SmpUX0dpTG8tMG4zRndtM0VsYnF4VDdndURXLTB2djBRd0xuRDZJVnF5VS1WaEVkVV9TLXVpWmRFU2o3blpSbUxfaldJY1JnRU54c2M3SnVJeGFLcDR0cERka19B0gGyAUFVX3lxTFBxcVI0aEZUeE1mTzVhbmVDR3VPMnZqeEJTS1piLUUwX1c5OTNhdC16Um1WRTdkTzNwQmpkbWwzNk1paEE0WWpja0RuUlFYTlFLZjc2anpKalRfR2lMby0wbjNGd20zRWxicXhUN2d1RFctMHZ2MFF3TG5ENklWcXlVLVZoRWRVX1MtdWlaZEVTajduWlJtTF9qV0ljUmdFTnhzYzdKdUl4YUtwNHRwRGRrX0E?oc=5"
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRU52OGVNUF8xcHBaTlFFWm1wc2ptTjVsd2ZpdEk2Zl9hNWg2V2ZLbWVUV2pyS1VRa0hLVUZIRlp0N1RCaHBuVnd1dUNVUTRRdGlwV3pFRklfRkxMVnVoU192eWZKeWdKZHpHOFpRSHFrTlpyZHJtSFQxT193TXRBQmtneGhGSmQxTVNSdUFCSTBUZzFQMDZ0U0dNLVZrX1FfRW9CX29MelJWbldXV09jYlNyREtoWGlCUDBvZdIBygFBVV95cUxOLTdTWEpBb1hYV3k0NnV3TzBIV1ZxM1o1blcwZEtxck5WSDZUVnBPV0oyS2lJT2tOR3g5b2pJOEJGUlgwX2dLeFhHSmFidVlHcmJVRWhITi1xUlcwdU00c0ZBNEdfdUNCRlFEQ09Sa1hCXzRRSU96REYxV0xSUkl3MVhUcS02WWtycmtaRm1KWmVVUEdCMzN6YW1kRTVuRXlHbmJtMFI1ZTdrN0wwSTMyNlFBMHVSVlV2QnNLa2lITGNWdEQ0cDh0NWxB?oc=5"
   },
   {
    "category": "Economy",
