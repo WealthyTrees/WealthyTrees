@@ -134,8 +134,9 @@ btm = ('<div class="btm dx"><a class="bx" href="#p5" data-go="4"><small>SPROUT�
 LEARN_STRIP = """<a class="learn9" href="/pages/learn.html"><small>NEW TO MARKETS? · LEARN, FREE</small><h4>Start with Learn — 6 beginner modules, 23 short lessons, about 35 minutes</h4><p>Market basics, reading a company, key ratios, charts, RBI to portfolio, risk &amp; behaviour. Plain English, no tips, no predictions.</p><i>Start learning →</i></a>"""
 p1 = (f'<div class="strip">{card("Nifty 50","NIFTY 50")}{card("Sensex","SENSEX")}{card("Bank Nifty","BANK NIFTY")}{card("Nifty IT","NIFTY IT")}</div>'
       f'<p class="stamp">{e(stamp)}</p><div class="fwrap"><div class="fmain"><small class="tag">THE LEAD</small>'
-      f'<h1>{e(lead["title"])}</h1><p class="lead s-sm">{e(short(lead["summary"], 135))}</p><p class="lead s-lg dc">{e(lead["summary"])}</p>'
-      f'<p class="why dx"><b>WHY IT MATTERS</b> {e(lead["why"])}</p></div>'
+      f'<h1>{e(lead["title"])}</h1><p class="lead">{e(lead["summary"])}</p>'
+      f'<p class="why dx"><b>WHY IT MATTERS</b> {e(lead["why"])}</p>'
+      f'<p class="src">Source: {(f'<a href="{e(lead["url"])}" rel="noopener">{e(lead["source"])}</a>' if lead.get("url") else e(lead.get("source", "")))}</p></div>'
       f'<aside class="fside"><div class="ins"><b>INSIDE TODAY</b>'
       + "".join(f'<a href="#p{p}" data-go="{p-1}"><i>PAGE {p}</i> {e(i["title"])}</a>' for p, t, i in inside)
       + f'<a class="ex m-only" href="#p5" data-go="4"><i>PAGE 5 · SPROUT’S LESSON</i> {e(ex["title"])}</a></div></aside></div>'
