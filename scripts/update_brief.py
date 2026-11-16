@@ -1,5 +1,5 @@
 """Daily WealthyTrees brief: fetch headlines + market numbers, summarize with Claude, write JSON."""
-import json, os, re, sys, time, gzip, http.cookiejar, urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
+import html, json, os, re, sys, time, gzip, http.cookiejar, urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
 OUT = "data/brief.json"
@@ -58,7 +58,10 @@ def headlines():
                 if google:
                     src = (it.findtext("source") or "Google News").strip()
                     t = re.sub(r"\s+-\s+[^-]+$", "", t)
-                    d = ""
+                    # Google News has no real summary; its description is
+                    # "headline + source". Keep it so the fallback summary
+                    # differs from the title (the paper drops summary==title).
+                    d = cut_words(html.unescape(re.sub(r"<[^>]+>", "", it.findtext("description") or "")).replace("\xa0", " ").strip(), 200)
                 else:
                     d = cut_words(re.sub(r"<[^>]+>", "", it.findtext("description") or ""), 200)
                 key = t.lower()[:60]
