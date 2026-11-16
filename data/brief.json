@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,257",
-   "change": 0.45
+   "value": "25,264",
+   "change": 0.47
   },
   {
    "name": "SENSEX",
-   "value": "82,017",
-   "change": 0.52
+   "value": "82,040",
+   "change": 0.55
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,858",
-   "change": -0.73
+   "value": "3,861",
+   "change": -0.66
   },
   {
    "name": "CRUDE WTI",
-   "value": "$89.1",
-   "change": 0.56
+   "value": "$88.8",
+   "change": 0.33
   },
   {
    "name": "USD/INR",
-   "value": "94.05",
-   "change": -0.19
+   "value": "94.00",
+   "change": -0.24
   },
   {
    "name": "S&P 500",
@@ -45,19 +45,19 @@
  "items": [
   {
    "category": "Economy",
-   "title": "India Faces a More Painful Return to Higher Interest Rates",
-   "summary": "India Faces a More Painful Return to Higher Interest Rates",
+   "title": "WPI inflation rises to 12.29% in October as fuel prices surge",
+   "summary": "WPI inflation rises to 12.29% in October as fuel prices surge",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc0hiVjJXTXBPbzllUFZhcVRzZ3RQX1JfNlllelBnV3BKVHltWmIyS1JKelNpaGFGQUhfQnZqamRDcjhUZnlZT0JKOVJPNEJaWGlNY2FGWUlHRl9lSl9taUptVXpydVp0Y0dWQllEd0g4RGpDWU84b2hycWRUa2J1aDY4ZW9WNnNpZnBoZHN1cDBvTW5uREhNaUpWbk5Pa3NaU1Ryd0VIX1U3OWhISWc?oc=5"
+   "source": "Fortune India",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNd25wdEV2cXJrZUNEalJsRFVKcWx4dG1IWUlCYk1EeFJmWjJlV05DQUJwM3M2NHAzS2NtWXd1MkFCbUtvWDFMb3o3V1p0NEVSU0g4a2s1WnVLS3dEb3RvSGtRNXM1V3BGWU5DUHVXTzJ2eWRibk0yZHJtU2VZREZHbDdHNmI3elYxbFFvaXQzNjNoQXJMU2hSV1VLY2IyM0dvcjhGTNIBsgFBVV95cUxQcXFSNGhGVHhNZk81YW5lQ0d1TzJ2anhCU0taYi1FMF9XOTkzYXQtelJtVkU3ZE8zcEJqZG1sMzZNaWhBNFlqY2tEblJRWE5RS2Y3Nmp6SmpUX0dpTG8tMG4zRndtM0VsYnF4VDdndURXLTB2djBRd0xuRDZJVnF5VS1WaEVkVV9TLXVpWmRFU2o3blpSbUxfaldJY1JnRU54c2M3SnVJeGFLcDR0cERka19B?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Peak repo rate pegged lower at 6%, December hike on",
-   "summary": "Peak repo rate pegged lower at 6%, December hike on",
+   "title": "Weekly policy watch: PM Modi's Asean visit and WPI inflation in focus",
+   "summary": "Weekly policy watch: PM Modi's Asean visit and WPI inflation in focus",
    "why": "What the RBI and the government do reaches your money.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSWhDWUhiZ1plZ0tHNlFjN2VRSWdkNEZHMHdLcER5cEMybVlkSUZLVFhmSWJDb2pZRzZBTk9ZMWpoeEptSmRfZUtVdUR6clFSdXFkZDM5WFBhSC1nRWpfQ3ExamdJMHBiZUxFQWs0NzF1QjZmT0dqaUgxR1FMZnd1MkprTm1LSDA2SEs2V3VUSGxUbUwwZFhHb1BiV1BTbnVrSlY4OHYtNmlaQnhaanVfSzNxVUtaR0locnlEaUJ6bUFVekpFdVHSAcsBQVVfeXFMTkxfMFhRSklheGJBdjJTczlYektlMjlUVW01UWhWNE1faVJEY0hKekFGbkRJaW12SUNIaDdzb3dYcEc2QzlFX2xmdUVOdG9ZZGJGRDN3T1Vac1QwZW9mMlVuRE5yV3plVjhtQTAxUUp1SmdwdGhRX3FNU01kSzRYeTdkY0dua0pLZDNJS0MwVVM2Zi1DRlV3b2tvaWkteG1pRHR1N09iRW5HYWlLM0ZxYWNNSjZoVDcxRkNNMmhURGdPdTVCSE5aNXBLWjQ?oc=5"
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPYVVDSW0yQVlCcjY2OXlkX2NodnVNS3NhMG5Td2dBZVdWcndDRXk0el9pQmk4RkJkX1ZLTkJwVzgwY3JZSTQwTUhQdzh5NXZ4VmJHRE1NczV2eU94OVlPS0xlaGFWQUdzc25uQjFDVmMyNmFKRXBDTkRWdWIxaXFwelBodUVaSlhIeUFwcmpoNGRvWEtGNndmX3MydEM1V2ZNSTFjWlNVSWNjWGZPNHpuYk9yVkYyUzgwenFJNHhBa01PWktDWUhSMU5ISUI2SWo4WEVV0gHYAUFVX3lxTE4xSVVYVlF6MElpT1E1d1dQVXpCM1l4SEVRSTAzTm5mYWJaME1SeU9mQmMxWHd4c3JfUXZRRUpHR0JwcHFiN0xuWHZwYmp2N004TEZPWmxUZG1faXBhb3dSbEVEME0wcVF3d3QwT0lmX1JWZ1hqOFAzV0hzUkhNSWZtUE8yQnRmSFBCTkxnbFRKWWtCdVVWdk8zdU1Oa0V6VWhNUzZQazVWUVZacXVZTUR3WnhFZExQS1N3QWpqQlFkZ1BoWnFhN2kzamdBSWJwQ2V2REF3YUtLMQ?oc=5"
   },
   {
    "category": "Commodity",
