@@ -87,6 +87,6 @@
 /* Ask Sprout — floating finance friend (one-stop: markets, all finance, calculators).
    Loads on every page that loads site.js. */
 (function () {
-  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/sprout-ai.css?v=6"; document.head.appendChild(l);
-  var s = document.createElement("script"); s.src = "/js/sprout-ai.js?v=5"; s.defer = true; document.body.appendChild(s);
+  var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "/css/sprout-ai.css?v=7"; document.head.appendChild(l);
+  var s = document.createElement("script"); s.src = "/js/sprout-ai.js?v=6"; s.defer = true; document.body.appendChild(s);
 })();

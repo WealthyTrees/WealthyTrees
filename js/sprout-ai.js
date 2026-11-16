@@ -53,6 +53,36 @@
   wrap.append(btn);
   document.body.appendChild(wrap);
 
+  /* Welcome nudge: when the site is first opened in a session, the button pops in
+     and a small bubble says hello, so everyone notices Ask Sprout. The bubble
+     closes itself after 5 seconds (or sooner if tapped or the chat is opened).
+     Once per session only — it never nags on every page. */
+  var nudgeTimer = null;
+  function closeNudge() {
+    var n = document.getElementById("spNudge");
+    if (!n || n.classList.contains("closing")) return;
+    n.classList.add("closing");
+    if (nudgeTimer) { clearTimeout(nudgeTimer); nudgeTimer = null; }
+    setTimeout(function () { if (n.parentNode) n.parentNode.removeChild(n); }, 320);
+  }
+  try {
+    if (!sessionStorage.getItem("sp-nudge-shown")) {
+      sessionStorage.setItem("sp-nudge-shown", "1");
+      wrap.classList.add("sp-pop-in");
+      var nudge = el("div", "sp-nudge");
+      nudge.id = "spNudge";
+      nudge.setAttribute("role", "status");
+      nudge.appendChild(el("span", "", "Hi! I'm Sprout — ask me anything about the market."));
+      var nx = el("button", "sp-nudge-x"); nx.type = "button";
+      nx.setAttribute("aria-label", "Dismiss"); nx.textContent = "\u00d7";
+      nx.onclick = function (e) { e.stopPropagation(); closeNudge(); };
+      nudge.appendChild(nx);
+      wrap.appendChild(nudge);
+      nudgeTimer = setTimeout(closeNudge, 5000);
+      btn.addEventListener("click", closeNudge);
+    }
+  } catch (e) { /* sessionStorage unavailable — skip the nudge, button still works */ }
+
   var chat = el("div", "sp-chat");
   chat.id = "spChat"; chat.setAttribute("role", "dialog"); chat.setAttribute("aria-label", "Ask Sprout");
   var head = el("div", "sp-head");
