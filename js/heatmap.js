@@ -19,7 +19,7 @@ var STEPS=[
  {min:2,   bg:"#0d6e33", fg:"#ffffff", label:"+2%"},
  {min:1,   bg:"#127a3c", fg:"#ffffff", label:"+1%"},
  {min:0.3, bg:"#a8dba8", fg:"#0b2e22", label:"+0.3%"},
- {min:-0.3,bg:"#d3e2d0", fg:"#0b2e22", label:"Flat"},
+ {min:-0.3,bg:"#b7cbb4", fg:"#0b2e22", label:"Flat"},
  {min:-1,  bg:"#f9c5b0", fg:"#0b2e22", label:"−1%"},
  {min:-2,  bg:"#c93a2b", fg:"#ffffff", label:"−2%"},
  {min:-99, bg:"#a02618", fg:"#ffffff", label:"−3% or more"}
