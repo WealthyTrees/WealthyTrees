@@ -1,5 +1,5 @@
 {
- "date": "Monday, 16 November 2026",
+ "date": "Tuesday, 17 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,863",
-   "change": -0.61
+   "value": "3,859",
+   "change": -0.7
   },
   {
    "name": "CRUDE WTI",
-   "value": "$86.7",
-   "change": -2.1
+   "value": "$85.1",
+   "change": -3.95
   },
   {
    "name": "USD/INR",
@@ -28,84 +28,84 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,477",
-   "change": -1.12
+   "value": "7,417",
+   "change": -1.92
   },
   {
    "name": "NASDAQ",
-   "value": "24,729",
-   "change": -1.62
+   "value": "24,510",
+   "change": -2.49
   },
   {
    "name": "DOW",
-   "value": "52,024",
-   "change": -0.62
+   "value": "51,608",
+   "change": -1.41
   }
  ],
  "items": [
   {
-   "category": "US Markets",
-   "title": "US Stocks Slide as AI Selloff and Nvidia Jitters Deepen",
-   "summary": "United States equities experienced a downturn as investors reacted to a broad selloff in artificial intelligence firms. Nvidia shares took a significant hit, compounded by market anxiety surrounding the resignation of company leader Jensen Huang. This pullback ahead of crucial corporate earnings weighed heavily on major Wall Street indices like the Nasdaq, which recorded losses exceeding one percent.",
-   "why": "Major US tech bellwethers often dictate global sentiment, and sudden leadership changes or sector corrections can trigger cross-border capital shifts.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-nasdaq-falls-1-at-open-as-nvidia-woes-weigh-on-sentiment-ahead-of-earnings/articleshow/135894333.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "SEBI Establishes Sub-Group to Review IPO and Fundraising Norms",
-   "summary": "The Securities and Exchange Board of India has formed a specialized sub-group within its Primary Market Advisory Committee. Led by NSE chief Chauhan, the panel's primary objective is to reassess current regulations concerning initial public offerings and corporate fundraising. The initiative aims to streamline compliance procedures, eliminate redundant requirements, and facilitate smoother market access for eligible issuers.",
-   "why": "Regulatory reviews of primary market rules directly affect how companies list shares and how easily retail and institutional investors can participate.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-sets-up-sub-group-under-pmac-to-review-key-ipo-norms-nses-chauhan-to-head-panel/articleshow/135890467.cms"
-  },
-  {
    "category": "Economy",
-   "title": "Blackstone Trust Acquires Majority Stake in Amazon Data Centers",
-   "summary": "Blackstone Digital Infrastructure Trust has officially committed to purchasing a 75.1 percent stake in joint ventures alongside Amazon Web Services. This major transaction highlights continued large-scale capital deployment into digital infrastructure assets. The agreement underscores the massive financial valuations attributed to modern cloud computing and data storage facilities globally.",
-   "why": "Large institutional investments in digital infrastructure reflect long-term structural demand trends across the global technology landscape.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/blackstone-reit-to-buy-majority-stake-in-5-billion-amazon-data-center-portfolio/articleshow/135890381.cms"
+   "title": "India's Wholesale Inflation Jumps to 12.29% in October",
+   "summary": "India's wholesale price inflation accelerated significantly to 12.29% in October, driven largely by surging fuel and power prices. This marks the second straight month of double-digit wholesale inflation readings for the country. Higher energy costs ripple through manufacturing and transport sectors, putting broad pressure on input costs across the economy.",
+   "why": "Wholesale inflation tracks raw material and producer price pressures, which typically filter through to retail consumer inflation and influence central bank monetary policy.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTZCYmwwajlmSXIyWWx2WXhZaE81VjdHTS1vc0wtdUpBNG01WnFDdVF1bXlmNXNwalQ2N2lKT1hXODMydGtUY25fcDgxQW5jVnFTVUNXQ09NN2twb1hiNE9kVHowRUZhenVIY2dDUzhPTkFaTzBqaUF5emNlaHdLc3JEcWhrTlBuemFxR01HNUNJV1FjVnlxYTJ0bWpIcks0YUFv?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Crystal Crop Protection IPO Opens with Modest Grey Market Premium",
-   "summary": "Crystal Crop Protection has scheduled its initial public offering to open for subscription from November 18 to November 20, 2026. Ahead of the bidding process, unofficial grey market tracking indicated a small premium of thirteen rupees per share. This points toward an estimated low single-digit listing gain for prospective investors based on current sentiment.",
-   "why": "Monitoring grey market trends helps new participants gauge immediate secondary market demand prior to an official stock exchange listing.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/crystal-crop-protection-ipo-gmp-today-how-much-listing-gain-is-expected-check-profit-calculator-before-bidding-starts-11794829781565.html"
+   "title": "Sensex and Nifty Gain Even as Tata Motors Drops",
+   "summary": "Benchmark Indian equity indices Sensex and Nifty rose over 0.5% during the session, supported by buying in major banking and consumer stocks. However, individual moves varied widely as Tata Motors passenger vehicle shares slumped 8.7% after Jaguar Land Rover lowered its margin outlook for the financial year 2027. Despite broader market gains, mid-caps and small-caps faced notable selling pressure.",
+   "why": "Market indices can rise due to strong performance in heavyweight sectors like banking, even when individual prominent stocks experience sharp selloffs.",
+   "source": "Fortune India",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObUtNY3cwenpuaXF2TjBqeWhDVUJhcjhQTEc2Vzd3bXlKbTJDOGM4U0ZvY3UzOXNJZDZOYnJkaDR2cnZqMm5vX0hucXZSMDE5SE1TWmEtN0QtOFhxM0R0djQ3T29HekUyX3lTa0RkNWp5UXhROWFwTUM1QXBtbFUyNEx3ZUJaTlNXSnRfa3Q3M0VkREQxbEJQbzNFUFVMdElhdHBsOHAyMllWbFJSWDVZMWI1R3dmMm5obUZ5VXQ4NWk4eVNx0gHSAUFVX3lxTE1CTTlIQk1uT1RqMnRxanFZWHJZb0pfWFAzX3ZLUV9iUzJvb3NxMEtiNUh2TWgxZnNxUUZOM3ROaVFQQllhX0VaWkRzekNWa3M0WnBMTnZIZkp1Y3JLbDBDc2g0dEs0R0gyOEFiY0NaVkpvR0Vqa2YxVUROejBYY3hYMHg2dlJLaDFZWHk3QUlGZEZ4SjYzNjVINEEyQUg3b3R0WGpkLXZpd21jTWxDTjd1N05hQXM0VTlRU19JQUF0RWlPUVBvdGVURUQ5MVFBa2FQUQ?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Silver ETFs Crash as Global Demand Forecasts Decline",
-   "summary": "Silver exchange-traded funds experienced sharp declines of up to five percent following projections that global demand for the white metal will drop by five percent throughout 2026. Gold ETFs also witnessed downward movement alongside the broader precious metals selloff. This correction aligns with a stronger US dollar and shifting macroeconomic conditions impacting commodity valuations.",
-   "why": "Precious metal ETFs track physical commodity prices and global industrial demand, making them sensitive to shifts in macroeconomic forecasts.",
+   "title": "Silver Prices Plunge 4.5% Alongside Declining Global Demand",
+   "summary": "Domestic silver prices tumbled 4.5% to settle near Rs 1.69 lakh as precious metals faced strong downward pressure amid concerns over Federal Reserve interest rate trajectories. Silver exchange-traded funds also crashed by up to 5% following forecasts pointing to a 5% drop in global silver demand. Gold prices and gold ETFs similarly experienced downward corrections during the session.",
+   "why": "Precious metals are sensitive to shifts in global interest rate expectations and shifting industrial demand forecasts, leading to sudden valuation swings.",
    "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNUTgxWXhJbnlhcWFUQXlRbFFkdmtUMTFhLS15X2FTMndIZFlEU3FwSVFSRzdlSzVMSTFPLXRHTk5tUDhFLXlia1ZHTXVzTzVDdW41MkVOb0hoY2NnNFlKVllCSFVtVmRIQ0JBQzZtS25KXzA1UVJadW5pWndqNnVTT3k2ODJPakR5SDN6TXZtVHFubWFSM2ZSenRqNEtoSm15ZlJCR0RCSXljVEkta1BBbFcyYWRSMUM2ZXREZWNnYi1Gb1ZxRzFkMHBHem1heHhZTWRFUVM5R3lFbzl1anlNZXV2bUo5MUh3SVMzYlZBX2RSNjlkUHfSAfsBQVVfeXFMTVNJXzNaTnpHdVBVR2JpX1MtdDBQVlJ5eEFyU29vYWxHZWlXRUdwdnZTRVJabkJLRWZCSVBwVWxKWW95d181NEsyUm53SndwMHpaTlJmYWNxajRHTFJZM3dlZDN4c1NWNXlySTkwUF84OVlOR25aZU1QZHpmR3BNVjZaYTBYbURpLUF2Z2o0b0NpTFBGd2hRYVNnbkVuYU9jdFNiRkJtQ2Z0SGFOcTdPM0RuRDJfQTRLQkdUX1JVXzU4VGRpbG9CYmgyQmhLb29HLW9TbklRWG5GN1g2eTZsM3FMcVhWVkQzaEtYRWUtcjJMdzI3ajBrUWtzVzA?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOb0QwSTZIR3NFZUlMOFhYbEtoZVZscWFWdTNwajdHUHlWZm9PTnQ3THd4Q2xGUVBhM3RQcWJ1NVVsODVWalpGNlloN1I5cXFGczdsUTN2Zm5JNGNIdzkwTkFveXBEQ2hySk5kS2U3ajNYSUtpQ290UWJMSXZZYjN2ZnVaTDBIcUxPWkNfUXFTRUxEYXB5c20zandFYlJpTVpTZU9qbUZPLW43eXZfaTNwcFVuTEFmeGozbC1lcE5SUmN6eHR5Yy12YmtnT3NNbHlUb2REOXh2akFLUdIB3wFBVV95cUxOc3plTThuYXppU2JXUFE2VW9pRXpSZDJkQ0hqaURaY0pNMmNzZkdUbHdsNkJmNHB3YTRISlV5NlJySzlPbG5zUEVFUDU3RjB6TTVxWDZrejRxcElxbVF0VjkweV8ydXBiYzA1SU95TF82NTlkWDZETnJPcjE5M25DdWR1b0c4NDNtZkpqd2xMYllxLThQS3VlMllPdGJiQ213SWRuRnJkZ3Z5bll1OFpBZHM0RFJJaUN2bE5UVnhla2ZXZ1FFWmtwa1NldVBQS2N2eEN1QzBkRWpyZ3N6dS1R?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Jefferies Maintains Buy Ratings on Six Adani Companies",
+   "summary": "Global brokerage firm Jefferies maintained its buy ratings on six Adani Group firms, pointing to an expected upside of up to 44% in select stocks. The optimism stems from a projected $51 billion capital expenditure program aimed at driving 23% annual earnings and EBITDA growth. Analysts highlighted robust medium-term fundamentals across the conglomerate's energy and port operations.",
+   "why": "Large capital expenditure plans by major conglomerates signal corporate expansion intentions, which analysts evaluate to estimate future earnings potential.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/51-billion-capex-23-earnings-growth-adani-ports-adani-green-to-energy-jefferies-sees-up-to-44-upside-in-6-stocks-11794842210030.html"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Emerges as Asia's Top Currency on FPI Inflows",
-   "summary": "The Indian rupee strengthened to become the best-performing currency across Asia, bolstered by substantial foreign portfolio investor inflows into domestic equities. These robust capital injections helped blunt broader global economic headwinds and reduced currency volatility. Analysts note that sustained foreign buying has provided vital stability to the local foreign exchange market.",
-   "why": "Strong foreign capital inflows increase demand for the local currency, helping insulate the domestic economy from external global shocks.",
+   "title": "RBI Cancels Registration Certificates of 49 NBFCs",
+   "summary": "The Reserve Bank of India has exercised its statutory powers to cancel the certificates of registration for 49 non-banking financial companies. Separately, 13 other NBFCs and one housing finance company voluntarily surrendered their licenses back to the banking regulator. This regulatory housekeeping ensures tighter oversight and compliance across the shadow banking sector.",
+   "why": "Central banks regulate non-banking financial entities to maintain systemic stability and protect consumer interests within the financial ecosystem.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63979"
+  },
+  {
+   "category": "Equity",
+   "title": "National Stock Exchange Shares Hit Record High Valuation",
+   "summary": "Shares of the National Stock Exchange surged to an all-time high, pushing the company's overall market capitalization past the landmark Rs 5 trillion threshold. The milestone reflects robust domestic investor participation, rising trading volumes, and strong financial performance by exchange infrastructure providers. The exchange handles the vast majority of India's equity trading volume.",
+   "why": "Exchange valuations reflect the health and activity levels of the broader capital markets, benefiting directly from high retail and institutional trading volumes.",
    "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMzEzVG02SjY0N3NIMmJZaF9yTHF1TXotUm8zbnczcGlFTTRKLUpGdzFGRm1Mcmg0WWpzWmIwVW9tZm9SLVpoVFRrcDVuZzM3SWotc0xuQlNuSE1yZ2UzMHVIcHFJMmtrSzVpOUVKUWxJMUdXUnB6N1l1MllvT1Zfd0FxdURsX3JjX2hDblpMU1hRbDhTM25QLU5RVWJOdW43UVpSTTNoRlJfdUJZcURCOVd3ZjNLLVBoLUVac05CQWxfV0tMZ2FUU21sdGdldjdSNlJr0gHYAUFVX3lxTE1EY2lERFdKaVU5YjJhdS1iNFVOWHRnMEhSN0RBYUZSLWhzNDdoN0t4ZWFHR24tN041c3FONWgybkpRNkMyck43dXFtdkRGWnNWemV3bDdOVnFXNDEycncxRC1SRFJiaE5vMU9HS1FRTGRiSm1HaW9WYndUZFFpNDJpcmxwbFVkcU56dU9Fdk9IaWFPT0VoTWowZHhJQk5DRzJJTGtSWG1kRERoV2ZKT0pnQUlvWjRjRnNEY0dRQjNGRVliOGRKdEZIZDZ6VHlIbW9YTmtRVVhZOQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQmx1WF9OVG5INGRFWWRpNDBjbEhaWGJZcWp4bHBQdkw5cWlPSGRrV3RDRHM3bGt4RDRnX1Q3OThtaDFzV1VNX2FxZzNxMjJjQjFIUGVmZXFuU2JkQjFoUlBIMnkzWDlYUlRiVWw1bWVrT1o5bVRkTTY2b25iQUdPMF9CYkh4OXFzZWRpRlkzWmt6SG4yXzBFMml6bGhyWnQzQjRDZVBUTWZXc1NSS1lCVzZDOGFQM0d0Mk1WWkF3YVlZT1RTOXpvb2pnSVhFOFV4ZzBQLUZ30gHbAUFVX3lxTE5wZm1lLTVacWt4bzRVOTY4VDVPa2U0OTAtbWhxamxXRS02WERkN000b3pqZUZMMHFubGllT0J2ZnIzUk5FWV9tY1gzU2cyeDBsbWlaY1czS3B3NTAwNmY3V3JqQTJYQjN0UWd0S2s2clpEZmdVQm1tNXlVUG9kMm5WT0ZuX3RNSjZrMTFvQUNKUXpsMHpWQ0c2NURBZkU1VkdNSVIyRDZXYndPUkRBOUI1aUVkVHdrb1hPTEJuOTU0SHNYQW5KVU1IdW1rWGNwUXJCRVNoUUR0WDlxOA?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Futures Edge Lower Ahead of Fed Policy and Nvidia Earnings",
-   "summary": "US stock index futures traded lower as market participants braced for key corporate earnings reports and updates on central bank policy. Major benchmarks, including the Dow Jones and S&P 500 futures, faced downward pressure amid ongoing developments in the artificial intelligence sector. Investors remained cautious while awaiting clarity on upcoming interest rate trajectories from Federal Reserve officials.",
-   "why": "Wall Street sentiment sets the tone for overnight global market cues, heavily influencing opening trends in Asian equity markets the following day.",
-   "source": "Yahoo Finance UK",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaE1VajhiMUdaa2p4bldROXRQX3JZNUN5ZmYxYlo1SjRTamVMWk9DeUdZdHVFYXIzcGpwbzhNVlJHWVFJUC1sTTM4SnJSSGpqempUdm1kUFZxN09mbzF1b3ZmNkdpQ3NIbkdXQlRvemlwaWdWQWtNLWR2SG0zLVJFM0huZG1tUQ?oc=5"
+   "title": "Wall Street Plummets Sharply Amid Deepening AI Selloff",
+   "summary": "US equities closed sharply lower as anxiety intensified around artificial intelligence sector valuations ahead of upcoming corporate earnings and public offerings. The Nasdaq tumbled over 2% and the Dow Jones dropped hundreds of points as investors rotated out of high-flying tech names. Market sentiment was further rattled by leadership uncertainty surrounding key semiconductor manufacturers.",
+   "why": "Concentrated market leadership in technology sectors means that sentiment shifts in major artificial intelligence firms can trigger broad market corrections.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZEJobHpHMl90WUdVbnpzSGxLb1l3bi1BczhrN29iVW9rUzBtQWE4aFNuM2ZGS1RIQThLdEZPWmZjeExVaHhRaXBubkdqR3R3TXJYTlRqUmRYcXZxYS1pV1lyRlExUDdEUWJ3cTg4aktJVWcxbkg5UW9oeVRXLXhCZjdRQmFNeFJlLXhpWTRMM1lEUVlodGwxVHNCSE9ONTlnem0yekw1dDNraElYZGc?oc=5"
   },
   {
-   "category": "Economy",
-   "title": "India Wholesale Inflation Accelerates to Double Digits in October",
-   "summary": "India's wholesale price inflation surged to 12.3 percent in October, marking the second consecutive month of double-digit increases. The acceleration was primarily driven by sharp upward spikes in fuel, power, and crude oil costs across domestic markets. This persistent inflationary pressure raises important considerations for central bank monetary policy and future borrowing costs.",
-   "why": "Wholesale inflation tracks price pressures at the producer level, serving as an early indicator of retail price trends and potential monetary tightening.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVUxHaUFjSTNObWY5M0NYaXM5TGtoanRWRzV2bUJkR182YTduc1NBX0ZvU1ExSUNqdW9rakZiM1lyQjNKQms4QUp3cVk1Q250RGxSNGloYVdJTGxGVkstUGJOdWw3cFh0dVprM2hRdWdEejdVS2haQTUyQTRRdDZRNVBiSTRPVkw2MHNoMmY1dU1NWnVvaTIxam9qNWlYdFRZeklvV0duRUVJZnhqQWdVWtIBtwFBVV95cUxQRG11c0ZfbkF1RmREcGZPckNVTEJXbXpuRlZic2I3Z2JhV0pGdzVtWGVqN1AtVWVmYUdrcWtpNElXS2M3TkF1NDhsd1B6Yk0wd19kUnNhLVJSbE51ZXRIVEs3VXZpU241N253bmY1aWgyY3VvbmRsdjdmQUZqYnlfQkxtZS1LQ00yeVFMeUpRR255aHl6eTE3cExmVEZZOUNKRm5FbnAzWHdYWDJNUGdFdU9mNGZQVzg?oc=5"
+   "category": "US Markets",
+   "title": "Federal Reserve Assesses Economic Implications of Artificial Intelligence",
+   "summary": "Federal Reserve officials highlighted that central bank policymakers are actively studying how emerging technologies like artificial intelligence could reshape productivity, employment, and monetary policy. While acknowledging the long-term upside for economic efficiency, officials cautioned about potential valuation risks and macroeconomic uncertainty. These assessments help central bankers determine how technological shifts might influence future interest rate decisions.",
+   "why": "Technological revolutions impact labor markets and productivity growth, forcing central banks to factor structural economic changes into their inflation and interest rate models.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQjdTNjl1UUgxQjFiMEFHRXl6UHlheGRXQ1NkTXJRbnlSaWxIdElaeGh4cjUtYzVEdXM2NlZUdEoyTjhWcXFiMGxtUFIydjhHcF80bmhqb1lpY01ReEF3bTdUV1hNSi1QTVJiUnRYeWl0NHRhMWVWdW9vWFk0aFA3Z082b2htY29zM0ZKMHVKd2JmNnM5U1NBS1owVXlKcy1wZzREazFJSjJzQVIzQlZJ?oc=5"
   }
  ]
 }
