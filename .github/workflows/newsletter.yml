@@ -1,6 +1,6 @@
 # THE 9:15 — daily newsletter (Buttondown)
 # Builds the newsletter from data/brief.json + live prices, then sends it via
-# the Buttondown API. Weekday mornings, after the 7:15 AM paper build.
+# the Buttondown API. Weekday mornings, after the 7:15 AM paper build. Triggered by the Cloudflare Worker 'wealthytrees-trigger' at 8:00 AM IST Mon-Fri; the GitHub schedule was removed so its late run can never double-send.
 #  - Scheduled run (Mon-Fri 8:00 AM IST): sends to the whole subscriber list.
 #  - Manual run (Run workflow): defaults to DRAFT mode — it creates a draft
 #    and sends that draft ONLY to the test email you type in. Nothing reaches
@@ -11,8 +11,6 @@
 name: Newsletter (THE 9:15 by email)
 
 on:
-  schedule:
-    - cron: "30 2 * * 1-5"   # 8:00 AM IST, Mon-Fri
   workflow_dispatch:
     inputs:
       mode:
