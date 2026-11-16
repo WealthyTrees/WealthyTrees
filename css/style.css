@@ -166,7 +166,21 @@ nav{margin-left:auto}
 
 /* ===== v10: newsroom tabs + live wire ===== */
 .tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1rem}
-.tab{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);padding:.7rem 1.4rem;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;transition:transform .18s,border-color .18s,background .18s;-webkit-tap-highlight-color:transparent}
+.tab{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);padding:.7rem 1.4rem;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;transition:transform .18s,border-color .18s,background .18s;-webkit-tap-highlight-color:transparent;min-height:3.7rem}
+/* Daily Edition button (variant A, reel flick + typing). Same size as the tabs: it inherits .tab padding/font/pill; only the colours change to THE 9:15 green. */
+.de-btn{background:linear-gradient(160deg,#0f3d2e,#14532d);color:#fdf6dd;border-color:#c9a227;text-decoration:none;white-space:nowrap}
+.de-btn:hover{filter:brightness(1.15)}
+.de-btn:focus-visible{outline:3px solid #c9a227;outline-offset:2px}
+.de-reel{flex:none;width:18px;height:20px;border:1.5px solid #c9a227;border-radius:4px;background:#0a2e22;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;overflow:hidden}
+.de-play{position:absolute;inset:0;display:grid;place-items:center;color:#f3df9a;font-size:7px;line-height:1;opacity:0;animation:deplay .55s ease .1s both}
+.de-bar{display:block;width:11px;height:2px;background:#c9a227;border-radius:1px;transform:scaleX(0);transform-origin:left;animation:debar .3s ease both}
+.de-bar:nth-child(2){animation-delay:.4s}.de-bar:nth-child(3){animation-delay:.55s}.de-bar:nth-child(4){animation-delay:.7s}
+@keyframes debar{to{transform:scaleX(1)}}
+@keyframes deplay{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
+.de-label{display:inline-flex;align-items:center}
+.de-caret{display:inline-block;width:2px;height:1.05em;background:#f3df9a;margin-left:2px;vertical-align:-0.15em;animation:deblink .8s steps(1) infinite}
+@keyframes deblink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.de-play,.de-bar,.de-caret{animation:none}.de-play{opacity:0}.de-bar{transform:scaleX(1)}.de-caret{display:none}}
 @media(hover:hover){.tab:hover{transform:translateY(-2px);border-color:var(--up)}}
 .tab:active{transform:scale(.96)}.tab[aria-selected=true]{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
 .pulse{width:9px;height:9px;border-radius:50%;background:var(--down);animation:pulse2 1.4s infinite}

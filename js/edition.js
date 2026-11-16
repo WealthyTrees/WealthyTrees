@@ -36,7 +36,24 @@
   var GL = [["Repo rate", "The rate at which the RBI lends short-term money to banks."], ["Inflation", "How fast prices in general are rising."], ["Market cap", "A company\u2019s total value: share price times number of shares."], ["Dividend", "A share of profit paid to shareholders."], ["Bull market", "A stretch when prices are generally rising."], ["Bear market", "A stretch when prices keep falling."], ["P/E ratio", "Share price divided by yearly profit per share."]];
 
   /* tab + panel */
-  var tb = el("button", "tab", "Daily Edition"); tb.id = "t-ed"; tb.type = "button"; tb.setAttribute("role", "tab"); tb.setAttribute("aria-selected", "false"); tb.setAttribute("aria-controls", "p-ed");
+  var tb = el("button", "tab de-btn", null); tb.id = "t-ed"; tb.type = "button"; tb.setAttribute("role", "tab"); tb.setAttribute("aria-selected", "false"); tb.setAttribute("aria-controls", "p-ed"); tb.setAttribute("aria-label", "Daily Edition");
+  var reel = el("span", "de-reel", null); reel.setAttribute("aria-hidden", "true");
+  reel.appendChild(el("span", "de-play", "\u25b6"));
+  reel.appendChild(el("span", "de-bar", null)); reel.appendChild(el("span", "de-bar", null)); reel.appendChild(el("span", "de-bar", null));
+  var lab = el("span", "de-label", null), deTxt = el("span", "de-text", null), deCaret = el("span", "de-caret", null);
+  deCaret.setAttribute("aria-hidden", "true"); lab.appendChild(deTxt); lab.appendChild(deCaret);
+  tb.appendChild(reel); tb.appendChild(lab);
+  /* Variant A moment: tiny reel flick, then the label types itself out. */
+  (function () {
+    var label = "Daily Edition";
+    if (RM) { deTxt.textContent = label; if (deCaret) deCaret.remove(); return; }
+    var i = 0;
+    function type() {
+      if (i <= label.length) { deTxt.textContent = label.slice(0, i); i++; setTimeout(type, 55); }
+      else if (deCaret) { deCaret.style.display = "none"; }
+    }
+    setTimeout(type, 950);
+  })();
   var panel = el("section"); panel.id = "p-ed"; panel.setAttribute("role", "tabpanel"); panel.setAttribute("aria-labelledby", "t-ed"); panel.hidden = true;
   var a0 = document.getElementById("t-reads"); if (a0) tabs.insertBefore(tb, a0); else tabs.append(tb); live.after(panel);
 
