@@ -1,7 +1,5 @@
 name: THE 9:15 edition
 on:
-  schedule:
-    - cron: "45 1 * * 1-5"   # 7:15 AM IST, Mon-Fri (GitHub may delay; 8:30 publish still safe)
   workflow_dispatch:
 permissions:
   contents: write
