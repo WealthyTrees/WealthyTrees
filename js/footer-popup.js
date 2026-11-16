@@ -4,13 +4,13 @@
   var BD = "arorapriyansh";
   var css = '' +
   'footer.wt-f{display:block!important;visibility:visible!important;background:var(--deep,#0e2a20);color:#b8c8bf;margin-top:2rem;padding:2.6rem 0 1.4rem;font-size:.92rem}' +
-  'footer.wt-f a{color:#cfe0d6;text-decoration:none}footer.wt-f a:hover{color:#4fd1a0}' +
+  'footer.wt-f .wt-fg ul a{display:inline-block;padding:.45rem .9rem;border:1.5px solid #4fd1a0;border-radius:999px;font:700 .82rem Inter,sans-serif;color:#4fd1a0;text-decoration:none}footer.wt-f .wt-fg ul a:hover{background:#4fd1a0;color:#0e2a20}' +
   'footer.wt-f .wrap{color:#b8c8bf;font-weight:400}' +
   '.wt-fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2rem}' +
   '.wt-fg h4{margin:0 0 .8rem;font:700 1.05rem Fraunces,Georgia,serif;color:#fff}' +
-  '.wt-fg li{list-style:none;margin:.45rem 0}.wt-fg ul{margin:0;padding:0}' +
+  '.wt-fg li{list-style:none;margin:.55rem 0}.wt-fg ul{margin:0;padding:0}' +
   '.wt-fb{font:700 1.4rem Fraunces,Georgia,serif;color:#fff;margin:0 0 .6rem}' +
-  'footer.wt-f a.wt-lg{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 .8rem;transition:transform .2s}footer.wt-f a.wt-lg:hover{transform:translateY(-1px)}' +
+  'footer.wt-f a.wt-lg{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 .8rem;transition:transform .2s;text-decoration:none}footer.wt-f a.wt-lg:hover{transform:translateY(-1px)}' +
   '.wt-lg img{width:44px;height:44px}.wt-lg span{font:700 1.65rem Fraunces,Georgia,serif;letter-spacing:-.01em;color:#fff}' +
   '.wt-tg{margin:.2rem 0 .5rem;font:700 1.2rem/1.3 Fraunces,Georgia,serif;color:#f5c26b;letter-spacing:-.005em}.wt-ds{margin:0;line-height:1.6}.wt-fg li.wt-soon{color:#93a89c}' +
   '.wt-fn{margin-top:1rem;padding:.9rem 1rem;border-radius:12px;background:rgba(255,255,255,.06);font-size:.86rem;line-height:1.5}' +

@@ -142,7 +142,7 @@
 /* ---------- foot / error ---------- */
 #hm-foot{margin-top:18px}
 .hm-error{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
-.hm-error a{color:var(--up);font-weight:700}
+.hm-error a{display:inline-block;padding:.55rem 1rem;border:1.5px solid var(--up);border-radius:999px;font:700 .82rem Inter,sans-serif;color:var(--up);text-decoration:none}
 /* ---------- reduced motion ---------- */
 @media(prefers-reduced-motion:reduce){
  .hm-intro-sprout,.hm-intro-grid i,.hm-needle,.hm-hero-w,.hm-rays,.hm-cloud,.hm-rain line,.hm-particles i,.hm-tile.hm-pulse,.hm-weather,.hm-mood-box,.hm-sprout-svg{animation:none!important;transition:none!important}

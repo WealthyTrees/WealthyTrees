@@ -2,7 +2,7 @@
 :root{--g:#0f3d2e;--g2:#0b2e22;--gold:#c9a227;--ink:#16241d;--paper:#faf7f0;--em:#0f7b55}
 body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;background:#d9d3c3 radial-gradient(1200px 600px at 50% -10%,#e8e3d4,transparent),repeating-linear-gradient(0deg,rgba(0,0,0,.015) 0 2px,transparent 2px 4px);min-height:100vh}
 .util{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:1.4rem;padding:.55rem 2rem;background:var(--g2);color:#f4ecd8;box-shadow:0 2px 14px rgba(0,0,0,.25)}
-.util a{color:var(--gold)}.tabs9{display:flex;gap:.2rem;margin:0 auto}
+.util a{display:inline-block;padding:.45rem .95rem;border:1.5px solid var(--gold);border-radius:999px;font:700 .82rem Inter,sans-serif;color:var(--gold);text-decoration:none}.tabs9{display:flex;gap:.2rem;margin:0 auto}
 .tabs9 button{background:none;border:0;color:#f4ecd8;opacity:.62;padding:.5rem 1rem;font:600 .85rem Inter,sans-serif;cursor:pointer;border-bottom:2px solid transparent;transition:.2s}
 .tabs9 button:hover{opacity:1}.tabs9 button.on{opacity:1;border-bottom-color:var(--gold)}
 .arr{display:flex;gap:.4rem}.arr button{width:2.2rem;height:2.2rem;border-radius:50%;border:1px solid #2c6b54;background:none;color:#f4ecd8;font-size:1rem;cursor:pointer}.arr button:hover{background:#164a38}

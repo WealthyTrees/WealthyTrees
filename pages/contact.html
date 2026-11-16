@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('wt-theme');if(!t)t='sepia';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/css/style.css?v=23"><style>
+<link rel="stylesheet" href="/css/style.css?v=24"><style>
 /* Digital visiting card — front is the identity, back is how to reach us */
 .wt-card-wrap{perspective:1200px;max-width:480px;margin:1.4rem auto .4rem;text-align:center;animation:cardIn .7s ease both}
 @keyframes cardIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
@@ -31,13 +31,14 @@
 .wt-back{background:linear-gradient(160deg,#fdf6dd,#f3df9a);color:#0e2a20;transform:rotateY(180deg);border:2px solid #e0b04f}
 .wt-back h3{font:700 1.25rem Fraunces,Georgia,serif;margin:0 0 .5rem;color:#0e2a20}
 .wt-mail{margin:0 0 .85rem;font-size:.95rem}
-.wt-mail a{color:#0e2a20;font-weight:600;text-decoration:none;border-bottom:1.5px solid #e0b04f}
+.wt-mail a{display:inline-block;padding:.55rem 1rem;border:1.5px solid #0e2a20;border-radius:999px;font:700 .82rem Inter,sans-serif;color:#0e2a20;text-decoration:none;max-width:100%;overflow-wrap:anywhere}
 .wt-mail a:hover{color:#14532d}
 .wt-links{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
 .wt-links a{display:inline-flex;align-items:center;gap:.35rem;background:#0e2a20;color:#fff;border-radius:999px;padding:.5rem .95rem;font:600 .88rem Inter,sans-serif;text-decoration:none;transition:transform .15s,background .15s;touch-action:manipulation}
 .wt-links a:hover{background:#14532d;transform:translateY(-2px)}
 .wt-flip-hint{margin:.8rem 0 0;font-size:.82rem;color:var(--mute)}
 .wt-card-note{max-width:480px;margin:1.2rem auto 0;text-align:center;color:var(--mute);font-size:.92rem;line-height:1.6}
+.wt-card-note a{display:inline-block;padding:.55rem 1rem;border:1.5px solid var(--up);border-radius:999px;font:700 .82rem Inter,sans-serif;color:var(--up);text-decoration:none}
 @media(max-width:520px){.wt-card{height:380px}.wt-front h2{font-size:1.65rem}}
 @media(prefers-reduced-motion:reduce){.wt-card-wrap,.wt-front::after{animation:none}.wt-card{transition:none}}
 </style></head><body>

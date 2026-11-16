@@ -20,8 +20,8 @@
 .sp-chat .msg.bot{background:#f3efe0;border:1px solid #e3dcc8;border-bottom-left-radius:4px;align-self:flex-start}
 .sp-chat .msg.user{background:#0f7b55;color:#fff;border-bottom-right-radius:4px;align-self:flex-end;transition:opacity .6s ease}
 .sp-chat .msg.user.faded{opacity:.32}
-.sp-chat .msg a{color:#0f7b55;font-weight:700}
-.sp-chat .msg.user a{color:#fff}
+.sp-chat .msg a{display:inline-block;padding:.5rem .95rem;border:1.5px solid #0f7b55;border-radius:999px;font:700 .82rem Inter,sans-serif;color:#0f7b55;text-decoration:none}
+.sp-chat .msg.user a{display:inline-block;padding:.5rem .95rem;border:1.5px solid #fff;border-radius:999px;font:700 .82rem Inter,sans-serif;color:#fff;text-decoration:none}
 .sp-chat .chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 .8rem .6rem}
 .sp-chat .chip{border:1.5px solid #e0b04f;background:#fdf6dd;color:#6b5312;border-radius:999px;padding:.3rem .65rem;font:inherit;font-size:.8rem;font-weight:600;cursor:pointer}
 /* Tappable options inside an answer (the "One-time / Monthly SIP" question). Same
