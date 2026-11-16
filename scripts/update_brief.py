@@ -98,7 +98,7 @@ def ticker():
 
 PROMPT = """You write the daily brief for WealthyTrees, an educational site on Indian markets for students and new investors.
 From the numbered headlines below, pick the 8 to 10 most important for Indian equity, commodity, economy and US market news. Include at least 2 US items when available. Use different sources where possible.
-For each, return JSON with: "n" (the headline number), "category" (Equity, Commodity, Economy or US Markets), "title" (your own short rewrite, max 12 words), "summary" (1-2 plain-English sentences in your own words), "why" (one sentence on why it matters or the concept behind it).
+For each, return JSON with: "n" (the headline number), "category" (Equity, Commodity, Economy or US Markets), "title" (your own short rewrite, max 12 words), "summary" (a proper 3-4 sentence plain-English explanation in your own words: what happened, the key numbers or facts, and the context a new reader needs — about 70-90 words, not one line), "why" (one or two sentences on why it matters or the concept behind it).
 Rules: never copy wording from the headlines or descriptions; no buy/sell advice, no tips, no price targets, no predictions; neutral tone; only state facts present in the input.
 Return ONLY a JSON array, no other text.
 

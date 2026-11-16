@@ -61,8 +61,8 @@ def story(i, w=True):
     # Short and long spans exist so phones show the short text and desktops the full
     # text. When the text is already short they are identical, so render only one
     # span — otherwise any view that shows both prints the line twice.
-    s_sum = short(i["summary"], 165)
-    sum_html = f'<p class="s-sm">{e(s_sum)}</p><p class="s-lg">{e(i["summary"])}</p>' if s_sum != i["summary"] else f'<p>{e(i["summary"])}</p>'
+    # The summary is the story now: show it in full on every screen, no short cut.
+    sum_html = f'<p>{e(i["summary"])}</p>'
     s_why = short(i["why"], 120)
     why_html = f'<span class="w-sm">{e(s_why)}</span><span class="w-lg">{e(i["why"])}</span>' if s_why != i["why"] else f'<span>{e(i["why"])}</span>'
     return (f'<article class="sty"><h3>{e(i["title"])}</h3>{sum_html}'
