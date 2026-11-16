@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,263",
-   "change": 0.47
+   "value": "25,255",
+   "change": 0.44
   },
   {
    "name": "SENSEX",
-   "value": "82,089",
-   "change": 0.61
+   "value": "82,032",
+   "change": 0.54
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,844",
-   "change": -1.08
+   "value": "3,858",
+   "change": -0.73
   },
   {
    "name": "CRUDE WTI",
-   "value": "$89.0",
-   "change": 0.55
+   "value": "$89.1",
+   "change": 0.58
   },
   {
    "name": "USD/INR",
-   "value": "94.07",
-   "change": -0.17
+   "value": "94.03",
+   "change": -0.21
   },
   {
    "name": "S&P 500",
@@ -44,84 +44,84 @@
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Current Trading Status",
-   "summary": "Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Current Trading Status",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/maruti-suzuki-share-price-today-live-16-nov-2026/liveblog/135871604.cms"
+   "category": "Economy",
+   "title": "India Faces a More Painful Return to Higher Interest Rates",
+   "summary": "India Faces a More Painful Return to Higher Interest Rates",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc0hiVjJXTXBPbzllUFZhcVRzZ3RQX1JfNlllelBnV3BKVHltWmIyS1JKelNpaGFGQUhfQnZqamRDcjhUZnlZT0JKOVJPNEJaWGlNY2FGWUlHRl9lSl9taUptVXpydVp0Y0dWQllEd0g4RGpDWU84b2hycWRUa2J1aDY4ZW9WNnNpZnBoZHN1cDBvTW5uREhNaUpWbk5Pa3NaU1Ryd0VIX1U3OWhISWc?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "ICICI Bank Share Price Live Updates: ICICI Bank Stock Details",
-   "summary": "ICICI Bank Share Price Live Updates: ICICI Bank Stock Details",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/icici-bank-stock-price-live-updates-16-nov-2026/liveblog/135870794.cms"
+   "category": "Economy",
+   "title": "Peak repo rate pegged lower at 6%, December hike on",
+   "summary": "Peak repo rate pegged lower at 6%, December hike on",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSWhDWUhiZ1plZ0tHNlFjN2VRSWdkNEZHMHdLcER5cEMybVlkSUZLVFhmSWJDb2pZRzZBTk9ZMWpoeEptSmRfZUtVdUR6clFSdXFkZDM5WFBhSC1nRWpfQ3ExamdJMHBiZUxFQWs0NzF1QjZmT0dqaUgxR1FMZnd1MkprTm1LSDA2SEs2V3VUSGxUbUwwZFhHb1BiV1BTbnVrSlY4OHYtNmlaQnhaanVfSzNxVUtaR0locnlEaUJ6bUFVekpFdVHSAcsBQVVfeXFMTkxfMFhRSklheGJBdjJTczlYektlMjlUVW01UWhWNE1faVJEY0hKekFGbkRJaW12SUNIaDdzb3dYcEc2QzlFX2xmdUVOdG9ZZGJGRDN3T1Vac1QwZW9mMlVuRE5yV3plVjhtQTAxUUp1SmdwdGhRX3FNU01kSzRYeTdkY0dua0pLZDNJS0MwVVM2Zi1DRlV3b2tvaWkteG1pRHR1N09iRW5HYWlLM0ZxYWNNSjZoVDcxRkNNMmhURGdPdTVCSE5aNXBLWjQ?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "ITC Share Price Live Updates: ITC Previous Day Close",
-   "summary": "ITC Share Price Live Updates: ITC  Previous Day Close",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/itc-share-price-live-16-nov-2026/liveblog/135870705.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Bajaj Auto Share Price Live Updates: Bajaj Auto Falls Below Key Moving",
-   "summary": "Bajaj Auto Share Price Live Updates: Bajaj Auto Falls Below Key Moving Average",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bajaj-auto-stock-price-live-updates-16-nov-2026/liveblog/135870691.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "HDFC Life Share Price Live Updates: HDFC Life Stock Details",
-   "summary": "HDFC Life Share Price Live Updates: HDFC Life Stock Details",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hdfc-life-stock-price-livestock-price-today-live-updates-16-nov-2026/liveblog/135870489.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "LTIMindtree Share Price Live Updates: LTIMindtree falls below its 20-day Simple Moving",
-   "summary": "LTIMindtree Share Price Live Updates: LTIMindtree falls below its 20-day Simple Moving Average",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/ltimindtree-stock-price-live-updates-16-nov-2026/liveblog/135870261.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "UltraTech Cem Share Price Live Updates: Current Market Performance of UltraTech Cement",
-   "summary": "UltraTech Cem Share Price Live Updates: Current Market Performance of UltraTech Cement",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/ultratech-cem-share-price-live-16-nov-2026/liveblog/135870257.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "IndusInd Bank Share Price Live Updates: IndusInd Bank's Price and Performance",
-   "summary": "IndusInd Bank Share Price Live Updates: IndusInd Bank's Price and Performance",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/indusind-bank-stock-price-live-updates-16-nov-2026/liveblog/135870251.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Why Kaynes Technology shares crashed 20% to 52-week low? stock down 54%",
-   "summary": "Kaynes Technology shares hit 20% lower circuit after Q2 FY27 net profit fell 61.6% year-on-year, despite modest revenue growth. Brokerages cited weakness in smart metering, rising debt and uneven…",
-   "why": "News changes what investors think a business is worth.",
+   "category": "Commodity",
+   "title": "MCX gold, silver prices drop: What led to rates slide; multi-month lows",
+   "summary": "MCX gold and silver prices fell to multi-month lows as expectations of a US Federal Reserve rate hike, a stronger dollar and higher Treasury yields pressured precious metals. Silver hit a one-year…",
+   "why": "Energy and metal prices move first, and the rest follows.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/why-kaynes-technology-shares-crashed-20-to-52-week-low-stock-down-54-in-a-year-what-stock-market-experts-say-11794807033272.html"
+   "url": "https://www.livemint.com/market/commodities/mcx-gold-silver-prices-drop-what-led-to-rates-slide-multi-month-lows-ahead-of-wedding-season-details-for-investors-11794801621038.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost",
+   "summary": "Sensex surges 1,534 points, Nifty reclaims 23,000 as falling oil prices boost sentiment",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYUlkdmh2U3J0QnUyUDR5TmZ5ZzlBS0FCN19CaFlHS0FkcTFsVkJuVEJhZG16S2dNS0J1LW9oOHE1ZV80TWxGcWZkVjZBRXItWVU4cmtvRi12d2hjS0dsRkNZclA1R3JMQmRqdzZCQ1VYcGRibDlueElUQ1UwRTJFZjBTdGtsSXQxOS1JTW4taTFhS1k5eTM5WHhBZVdqSG9ORFlQUjdZUjJKblM3N3Fr?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty,",
+   "summary": "Stock market outlook today,16 Nov: Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty, Kospi, Nikkei, Taiwan cues",
+   "why": "When Wall Street moves, world markets notice.",
+   "source": "TradingView",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOVlpORHBoTUk5Z0c4aWdYdmNCS25yTXFTb0M2QWJJdTVjUTE2TWl2YmdEaDBSakN6TVQ2WXJzZHJXemZsOEN5bGs3UFNWZ3JRTnhQY1FIdFVzTFN1YkNZX29Zei10MHhzLTg3MU1TM2JpQ0YwaXdUSnY5ekd5cUxCMk5oaWRzTGQzbF9UOURONjFUdG5UVkV1V1E4RnlKcXRFT29rVjgxa2hMQkNZMVUxNlBpRkU2ZkhINERoSzdaMGdsRS1MeXE0Z082N1MzS0RRTkE4amJrVXlxcEIyUzhSMWdoV3FvZHN2c2dhZUh4ZHhQR0dLQTN1NE9B?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+   "summary": "Stock Market: Will S&P 500 Open Up or Down Today?",
+   "why": "US trading often leads the next morning in India.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMVRGSEZsR3d2ZTF0SHVyekdjcnpDWnNpajFsbG9SckFuTzUyZXplQndRRVB3N3VuSHcyOFJPeHhIYjI1LVliNzRsaWZGekRrN1VzSGlua0doZ0wzTFJyUnJPQVNWdUZtQmc5LVhHbVhXTkNGWVByWFNYZGpTU2IxcndOR3J5T2NVQWp6RVphTjJaZw?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Coal India’s Mahanadi Coalfields IPO expected profit calculator on GMP: What retail,",
-   "summary": "Mahanadi Coalfields set its IPO price band at  ₹129–136 per share for an  ₹8,981-crore offer for sale. At a grey market premium of  ₹4.50, the estimated listing gain is 3.31%. A 110-share retail lot…",
+   "title": "Technical picks: ABB India among 5 stocks to buy this week for",
+   "summary": "The recent market activity indicates a bullish trend, albeit with minor profit booking influencing trading patterns. Investors are keenly observing macroeconomic factors and international cues.…",
    "why": "Share prices move on news like this.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/ipo/coal-india-s-mahanadi-coalfields-ipo-expected-profit-calculator-on-gmp-what-retail-hni-investors-can-gain-on-listing-11794806101034.html"
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/tech-picks-abb-india-among-5-stocks-to-buy-this-week-for-healthy-returns/slideshow/135872688.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Yes Bank moves SC seeking review of order on writing off of",
+   "summary": "Yes Bank has filed a petition with the Supreme Court to review an order from October 15. This order upheld a Bombay High Court ruling that quashed the bank's decision to write off AT-1 bonds. These…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/yes-bank-moves-sc-seeking-review-of-order-on-writing-off-of-rs-8415-cr-at-1-bonds/articleshow/135830873.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "RHI Magnesita Q2 net profit jumps 62 pc to over Rs 62",
+   "summary": "RHI Magnesita has reported a remarkable surge in net profit, soaring to Rs 62.09 crore for the September quarter. The consolidated revenues experienced a modest increase, hitting Rs 1,038.26 crore…",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/rhi-magnesita-q2-net-profit-jumps-62-pc-to-over-rs-62-cr/articleshow/135830890.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Mahanadi Coalfields files RHP for proposed IPO worth nearly Rs 9,500 crore",
+   "summary": "Mahanadi Coalfields Ltd has filed its Red Herring Prospectus for an initial public offering with regulatory bodies. This IPO features an offer for sale of roughly 66.18 crore equity shares from Coal…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/mahanadi-coalfields-files-rhp-for-proposed-ipo-worth-nearly-rs-9500-crore/articleshow/135829640.cms"
   }
  ]
 }
