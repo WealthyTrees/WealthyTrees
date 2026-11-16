@@ -76,7 +76,7 @@ nav a:active{background:rgba(15,138,95,.16)}
 .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none}
 @media(hover:hover){.btn.ghost:hover{background:var(--btn);color:var(--btn-fg)}}
 .btn.ghost:active{background:var(--btn);color:var(--btn-fg)}
-.cta{display:flex;flex-wrap:wrap;gap:1rem}
+.cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
 .nl .btn::after{border-color:#fff}
 /* cards */
 .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:.5rem 0 1.5rem}.feat .cardlink{margin:0}

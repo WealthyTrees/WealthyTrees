@@ -20,10 +20,12 @@ header.sc{box-shadow:0 8px 24px rgba(0,0,0,.10)}
 .hero h1 .hl{position:relative;color:var(--up)}
 .hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:-.04em;height:.09em;border-radius:9px;background:var(--up);transform:scaleX(0);transform-origin:0 50%;animation:wtu .9s var(--ease) 1s forwards}
 @keyframes wtu{to{transform:scaleX(1)}}
-.hero .date,.hero p,.hero .cta{opacity:0;animation:wtf .8s var(--ease) forwards}
-.hero .date{animation-delay:.05s}.hero p{animation-delay:.55s}.hero .cta{animation-delay:.75s}
+.hero .date,.hero p{opacity:0;animation:wtf .8s var(--ease) forwards}
+.hero .date{animation-delay:.05s}.hero p{animation-delay:.55s}
+.hero .cta{opacity:0;animation:wtfade .8s var(--ease) forwards;animation-delay:.75s}
+@keyframes wtfade{from{opacity:0}to{opacity:1}}
 @keyframes wtf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.hero svg,.hero .herotree{animation:wtfloat 7s ease-in-out infinite;filter:drop-shadow(0 18px 28px color-mix(in srgb,var(--up) 25%,transparent))}
+.hero .herotree{animation:wtfloat 7s ease-in-out infinite;filter:drop-shadow(0 18px 28px color-mix(in srgb,var(--up) 25%,transparent))}
 @keyframes wtfloat{50%{transform:translateY(-8px)}}
 
 /* buttons */
@@ -47,7 +49,7 @@ h2.sec.in::after{width:100%}
 @media(max-width:640px){.hero::after{background-size:34px 34px}.hero .herotree{animation-duration:9s}}
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
- .hero::before,.hero svg,.hero .herotree{animation:none}
+ .hero::before,.hero .herotree{animation:none}
  .hero h1 .w,.hero .date,.hero p,.hero .cta{animation:none;opacity:1;transform:none}
  .hero h1 .hl::after{animation:none;transform:scaleX(1)}
  .js-rv .rv{opacity:1;transform:none;transition:none}
