@@ -1,5 +1,5 @@
 {
- "date": "Tuesday, 17 November 2026",
+ "date": "Wednesday, 18 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,99 +13,115 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,873",
-   "change": 0.53
+   "value": "3,853",
+   "change": -0.01
   },
   {
    "name": "CRUDE WTI",
-   "value": "$87.0",
-   "change": 1.46
+   "value": "$85.7",
+   "change": -0.05
   },
   {
    "name": "USD/INR",
-   "value": "93.46",
-   "change": -0.48
+   "value": "93.47",
+   "change": -0.47
   },
   {
    "name": "S&P 500",
-   "value": "7,330",
-   "change": -1.17
+   "value": "7,341",
+   "change": -1.03
   },
   {
    "name": "NASDAQ",
-   "value": "24,208",
-   "change": -1.23
+   "value": "24,328",
+   "change": -0.74
   },
   {
    "name": "DOW",
-   "value": "50,832",
-   "change": -1.5
+   "value": "50,759",
+   "change": -1.64
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Nifty Reclaims Pre-Conflict Levels Driven by Banking Stocks",
-   "summary": "The Indian equity benchmark Nifty 50 advanced past its previous pre-conflict high, touching an intraday peak of 25,501.35 points and logging a solid monthly gain. This upward movement was largely fueled by robust performances in the banking and realty sectors alongside positive foreign institutional investor inflows. Such market milestones reflect how domestic equities can recover ground following geopolitical disruptions when local fundamentals remain resilient.",
-   "why": "Tracking benchmark indices helps investors gauge overall market sentiment and economic health during periods of geopolitical recovery.",
+   "category": "Economy",
+   "title": "Energy costs push up October WPI inflation to 2-year high of 12.29%",
+   "summary": "Energy costs push up October WPI inflation to 2-year high of 12.29%  The New Indian Express",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLTFmQzZlSGd5UnY0U1BBT2hOVzNyM01oeHdGZ0JBSGRyajJ2alRTQk54V2FQZVFBbVNmWHp2d1lNSnhjSnFyYWZlYUlNN2kxd2xXbzV4cU0weHNQUTRSY3Y0azYzZGE1RXB5NU5oZ1JQZ01VcmxOYUY0SEF6U0Njd2hRNG5TYVlzZFRxaElKdzNRanZOUEI0NjVVZUV3aUIxZFMxRjJJRTZYTUxTdTh1ZHY2VzdwaWhXRkNGNVZ30gHLAUFVX3lxTE56MEU5bjhUckpCYXloa0o2SVFhMUpWNENhcnV3Yldmd1U2RVJLYmZVWi1VTU5oWWpZMEViZjFaVDdjVGdSeExQYU1Ua0pDbVVPSGhSQ1g1WUFHT2RZX1MwY1ZsbkdyRDNwVE1pakZhOEozMWhnRjItd3B2UDU2RnNKRGoxZkkzZnJfUXFMZzhJaWdlcFNBb19xYVg4cE53OU96UTlMLWRZUG44VUp2T1BoRS1YZG10WXJwaEtOQUNoV1RWSVZLYWkyYlE0?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "WPI inflation rises to series high of 12.29% in October as fuel,",
+   "summary": "WPI inflation rises to series high of 12.29% in October as fuel, power strain pockets  The Shillong Times",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "The Shillong Times",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVE5uMmxNYkxzS2dJY2xNV2tGNE9jMmhDSDJZVnBmODV4b1BCdDFKcm9QS3VpQVRKTTJBLXU1cU5Yc3NWVHpIRW94dzZqVXBNMzdFaHYxNWJWUm1HSHFaN0dhTjdVTlB4dW45dktWd3NaZ0NaZk80cnBFb1JMeTc3QUlVRWkwNzFzUnE3NTQxaWl3c3VyZWVZZGl4bDlyVHgtXy00WVg5djMzU2NGYXB6RkZJU2JsakYtWFpjOXVnNm1GZw?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold struggles to rebound from one-year low as US dollar, yields advance",
+   "summary": "GLOBAL-PRECIOUS:Gold struggles to rebound from one-year low as US dollar, yields advance",
+   "why": "Energy and metal prices move first, and the rest follows.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nifty-reclaims-pre-war-levels-intraday-as-indian-stocks-lead-asia-with-10-monthly-gain-11794923846111.html"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Rupee Hits Seven-Month High on Crude Oil Relief",
-   "summary": "The Indian currency appreciated significantly against the US dollar, rising 46 paise to reach 93.48 and marking a seven-month high. This strengthening was primarily supported by steady foreign fund inflows and a noticeable retreat in global crude oil prices. Lower crude costs reduce the country's import bill, easing pressure on the foreign exchange reserves and providing macro-economic stability.",
-   "why": "A stronger local currency lowers import costs for essential commodities like oil, helping contain imported inflation.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOSU1tb19JTEFTbkczSmo1M1dvYkQ5WVhlbU1kbzVVa0JUVlhOd1NSdGVrck1JR2VJSzJlelh3d0Q4aEVQMTdGR0JjSnVCWlY4aEk1azBqeDNmWDZ1MFdra0cySXUxXzBwNDJGVkRlN2NMTUxNMnVlRThaazlOcnRvelJVUmM4OEZ1dVBSNEtUYTZaQ1BzWkw0NUFFM1dJZnFoVUtSalBXNlhxMUNlN2FTUGZXd19odkZ1eGRHRzJSYUh5S01RTndMT01ZLS1SOFJMcEd0TWtsZ1ppa0lERVBYMlZNcHFSS3hYQ2fSAeoBQVVfeXFMTklNbW9fSUxBU25HM0pqNTNXb2JEOVlYZW1NZG81VWtCVFZYTndTUnRla3JNSUdlSUsyZXpYd3dEOGhFUDE3RkdCY0p1QlpWOGhJNWswangzZlg2dTBXa2tHMkl1MV8wcDQyRlZEZTdjTE1MTTJ1ZUU4Wms5TnJ0b3pSVVJjODhGdXVQUjRLVGE2WkNQc1pMNDVBRTNXSWZxaFVLUmpQVzZYcTFDZTdhU1BmV3dfaHZGdXhkR0cyUmFIeUtNUU53TE9NWS0tUjhSTHBHdE1rbGdaaWtJREVQWDJWTXBxUkt4WENn?oc=5"
+   "url": "https://www.livemint.com/market/gold-struggles-to-rebound-from-one-year-low-as-us-dollar-yields-advance-11794942964000.html"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Plunge to One-Year Lows Amid Rate Worries",
-   "summary": "Gold and silver prices dropped sharply to hit one-year lows across major domestic commodity exchanges. This steep correction followed strengthening market bets on higher global interest rates and a surging US dollar index. Precious metals often lose their short-term appeal when yields rise, as non-yielding assets face tougher competition from fixed-income instruments.",
-   "why": "Understanding commodity cycle corrections helps investors observe how precious metals react to shifting global monetary policies.",
-   "source": "India Infoline",
-   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOUpYOUhud0p0aFlwNXlXbm55ZnF4Q19Ga1VSOGpmNG04RFZMWjIxcFpJWEl3T1Rqci1qREVHVThRUERaVTBNNllkbW1aV0pwaHdCYnRIelFrbzAyZEFlQndFME1DX3BQNGs2Ri1pajBoNWhoTzVjR2Q5QnR4TFJGUXJLUmF3ODY0ZlF5NnJzLWpacUlXMUxVY0FlUkdVcDhESkVReGRkbnZiQXIwbWUxcWNXR29YQ0ZWQ0sxTkdyQy13c1ZXbW5SOQ?oc=5"
+   "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
+   "summary": "In terms of GOI notification F.No. 4(4)-B(W&amp;M)/2020 dated October 09, 2020 (SGB 2020-21 Series VIII - Issue date November 18, 2020) on Sovereign Gold Bond Scheme, premature redemption of Gold…",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63990"
   },
   {
-   "category": "Economy",
-   "title": "Wholesale Inflation Climbs to 12.29% on Escalating Energy Costs",
-   "summary": "India's Wholesale Price Index inflation surged to a multi-month high of 12.29% for the month of October. The sharp acceleration was driven by rising prices across fuel, power, food items, and industrial metals. This puts mounting pressure on domestic manufacturing margins as raw material acquisition costs escalate across various industrial sectors.",
-   "why": "WPI inflation acts as an early indicator of pipeline price pressures that eventually trickle down to consumer retail prices.",
-   "source": "Adda247",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNHlWemNVbEstT2lFNnh3a3hheGRpenJUQjkzbEhqcHJxWWNXTGNBRHBMOXp0U1MwOHN1V3JIUEhBVnZCRlladmNPaVZ0Y1pyNUVaMDV1TFp5V3g1SHN5N3Btc3NXdENfQnNpeUppSzZpRTJVRy1kYmUtZFdjbU5tVmdfcmZlcy1Wem16MHNnaEtXUmI1blF6cXFac2IzeHdoQWV6RmVET21CRmVWN1llRkhERS04ZjVsODE5TEZPODU3TEtUTHBr?oc=5"
+   "category": "US Markets",
+   "title": "Wall Street falters ahead of Nvidia earnings, Anthropic debut",
+   "summary": "USA-STOCKS/ (UPDATE 5, GRAPHIC):US STOCKS-Wall Street falters ahead of Nvidia earnings, Anthropic debut",
+   "why": "When Wall Street moves, world markets notice.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/wall-street-falters-ahead-of-nvidia-earnings-anthropic-debut-11794943844807.html"
   },
   {
-   "category": "Commodity",
-   "title": "Regulator Trims Margin Requirements for Agricultural Derivatives",
-   "summary": "The Securities and Exchange Board of India announced a reduction in minimum initial margin requirements for agricultural commodity derivatives down to a range of 6% to 10%. This regulatory adjustment is intended to optimize capital efficiency for market participants trading in farm futures. Lower margins can alter participation dynamics by freeing up capital for traders in agri-contracts.",
-   "why": "Margin adjustments directly impact the leverage and capital allocation strategies available to commodity derivatives traders.",
+   "category": "US Markets",
+   "title": "3 Wall Street predictions for the stock market in 2027",
+   "summary": "3 Wall Street predictions for the stock market in 2027  Yahoo Finance",
+   "why": "US trading often leads the next morning in India.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTXJaaDhBTV9fUGRSYkJRajdkZF9MWFlNWENaaXc2WVJYbWZOVS1NbVdsbmxpZG1GRWhaQ0FTdElCUWMtZXhXSTJkcWlzZF9CdzBSVG41Q3RQT2NtUTd5SHZPZkRxYkJoZ25ZZDVaSE5xSWhPMTJVelVsLXIxT3o1cGZ6ZkhzQVhBMDZGVUFVNU10TEhVQjE0Vm1ScmQwR19ERmRGa2hMRG1XNzNHd2pzaA?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Nike targets $5 billion more in revenue growth by 2031 in latest",
+   "summary": "Nike has announced a bold new initiative designed to generate an additional $5 billion in revenue growth by fiscal 2031. According to CEO Elliott Hill, prioritizing performance sports will play a…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nike-targets-5-billion-more-in-revenue-growth-by-2031-in-latest-turnaround-push/articleshow/135930431.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Signature Global-led consortium buys 194 acre land via auction for Rs 194",
+   "summary": "A consortium led by Signature Global has successfully acquired 474.66 acres of land in Raigad, Maharashtra. The bid was valued at Rs 194 crore and enables the company to expand beyond Delhi-NCR.…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/signature-global-led-consortium-buys-194-acre-land-via-auction-for-rs-194-cr/articleshow/135929748.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Sebi lowers margin requirements for agri-derivatives contracts",
+   "summary": "The Securities and Exchange Board of India has decided to lower the minimum margin requirements for agricultural commodities, reducing the initial margin to between 6% and 10%. This adjustment aims…",
+   "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-lowers-margin-requirements-for-agri-derivatives-contracts/articleshow/135929718.cms"
   },
   {
-   "category": "US Markets",
-   "title": "Wall Street Plunges Amid Technology Sell-Off and AI Jitters",
-   "summary": "Major US indices closed sharply lower as investor enthusiasm for artificial intelligence showed signs of cooling ahead of major corporate earnings. Technology shares led the downturn, with chipmakers and AI-linked stocks suffering notable losses. This tech-heavy correction weighed heavily on broader market sentiment across Wall Street indices.",
-   "why": "Global technology trends heavily influence cross-border capital flows and sentiment in emerging markets like India.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZEJobHpHMl90WUdVbnpzSGxLb1l3bi1BczhrN29iVW9rUzBtQWE4aFNuM2ZGS1RIQThLdEZPWmZjeExVaHhRaXBubkdqR3R3TXJYTlRqUmRYcXZxYS1pV1lyRlExUDdEUWJ3cTg4aktJVWcxbkg5UW9oeVRXLXhCZjdRQmFNeFJlLXhpWTRMM1lEUVlodGwxVHNCSE9ONTlnem0yekw1dDNraElYZGc?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Federal Reserve Evaluates Potential Economic Impacts of Artificial Intelligence",
-   "summary": "Senior US Federal Reserve officials have begun examining how emerging technologies like artificial intelligence could structurally reshape the broader economy. Central bank models are reviewing various scenarios ranging from productivity-led booms to potential labor market disruptions. Policymakers are actively assessing whether these tech shifts will act as deflationary productivity boosters or economic jolts.",
-   "why": "Central bank evaluations of new technologies offer clues regarding long-term productivity assumptions and future monetary policy formulation.",
-   "source": "CFO Dive",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNb1IxWERCQnUxYUVCbXB5NUs1WnREUkxraFR4UHZ4cnp4ODVEdFdmelEzejNMNkdaa1k0TkF2UWtrN0ZwaFFyTS1GME5veEY3N2FNbzFWZ2tkTlVWUTV3MWhweWdNVTNKb1BZSnI1S05PQjJDNmJQcEJhSmgzN0tLUnZUNE5uTHNuR0xxa2trMU9rTk9DcGtTY1hOT1JWUjg?oc=5"
-  },
-  {
    "category": "Equity",
-   "title": "Urban Company's Institutional Share Sale Oversubscribed Six Times",
-   "summary": "Urban Company successfully concluded its Rs 2,500-crore Qualified Institutional Placement, drawing massive demand from domestic and international investors. The share sale received bids totaling approximately Rs 15,300 crore, resulting in an oversubscription of nearly six times. Such large-scale fundraising highlights institutional appetite for growth-stage tech platforms despite broader market volatility.",
-   "why": "Oversubscribed institutional placements demonstrate large investor confidence in a company's business model and expansion runway.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/urban-companys-rs-2-500-crore-qip-oversubscribed-6-times-attracts-rs-15-300-crore-in-bids-report-11794923606837.html"
+   "title": "BP launches offer to buy back up to $6 billion of bonds",
+   "summary": "BP is poised to execute a bond buyback strategy worth $6 billion, aiming to enhance its cash management. With oil price volatility in mind, the company is focused on maintaining a disciplined balance…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/bp-launches-offer-to-buy-back-up-to-6-billion-of-bonds/articleshow/135929675.cms"
   }
  ]
 }
