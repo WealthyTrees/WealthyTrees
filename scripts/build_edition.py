@@ -244,7 +244,7 @@ out = (f'<!doctype html><html lang="en"><head>' + GA_TAG + f'<meta charset="utf-
        f'<link rel="icon" href="/assets/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">'
        '<link rel="canonical" href="https://wealthytrees.online/pages/the-915"><meta property="og:type" content="website"><meta property="og:site_name" content="WealthyTrees">'
        '<meta property="og:title" content="THE 9:15 · The Morning Paper by WealthyTrees"><meta property="og:description" content="Yesterday’s closing prices, short market stories and a daily lesson. Free every weekday. Education only.">'
-       '<meta property="og:url" content="https://wealthytrees.online/pages/the-915"><meta property="og:image" content="https://wealthytrees.online/assets/og-card.png"><meta name="twitter:card" content="summary">'
+       '<meta property="og:url" content="https://wealthytrees.online/pages/the-915"><meta property="og:image" content="https://wealthytrees.online/assets/og-card.png?v=2"><meta name="twitter:card" content="summary">'
        f'<style>{CSS}</style><link rel="stylesheet" href="/css/sprout-ai.css?v=5"></head><body>{util}<main>{"".join(pages)}</main><script>{JS}</script><script src="/js/sprout-ai.js?v=5" defer></script></body></html>')
 os.makedirs(f"{R}/pages", exist_ok=True); os.makedirs(f"{R}/edition", exist_ok=True)
 open(f"{R}/pages/the-915.html", "w").write(out)
