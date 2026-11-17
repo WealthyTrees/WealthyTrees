@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,291",
-   "change": 0.58
+   "value": "25,424",
+   "change": 1.11
   },
   {
    "name": "SENSEX",
-   "value": "82,105",
-   "change": 0.63
+   "value": "82,532",
+   "change": 1.15
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,859",
-   "change": -0.7
+   "value": "3,871",
+   "change": 0.46
   },
   {
    "name": "CRUDE WTI",
-   "value": "$85.1",
-   "change": -3.95
+   "value": "$85.2",
+   "change": -0.59
   },
   {
    "name": "USD/INR",
-   "value": "93.91",
-   "change": -0.34
+   "value": "93.52",
+   "change": -0.41
   },
   {
    "name": "S&P 500",
@@ -44,68 +44,76 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "India's Wholesale Inflation Jumps to 12.29% in October",
-   "summary": "India's wholesale price inflation accelerated significantly to 12.29% in October, driven largely by surging fuel and power prices. This marks the second straight month of double-digit wholesale inflation readings for the country. Higher energy costs ripple through manufacturing and transport sectors, putting broad pressure on input costs across the economy.",
-   "why": "Wholesale inflation tracks raw material and producer price pressures, which typically filter through to retail consumer inflation and influence central bank monetary policy.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTZCYmwwajlmSXIyWWx2WXhZaE81VjdHTS1vc0wtdUpBNG01WnFDdVF1bXlmNXNwalQ2N2lKT1hXODMydGtUY25fcDgxQW5jVnFTVUNXQ09NN2twb1hiNE9kVHowRUZhenVIY2dDUzhPTkFaTzBqaUF5emNlaHdLc3JEcWhrTlBuemFxR01HNUNJV1FjVnlxYTJ0bWpIcks0YUFv?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Sensex and Nifty Gain Even as Tata Motors Drops",
-   "summary": "Benchmark Indian equity indices Sensex and Nifty rose over 0.5% during the session, supported by buying in major banking and consumer stocks. However, individual moves varied widely as Tata Motors passenger vehicle shares slumped 8.7% after Jaguar Land Rover lowered its margin outlook for the financial year 2027. Despite broader market gains, mid-caps and small-caps faced notable selling pressure.",
-   "why": "Market indices can rise due to strong performance in heavyweight sectors like banking, even when individual prominent stocks experience sharp selloffs.",
-   "source": "Fortune India",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObUtNY3cwenpuaXF2TjBqeWhDVUJhcjhQTEc2Vzd3bXlKbTJDOGM4U0ZvY3UzOXNJZDZOYnJkaDR2cnZqMm5vX0hucXZSMDE5SE1TWmEtN0QtOFhxM0R0djQ3T29HekUyX3lTa0RkNWp5UXhROWFwTUM1QXBtbFUyNEx3ZUJaTlNXSnRfa3Q3M0VkREQxbEJQbzNFUFVMdElhdHBsOHAyMllWbFJSWDVZMWI1R3dmMm5obUZ5VXQ4NWk4eVNx0gHSAUFVX3lxTE1CTTlIQk1uT1RqMnRxanFZWHJZb0pfWFAzX3ZLUV9iUzJvb3NxMEtiNUh2TWgxZnNxUUZOM3ROaVFQQllhX0VaWkRzekNWa3M0WnBMTnZIZkp1Y3JLbDBDc2g0dEs0R0gyOEFiY0NaVkpvR0Vqa2YxVUROejBYY3hYMHg2dlJLaDFZWHk3QUlGZEZ4SjYzNjVINEEyQUg3b3R0WGpkLXZpd21jTWxDTjd1N05hQXM0VTlRU19JQUF0RWlPUVBvdGVURUQ5MVFBa2FQUQ?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Silver Prices Plunge 4.5% Alongside Declining Global Demand",
-   "summary": "Domestic silver prices tumbled 4.5% to settle near Rs 1.69 lakh as precious metals faced strong downward pressure amid concerns over Federal Reserve interest rate trajectories. Silver exchange-traded funds also crashed by up to 5% following forecasts pointing to a 5% drop in global silver demand. Gold prices and gold ETFs similarly experienced downward corrections during the session.",
-   "why": "Precious metals are sensitive to shifts in global interest rate expectations and shifting industrial demand forecasts, leading to sudden valuation swings.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOb0QwSTZIR3NFZUlMOFhYbEtoZVZscWFWdTNwajdHUHlWZm9PTnQ3THd4Q2xGUVBhM3RQcWJ1NVVsODVWalpGNlloN1I5cXFGczdsUTN2Zm5JNGNIdzkwTkFveXBEQ2hySk5kS2U3ajNYSUtpQ290UWJMSXZZYjN2ZnVaTDBIcUxPWkNfUXFTRUxEYXB5c20zandFYlJpTVpTZU9qbUZPLW43eXZfaTNwcFVuTEFmeGozbC1lcE5SUmN6eHR5Yy12YmtnT3NNbHlUb2REOXh2akFLUdIB3wFBVV95cUxOc3plTThuYXppU2JXUFE2VW9pRXpSZDJkQ0hqaURaY0pNMmNzZkdUbHdsNkJmNHB3YTRISlV5NlJySzlPbG5zUEVFUDU3RjB6TTVxWDZrejRxcElxbVF0VjkweV8ydXBiYzA1SU95TF82NTlkWDZETnJPcjE5M25DdWR1b0c4NDNtZkpqd2xMYllxLThQS3VlMllPdGJiQ213SWRuRnJkZ3Z5bll1OFpBZHM0RFJJaUN2bE5UVnhla2ZXZ1FFWmtwa1NldVBQS2N2eEN1QzBkRWpyZ3N6dS1R?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Jefferies Maintains Buy Ratings on Six Adani Companies",
-   "summary": "Global brokerage firm Jefferies maintained its buy ratings on six Adani Group firms, pointing to an expected upside of up to 44% in select stocks. The optimism stems from a projected $51 billion capital expenditure program aimed at driving 23% annual earnings and EBITDA growth. Analysts highlighted robust medium-term fundamentals across the conglomerate's energy and port operations.",
-   "why": "Large capital expenditure plans by major conglomerates signal corporate expansion intentions, which analysts evaluate to estimate future earnings potential.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/51-billion-capex-23-earnings-growth-adani-ports-adani-green-to-energy-jefferies-sees-up-to-44-upside-in-6-stocks-11794842210030.html"
-  },
-  {
-   "category": "Economy",
-   "title": "RBI Cancels Registration Certificates of 49 NBFCs",
-   "summary": "The Reserve Bank of India has exercised its statutory powers to cancel the certificates of registration for 49 non-banking financial companies. Separately, 13 other NBFCs and one housing finance company voluntarily surrendered their licenses back to the banking regulator. This regulatory housekeeping ensures tighter oversight and compliance across the shadow banking sector.",
-   "why": "Central banks regulate non-banking financial entities to maintain systemic stability and protect consumer interests within the financial ecosystem.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63979"
-  },
-  {
-   "category": "Equity",
-   "title": "National Stock Exchange Shares Hit Record High Valuation",
-   "summary": "Shares of the National Stock Exchange surged to an all-time high, pushing the company's overall market capitalization past the landmark Rs 5 trillion threshold. The milestone reflects robust domestic investor participation, rising trading volumes, and strong financial performance by exchange infrastructure providers. The exchange handles the vast majority of India's equity trading volume.",
-   "why": "Exchange valuations reflect the health and activity levels of the broader capital markets, benefiting directly from high retail and institutional trading volumes.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQmx1WF9OVG5INGRFWWRpNDBjbEhaWGJZcWp4bHBQdkw5cWlPSGRrV3RDRHM3bGt4RDRnX1Q3OThtaDFzV1VNX2FxZzNxMjJjQjFIUGVmZXFuU2JkQjFoUlBIMnkzWDlYUlRiVWw1bWVrT1o5bVRkTTY2b25iQUdPMF9CYkh4OXFzZWRpRlkzWmt6SG4yXzBFMml6bGhyWnQzQjRDZVBUTWZXc1NSS1lCVzZDOGFQM0d0Mk1WWkF3YVlZT1RTOXpvb2pnSVhFOFV4ZzBQLUZ30gHbAUFVX3lxTE5wZm1lLTVacWt4bzRVOTY4VDVPa2U0OTAtbWhxamxXRS02WERkN000b3pqZUZMMHFubGllT0J2ZnIzUk5FWV9tY1gzU2cyeDBsbWlaY1czS3B3NTAwNmY3V3JqQTJYQjN0UWd0S2s2clpEZmdVQm1tNXlVUG9kMm5WT0ZuX3RNSjZrMTFvQUNKUXpsMHpWQ0c2NURBZkU1VkdNSVIyRDZXYndPUkRBOUI1aUVkVHdrb1hPTEJuOTU0SHNYQW5KVU1IdW1rWGNwUXJCRVNoUUR0WDlxOA?oc=5"
-  },
-  {
    "category": "US Markets",
-   "title": "Wall Street Plummets Sharply Amid Deepening AI Selloff",
-   "summary": "US equities closed sharply lower as anxiety intensified around artificial intelligence sector valuations ahead of upcoming corporate earnings and public offerings. The Nasdaq tumbled over 2% and the Dow Jones dropped hundreds of points as investors rotated out of high-flying tech names. Market sentiment was further rattled by leadership uncertainty surrounding key semiconductor manufacturers.",
-   "why": "Concentrated market leadership in technology sectors means that sentiment shifts in major artificial intelligence firms can trigger broad market corrections.",
+   "title": "US Equities Retreat Ahead of Key Artificial Intelligence Results",
+   "summary": "Major American equity indices experienced steep declines as market participants turned cautious before high-profile tech earnings. Technology shares led the retreat, influenced by nervousness surrounding upcoming quarterly updates from key chipmakers alongside initial public offering plans for Anthropic. Investors reduced their exposure to elevated valuations in the artificial intelligence sector, sparking a broader pullback across major benchmarks. This risk-off sentiment reflects growing market sensitivity to corporate performance after an extended rally.",
+   "why": "When mega-cap tech stocks drop on Wall Street, it often ripples into international bourses, impacting emerging market sentiment and technology sector valuations.",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZEJobHpHMl90WUdVbnpzSGxLb1l3bi1BczhrN29iVW9rUzBtQWE4aFNuM2ZGS1RIQThLdEZPWmZjeExVaHhRaXBubkdqR3R3TXJYTlRqUmRYcXZxYS1pV1lyRlExUDdEUWJ3cTg4aktJVWcxbkg5UW9oeVRXLXhCZjdRQmFNeFJlLXhpWTRMM1lEUVlodGwxVHNCSE9ONTlnem0yekw1dDNraElYZGc?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Federal Reserve Assesses Economic Implications of Artificial Intelligence",
-   "summary": "Federal Reserve officials highlighted that central bank policymakers are actively studying how emerging technologies like artificial intelligence could reshape productivity, employment, and monetary policy. While acknowledging the long-term upside for economic efficiency, officials cautioned about potential valuation risks and macroeconomic uncertainty. These assessments help central bankers determine how technological shifts might influence future interest rate decisions.",
-   "why": "Technological revolutions impact labor markets and productivity growth, forcing central banks to factor structural economic changes into their inflation and interest rate models.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQjdTNjl1UUgxQjFiMEFHRXl6UHlheGRXQ1NkTXJRbnlSaWxIdElaeGh4cjUtYzVEdXM2NlZUdEoyTjhWcXFiMGxtUFIydjhHcF80bmhqb1lpY01ReEF3bTdUV1hNSi1QTVJiUnRYeWl0NHRhMWVWdW9vWFk0aFA3Z082b2htY29zM0ZKMHVKd2JmNnM5U1NBS1owVXlKcy1wZzREazFJSjJzQVIzQlZJ?oc=5"
+   "title": "Nvidia Third-Quarter Performance in Focus as Revenue Forecast Nears 109 Billion",
+   "summary": "Attention on Wall Street has shifted toward Nvidia's forthcoming third-quarter fiscal 2027 financial release, where total top-line revenue is estimated to hit 108.9 billion dollars. The market is closely watching enterprise spending on specialized computing chips, customer data center additions, and overall artificial intelligence infrastructure demand. Analysts will examine whether large technology companies are continuing to allocate heavy capital toward high-end graphics processors. The release serves as an essential barometer for the global semiconductor and computing supply chain.",
+   "why": "Nvidia's earnings serve as a primary indicator of global tech spending, influencing semiconductor suppliers, electronics manufacturers, and cloud services worldwide.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nvidia-earnings-preview-6-key-factors-investors-will-watch/slideshow/135911290.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Silver Funds Slump as Global Industrial Demand Forecast Weakens",
+   "summary": "Exchange-traded products tracking silver plunged by as much as 5 percent, accompanied by parallel declines in gold investment vehicles. The sell-off accelerated after forecasts indicated that worldwide demand for silver could shrink by 5 percent during 2026. Because silver serves both as an industrial commodity and a store of value, shifting manufacturing needs can quickly affect its pricing dynamics. Investors trimmed holdings as industrial consumption outlooks softened alongside prevailing worries regarding interest rate directions.",
+   "why": "Silver acts as both a monetary asset and an essential industrial input, making its price sensitive to factory manufacturing trends and global interest rates.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNUTgxWXhJbnlhcWFUQXlRbFFkdmtUMTFhLS15X2FTMndIZFlEU3FwSVFSRzdlSzVMSTFPLXRHTk5tUDhFLXlia1ZHTXVzTzVDdW41MkVOb0hoY2NnNFlKVllCSFVtVmRIQ0JBQzZtS25KXzA1UVJadW5pWndqNnVTT3k2ODJPakR5SDN6TXZtVHFubWFSM2ZSenRqNEtoSm15ZlJCR0RCSXljVEkta1BBbFcyYWRSMUM2ZXREZWNnYi1Gb1ZxRzFkMHBHem1heHhZTWRFUVM5R3lFbzl1anlNZXV2bUo5MUh3SVMzYlZBX2RSNjlkUHfSAfsBQVVfeXFMTVNJXzNaTnpHdVBVR2JpX1MtdDBQVlJ5eEFyU29vYWxHZWlXRUdwdnZTRVJabkJLRWZCSVBwVWxKWW95d181NEsyUm53SndwMHpaTlJmYWNxajRHTFJZM3dlZDN4c1NWNXlySTkwUF84OVlOR25aZU1QZHpmR3BNVjZaYTBYbURpLUF2Z2o0b0NpTFBGd2hRYVNnbkVuYU9jdFNiRkJtQ2Z0SGFOcTdPM0RuRDJfQTRLQkdUX1JVXzU4VGRpbG9CYmgyQmhLb29HLW9TbklRWG5GN1g2eTZsM3FMcVhWVkQzaEtYRWUtcjJMdzI3ajBrUWtzVzA?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "India Wholesale Inflation Climbs to Over Twelve Percent in October",
+   "summary": "Wholesale price index inflation in India advanced to 12.29 percent in October, registering its highest point in two years. Rising energy prices served as the primary catalyst pushing the wholesale basket significantly higher during the month. Such steep price increases at the producer level indicate escalating input expenses across supply channels. The reading highlights lingering cost pressures within the domestic manufacturing and transport ecosystem that could influence broader economic conditions.",
+   "why": "Wholesale inflation tracks price changes at the producer level, signalling whether business input costs are rising before they eventually reach everyday consumers.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLTFmQzZlSGd5UnY0U1BBT2hOVzNyM01oeHdGZ0JBSGRyajJ2alRTQk54V2FQZVFBbVNmWHp2d1lNSnhjSnFyYWZlYUlNN2kxd2xXbzV4cU0weHNQUTRSY3Y0azYzZGE1RXB5NU5oZ1JQZ01VcmxOYUY0SEF6U0Njd2hRNG5TYVlzZFRxaElKdzNRanZOUEI0NjVVZUV3aUIxZFMxRjJJRTZYTUxTdTh1ZHY2VzdwaWhXRkNGNVZ30gHLAUFVX3lxTE56MEU5bjhUckpCYXloa0o2SVFhMUpWNENhcnV3Yldmd1U2RVJLYmZVWi1VTU5oWWpZMEViZjFaVDdjVGdSeExQYU1Ua0pDbVVPSGhSQ1g1WUFHT2RZX1MwY1ZsbkdyRDNwVE1pakZhOEozMWhnRjItd3B2UDU2RnNKRGoxZkkzZnJfUXFMZzhJaWdlcFNBb19xYVg4cE53OU96UTlMLWRZUG44VUp2T1BoRS1YZG10WXJwaEtOQUNoV1RWSVZLYWkyYlE0?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Domestic Sovereign Debt Strengthens as Sliding Oil Prices Diminish Inflation Fears",
+   "summary": "Prices of Indian sovereign bonds climbed during early trading hours, benefiting from a notable slump in international crude oil quotations. Because India imports the vast majority of its crude requirements, cheaper energy directly helps rein in domestic price pressures. The relief on the import bill reduced investor anxieties regarding immediate tightening actions by monetary authorities. The positive reaction in the bond market underscores the tight link between global commodity prices and domestic borrowing costs.",
+   "why": "Bond prices rise when yields drop, and cheaper crude eases imported inflation, reducing pressure on the central bank to hike lending rates.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-gain-as-oil-slide-eases-rate-hike-concerns/articleshow/135910842.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Appreciates Thirty-One Paise Against the American Dollar",
+   "summary": "The Indian currency strengthened by 31 paise to settle at 93.63 against the US dollar in morning trade. A slide in international petroleum benchmarks and sustained purchases by offshore funds supported the domestic currency's upward momentum. Cheaper crude eases dollar demand from domestic oil importers, helping stabilize the nation's balance of payments. The appreciation offered brief respite to the rupee after enduring sustained depreciation pressure in prior sessions.",
+   "why": "A strengthening rupee reduces the cost of essential foreign imports, easing trade deficits and dampening imported inflation across the economy.",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWU5jTC1qZ2FUMllIT3czR1RkU3VSZ2FkNHJtaEpUdnlaaGFJU2owLXR2djhhejIyZ1A1aThDendlazZYbUF0QWdPVkJkbnIweF9RZnIxUWdES0xmS19LeWlUbFlxTS1oVnRKakdqeGpxN0R1Y2kyckU5YWsxSkVHaVpfWGdpblhuX0pzZ2hibHNEV3IwcmNneHdJNkVnQnVvU0RRbzE0N0VhaTJsMUxsV3Z5aVZpZW5nRXdMTFVqdURGVFBySEZzdkFkU28xQ2NwNV930gHTAUFVX3lxTE9ZTmNMLWpnYVQyWUhPdzNHVGRTdVJnYWQ0cm1oSlR2eVpoYUlTajAtdHZ2OGF6MjJnUDVpOEN6d2VrNlhtQXRBZ09WQmRucjB4X1FmcjFRZ0RLTGZLX0t5aVRsWXFNLWhWdEpqR2p4anE3RHVjaTJyRTlhazFKRUdpWl9YZ2luWG5fSnNnaGJsc0RXcjByY2d4d0k2RWdCdW9TRFFvMTQ3RWFpMmwxTGxXdnlpVmllbmdFd0xMVWp1REZUUHJIRnN2QWRTbzFDY3A1X3c?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Listed Companies with Heavy Promoter Share Pledging Expand in September",
+   "summary": "Regulatory filings show that the count of domestic corporations with over 90 percent of promoter equity pledged jumped to 42 in September, up from 34 in June. When business founders collateralize excessive portions of their shareholdings to raise debt, it places their repayment capacity and balance sheets under heightened scrutiny. This increase indicates growing dependence on equity-backed borrowing for corporate financing. Heightened collateral obligations can expose businesses to substantial risk if underlying stock values experience abrupt declines.",
+   "why": "Promoter pledging happens when company founders use shares as loan collateral; steep price drops can trigger forced lender sales, eroding shareholder value.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/promoter-pledging-more-companies-cross-90-mark-11794895081826.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Anchor Investor Share Restrictions Expire Across Twenty-Three Recently Listed Firms",
+   "summary": "Mandatory trading curbs on anchor allocations in 23 freshly debuted enterprises are scheduled to expire between mid and late November. This shift frees up approximately 13 to 22 percent of total outstanding equity across these issuers, permitting early institutional backers to transact freely. The end of lock-in periods often alters immediate market liquidity and secondary trading volumes as significant blocks of stock become transferable. Investors track these dates to evaluate potential shifts in trading float.",
+   "why": "Anchor lock-in periods prevent early big investors from dumping IPO shares immediately, and their expiration often introduces temporary supply swings in secondary markets.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/ipo/jio-platforms-bls-polymers-shiprocket-more-23-stocks-to-watch-as-anchor-lock-in-expires-this-week-list-11794896708353.html"
+  },
+  {
+   "category": "Equity",
+   "title": "International Investors Shift Capital into Indian Equities Fund Amid Tech Volatility",
+   "summary": "BlackRock's iShares MSCI India exchange-traded fund drew more than 316 million dollars in new allocations over a single week, marking its highest weekly inflow since June 2025. This surge came as global asset managers diversified their holdings away from technology-heavy markets troubled by wild price swings. Overseas investors redirected capital toward Indian equities to balance their geographical exposure. The inflows highlight how emerging markets with domestic consumption appeal can attract defensive capital during global tech turbulence.",
+   "why": "Foreign portfolio flows into country-specific exchange-traded funds reflect broader institutional sentiment and can directly boost demand for underlying benchmark stocks.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/traders-pour-cash-into-blackrocks-india-etf-as-ai-rout-deepens/articleshow/135909707.cms"
   }
  ]
 }
