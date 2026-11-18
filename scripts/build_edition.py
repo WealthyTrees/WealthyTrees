@@ -249,4 +249,11 @@ out = (f'<!doctype html><html lang="en"><head>' + GA_TAG + f'<meta charset="utf-
 os.makedirs(f"{R}/pages", exist_ok=True); os.makedirs(f"{R}/edition", exist_ok=True)
 open(f"{R}/pages/the-915.html", "w").write(out)
 open(f"{R}/edition/{now.strftime('%Y-%m-%d')}.html", "w").write(out)
+# Sitemap: keep the new edition listed (idempotent — skips if already there).
+_ed_url = f"https://wealthytrees.online/edition/{TODAY}.html"
+_sm_p = f"{R}/sitemap.xml"
+_sm = open(_sm_p).read()
+if _ed_url not in _sm:
+    open(_sm_p, "w").write(_sm.replace("</urlset>", f"<url><loc>{_ed_url}</loc></url>\n</urlset>"))
+    print("sitemap: added", _ed_url)
 print("built edition", n, now.isoformat())
