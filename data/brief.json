@@ -3,117 +3,125 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,189",
-   "change": -0.78
+   "value": "25,228",
+   "change": -0.25
   },
   {
    "name": "SENSEX",
-   "value": "81,897",
-   "change": -0.77
+   "value": "82,032",
+   "change": -0.09
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,768",
-   "change": -2.5
+   "value": "3,757",
+   "change": -2.76
   },
   {
    "name": "CRUDE WTI",
-   "value": "$84.2",
-   "change": -2.16
+   "value": "$83.0",
+   "change": -1.89
   },
   {
    "name": "USD/INR",
-   "value": "93.48",
-   "change": 0.02
+   "value": "93.43",
+   "change": -0.04
   },
   {
    "name": "S&P 500",
-   "value": "7,341",
-   "change": -1.03
+   "value": "7,308",
+   "change": -0.44
   },
   {
    "name": "NASDAQ",
-   "value": "24,328",
-   "change": -0.74
+   "value": "24,332",
+   "change": 0.01
   },
   {
    "name": "DOW",
-   "value": "50,759",
-   "change": -1.64
+   "value": "50,138",
+   "change": -1.22
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Authorities Consider Reducing Cash Transaction Taxes While Increasing Levies on Futures",
-   "summary": "Indian authorities are assessing plans to slash the securities transaction tax applied to cash delivery trades by half. Concurrently, the proposal involves raising duties on derivative contracts to discourage excessive speculation and foster broader participation in regular share investments. Retail activity has tilted heavily toward fast-paced derivatives in recent years, prompting officials to reconsider existing fiscal structures. This adjustment seeks to redirect capital flows back toward long-term investing in actual company shares.",
-   "why": "Transaction levies directly alter the cost calculus between purchasing genuine shares and betting on fast-turnaround contracts. Lowering cash trading friction helps promote patient capital while reining in speculative risk.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/govt-weighs-tax-tweaks-to-boost-stock-trading-curb-derivatives/articleshow/135953824.cms"
+   "category": "Economy",
+   "title": "Rupee risks persist, inflation pressures may push RBI to act, say economists",
+   "summary": "Rupee risks persist, inflation pressures may push RBI to act, say economists - CNBC TV18  LinkedIn",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "LinkedIn",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOURuVllFOEdURVMxa2JUNVNaNFhqaWp3U3IxUVB6SWdNOFpmcThUN2x3WlhwUmxVb1d2WGtXdi01OWxVVko0R0d6dHVaNHJiUHBtRndtNE1uWVRHVlJ6NkxCS2lFMkl4aFJSc0NkeE9FMEpRel9tbmVicmJtZHcyNy1oVnBqc1U5OE5VbkYzN0MzdzluSkpVMjZ0dUNqOW1MTjdpTFFSU1RSTVNkM2t3c3ptVlA?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Overseas Investors Inject Over Nine Billion Dollars into Domestic Equities",
-   "summary": "Overseas institutional investors have directed 9.61 billion dollars into domestic equities during November, setting a fresh record. This substantial allocation represents a marked turnaround after an extended phase of heavy selling in preceding months. Market participants attribute this renewed interest to improving corporate profitability, alongside moderating petroleum prices. For beginners, observing cross-border capital trends helps illustrate how international confidence and global liquidity cycles directly affect domestic stock liquidity.",
-   "why": "Cross-border institutional inflows serve as a major engine of domestic liquidity and share valuations. When global funds re-enter the market in volume, broad market sentiment and trading activity typically firm up.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/global-money-rushes-back-into-indian-stocks-at-record-pace/articleshow/135950745.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Capital Market Regulator Reviews Framework to Bolster Margin Trading System",
-   "summary": "India's securities watchdog is currently reviewing recommendations designed to reinforce the country's margin trading facility. The regulatory chief stated that the authority is examining methods to improve the robustness and monitoring of borrowed-money trading structures. Margin trading allows eligible market participants to buy shares by funding a portion of the value with broker loans. Enhancing these supervisory rules ensures that leveraged equity buying remains orderly without introducing unexpected systemic vulnerabilities into brokerage houses.",
-   "why": "Margin facilities amplify buying capacity by permitting leverage, which magnifies both potential profits and portfolio losses. Tightening these mechanisms protects brokerage solvency and safeguards market stability when stock prices experience sharp downward swings.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcHllQ1pNb1E1ZE9ieXJoZlF3Z1NhOXBZRGpKeGxvVFpfWEwwSkFlWTFCVDZKME90YjQzNThaQnE5ekI5bEdfRldOcm5qclM5bXRBSk1aSFNaYl81QnNTTnR2SXhQMkZGVjY0Z1dxdnNJd0lRbWlPMFIyV3R3RnBOSy1WSGhpRzJyZ2dadk9fdUlfN2xmQktkcUprN0RPcmtIVG1lWTJZaHIxeHE1d01vZzhCNTI0MmFOLUJXcA?oc=5"
+   "category": "Economy",
+   "title": "Inflation pushing Indians to cut back on essentials, families skipping dairy",
+   "summary": "Inflation pushing Indians to cut back on essentials, families skipping dairy  India Today",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "India Today",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOcXhfY0dZODNjcW42UnB3SmpXLXhOSDk0el96QlhULThpQjJlUnc3cHdjRV9BZG9ZenROdGxHdTRoM3F6T3JFNTA3cmk3MzFFMUhscEFNTGY0SDZTU0FhYTRBMGdPa293UFhydVlwQmdSWE5vbTVsa3JGNmRRdzgyVEc3dlJOYUVKOVFZZUl3N21fakhLZDVMM1ZMb0U0S2tOcFlJanhTbkF5OUJJeDdiejUwRkkyQXZLYTc4UHlqeks1WkVCNWVUN0hLQ1M1cjFXeUhLeUlZTUdsWTYxTXpjeVVnTjlJZ3hZXzZTbEZvMThQZjZ2eG5vVFpB0gH_AUFVX3lxTE90Z1UxZ2dNREdUZUhHcjhKVEhWWklORDBkV1MwWW1qVF9rcHBLMDhLRW40ZXdBMWNnc25yVllwdURBWDNPQVJTRDBCV1BHOWNBYlc1bzB2ZXNKZUtvZ3liTDN1MXhnb292bDl0VHV3UThPejVGb0xrcEU2cC0tTHNBRGp3M1paT2cyVEh1MXpuLUVZZ01LeDZ2NW01MFd2WVB0SGhHQy1CbW5sLWg2bHhlN203a1F2cml1QXhwZVNfaExMd2ZKaEhwWThZMXAyUGtWQ2pPZllJSXhXa1BkSGV3eGkwcnB2NEY5dkFncVJEWGJ1N1VQN0VNcVBmN3NTaw?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Decline Sharply as Silver Reaches One-Year Low",
-   "summary": "Gold and silver recorded notable drops, pushing gold to 1.38 lakh rupees while silver tumbled to its lowest level in twelve months. This sharp pullback marks a substantial reversal from earlier peaks, where gold had previously reached near 1.80 lakh rupees per ten grams. Bullion values often experience pressure when the American currency strengthens or when alternative investment yields rise. For newcomers, precious metals serve as traditional hedges, but their prices fluctuate based on currency strength and interest rate shifts.",
-   "why": "Precious commodities represent a bedrock defensive asset used for portfolio diversification during geopolitical or inflationary turbulence. Following their valuation trends reveals how shifting global interest rate projections and currency strengths reshape demand for non-yielding assets.",
-   "source": "Rediff MoneyWiz",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbDlINjlidDFLU3pfdV9sdkVIVkt1Y2laNkh5U09IUEJUUzFTRGQzdlpybEhDbWJCdW5Id1JzQjhhNGxYcjRXQzlmODlBSDhJN2pvT3ZOVDE3aWxXTjN6eTVDdlVvQVNsbTd2QllqaDZtdnZXZk5uN0EyV21neGxla0J2SWtlTVlCOUNPTTlWYXBybzFZaDJkVzhVaDBzQ1VLZHdDWXhDZHJaS0wzSmQ4TnpvanbSAboBQVVfeXFMUHNLeHVkWG5nQTR0Zm10T0E5ZTFqbS1hNDhYYm1NTFZaMzBXTnltV0FmOU5SRkpJUnVZNldPVGY1QUc5Y185YVJwS0dsZ1dha2h1OVdRMEpKbFBhbkZja3lkdWZmRktnQWpmM0VUdXdsbkpiTkd0NHZPT0pfQ2tzdk5fQ05pTl9nM25wblhYNThpdnNidmdfSW0tOHRGS3BSOE94VnBzanNkMFNjeVloSm90VENLbWJDQW9R?oc=5"
+   "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
+   "summary": "In terms of GOI notification F.No. 4(4)-B(W&amp;M)/2020 dated April 13, 2020 (SGB 2020-21 Series II - Issue date May 19, 2020) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
+   "why": "Energy and metal prices move first, and the rest follows.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63996"
   },
   {
-   "category": "Economy",
-   "title": "Indian Rupee Advances Forty-Six Paise Reaching Seven-Month Peak",
-   "summary": "The Indian rupee climbed by forty-six paise against the dollar to trade at 93.48, touching its strongest mark in seven months. This domestic currency appreciation was primarily underpinned by significant capital inflows from foreign funds into domestic exchanges and softening international crude rates. Because India relies extensively on imported crude, cheaper petroleum eases external payment burdens. A firmer currency helps reduce the overall cost of imported goods, easing pressure on domestic inflation and foreign exchange reserves.",
-   "why": "Foreign currency rates directly determine how much an import-reliant economy spends on essential resources such as fuel and industrial parts. A recovering domestic currency strengthens national purchasing power and limits imported inflationary pressures.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPcEtfX0Q4bWpLNk1UdFgyeE00aUM0dlpmTkk4aEx3TzFOeWw5bS1Db2tMcHVwakQ1VzBlWVNwRGpxUW9CLThKQVE3U3hlZFEzYk9yc3pxUzFVbFRkaGU4cmdybGhvOUpiMzR2ZU5ZLXJGNElNQWJxTk02ZnhiaWFxd1FMbHJqWWt0WEpkX25aYWZQYnYyV1JlWlYtM2FpeUt0Z19LOWNyTTdLcUp5MDlmbFBlcm5KVjVOZGEtQlVLVjlVbnZoWVl2TlNWb3JvM3JvYndvMHo0THduWHh1UXdHc2VZVkfSAeoBQVVfeXFMTklNbW9fSUxBU25HM0pqNTNXb2JEOVlYZW1NZG81VWtCVFZYTndTUnRla3JNSUdlSUsyZXpYd3dEOGhFUDE3RkdCY0p1QlpWOGhJNWswangzZlg2dTBXa2tHMkl1MV8wcDQyRlZEZTdjTE1MTTJ1ZUU4Wms5TnJ0b3pSVVJjODhGdXVQUjRLVGE2WkNQc1pMNDVBRTNXSWZxaFVLUmpQVzZYcTFDZTdhU1BmV3dfaHZGdXhkR0cyUmFIeUtNUU53TE9NWS0tUjhSTHBHdE1rbGdaaWtJREVQWDJWTXBxUkt4WENn?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Wholesale Inflation Rises Beyond Twelve Percent on Surging Input Costs",
-   "summary": "Wholesale prices increased by 12.29 percent in October, driven higher by rising expenses for petroleum, basic metals, and industrial chemicals. Additionally, individual agricultural goods faced sharp spikes, including a 116 percent rise in onion values. This acceleration in wholesale indices exerts notable pressure on corporate profitability, as factories face steeper bills to purchase primary raw materials. For new investors, wholesale inflation serves as an early indicator of pipeline production costs before they eventually filter into retail consumer baskets.",
-   "why": "Wholesale inflation measures the production price burden borne by factories and suppliers before products reach end consumers. Persistent spikes in wholesale costs squeeze corporate profit margins and increase the likelihood of eventual consumer price increases.",
-   "source": "ET Edge Insights",
-   "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNWEd5VlYtZEo1QUk4OHV1TnhkLUVLdU1TRVVWMmtWRXhybUdkVzdKQ1VLdmlQRVhfSFhxQzBPRkdxTE9ROF85bjNVNEgyanRIaC1YQmJVMG9qTHJIQS1XVExWU2VZOFFhbzJKekI1SG0zZDRDT3VNVVJhLTBRSnpnMXNXaEdpWVZwN0dTenBpWjZQaDZlaFo4RnowUDN1VjYxdlNsc1M0blBpd0o0V0ZLRThpUS1haVI3RXJ4T3hfaUdGNG11SG1tMFRLNkUzVzd4MHlBSE5iTFJmSlo5d0JkTXZ0Q3RYNGdyb09TMmJRVXFMdUxJZDJBRFVocFN0MlUtcTBV?oc=5"
+   "category": "Commodity",
+   "title": "Gift Nifty Signals Flat Start; Crude Falls, Asia Mixed",
+   "summary": "Gift Nifty Signals Flat Start; Crude Falls, Asia Mixed  HDFC Sky",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "HDFC Sky",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOeVdfV1pFbkJFSHVRSXYzOWRHT2ZFcERHU1pqWVRGMGFuY19DbndCZjJMaFk4Y3p5eXFEMlAycG5RcmRTRzZkd3l4RlF5N3Y5OWduODZQc1NOakZzSmduei1TVk9FM0d0UGtYQzFnRDFkRUFVRHdITVROODF3ckF1V3Zudk4tTjVRVFZmZA?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Artificial Intelligence Firm Anthropic Prepares Landmark Public Share Offering",
-   "summary": "Artificial intelligence developer Anthropic, the organization behind the Claude chatbot, is preparing an initial public offering that could reach a valuation of 1.6 trillion dollars. The enterprise has garnered significant interest from Wall Street, supported by substantial corporate investments from technology giants Amazon and Google. The public debut highlights the enormous capital requirements needed to build cutting-edge computing models. Understanding mega-cap technological listings provides beginners perspective on how private venture investments eventually transition onto public equity bourses.",
-   "why": "Primary market offerings allow rapidly expanding enterprises to raise public capital for research, infrastructure, and commercial scale. Mega-cap technology listings demonstrate institutional risk appetite and often establish pricing benchmarks for related industries globally.",
+   "title": "S&amp;P 500, Nasdaq open higher as Nvidia forecast eases AI jitters",
+   "summary": "The S&amp;P 500 and tech-heavy Nasdaq opened higher on Wednesday after Nvidia's upbeat revenue forecast calmed investor concerns about the chip bellwether's future and improved sentiment.",
+   "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ipo-why-wall-street-is-betting-big-on-claude-ai-maker/slideshow/135951884.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/sp-500-nasdaq-open-higher-as-nvidia-forecast-eases-ai-jitters/articleshow/135966195.cms"
   },
   {
    "category": "US Markets",
-   "title": "Nvidia Executive Transfers Over Ten Billion Dollars of Equity to Trust",
-   "summary": "Regulatory filings submitted to the US Securities and Exchange Commission show Nvidia co-founder Jensen Huang and his spouse transferred almost 59 million shares into a family trust. Valued at roughly 10.7 billion dollars, the transfer shifted equity from older trust arrangements dating back to 2016 into a newer structure. Regulatory reporting mandates that corporate insiders publicly disclose significant stock ownership reallocations to maintain transparent records for public participants. Such filings provide market watchers insight into corporate insiders' formal ownership arrangements.",
-   "why": "Insider disclosure regulations ensure that ordinary shareholders remain informed whenever company leadership alters how their shares are held. Understanding such filings helps investors distinguish between personal wealth structuring and direct market share sales.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nvidias-jensen-huang-10-7-bn-share-transfer-ceo-wife-lory-transfers-59-mn-stocks-to-trust-what-sec-filing-reveals-11794980098699.html"
+   "title": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking,",
+   "summary": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking, U.S. Fed rate hike fears  The Hindu",
+   "why": "US trading often leads the next morning in India.",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQc3pjTHlmVWZZdURUc3l0alBLcnBYMTU4b0VlaVJpaDE2WDRORVNySExnNjRnQTItTWlZTWdsWDB6S1lueDBUNFZEd1FzdDcyenAwN1VUd0ZMY1dULXk4blhpb3l3OVFKMFl5YVljbDU1QzhpWXJMWEtCMm1ya3hHUGFnWEZCTU15eHpTR1BKTkN1RDBHRG82QlVERFdJN2ZLZzU4Yy1ULVdvc21XUGppdWxwVWNfM29YaVBkYjRpai1CNFZYdDVTWTZkcHRXZFczOHVkdVc1R0hHdXNYSThpZ2JHTjM2Qk5yLUFFdW84WE_SAfcBQVVfeXFMTlVJRmthZjFxYmxQbTVGZjZjSjNxeVhDdEo4a1V1d3pQaVVleVppUkJmdG1waWZoOFRlN1BQUmR2ay1KTDU5ODFEQ3NDSzl3Mll4ZVNsS2VBNDNIWnNHaWk4bzJRUjY2Q3RxYXZocEhjdGw3MVg1WlZma19kUW9SRWw5WDJIQkd4OVJMT21lQV95UjZkdDdZbEVpNTloSGN3aWJMN3pBMGRpc2JaTE9aLS1UZHVEN2tyeXBDZnd4MmZDZGs0VjFJTkp4MDNiSzZsQzN2aU9HdE9UQTJNaGhiY2paYWtfbUM5eXBDRHJ1SzlaRlhqcEx1MA?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "Federal Reserve Official Signals Multiple Interest Rate Increases by 2027",
-   "summary": "Federal Reserve policymaker Musalem announced that the United States central bank might need to implement multiple interest rate increases before the spring of 2027. Persistently resilient economic data and stubborn inflationary pressures are bolstering the rationale for maintaining a restrictive monetary policy stance. Elevated borrowing rates in the United States tend to boost the dollar while lifting sovereign bond yields across international debt markets. For market learners, US monetary decisions reverberate internationally, influencing foreign fund movements across emerging economies.",
-   "why": "Central bank benchmarks establish the baseline cost of credit globally, steering asset prices and cross-border currency flows. When American interest rates remain high, emerging market assets face heightened competition for international investment funds.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxONlE5MkU2R0ZHZmVES3lZRXd0anBhR25DRkJOcTM5UU1INjc2VXVuMTFZSG9ONE9HTUdCTGpiVnE2bTdxNmQ5a0JuZWZwVlNFM3dKc0JiZ3U4OElZRWtkLTFOU20tMGZDNVRWMFk5YjdsTzlZdkxNRGV5dl9QWjF3YW5SMV9RdVJUUGNqcmpuSzhNT25wYllhWVcwSXIzYU5acEZkRmlMbUdiQl91NXpnbG95M2NiVmdCYjVuUlFJdw?oc=5"
+   "category": "Equity",
+   "title": "Target reports strongest quarterly sales gain in five years heading into the",
+   "summary": "Target reported a 7.1% increase in net sales for the third quarter, reaching $27.07 billion. The growth was attributed to a revitalized product lineup, expanded same-day deliveries, and price cuts.…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/target-reports-strongest-quarterly-sales-gain-in-five-years-heading-into-the-holiday-shopping-season/articleshow/135966816.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "PSBs' net profit rises 17% to Rs 1.10 lakh cr in H1",
+   "summary": "Public sector banks in India have reported a remarkable 16.9 percent rise in net profits during the first half of this fiscal year, reflecting a thriving financial environment. With total business…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/psbs-net-profit-rises-17-to-rs-1-10-lakh-cr-in-h1-fy27-business-crosses-rs-300-lakh-crore/articleshow/135965650.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Puravankara launches Purva Cityspire in Kochi with ₹2,000 crore GDV",
+   "summary": "Puravankara Limited proudly presents Purva Cityspire, an ambitious new venture within the Purva City integrated township in Kochi. With an impressive gross development value of ₹2,000 crore, this…",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/puravankara-launches-purva-cityspire-in-kochi-with-2000-crore-gdv/articleshow/135965572.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Prestige Group buys 50 pc stake in Advent Convention and Hotels International",
+   "summary": "Prestige Estates Projects Ltd has successfully acquired a 50% stake in Advent Convention and Hotels International for an estimated Rs 500 crore. This partnership is set to develop a commercial…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/prestige-group-buys-50-pc-stake-in-advent-convention-and-hotels-international-for-rs-500-cr/articleshow/135965554.cms"
   }
  ]
 }
