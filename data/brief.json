@@ -1,5 +1,5 @@
 {
- "date": "Wednesday, 18 November 2026",
+ "date": "Thursday, 19 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,89 +13,105 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,757",
-   "change": -2.76
+   "value": "3,731",
+   "change": -3.44
   },
   {
    "name": "CRUDE WTI",
-   "value": "$83.0",
-   "change": -1.89
+   "value": "$82.1",
+   "change": -3.02
   },
   {
    "name": "USD/INR",
-   "value": "93.43",
-   "change": -0.04
+   "value": "93.46",
+   "change": -0.01
   },
   {
    "name": "S&P 500",
-   "value": "7,308",
-   "change": -0.44
+   "value": "7,327",
+   "change": -0.18
   },
   {
    "name": "NASDAQ",
-   "value": "24,332",
-   "change": 0.01
+   "value": "24,424",
+   "change": 0.39
   },
   {
    "name": "DOW",
-   "value": "50,138",
-   "change": -1.22
+   "value": "50,222",
+   "change": -1.06
   }
  ],
  "items": [
   {
    "category": "Economy",
-   "title": "Rupee risks persist, inflation pressures may push RBI to act, say economists",
-   "summary": "Rupee risks persist, inflation pressures may push RBI to act, say economists - CNBC TV18  LinkedIn",
+   "title": "Fed policymakers focused on inflation risks in October, with some seeing need",
+   "summary": "Federal Reserve officials noted a greater risk of inflation requiring more action during their October meeting. Although they decided to keep interest rates steady, discussions indicated a potential…",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "LinkedIn",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOURuVllFOEdURVMxa2JUNVNaNFhqaWp3U3IxUVB6SWdNOFpmcThUN2x3WlhwUmxVb1d2WGtXdi01OWxVVko0R0d6dHVaNHJiUHBtRndtNE1uWVRHVlJ6NkxCS2lFMkl4aFJSc0NkeE9FMEpRel9tbmVicmJtZHcyNy1oVnBqc1U5OE5VbkYzN0MzdzluSkpVMjZ0dUNqOW1MTjdpTFFSU1RSTVNkM2t3c3ptVlA?oc=5"
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/fed-policymakers-focused-on-inflation-risks-in-october-with-some-seeing-need-for-bigger-rate-hike/articleshow/135970652.cms"
   },
   {
    "category": "Economy",
-   "title": "Inflation pushing Indians to cut back on essentials, families skipping dairy",
-   "summary": "Inflation pushing Indians to cut back on essentials, families skipping dairy  India Today",
+   "title": "Rupee risks persist, inflation pressures may push RBI to act, say economists",
+   "summary": "Rupee risks persist, inflation pressures may push RBI to act, say economists  CNBC TV18",
    "why": "What the RBI and the government do reaches your money.",
-   "source": "India Today",
-   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOcXhfY0dZODNjcW42UnB3SmpXLXhOSDk0el96QlhULThpQjJlUnc3cHdjRV9BZG9ZenROdGxHdTRoM3F6T3JFNTA3cmk3MzFFMUhscEFNTGY0SDZTU0FhYTRBMGdPa293UFhydVlwQmdSWE5vbTVsa3JGNmRRdzgyVEc3dlJOYUVKOVFZZUl3N21fakhLZDVMM1ZMb0U0S2tOcFlJanhTbkF5OUJJeDdiejUwRkkyQXZLYTc4UHlqeks1WkVCNWVUN0hLQ1M1cjFXeUhLeUlZTUdsWTYxTXpjeVVnTjlJZ3hZXzZTbEZvMThQZjZ2eG5vVFpB0gH_AUFVX3lxTE90Z1UxZ2dNREdUZUhHcjhKVEhWWklORDBkV1MwWW1qVF9rcHBLMDhLRW40ZXdBMWNnc25yVllwdURBWDNPQVJTRDBCV1BHOWNBYlc1bzB2ZXNKZUtvZ3liTDN1MXhnb292bDl0VHV3UThPejVGb0xrcEU2cC0tTHNBRGp3M1paT2cyVEh1MXpuLUVZZ01LeDZ2NW01MFd2WVB0SGhHQy1CbW5sLWg2bHhlN203a1F2cml1QXhwZVNfaExMd2ZKaEhwWThZMXAyUGtWQ2pPZllJSXhXa1BkSGV3eGkwcnB2NEY5dkFncVJEWGJ1N1VQN0VNcVBmN3NTaw?oc=5"
+   "source": "CNBC TV18",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTTJyaElWTkRzT0ZqdUt2ZzhXbHNNeXI5TW9SUkNlV1lrRFloRDhiQkNMQms4RFV2ckN3YUI4ckRWTkJWVTU0ak56c3d6STVTUC1wSi1pZ0o5TEdPTGQ1OTRNN29xaDlPQnZZT2ZsN0puRkRPNlY3dmp3dzZ0QVJjaXJsM3hMQVZBaC1LbnFWZjFxU0RiRktnMmZDVF85Ykdsam5jbERKVUU3NzF5THRIX3VzZkFsbmpjOHUxQWh30gG-AUFVX3lxTFBNMnJoSVZORHNPRmp1S3ZnOFdsc015cjlNb1JSQ2VXWWtEWWhEOGJCQ0xCazhEVXZyQ3dhQjhyRFZOQlZVNTRqTnpzd3pJNVNQLXBKLWlnSjlMR09MZDU5NE03b3FoOU9CdllPZmw3Sm5GRE82Vjd2and3NnRBUmNpcmwzeExBVkFoLUtucVZmMXFTRGJGS2cyZkNUXzliR2xqbmNsREpVRTc3MXlMdEhfdXNmQWxuamM4dTFBaHc?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold drops to 14-month low as dollar, yields rise on hawkish Fed",
+   "summary": "GLOBAL-PRECIOUS:Gold drops to 14-month low as dollar, yields rise on hawkish Fed rhetoric",
+   "why": "Energy and metal prices move first, and the rest follows.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/gold-drops-to-14-month-low-as-dollar-yields-rise-on-hawkish-fed-rhetoric-11795032242167.html"
   },
   {
    "category": "Commodity",
    "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
    "summary": "In terms of GOI notification F.No. 4(4)-B(W&amp;M)/2020 dated April 13, 2020 (SGB 2020-21 Series II - Issue date May 19, 2020) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
-   "why": "Energy and metal prices move first, and the rest follows.",
+   "why": "Commodity prices feed into costs and inflation.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63996"
   },
   {
-   "category": "Commodity",
-   "title": "Gift Nifty Signals Flat Start; Crude Falls, Asia Mixed",
-   "summary": "Gift Nifty Signals Flat Start; Crude Falls, Asia Mixed  HDFC Sky",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "HDFC Sky",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOeVdfV1pFbkJFSHVRSXYzOWRHT2ZFcERHU1pqWVRGMGFuY19DbndCZjJMaFk4Y3p5eXFEMlAycG5RcmRTRzZkd3l4RlF5N3Y5OWduODZQc1NOakZzSmduei1TVk9FM0d0UGtYQzFnRDFkRUFVRHdITVROODF3ckF1V3Zudk4tTjVRVFZmZA?oc=5"
-  },
-  {
    "category": "US Markets",
-   "title": "S&amp;P 500, Nasdaq open higher as Nvidia forecast eases AI jitters",
-   "summary": "The S&amp;P 500 and tech-heavy Nasdaq opened higher on Wednesday after Nvidia's upbeat revenue forecast calmed investor concerns about the chip bellwether's future and improved sentiment.",
+   "title": "Nasdaq gains in choppy trade as Nvidia outlook lifts AI mood; Anthropic",
+   "summary": "Amidst a choppy trading session, the Nasdaq enjoyed a boost from Nvidia's positive revenue guidance, which alleviated some market apprehensions. Conversely, the Dow Jones Industrial Average and…",
    "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/sp-500-nasdaq-open-higher-as-nvidia-forecast-eases-ai-jitters/articleshow/135966195.cms"
   },
   {
    "category": "US Markets",
-   "title": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking,",
-   "summary": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking, U.S. Fed rate hike fears  The Hindu",
+   "title": "Wall Street Sees More Mega Debt Deals Using Paramount Blueprint",
+   "summary": "Skydance Corp.’s $52 billion bond and loan sale is set to serve as a model for future jumbo credit financing, with Morgan Stanley predicting Wall Street will pull off even bigger deals using the…",
    "why": "US trading often leads the next morning in India.",
-   "source": "The Hindu",
-   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQc3pjTHlmVWZZdURUc3l0alBLcnBYMTU4b0VlaVJpaDE2WDRORVNySExnNjRnQTItTWlZTWdsWDB6S1lueDBUNFZEd1FzdDcyenAwN1VUd0ZMY1dULXk4blhpb3l3OVFKMFl5YVljbDU1QzhpWXJMWEtCMm1ya3hHUGFnWEZCTU15eHpTR1BKTkN1RDBHRG82QlVERFdJN2ZLZzU4Yy1ULVdvc21XUGppdWxwVWNfM29YaVBkYjRpai1CNFZYdDVTWTZkcHRXZFczOHVkdVc1R0hHdXNYSThpZ2JHTjM2Qk5yLUFFdW84WE_SAfcBQVVfeXFMTlVJRmthZjFxYmxQbTVGZjZjSjNxeVhDdEo4a1V1d3pQaVVleVppUkJmdG1waWZoOFRlN1BQUmR2ay1KTDU5ODFEQ3NDSzl3Mll4ZVNsS2VBNDNIWnNHaWk4bzJRUjY2Q3RxYXZocEhjdGw3MVg1WlZma19kUW9SRWw5WDJIQkd4OVJMT21lQV95UjZkdDdZbEVpNTloSGN3aWJMN3pBMGRpc2JaTE9aLS1UZHVEN2tyeXBDZnd4MmZDZGs0VjFJTkp4MDNiSzZsQzN2aU9HdE9UQTJNaGhiY2paYWtfbUM5eXBDRHJ1SzlaRlhqcEx1MA?oc=5"
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/wall-street-sees-more-mega-debt-deals-using-paramount-blueprint-11795027290809.html"
+  },
+  {
+   "category": "Equity",
+   "title": "Market Trading Guide: Deepak Fertilisers among 3 stock recommendations for Thursday",
+   "summary": "Indian equity benchmarks declined amid weak global cues and profit booking, with the Nifty falling 0.63% and Sensex 0.61%. Choice Broking's Sachin Gupta recommended three stocks—Vijaya, Eureka Forbes…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-deepak-fertilisers-among-3-stock-recommendations-for-thursday/slideshow/135967160.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Dalmia Bharat to consider share buyback at Nov 23 board meeting",
+   "summary": "Dalmia Bharat, India's fourth-largest cement manufacturer, will hold a board meeting on November 23. The meeting will focus on a proposal for a buyback of fully paid-up equity shares. Specific…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/dalmia-bharat-to-consider-share-buyback-at-nov-23-board-meeting/articleshow/135966836.cms"
   },
   {
    "category": "Equity",
    "title": "Target reports strongest quarterly sales gain in five years heading into the",
    "summary": "Target reported a 7.1% increase in net sales for the third quarter, reaching $27.07 billion. The growth was attributed to a revitalized product lineup, expanded same-day deliveries, and price cuts.…",
-   "why": "Share prices move on news like this.",
+   "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/target-reports-strongest-quarterly-sales-gain-in-five-years-heading-into-the-holiday-shopping-season/articleshow/135966816.cms"
   },
@@ -103,25 +119,9 @@
    "category": "Equity",
    "title": "PSBs' net profit rises 17% to Rs 1.10 lakh cr in H1",
    "summary": "Public sector banks in India have reported a remarkable 16.9 percent rise in net profits during the first half of this fiscal year, reflecting a thriving financial environment. With total business…",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/psbs-net-profit-rises-17-to-rs-1-10-lakh-cr-in-h1-fy27-business-crosses-rs-300-lakh-crore/articleshow/135965650.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Puravankara launches Purva Cityspire in Kochi with ₹2,000 crore GDV",
-   "summary": "Puravankara Limited proudly presents Purva Cityspire, an ambitious new venture within the Purva City integrated township in Kochi. With an impressive gross development value of ₹2,000 crore, this…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/puravankara-launches-purva-cityspire-in-kochi-with-2000-crore-gdv/articleshow/135965572.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Prestige Group buys 50 pc stake in Advent Convention and Hotels International",
-   "summary": "Prestige Estates Projects Ltd has successfully acquired a 50% stake in Advent Convention and Hotels International for an estimated Rs 500 crore. This partnership is set to develop a commercial…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/prestige-group-buys-50-pc-stake-in-advent-convention-and-hotels-international-for-rs-500-cr/articleshow/135965554.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/psbs-net-profit-rises-17-to-rs-1-10-lakh-cr-in-h1-fy27-business-crosses-rs-300-lakh-crore/articleshow/135965650.cms"
   }
  ]
 }
