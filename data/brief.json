@@ -1,5 +1,5 @@
 {
- "date": "Thursday, 19 November 2026",
+ "date": "Friday, 20 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,33 +13,33 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,688",
-   "change": -1.44
+   "value": "3,667",
+   "change": -2.0
   },
   {
    "name": "CRUDE WTI",
-   "value": "$82.9",
-   "change": 0.7
+   "value": "$83.1",
+   "change": 0.97
   },
   {
    "name": "USD/INR",
-   "value": "93.28",
-   "change": -0.19
+   "value": "93.29",
+   "change": -0.18
   },
   {
    "name": "S&P 500",
-   "value": "7,300",
-   "change": -0.32
+   "value": "7,194",
+   "change": -1.77
   },
   {
    "name": "NASDAQ",
-   "value": "24,472",
-   "change": 0.17
+   "value": "23,958",
+   "change": -1.93
   },
   {
    "name": "DOW",
-   "value": "49,687",
-   "change": -1.02
+   "value": "49,205",
+   "change": -1.98
   }
  ],
  "items": [
@@ -61,11 +61,11 @@
   },
   {
    "category": "Commodity",
-   "title": "Goldman Sachs names 22 ‘high-growth’ stocks; Bharti Airtel, Eternal and HDFC Bank",
-   "summary": "Goldman Sachs has identified 22 Indian companies exposed to structural growth themes and initiated Buy ratings on 21. Bharti Airtel, Eternal, HDFC Bank and InterGlobe Aviation feature prominently.",
+   "title": "Oil prices inch up as tanker disruptions offset surplus supply outlook",
+   "summary": "GLOBAL-OIL:Oil prices inch up as tanker disruptions offset surplus supply outlook",
    "why": "Energy and metal prices move first, and the rest follows.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/goldman-sachs-names-22-high-growth-stocks-bharti-airtel-eternal-and-hdfc-bank-feature-in-the-list/slideshow/135981076.cms"
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/oil-prices-inch-up-as-tanker-disruptions-offset-surplus-supply-outlook-11795113669203.html"
   },
   {
    "category": "Commodity",
@@ -77,51 +77,51 @@
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq rises over 1% at open as Anthropic IPO pricing bolsters AI",
-   "summary": "The tech-heavy Nasdaq jumped over 1% at the open on Thursday, after Anthropic priced its IPO above the marketed range, fueling expectations for a strong market debut.",
-   "why": "When Wall Street moves, world markets notice.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-nasdaq-rises-over-1-at-open-as-anthropic-ipo-pricing-bolsters-ai-trade/articleshow/135996273.cms"
-  },
-  {
-   "category": "US Markets",
    "title": "Anthropic shares set for Nasdaq debut today; Wall Street brokerages see up",
    "summary": "Four brokerages issued bullish ratings, with price targets implying potential gains of 51% to 87%, citing growth prospects and rising AI adoption.",
-   "why": "US trading often leads the next morning in India.",
+   "why": "When Wall Street moves, world markets notice.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/stock-market-news/anthropic-shares-set-for-nasdaq-debut-today-wall-street-brokerages-see-up-to-87-upside-from-ipo-price-report-11795092766156.html"
   },
   {
-   "category": "Equity",
-   "title": "Fund managers turn overweight on India, first such classification since Jan",
-   "summary": "Fund managers have recently indicated an increased interest in investing in India after several months of cautious sentiment. A significant number of investors are concerned about the absence of…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fund-managers-turn-overweight-on-india-first-such-classification-since-jan/articleshow/135996610.cms"
+   "category": "US Markets",
+   "title": "Stock Market Today: Dow, S&P 500 Futures Rise as Wall Street Awaits",
+   "summary": "Stock Market Today: Dow, S&P 500 Futures Rise as Wall Street Awaits Anthropic's Listing— PANW, NTES, SLS in Focus  TradingView",
+   "why": "US trading often leads the next morning in India.",
+   "source": "TradingView",
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMk5KdE1ua0hoRUdTeFlkeV9yZHRVcU1aU2Jkckp3NFBoT01CQno1VmllNjh4MlZWVVJHWXFtaVFpMHVFaGVuZjBpVVVKcWhJY0t0dnV5UTAyZHZjaVlNYmgwLW1oSGwtVi1Zc1ZlaGdOM1QybGFKakx1Ulo4cndWMzB3RFBtOTdIamZuOS1iZlppWllndXAwcHhjRm0wVXRyN3dHVlZUWWlRZjQ4cXNUM29pOXJwcXIyNnZoVlp6aFF3ZU9lcm9KLWF3Ni16RGlFSG1NbThoaW83cVA5aEVvMmVSUUlzWjJhdXdpRjlQR0Mzb05UNFp3Si1CYw?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Investors vs Economists: Should Govt Cut LTCG Tax?",
-   "summary": "Investors vs Economists: Should Govt Cut LTCG Tax?",
+   "title": "AMD shares slide 8% as report says China links could invite US",
+   "summary": "Shares of AMD plunged by 8% after a report surfaced linking the company to certain Chinese firms, including those on the US government's blacklist. The report indicates that AMD's firmware is being…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/amd-shares-slide-8-as-report-says-china-links-could-invite-us-scrutiny/articleshow/136002141.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Amundi CIO says not bearish on France bonds, AI at the start",
+   "summary": "Amundi has chosen a reserved approach towards French government bonds, amidst climbing yields and worries regarding fiscal management. Chief Investment Officer Vincent Mortier expressed a preference…",
    "why": "A company's share price reacts to its own news first.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/investors-vs-economists-should-govt-cut-ltcg-tax/videoshow/135993683.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/amundi-cio-says-not-bearish-on-france-bonds-ai-at-the-start-of-repricing/articleshow/135998168.cms"
   },
   {
    "category": "Equity",
-   "title": "NSE among 5 stocks hitting 52-week highs; stock rallies up to 27%",
-   "summary": "Five BSE 200 stocks, including NSE, GAIL and PNB, hit fresh 52-week highs on Thursday as Sensex rallied 990 points. Here's how these stocks have performed recently.",
+   "title": "Sebi roadmap focuses on faster IPOs, easier foreign investor access: Official",
+   "summary": "Sebi is focusing on streamlining IPO and rights issue timelines to improve market efficiency. The regulator aims to reduce friction across the capital-raising lifecycle for economic expansion.…",
    "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nse-among-5-stocks-hitting-52-week-highs-stock-rallies-up-to-27-in-a-month/slideshow/135991598.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-roadmap-focuses-on-faster-ipos-easier-foreign-investor-access-official/articleshow/135998128.cms"
   },
   {
    "category": "Equity",
-   "title": "Tiger-backed Razorpay set to file for India IPO as early as next",
-   "summary": "Tiger Global-backed Razorpay is preparing to file its IPO papers in India as early as next week, with investor roadshows expected to follow immediately. The Bengaluru-based fintech firm could launch…",
+   "title": "Six listed REIT firms distribute Rs 3,234 cr in Q2 to over",
+   "summary": "India's six listed Real Estate Investment Trusts distributed Rs 3,234 crore to over 5.25 lakh unitholders. Since their inception, these REITs have distributed over Rs 38,000 crore collectively to…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/tiger-backed-razorpay-set-to-file-for-india-ipo-as-early-as-next-week/articleshow/135983381.cms"
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/six-listed-reit-firms-distribute-rs-3234-cr-in-q2-to-over-5-25-lakh-unitholders/articleshow/135998101.cms"
   }
  ]
 }
