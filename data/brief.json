@@ -3,53 +3,53 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,228",
-   "change": -0.25
+   "value": "25,357",
+   "change": 0.51
   },
   {
    "name": "SENSEX",
-   "value": "82,032",
-   "change": -0.09
+   "value": "82,523",
+   "change": 0.6
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,731",
-   "change": -3.44
+   "value": "3,736",
+   "change": -0.15
   },
   {
    "name": "CRUDE WTI",
-   "value": "$82.1",
-   "change": -3.02
-  },
-  {
-   "name": "USD/INR",
-   "value": "93.46",
+   "value": "$82.3",
    "change": -0.01
   },
   {
+   "name": "USD/INR",
+   "value": "93.33",
+   "change": -0.14
+  },
+  {
    "name": "S&P 500",
-   "value": "7,327",
-   "change": -0.18
+   "value": "7,324",
+   "change": -0.23
   },
   {
    "name": "NASDAQ",
-   "value": "24,424",
-   "change": 0.39
+   "value": "24,430",
+   "change": 0.42
   },
   {
    "name": "DOW",
-   "value": "50,222",
-   "change": -1.06
+   "value": "50,198",
+   "change": -1.11
   }
  ],
  "items": [
   {
    "category": "Economy",
-   "title": "Fed policymakers focused on inflation risks in October, with some seeing need",
-   "summary": "Federal Reserve officials noted a greater risk of inflation requiring more action during their October meeting. Although they decided to keep interest rates steady, discussions indicated a potential…",
+   "title": "Energy Costs Push October WPI Inflation to 2-Year High",
+   "summary": "Energy Costs Push October WPI Inflation to 2-Year High  Construction World",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/fed-policymakers-focused-on-inflation-risks-in-october-with-some-seeing-need-for-bigger-rate-hike/articleshow/135970652.cms"
+   "source": "Construction World",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNemdrN2dnYnJINE10eFNwTDJxRm5hZnhPVjE3QVBHVmVnT2phaldSQ25ReVZHTzRJVlhaalJ5bkRRSDdMVC02dUp3NlZON0Qza000R2dPU1hFNVRIWTFVX1FIRzREVFJ2LVpwRHloU2RVTWhqUkx2bm54N0xnd1dwVlc2LUdRQ3FLLVM1TGFwWnpFdWJyMDFZN0ZWTHdOenJFeV9sUktJckhwbm9KZHhIQTJDcmVYWkdUTW1nWW9VTlVMR3pyRU80QW5xOUN4M3JnbldtbFZkak5zem8?oc=5"
   },
   {
    "category": "Economy",
@@ -61,67 +61,67 @@
   },
   {
    "category": "Commodity",
-   "title": "Gold drops to 14-month low as dollar, yields rise on hawkish Fed",
-   "summary": "GLOBAL-PRECIOUS:Gold drops to 14-month low as dollar, yields rise on hawkish Fed rhetoric",
+   "title": "Goldman Sachs names 22 ‘high-growth’ stocks; Bharti Airtel, Eternal and HDFC Bank",
+   "summary": "Goldman Sachs has identified 22 Indian companies exposed to structural growth themes and initiated Buy ratings on 21. Bharti Airtel, Eternal, HDFC Bank and InterGlobe Aviation feature prominently.",
    "why": "Energy and metal prices move first, and the rest follows.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-drops-to-14-month-low-as-dollar-yields-rise-on-hawkish-fed-rhetoric-11795032242167.html"
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/goldman-sachs-names-22-high-growth-stocks-bharti-airtel-eternal-and-hdfc-bank-feature-in-the-list/slideshow/135981076.cms"
   },
   {
    "category": "Commodity",
-   "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
-   "summary": "In terms of GOI notification F.No. 4(4)-B(W&amp;M)/2020 dated April 13, 2020 (SGB 2020-21 Series II - Issue date May 19, 2020) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
+   "title": "Gold prices fall marginally, silver rises up to 0.5% on MCX: Gold",
+   "summary": "Gold prices fall marginally, silver rises up to 0.5% on MCX: Gold Silver Rates Live Updates",
    "why": "Commodity prices feed into costs and inflation.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63996"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq gains in choppy trade as Nvidia outlook lifts AI mood; Anthropic",
-   "summary": "Amidst a choppy trading session, the Nasdaq enjoyed a boost from Nvidia's positive revenue guidance, which alleviated some market apprehensions. Conversely, the Dow Jones Industrial Average and…",
-   "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/sp-500-nasdaq-open-higher-as-nvidia-forecast-eases-ai-jitters/articleshow/135966195.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/live-blog/live-updates-gold-rate-today-19th-november-24k-22k-20k-18-carat-mcx-gold-silver-price-in-delhi-hyderabad-chennai-bengaluru-citywise/liveblog/135979606.cms"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Sees More Mega Debt Deals Using Paramount Blueprint",
-   "summary": "Skydance Corp.’s $52 billion bond and loan sale is set to serve as a model for future jumbo credit financing, with Morgan Stanley predicting Wall Street will pull off even bigger deals using the…",
+   "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+   "summary": "Stock Market: Will S&P 500 Open Up or Down Today?  Benzinga",
+   "why": "When Wall Street moves, world markets notice.",
+   "source": "Benzinga",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOFpCbEJBOWtlUE0xUGYzaWlHMkhFcFBKR3puOVBUMVFFOFM3MWpVUWswb1FkLTBOT2E0Q1VpYnRWODY4MnUtWUR1eTBhZUx4QnJ6akF2NmtMNklDZVdqbXlOWmtHTHRTcEVGVUFSaFg0NVhTcEdWWkZESGNENFZ2Qlc1QkdlbHA5Vm5IZGM1TW9ZcmJPbU9WTnJ3WXgtTnZIdmdET3NPc0R0T09iVk5hVzRwYWV1N3M?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Nasdaq futures jump 1.1%, S&P 500 futures rebound as Anthropic's record $81",
+   "summary": "Nasdaq futures jump 1.1%, S&P 500 futures rebound as Anthropic's record $81 billion IPO lifts AI...  Moneycontrol.com",
    "why": "US trading often leads the next morning in India.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/wall-street-sees-more-mega-debt-deals-using-paramount-blueprint-11795027290809.html"
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQdWdoSi1NQWJNLXdaVjRpcm1BeGlUbmtSbExNeE5ES2R6X2J4akNmN3hSaGlWVEZ1c3EtdUc4Vk1LUW1NYmJGeHVwVm5RZ1dsR3MyTld5VVFVb0lLSEh5MkoyajJkYWNVenhPUDFaSXctWVI0YTZoalNOamJaOE5ldW9yZlJMcUQzT0d6Q0xNQXVsYXFSNDRpYURqLTRUR2cxcmlWcm42UkpWOFZWMFFCTTVsYUhPTmxObWVTeV81SU5BSUp2VlZEU19nYnhLcWR6T0FtVmNuOVhiYmRQdTdiNnJRTzN0RXN3d0VxWTdYMWlORWNDYmlDWNIB_gFBVV95cUxPVXBjeTZHcUVpcjJoMUxEV2RGTUtDakhNN2x3TEo0b09xZnBIYW1HcEJoR21tMFY4VUVRWkRRWFRPYXc4Nk1NX3cxY0tnTjhudTF0elZmT1V1Ti02M3Y3UzlCeGE1dU9GeWNqNTJhV1plcndZY1ozUEF2R1FCdjB1Qy1HX2NvRHdFMENManN1OHFLUnRfOVN3MVlsWWlpR2E1eXR2dmpldVlHMmU0LWNhT1hsTllTU0pHVk4wMmZKam05azZJbm4tQVpQRjNTa3FEaE9DRTBfYUptWFA3ckdCWklxYWJkSEdQZ3A0MUdJQzM2a0JoLUpwd0d6djlJUQ?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Market Trading Guide: Deepak Fertilisers among 3 stock recommendations for Thursday",
-   "summary": "Indian equity benchmarks declined amid weak global cues and profit booking, with the Nifty falling 0.63% and Sensex 0.61%. Choice Broking's Sachin Gupta recommended three stocks—Vijaya, Eureka Forbes…",
+   "title": "Why AMD shares are rising: 7 things investors should know",
+   "summary": "AMD shares gained 5.3% after OpenAI revealed AI-driven improvements of up to 14% in its GPU design. A GTA VI connection adds to optimism around its gaming business.",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-deepak-fertilisers-among-3-stock-recommendations-for-thursday/slideshow/135967160.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-amd-shares-are-rising-7-things-investors-should-know/slideshow/135980657.cms"
   },
   {
    "category": "Equity",
-   "title": "Dalmia Bharat to consider share buyback at Nov 23 board meeting",
-   "summary": "Dalmia Bharat, India's fourth-largest cement manufacturer, will hold a board meeting on November 23. The meeting will focus on a proposal for a buyback of fully paid-up equity shares. Specific…",
+   "title": "Can AI demand drive further gains in PANW stock?",
+   "summary": "Palo Alto Networks shares surged in after-hours trading after the cybersecurity firm reported better-than-expected fiscal Q1 2027 results, with revenue rising 39% year-on-year. The company also…",
    "why": "A company's share price reacts to its own news first.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/dalmia-bharat-to-consider-share-buyback-at-nov-23-board-meeting/articleshow/135966836.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-ai-demand-drive-further-gains-in-panw-stock/slideshow/135979684.cms"
   },
   {
    "category": "Equity",
-   "title": "Target reports strongest quarterly sales gain in five years heading into the",
-   "summary": "Target reported a 7.1% increase in net sales for the third quarter, reaching $27.07 billion. The growth was attributed to a revitalized product lineup, expanded same-day deliveries, and price cuts.…",
+   "title": "Star Health among 3 stocks showing RSI trending up",
+   "summary": "Three Nifty500 stocks that gained over 5% on November 18 featured in StockEdge’s RSI Trending Up scan, with their Relative Strength Index (RSI) crossing above 50 from below, signalling strengthening…",
    "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/target-reports-strongest-quarterly-sales-gain-in-five-years-heading-into-the-holiday-shopping-season/articleshow/135966816.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/star-health-among-3-stocks-showing-rsi-trending-up/slideshow/135977535.cms"
   },
   {
    "category": "Equity",
-   "title": "PSBs' net profit rises 17% to Rs 1.10 lakh cr in H1",
-   "summary": "Public sector banks in India have reported a remarkable 16.9 percent rise in net profits during the first half of this fiscal year, reflecting a thriving financial environment. With total business…",
+   "title": "Morgan Stanley is ‘overweight’ on these 9 largecap stocks. How many do",
+   "summary": "Morgan Stanley has given an overweight rating to nine major largecap stocks in India in light of current market dynamics. While several stocks faced downturns over the past year, some others…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/psbs-net-profit-rises-17-to-rs-1-10-lakh-cr-in-h1-fy27-business-crosses-rs-300-lakh-crore/articleshow/135965650.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/morgan-stanley-is-overweight-on-these-9-largecap-stocks-how-many-do-you-own/slideshow/135977398.cms"
   }
  ]
 }
