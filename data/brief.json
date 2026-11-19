@@ -3,61 +3,61 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,357",
-   "change": 0.51
+   "value": "25,514",
+   "change": 0.5
   },
   {
    "name": "SENSEX",
-   "value": "82,523",
-   "change": 0.6
+   "value": "83,022",
+   "change": 0.59
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,736",
-   "change": -0.15
+   "value": "3,688",
+   "change": -1.44
   },
   {
    "name": "CRUDE WTI",
-   "value": "$82.3",
-   "change": -0.01
+   "value": "$82.9",
+   "change": 0.7
   },
   {
    "name": "USD/INR",
-   "value": "93.33",
-   "change": -0.14
+   "value": "93.28",
+   "change": -0.19
   },
   {
    "name": "S&P 500",
-   "value": "7,324",
-   "change": -0.23
+   "value": "7,300",
+   "change": -0.32
   },
   {
    "name": "NASDAQ",
-   "value": "24,430",
-   "change": 0.42
+   "value": "24,472",
+   "change": 0.17
   },
   {
    "name": "DOW",
-   "value": "50,198",
-   "change": -1.11
+   "value": "49,687",
+   "change": -1.02
   }
  ],
  "items": [
   {
    "category": "Economy",
-   "title": "Energy Costs Push October WPI Inflation to 2-Year High",
-   "summary": "Energy Costs Push October WPI Inflation to 2-Year High  Construction World",
+   "title": "WPI inflation rises to 9.92% in August 2026",
+   "summary": "WPI inflation rises to 9.92% in August 2026  DD News",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Construction World",
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNemdrN2dnYnJINE10eFNwTDJxRm5hZnhPVjE3QVBHVmVnT2phaldSQ25ReVZHTzRJVlhaalJ5bkRRSDdMVC02dUp3NlZON0Qza000R2dPU1hFNVRIWTFVX1FIRzREVFJ2LVpwRHloU2RVTWhqUkx2bm54N0xnd1dwVlc2LUdRQ3FLLVM1TGFwWnpFdWJyMDFZN0ZWTHdOenJFeV9sUktJckhwbm9KZHhIQTJDcmVYWkdUTW1nWW9VTlVMR3pyRU80QW5xOUN4M3JnbldtbFZkak5zem8?oc=5"
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB1QjUwQ3pFQTJqVzlZUUZ1UXJSYzFkYzM0cjUxdWEyUHNmeFMtXzV0SFA0WGZueGVKZjhDZi1tWE14Q1VtcUZQSGpkemxpQWp4ZjhMQmxUOHZiY3NXVEJwTUM5b2xnS2xaclhGVVV4cks2R3ptOERR?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Rupee risks persist, inflation pressures may push RBI to act, say economists",
-   "summary": "Rupee risks persist, inflation pressures may push RBI to act, say economists  CNBC TV18",
+   "title": "Energy Costs Push October WPI Inflation to 2-Year High",
+   "summary": "Energy Costs Push October WPI Inflation to 2-Year High  Construction World",
    "why": "What the RBI and the government do reaches your money.",
-   "source": "CNBC TV18",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTTJyaElWTkRzT0ZqdUt2ZzhXbHNNeXI5TW9SUkNlV1lrRFloRDhiQkNMQms4RFV2ckN3YUI4ckRWTkJWVTU0ak56c3d6STVTUC1wSi1pZ0o5TEdPTGQ1OTRNN29xaDlPQnZZT2ZsN0puRkRPNlY3dmp3dzZ0QVJjaXJsM3hMQVZBaC1LbnFWZjFxU0RiRktnMmZDVF85Ykdsam5jbERKVUU3NzF5THRIX3VzZkFsbmpjOHUxQWh30gG-AUFVX3lxTFBNMnJoSVZORHNPRmp1S3ZnOFdsc015cjlNb1JSQ2VXWWtEWWhEOGJCQ0xCazhEVXZyQ3dhQjhyRFZOQlZVNTRqTnpzd3pJNVNQLXBKLWlnSjlMR09MZDU5NE03b3FoOU9CdllPZmw3Sm5GRE82Vjd2and3NnRBUmNpcmwzeExBVkFoLUtucVZmMXFTRGJGS2cyZkNUXzliR2xqbmNsREpVRTc3MXlMdEhfdXNmQWxuamM4dTFBaHc?oc=5"
+   "source": "Construction World",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNemdrN2dnYnJINE10eFNwTDJxRm5hZnhPVjE3QVBHVmVnT2phaldSQ25ReVZHTzRJVlhaalJ5bkRRSDdMVC02dUp3NlZON0Qza000R2dPU1hFNVRIWTFVX1FIRzREVFJ2LVpwRHloU2RVTWhqUkx2bm54N0xnd1dwVlc2LUdRQ3FLLVM1TGFwWnpFdWJyMDFZN0ZWTHdOenJFeV9sUktJckhwbm9KZHhIQTJDcmVYWkdUTW1nWW9VTlVMR3pyRU80QW5xOUN4M3JnbldtbFZkak5zem8?oc=5"
   },
   {
    "category": "Commodity",
@@ -69,59 +69,59 @@
   },
   {
    "category": "Commodity",
-   "title": "Gold prices fall marginally, silver rises up to 0.5% on MCX: Gold",
-   "summary": "Gold prices fall marginally, silver rises up to 0.5% on MCX: Gold Silver Rates Live Updates",
+   "title": "Goldman Sachs turns bullish on India stock market, upgrades rating to Overweight;",
+   "summary": "Goldman Sachs upgraded Indian equities to Overweight and set a December 2027 Nifty 50 target of 28,500, citing expected earnings growth, resilient demand and renewed foreign investment.",
    "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/live-blog/live-updates-gold-rate-today-19th-november-24k-22k-20k-18-carat-mcx-gold-silver-price-in-delhi-hyderabad-chennai-bengaluru-citywise/liveblog/135979606.cms"
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/goldman-sachs-turns-bullish-on-india-stock-market-upgrades-rating-to-overweight-sets-nifty-target-of-28500-11795099232497.html"
   },
   {
    "category": "US Markets",
-   "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-   "summary": "Stock Market: Will S&P 500 Open Up or Down Today?  Benzinga",
+   "title": "Nasdaq rises over 1% at open as Anthropic IPO pricing bolsters AI",
+   "summary": "The tech-heavy Nasdaq jumped over 1% at the open on Thursday, after Anthropic priced its IPO above the marketed range, fueling expectations for a strong market debut.",
    "why": "When Wall Street moves, world markets notice.",
-   "source": "Benzinga",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOFpCbEJBOWtlUE0xUGYzaWlHMkhFcFBKR3puOVBUMVFFOFM3MWpVUWswb1FkLTBOT2E0Q1VpYnRWODY4MnUtWUR1eTBhZUx4QnJ6akF2NmtMNklDZVdqbXlOWmtHTHRTcEVGVUFSaFg0NVhTcEdWWkZESGNENFZ2Qlc1QkdlbHA5Vm5IZGM1TW9ZcmJPbU9WTnJ3WXgtTnZIdmdET3NPc0R0T09iVk5hVzRwYWV1N3M?oc=5"
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-nasdaq-rises-over-1-at-open-as-anthropic-ipo-pricing-bolsters-ai-trade/articleshow/135996273.cms"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq futures jump 1.1%, S&P 500 futures rebound as Anthropic's record $81",
-   "summary": "Nasdaq futures jump 1.1%, S&P 500 futures rebound as Anthropic's record $81 billion IPO lifts AI...  Moneycontrol.com",
+   "title": "Anthropic shares set for Nasdaq debut today; Wall Street brokerages see up",
+   "summary": "Four brokerages issued bullish ratings, with price targets implying potential gains of 51% to 87%, citing growth prospects and rising AI adoption.",
    "why": "US trading often leads the next morning in India.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQdWdoSi1NQWJNLXdaVjRpcm1BeGlUbmtSbExNeE5ES2R6X2J4akNmN3hSaGlWVEZ1c3EtdUc4Vk1LUW1NYmJGeHVwVm5RZ1dsR3MyTld5VVFVb0lLSEh5MkoyajJkYWNVenhPUDFaSXctWVI0YTZoalNOamJaOE5ldW9yZlJMcUQzT0d6Q0xNQXVsYXFSNDRpYURqLTRUR2cxcmlWcm42UkpWOFZWMFFCTTVsYUhPTmxObWVTeV81SU5BSUp2VlZEU19nYnhLcWR6T0FtVmNuOVhiYmRQdTdiNnJRTzN0RXN3d0VxWTdYMWlORWNDYmlDWNIB_gFBVV95cUxPVXBjeTZHcUVpcjJoMUxEV2RGTUtDakhNN2x3TEo0b09xZnBIYW1HcEJoR21tMFY4VUVRWkRRWFRPYXc4Nk1NX3cxY0tnTjhudTF0elZmT1V1Ti02M3Y3UzlCeGE1dU9GeWNqNTJhV1plcndZY1ozUEF2R1FCdjB1Qy1HX2NvRHdFMENManN1OHFLUnRfOVN3MVlsWWlpR2E1eXR2dmpldVlHMmU0LWNhT1hsTllTU0pHVk4wMmZKam05azZJbm4tQVpQRjNTa3FEaE9DRTBfYUptWFA3ckdCWklxYWJkSEdQZ3A0MUdJQzM2a0JoLUpwd0d6djlJUQ?oc=5"
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/anthropic-shares-set-for-nasdaq-debut-today-wall-street-brokerages-see-up-to-87-upside-from-ipo-price-report-11795092766156.html"
   },
   {
    "category": "Equity",
-   "title": "Why AMD shares are rising: 7 things investors should know",
-   "summary": "AMD shares gained 5.3% after OpenAI revealed AI-driven improvements of up to 14% in its GPU design. A GTA VI connection adds to optimism around its gaming business.",
+   "title": "Fund managers turn overweight on India, first such classification since Jan",
+   "summary": "Fund managers have recently indicated an increased interest in investing in India after several months of cautious sentiment. A significant number of investors are concerned about the absence of…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-amd-shares-are-rising-7-things-investors-should-know/slideshow/135980657.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/fund-managers-turn-overweight-on-india-first-such-classification-since-jan/articleshow/135996610.cms"
   },
   {
    "category": "Equity",
-   "title": "Can AI demand drive further gains in PANW stock?",
-   "summary": "Palo Alto Networks shares surged in after-hours trading after the cybersecurity firm reported better-than-expected fiscal Q1 2027 results, with revenue rising 39% year-on-year. The company also…",
+   "title": "Investors vs Economists: Should Govt Cut LTCG Tax?",
+   "summary": "Investors vs Economists: Should Govt Cut LTCG Tax?",
    "why": "A company's share price reacts to its own news first.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-ai-demand-drive-further-gains-in-panw-stock/slideshow/135979684.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/investors-vs-economists-should-govt-cut-ltcg-tax/videoshow/135993683.cms"
   },
   {
    "category": "Equity",
-   "title": "Star Health among 3 stocks showing RSI trending up",
-   "summary": "Three Nifty500 stocks that gained over 5% on November 18 featured in StockEdge’s RSI Trending Up scan, with their Relative Strength Index (RSI) crossing above 50 from below, signalling strengthening…",
+   "title": "NSE among 5 stocks hitting 52-week highs; stock rallies up to 27%",
+   "summary": "Five BSE 200 stocks, including NSE, GAIL and PNB, hit fresh 52-week highs on Thursday as Sensex rallied 990 points. Here's how these stocks have performed recently.",
    "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/star-health-among-3-stocks-showing-rsi-trending-up/slideshow/135977535.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nse-among-5-stocks-hitting-52-week-highs-stock-rallies-up-to-27-in-a-month/slideshow/135991598.cms"
   },
   {
    "category": "Equity",
-   "title": "Morgan Stanley is ‘overweight’ on these 9 largecap stocks. How many do",
-   "summary": "Morgan Stanley has given an overweight rating to nine major largecap stocks in India in light of current market dynamics. While several stocks faced downturns over the past year, some others…",
+   "title": "Tiger-backed Razorpay set to file for India IPO as early as next",
+   "summary": "Tiger Global-backed Razorpay is preparing to file its IPO papers in India as early as next week, with investor roadshows expected to follow immediately. The Bengaluru-based fintech firm could launch…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/morgan-stanley-is-overweight-on-these-9-largecap-stocks-how-many-do-you-own/slideshow/135977398.cms"
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/tiger-backed-razorpay-set-to-file-for-india-ipo-as-early-as-next-week/articleshow/135983381.cms"
   }
  ]
 }
