@@ -109,8 +109,50 @@ quotes = get_quotes()
 word, word_def = WORDS[today.timetuple().tm_yday % len(WORDS)]
 
 # ---- subject line + preheader (Zomato/Swiggy-style, 2-minute hook) ----
+def last_subject_index():
+    """Index named in the most recent sent newsletter subject (via Buttondown),
+    e.g. 'Bank Nifty'. None if the key is absent or the lookup fails.
+    Used so the subject never repeats the same index two days in a row."""
+    key = os.environ.get("BUTTONDOWN_API_KEY", "")
+    if not key:
+        return None
+    try:
+        req = urllib.request.Request(
+            "https://api.buttondown.email/v1/emails?page=1",
+            headers={"Authorization": "Token " + key},
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            d = json.load(r)
+        results = d.get("results", []) if isinstance(d, dict) else []
+        if not results:
+            return None
+        subj = results[0].get("subject", "") or ""
+        # Check "Bank Nifty" before "Nifty" — it contains "Nifty".
+        for name in ("Bank Nifty", "Sensex", "Nifty"):
+            if name.lower() in subj.lower():
+                return name
+        return None
+    except Exception as e:
+        print("last-subject lookup failed:", e)
+        return None
+
 idx = [q for q in quotes if q[0] in ("NIFTY 50", "SENSEX", "BANK NIFTY")]
-biggest = max(idx, key=lambda x: abs(x[2])) if idx else (max(quotes, key=lambda x: abs(x[2])) if quotes else None)
+idx_sorted = sorted(idx, key=lambda x: abs(x[2]), reverse=True) if idx else []
+biggest = None
+if idx_sorted:
+    # Avoid repeating yesterday's index: if the biggest mover is the same
+    # index as yesterday's subject, use the runner-up instead, so the
+    # subject line actually changes every day.
+    prev = last_subject_index()
+    prev_key = {"Bank Nifty": "BANK NIFTY", "Nifty": "NIFTY 50", "Sensex": "SENSEX"}.get(prev)
+    if prev_key and idx_sorted[0][0] == prev_key and len(idx_sorted) > 1:
+        biggest = idx_sorted[1]
+        print("subject: biggest mover %s repeats yesterday (%s) — using runner-up %s"
+              % (idx_sorted[0][0], prev, biggest[0]))
+    else:
+        biggest = idx_sorted[0]
+elif quotes:
+    biggest = max(quotes, key=lambda x: abs(x[2]))
 if biggest:
     bname = {"NIFTY 50": "Nifty", "SENSEX": "Sensex", "BANK NIFTY": "Bank Nifty"}.get(biggest[0], biggest[0].title())
     direction = "slipped" if biggest[2] < 0 else "climbed"
