@@ -3,43 +3,43 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,514",
-   "change": 0.5
+   "value": "25,734",
+   "change": 0.86
   },
   {
    "name": "SENSEX",
-   "value": "83,022",
-   "change": 0.59
+   "value": "83,760",
+   "change": 0.89
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,667",
-   "change": -2.0
+   "value": "3,551",
+   "change": -3.66
   },
   {
    "name": "CRUDE WTI",
    "value": "$83.1",
-   "change": 0.97
+   "change": 0.78
   },
   {
    "name": "USD/INR",
-   "value": "93.29",
-   "change": -0.18
+   "value": "92.92",
+   "change": -0.38
   },
   {
    "name": "S&P 500",
-   "value": "7,194",
-   "change": -1.77
+   "value": "7,176",
+   "change": -2.02
   },
   {
    "name": "NASDAQ",
-   "value": "23,958",
-   "change": -1.93
+   "value": "23,879",
+   "change": -2.25
   },
   {
    "name": "DOW",
-   "value": "49,205",
-   "change": -1.98
+   "value": "49,097",
+   "change": -2.19
   }
  ],
  "items": [
@@ -61,67 +61,67 @@
   },
   {
    "category": "Commodity",
-   "title": "Oil prices inch up as tanker disruptions offset surplus supply outlook",
-   "summary": "GLOBAL-OIL:Oil prices inch up as tanker disruptions offset surplus supply outlook",
+   "title": "PC Jeweller, Kalyan Jewellers to Senco Gold: Jewellery stocks fall 5% as",
+   "summary": "Jewellery stocks fell on Friday as gold prices extended a global selloff. PC Jeweller dropped nearly 5%, Kalyan Jewellers about 7% and Senco Gold around 2%. Analysts said the stocks’ technical…",
    "why": "Energy and metal prices move first, and the rest follows.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/oil-prices-inch-up-as-tanker-disruptions-offset-surplus-supply-outlook-11795113669203.html"
+   "url": "https://www.livemint.com/market/stock-market-news/pc-jeweller-kalyan-jewellers-to-senco-gold-jewellery-stocks-fall-5-as-gold-prices-slips-below-1-25-lakh-buy-or-sell-11795152566909.html"
   },
   {
    "category": "Commodity",
-   "title": "Goldman Sachs turns bullish on India stock market, upgrades rating to Overweight;",
-   "summary": "Goldman Sachs upgraded Indian equities to Overweight and set a December 2027 Nifty 50 target of 28,500, citing expected earnings growth, resilient demand and renewed foreign investment.",
+   "title": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold",
+   "summary": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026  ChiniMandi",
    "why": "Commodity prices feed into costs and inflation.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/goldman-sachs-turns-bullish-on-india-stock-market-upgrades-rating-to-overweight-sets-nifty-target-of-28500-11795099232497.html"
+   "source": "ChiniMandi",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQekt2czZqeUhONWZqYjZ3SW5KczhrQ1Ftc1hzUjV2NVU1SmNqU1dkeW84cElRdm9wQU9kVnNncW9GbDJOR19DbXlZWnkwcUFGSHhLTi1hLU1Ua3R2Q1ZQMWFlclFlTzIySV9vS05nWG14SzE3QlJlSlpNNGpJRzdmOHQzYlpHRjNoTURCS3dYU3liamNkSmlwSmdia21sbVk1SHVnbk1VVmY2ejFkTGhSRngzQTU3aEd5OGtJRGNsQUs?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Anthropic shares set for Nasdaq debut today; Wall Street brokerages see up",
-   "summary": "Four brokerages issued bullish ratings, with price targets implying potential gains of 51% to 87%, citing growth prospects and rising AI adoption.",
+   "title": "Anthropic shares close 17% higher on first day of trading amid protest,",
+   "summary": "Anthropic shares close 17% higher on first day of trading amid protest, arrests outside Nasdaq",
    "why": "When Wall Street moves, world markets notice.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/anthropic-shares-set-for-nasdaq-debut-today-wall-street-brokerages-see-up-to-87-upside-from-ipo-price-report-11795092766156.html"
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/anthropic-shares-close-17-higher-on-first-day-of-trading-amid-protest-arrests-outside-nasdaq/videoshow/136013757.cms"
   },
   {
    "category": "US Markets",
-   "title": "Stock Market Today: Dow, S&P 500 Futures Rise as Wall Street Awaits",
-   "summary": "Stock Market Today: Dow, S&P 500 Futures Rise as Wall Street Awaits Anthropic's Listing— PANW, NTES, SLS in Focus  TradingView",
+   "title": "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty",
+   "summary": "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets...  Moneycontrol.com",
    "why": "US trading often leads the next morning in India.",
-   "source": "TradingView",
-   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMk5KdE1ua0hoRUdTeFlkeV9yZHRVcU1aU2Jkckp3NFBoT01CQno1VmllNjh4MlZWVVJHWXFtaVFpMHVFaGVuZjBpVVVKcWhJY0t0dnV5UTAyZHZjaVlNYmgwLW1oSGwtVi1Zc1ZlaGdOM1QybGFKakx1Ulo4cndWMzB3RFBtOTdIamZuOS1iZlppWllndXAwcHhjRm0wVXRyN3dHVlZUWWlRZjQ4cXNUM29pOXJwcXIyNnZoVlp6aFF3ZU9lcm9KLWF3Ni16RGlFSG1NbThoaW83cVA5aEVvMmVSUUlzWjJhdXdpRjlQR0Mzb05UNFp3Si1CYw?oc=5"
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNV0kzbUx6VXpURVlPc1ZqVFZHQXNQYjN0aEZiZV8zYjdpVW5HNXAtUzJTU3Z6Y2xxaHZYSDFmQ3RINll6MGd4UU5yT1pmRWZvUWwyTU81a2hzUXZwanVyOU1uQnRkal9PVUVxU2dHekFaaW5ZUDFCZmc5WUxWRVl0RndTNGMtMDAtM0lvc2doanMtcmZGc3hVLVFZbHhORTR6aXpadnhwaVJ3bTA0eFBHTmZNSE5MZmpYakthN3dPVDZBaFFUSThDNHpBLTIzYzk1RDVCejRLcGVad015ZHN1ODhhOTE1OU9qdE50b1dtN2RsaGtUaEZ3Unh3ZXZpSDJBU1HSAYcCQVVfeXFMUHR1Q1FFRUo0Z0dwYjNTWFdfc25VMno5Rk4tM0ZZNFB0RDNHQW9jTl9kNTN0cXF5TXNFT0s3STBCa3pDUFB3bHJ2bVBkdzU0UUFHNEMzWDZOelI3cFF5OVB3dTdxaDVzekM2WU9PN3paM0FMX3l1Mk1UR1JkSURsTlFVWW81NFplaTF4MENUTmFqQzQxcGdfZ0k2Zk1SV3hIMVdyTVI5ZEFZYWNfQVk5R1o3WWZoczFqeTFTUGtRaU1xOU1kQVE0OUhjUVNGZFhNQ3ZzTTNuWXozcG44Z1BVVVFzOGZ1RU9vbmIzQnNKa0hmblRieEZ1Z0YyLW54eFdjYmFpcFB4UlE?oc=5"
   },
   {
    "category": "Equity",
-   "title": "AMD shares slide 8% as report says China links could invite US",
-   "summary": "Shares of AMD plunged by 8% after a report surfaced linking the company to certain Chinese firms, including those on the US government's blacklist. The report indicates that AMD's firmware is being…",
+   "title": "Treasury rally spills over to Indian bonds, debt supply slows move",
+   "summary": "Indian government bonds saw slight gains, reflecting the upward trend in US Treasuries. Investors are keeping a close eye on the forthcoming weekly debt auction, pivotal for market movements. With…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/amd-shares-slide-8-as-report-says-china-links-could-invite-us-scrutiny/articleshow/136002141.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/treasury-rally-spills-over-to-indian-bonds-debt-supply-slows-move/articleshow/136014379.cms"
   },
   {
    "category": "Equity",
-   "title": "Amundi CIO says not bearish on France bonds, AI at the start",
-   "summary": "Amundi has chosen a reserved approach towards French government bonds, amidst climbing yields and worries regarding fiscal management. Chief Investment Officer Vincent Mortier expressed a preference…",
+   "title": "SELLAS Life Sciences shares plunge 19%: What triggered the sharp sell-off?",
+   "summary": "SELLAS Life Sciences shares plunged nearly 20% after the biotechnology company priced a $150 million public offering at $13 per share, a discount of around 28% to its previous close. The sell-off…",
    "why": "A company's share price reacts to its own news first.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/amundi-cio-says-not-bearish-on-france-bonds-ai-at-the-start-of-repricing/articleshow/135998168.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/sellas-life-sciences-shares-plunge-19-what-triggered-the-sharp-sell-off/slideshow/136013890.cms"
   },
   {
    "category": "Equity",
-   "title": "Sebi roadmap focuses on faster IPOs, easier foreign investor access: Official",
-   "summary": "Sebi is focusing on streamlining IPO and rights issue timelines to improve market efficiency. The regulator aims to reduce friction across the capital-raising lifecycle for economic expansion.…",
+   "title": "IndiGo, Tata Motors PV among 10 Nifty stocks facing earnings downgrades",
+   "summary": "Elara Securities identifies 10 Nifty 50 companies facing the sharpest earnings estimate downgrades for FY27 and FY28 against its Q2FY27 preview. IndiGo leads the list, followed by Tata Motors PV and…",
    "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-roadmap-focuses-on-faster-ipos-easier-foreign-investor-access-official/articleshow/135998128.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/indigo-tata-motors-pv-among-10-nifty-stocks-facing-earnings-downgrades/slideshow/136012225.cms"
   },
   {
    "category": "Equity",
-   "title": "Six listed REIT firms distribute Rs 3,234 cr in Q2 to over",
-   "summary": "India's six listed Real Estate Investment Trusts distributed Rs 3,234 crore to over 5.25 lakh unitholders. Since their inception, these REITs have distributed over Rs 38,000 crore collectively to…",
+   "title": "Axis Direct names 35 top stocks to buy; ICICI Bank, HUL and",
+   "summary": "Axis Direct has pinpointed 35 high-potential stocks spanning diverse sectors, including banking, cement, and pharmaceuticals, offering promising buying opportunities. Each stock features a target…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/six-listed-reit-firms-distribute-rs-3234-cr-in-q2-to-over-5-25-lakh-unitholders/articleshow/135998101.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/axis-direct-names-35-top-stocks-to-buy-icici-bank-hul-and-maruti-suzuki-feature-in-list/slideshow/136011903.cms"
   }
  ]
 }
