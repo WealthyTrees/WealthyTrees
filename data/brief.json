@@ -1,5 +1,5 @@
 {
- "date": "Friday, 20 November 2026",
+ "date": "Saturday, 21 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,536",
-   "change": -4.05
+   "value": "3,518",
+   "change": -4.53
   },
   {
    "name": "CRUDE WTI",
-   "value": "$81.7",
-   "change": -0.96
+   "value": "$83.6",
+   "change": 1.44
   },
   {
    "name": "USD/INR",
@@ -28,100 +28,84 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,106",
-   "change": -0.97
+   "value": "6,930",
+   "change": -3.42
   },
   {
    "name": "NASDAQ",
-   "value": "23,389",
-   "change": -2.05
+   "value": "22,671",
+   "change": -5.06
   },
   {
    "name": "DOW",
-   "value": "49,224",
-   "change": 0.26
+   "value": "48,267",
+   "change": -1.69
   }
  ],
  "items": [
   {
    "category": "Economy",
-   "title": "Rupee vs Dollar: Indian Rupee Strengthens To 7-Month High at ₹92.99 Against",
-   "summary": "Rupee vs Dollar: Indian Rupee Strengthens To 7-Month High at ₹92.99 Against US Dollar; What's Driving The Rally? Check Impact on Imports, Exports and Inflation  Jagran Josh",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Jagran Josh",
-   "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOMGxNOW00Xy1kbm83WEhJalFlaHZOampPZUp6M0Y0ZEJrR194c0FUalY3d3Jnak1Tcks4NnFONXdaeU9vMlhIREF1Q19wN2NFY1F2QmxvSGlDSHVkaXFVSWQ5Yl9UQXk4SzdmNjR4UWR5dHhMQ3FYZm5WRDdmc3BBSUFqbndGaFEtSlVDNGNSdi04V3JsNFpHSjlRRjJyMmFXMlNtdDFmWUg2OEZHaDFwYnpWSUhfV21TcUdGOWNFUXo5ZU44XzlwMmdSdVRkVTBJX1VHT1dQd3RIeWRNYWF6YW95T1BfcWZCRnNJM21XcWRTQkdjRTdxX1FjUFFiYm42YnExd0R6YjJ5QVU2NjU0dHRodFR2VW4wdkxfRkVFQ051SVRjWEh3bVZBQnN0VkRMTUI3UDF0WEo?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Inflation To Cool Off Marginally In November",
-   "summary": "Inflation To Cool Off Marginally In November  Deccan Chronicle",
-   "why": "What the RBI and the government do reaches your money.",
-   "source": "Deccan Chronicle",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPLUR3clNLXzFjT1NwXy1hWEJWUjJpOVJVRVlMd3BXSUVXZy02OVQ2NFk3YkRveGtWRkxncTRNZzl1Yy1BYkp1MFFRNVNfZUk0M2xLSmdyYTNIUVpOUVk5WnpQQ3gtUnhPNkN2SEJQTmFKc25xT3JZc1pudnozVXdVQTZkeEVqSHNmQWdqNDhtZzlTc2lUV0JpekVzMklCRlnSAaQBQVVfeXFMT2Y2V043aV9zaU5UVkZPanZTdXltdEI4N3k3d0FYZWNJbUt4MFh1enl1cmRONDVMMnhBc2lWbFp6OVNLcHZuYTF0MHBCdW1ueTZOR3FzVFFXNVZuVUdxOFdDUEVvcjVjTVRuVTJUazc5N3ZrWVJLUEFwRW9vbEZ0ZHZwT05kMEN0UG1LTHBMODY0OVd1ZmJRMkV0eFVDQUJCWmo1YUE?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold",
-   "summary": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026  ChiniMandi",
-   "why": "Energy and metal prices move first, and the rest follows.",
-   "source": "ChiniMandi",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQekt2czZqeUhONWZqYjZ3SW5KczhrQ1Ftc1hzUjV2NVU1SmNqU1dkeW84cElRdm9wQU9kVnNncW9GbDJOR19DbXlZWnkwcUFGSHhLTi1hLU1Ua3R2Q1ZQMWFlclFlTzIySV9vS05nWG14SzE3QlJlSlpNNGpJRzdmOHQzYlpHRjNoTURCS3dYU3liamNkSmlwSmdia21sbVk1SHVnbk1VVmY2ejFkTGhSRngzQTU3aEd5OGtJRGNsQUs?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Gold, silver prices today, 20 November: Check retail rates of 24K, 22K",
-   "summary": "Gold, silver prices today, 20 November: Check retail rates of 24K, 22K gold, 999 silver in Delhi, Mumbai and Kolkata  Livemint",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Livemint",
-   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPQi1LRWdvbGdDYmNxV2dJTzVSU1lMNzEtSlZRbGNfa2p5NHh1aV9CSVlNdFpNbTZaMGJ4V01YUXVXRTlJZExCajBjMGtHRU1ESmFtdTloWFRDbTZ4VGhKRGZvcEJDSVlvQnd5eGZCVl9XamxaWXhSR3BqUzNHQzUwOUtHV3VhZGU4WmxNa3RIeHU4emRwenNsQmR6MmJFOEZEMlRzYlFBRFVuUzJ1LXlFRVFqYWYxSHB6bHJwdTUzQ1dYTmpjX0tjNS1aMFdUVHFEUGc5UV9oRy1PQ3NWNWlpUDdHSF9EUWVTYTBtNXM3Rk9pRWhJMWVBcjFIYXZJSjItU1d4NkNMc2tqUdIBjwJBVV95cUxQaDBaR2cta0FXQTNIdUYxLVVjSEdYUDJoV1lFVHFaVk5VOGxEMndSVm9RbDdlNVkzd1RSQzB6eWlLeFVHTnlBbXRBbXhxbmZVcUxicU5yQ1V6WFQ5dkh1NUdFSFRxTkR2NXRjLXJXZnZRVG5wTFJWcHhJa3laQjVCMFh0bm45bGJzNVNuMTRRR3FtaUU2NnVsQUlNa280b0lIaDRYd1FiaU9MZVIwR0FzbDdkdEpiTnJZVlpINTFLOERqSXgyem1MeWxIb3g0RTA3LUw1dUFJWnI0R01weEp3amhEMWRJMmhyUWN3b1FLLVRXaF9vSWlINkI4cXZWS3lWalJpVjhsdlpNNzgyZElB?oc=5"
+   "title": "Indian Rupee Crosses 93 Against US Dollar",
+   "summary": "The Indian currency has strengthened past the 93-per-dollar threshold for the initial time since April. This positive movement is primarily driven by substantial foreign investments exceeding $12 billion flowing into domestic equities over November. Market participants note that short positions are unwinding amidst strong domestic inflows and stabilizing global commodity dynamics.",
+   "why": "Currency strength reflects foreign investor confidence and capital inflows, directly impacting import costs and domestic inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/rupee-climbs-past-93/usd-as-investors-seek-shelter-in-indian-stocks-shorts-unwind/articleshow/136023536.cms"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq falls 1% at open as Anthropic fails to steady AI trade",
-   "summary": "The Nasdaq fell more than 1% at the open on Friday, as Anthropic shares tumbled after a blockbuster debut, adding to pressure on an AI trade already rattled by valuation concerns.",
-   "why": "When Wall Street moves, world markets notice.",
+   "title": "Nasdaq Drops 2% Amid AI Sector Skepticism",
+   "summary": "Following a volatile debut, Anthropic’s stock price decline triggered a notable pullback in the Nasdaq Composite index. The artificial intelligence sector faces growing skepticism from investors amid elevated valuations and emerging investment risks. Major Wall Street tech equities experienced broad losses as market sentiment shifted toward caution.",
+   "why": "Tech sector sentiment in global markets heavily influences risk appetite and institutional flows across emerging markets like India.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-nasdaq-falls-1-at-open-as-anthropic-fails-to-steady-ai-trade/articleshow/136030779.cms"
   },
   {
-   "category": "US Markets",
-   "title": "Missed Anthropic's record IPO? Shares cool off after Nasdaq debut - Here's",
-   "summary": "Anthropic shares surged 34% above their IPO price at Thursday’s Nasdaq debut, then pulled back in pre-market trading while remaining above the offering price.",
-   "why": "US trading often leads the next morning in India.",
+   "category": "Equity",
+   "title": "Dalal Street Extends Winning Streak Despite Global Slump",
+   "summary": "Indian benchmark indices recorded gains for the fourth consecutive week, buoyed by robust foreign institutional buying and positive momentum in banking shares. Despite a broader sell-off occurring across international equity markets, local indices managed to advance. Domestic benchmarks such as the Sensex and Nifty demonstrated resilience through heavy institutional participation.",
+   "why": "Market decoupling occurs when local fundamental growth and steady capital flows insulate domestic exchanges from international downturns.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/missed-anthropics-record-ipo-shares-cool-off-after-nasdaq-debut-heres-how-indians-can-invest-11795176413482.html"
+   "url": "https://www.livemint.com/market/pulse-of-the-street-dalal-street-extends-winning-run-as-global-markets-slide-11795181421343.html"
   },
   {
-   "category": "Equity",
-   "title": "Sebi proposes limiting tenure of chief executives, independent directors at exchanges",
-   "summary": "India's Securities and Exchange Board is proposing crucial adjustments to governance norms affecting market institutions. Key suggestions include lowering the age threshold for public interest…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-proposes-limiting-tenure-of-chief-executives-independent-directors-at-exchanges/articleshow/136031465.cms"
+   "category": "Commodity",
+   "title": "Precious Metals Plunge Sharply on MCX",
+   "summary": "Gold and silver prices experienced significant declines, dropping over 4 percent each on the Multi Commodity Exchange. Retail and futures rates fell sharply as a stronger US dollar and rising bond yields diminished the appeal of bullion. Analysts noted that precious metals touched multi-month lows as investors reallocated capital.",
+   "why": "Precious metals often move inversely to the US dollar and Treasury yields, serving as a primary gauge of safe-haven demand.",
+   "source": "CNBC TV18",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPaU82SjNXZ2szUFpvMkxscUMxNTlpLXJlNmZudVA4eGpoSnF4bHVCYkZXVWE4ZXdFcjQ0bkVUWXhKQmxHLVJpNTJ2UzJISzVvQnZpblYzbUROcHVLRzdCVWJWSkpJWElGYXhpT2ZmdktodXdoOEZNbGlHVTBJSmZ2aEZPU0lVdDY5U2RvcUJYSlprcVIxN2t5WWN1d0xDbEF3TWNwT3RhU1NnenVPN2RSUmVnbUJFQ2RnZ1FrQ1I2ZVRjV0lFd05VNGNtdkpuRERldGfSAdcBQVVfeXFMTXBVb0NnWXQ4Z0NCd1Y5bVNfa0tQOTQtWXNFTkZ0STdkOWZfcmNFSWotLTVWaWhRUzQwaXh0Njd1WmExOHNsdmNoRnlVekp6WWR1ZTlhRW42WHVZTzUxd0lkdTRmVU5aMkFlWnNkcUMtckNwdzcydEYtSnFpREE4Z1lwODZHb3A3WFNPMjVLSlR3Z3N3TjBuOUo1TnB3TmNqRDEwTXM5WFFXRE02b0hXdWUxM0VJWWx2eEJDcEVaaDlKZ1JUSVJBTTNjbHpqVm5CYjRRbW5zUEU?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "US stocks seesaw as Anthropic fails to steady AI trade: Stock Market",
-   "summary": "US stocks seesaw as Anthropic fails to steady AI trade: Stock Market Live Updates",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-meta-tesla-anthropic-claude-nvidia-micron-meta-ai-stocks-fed-rate-hike-inflation-treasury-yield-news-20th-november-2026/liveblog/136028991.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Anthropic's debut rally fades as shares crack 7% in US pre-market trade",
-   "summary": "Anthropic shares fell as much as 7.4% in premarket trading on their second day, as a global market selloff and concerns over the AI trade overshadowed the optimism surrounding its record-setting IPO…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/anthropics-debut-rally-fades-as-shares-crack-7-in-pre-market-trade-on-day-2/articleshow/136021174.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Sebi plans consultation paper to remove FPI constraints absent in other markets",
-   "summary": "SEBI is set to release a consultation paper aimed at simplifying regulations for foreign portfolio investors. The goal is to eliminate certain compliance restrictions to enhance India's appeal to…",
-   "why": "Share prices move on news like this.",
+   "category": "Economy",
+   "title": "SEBI Proposes Relaxing Foreign Portfolio Investor Rules",
+   "summary": "Securities and Exchange Board of India plans to release a consultation paper designed to simplify regulatory frameworks for foreign portfolio investors. The initiative seeks to remove specific compliance restrictions that are absent in competing global jurisdictions. The goal is to enhance the overall ease of doing business and attract broader international capital.",
+   "why": "Streamlining compliance standards helps deepen capital pools by lowering administrative barriers for overseas institutional investors.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-plans-consultation-paper-to-remove-fpi-constraints-absent-in-other-markets/articleshow/136020808.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Wall Street Indexes Enter Correction Territory",
+   "summary": "Major US stock indexes extended their losses as a deepening sell-off in technology shares weighed heavily on investor sentiment. Both the S&P 500 and the Dow Jones Industrial Average moved closer to official correction territory, defined as a 10 percent drop from recent peaks. The downturn followed fading enthusiasm over recent high-profile artificial intelligence market debuts.",
+   "why": "Corrections in mature markets signal a reset in asset pricing and dictate global institutional risk management strategies.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOY0VmbDFSZy1pMm1jZlE3SG1PMDdjcHdmZnp3WWFQbTBSSHBndDktSEhpRFB4MkRYZUhTQXFhNm9YY0pwNlczMkxtOF9ZMVA2R1VHN2k1MmE3VkN6d292amFiX1JKUUxVcmN4NmxFTGYwbkhlakpkeTZ4eE5yRkxxTTlubE9PUU1jWmtrZVF6RjhiMWhhYmp2Q29Ucy1aMm13T0F0WTMwSGRBZWdQV3pyRjlZRm9pUEVnV0EzQQ?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Stronger Rupee Threatens IT Sector Earnings",
+   "summary": "A recent industry report indicates that the sharp appreciation of the Indian currency could reduce fiscal year earnings for major technology exporters by up to 13 percent. Because software service providers earn the bulk of their revenues in foreign currencies, a surging rupee diminishes the domestic value of those overseas receipts. IT firms must navigate currency headwinds when converting international contracts.",
+   "why": "Export-oriented sectors face foreign exchange translation risks when local currency values fluctuate rapidly against major global currencies.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/sharp-rupee-appreciation-may-cut-it-firms-fy27-earnings-by-up-to-13-report/articleshow/136021296.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "SEBI Suggests Tenure Limits for Exchange Leadership",
+   "summary": "The market regulator has proposed crucial structural adjustments regarding governance norms at key financial institutions. Suggested changes include placing limits on the tenure of chief executives and independent directors, alongside lowering age thresholds for public interest roles. These measures aim to strengthen corporate governance standards across critical market infrastructure.",
+   "why": "Robust institutional governance ensures transparency and protects investor interests across core market utilities and exchanges.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-proposes-limiting-tenure-of-chief-executives-independent-directors-at-exchanges/articleshow/136031465.cms"
   }
  ]
 }
