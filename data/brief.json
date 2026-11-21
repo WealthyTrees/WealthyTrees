@@ -4,7 +4,7 @@
   {
    "name": "NIFTY 50",
    "value": "25,801",
-   "change": 2.27
+   "change": 1.12
   },
   {
    "name": "SENSEX",
@@ -13,99 +13,115 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,518",
-   "change": -4.53
+   "value": "3,515",
+   "change": -4.62
   },
   {
    "name": "CRUDE WTI",
-   "value": "$83.6",
-   "change": 1.44
+   "value": "$83.4",
+   "change": 1.18
   },
   {
    "name": "USD/INR",
-   "value": "92.66",
-   "change": -0.66
+   "value": "92.67",
+   "change": -0.65
   },
   {
    "name": "S&P 500",
-   "value": "6,930",
-   "change": -3.42
+   "value": "6,910",
+   "change": -3.7
   },
   {
    "name": "NASDAQ",
-   "value": "22,671",
-   "change": -5.06
+   "value": "22,618",
+   "change": -5.28
   },
   {
    "name": "DOW",
-   "value": "48,267",
-   "change": -1.69
+   "value": "48,147",
+   "change": -1.93
   }
  ],
  "items": [
   {
    "category": "Economy",
-   "title": "Indian Rupee Crosses 93 Against US Dollar",
-   "summary": "The Indian currency has strengthened past the 93-per-dollar threshold for the initial time since April. This positive movement is primarily driven by substantial foreign investments exceeding $12 billion flowing into domestic equities over November. Market participants note that short positions are unwinding amidst strong domestic inflows and stabilizing global commodity dynamics.",
-   "why": "Currency strength reflects foreign investor confidence and capital inflows, directly impacting import costs and domestic inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/rupee-climbs-past-93/usd-as-investors-seek-shelter-in-indian-stocks-shorts-unwind/articleshow/136023536.cms"
+   "title": "'Look at India's 7% growth': Trump slams Fed over high interest rates,",
+   "summary": "'Look at India's 7% growth': Trump slams Fed over high interest rates, claims US GDP could...  Moneycontrol.com",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1ZRMWMtRGRZbkFlSDBwY3RMcDhXOENaU214bkpucXVyV1FuWmFGYlFsLVJ0UjZkZ3daeEVROXZ5c2RsbnltX3VmVkFOYkxsN3V5V0hCY1NVV2pVNXgwLUdlVjJYQ2RQMjJqdDdnSE1yQ2s3dWsyYUduRDhfb28yYjB3SjFZYjYtV2xlQ21JaVB5REZlUF9OWm5ZYlZBeDFTZWRXZURocDRCSjN4RnVzREUxUGhsaVhLMTdiOWZVYjQtYzBtUlViMFRuaUQ5NVZxcUl4QzRzTXE5SnpNRjVma05hVFRqNjRO0gHoAUFVX3lxTE1TVlExYy1EZFluQWVIMHBjdExwOFc4Q1pTbXhuSm5xdXJXUW5aYUZiUWwtUnRSNmRnd1p4RVE5dnlzZGxueW1fdWZWQU5iTGw3dXlXSEJjU1VXalU1eDAtR2VWMlhDZFAyMmp0N2dITXJDazd1azJhR25EOF9vbzJiMHdKMVliNi1XbGVDbUlpUHlERmVQX05ablliVkF4MVNlZFdlRGhwNEJKM3hGdXNERTFQaGxpWEsxN2I5ZlViNC1jMG1SVWIwVG5pRDk1VnFxSXhDNHNNcTlKek1GNWZrTmFUVGo2NE4?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "Nasdaq Drops 2% Amid AI Sector Skepticism",
-   "summary": "Following a volatile debut, Anthropic’s stock price decline triggered a notable pullback in the Nasdaq Composite index. The artificial intelligence sector faces growing skepticism from investors amid elevated valuations and emerging investment risks. Major Wall Street tech equities experienced broad losses as market sentiment shifted toward caution.",
-   "why": "Tech sector sentiment in global markets heavily influences risk appetite and institutional flows across emerging markets like India.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-nasdaq-falls-1-at-open-as-anthropic-fails-to-steady-ai-trade/articleshow/136030779.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Dalal Street Extends Winning Streak Despite Global Slump",
-   "summary": "Indian benchmark indices recorded gains for the fourth consecutive week, buoyed by robust foreign institutional buying and positive momentum in banking shares. Despite a broader sell-off occurring across international equity markets, local indices managed to advance. Domestic benchmarks such as the Sensex and Nifty demonstrated resilience through heavy institutional participation.",
-   "why": "Market decoupling occurs when local fundamental growth and steady capital flows insulate domestic exchanges from international downturns.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/pulse-of-the-street-dalal-street-extends-winning-run-as-global-markets-slide-11795181421343.html"
+   "category": "Economy",
+   "title": "India's GDP growth projected at 7 pc for FY27, 25 bps rate",
+   "summary": "India's GDP growth projected at 7 pc for FY27, 25 bps rate hike likely in Dec: Report  ET Retail",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "ET Retail",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNMGM1OHV0ZV9WZXZ4UWJWV0dtT0UxbjhwMkt4WmdwYUFTWFNyTGFQYWd5UDNIbXExY2FWcklmekJvbGQ1RUFIdzRwTXJ0X05pazlvc2pma21PYWNJSFY4S05pYk9NTklwcWQ3MklUcUk2azRlcTQtb29mVXFqWUJCTkN4SDN2a3lSOFc2SUZCNDhNODdnaEVIQTZZdHVibXUzWnRvZl90NENtM0h6YXlGUDkyZVBTQWVaeU51UmxnUVI4eXRiY1dMc0xoZTY3a1pvNWNpX2twTUNJbWF5ZjFrZWJIdHjSAegBQVVfeXFMTXpZWXNLSDZsamZULWpVRG5qT1RsYkF0VUJsMjZESWk1TXNzSjctekJvVFlNVG81dy1ZUlljQVgzSWVXY1o5cHVVRF9YLTlwNEJTU055eHliNEUzQllxVjJNY3p6Z2g3ZS1uTjg4MGtDaWNHTEVCWm5tWHp3Y3lUeW5Ta3p4eVlGZnhwRlJKeHRfUTVqN3RPeFhKWDJEbHd0WnVuNzYyV3llSElxanZ3M0pFVnJOTWF2cFhaWmdWWDFHa0ZPbVgzWGpmX3dHWmNSSFU4UTdGQ24zVjhPVjQyVGNMeUVRYlcwMA?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Plunge Sharply on MCX",
-   "summary": "Gold and silver prices experienced significant declines, dropping over 4 percent each on the Multi Commodity Exchange. Retail and futures rates fell sharply as a stronger US dollar and rising bond yields diminished the appeal of bullion. Analysts noted that precious metals touched multi-month lows as investors reallocated capital.",
-   "why": "Precious metals often move inversely to the US dollar and Treasury yields, serving as a primary gauge of safe-haven demand.",
-   "source": "CNBC TV18",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPaU82SjNXZ2szUFpvMkxscUMxNTlpLXJlNmZudVA4eGpoSnF4bHVCYkZXVWE4ZXdFcjQ0bkVUWXhKQmxHLVJpNTJ2UzJISzVvQnZpblYzbUROcHVLRzdCVWJWSkpJWElGYXhpT2ZmdktodXdoOEZNbGlHVTBJSmZ2aEZPU0lVdDY5U2RvcUJYSlprcVIxN2t5WWN1d0xDbEF3TWNwT3RhU1NnenVPN2RSUmVnbUJFQ2RnZ1FrQ1I2ZVRjV0lFd05VNGNtdkpuRERldGfSAdcBQVVfeXFMTXBVb0NnWXQ4Z0NCd1Y5bVNfa0tQOTQtWXNFTkZ0STdkOWZfcmNFSWotLTVWaWhRUzQwaXh0Njd1WmExOHNsdmNoRnlVekp6WWR1ZTlhRW42WHVZTzUxd0lkdTRmVU5aMkFlWnNkcUMtckNwdzcydEYtSnFpREE4Z1lwODZHb3A3WFNPMjVLSlR3Z3N3TjBuOUo1TnB3TmNqRDEwTXM5WFFXRE02b0hXdWUxM0VJWWx2eEJDcEVaaDlKZ1JUSVJBTTNjbHpqVm5CYjRRbW5zUEU?oc=5"
+   "title": "Crude prices may normalise to USD 70 by end-2027 as global oil",
+   "summary": "Global crude oil prices are projected to normalize around USD 70 per barrel by the end of 2027. Rising non-OPEC+ supplies and declining Chinese oil demand are expected to lead to a market surplus.…",
+   "why": "Energy and metal prices move first, and the rest follows.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/crude-prices-may-normalise-to-usd-70-by-end-2027-as-global-oil-market-moves-into-surplus-report/articleshow/136045576.cms"
   },
   {
-   "category": "Economy",
-   "title": "SEBI Proposes Relaxing Foreign Portfolio Investor Rules",
-   "summary": "Securities and Exchange Board of India plans to release a consultation paper designed to simplify regulatory frameworks for foreign portfolio investors. The initiative seeks to remove specific compliance restrictions that are absent in competing global jurisdictions. The goal is to enhance the overall ease of doing business and attract broader international capital.",
-   "why": "Streamlining compliance standards helps deepen capital pools by lowering administrative barriers for overseas institutional investors.",
+   "category": "Commodity",
+   "title": "Gold's slide deepens as AI rout, rate-hike bets hurt bullion",
+   "summary": "Gold prices plummeted by 3% on Friday, settling at a 14-month low of $3,502.49 per ounce. This sharp decline is largely due to a hawkish interest rate forecast and a significant selloff within AI…",
+   "why": "Commodity prices feed into costs and inflation.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-plans-consultation-paper-to-remove-fpi-constraints-absent-in-other-markets/articleshow/136020808.cms"
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/golds-slide-deepens-as-ai-rout-rate-hike-bets-hurt-bullion/articleshow/136045549.cms"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Indexes Enter Correction Territory",
-   "summary": "Major US stock indexes extended their losses as a deepening sell-off in technology shares weighed heavily on investor sentiment. Both the S&P 500 and the Dow Jones Industrial Average moved closer to official correction territory, defined as a 10 percent drop from recent peaks. The downturn followed fading enthusiasm over recent high-profile artificial intelligence market debuts.",
-   "why": "Corrections in mature markets signal a reset in asset pricing and dictate global institutional risk management strategies.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOY0VmbDFSZy1pMm1jZlE3SG1PMDdjcHdmZnp3WWFQbTBSSHBndDktSEhpRFB4MkRYZUhTQXFhNm9YY0pwNlczMkxtOF9ZMVA2R1VHN2k1MmE3VkN6d292amFiX1JKUUxVcmN4NmxFTGYwbkhlakpkeTZ4eE5yRkxxTTlubE9PUU1jWmtrZVF6RjhiMWhhYmp2Q29Ucy1aMm13T0F0WTMwSGRBZWdQV3pyRjlZRm9pUEVnV0EzQQ?oc=5"
+   "title": "Nasdaq 100 sinks 5.6% in worst week since Covid, S&amp;P 500 corrects",
+   "summary": "AI investment concerns triggered a broad selloff, pushing the S&amp;amp;P 500 into correction territory and the Nasdaq 100 to its worst week since March 2020. The sharp market pullback reflected…",
+   "why": "When Wall Street moves, world markets notice.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/us-stock-markets-nasdaq-100-5-6-pc-worst-week-since-covid-2020-s-p-500-3-7-pc-correction-investors-sell-off-ai-tech-11795223650589.html"
+  },
+  {
+   "category": "US Markets",
+   "title": "Wall Street selloff: Dow, S&P 500 enter correction as Nasdaq plunges",
+   "summary": "Wall Street selloff: Dow, S&P 500 enter correction as Nasdaq plunges  BusinessLine",
+   "why": "US trading often leads the next morning in India.",
+   "source": "BusinessLine",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxObTVOeVRXQi1jb1RjVWJwQXdUOUZRR092MnZzbDJ6OHdzTmQyN2ZZNnUweGNjYW5sWVppTXpOOWZscUJOQ3EzbkMxMzN2SFYtSVY5QzZnUnF4eXNOZ0NKcFMtYk1XY0hFLVJXQ3V1WjBHN1FLQ3ZzN1gwQmNVZ09DZnU4Q29TSmhWNV9TbUNxaDh0OUZ5NnRneDVGcW5Ia2RaVVp2YkNSeDlNRUo2Uzk2bWp6SGRzRGFtR3E4dTQ1bDJOUmF3TVRGYWxUUk1oT1UtMExQdHdycVVRdHdyc093Sm1GNFE5SWdmRXpHY9IB8wFBVV95cUxNbXVfZkpFYW9XRGZoZ0ZIRnYzeEUzdXpvdGNxSURVZlFUSTl6SWNsZDNqVVEzdV9jT3lnc1FVZlpGRmRiRTJkdUNjNWluZ0dvSTBVZ2FnYkZDdnI2TXpzd3VYb3JtaUZKUTVhS1JUX2RtelVPVFYzWkcwZUxMbk1EU1NWLTFuOTJyMmJCVS1uMk1VeFR5amZGOFdjSndWdVlXNjdKRW9FTHVFcVhvNXZMeUttLTQwZUlYU1FkM1VvM2taNWc4RlMzNGt5TWtEajZFSUJySzJXYUNta0tCMWpKSTJyaUlBdXJXaS0tN0gxR2p1QVk?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Stronger Rupee Threatens IT Sector Earnings",
-   "summary": "A recent industry report indicates that the sharp appreciation of the Indian currency could reduce fiscal year earnings for major technology exporters by up to 13 percent. Because software service providers earn the bulk of their revenues in foreign currencies, a surging rupee diminishes the domestic value of those overseas receipts. IT firms must navigate currency headwinds when converting international contracts.",
-   "why": "Export-oriented sectors face foreign exchange translation risks when local currency values fluctuate rapidly against major global currencies.",
+   "title": "AI to lead investment strategy in 2027; Energy and borrowing costs shape",
+   "summary": "According to the latest report from Barclays Private Bank, the impending year 2027 calls for a stronger investment focus on artificial intelligence. While infrastructure is steadily developing, the…",
+   "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/sharp-rupee-appreciation-may-cut-it-firms-fy27-earnings-by-up-to-13-report/articleshow/136021296.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/ai-to-lead-investment-strategy-in-2027-energy-and-borrowing-costs-shape-macro-outlook-barclays/articleshow/136046648.cms"
   },
   {
-   "category": "Economy",
-   "title": "SEBI Suggests Tenure Limits for Exchange Leadership",
-   "summary": "The market regulator has proposed crucial structural adjustments regarding governance norms at key financial institutions. Suggested changes include placing limits on the tenure of chief executives and independent directors, alongside lowering age thresholds for public interest roles. These measures aim to strengthen corporate governance standards across critical market infrastructure.",
-   "why": "Robust institutional governance ensures transparency and protects investor interests across core market utilities and exchanges.",
+   "category": "Equity",
+   "title": "Market winners: Max Healthcare, Deepak Fertilisers among 10 stocks that surged up",
+   "summary": "Max Healthcare, Deepak Fertilisers and Blue Star led Nifty 500 weekly gainers, surging 14.14%, 13.90% and 12.84%, respectively. Ten stocks outperformed the broader index, which gained 1.5%,…",
+   "why": "A company's share price reacts to its own news first.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-proposes-limiting-tenure-of-chief-executives-independent-directors-at-exchanges/articleshow/136031465.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-winners-max-healthcare-deepak-fertilisers-among-10-stocks-that-surged-up-to-14-in-last-week/slideshow/136046616.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "US Treasury yields drop for day and week; AI trade concern spurs",
+   "summary": "US Treasury yields experienced a significant decline due to heightened investor concerns surrounding the AI trade. As a result, investors shifted their focus towards safe-haven assets such as…",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-yields-drop-for-day-and-week-ai-trade-concern-spurs-safe-haven-bid/articleshow/136045682.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Dollar weaker as Fed-fueled rally stalls; lower US yields help yen",
+   "summary": "The US dollar has encountered a modest downturn, sliding to 103.86 as investor confidence wavers in the currency market. Despite this pullback, traders expect the Federal Reserve to maintain a…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-weaker-as-fed-fueled-rally-stalls-lower-us-yields-help-yen/articleshow/136045620.cms"
   }
  ]
 }
