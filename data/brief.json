@@ -1,5 +1,5 @@
 {
- "date": "Saturday, 21 November 2026",
+ "date": "Sunday, 22 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -9,7 +9,7 @@
   {
    "name": "SENSEX",
    "value": "83,920",
-   "change": 2.3
+   "change": 1.08
   },
   {
    "name": "GOLD $/oz",
@@ -44,84 +44,68 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "'Look at India's 7% growth': Trump slams Fed over high interest rates,",
-   "summary": "'Look at India's 7% growth': Trump slams Fed over high interest rates, claims US GDP could...  Moneycontrol.com",
-   "why": "Policy and economic news shape rates and the rupee.",
+   "category": "Equity",
+   "title": "Domestic Indices Scale Multi-Month Highs Amid Strong Foreign Inflows",
+   "summary": "Indian benchmark indices recorded their fourth consecutive week of gains, with the Sensex and Nifty climbing to nine-month highs. This upward momentum was heavily supported by massive foreign institutional investor buying, which crossed the one lakh crore rupee mark for the month. Domestic equities continued to display resilience despite broader global market corrections.",
+   "why": "Foreign institutional flows often dictate short-term market trends and liquidity in the domestic equity space.",
    "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1ZRMWMtRGRZbkFlSDBwY3RMcDhXOENaU214bkpucXVyV1FuWmFGYlFsLVJ0UjZkZ3daeEVROXZ5c2RsbnltX3VmVkFOYkxsN3V5V0hCY1NVV2pVNXgwLUdlVjJYQ2RQMjJqdDdnSE1yQ2s3dWsyYUduRDhfb28yYjB3SjFZYjYtV2xlQ21JaVB5REZlUF9OWm5ZYlZBeDFTZWRXZURocDRCSjN4RnVzREUxUGhsaVhLMTdiOWZVYjQtYzBtUlViMFRuaUQ5NVZxcUl4QzRzTXE5SnpNRjVma05hVFRqNjRO0gHoAUFVX3lxTE1TVlExYy1EZFluQWVIMHBjdExwOFc4Q1pTbXhuSm5xdXJXUW5aYUZiUWwtUnRSNmRnd1p4RVE5dnlzZGxueW1fdWZWQU5iTGw3dXlXSEJjU1VXalU1eDAtR2VWMlhDZFAyMmp0N2dITXJDazd1azJhR25EOF9vbzJiMHdKMVliNi1XbGVDbUlpUHlERmVQX05ablliVkF4MVNlZFdlRGhwNEJKM3hGdXNERTFQaGxpWEsxN2I5ZlViNC1jMG1SVWIwVG5pRDk1VnFxSXhDNHNNcTlKek1GNWZrTmFUVGo2NE4?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOWEQtNTFaLUQySENabXVVVm9hYWRhdWZxVVlMS1o5ZzVOOFp4SHJFbWU1clpsVTNmMWtsc0NjSEdJcE5uSE9EQ2hudkxRbnBUN3VvZ1BwTktCNnVQdFIxSFVKWnU1ajF3bFVSMUZLSGU2cXZ1Yk94VGtPZTByWXFwMExlTG1rN2NRRC1OYnpRbGlmdzh4QnVMZ3JaTW44bi1meDZER3RtV3VTeWpCejUtam1tY2JtQnRnU0ltN09LenNJamNwOW9teHBZdU54WUROSlFFY1FBOVh3aFlL0gHiAUFVX3lxTE9NTW96UUF1N1J3eTJpbXRXeHA2bVlKSlpneGtUajFBTFNvN3BOenlSMWJuT09GQnFRbVR0Qk1rTTY2a2tTTzBKVlh3TmNtZzNnRUVpNmd3YzUyQ194d2lxa1Q2UXpuSXFyZE81eXRJNkJJaUxxc0c1MUdxZG53Yk5FOTdBeVotN3RyelJsTU5EQUdseXBrTWIwNzBwaVhWOUctT1F5XzN6V2p4RUJ6aXFVVVhXMVRFQXFoeldmeG1BUXhBZmM2OTVLQVN3MFBDRVY3NWFQU3JqbmtCY0FEVU9LUWc?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "National Stock Exchange Enters Global Top Five Exchanges",
+   "summary": "The National Stock Exchange of India has grown significantly in market capitalization, surpassing major global counterparts like Nasdaq and the Hong Kong Exchanges. This milestone places the Indian exchange among the five largest listed stock exchanges worldwide. Such scaling reflects the expanding depth and participation within domestic capital markets.",
+   "why": "Exchange market capitalization is a key indicator of a nation's financial market influence on the global stage.",
+   "source": "DD India",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa3NGM1c3Y1BiSDFtNWVqX1BmQ3RDN2dzVXdRc0hDT19Sam1YS2Z6SmdwOVVZMU9KanNNbG5hN2lIclJkMi1SalBHYS1ESWtPd2cxODNFczh6eFpHTEM2RktuRldZeV80UWk3blYyQlFPTjhZYXpRTjFyWDc3TUpYeGJEcU1ZWnMwZG5kWGo1bzhoMXZvcno4cmpxVlhOcm95d2d4VGdsSjFDcGRUSzItSnJmbjJ6UXVybDJB?oc=5"
   },
   {
    "category": "Economy",
-   "title": "India's GDP growth projected at 7 pc for FY27, 25 bps rate",
-   "summary": "India's GDP growth projected at 7 pc for FY27, 25 bps rate hike likely in Dec: Report  ET Retail",
-   "why": "What the RBI and the government do reaches your money.",
-   "source": "ET Retail",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNMGM1OHV0ZV9WZXZ4UWJWV0dtT0UxbjhwMkt4WmdwYUFTWFNyTGFQYWd5UDNIbXExY2FWcklmekJvbGQ1RUFIdzRwTXJ0X05pazlvc2pma21PYWNJSFY4S05pYk9NTklwcWQ3MklUcUk2azRlcTQtb29mVXFqWUJCTkN4SDN2a3lSOFc2SUZCNDhNODdnaEVIQTZZdHVibXUzWnRvZl90NENtM0h6YXlGUDkyZVBTQWVaeU51UmxnUVI4eXRiY1dMc0xoZTY3a1pvNWNpX2twTUNJbWF5ZjFrZWJIdHjSAegBQVVfeXFMTXpZWXNLSDZsamZULWpVRG5qT1RsYkF0VUJsMjZESWk1TXNzSjctekJvVFlNVG81dy1ZUlljQVgzSWVXY1o5cHVVRF9YLTlwNEJTU055eHliNEUzQllxVjJNY3p6Z2g3ZS1uTjg4MGtDaWNHTEVCWm5tWHp3Y3lUeW5Ta3p4eVlGZnhwRlJKeHRfUTVqN3RPeFhKWDJEbHd0WnVuNzYyV3llSElxanZ3M0pFVnJOTWF2cFhaWmdWWDFHa0ZPbVgzWGpmX3dHWmNSSFU4UTdGQ24zVjhPVjQyVGNMeUVRYlcwMA?oc=5"
+   "title": "Indian Rupee Strengthens Past Key Threshold Against US Dollar",
+   "summary": "The local currency crossed the 93 mark against the US dollar, driven by heavy foreign capital inflows and a softer international crude oil price environment. Currency traders also noted an unwinding of short positions as the domestic currency targeted its best monthly performance in several years. A firmer exchange rate affects import costs and export competitiveness differently across sectors.",
+   "why": "Exchange rate fluctuations impact domestic inflation through import costs and alter corporate earnings for export-heavy sectors.",
+   "source": "The New Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxORm1od19WajZBczlkS00wbWdVenpuMjMzLWJGVHB0MlF0MlpKOWV1bnpQTkJ2RTNlUXNkYVh0NUVaQXJtYXRId0lDb1ZMc1pTSllJTjFFdHNqNTdab3UxSktqVVBIOEQ5OUswdkwyTnMzSUQ0M1FfOTYyX2lrTDVVN1Y1RW1vaWFUbWgtWEJaNV9oNDJLZy1MR1VTdG9MM3Rub3dkanI2R1Z3VDBiZVhhM0NjdE1BUHF1eEVjN0VZeWx0RlhGY2RsUmtnQmpmakZhOG9Yc9IBvAFBVV95cUxQc1lHQTFfZmo5dVpnRjFCQWtXb2pOcFZCbDNWRjdqcFF1V1pCOVQ4WTRYeFg5UEpvOWJYYkNGM25ERXJKeUk2NHRvbmd4R3hrSjhBempEclczc0FnNTBxVXlQcUFRcW5JeEQ2SXdVS0h1ekp3U1daejk5ckNQbnc0SmFicURWa2cwcEY1RlJITlcwZEdHeW44ZkhtQnZia1FWaTdWZmpDR2JBNGxIQ1BjeUdERFV6LVlMNnhZZg?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Crude prices may normalise to USD 70 by end-2027 as global oil",
-   "summary": "Global crude oil prices are projected to normalize around USD 70 per barrel by the end of 2027. Rising non-OPEC+ supplies and declining Chinese oil demand are expected to lead to a market surplus.…",
-   "why": "Energy and metal prices move first, and the rest follows.",
+   "title": "Global Crude Prices Expected to Normalize by 2027",
+   "summary": "International crude oil prices are projected to drift toward 70 dollars per barrel by the end of 2027 as market conditions transition into a surplus. This shift is anticipated due to expanding output from non-OPEC suppliers combined with moderating energy consumption in China. Stable energy costs typically ease macroeconomic pressures for oil-importing developing nations.",
+   "why": "Crude oil is a vital macroeconomic input that influences domestic inflation, trade deficits, and fiscal balances.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/commodities/news/crude-prices-may-normalise-to-usd-70-by-end-2027-as-global-oil-market-moves-into-surplus-report/articleshow/136045576.cms"
   },
   {
    "category": "Commodity",
-   "title": "Gold, silver price crash: DSP Mutual Fund turns bullish on bullion, reveals",
-   "summary": "Gold prices plunged to a 14-month low, recording their steepest weekly decline in eight months amid interest-rate concerns and an AI-stock selloff. DSP Mutual Fund is gradually buying gold and silver…",
-   "why": "Commodity prices feed into costs and inflation.",
+   "title": "Precious Metals Drop Sharply Amid Broader Liquidation Waves",
+   "summary": "Gold and silver prices experienced steep weekly declines, touching multi-month lows alongside broader macroeconomic uncertainty and equity selloffs. Despite the sudden crash in bullion valuations, certain institutional players like mutual funds have begun accumulating positions through a phased buying strategy. Investors often rebalance portfolios across asset classes during periods of high market volatility.",
+   "why": "Precious metals serve as traditional hedges against inflation and economic uncertainty, making their price trends closely watched market indicators.",
    "source": "Mint",
    "url": "https://www.livemint.com/market/commodities/gold-silver-price-crash-dsp-mutual-fund-turns-bullish-on-bullion-reveals-new-buying-strategy-check-price-levels-11795252615511.html"
   },
   {
    "category": "US Markets",
-   "title": "NSE becomes world's fifth-largest listed exchange by market cap, overtakes Nasdaq and",
-   "summary": "NSE becomes world's fifth-largest listed exchange by market cap, overtakes Nasdaq and HKEX  DD India",
-   "why": "When Wall Street moves, world markets notice.",
-   "source": "DD India",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa3NGM1c3Y1BiSDFtNWVqX1BmQ3RDN2dzVXdRc0hDT19Sam1YS2Z6SmdwOVVZMU9KanNNbG5hN2lIclJkMi1SalBHYS1ESWtPd2cxODNFczh6eFpHTEM2RktuRldZeV80UWk3blYyQlFPTjhZYXpRTjFyWDc3TUpYeGJEcU1ZWnMwZG5kWGo1bzhoMXZvcno4cmpxVlhOcm95d2d4VGdsSjFDcGRUSzItSnJmbjJ6UXVybDJB?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Slumps on 20 November 2026 as Nasdaq Loses 5.13% and",
-   "summary": "Wall Street Slumps on 20 November 2026 as Nasdaq Loses 5.13% and Dow, S&P 500 Enter Correction  Kotak Neo",
-   "why": "US trading often leads the next morning in India.",
+   "title": "Wall Street Indices Enter Correction Territory Following Technology Slump",
+   "summary": "US equity markets suffered steep losses as technology stocks led a broad-based sell-off driven by growing concerns over artificial intelligence valuations. The tech-heavy Nasdaq dropped over five percent in a single session, pushing the S&P 500 and Dow Jones indices into correction territory. This downturn reflects shifting investor sentiment regarding the immediate monetization and profitability of recent tech booms.",
+   "why": "Wall Street movements frequently influence global risk sentiment and foreign institutional investment patterns in emerging markets.",
    "source": "Kotak Neo",
    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPdEVVejZVc2QtejVwMl9fQzZOMGdRVUR4UVBsbzlqeHdlSndjLUdsSTJ1ZEozOV8tY0VObnI1R0FiUXdjQkhqU25VQnBMLVMyRDFzeTM5cmtKOThYbjY5WFVpUnBpMzdjWi1NSFFuQUt6c2NoMVdueGtoWTVIUlJQR2FJTVR0WG4xRXJQUDRPTDJiNUNNNmVuZ1pCbC1jcmh0a294dUtMbWxaVU80NkNDSUM5ckROS0huNnBhRXNpQUtLRTZtTmtKelgwT3pFQ0tCb0E?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Nifty eyes 26,200 as rally strengthens; 6 sectors signal outperformance",
-   "summary": "Nifty surged 2.61% last week, gaining 656 points amid strong FII inflows and improving technical indicators. Resistance lies at 25,950–26,200, while banking, IT and financial services lead sectoral…",
-   "why": "Share prices move on news like this.",
+   "category": "US Markets",
+   "title": "US Treasury Yields Slip as Investors Pivot Toward Safe Havens",
+   "summary": "American government bond yields declined across daily and weekly timelines as market participants sought safety from escalating equity market volatility. The flight to quality was triggered by mounting anxieties surrounding the sustainability of recent technology sector rallies. Lower bond yields generally indicate higher demand for fixed-income instruments as risk aversion rises.",
+   "why": "US Treasury yields serve as a primary global benchmark for risk-free rates and capital allocation across international borders.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nifty-eyes-26200-as-rally-strengthens-6-sectors-signal-outperformance/articleshow/136050218.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-yields-drop-for-day-and-week-ai-trade-concern-spurs-safe-haven-bid/articleshow/136045682.cms"
   },
   {
-   "category": "Equity",
-   "title": "Stocks to buy: HSBC lists 19 Indian stocks that saw FY27 earnings",
-   "summary": "HSBC identified 19 Indian stocks with Buy ratings that received FY27 earnings upgrades after Q2 results. Ather Energy, GAIL and IIFL Finance led revisions, while improving corporate profitability…",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/stocks-to-buy-hsbc-lists-19-indian-stocks-that-saw-fy27-earnings-upgrades-check-target-prices/slideshow/136048231.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Concurrent Gainers: These 13 stocks gained for 5 days in a row,",
-   "summary": "The Sensex gained 1.08% during the five sessions ending November 20, while 99 BSE 200 stocks advanced consecutively. Thirteen shortlisted stocks delivered impressive cumulative returns ranging from…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/concurrent-gainers-these-13-stocks-gained-for-5-days-in-a-row-all-rose-over-27/slideshow/136047969.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "AI to lead investment strategy in 2027; Energy and borrowing costs shape",
-   "summary": "According to the latest report from Barclays Private Bank, the impending year 2027 calls for a stronger investment focus on artificial intelligence. While infrastructure is steadily developing, the…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/ai-to-lead-investment-strategy-in-2027-energy-and-borrowing-costs-shape-macro-outlook-barclays/articleshow/136046648.cms"
+   "category": "Economy",
+   "title": "US Leadership References India's Macro Momentum During Monetary Policy Debate",
+   "summary": "Political figures in the United States highlighted India's robust economic growth trajectory while criticizing domestic monetary policy choices regarding borrowing costs. Observers noted that sustained expansion figures contrast with restrictive interest rate debates occurring in advanced economies. Such international comparisons often emphasize the role of domestic demand in maintaining high economic output.",
+   "why": "Cross-country macroeconomic comparisons help investors gauge relative economic strength and policy effectiveness across major global economies.",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1ZRMWMtRGRZbkFlSDBwY3RMcDhXOENaU214bkpucXVyV1FuWmFGYlFsLVJ0UjZkZ3daeEVROXZ5c2RsbnltX3VmVkFOYkxsN3V5V0hCY1NVV2pVNXgwLUdlVjJYQ2RQMjJqdDdnSE1yQ2s3dWsyYUduRDhfb28yYjB3SjFZYjYtV2xlQ21JaVB5REZlUF9OWm5ZYlZBeDFTZWRXZURocDRCSjN4RnVzREUxUGhsaVhLMTdiOWZVYjQtYzBtUlViMFRuaUQ5NVZxcUl4QzRzTXE5SnpNRjVma05hVFRqNjRO0gHoAUFVX3lxTE1TVlExYy1EZFluQWVIMHBjdExwOFc4Q1pTbXhuSm5xdXJXUW5aYUZiUWwtUnRSNmRnd1p4RVE5dnlzZGxueW1fdWZWQU5iTGw3dXlXSEJjU1VXalU1eDAtR2VWMlhDZFAyMmp0N2dITXJDazd1azJhR25EOF9vbzJiMHdKMVliNi1XbGVDbUlpUHlERmVQX05ablliVkF4MVNlZFdlRGhwNEJKM3hGdXNERTFQaGxpWEsxN2I5ZlViNC1jMG1SVWIwVG5pRDk1VnFxSXhDNHNNcTlKek1GNWZrTmFUVGo2NE4?oc=5"
   }
  ]
 }
