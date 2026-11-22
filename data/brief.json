@@ -4,12 +4,12 @@
   {
    "name": "NIFTY 50",
    "value": "25,801",
-   "change": 1.12
+   "change": 2.27
   },
   {
    "name": "SENSEX",
    "value": "83,920",
-   "change": 1.08
+   "change": 2.3
   },
   {
    "name": "GOLD $/oz",
@@ -45,67 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Domestic Indices Scale Multi-Month Highs Amid Strong Foreign Inflows",
-   "summary": "Indian benchmark indices recorded their fourth consecutive week of gains, with the Sensex and Nifty climbing to nine-month highs. This upward momentum was heavily supported by massive foreign institutional investor buying, which crossed the one lakh crore rupee mark for the month. Domestic equities continued to display resilience despite broader global market corrections.",
-   "why": "Foreign institutional flows often dictate short-term market trends and liquidity in the domestic equity space.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOWEQtNTFaLUQySENabXVVVm9hYWRhdWZxVVlMS1o5ZzVOOFp4SHJFbWU1clpsVTNmMWtsc0NjSEdJcE5uSE9EQ2hudkxRbnBUN3VvZ1BwTktCNnVQdFIxSFVKWnU1ajF3bFVSMUZLSGU2cXZ1Yk94VGtPZTByWXFwMExlTG1rN2NRRC1OYnpRbGlmdzh4QnVMZ3JaTW44bi1meDZER3RtV3VTeWpCejUtam1tY2JtQnRnU0ltN09LenNJamNwOW9teHBZdU54WUROSlFFY1FBOVh3aFlL0gHiAUFVX3lxTE9NTW96UUF1N1J3eTJpbXRXeHA2bVlKSlpneGtUajFBTFNvN3BOenlSMWJuT09GQnFRbVR0Qk1rTTY2a2tTTzBKVlh3TmNtZzNnRUVpNmd3YzUyQ194d2lxa1Q2UXpuSXFyZE81eXRJNkJJaUxxc0c1MUdxZG53Yk5FOTdBeVotN3RyelJsTU5EQUdseXBrTWIwNzBwaVhWOUctT1F5XzN6V2p4RUJ6aXFVVVhXMVRFQXFoeldmeG1BUXhBZmM2OTVLQVN3MFBDRVY3NWFQU3JqbmtCY0FEVU9LUWc?oc=5"
+   "title": "Nifty Approaches Resistance Near 26,200",
+   "summary": "The Nifty index surged by 2.61% last week, adding 656 points on the back of robust foreign institutional investor inflows and positive technical patterns. Market participants are watching the 25,950 to 26,200 range as the next major hurdle for the ongoing bullish momentum. Meanwhile, banking, IT, and financial services sectors are taking the lead in driving these gains.",
+   "why": "Tracking benchmark index resistance levels helps investors understand where profit-booking or breakout trading opportunities may emerge.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nifty-eyes-26200-as-rally-strengthens-6-sectors-signal-outperformance/articleshow/136050218.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold Prices Extend Losses Amid Fed Hike Worries",
+   "summary": "Gold prices recorded their steepest weekly decline since March, falling for the fifth consecutive trading session. The metal dropped to a 14-month low, with domestic multi-commodity exchange rates settling around Rs 1,21,949 per 10 grams and international spot prices touching $3,539 per ounce. Investors moved away from the yellow metal due to rising expectations of a US Federal Reserve rate hike, a stronger US dollar, and broader selling in artificial intelligence equities.",
+   "why": "Precious metals often react inversely to interest rate hikes and dollar strength, as higher yields reduce the appeal of non-yielding assets like gold.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/commodities/what-is-future-of-gold-rates-price-crash-continues-as-ai-selloff-fed-rate-hike-concerns-weigh-on-investors-sentiment-11795325490076.html"
+  },
+  {
+   "category": "Economy",
+   "title": "Infrastructure Investment Trust IPOs Target Rs 17,000 Crore",
+   "summary": "The public offering pipeline for Infrastructure Investment Trusts is gaining momentum, with four to five private trusts preparing to launch initial public offerings by March 2027. These issuances aim to mobilize approximately Rs 17,000 crore in total capital. The funds raised will be channeled into building long-term capital for large-scale infrastructure projects across the country.",
+   "why": "InvITs provide retail and institutional investors a structured way to earn yields from operational infrastructure assets while helping developers recycle capital.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/invit-ipo-rush-gathers-pace-4-5-private-trusts-likely-to-go-public-by-mar-2027/articleshow/136069094.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Climbs Past 93 Against US Dollar",
+   "summary": "The Indian rupee strengthened past the 93 mark against the US dollar, trading around 92.67. This appreciation was largely driven by investors seeking shelter in Indian equities and market participants unwinding short positions on the local currency. Analysts note that while a stronger currency signals domestic economic resilience, it can introduce headwinds for export-heavy sectors like information technology.",
+   "why": "Currency fluctuations impact import costs, foreign institutional investments, and the profitability of companies that earn revenue in foreign currencies.",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2pFbUd4enR6VTI3UkVVSllkdl92SkJ3d2hNVkZkQTBlQW9FMnBEMHBmUkRkdkhUUFB2NHV0UHNaYUlKS05JaDJOaEswOXF5N0hlaEo3anZHRHdnSU43cEltdkJfM3lEM1VfSWZLTUwxa3MxM3VRZmlhMkxYRWJjVXRxMGh3TW9uZEJFMG1mXzR0MDZuVXo3ejRMQ1FjSXFZRHMwWHczSURscU56TUVFcDV1dHFMdWgxQ0tn?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Wall Street Correction Deepens on Tech Sell-Off",
+   "summary": "US equity benchmarks experienced a severe weekly sell-off, pushing both the S&P 500 and the Dow Jones Industrial Average into official correction territory. The Nasdaq also turned negative for the year as aggressive liquidations hit technology and growth counters. Major financial institutions warn that systematic investors and algorithmic funds could trigger additional waves of selling if key support levels fail to hold.",
+   "why": "Global markets are deeply interconnected, and steep corrections on Wall Street frequently influence sentiment and institutional fund flows in emerging markets like India.",
+   "source": "cwibc.co.id",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5V0pvU0ZURFlsZGN2a0k3Nnl4VWNVdGxwTThhVnhMOUlEY20wYWE1aFpHeFo5UEZjc0cyOHpIMk05SlB4VTlNYVN4MFJIZzZhaXUyb0dpb0pNQTBKclR6RFp3?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Anthropic Stumble Highlights Stretched AI Valuations",
+   "summary": "Artificial intelligence firm Anthropic experienced a post-debut stumble, with its shares falling roughly 9% from initial levels. This sluggish market performance delivered a reality check to investors who had high hopes for marquee tech listings. Market observers noted that the weak debut deepened existing concerns regarding overextended valuations across the broader artificial intelligence sector.",
+   "why": "High-profile technology IPOs serve as barometers for risk appetite and valuation sanity in emerging growth sectors.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropics-post-debut-stumble-delivers-reality-check-for-ai-trade/articleshow/136066633.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Brickwork Ratings Projects India GDP Growth at 7 Percent",
+   "summary": "Rating agency Brickwork Ratings has projected India's gross domestic product growth at 7 percent for the financial year 2027. The economic outlook report also anticipates a potential 25 basis point interest rate hike by central monetary authorities during upcoming policy reviews to manage liquidity and inflationary pressures. Government officials continue to highlight India's strong relative growth rate compared to other major global economies.",
+   "why": "GDP growth forecasts and central bank rate decisions dictate the macro environment for corporate earnings and consumer borrowing costs.",
+   "source": "ET Retail",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNMGM1OHV0ZV9WZXZ4UWJWV0dtT0UxbjhwMkt4WmdwYUFTWFNyTGFQYWd5UDNIbXExY2FWcklmekJvbGQ1RUFIdzRwTXJ0X05pazlvc2pma21PYWNJSFY4S05pYk9NTklwcWQ3MklUcUk2azRlcTQtb29mVXFqWUJCTkN4SDN2a3lSOFc2SUZCNDhNODdnaEVIQTZZdHVibXUzWnRvZl90NENtM0h6YXlGUDkyZVBTQWVaeU51UmxnUVI4eXRiY1dMc0xoZTY3a1pvNWNpX2twTUNJbWF5ZjFrZWJIdHjSAegBQVVfeXFMTXpZWXNLSDZsamZULWpVRG5qT1RsYkF0VUJsMjZESWk1TXNzSjctekJvVFlNVG81dy1ZUlljQVgzSWVXY1o5cHVVRF9YLTlwNEJTU055eHliNEUzQllxVjJNY3p6Z2g3ZS1uTjg4MGtDaWNHTEVCWm5tWHp3Y3lUeW5Ta3p4eVlGZnhwRlJKeHRfUTVqN3RPeFhKWDJEbHd0WnVuNzYyV3llSElxanZ3M0pFVnJOTWF2cFhaWmdWWDFHa0ZPbVgzWGpmX3dHWmNSSFU4UTdGQ24zVjhPVjQyVGNMeUVRYlcwMA?oc=5"
   },
   {
    "category": "Equity",
-   "title": "National Stock Exchange Enters Global Top Five Exchanges",
-   "summary": "The National Stock Exchange of India has grown significantly in market capitalization, surpassing major global counterparts like Nasdaq and the Hong Kong Exchanges. This milestone places the Indian exchange among the five largest listed stock exchanges worldwide. Such scaling reflects the expanding depth and participation within domestic capital markets.",
-   "why": "Exchange market capitalization is a key indicator of a nation's financial market influence on the global stage.",
-   "source": "DD India",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa3NGM1c3Y1BiSDFtNWVqX1BmQ3RDN2dzVXdRc0hDT19Sam1YS2Z6SmdwOVVZMU9KanNNbG5hN2lIclJkMi1SalBHYS1ESWtPd2cxODNFczh6eFpHTEM2RktuRldZeV80UWk3blYyQlFPTjhZYXpRTjFyWDc3TUpYeGJEcU1ZWnMwZG5kWGo1bzhoMXZvcno4cmpxVlhOcm95d2d4VGdsSjFDcGRUSzItSnJmbjJ6UXVybDJB?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Rupee Strengthens Past Key Threshold Against US Dollar",
-   "summary": "The local currency crossed the 93 mark against the US dollar, driven by heavy foreign capital inflows and a softer international crude oil price environment. Currency traders also noted an unwinding of short positions as the domestic currency targeted its best monthly performance in several years. A firmer exchange rate affects import costs and export competitiveness differently across sectors.",
-   "why": "Exchange rate fluctuations impact domestic inflation through import costs and alter corporate earnings for export-heavy sectors.",
-   "source": "The New Indian Express",
-   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxORm1od19WajZBczlkS00wbWdVenpuMjMzLWJGVHB0MlF0MlpKOWV1bnpQTkJ2RTNlUXNkYVh0NUVaQXJtYXRId0lDb1ZMc1pTSllJTjFFdHNqNTdab3UxSktqVVBIOEQ5OUswdkwyTnMzSUQ0M1FfOTYyX2lrTDVVN1Y1RW1vaWFUbWgtWEJaNV9oNDJLZy1MR1VTdG9MM3Rub3dkanI2R1Z3VDBiZVhhM0NjdE1BUHF1eEVjN0VZeWx0RlhGY2RsUmtnQmpmakZhOG9Yc9IBvAFBVV95cUxQc1lHQTFfZmo5dVpnRjFCQWtXb2pOcFZCbDNWRjdqcFF1V1pCOVQ4WTRYeFg5UEpvOWJYYkNGM25ERXJKeUk2NHRvbmd4R3hrSjhBempEclczc0FnNTBxVXlQcUFRcW5JeEQ2SXdVS0h1ekp3U1daejk5ckNQbnc0SmFicURWa2cwcEY1RlJITlcwZEdHeW44ZkhtQnZia1FWaTdWZmpDR2JBNGxIQ1BjeUdERFV6LVlMNnhZZg?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Global Crude Prices Expected to Normalize by 2027",
-   "summary": "International crude oil prices are projected to drift toward 70 dollars per barrel by the end of 2027 as market conditions transition into a surplus. This shift is anticipated due to expanding output from non-OPEC suppliers combined with moderating energy consumption in China. Stable energy costs typically ease macroeconomic pressures for oil-importing developing nations.",
-   "why": "Crude oil is a vital macroeconomic input that influences domestic inflation, trade deficits, and fiscal balances.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/news/crude-prices-may-normalise-to-usd-70-by-end-2027-as-global-oil-market-moves-into-surplus-report/articleshow/136045576.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "Precious Metals Drop Sharply Amid Broader Liquidation Waves",
-   "summary": "Gold and silver prices experienced steep weekly declines, touching multi-month lows alongside broader macroeconomic uncertainty and equity selloffs. Despite the sudden crash in bullion valuations, certain institutional players like mutual funds have begun accumulating positions through a phased buying strategy. Investors often rebalance portfolios across asset classes during periods of high market volatility.",
-   "why": "Precious metals serve as traditional hedges against inflation and economic uncertainty, making their price trends closely watched market indicators.",
+   "title": "SP Apparels Announces 1:5 Stock Split",
+   "summary": "SP Apparels has received approval for a 1:5 stock split, dividing each existing equity share with a face value of Rs 10 into five shares with a face value of Rs 2. The corporate action is designed to adjust the share price without altering the overall value of an investor's holding. December 10 has been fixed as the official record date to determine eligible shareholders.",
+   "why": "Stock splits increase the number of circulating shares and lower the per-share price, which can improve trading liquidity for retail participants.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-silver-price-crash-dsp-mutual-fund-turns-bullish-on-bullion-reveals-new-buying-strategy-check-price-levels-11795252615511.html"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Indices Enter Correction Territory Following Technology Slump",
-   "summary": "US equity markets suffered steep losses as technology stocks led a broad-based sell-off driven by growing concerns over artificial intelligence valuations. The tech-heavy Nasdaq dropped over five percent in a single session, pushing the S&P 500 and Dow Jones indices into correction territory. This downturn reflects shifting investor sentiment regarding the immediate monetization and profitability of recent tech booms.",
-   "why": "Wall Street movements frequently influence global risk sentiment and foreign institutional investment patterns in emerging markets.",
-   "source": "Kotak Neo",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPdEVVejZVc2QtejVwMl9fQzZOMGdRVUR4UVBsbzlqeHdlSndjLUdsSTJ1ZEozOV8tY0VObnI1R0FiUXdjQkhqU25VQnBMLVMyRDFzeTM5cmtKOThYbjY5WFVpUnBpMzdjWi1NSFFuQUt6c2NoMVdueGtoWTVIUlJQR2FJTVR0WG4xRXJQUDRPTDJiNUNNNmVuZ1pCbC1jcmh0a294dUtMbWxaVU80NkNDSUM5ckROS0huNnBhRXNpQUtLRTZtTmtKelgwT3pFQ0tCb0E?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "US Treasury Yields Slip as Investors Pivot Toward Safe Havens",
-   "summary": "American government bond yields declined across daily and weekly timelines as market participants sought safety from escalating equity market volatility. The flight to quality was triggered by mounting anxieties surrounding the sustainability of recent technology sector rallies. Lower bond yields generally indicate higher demand for fixed-income instruments as risk aversion rises.",
-   "why": "US Treasury yields serve as a primary global benchmark for risk-free rates and capital allocation across international borders.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-yields-drop-for-day-and-week-ai-trade-concern-spurs-safe-haven-bid/articleshow/136045682.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "US Leadership References India's Macro Momentum During Monetary Policy Debate",
-   "summary": "Political figures in the United States highlighted India's robust economic growth trajectory while criticizing domestic monetary policy choices regarding borrowing costs. Observers noted that sustained expansion figures contrast with restrictive interest rate debates occurring in advanced economies. Such international comparisons often emphasize the role of domestic demand in maintaining high economic output.",
-   "why": "Cross-country macroeconomic comparisons help investors gauge relative economic strength and policy effectiveness across major global economies.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1ZRMWMtRGRZbkFlSDBwY3RMcDhXOENaU214bkpucXVyV1FuWmFGYlFsLVJ0UjZkZ3daeEVROXZ5c2RsbnltX3VmVkFOYkxsN3V5V0hCY1NVV2pVNXgwLUdlVjJYQ2RQMjJqdDdnSE1yQ2s3dWsyYUduRDhfb28yYjB3SjFZYjYtV2xlQ21JaVB5REZlUF9OWm5ZYlZBeDFTZWRXZURocDRCSjN4RnVzREUxUGhsaVhLMTdiOWZVYjQtYzBtUlViMFRuaUQ5NVZxcUl4QzRzTXE5SnpNRjVma05hVFRqNjRO0gHoAUFVX3lxTE1TVlExYy1EZFluQWVIMHBjdExwOFc4Q1pTbXhuSm5xdXJXUW5aYUZiUWwtUnRSNmRnd1p4RVE5dnlzZGxueW1fdWZWQU5iTGw3dXlXSEJjU1VXalU1eDAtR2VWMlhDZFAyMmp0N2dITXJDazd1azJhR25EOF9vbzJiMHdKMVliNi1XbGVDbUlpUHlERmVQX05ablliVkF4MVNlZFdlRGhwNEJKM3hGdXNERTFQaGxpWEsxN2I5ZlViNC1jMG1SVWIwVG5pRDk1VnFxSXhDNHNNcTlKek1GNWZrTmFUVGo2NE4?oc=5"
+   "url": "https://www.livemint.com/market/stock-market-news/31-return-in-2026-so-far-smallcap-textile-stock-is-giving-4-shares-for-every-1-held-record-date-ahead-do-you-own-11795275604076.html"
   }
  ]
 }
