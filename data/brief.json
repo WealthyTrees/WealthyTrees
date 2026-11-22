@@ -23,8 +23,8 @@
   },
   {
    "name": "USD/INR",
-   "value": "92.67",
-   "change": -0.65
+   "value": "92.66",
+   "change": -0.66
   },
   {
    "name": "S&P 500",
@@ -45,67 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Nifty Approaches Resistance Near 26,200",
-   "summary": "The Nifty index surged by 2.61% last week, adding 656 points on the back of robust foreign institutional investor inflows and positive technical patterns. Market participants are watching the 25,950 to 26,200 range as the next major hurdle for the ongoing bullish momentum. Meanwhile, banking, IT, and financial services sectors are taking the lead in driving these gains.",
-   "why": "Tracking benchmark index resistance levels helps investors understand where profit-booking or breakout trading opportunities may emerge.",
+   "title": "Nifty Eyes 26,200 Amid Strong FII Inflows",
+   "summary": "Indian benchmark indices recorded solid gains recently, driven by robust foreign institutional investor inflows and positive technical indicators. The Nifty rose over two and a half percent over the week, moving past significant resistance levels with banking and financial sectors leading the charge. Market participants are closely watching whether the index can sustain momentum to test higher milestones in the upcoming sessions.",
+   "why": "Tracking benchmark indices helps investors gauge broader market sentiment and sector rotation patterns.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/stocks/news/nifty-eyes-26200-as-rally-strengthens-6-sectors-signal-outperformance/articleshow/136050218.cms"
   },
   {
    "category": "Commodity",
-   "title": "Gold Prices Extend Losses Amid Fed Hike Worries",
-   "summary": "Gold prices recorded their steepest weekly decline since March, falling for the fifth consecutive trading session. The metal dropped to a 14-month low, with domestic multi-commodity exchange rates settling around Rs 1,21,949 per 10 grams and international spot prices touching $3,539 per ounce. Investors moved away from the yellow metal due to rising expectations of a US Federal Reserve rate hike, a stronger US dollar, and broader selling in artificial intelligence equities.",
-   "why": "Precious metals often react inversely to interest rate hikes and dollar strength, as higher yields reduce the appeal of non-yielding assets like gold.",
+   "title": "Precious and Industrial Metals Plummet to Multi-Month Lows",
+   "summary": "Metal prices experienced sharp declines globally, with gold slipping near fourteen-month lows and silver reaching multi-month troughs. The selloff was accelerated by rising US bond yields, a stronger dollar, shifting Federal Reserve rate expectations, and persistent inflation concerns. This dramatic drop reverses a large portion of the gains built up over the past year across various precious and industrial commodities.",
+   "why": "Global commodity selloffs impact domestic retail bullion prices and domestic mining equities.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/what-is-future-of-gold-rates-price-crash-continues-as-ai-selloff-fed-rate-hike-concerns-weigh-on-investors-sentiment-11795325490076.html"
+   "url": "https://www.livemint.com/market/commodities/gold-silver-copper-aluminium-platinum-to-zinc-why-are-metal-prices-crashing-to-multi-month-lows-key-reasons-11795357679178.html"
+  },
+  {
+   "category": "Equity",
+   "title": "National Stock Exchange Becomes World's Fifth-Largest Exchange",
+   "summary": "The National Stock Exchange of India has climbed significantly in global rankings by market capitalization, overtaking major international peers like Nasdaq and Hong Kong Exchanges and Clearing. This milestone reflects the rapid expansion of India's capital markets, surging retail participation, and robust corporate listings over recent years. The achievement highlights India's growing prominence in the global financial ecosystem.",
+   "why": "Exchange market capitalisation reflects the sheer scale and economic weight of a nation's capital markets.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOXhmQjI2bVZ5eWhqUDZfemd6c0NXRWdSQ1VVT001NllsRWlkU3p1SG1IVjdaVUlqbEN1YWNHNEh3ZnItLWFHVlFKbVE0MFRhaXVoUThtREZiOFd3dEo3Z0VkVElaZDVnZ1BMOEZ2dnJKMGgwWENKQVAzX0phYllXVWJUUlF1Z29tWVhFLXVxSXY5Y3JzeERreG5Zdk1SbXZZa2R6UGxmV2drQ1FiR2FDaUJtT2Q?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Wall Street Suffers Sharp Weekly Rout as Nasdaq Turns Negative",
+   "summary": "US equities faced a severe weekly selloff, driven by cooling enthusiasm for artificial intelligence stocks and broader economic worries. The Nasdaq slipped into negative territory for the year as high-flying technology valuations faced heavy profit-booking. Investors are now reassessing portfolio risk amid shifting monetary policy expectations and upcoming macroeconomic data releases.",
+   "why": "US market corrections frequently influence global equity sentiment and foreign portfolio flows into emerging markets.",
+   "source": "BusinessToday Malaysia",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPd09HNmN3c1d4amdxN2ZJOUNVZjMwT1k4Nkhtalg2c2M2UmxPTm81QjVmNFZhTDdtM1J4aVp6WmNWZmstcVE5M1BqRnVENVJYdW1jMGtXWFI2S2l4emNwblN5WGdpWGdVY3lHM1V6X2xjRWRXb2pWLWttazFzd3VhbkoyR3NzekxCRWdQd2pVSk16TEF0bVhLZkNYZHkyMy1JWlJSYy03T0JxUHNxVFpCUEp0MFJxVkxSSGNqQQ?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "US Markets Brace for Key GDP, PCE Inflation and Earnings",
+   "summary": "Wall Street faces a packed economic calendar featuring third-quarter GDP figures and the crucial October Personal Consumption Expenditures price index released simultaneously. Markets will also digest corporate earnings reports from major tech and retail names during a shortened trading week due to Thanksgiving. Traders are scanning these data points for clues on the Federal Reserve's next policy moves.",
+   "why": "US inflation and growth data dictate global interest rate trajectories and currency valuations.",
+   "source": "TradingKey",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMFNoY3ZxSEc4alo3eGs1azFJRzgxYlJlUVFyZ3BKdmYwejJBLU1RZEhkb1Awdy1nM2ctRDdROXFtT1R0RnZmczNnUzRJcDFpWlFsXzhXakx3UGhzcloxOEZwdW1scjBScEV0ZUg5a3Rpc1NydmMxVDVvTGxCV0ZmTXVYblBlOGJFTkF1Ukp5Q2RiSVlFVTBXMWxIZldReDhlRUFuQ0c4N2kwb2ZQSm1OdG9YZ18tVDhhX3lFdHR3?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Infrastructure Investment Trust IPOs Target Rs 17,000 Crore",
-   "summary": "The public offering pipeline for Infrastructure Investment Trusts is gaining momentum, with four to five private trusts preparing to launch initial public offerings by March 2027. These issuances aim to mobilize approximately Rs 17,000 crore in total capital. The funds raised will be channeled into building long-term capital for large-scale infrastructure projects across the country.",
-   "why": "InvITs provide retail and institutional investors a structured way to earn yields from operational infrastructure assets while helping developers recycle capital.",
+   "title": "Infrastructure Investment Trust IPO Pipeline Expands Rapidly",
+   "summary": "Infrastructure Investment Trusts are ramping up public offerings, with multiple private trusts planning to raise billions of rupees through public listings by March 2027. These financial vehicles are designed to mobilize long-term capital required to fund large-scale infrastructure projects across the country. The growing pipeline indicates strong institutional and retail demand for yield-generating infrastructure assets.",
+   "why": "InvITs offer an alternative route for funding capital-intensive public works while providing regular income to investors.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/invit-ipo-rush-gathers-pace-4-5-private-trusts-likely-to-go-public-by-mar-2027/articleshow/136069094.cms"
   },
   {
-   "category": "Economy",
-   "title": "Indian Rupee Climbs Past 93 Against US Dollar",
-   "summary": "The Indian rupee strengthened past the 93 mark against the US dollar, trading around 92.67. This appreciation was largely driven by investors seeking shelter in Indian equities and market participants unwinding short positions on the local currency. Analysts note that while a stronger currency signals domestic economic resilience, it can introduce headwinds for export-heavy sectors like information technology.",
-   "why": "Currency fluctuations impact import costs, foreign institutional investments, and the profitability of companies that earn revenue in foreign currencies.",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2pFbUd4enR6VTI3UkVVSllkdl92SkJ3d2hNVkZkQTBlQW9FMnBEMHBmUkRkdkhUUFB2NHV0UHNaYUlKS05JaDJOaEswOXF5N0hlaEo3anZHRHdnSU43cEltdkJfM3lEM1VfSWZLTUwxa3MxM3VRZmlhMkxYRWJjVXRxMGh3TW9uZEJFMG1mXzR0MDZuVXo3ejRMQ1FjSXFZRHMwWHczSURscU56TUVFcDV1dHFMdWgxQ0tn?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Correction Deepens on Tech Sell-Off",
-   "summary": "US equity benchmarks experienced a severe weekly sell-off, pushing both the S&P 500 and the Dow Jones Industrial Average into official correction territory. The Nasdaq also turned negative for the year as aggressive liquidations hit technology and growth counters. Major financial institutions warn that systematic investors and algorithmic funds could trigger additional waves of selling if key support levels fail to hold.",
-   "why": "Global markets are deeply interconnected, and steep corrections on Wall Street frequently influence sentiment and institutional fund flows in emerging markets like India.",
-   "source": "cwibc.co.id",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5V0pvU0ZURFlsZGN2a0k3Nnl4VWNVdGxwTThhVnhMOUlEY20wYWE1aFpHeFo5UEZjc0cyOHpIMk05SlB4VTlNYVN4MFJIZzZhaXUyb0dpb0pNQTBKclR6RFp3?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Anthropic Stumble Highlights Stretched AI Valuations",
-   "summary": "Artificial intelligence firm Anthropic experienced a post-debut stumble, with its shares falling roughly 9% from initial levels. This sluggish market performance delivered a reality check to investors who had high hopes for marquee tech listings. Market observers noted that the weak debut deepened existing concerns regarding overextended valuations across the broader artificial intelligence sector.",
-   "why": "High-profile technology IPOs serve as barometers for risk appetite and valuation sanity in emerging growth sectors.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropics-post-debut-stumble-delivers-reality-check-for-ai-trade/articleshow/136066633.cms"
+   "category": "Commodity",
+   "title": "Crude Oil Prices Surge Amid Escalating Geopolitical Tensions",
+   "summary": "Domestic equity benchmarks faced downward pressure as crude oil futures rallied sharply in response to growing conflict concerns involving Iran. Higher energy import costs present a macro risk for India, which imports the vast majority of its crude requirements. Energy market volatility remains a critical variable for domestic inflation and the country's current account deficit.",
+   "why": "Crude oil is a vital input cost that directly influences domestic inflation, fuel prices, and macroeconomic stability in India.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS1BCT3dwVkVjQ2QyVU8xQ2VFYkVIV1RhUnUzeDY1R01OUzBJSGd3cmdPZVdsajN2WHRWQ2VKaEtJU1V2Tmd0dklfSXl2QkQ5OGk1dEEzZGo3YUJqRHBiUDl1bENkZHlWbXR4RzRqQ2F2SlM2Sm41SXV5MmtNUUk4WTU3bzg4M1U3TEZRWjBXX0hFMXBZYTUweUxRTXhaVDA?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Brickwork Ratings Projects India GDP Growth at 7 Percent",
-   "summary": "Rating agency Brickwork Ratings has projected India's gross domestic product growth at 7 percent for the financial year 2027. The economic outlook report also anticipates a potential 25 basis point interest rate hike by central monetary authorities during upcoming policy reviews to manage liquidity and inflationary pressures. Government officials continue to highlight India's strong relative growth rate compared to other major global economies.",
-   "why": "GDP growth forecasts and central bank rate decisions dictate the macro environment for corporate earnings and consumer borrowing costs.",
-   "source": "ET Retail",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNMGM1OHV0ZV9WZXZ4UWJWV0dtT0UxbjhwMkt4WmdwYUFTWFNyTGFQYWd5UDNIbXExY2FWcklmekJvbGQ1RUFIdzRwTXJ0X05pazlvc2pma21PYWNJSFY4S05pYk9NTklwcWQ3MklUcUk2azRlcTQtb29mVXFqWUJCTkN4SDN2a3lSOFc2SUZCNDhNODdnaEVIQTZZdHVibXUzWnRvZl90NENtM0h6YXlGUDkyZVBTQWVaeU51UmxnUVI4eXRiY1dMc0xoZTY3a1pvNWNpX2twTUNJbWF5ZjFrZWJIdHjSAegBQVVfeXFMTXpZWXNLSDZsamZULWpVRG5qT1RsYkF0VUJsMjZESWk1TXNzSjctekJvVFlNVG81dy1ZUlljQVgzSWVXY1o5cHVVRF9YLTlwNEJTU055eHliNEUzQllxVjJNY3p6Z2g3ZS1uTjg4MGtDaWNHTEVCWm5tWHp3Y3lUeW5Ta3p4eVlGZnhwRlJKeHRfUTVqN3RPeFhKWDJEbHd0WnVuNzYyV3llSElxanZ3M0pFVnJOTWF2cFhaWmdWWDFHa0ZPbVgzWGpmX3dHWmNSSFU4UTdGQ24zVjhPVjQyVGNMeUVRYlcwMA?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "SP Apparels Announces 1:5 Stock Split",
-   "summary": "SP Apparels has received approval for a 1:5 stock split, dividing each existing equity share with a face value of Rs 10 into five shares with a face value of Rs 2. The corporate action is designed to adjust the share price without altering the overall value of an investor's holding. December 10 has been fixed as the official record date to determine eligible shareholders.",
-   "why": "Stock splits increase the number of circulating shares and lower the per-share price, which can improve trading liquidity for retail participants.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/31-return-in-2026-so-far-smallcap-textile-stock-is-giving-4-shares-for-every-1-held-record-date-ahead-do-you-own-11795275604076.html"
+   "title": "India Projects Strong GDP Growth Alongside Potential Rate Hike",
+   "summary": "Economic reports project India's gross domestic product growth to remain robust at around seven percent for the current fiscal year. Simultaneously, analysts anticipate the central bank may consider a modest quarter-point interest rate increase in the upcoming monetary policy review to manage liquidity and price stability. These forecasts underscore a resilient domestic economy balancing growth with inflationary pressures.",
+   "why": "GDP growth and central bank interest rate decisions form the foundational baseline for corporate earnings and borrowing costs.",
+   "source": "Social News XYZ",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUUJFQ0xUX3BaQ01IRVRaMzdrN3lKdFA2eDlxYzQ3LXhhWHN6cWJQc3JZa3o1LUowS2RBSlpoVEhfU0RQYzRVOXBfMXMweWF1QjRtOW9pNTNaOUs2MGxyUWVlNk40QndQTTVPeFFkMVIwOVJVZEhTRmdCWlJZdFN2UFBRb3JDQ0hzWlg5Zng5Qk1wVXlEVm5DdDEwWS1rNzVQSXF4bVRIeTBpaXNNeVQ4cVp4S2ZIbENERkQwUXFR0gG-AUFVX3lxTE5RQkVDTFRfcFpDTUhFVFozN2s3eUp0UDZ4OXFjNDcteGFYc3pxYlBzcllrejUtSjBLZEFKWmhUSF9TRFBjNFU5cF8xczB5YXVCNG05b2k1M1o5SzYwbHJRZWU2TjRCd1BNNU94UWQxUjA5UlVkSFNGZ0JaUll0U3ZQUFFvckNDSHNaWDlmeDlCTXBVeURWbkN0MTBZLWs3NVBJcXhtVEh5MGlpc015VDhxWnhLZkhsQ0RGRDBRcVE?oc=5"
   }
  ]
 }
