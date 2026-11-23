@@ -1,37 +1,37 @@
 {
- "updated": "2026-11-22T19:54:25+00:00",
+ "updated": "2026-11-23T07:59:39+00:00",
  "charts": {
   "Nifty 50": {
    "yahoo": "ok",
-   "rows": 495
+   "rows": 494
   },
   "Sensex": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 493
   },
   "Bank Nifty": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 493
   },
   "Nifty IT": {
    "yahoo": "ok",
-   "rows": 494
+   "rows": 493
   },
   "Nifty Pharma": {
    "yahoo": "ok",
-   "rows": 493
+   "rows": 492
   },
   "Nifty Auto": {
    "yahoo": "ok",
-   "rows": 492
+   "rows": 491
   },
   "Nifty Metal": {
    "yahoo": "ok",
-   "rows": 492
+   "rows": 491
   },
   "India VIX": {
    "yahoo": "ok",
-   "rows": 492
+   "rows": 491
   },
   "S&P 500": {
    "yahoo": "ok",
@@ -71,7 +71,7 @@
   },
   "USD/INR": {
    "yahoo": "ok",
-   "rows": 519
+   "rows": 516
   }
  }
 }

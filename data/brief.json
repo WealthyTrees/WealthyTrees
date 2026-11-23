@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,801",
-   "change": 2.27
+   "value": "25,462",
+   "change": -1.31
   },
   {
    "name": "SENSEX",
-   "value": "83,920",
-   "change": 2.3
+   "value": "82,810",
+   "change": -1.32
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,515",
-   "change": -4.62
+   "value": "3,623",
+   "change": 3.06
   },
   {
    "name": "CRUDE WTI",
-   "value": "$83.4",
-   "change": 1.18
+   "value": "$83.0",
+   "change": -0.54
   },
   {
    "name": "USD/INR",
-   "value": "92.66",
-   "change": -0.66
+   "value": "92.90",
+   "change": 0.26
   },
   {
    "name": "S&P 500",
@@ -45,67 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Nifty Approaches Resistance Near 26,200",
-   "summary": "Indian benchmark indices posted strong weekly gains, driven by robust foreign institutional investor inflows and positive technical momentum. The Nifty surged over two percent to approach the 26,200 mark, with banking, IT, and financial sectors leading the upward move. Market participants are closely watching these key resistance levels as the domestic rally extends its winning streak.",
-   "why": "Tracking major index movements helps new investors understand broader market sentiment and sector rotation.",
+   "title": "Profit-booking drags Sensex and Nifty lower after rally",
+   "summary": "Indian benchmark indices experienced a pullback as investors moved to secure profits following a robust four-week market rally. Banking and metal sectors bore the brunt of the selling pressure, leading the downward trend during the session. Additionally, heightened market volatility ahead of the monthly derivatives expiry contributed to the cautious sentiment. Despite the sharp intraday decline, market participants continue to monitor overall economic trends closely.",
+   "why": "Profit-booking occurs when traders sell assets to lock in gains after a price surge, frequently causing temporary market dips.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/bull-vs-bear-why-is-stock-market-down-today-sensex-nifty-succumb-to-profit-booking-plunge-nearly-1-top-3-reasons-11795411485763.html"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian rupee retreats from highs on corporate dollar demand",
+   "summary": "The Indian currency pulled back from a seven-month high following robust corporate demand for the US dollar. Despite this session's retreat, the currency remains on track for a strong monthly gain of over two percent, supported heavily by foreign capital inflows into domestic assets. Major financial institutions have highlighted this resilience against broader currency turbulence. Traders continue to track overseas capital movements and domestic trade factors.",
+   "why": "Corporate dollar demand arises when local businesses need foreign currency for imports or debt servicing, putting downward pressure on the local rupee.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nifty-eyes-26200-as-rally-strengthens-6-sectors-signal-outperformance/articleshow/136050218.cms"
+   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-retreats-goldman-calls-it-a-port-of-stability-in-ai-storm/articleshow/136092977.cms"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Drop Amid Dramatic Selloff",
-   "summary": "Bullion prices experienced a steep correction, with gold dropping sharply from earlier record highs and heading toward its first annual loss in several years. Silver also suffered severe losses in single-session declines, impacting retail buyers and wedding shoppers. A stronger US dollar, rising bond yields, and shifting inflation expectations are driving this widespread commodity selloff.",
-   "why": "Commodity price corrections demonstrate how global currency strength and interest rates impact safe-haven assets.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/why-golds-five-year-winning-streak-is-under-threat-after-dramatic-selloff/articleshow/136070323.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Wall Street Plunges As AI Enthusiasm Fades",
-   "summary": "US equity markets extended a sharp weekly decline, pushing major indices like the S&P 500 into correction territory. The downturn was exacerbated by a significant drop in artificial intelligence-related shares following high-profile public debuts that failed to meet lofty investor expectations. Traders are now navigating growing fears regarding inflation and stretched valuations across the technology sector.",
-   "why": "Global sentiment heavily influences domestic flows, making US tech trends vital for international market awareness.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY1h6VEhXUGRDcE9hX25QQllJOF9uSmhUNERBSVdBNjRkU0gyaGRySGN0MXVXZERzUmhmdXJIUms2cFJJU2ZvdkVjUlB0RjRxSTQ4RFBiYTV0T0MyUFB5cWw0RWtuZzZrQXFwLUJqb3VsZGhacHR0NF9wTVMwc0tYUW1obFhUNHNVX0JEQnFKX2pRc1RWRGsxVw?oc=5"
+   "title": "Mutual funds eye higher gold and silver allocations",
+   "summary": "Several asset management companies are reviewing their stances on precious metals following a notable correction in market prices. Fund managers are considering increasing exposure to gold and silver as renewed interest emerges at lower valuation levels. This shift highlights a strategic re-evaluation among institutional investors looking at bullion as part of a diversified portfolio. The recent price volatility has created fresh entry points for long-term allocators.",
+   "why": "A price correction reduces asset valuations, often tempting institutional investors to accumulate holdings at more attractive entry levels.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/gold-silver-prices-fall-mutual-funds-increase-precious-metal-allocations-11795408683158.html"
   },
   {
    "category": "Equity",
-   "title": "NSE Ranks Among World's Largest Exchanges",
-   "summary": "The National Stock Exchange of India climbed significantly in global rankings to become the fifth-largest listed exchange by market capitalization. In doing so, it surpassed major international counterparts like Nasdaq and the Hong Kong Exchange. This milestone highlights the expanding scale and participation within India's primary financial marketplace.",
-   "why": "Exchange valuation milestones reflect the growing size and institutional maturity of the domestic financial ecosystem.",
-   "source": "DD News",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOXhmQjI2bVZ5eWhqUDZfemd6c0NXRWdSQ1VVT001NllsRWlkU3p1SG1IVjdaVUlqbEN1YWNHNEh3ZnItLWFHVlFKbVE0MFRhaXVoUThtREZiOFd3dEo3Z0VkVElaZDVnZ1BMOEZ2dnJKMGgwWENKQVAzX0phYllXVWJUUlF1Z29tWVhFLXVxSXY5Y3JzeERreG5Zdk1SbXZZa2R6UGxmV2drQ1FiR2FDaUJtT2Q?oc=5"
+   "title": "Ashoka Buildcon surges on major highway contracts",
+   "summary": "Shares of Ashoka Buildcon registered a sharp gain after the infrastructure firm secured a major contract from the National Highways Authority of India for expressway development. Furthermore, a joint venture involving the company emerged as the lowest bidder for another significant public project. These developments boosted investor sentiment, pushing the stock up considerably over the past month. The firm specializes in highway construction and large-scale infrastructure execution.",
+   "why": "Securing large public infrastructure contracts provides revenue visibility and signals robust operational growth for construction firms.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/ashoka-buildcon-share-price-jumps-8-on-rs-4-223-crore-project-wins-stock-up-17-in-a-month-what-should-investors-do-11795409853245.html"
+  },
+  {
+   "category": "Commodity",
+   "title": "Precious metals slide to multi-month lows after correction",
+   "summary": "Bullion prices experienced a steep correction over the past week, with retail rates for gold and silver tumbling significantly to hit multi-month lows. The sharp descent in precious metal valuations caught many retail participants off guard during the wedding season. Analysts note that these deep corrections have brought buyers back into physical retail markets to take advantage of lower rates. Global macroeconomic cues and shifting investment demand heavily influenced the weekly price drop.",
+   "why": "Sharp price corrections in commodities like gold and silver often trigger physical buying sprees among retail consumers and jewelers.",
+   "source": "The Times of India",
+   "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxNQXRyNmdESnFwLWc2eTJLWmRtdXYwalNsTG1lQW9PQ1pvcThnb1VZNFU5Zm9qU3liSlN3RkhzWGdPb2FzRDRnbTJMWmpzbFNIVHJldzhXcGp1YU5RZUdzVUVUVXNCMzdRN3dKdDRacXVkaW5lUTU5eU1fT0hYYWNVNzNCX2ZQNFNEc2VqVkdFX20yT0V0S0pTUm9fa2oybXpCOVJpRTd1aDM4ZE1UTGpBZ1pNUG9BR1RxWW5ha0NMb01RYWY5cTJiTGhSRzhxeW90QndKU3ZreFViUjU5NDFmNEd2eDEtYTNtMkhEMGNfREdpSUhxcVFYbmpQbWR1YlFjc0RLT3B3U040UXpOczY2M2stOWRqVHNPc0dWclpzNzBXbVpPVGdiZE9XSjhxQjVmdzVrYW8yNldqTWtQUTZ6aTBjM0NGUlkxbzNpQ2pOcVYxa01saXA2cFNkWEhyLVdUTmFDQkxYVURLTFNsMGp5eXZwUHk5T3NkdDJWemFaclNNT21LM09scVBWRDA0bldfeW9vQjVSX3VUTUkzVVdWQm5ydDTSAaoDQVVfeXFMT0EyZmxJUHVrdmFnUzM2NEM3aHhrLW5RWGp1aUVJRWw4cmlhckk3eHd3RUM5ZmhfbktwS19PYVAwdFFkR3J3dkhBaE9yZ05HZnc4aE0xMC1Eb21RVlF0Vm4xNFV3QlVfaVZNaWZBR2pWMTlKbzM4RXpaVkU2VUhfYlhiNk80VVBUNlpFbW8waW1WbnNUZmdjTW1JYlk0ODlOanBiTFh1UUdDSDhxbVFnX29sNl92UUtxbXgzMmNnVndwT0xpNVBzeERpOEdWbHBUeENFd2QwNlZPX3V2OTJqQjNIQnVSV2dOUzc3cjIyRlljT2RWUWlsVWZ2TzNZVjE1c2ZZZzBDbVJiNll1ZEZFdlNWbFBUWG9nQlJadHJ2am13Ui1SVlV2d1hVUERpcFdlS3RzUlR1aTBvQlpSWGpXZW42Ry1wMlBRTnBTb0dWVzJhcTNETGttbkJYTFh3RzhoMVJlQ3laRmYwcDBJY0YzUXpTNmc4YXJMZWI3Z1d3WXZZSWFRNmVtQWdyVFNwLWFBVjhvbGJfVXVmTFhCWVNMSzRqclUyOVpoMFdB?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Officials Express Concerns Over Monetary Policy",
-   "summary": "Economic policy discussions in the United States intensified as Treasury officials cautioned that central bank tightening cycles might overshoot optimal levels. As US markets experience a notable correction, policymakers are debating the delicate balance between curbing inflation and avoiding economic slowdowns. These deliberations arrive just ahead of crucial GDP and inflation data releases.",
-   "why": "Central bank commentary from major economies shapes global liquidity conditions and foreign institutional investments.",
+   "title": "US stock futures rebound sharply after major tech sell-off",
+   "summary": "American equity futures staged a massive recovery, with major indices recording substantial gains following a brutal technology-led correction. The bounce-back came after the tech-heavy Nasdaq and broader markets endured their worst stretch since 2020 due to artificial intelligence sector concerns. Treasury officials and market observers pointed to oversold conditions as a driver for the sudden relief rally. Investors remain watchful for upcoming macroeconomic data releases and Federal Reserve policy hints.",
+   "why": "An oversold market condition occurs when asset prices drop significantly below their intrinsic value, frequently triggering sharp technical bounces.",
+   "source": "Fortune",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMHVtODRCNHpEWlpxVUloeXluS04zZTB3WUFMazNTamtVckExbW9qbWFDaGJObUtCNHZUZkVoRWpYMlk4OXVOYzF4dUhERk4wOXpNWHhZWEZGamR2cGpxdC1mRVpDTVpsLVhDbS1RQmJlYXpRblh4cC0wOUJtalI4WHAzLWVFcHhXYzd2dTNidS0yM0hEX0tXX3pB?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "US Treasury warning highlights risks of monetary tightening",
+   "summary": "Top economic officials in the United States cautioned that the central bank risks overtightening monetary policy as financial markets experience severe stress. This commentary helped alleviate aggressive market expectations regarding an imminent interest rate hike at the upcoming policy meeting. The remarks arrived as equities struggled through a correction phase and bond markets reacted to shifting economic indicators. Policymakers are balancing inflation control against the health of broader financial markets.",
+   "why": "Overtightening occurs when a central bank raises interest rates too aggressively, potentially slowing down economic growth excessively.",
    "source": "Bloomberg.com",
    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcXh5Rm5oX0xZaXpqczkwRTFfM2gzWGFGQzNsOWZlVVFuOTU1dHgwN1YwektGRmFBOW5LWUltcUE2Q0d2YThXTFQtSHctaFZmcUFWWTRsX0dMaWpKRUtnd2cyUFViMGt6b2N1RGJRMmdmUjF4aUlJR1J2dDF5c2lTZXd4dlFyVG5IQ2hFR2VyTG8zTWZvQ09Oc25Cd2x1Q2pFMFQtOW9FMjV4RnR1Vmc?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Infrastructure Investment Trusts Target Major Capital",
-   "summary": "The pipeline for Infrastructure Investment Trusts is expanding rapidly, with several private trusts preparing public offerings to raise substantial capital by early 2027. These specialized investment vehicles are designed to mobilize long-term funding specifically for large-scale infrastructure projects across the country. Such fundraising initiatives aim to bridge the gap between retail capital and heavy asset development.",
-   "why": "InvITs offer an alternative route for funding public projects while expanding investment avenues for market participants.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/invit-ipo-rush-gathers-pace-4-5-private-trusts-likely-to-go-public-by-mar-2027/articleshow/136069094.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "Indian Rupee Weakens Amid Outflows and Crude Pressure",
-   "summary": "The exchange rate for the Indian rupee against the US dollar experienced downward pressure, crossing key psychological levels. This depreciation was driven by a combination of persistent foreign capital outflows from domestic equities and higher import bills resulting from rising crude oil prices. Currency analysts continue to monitor central bank interventions to manage volatility.",
-   "why": "Exchange rates directly affect import costs, domestic inflation, and the profitability of various industrial sectors.",
-   "source": "Multibagg AI",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNzZDWnlsTDVIRFRqVWoxQ0tTQzJRNE9mVnJYMzA5QUJoaWJNUTZUUXNLWHJfbXl6ZWVJRXNIWXNndS00V1hZamtENFhWeUxTMW5iTU90WGtSU0dMWjUycGRFbHlVQ0VNRHBHVzY4amxhcWViQjZlY1VnWGRhNjB4d2IxNVdLOEVreXB1QU96SHV6SWJwR2ZsX0ZlN1V2Q0Fub0lETg?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Crude Oil Futures Await OPEC+ Production Guidance",
-   "summary": "Crude oil futures are experiencing heightened volatility as traders prepare for the upcoming OPEC+ ministerial meeting to determine future output quotas. Market participants are analyzing inventory data from key energy institutes amid ongoing geopolitical supply concerns. These upcoming decisions will set the tone for global energy pricing in the near term.",
-   "why": "Crude oil prices act as a major macroeconomic input influencing transport costs, manufacturing expenses, and trade deficits.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/crude-oil-futures-brace-for-opec-output-decision-amid-supply-glut-concerns-analysts/articleshow/136072428.cms"
+   "title": "Bond market points to softer monetary tightening on crude dip",
+   "summary": "Government bond yields reflected expectations of milder central bank tightening as international crude oil prices experienced a retreat. Lower energy import costs tend to ease domestic inflationary pressures, giving policy planners more flexibility regarding interest rates. Market participants constantly evaluate debt yields as a gauge of future borrowing costs and macroeconomic stability. Stable energy prices remain a vital factor for India's fiscal health and consumer price index trajectory.",
+   "why": "Falling crude oil prices reduce import bills, helping contain inflation and easing pressure on central banks to hike interest rates.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSnJlVWx4QzhKckZHVGNoRHRRa1BDb2EzX1lZWXNUN2dfX2hMU2ZPVDQxX200Q0NIaDJLQ3FZRElkV0NHVTQ2S1ZZT0pabEtmZHc4REIycUZaOTd5bXE2dEJtV3dCOTE5MjgxSmFtdndFeHlhMENJZF9tZm1pSTNOMlR4MkxfQUd5MFJqSGM4czdCSFlIS2hZQ1hpdWpaUkluLUh0ZDVUMEtGMkFqd1dzZUozYjFhdVctdWlTUjNELTM2b2FWYlhxYXVGMDVDRTDSAdQBQVVfeXFMT2NnRkZDZDlyYkxJMnhfdFFoa01aZlN5WlJFT2dGd3lyU2tFd3gxY0xRUG8xcUxvMUVjV1pJQUwwbG9wbC1rYnNXZUFRSzBObUtlN2Zzc1U2dHB5WVRqV0Y2NXdvQnkyTFgzejQ2ekdqVnVLNVNEdWVrQVlfa3FlTDh2UGlkTHdvQ1F6Z255TGR6eVJkaHdrRm1ZcldMOTVDRl94b3o5amRudzZ3T1R2OWlUcWtidjJZalZoRXQ0b29kenR0Uk5sdm1peXh5ODVfZGJmR1c?oc=5"
   }
  ]
 }
