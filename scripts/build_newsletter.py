@@ -115,10 +115,11 @@ def last_subject_index():
     Used so the subject never repeats the same index two days in a row."""
     key = os.environ.get("BUTTONDOWN_API_KEY", "")
     if not key:
+        print("last-subject lookup skipped: BUTTONDOWN_API_KEY not set")
         return None
     try:
         req = urllib.request.Request(
-            "https://api.buttondown.email/v1/emails?page=1",
+            "https://api.buttondown.com/v1/emails?page=1",
             headers={"Authorization": "Token " + key},
         )
         with urllib.request.urlopen(req, timeout=15) as r:
@@ -126,7 +127,14 @@ def last_subject_index():
         results = d.get("results", []) if isinstance(d, dict) else []
         if not results:
             return None
-        subj = results[0].get("subject", "") or ""
+        # Buttondown returns emails oldest-first by default, so results[0]
+        # is the FIRST newsletter ever, not yesterday's. Pick the most
+        # recently published/created email instead.
+        def _when(e):
+            return e.get("publish_date") or e.get("creation_date") or ""
+        latest = max(results, key=_when)
+        subj = latest.get("subject", "") or ""
+        print("last-subject lookup: latest email %r" % subj)
         # Check "Bank Nifty" before "Nifty" — it contains "Nifty".
         for name in ("Bank Nifty", "Sensex", "Nifty"):
             if name.lower() in subj.lower():
