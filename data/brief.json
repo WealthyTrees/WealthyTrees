@@ -1,25 +1,25 @@
 {
- "date": "Monday, 23 November 2026",
+ "date": "Tuesday, 24 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,462",
-   "change": -1.31
+   "value": "25,350",
+   "change": -1.75
   },
   {
    "name": "SENSEX",
-   "value": "82,810",
-   "change": -1.32
+   "value": "82,436",
+   "change": -1.77
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,623",
-   "change": 3.06
+   "value": "3,651",
+   "change": 3.87
   },
   {
    "name": "CRUDE WTI",
-   "value": "$83.0",
-   "change": -0.54
+   "value": "$81.1",
+   "change": -2.78
   },
   {
    "name": "USD/INR",
@@ -28,84 +28,100 @@
   },
   {
    "name": "S&P 500",
-   "value": "6,910",
-   "change": -3.7
+   "value": "7,241",
+   "change": 4.78
   },
   {
    "name": "NASDAQ",
-   "value": "22,618",
-   "change": -5.28
+   "value": "24,109",
+   "change": 6.59
   },
   {
    "name": "DOW",
-   "value": "48,147",
-   "change": -1.93
+   "value": "49,644",
+   "change": 3.11
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Profit-booking drags Sensex and Nifty lower after rally",
-   "summary": "Indian benchmark indices experienced a pullback as investors moved to secure profits following a robust four-week market rally. Banking and metal sectors bore the brunt of the selling pressure, leading the downward trend during the session. Additionally, heightened market volatility ahead of the monthly derivatives expiry contributed to the cautious sentiment. Despite the sharp intraday decline, market participants continue to monitor overall economic trends closely.",
-   "why": "Profit-booking occurs when traders sell assets to lock in gains after a price surge, frequently causing temporary market dips.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/bull-vs-bear-why-is-stock-market-down-today-sensex-nifty-succumb-to-profit-booking-plunge-nearly-1-top-3-reasons-11795411485763.html"
+   "category": "Economy",
+   "title": "Home Loan EMI Alert: RBI Looks Set to Raise Rates in December",
+   "summary": "Home Loan EMI Alert: RBI Looks Set to Raise Rates in December as Inflation Crosses 6%  NiftyTrader",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "NiftyTrader",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBOVnkzTGNMekxoSWNYTDdmc09VRS1NZFFNSEo5b190WDNSaFJ3SnZFSTJ1enhhVG92S2tBcGYxS1V1bTF3TU5aOUFqR2h2cWFFeVhGTktJcWZGNDRXWTZCRk1CeWF0TVJrOF80?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian rupee retreats from highs on corporate dollar demand",
-   "summary": "The Indian currency pulled back from a seven-month high following robust corporate demand for the US dollar. Despite this session's retreat, the currency remains on track for a strong monthly gain of over two percent, supported heavily by foreign capital inflows into domestic assets. Major financial institutions have highlighted this resilience against broader currency turbulence. Traders continue to track overseas capital movements and domestic trade factors.",
-   "why": "Corporate dollar demand arises when local businesses need foreign currency for imports or debt servicing, putting downward pressure on the local rupee.",
+   "title": "Week Ahead: Inflation data and Fed expectations set to drive markets amid",
+   "summary": "Week Ahead: Inflation data and Fed expectations set to drive markets amid AI sell-off  www.tmgm.com",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "www.tmgm.com",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQ21CSjBfa3dxeGk5WWsxTmEycl9ZWXp3akJ3VU56RHFBYVprWmNwMmh4QmsxMUk4bnFndld6LTF1N0FjaUJWT3lpVnpZNlo5VnBaOFhxR1lQQkYyamdFRGdKRmlYclhhODlzV1JFMjhQenh1QW5ESGg0STRDUnlfYUVrSEo0NlhUeWFZck1DUDQtbXVudWVUWHREZGFoM1pSeFE2bmN5ekJVdHFmWkhLeTRGYzJtZnd5eTlSZ1g2Z1NFSHhPNnc?oc=5"
+  },
+  {
+   "category": "Commodity",
+   "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
+   "summary": "In terms of GOI notification F. No. 4(5)-B(W&amp;M)/2021 dated May 12, 2021 (SGB 2021-22 Series I - Issue date May 25, 2021) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
+   "why": "Energy and metal prices move first, and the rest follows.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64030"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold, silver prices today, 23 November: Check retail rates of 24K, 22K",
+   "summary": "Gold, silver prices today, 23 November: Check retail rates of 24K, 22K gold, 999 silver in Delhi, Mumbai and Kolkata  Livemint",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "Livemint",
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeUN1MGh0MGJGSzZRWk9KMk1ZeFpSTXNHNURTT1NDQmJ6N2pzUEdKTzlCZEJDZnZaNUlwQjQwOWJkd3hEU1Q2Vkx5QnUwMjdwaFdKUHJ0bVo3bXhXc0twTkl5bThoYzR1Z1Nka0tGaHY4aG9Gb2h2bEFyakItQmVMM2dES09TSzFuOWdJZzRLclRyN0ZTSHBXSmxJekVYZlE0dlRkT3ktYWxLLWRmMEpHQ0wtSDU0TXI2d1RzeExsMUZYQUFqOENVZU1iQWNiN2FzQXEyMzZXanRObXZNREhsakJ6UHAtT0gxUW0wRjUwMG9rcTFqYy1jdEJ1U0tyUXE4LWdTUmFvNVpQd9IBjwJBVV95cUxQeWZya0xUZzFFbnpHMG9uZUxXWWpDcU1hUWpoUUpvUWg3d19PZXZuWUVyV1I5c3Bjb1VZejk0MFZJSkE3Nm91OUNST2pFSE9oLTB5N3laekUwckM1Vy0ydDBlMm55YzUtZl9uaEJ2eEw1SUhxTG5DVmJnMGhycnJzbXYwQWlvdTMzTGtqY0I0Y1BVOU9PM3J4ZVdNbUEycWZ5Z3hlX0FzQkhJTEZjNWVGU0s1c3cweDNWZER0a3V1UVcxdl8yUVdlMmRER3BmSXZkNXpzTDBEVll3Tm5NWF9JUGpyYnpGWnF4dnpNdHluUUlKcWd5NjZxenRSeVdNdjltcm5jMTlFZW1mVTBBYTBF?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "US stocks roar back as Jensen Huang returns to Nvidia as CEO;",
+   "summary": "US stocks roar back as Jensen Huang returns to Nvidia as CEO; Nasdaq up 6%, S&amp;P 5%, Dow 3.5%: Stock Market Live Updates",
+   "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-retreats-goldman-calls-it-a-port-of-stability-in-ai-storm/articleshow/136092977.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-meta-anthropic-amd-micron-tesla-ai-chip-earnings-fed-rate-treasury-yield-news-23rd-november-2026/liveblog/136104474.cms"
   },
   {
-   "category": "Commodity",
-   "title": "Mutual funds eye higher gold and silver allocations",
-   "summary": "Several asset management companies are reviewing their stances on precious metals following a notable correction in market prices. Fund managers are considering increasing exposure to gold and silver as renewed interest emerges at lower valuation levels. This shift highlights a strategic re-evaluation among institutional investors looking at bullion as part of a diversified portfolio. The recent price volatility has created fresh entry points for long-term allocators.",
-   "why": "A price correction reduces asset valuations, often tempting institutional investors to accumulate holdings at more attractive entry levels.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-silver-prices-fall-mutual-funds-increase-precious-metal-allocations-11795408683158.html"
+   "category": "US Markets",
+   "title": "Nasdaq futures surge 3% as battered AI stocks gain ground",
+   "summary": "US stock futures showed a significant rebound on Monday after sharp declines in recent weeks. Investor interest is returning to AI-linked stocks following corrected valuations in the market. Chip…",
+   "why": "US trading often leads the next morning in India.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-futures-surge-3-as-battered-ai-stocks-gain-ground/articleshow/136104059.cms"
   },
   {
    "category": "Equity",
-   "title": "Ashoka Buildcon surges on major highway contracts",
-   "summary": "Shares of Ashoka Buildcon registered a sharp gain after the infrastructure firm secured a major contract from the National Highways Authority of India for expressway development. Furthermore, a joint venture involving the company emerged as the lowest bidder for another significant public project. These developments boosted investor sentiment, pushing the stock up considerably over the past month. The firm specializes in highway construction and large-scale infrastructure execution.",
-   "why": "Securing large public infrastructure contracts provides revenue visibility and signals robust operational growth for construction firms.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/ashoka-buildcon-share-price-jumps-8-on-rs-4-223-crore-project-wins-stock-up-17-in-a-month-what-should-investors-do-11795409853245.html"
+   "title": "NSEL releases Rs 1,950 crore in one-time settlement, ends 14-year payment default",
+   "summary": "The National Spot Exchange Ltd has revealed a substantial settlement payout of Rs 1,950 crore to eligible claimants, marking the end of a lengthy 14-year legal battle stemming from a Rs 5,600 crore…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nsel-releases-rs-1950-crore-in-one-time-settlement-ends-14-year-payment-default/articleshow/136104164.cms"
   },
   {
-   "category": "Commodity",
-   "title": "Precious metals slide to multi-month lows after correction",
-   "summary": "Bullion prices experienced a steep correction over the past week, with retail rates for gold and silver tumbling significantly to hit multi-month lows. The sharp descent in precious metal valuations caught many retail participants off guard during the wedding season. Analysts note that these deep corrections have brought buyers back into physical retail markets to take advantage of lower rates. Global macroeconomic cues and shifting investment demand heavily influenced the weekly price drop.",
-   "why": "Sharp price corrections in commodities like gold and silver often trigger physical buying sprees among retail consumers and jewelers.",
-   "source": "The Times of India",
-   "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxNQXRyNmdESnFwLWc2eTJLWmRtdXYwalNsTG1lQW9PQ1pvcThnb1VZNFU5Zm9qU3liSlN3RkhzWGdPb2FzRDRnbTJMWmpzbFNIVHJldzhXcGp1YU5RZUdzVUVUVXNCMzdRN3dKdDRacXVkaW5lUTU5eU1fT0hYYWNVNzNCX2ZQNFNEc2VqVkdFX20yT0V0S0pTUm9fa2oybXpCOVJpRTd1aDM4ZE1UTGpBZ1pNUG9BR1RxWW5ha0NMb01RYWY5cTJiTGhSRzhxeW90QndKU3ZreFViUjU5NDFmNEd2eDEtYTNtMkhEMGNfREdpSUhxcVFYbmpQbWR1YlFjc0RLT3B3U040UXpOczY2M2stOWRqVHNPc0dWclpzNzBXbVpPVGdiZE9XSjhxQjVmdzVrYW8yNldqTWtQUTZ6aTBjM0NGUlkxbzNpQ2pOcVYxa01saXA2cFNkWEhyLVdUTmFDQkxYVURLTFNsMGp5eXZwUHk5T3NkdDJWemFaclNNT21LM09scVBWRDA0bldfeW9vQjVSX3VUTUkzVVdWQm5ydDTSAaoDQVVfeXFMT0EyZmxJUHVrdmFnUzM2NEM3aHhrLW5RWGp1aUVJRWw4cmlhckk3eHd3RUM5ZmhfbktwS19PYVAwdFFkR3J3dkhBaE9yZ05HZnc4aE0xMC1Eb21RVlF0Vm4xNFV3QlVfaVZNaWZBR2pWMTlKbzM4RXpaVkU2VUhfYlhiNk80VVBUNlpFbW8waW1WbnNUZmdjTW1JYlk0ODlOanBiTFh1UUdDSDhxbVFnX29sNl92UUtxbXgzMmNnVndwT0xpNVBzeERpOEdWbHBUeENFd2QwNlZPX3V2OTJqQjNIQnVSV2dOUzc3cjIyRlljT2RWUWlsVWZ2TzNZVjE1c2ZZZzBDbVJiNll1ZEZFdlNWbFBUWG9nQlJadHJ2am13Ui1SVlV2d1hVUERpcFdlS3RzUlR1aTBvQlpSWGpXZW42Ry1wMlBRTnBTb0dWVzJhcTNETGttbkJYTFh3RzhoMVJlQ3laRmYwcDBJY0YzUXpTNmc4YXJMZWI3Z1d3WXZZSWFRNmVtQWdyVFNwLWFBVjhvbGJfVXVmTFhCWVNMSzRqclUyOVpoMFdB?oc=5"
+   "category": "Equity",
+   "title": "Adani Airport raises $300 mn from 360 ONE Asset, taking total equity",
+   "summary": "Adani Airport Holdings Ltd will raise USD 300 million to enhance its presence in India's aviation sector. This investment will contribute to its target of increasing passenger capacity from 96…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/adani-airport-raises-300-mn-from-360-one-asset-taking-total-equity-infusion-to-1-35-bn/articleshow/136104118.cms"
   },
   {
-   "category": "US Markets",
-   "title": "US stock futures rebound sharply after major tech sell-off",
-   "summary": "American equity futures staged a massive recovery, with major indices recording substantial gains following a brutal technology-led correction. The bounce-back came after the tech-heavy Nasdaq and broader markets endured their worst stretch since 2020 due to artificial intelligence sector concerns. Treasury officials and market observers pointed to oversold conditions as a driver for the sudden relief rally. Investors remain watchful for upcoming macroeconomic data releases and Federal Reserve policy hints.",
-   "why": "An oversold market condition occurs when asset prices drop significantly below their intrinsic value, frequently triggering sharp technical bounces.",
-   "source": "Fortune",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMHVtODRCNHpEWlpxVUloeXluS04zZTB3WUFMazNTamtVckExbW9qbWFDaGJObUtCNHZUZkVoRWpYMlk4OXVOYzF4dUhERk4wOXpNWHhZWEZGamR2cGpxdC1mRVpDTVpsLVhDbS1RQmJlYXpRblh4cC0wOUJtalI4WHAzLWVFcHhXYzd2dTNidS0yM0hEX0tXX3pB?oc=5"
+   "category": "Equity",
+   "title": "German bond yields edge higher as equity rebound eases safe-haven demand",
+   "summary": "Germany's government bond yields increased marginally on Monday as equity markets began to rebound, leading to diminished interest in safe-haven assets. In the wake of a difficult week for stocks,…",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/german-bond-yields-edge-higher-as-equity-rebound-eases-safe-haven-demand/articleshow/136097404.cms"
   },
   {
-   "category": "US Markets",
-   "title": "US Treasury warning highlights risks of monetary tightening",
-   "summary": "Top economic officials in the United States cautioned that the central bank risks overtightening monetary policy as financial markets experience severe stress. This commentary helped alleviate aggressive market expectations regarding an imminent interest rate hike at the upcoming policy meeting. The remarks arrived as equities struggled through a correction phase and bond markets reacted to shifting economic indicators. Policymakers are balancing inflation control against the health of broader financial markets.",
-   "why": "Overtightening occurs when a central bank raises interest rates too aggressively, potentially slowing down economic growth excessively.",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcXh5Rm5oX0xZaXpqczkwRTFfM2gzWGFGQzNsOWZlVVFuOTU1dHgwN1YwektGRmFBOW5LWUltcUE2Q0d2YThXTFQtSHctaFZmcUFWWTRsX0dMaWpKRUtnd2cyUFViMGt6b2N1RGJRMmdmUjF4aUlJR1J2dDF5c2lTZXd4dlFyVG5IQ2hFR2VyTG8zTWZvQ09Oc25Cd2x1Q2pFMFQtOW9FMjV4RnR1Vmc?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Bond market points to softer monetary tightening on crude dip",
-   "summary": "Government bond yields reflected expectations of milder central bank tightening as international crude oil prices experienced a retreat. Lower energy import costs tend to ease domestic inflationary pressures, giving policy planners more flexibility regarding interest rates. Market participants constantly evaluate debt yields as a gauge of future borrowing costs and macroeconomic stability. Stable energy prices remain a vital factor for India's fiscal health and consumer price index trajectory.",
-   "why": "Falling crude oil prices reduce import bills, helping contain inflation and easing pressure on central banks to hike interest rates.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSnJlVWx4QzhKckZHVGNoRHRRa1BDb2EzX1lZWXNUN2dfX2hMU2ZPVDQxX200Q0NIaDJLQ3FZRElkV0NHVTQ2S1ZZT0pabEtmZHc4REIycUZaOTd5bXE2dEJtV3dCOTE5MjgxSmFtdndFeHlhMENJZF9tZm1pSTNOMlR4MkxfQUd5MFJqSGM4czdCSFlIS2hZQ1hpdWpaUkluLUh0ZDVUMEtGMkFqd1dzZUozYjFhdVctdWlTUjNELTM2b2FWYlhxYXVGMDVDRTDSAdQBQVVfeXFMT2NnRkZDZDlyYkxJMnhfdFFoa01aZlN5WlJFT2dGd3lyU2tFd3gxY0xRUG8xcUxvMUVjV1pJQUwwbG9wbC1rYnNXZUFRSzBObUtlN2Zzc1U2dHB5WVRqV0Y2NXdvQnkyTFgzejQ2ekdqVnVLNVNEdWVrQVlfa3FlTDh2UGlkTHdvQ1F6Z255TGR6eVJkaHdrRm1ZcldMOTVDRl94b3o5amRudzZ3T1R2OWlUcWtidjJZalZoRXQ0b29kenR0Uk5sdm1peXh5ODVfZGJmR1c?oc=5"
+   "category": "Equity",
+   "title": "India bonds give up marginal opening gains as profit booking takes over",
+   "summary": "Indian government bonds fell after initial gains due to profit booking by traders and a sharp rupee decline. The benchmark yield of the 6.94% 2036 bond increased to 7.2185% during trading hours. Last…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-give-up-marginal-opening-gains-as-profit-booking-takes-over/articleshow/136093136.cms"
   }
  ]
 }
