@@ -1,5 +1,5 @@
 {
- "date": "Tuesday, 24 November 2026",
+ "date": "Wednesday, 25 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,75 +13,75 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,566",
-   "change": -2.34
+   "value": "3,555",
+   "change": -2.64
   },
   {
    "name": "CRUDE WTI",
-   "value": "$81.4",
-   "change": 1.53
+   "value": "$81.7",
+   "change": 1.9
   },
   {
    "name": "USD/INR",
-   "value": "92.71",
-   "change": -0.2
+   "value": "92.90",
+   "change": 0.0
   },
   {
    "name": "S&P 500",
-   "value": "7,203",
-   "change": -0.47
+   "value": "7,201",
+   "change": -0.5
   },
   {
    "name": "NASDAQ",
-   "value": "23,742",
-   "change": -1.44
+   "value": "23,734",
+   "change": -1.48
   },
   {
    "name": "DOW",
-   "value": "49,996",
-   "change": 0.81
+   "value": "50,019",
+   "change": 0.85
   }
  ],
  "items": [
   {
    "category": "Economy",
-   "title": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation",
-   "summary": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation and Stock Market  Alice Blue",
+   "title": "India's GDP growth seen at 7% this fiscal & next: S&P",
+   "summary": "India's GDP growth seen at 7% this fiscal & next: S&P  Fibre2Fashion",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Alice Blue",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KWGY3V3JXOEhRalZhZnVhWkxJd2ZJSURPNkpxU29Hc1lJSHZpcTZvUjBOUmc2VDg2LUczelFmNjZmU3RtT2pCNXdyYTlmWHVzV3lOSnh4RDJCaExzWTlrVHJkNkxtMFhyc0R6VS1XajVCN2xxZGhPQmZn?oc=5"
+   "source": "Fibre2Fashion",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTGU0SUlnLVZ0V3QyV0hCU1dTY05TMm5zNnd2X1ItTGd1S2JsRFVCRWk5cXBCcDdBSFNGNkp6ZklaSWVBM0NLaUtIU3p6Uk1RSmhFMjlDck4zcnRxSERuZS1VQjctMl9QdFN3dEkwb2h6cE9rYU5aZkxtU1JVekIzdGdQQ3ZiNWpibHl6SkIxaUZSNF9MY0tvZEV0ZlByRzZmeGZTTEc2bFR4Z241TGI0elI2N21CSlZla1Utbg?oc=5"
   },
   {
    "category": "Economy",
-   "title": "AI boom looms over Warsh's Fed as inflation worries grow",
-   "summary": "Chairman Kevin Warsh of the Federal Reserve underscores the transformative impact of artificial intelligence on the economic landscape. While he conveys measured optimism about AI's benefits, he also…",
+   "title": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation",
+   "summary": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation and Stock Market  Alice Blue",
    "why": "What the RBI and the government do reaches your money.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/ai-boom-looms-over-warshs-fed-as-inflation-worries-grow/articleshow/136129160.cms"
-  },
-  {
-   "category": "Commodity",
-   "title": "Explained: Why Gold prices gained and extended a rebound from a 14-month",
-   "summary": "Gold recovered after last week’s sharp selloff, trading near $3,630 an ounce on Tuesday. Augmont’s Renisha Chainani sees potential gains toward $3,700–$3,750 if $3,500 support holds. US inflation…",
-   "why": "Energy and metal prices move first, and the rest follows.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/explained-why-gold-prices-gained-and-extended-a-rebound-from-a-14-month-low-3-reasons-11795514651749.html"
+   "source": "Alice Blue",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KWGY3V3JXOEhRalZhZnVhWkxJd2ZJSURPNkpxU29Hc1lJSHZpcTZvUjBOUmc2VDg2LUczelFmNjZmU3RtT2pCNXdyYTlmWHVzV3lOSnh4RDJCaExzWTlrVHJkNkxtMFhyc0R6VS1XajVCN2xxZGhPQmZn?oc=5"
   },
   {
    "category": "Commodity",
    "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
    "summary": "In terms of GOI notification F. No. 4(5)-B(W&amp;M)/2021 dated May 12, 2021 (SGB 2021-22 Series I - Issue date May 25, 2021) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
-   "why": "Commodity prices feed into costs and inflation.",
+   "why": "Energy and metal prices move first, and the rest follows.",
    "source": "RBI",
    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64030"
   },
   {
+   "category": "Commodity",
+   "title": "Gold, silver prices today 24 Nov, Tuesday: Check 24K, 22K gold, 999",
+   "summary": "Gold, silver prices today 24 Nov, Tuesday: Check 24K, 22K gold, 999 silver rates in Delhi, Mumbai, Kolkata and others  Livemint",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "Livemint",
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOR2JjbENfdTVsbUFiY0lXU1cyd01oeHMtQ0pqX1JhSk1fMkFDVERoNVozeG54a3lLcmFCSTJvZDFiVTdJS18zQm1LaXZiX050RkE3YlM4TUN0bmlUaUlsaElnOUJTcXRGSTJSSmFLa1puRFZacGZvMldMNHpnZ3lQbll3S1dreUwxcmUzcUZ5TmJrZk5nTlFnalpGY0dOOFFNbnVqZ2lUOEhsNWZ3WDZKS1lNaDMyRWZ1dVFFSjZ3SExZaUxndE9yLTctY085cDZURUU3amY3dkdhU0FQRWJHRVlCcnNMLU1zZWZRU29JbUFVRmx2SXNLbzRKX3c1Vms4MWlxMDBMOGtTZ9IBjwJBVV95cUxOMjZiNldLdGYtZUVFeWl6cVoycXJwVDdSVk1feGxZVnkxMnZnWklENTAxdDJEb2NZOFdFZFM1V0NLeC1SdmxtZjY0WHg0cWV2Z0pTTkw1RWN1ZmdoVkRyNnowcERmV1Z4V3hIamNTNV81amR4Vi14VUJkOVp0ZDkzZHhKc05oVVg3M3RRSnpBQUNOOG9PRzdUa3RFdzdkZkVZc1JJTzhSTndPa2lqMTc0RGhDNUYyLVM1SldwdEFjeHNoSlV1UTVVTTZ3bmtSUTBIVlpsakJ3N0tsX2R6Qm1JNDMzS3ZiTGNndGRtTlVVMV9FVUFiYmI4cE83TW4tTWxLajdsOG1QcHdwRWxsUW13?oc=5"
+  },
+  {
    "category": "US Markets",
-   "title": "Nasdaq drops over 2% as Nvidia-fueled AI rally fades, Anthropic tanks 11%:",
-   "summary": "Nasdaq drops over 2% as Nvidia-fueled AI rally fades, Anthropic tanks 11%: US Stock Market Live Updates",
+   "title": "Nasdaq, S&amp;P 500 end lower as investors assess Jensen Huang's return to",
+   "summary": "The Nasdaq and S&amp;P 500 indices experienced a drop as Nvidia and other tech shares fell. Investors reacted to potential new tariffs, raising concerns about market stability. Nvidia's CEO Jensen…",
    "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-anthropic-iphone-google-meta-tesla-earnings-treasury-yield-news-24-nov-2026/liveblog/136131363.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-sp-500-end-lower-as-investors-assess-jensen-huangs-return-to-nvidia/articleshow/136141893.cms"
   },
   {
    "category": "US Markets",
