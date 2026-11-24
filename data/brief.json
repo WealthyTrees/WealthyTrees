@@ -13,99 +13,115 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,619",
-   "change": -0.89
+   "value": "3,566",
+   "change": -2.34
   },
   {
    "name": "CRUDE WTI",
-   "value": "$80.1",
-   "change": -0.14
+   "value": "$81.4",
+   "change": 1.53
   },
   {
    "name": "USD/INR",
-   "value": "92.90",
-   "change": 0.0
+   "value": "92.71",
+   "change": -0.2
   },
   {
    "name": "S&P 500",
-   "value": "7,237",
-   "change": 4.73
+   "value": "7,203",
+   "change": -0.47
   },
   {
    "name": "NASDAQ",
-   "value": "24,090",
-   "change": 6.51
+   "value": "23,742",
+   "change": -1.44
   },
   {
    "name": "DOW",
-   "value": "49,595",
-   "change": 3.01
+   "value": "49,996",
+   "change": 0.81
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Indian Equities Register Strong Gains in November",
-   "summary": "Indian equity markets experienced a significant upward movement this month, with the BSE Sensex advancing by nearly 11 percent. This strong market performance resulted in investors gaining a combined Rs 34.61 lakh crore in wealth. The robust rally was largely driven by buying support from foreign institutional investors.",
-   "why": "Tracking broad market performance helps new investors understand monthly sentiment shifts and overall liquidity trends in domestic equities.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/investors-mint-rs-34-61-lakh-cr-in-november-as-markets-rally-nearly-11/articleshow/136123662.cms"
+   "category": "Economy",
+   "title": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation",
+   "summary": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation and Stock Market  Alice Blue",
+   "why": "Policy and economic news shape rates and the rupee.",
+   "source": "Alice Blue",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KWGY3V3JXOEhRalZhZnVhWkxJd2ZJSURPNkpxU29Hc1lJSHZpcTZvUjBOUmc2VDg2LUczelFmNjZmU3RtT2pCNXdyYTlmWHVzV3lOSnh4RDJCaExzWTlrVHJkNkxtMFhyc0R6VS1XajVCN2xxZGhPQmZn?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Sensex Plunges as Banking and Metal Stocks Drag",
-   "summary": "A sharp broad-based sell-off led to a steep decline in Indian indices, driving the Sensex down by 1,484 points and pushing the Nifty below the 25,350 mark. Out of the 30 Sensex companies, 22 closed in the red, with heavy losses concentrated in banking and metal shares. Conversely, technology stocks managed to buck the trend and post gains during the session.",
-   "why": "Market corrections highlight how heavy selling in key index-heavyweight sectors like banking can quickly pull down headline indices.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/of-30-sensex-stocks-22-closed-in-the-red-these-8-shares-defied-stock-market-crash-full-list-of-22-red-and-8-green-11795496983398.html"
+   "category": "Economy",
+   "title": "AI boom looms over Warsh's Fed as inflation worries grow",
+   "summary": "Chairman Kevin Warsh of the Federal Reserve underscores the transformative impact of artificial intelligence on the economic landscape. While he conveys measured optimism about AI's benefits, he also…",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/ai-boom-looms-over-warshs-fed-as-inflation-worries-grow/articleshow/136129160.cms"
   },
   {
    "category": "Commodity",
-   "title": "Gold Rebounds from 14-Month Low",
-   "summary": "Domestic gold prices recovered from a 14-month low, with Multi Commodity Exchange (MCX) rates closing at Rs 1,26,021 per 10 grams. Meanwhile, international spot gold hovered near $3,635 per ounce. This bounce occurred as selling pressure in the precious metals market eased slightly.",
-   "why": "Precious metals often serve as an alternative asset class, and tracking commodity movements helps investors gauge safe-haven demand.",
+   "title": "Explained: Why Gold prices gained and extended a rebound from a 14-month",
+   "summary": "Gold recovered after last week’s sharp selloff, trading near $3,630 an ounce on Tuesday. Augmont’s Renisha Chainani sees potential gains toward $3,700–$3,750 if $3,500 support holds. US inflation…",
+   "why": "Energy and metal prices move first, and the rest follows.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-rate-today-24-november-2026-gold-price-rebounds-from-14-month-low-is-it-the-right-time-to-buy-experts-explain-11795498644088.html"
+   "url": "https://www.livemint.com/market/stock-market-news/explained-why-gold-prices-gained-and-extended-a-rebound-from-a-14-month-low-3-reasons-11795514651749.html"
   },
   {
-   "category": "Economy",
-   "title": "Rupee Reversal and Debt Supply Pressures Bonds",
-   "summary": "Indian government bonds faced downward pressure during a holiday-shortened trading week. This weakness was compounded by a reversal in the rupee's recent trajectory and ongoing debt supply dynamics. Market participants are closely watching these macro factors ahead of upcoming central bank policy decisions.",
-   "why": "Bond yields and currency movements provide vital clues about domestic liquidity, interest rate expectations, and foreign fund flows.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNM0tSS1hhLU5fRHR2VEhkLWVoUWM5a2FDSmdxZ2dSWG9jX2JTUy0tYU5Hbm5SZXdyUUFmN0h1ZldRckpoOEtQbm1LeUhYbkVuV0FySkNQT01UV1NSNFM1Ym95eFNOZGRUM2d6aEJQQnppYmFJbDJVVXcyeUxwTE9LeHQtYkhGaWozbWxDcWlhQ1hxUFY0Mm94YWxNN25obTIxZGwyVC1zemlIbHFycEtiLVF5cTFEZVlfRUY1dEtTQnlKLTdyU0xBdk42TnVhSDQ2eWlZVkxZbVVVMnVySkZRQnp3eWFDbmY4Y0M2cVFjRFlJMUZlb08tVmlTZ3kwM1FLcHRscF84RmNVd3BoYkJpM0JhVFEwOEh0dmI1TE8yQTBrSFBhSXY0WUJEb0hXd1R4X1BWcjhlWmp4bTBf0gHYAUFVX3lxTE5sQ190am42MjI4ZVg1WXEwX1l5QmhiY2Z0MTRWcllzczBoNjlVWi1PQVdWOGZfaU1RT09KQVRMOUtqWHlIU3ItNHVyQlRQMDRQOENzYTBkYkpQRERUOVFxQ1BSc1hRemllMDVfcWt5OU9rOHFDQzhIOVI3WkNtdzVLU25jSFVDQlFkdmM1NFR5NjNUdGh5MDhveGRBdGNxd2picE5aRjhhRWptUWFZdVVmSjNHLTN2Wk95bjlkRlJQOWR0bGFOcHBpTzM2SUhVTjhMVzVvSktpbQ?oc=5"
+   "category": "Commodity",
+   "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
+   "summary": "In terms of GOI notification F. No. 4(5)-B(W&amp;M)/2021 dated May 12, 2021 (SGB 2021-22 Series I - Issue date May 25, 2021) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "RBI",
+   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64030"
   },
   {
-   "category": "Economy",
-   "title": "SBI Cautions Central Bank Ahead of Rate Decision",
-   "summary": "State Bank of India has suggested that a modest 25 basis point repo rate hike might suffice for the upcoming policy review. This perspective comes amid broader market discussions calling for a more aggressive 50 basis point increase. Economists and analysts are closely evaluating inflationary pressures and potential borrowing cost adjustments.",
-   "why": "Interest rate expectations directly impact commercial borrowing costs, loan EMIs, and sector-specific valuations like banking and real estate.",
-   "source": "BusinessLine",
-   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcXFUZGRGcWljSkNiNlc4X0NyWnNic0Y1SnJPTWVGbnpnLU5QN2IyMVpHMWNvQXREdTBQLVlib3B2ZXd5SjF4bVVMX2EzaEwzSlk5YlhieDFpUjlTNVpPSGVHTUdjd1ktMDRpZmtUOXlGcm5MU1cwQ3dIOUplVXZ0T2tyT2tDNVg1RWhZSW5HUG1kTWhIUEZKaWQ5ZE1xTjEySDU3RXlzNm1LbVZQai1VSzF6ZXl0MnNKVWRlVGNBcTV5bkthX2NIOGdTOXVISHhBaGJ5YUp0aE0xaUc5TVZ1M0o2ZmxnbVRVME96WlFQWktOUdIB-AFBVV95cUxNejBLSl9FQzF3bWlpdklKRi1CV0JjaGw3LVVJalQzMWd0dlJPNEVodENoaktGRFVJQzE4RUZNNUppUXdsc0JPSkloZkdnVTlWREozMXRvcU1GNURUSW5pcWo4VnhhRUt4MUo4cXRpVW12ZTBCb0VqVGs2dHJVTTR3dGxzU2QzNUEwaG42dnZnenhGd1BhLVZNR2JhLTU3dkZTVk9EeHB5WVU1UmVxOUVkRnNiV1dnVmZpRkxzaU05ajNRbnBJaFBidTJJbkwzZWZQbDhmOUhabkFOX3U3ZzdFdDJEc01WNlRJVGZySzRHREM3bVRBOGduQQ?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "RBI Urges Responsible Bidding in G-Sec Auctions",
-   "summary": "Reserve Bank Deputy Governor Rohit Jain called on primary dealers to exercise greater responsibility during government securities underwriting auctions. Jain pointed out recent instances of volatile pricing behavior that failed to align with orderly market functioning. Primary dealers were encouraged to act as stable partners in managing sovereign debt issuance.",
-   "why": "Orderly underwriting auctions are essential for efficient government borrowing and maintaining stability across domestic debt markets.",
+   "category": "US Markets",
+   "title": "Nasdaq drops over 2% as Nvidia-fueled AI rally fades, Anthropic tanks 11%:",
+   "summary": "Nasdaq drops over 2% as Nvidia-fueled AI rally fades, Anthropic tanks 11%: US Stock Market Live Updates",
+   "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/rbi-dg-asks-primary-dealers-to-bid-responsibly-in-g-sec-underwriting-auctions/articleshow/136125661.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-anthropic-iphone-google-meta-tesla-earnings-treasury-yield-news-24-nov-2026/liveblog/136131363.cms"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Surges on Nvidia CEO Return",
-   "summary": "United States stock indices rallied strongly, propelled by a sharp rebound in technology shares following corporate leadership changes. Nvidia shares jumped significantly after Jensen Huang was reinstated as Chief Executive Officer, recovering a large portion of recent losses. The broader market surge added trillions of dollars in value across major Wall Street benchmarks.",
-   "why": "US market movements and major technology sector rallies frequently influence global investor sentiment and cross-border capital flows.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQajZxMGxpSnJMTmhqWXc3Qk5kcWpab1VMbThnTXRmMHdOLWE1S2YtbUxKdUFQbkpxSElxRWZPRzJHa0NxcUJXbzhVQWZKX1NiVHpFYnBSRHQ4MzFLNTJnZWVjVEw4QzdxbWZtRFlhZnQzM0R1WU5DSGtJVVpZdU5XZFphQl9vUG9MTUI1VXpCS3JITVFQNjR5cA?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "US Stock Exchanges Announce Thanksgiving Schedule",
-   "summary": "Major American equity venues including the Nasdaq and the New York Stock Exchange announced holiday trading hours. Markets remained closed for Thanksgiving and prepared for an early closing schedule on Black Friday. Bond markets and year-end settlement calendars also adjusted to the holiday period.",
-   "why": "Knowing international trading schedules helps investors anticipate global market liquidity and potential volume changes during holiday weeks.",
+   "title": "Anthropic shares crash below IPO price of $83 after record Nasdaq debut,",
+   "summary": "Anthropic shares fell below their $83 IPO price, dropping to $79.42 after an early post-listing rally faded. The reversal has renewed concerns about AI valuations, infrastructure costs, competition…",
+   "why": "US trading often leads the next morning in India.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/is-stock-market-open-today-thanksgiving-black-friday-holiday-us-trading-schedule-nasdaq-new-york-stock-exchange-11795503931602.html"
+   "url": "https://www.livemint.com/market/stock-market-news/anthropic-shares-crash-below-ipo-price-of-83-after-record-nasdaq-debut-down-31-from-peak-what-is-spooking-investors-11795533362689.html"
+  },
+  {
+   "category": "Equity",
+   "title": "PE/VC investments in India surge to USD 8.7 billion in October, highest",
+   "summary": "Private equity and venture capital investments in India surged to USD 8.7 billion in October 2026. This monthly figure is the highest recorded in the past five years, supported by eight large deals…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/pe/vc-investments-in-india-surge-to-usd-8-7-billion-in-october-highest-monthly-level-in-five-years-ey-ivca-report/articleshow/136132831.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "A 50 bps jumbo rate hike can lead to financial stability concerns,",
+   "summary": "SBI economists have lowered their rate hike expectations for the upcoming RBI policy review. They now anticipate a 0.25 per cent increase rather than the previously expected 0.50 per cent. This…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/a-50-bps-jumbo-rate-hike-can-lead-to-financial-stability-concerns-hurt-growth-report/articleshow/136130764.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Anthropic CEO Dario Amodei sells shares worth USD 280.41 million following IPO",
+   "summary": "Dario Amodei, CEO of Anthropic, sold shares worth USD 280.41 million after the company's IPO. He reported holding 202.8 million shares and additional shares through trusts. Anthropic's initial public…",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ceo-dario-amodei-sells-shares-worth-usd-280-41-million-following-ipo/articleshow/136129119.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "IIFCL IPO: Govt plans to sell part of its stake, company to",
+   "summary": "The government aims to partially divest its shareholding in India Infrastructure Finance Company Ltd through an initial public offering. The IPO is expected to occur by the end of the current fiscal…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/iifcl-ipo-govt-plans-to-sell-part-of-its-stake-company-to-issue-fresh-shares/articleshow/136124476.cms"
   }
  ]
 }
