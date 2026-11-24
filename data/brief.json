@@ -13,18 +13,18 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,632",
-   "change": -0.54
+   "value": "3,619",
+   "change": -0.89
   },
   {
    "name": "CRUDE WTI",
-   "value": "$80.5",
-   "change": 0.35
+   "value": "$80.1",
+   "change": -0.14
   },
   {
    "name": "USD/INR",
    "value": "92.90",
-   "change": 0.26
+   "change": 0.0
   },
   {
    "name": "S&P 500",
@@ -44,84 +44,68 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "Home Loan EMI Alert: RBI Looks Set to Raise Rates in December",
-   "summary": "Home Loan EMI Alert: RBI Looks Set to Raise Rates in December as Inflation Crosses 6%  NiftyTrader",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "NiftyTrader",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBOVnkzTGNMekxoSWNYTDdmc09VRS1NZFFNSEo5b190WDNSaFJ3SnZFSTJ1enhhVG92S2tBcGYxS1V1bTF3TU5aOUFqR2h2cWFFeVhGTktJcWZGNDRXWTZCRk1CeWF0TVJrOF80?oc=5"
+   "category": "Equity",
+   "title": "Indian Equities Register Strong Gains in November",
+   "summary": "Indian equity markets experienced a significant upward movement this month, with the BSE Sensex advancing by nearly 11 percent. This strong market performance resulted in investors gaining a combined Rs 34.61 lakh crore in wealth. The robust rally was largely driven by buying support from foreign institutional investors.",
+   "why": "Tracking broad market performance helps new investors understand monthly sentiment shifts and overall liquidity trends in domestic equities.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/investors-mint-rs-34-61-lakh-cr-in-november-as-markets-rally-nearly-11/articleshow/136123662.cms"
   },
   {
-   "category": "Economy",
-   "title": "Week Ahead: Inflation data and Fed expectations set to drive markets amid",
-   "summary": "Week Ahead: Inflation data and Fed expectations set to drive markets amid AI sell-off  www.tmgm.com",
-   "why": "What the RBI and the government do reaches your money.",
-   "source": "www.tmgm.com",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQ21CSjBfa3dxeGk5WWsxTmEycl9ZWXp3akJ3VU56RHFBYVprWmNwMmh4QmsxMUk4bnFndld6LTF1N0FjaUJWT3lpVnpZNlo5VnBaOFhxR1lQQkYyamdFRGdKRmlYclhhODlzV1JFMjhQenh1QW5ESGg0STRDUnlfYUVrSEo0NlhUeWFZck1DUDQtbXVudWVUWHREZGFoM1pSeFE2bmN5ekJVdHFmWkhLeTRGYzJtZnd5eTlSZ1g2Z1NFSHhPNnc?oc=5"
+   "category": "Equity",
+   "title": "Sensex Plunges as Banking and Metal Stocks Drag",
+   "summary": "A sharp broad-based sell-off led to a steep decline in Indian indices, driving the Sensex down by 1,484 points and pushing the Nifty below the 25,350 mark. Out of the 30 Sensex companies, 22 closed in the red, with heavy losses concentrated in banking and metal shares. Conversely, technology stocks managed to buck the trend and post gains during the session.",
+   "why": "Market corrections highlight how heavy selling in key index-heavyweight sectors like banking can quickly pull down headline indices.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/of-30-sensex-stocks-22-closed-in-the-red-these-8-shares-defied-stock-market-crash-full-list-of-22-red-and-8-green-11795496983398.html"
   },
   {
    "category": "Commodity",
-   "title": "Gold Rebounds as Huang’s Return to Nvidia Revives Risk Appetite",
-   "summary": "Gold extended its rebound in a broad risk-on rally triggered by the reinstatement of Jensen Huang as chief executive officer of Nvidia Corp.",
-   "why": "Energy and metal prices move first, and the rest follows.",
+   "title": "Gold Rebounds from 14-Month Low",
+   "summary": "Domestic gold prices recovered from a 14-month low, with Multi Commodity Exchange (MCX) rates closing at Rs 1,26,021 per 10 grams. Meanwhile, international spot gold hovered near $3,635 per ounce. This bounce occurred as selling pressure in the precious metals market eased slightly.",
+   "why": "Precious metals often serve as an alternative asset class, and tracking commodity movements helps investors gauge safe-haven demand.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-rebounds-as-huang-s-return-to-nvidia-revives-risk-appetite-11795469022718.html"
+   "url": "https://www.livemint.com/market/commodities/gold-rate-today-24-november-2026-gold-price-rebounds-from-14-month-low-is-it-the-right-time-to-buy-experts-explain-11795498644088.html"
   },
   {
-   "category": "Commodity",
-   "title": "Gold rises as bargain hunters step in after steep weekly drop",
-   "summary": "GLOBAL-PRECIOUS:Gold rises as bargain hunters step in after steep weekly drop",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/gold-rises-as-bargain-hunters-step-in-after-steep-weekly-drop-11795461578266.html"
+   "category": "Economy",
+   "title": "Rupee Reversal and Debt Supply Pressures Bonds",
+   "summary": "Indian government bonds faced downward pressure during a holiday-shortened trading week. This weakness was compounded by a reversal in the rupee's recent trajectory and ongoing debt supply dynamics. Market participants are closely watching these macro factors ahead of upcoming central bank policy decisions.",
+   "why": "Bond yields and currency movements provide vital clues about domestic liquidity, interest rate expectations, and foreign fund flows.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNM0tSS1hhLU5fRHR2VEhkLWVoUWM5a2FDSmdxZ2dSWG9jX2JTUy0tYU5Hbm5SZXdyUUFmN0h1ZldRckpoOEtQbm1LeUhYbkVuV0FySkNQT01UV1NSNFM1Ym95eFNOZGRUM2d6aEJQQnppYmFJbDJVVXcyeUxwTE9LeHQtYkhGaWozbWxDcWlhQ1hxUFY0Mm94YWxNN25obTIxZGwyVC1zemlIbHFycEtiLVF5cTFEZVlfRUY1dEtTQnlKLTdyU0xBdk42TnVhSDQ2eWlZVkxZbVVVMnVySkZRQnp3eWFDbmY4Y0M2cVFjRFlJMUZlb08tVmlTZ3kwM1FLcHRscF84RmNVd3BoYkJpM0JhVFEwOEh0dmI1TE8yQTBrSFBhSXY0WUJEb0hXd1R4X1BWcjhlWmp4bTBf0gHYAUFVX3lxTE5sQ190am42MjI4ZVg1WXEwX1l5QmhiY2Z0MTRWcllzczBoNjlVWi1PQVdWOGZfaU1RT09KQVRMOUtqWHlIU3ItNHVyQlRQMDRQOENzYTBkYkpQRERUOVFxQ1BSc1hRemllMDVfcWt5OU9rOHFDQzhIOVI3WkNtdzVLU25jSFVDQlFkdmM1NFR5NjNUdGh5MDhveGRBdGNxd2picE5aRjhhRWptUWFZdVVmSjNHLTN2Wk95bjlkRlJQOWR0bGFOcHBpTzM2SUhVTjhMVzVvSktpbQ?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "SBI Cautions Central Bank Ahead of Rate Decision",
+   "summary": "State Bank of India has suggested that a modest 25 basis point repo rate hike might suffice for the upcoming policy review. This perspective comes amid broader market discussions calling for a more aggressive 50 basis point increase. Economists and analysts are closely evaluating inflationary pressures and potential borrowing cost adjustments.",
+   "why": "Interest rate expectations directly impact commercial borrowing costs, loan EMIs, and sector-specific valuations like banking and real estate.",
+   "source": "BusinessLine",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcXFUZGRGcWljSkNiNlc4X0NyWnNic0Y1SnJPTWVGbnpnLU5QN2IyMVpHMWNvQXREdTBQLVlib3B2ZXd5SjF4bVVMX2EzaEwzSlk5YlhieDFpUjlTNVpPSGVHTUdjd1ktMDRpZmtUOXlGcm5MU1cwQ3dIOUplVXZ0T2tyT2tDNVg1RWhZSW5HUG1kTWhIUEZKaWQ5ZE1xTjEySDU3RXlzNm1LbVZQai1VSzF6ZXl0MnNKVWRlVGNBcTV5bkthX2NIOGdTOXVISHhBaGJ5YUp0aE0xaUc5TVZ1M0o2ZmxnbVRVME96WlFQWktOUdIB-AFBVV95cUxNejBLSl9FQzF3bWlpdklKRi1CV0JjaGw3LVVJalQzMWd0dlJPNEVodENoaktGRFVJQzE4RUZNNUppUXdsc0JPSkloZkdnVTlWREozMXRvcU1GNURUSW5pcWo4VnhhRUt4MUo4cXRpVW12ZTBCb0VqVGs2dHJVTTR3dGxzU2QzNUEwaG42dnZnenhGd1BhLVZNR2JhLTU3dkZTVk9EeHB5WVU1UmVxOUVkRnNiV1dnVmZpRkxzaU05ajNRbnBJaFBidTJJbkwzZWZQbDhmOUhabkFOX3U3ZzdFdDJEc01WNlRJVGZySzRHREM3bVRBOGduQQ?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "RBI Urges Responsible Bidding in G-Sec Auctions",
+   "summary": "Reserve Bank Deputy Governor Rohit Jain called on primary dealers to exercise greater responsibility during government securities underwriting auctions. Jain pointed out recent instances of volatile pricing behavior that failed to align with orderly market functioning. Primary dealers were encouraged to act as stable partners in managing sovereign debt issuance.",
+   "why": "Orderly underwriting auctions are essential for efficient government borrowing and maintaining stability across domestic debt markets.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/rbi-dg-asks-primary-dealers-to-bid-responsibly-in-g-sec-underwriting-auctions/articleshow/136125661.cms"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq surges 6%, Dow soars 1,400 pts as markets rebound on Huang’s",
-   "summary": "Nasdaq surges 6%, Dow soars 1,400 pts as markets rebound on Huang’s return: Stock Market Live Updates",
-   "why": "When Wall Street moves, world markets notice.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-meta-anthropic-amd-micron-tesla-ai-chip-earnings-fed-rate-treasury-yield-news-23rd-november-2026/liveblog/136104474.cms"
+   "title": "Wall Street Surges on Nvidia CEO Return",
+   "summary": "United States stock indices rallied strongly, propelled by a sharp rebound in technology shares following corporate leadership changes. Nvidia shares jumped significantly after Jensen Huang was reinstated as Chief Executive Officer, recovering a large portion of recent losses. The broader market surge added trillions of dollars in value across major Wall Street benchmarks.",
+   "why": "US market movements and major technology sector rallies frequently influence global investor sentiment and cross-border capital flows.",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQajZxMGxpSnJMTmhqWXc3Qk5kcWpab1VMbThnTXRmMHdOLWE1S2YtbUxKdUFQbkpxSElxRWZPRzJHa0NxcUJXbzhVQWZKX1NiVHpFYnBSRHQ4MzFLNTJnZWVjVEw4QzdxbWZtRFlhZnQzM0R1WU5DSGtJVVpZdU5XZFphQl9vUG9MTUI1VXpCS3JITVFQNjR5cA?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Nasdaq futures surge 3% as battered AI stocks gain ground",
-   "summary": "US stock futures showed a significant rebound on Monday after sharp declines in recent weeks. Investor interest is returning to AI-linked stocks following corrected valuations in the market. Chip…",
-   "why": "US trading often leads the next morning in India.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-futures-surge-3-as-battered-ai-stocks-gain-ground/articleshow/136104059.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "NSEL releases Rs 1,950 crore in one-time settlement, ends 14-year payment default",
-   "summary": "The National Spot Exchange Ltd has revealed a substantial settlement payout of Rs 1,950 crore to eligible claimants, marking the end of a lengthy 14-year legal battle stemming from a Rs 5,600 crore…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nsel-releases-rs-1950-crore-in-one-time-settlement-ends-14-year-payment-default/articleshow/136104164.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Adani Airport raises $300 mn from 360 ONE Asset, taking total equity",
-   "summary": "Adani Airport Holdings Ltd will raise USD 300 million to enhance its presence in India's aviation sector. This investment will contribute to its target of increasing passenger capacity from 96…",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/adani-airport-raises-300-mn-from-360-one-asset-taking-total-equity-infusion-to-1-35-bn/articleshow/136104118.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "German bond yields edge higher as equity rebound eases safe-haven demand",
-   "summary": "Germany's government bond yields increased marginally on Monday as equity markets began to rebound, leading to diminished interest in safe-haven assets. In the wake of a difficult week for stocks,…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/german-bond-yields-edge-higher-as-equity-rebound-eases-safe-haven-demand/articleshow/136097404.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "India bonds give up marginal opening gains as profit booking takes over",
-   "summary": "Indian government bonds fell after initial gains due to profit booking by traders and a sharp rupee decline. The benchmark yield of the 6.94% 2036 bond increased to 7.2185% during trading hours. Last…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-give-up-marginal-opening-gains-as-profit-booking-takes-over/articleshow/136093136.cms"
+   "title": "US Stock Exchanges Announce Thanksgiving Schedule",
+   "summary": "Major American equity venues including the Nasdaq and the New York Stock Exchange announced holiday trading hours. Markets remained closed for Thanksgiving and prepared for an early closing schedule on Black Friday. Bond markets and year-end settlement calendars also adjusted to the holiday period.",
+   "why": "Knowing international trading schedules helps investors anticipate global market liquidity and potential volume changes during holiday weeks.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/is-stock-market-open-today-thanksgiving-black-friday-holiday-us-trading-schedule-nasdaq-new-york-stock-exchange-11795503931602.html"
   }
  ]
 }
