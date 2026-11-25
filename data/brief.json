@@ -1,5 +1,5 @@
 {
- "date": "Wednesday, 25 November 2026",
+ "date": "Thursday, 26 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,538",
-   "change": -1.48
+   "value": "3,604",
+   "change": 0.36
   },
   {
    "name": "CRUDE WTI",
-   "value": "$83.5",
-   "change": 1.77
+   "value": "$84.1",
+   "change": 2.49
   },
   {
    "name": "USD/INR",
@@ -28,18 +28,18 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,096",
-   "change": -1.46
+   "value": "7,183",
+   "change": -0.25
   },
   {
    "name": "NASDAQ",
-   "value": "23,151",
-   "change": -2.46
+   "value": "23,586",
+   "change": -0.62
   },
   {
    "name": "DOW",
-   "value": "49,825",
-   "change": -0.39
+   "value": "50,183",
+   "change": 0.33
   }
  ],
  "items": [
@@ -61,35 +61,35 @@
   },
   {
    "category": "Commodity",
+   "title": "Copper slumps to lowest in 11 months as investors flee",
+   "summary": "Copper prices on the London Metal Exchange have plummeted to their lowest point in over 11 months, fueled by a shift away from technology and AI stocks, causing widespread market anxiety. Notably,…",
+   "why": "Energy and metal prices move first, and the rest follows.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/copper-slumps-to-lowest-in-11-months-as-investors-flee/articleshow/136172100.cms"
+  },
+  {
+   "category": "Commodity",
    "title": "RBI raises share of domestically held gold reserves, data shows",
    "summary": "As of September, the Reserve Bank of India has expanded its domestic gold reserves to 880.52 metric tonnes. This figure comprises 740.13 metric tonnes held in the country and 140.39 metric tonnes…",
-   "why": "Energy and metal prices move first, and the rest follows.",
+   "why": "Commodity prices feed into costs and inflation.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/rbi-raises-share-of-domestically-held-gold-reserves-data-shows/articleshow/136165807.cms"
   },
   {
-   "category": "Commodity",
-   "title": "RBI may opt for 25 bps rate hike as oil eases, inflation",
-   "summary": "The Reserve Bank of India is projected to implement a 0.25 percent interest rate hike in December. While decreasing crude oil prices could alleviate some inflation worries, many senior executives…",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/rbi-may-opt-for-25-bps-rate-hike-as-oil-eases-inflation-risks-persist-baroda-bnp-paribas-mf-cio/articleshow/136162711.cms"
-  },
-  {
    "category": "US Markets",
-   "title": "Dow Jones plunges 550 pts, Nasdaq over 3% as AI rout intensifies:",
-   "summary": "Dow Jones plunges 550 pts, Nasdaq over 3% as AI rout intensifies: Stock Market Live Updates",
+   "title": "Nasdaq, S&amp;P 500 end lower but rebound sharply from session lows: Stock",
+   "summary": "Nasdaq, S&amp;P 500 end lower but rebound sharply from session lows: Stock Market Highlights",
    "why": "When Wall Street moves, world markets notice.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-alphabet-amazon-anthropic-dell-inflation-fed-rate-hike-gold-treasury-yield-news-25th-november-2026/liveblog/136163404.cms"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Ends Mixed as Nasdaq and S&P 500 Fall Amid Renewed",
-   "summary": "Wall Street Ends Mixed as Nasdaq and S&P 500 Fall Amid Renewed AI Sell-Off; Dow Jones Gains 423 Points  Kotak Neo",
+   "title": "Nasdaq 100 plunges nearly 5%, briefly enters bear-market zone as AI fears",
+   "summary": "US stocks fell sharply as investors sold AI-related shares over concerns about heavy investment, borrowing costs and future returns. The Nasdaq 100 briefly entered bear-market territory, while…",
    "why": "US trading often leads the next morning in India.",
-   "source": "Kotak Neo",
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOd2cwbHRfcDZoTzRFZGVScFY2MDh6TXdNVHhvYmpaU2ZGSnhUZEk5eG5wTDVGMU9QSU5rdTNzTngzdVpOdDk2bkJ1RTFXdTBrM0xuaDVSbWdIYU9OQTZRaXlOU0hjcUhaTXBEX25yRVF3OEcxV3d3UjgxWUVWZTlJUV8xa0RuaS00S0p5c1hWVUdWVFVQejBpNU1OTGUwQmxQSjdreTc2ZDZjeHF5V1NObXAyVnpTTGhrS1VkRUdYUHdOTnFCM1h3NnhyRkJpdw?oc=5"
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/nasdaq-100-plunges-nearly-5-briefly-enters-bear-market-zone-as-ai-fears-and-fresh-tariffs-hit-sentiment-11795626875336.html"
   },
   {
    "category": "Equity",
@@ -117,11 +117,11 @@
   },
   {
    "category": "Equity",
-   "title": "Sebi mulls early payout of up to 80% of sale proceeds to",
-   "summary": "Sebi introduced a proposal for an early pay-out framework designed to assist Farmer Producer Organisations. This framework would allow FPOs to access up to 80 percent of sale proceeds before contract…",
+   "title": "JPMorgan Sees $450 Billion AI Debt Blitz in 2027 Before Plateau",
+   "summary": "Companies will tap public high-grade debt markets for $450 billion next year to finance their artificial intelligence-related capital expenditures, even as a growth plateau looms for the burgeoning…",
    "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-mulls-early-payout-of-up-to-80-of-sale-proceeds-to-fpos-in-commodity-derivatives-market/articleshow/136162861.cms"
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/jpmorgan-sees-450-billion-ai-debt-blitz-in-2027-before-plateau-11795643437075.html"
   }
  ]
 }
