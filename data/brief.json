@@ -3,109 +3,125 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,743",
-   "change": 1.55
+   "value": "25,819",
+   "change": 1.85
   },
   {
    "name": "SENSEX",
-   "value": "83,878",
-   "change": 1.75
+   "value": "83,938",
+   "change": 1.82
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,563",
-   "change": -0.77
-  },
-  {
-   "name": "CRUDE WTI",
-   "value": "$81.0",
-   "change": -1.24
-  },
-  {
-   "name": "USD/INR",
-   "value": "92.23",
-   "change": -0.72
-  },
-  {
-   "name": "S&P 500",
-   "value": "7,201",
-   "change": -0.5
-  },
-  {
-   "name": "NASDAQ",
-   "value": "23,734",
+   "value": "3,538",
    "change": -1.48
   },
   {
+   "name": "CRUDE WTI",
+   "value": "$83.5",
+   "change": 1.77
+  },
+  {
+   "name": "USD/INR",
+   "value": "92.22",
+   "change": -0.73
+  },
+  {
+   "name": "S&P 500",
+   "value": "7,096",
+   "change": -1.46
+  },
+  {
+   "name": "NASDAQ",
+   "value": "23,151",
+   "change": -2.46
+  },
+  {
    "name": "DOW",
-   "value": "50,019",
-   "change": 0.85
+   "value": "49,825",
+   "change": -0.39
   }
  ],
  "items": [
   {
-   "category": "Equity",
-   "title": "Domestic Indices Surge as Foreign Inflows and Lower Oil Boost Markets",
-   "summary": "Indian benchmark indices experienced a strong rally, with the Sensex jumping over 1,400 points and the Nifty approaching the 25,800 level during the session. This upward movement was largely driven by heavy foreign institutional fund inflows and stable crude oil prices. However, indices later pared some of their initial gains as investors chose to book profits following a strong winning streak.",
-   "why": "Tracking broad market benchmarks helps investors gauge overall sentiment and understand how macroeconomic tailwinds impact domestic asset prices.",
+   "category": "Economy",
+   "title": "US PCE Inflation Data and Q3 GDP Due Today; Key Numbers to",
+   "summary": "US PCE Inflation Data and Q3 GDP Due Today; Key Numbers to Watch Ahead of December Fed Rate Decision  Kotak Neo",
+   "why": "Policy and economic news shape rates and the rupee.",
    "source": "Kotak Neo",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSFhuSkJiQ1p6aHRjNlNGeERnd1dVTlB1S1V3YTE1aDFLdjl0VHBSVkRneGdaVzUtVjZzSzRIVVB0OXhsVlFhbDY5dW54cTdjRTk2SlhJbUhYcDZtcDFobzNXZGl1S3FUMlFzZ2RmRmZKZjNhajRrUkdIV0ViNnI0Nw?oc=5"
-  },
-  {
-   "category": "Equity",
-   "title": "Foreign Investors Return with Billions in Fresh Equity Inflows",
-   "summary": "Foreign institutional investors poured $13 billion into Indian equities over a 14-session trading window, successfully reversing a two-month heavy sell-off across 14 different sectors. This renewed buying interest was supported by lower global oil prices, reduced geopolitical anxieties, and attractive valuations in select domestic stocks. It marks a significant shift in foreign portfolio allocation toward Indian markets.",
-   "why": "Foreign institutional capital flows are a major driver of market liquidity and short-term directional trends in Indian equities.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/fiis-back-with-a-bang-inflows-return-to-indian-stocks-after-2-month-sell-off-14-sectors-attracted-foreign-money-list-11795589040172.html"
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMzRJdVRHRFk5NjA5c2FRRVkwZzllSzFiODNwbHhjeVZTaDk5R3pnR1dOVmpncTNlRmRubnVyd1lJRndqMy1GVC1LODNTMm9nVTF3U0FhTkw3aHFfcWk5U1gteV9JZl90WG1xMzVlSkM1SmkxaXplQ0FmRDdfcGplMUxrMjl4MDZFZnVzUFBIekhqTzBoM29mdURqampfaEFsaklKVWdfUlBMOVF5ZkE3VjJraXduZUtKWnk5cV83Y1U3a3lUaUE?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Indian Rupee Strengthens Against US Dollar on Capital Inflows",
-   "summary": "The Indian rupee appreciated by 23 paise to reach 92.62 against the US dollar in early trading sessions. This currency strengthening was supported by significant foreign capital inflows into domestic markets and a sharp rise in equity benchmarks. Reduced dollar selling pressure from the central bank also helped stabilize the local currency near multi-month highs.",
-   "why": "Exchange rate fluctuations directly affect import costs, inflation levels, and foreign investor returns in domestic currency.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-jumps-23-paise-to-92-62-against-us-dollar-in-early-trade/articleshow/136147947.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "Pension Funds Shift Focus to Government Bonds Near Equity Limits",
-   "summary": "India's largest pension funds have begun pivoting their investment strategies toward government bonds as their equity exposure approaches regulatory caps. For instance, UTI Pension Fund is currently allocating half of its fresh investments into fixed-income instruments. This structural reallocation reflects mandatory portfolio rebalancing rules designed to manage retirement risk.",
-   "why": "Institutional asset allocation shifts can significantly alter supply-demand dynamics between government debt and equity markets.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-pension-funds-pivot-to-bonds-as-equity-exposure-nears-cap/articleshow/136146220.cms"
+   "title": "WPI inflation rises to 9.92% in August 2026",
+   "summary": "WPI inflation rises to 9.92% in August 2026  DD News",
+   "why": "What the RBI and the government do reaches your money.",
+   "source": "DD News",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB1QjUwQ3pFQTJqVzlZUUZ1UXJSYzFkYzM0cjUxdWEyUHNmeFMtXzV0SFA0WGZueGVKZjhDZi1tWE14Q1VtcUZQSGpkemxpQWp4ZjhMQmxUOHZiY3NXVEJwTUM5b2xnS2xaclhGVVV4cks2R3ptOERR?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Precious Metals Face Sharp Corrections Amid Stronger Dollar",
-   "summary": "Precious metal prices on the Multi Commodity Exchange experienced steep declines, with gold crashing roughly 13% and silver plunging 20% over the month of November. The downward pressure was fueled by a strengthening US dollar, elevated Treasury yields, and widespread position unwinding by futures traders. Market analysts note that while both metals appear deeply oversold, broader macroeconomic headwinds persist.",
-   "why": "Commodity price swings reflect changing global inflation expectations, currency strengths, and safe-haven demand dynamics.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/mcx-rates-gold-crashes-13-silver-plunges-20-in-nov-2026-is-worst-over-what-should-precious-metals-investors-do-11795589063705.html"
+   "title": "RBI raises share of domestically held gold reserves, data shows",
+   "summary": "As of September, the Reserve Bank of India has expanded its domestic gold reserves to 880.52 metric tonnes. This figure comprises 740.13 metric tonnes held in the country and 140.39 metric tonnes…",
+   "why": "Energy and metal prices move first, and the rest follows.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/rbi-raises-share-of-domestically-held-gold-reserves-data-shows/articleshow/136165807.cms"
   },
   {
-   "category": "Equity",
-   "title": "Tata Steel Acquires Stake in APL Apollo Tubes via Large Block Deal",
-   "summary": "Tata Steel successfully completed the acquisition of a 9.91% stake in APL Apollo Tubes for approximately 5,825 crore rupees. The transaction involved purchasing 2.77 crore shares at a price of 2,100 rupees per share from a promoter-group entity through a block deal framework. Such strategic corporate transactions often result in significant ownership realignment within major listed industrial firms.",
-   "why": "Large corporate stake purchases indicate strategic long-term investments and provide insight into capital allocation among industrial giants.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/tata-steel-share-price-what-should-investors-do-after-apl-apollo-tubes-rs-5-825-crore-deal-buy-sell-or-hold-11795585659415.html"
+   "category": "Commodity",
+   "title": "RBI may opt for 25 bps rate hike as oil eases, inflation",
+   "summary": "The Reserve Bank of India is projected to implement a 0.25 percent interest rate hike in December. While decreasing crude oil prices could alleviate some inflation worries, many senior executives…",
+   "why": "Commodity prices feed into costs and inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/rbi-may-opt-for-25-bps-rate-hike-as-oil-eases-inflation-risks-persist-baroda-bnp-paribas-mf-cio/articleshow/136162711.cms"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Ends Mixed as Technology and AI Shares Slide",
-   "summary": "US equity markets finished the session with mixed results as a renewed sell-off in artificial intelligence and technology shares weighed heavily on major indexes. While the tech-heavy Nasdaq and the S&P 500 closed lower following recent rallies, the Dow Jones Industrial Average managed to post gains of over 420 points. Investors remained cautious ahead of upcoming macroeconomic inflation releases and Federal Reserve policy clues.",
-   "why": "Global technology sector sentiment often spills over, influencing risk appetite and opening trends in emerging markets like India.",
+   "title": "Dow Jones plunges 550 pts, Nasdaq over 3% as AI rout intensifies:",
+   "summary": "Dow Jones plunges 550 pts, Nasdaq over 3% as AI rout intensifies: Stock Market Live Updates",
+   "why": "When Wall Street moves, world markets notice.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-alphabet-amazon-anthropic-dell-inflation-fed-rate-hike-gold-treasury-yield-news-25th-november-2026/liveblog/136163404.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "Wall Street Ends Mixed as Nasdaq and S&P 500 Fall Amid Renewed",
+   "summary": "Wall Street Ends Mixed as Nasdaq and S&P 500 Fall Amid Renewed AI Sell-Off; Dow Jones Gains 423 Points  Kotak Neo",
+   "why": "US trading often leads the next morning in India.",
    "source": "Kotak Neo",
    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOd2cwbHRfcDZoTzRFZGVScFY2MDh6TXdNVHhvYmpaU2ZGSnhUZEk5eG5wTDVGMU9QSU5rdTNzTngzdVpOdDk2bkJ1RTFXdTBrM0xuaDVSbWdIYU9OQTZRaXlOU0hjcUhaTXBEX25yRVF3OEcxV3d3UjgxWUVWZTlJUV8xa0RuaS00S0p5c1hWVUdWVFVQejBpNU1OTGUwQmxQSjdreTc2ZDZjeHF5V1NObXAyVnpTTGhrS1VkRUdYUHdOTnFCM1h3NnhyRkJpdw?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "Markets Await US Inflation and Growth Data Ahead of Fed Decision",
-   "summary": "Wall Street participants closely monitored upcoming US Personal Consumption Expenditures inflation data and third-quarter Gross Domestic Product figures. These key economic indicators are expected to shape market expectations regarding the Federal Reserve's upcoming interest rate decisions in December. Bond traders actively hedged portfolios against potential economic slowdown risks stemming from aggressive monetary tightening.",
-   "why": "US inflation and growth metrics dictate global interest rate trajectories, influencing foreign portfolio flows across international emerging markets.",
-   "source": "Kotak Neo",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMzRJdVRHRFk5NjA5c2FRRVkwZzllSzFiODNwbHhjeVZTaDk5R3pnR1dOVmpncTNlRmRubnVyd1lJRndqMy1GVC1LODNTMm9nVTF3U0FhTkw3aHFfcWk5U1gteV9JZl90WG1xMzVlSkM1SmkxaXplQ0FmRDdfcGplMUxrMjl4MDZFZnVzUFBIekhqTzBoM29mdURqampfaEFsaklKVWdfUlBMOVF5ZkE3VjJraXduZUtKWnk5cV83Y1U3a3lUaUE?oc=5"
+   "category": "Equity",
+   "title": "Carlyle pares 7.4% stake in Piramal Pharma for over Rs 2,211 crore",
+   "summary": "The Carlyle Group has divested 7.4 percent of its stake in Piramal Pharma through an open market deal, selling approximately 9.86 crore shares at an average rate of Rs 224.17 each. As a result, its…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/carlyle-pares-7-4-stake-in-piramal-pharma-for-over-rs-2211-crore/articleshow/136165837.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Two in five Indian family offices, UHNIs have engaged with crypto amid",
+   "summary": "Around 41 percent of high-net-worth investors in India are delving into the world of cryptocurrencies and virtual digital assets, despite many only possessing a fundamental comprehension of this…",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/cryptocurrency/crypto-news/two-in-five-indian-family-offices-uhnis-have-engaged-with-crypto-amid-regulatory-caution/articleshow/136163899.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "SEBI eases KYC norms, centralises supplementary client data to simplify onboarding",
+   "summary": "SEBI has revealed new measures aimed at simplifying the client onboarding process for investors. By centralising supplementary KYC details with KYC Registration Agencies, investors can avoid…",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-eases-kyc-norms-centralises-supplementary-client-data-to-simplify-onboarding/articleshow/136162936.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Sebi mulls early payout of up to 80% of sale proceeds to",
+   "summary": "Sebi introduced a proposal for an early pay-out framework designed to assist Farmer Producer Organisations. This framework would allow FPOs to access up to 80 percent of sale proceeds before contract…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-mulls-early-payout-of-up-to-80-of-sale-proceeds-to-fpos-in-commodity-derivatives-market/articleshow/136162861.cms"
   }
  ]
 }
