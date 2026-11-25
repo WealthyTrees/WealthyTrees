@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,350",
-   "change": -1.75
+   "value": "25,743",
+   "change": 1.55
   },
   {
    "name": "SENSEX",
-   "value": "82,436",
-   "change": -1.77
+   "value": "83,878",
+   "change": 1.75
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,555",
-   "change": -2.64
+   "value": "3,563",
+   "change": -0.77
   },
   {
    "name": "CRUDE WTI",
-   "value": "$81.7",
-   "change": 1.9
+   "value": "$81.0",
+   "change": -1.24
   },
   {
    "name": "USD/INR",
-   "value": "92.90",
-   "change": 0.0
+   "value": "92.23",
+   "change": -0.72
   },
   {
    "name": "S&P 500",
@@ -44,84 +44,68 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "India's GDP growth seen at 7% this fiscal & next: S&P",
-   "summary": "India's GDP growth seen at 7% this fiscal & next: S&P  Fibre2Fashion",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Fibre2Fashion",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTGU0SUlnLVZ0V3QyV0hCU1dTY05TMm5zNnd2X1ItTGd1S2JsRFVCRWk5cXBCcDdBSFNGNkp6ZklaSWVBM0NLaUtIU3p6Uk1RSmhFMjlDck4zcnRxSERuZS1VQjctMl9QdFN3dEkwb2h6cE9rYU5aZkxtU1JVekIzdGdQQ3ZiNWpibHl6SkIxaUZSNF9MY0tvZEV0ZlByRzZmeGZTTEc2bFR4Z241TGI0elI2N21CSlZla1Utbg?oc=5"
+   "category": "Equity",
+   "title": "Domestic Indices Surge as Foreign Inflows and Lower Oil Boost Markets",
+   "summary": "Indian benchmark indices experienced a strong rally, with the Sensex jumping over 1,400 points and the Nifty approaching the 25,800 level during the session. This upward movement was largely driven by heavy foreign institutional fund inflows and stable crude oil prices. However, indices later pared some of their initial gains as investors chose to book profits following a strong winning streak.",
+   "why": "Tracking broad market benchmarks helps investors gauge overall sentiment and understand how macroeconomic tailwinds impact domestic asset prices.",
+   "source": "Kotak Neo",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSFhuSkJiQ1p6aHRjNlNGeERnd1dVTlB1S1V3YTE1aDFLdjl0VHBSVkRneGdaVzUtVjZzSzRIVVB0OXhsVlFhbDY5dW54cTdjRTk2SlhJbUhYcDZtcDFobzNXZGl1S3FUMlFzZ2RmRmZKZjNhajRrUkdIV0ViNnI0Nw?oc=5"
   },
   {
-   "category": "Economy",
-   "title": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation",
-   "summary": "RBI Rate Hike in December 2026: Impact on India’s GDP Growth, Inflation and Stock Market  Alice Blue",
-   "why": "What the RBI and the government do reaches your money.",
-   "source": "Alice Blue",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KWGY3V3JXOEhRalZhZnVhWkxJd2ZJSURPNkpxU29Hc1lJSHZpcTZvUjBOUmc2VDg2LUczelFmNjZmU3RtT2pCNXdyYTlmWHVzV3lOSnh4RDJCaExzWTlrVHJkNkxtMFhyc0R6VS1XajVCN2xxZGhPQmZn?oc=5"
-  },
-  {
-   "category": "Commodity",
-   "title": "Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for",
-   "summary": "In terms of GOI notification F. No. 4(5)-B(W&amp;M)/2021 dated May 12, 2021 (SGB 2021-22 Series I - Issue date May 25, 2021) on Sovereign Gold Bond Scheme, premature redemption of Gold Bond may be…",
-   "why": "Energy and metal prices move first, and the rest follows.",
-   "source": "RBI",
-   "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64030"
-  },
-  {
-   "category": "Commodity",
-   "title": "Gold, silver prices today 24 Nov, Tuesday: Check 24K, 22K gold, 999",
-   "summary": "Gold, silver prices today 24 Nov, Tuesday: Check 24K, 22K gold, 999 silver rates in Delhi, Mumbai, Kolkata and others  Livemint",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Livemint",
-   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOR2JjbENfdTVsbUFiY0lXU1cyd01oeHMtQ0pqX1JhSk1fMkFDVERoNVozeG54a3lLcmFCSTJvZDFiVTdJS18zQm1LaXZiX050RkE3YlM4TUN0bmlUaUlsaElnOUJTcXRGSTJSSmFLa1puRFZacGZvMldMNHpnZ3lQbll3S1dreUwxcmUzcUZ5TmJrZk5nTlFnalpGY0dOOFFNbnVqZ2lUOEhsNWZ3WDZKS1lNaDMyRWZ1dVFFSjZ3SExZaUxndE9yLTctY085cDZURUU3amY3dkdhU0FQRWJHRVlCcnNMLU1zZWZRU29JbUFVRmx2SXNLbzRKX3c1Vms4MWlxMDBMOGtTZ9IBjwJBVV95cUxOMjZiNldLdGYtZUVFeWl6cVoycXJwVDdSVk1feGxZVnkxMnZnWklENTAxdDJEb2NZOFdFZFM1V0NLeC1SdmxtZjY0WHg0cWV2Z0pTTkw1RWN1ZmdoVkRyNnowcERmV1Z4V3hIamNTNV81amR4Vi14VUJkOVp0ZDkzZHhKc05oVVg3M3RRSnpBQUNOOG9PRzdUa3RFdzdkZkVZc1JJTzhSTndPa2lqMTc0RGhDNUYyLVM1SldwdEFjeHNoSlV1UTVVTTZ3bmtSUTBIVlpsakJ3N0tsX2R6Qm1JNDMzS3ZiTGNndGRtTlVVMV9FVUFiYmI4cE83TW4tTWxLajdsOG1QcHdwRWxsUW13?oc=5"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq, S&amp;P 500 end lower as investors assess Jensen Huang's return to",
-   "summary": "The Nasdaq and S&amp;P 500 indices experienced a drop as Nvidia and other tech shares fell. Investors reacted to potential new tariffs, raising concerns about market stability. Nvidia's CEO Jensen…",
-   "why": "When Wall Street moves, world markets notice.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-sp-500-end-lower-as-investors-assess-jensen-huangs-return-to-nvidia/articleshow/136141893.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Anthropic shares crash below IPO price of $83 after record Nasdaq debut,",
-   "summary": "Anthropic shares fell below their $83 IPO price, dropping to $79.42 after an early post-listing rally faded. The reversal has renewed concerns about AI valuations, infrastructure costs, competition…",
-   "why": "US trading often leads the next morning in India.",
+   "category": "Equity",
+   "title": "Foreign Investors Return with Billions in Fresh Equity Inflows",
+   "summary": "Foreign institutional investors poured $13 billion into Indian equities over a 14-session trading window, successfully reversing a two-month heavy sell-off across 14 different sectors. This renewed buying interest was supported by lower global oil prices, reduced geopolitical anxieties, and attractive valuations in select domestic stocks. It marks a significant shift in foreign portfolio allocation toward Indian markets.",
+   "why": "Foreign institutional capital flows are a major driver of market liquidity and short-term directional trends in Indian equities.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/anthropic-shares-crash-below-ipo-price-of-83-after-record-nasdaq-debut-down-31-from-peak-what-is-spooking-investors-11795533362689.html"
+   "url": "https://www.livemint.com/market/stock-market-news/fiis-back-with-a-bang-inflows-return-to-indian-stocks-after-2-month-sell-off-14-sectors-attracted-foreign-money-list-11795589040172.html"
+  },
+  {
+   "category": "Economy",
+   "title": "Indian Rupee Strengthens Against US Dollar on Capital Inflows",
+   "summary": "The Indian rupee appreciated by 23 paise to reach 92.62 against the US dollar in early trading sessions. This currency strengthening was supported by significant foreign capital inflows into domestic markets and a sharp rise in equity benchmarks. Reduced dollar selling pressure from the central bank also helped stabilize the local currency near multi-month highs.",
+   "why": "Exchange rate fluctuations directly affect import costs, inflation levels, and foreign investor returns in domestic currency.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/rupee-jumps-23-paise-to-92-62-against-us-dollar-in-early-trade/articleshow/136147947.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Pension Funds Shift Focus to Government Bonds Near Equity Limits",
+   "summary": "India's largest pension funds have begun pivoting their investment strategies toward government bonds as their equity exposure approaches regulatory caps. For instance, UTI Pension Fund is currently allocating half of its fresh investments into fixed-income instruments. This structural reallocation reflects mandatory portfolio rebalancing rules designed to manage retirement risk.",
+   "why": "Institutional asset allocation shifts can significantly alter supply-demand dynamics between government debt and equity markets.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-pension-funds-pivot-to-bonds-as-equity-exposure-nears-cap/articleshow/136146220.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Precious Metals Face Sharp Corrections Amid Stronger Dollar",
+   "summary": "Precious metal prices on the Multi Commodity Exchange experienced steep declines, with gold crashing roughly 13% and silver plunging 20% over the month of November. The downward pressure was fueled by a strengthening US dollar, elevated Treasury yields, and widespread position unwinding by futures traders. Market analysts note that while both metals appear deeply oversold, broader macroeconomic headwinds persist.",
+   "why": "Commodity price swings reflect changing global inflation expectations, currency strengths, and safe-haven demand dynamics.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/commodities/mcx-rates-gold-crashes-13-silver-plunges-20-in-nov-2026-is-worst-over-what-should-precious-metals-investors-do-11795589063705.html"
   },
   {
    "category": "Equity",
-   "title": "PE/VC investments in India surge to USD 8.7 billion in October, highest",
-   "summary": "Private equity and venture capital investments in India surged to USD 8.7 billion in October 2026. This monthly figure is the highest recorded in the past five years, supported by eight large deals…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/pe/vc-investments-in-india-surge-to-usd-8-7-billion-in-october-highest-monthly-level-in-five-years-ey-ivca-report/articleshow/136132831.cms"
+   "title": "Tata Steel Acquires Stake in APL Apollo Tubes via Large Block Deal",
+   "summary": "Tata Steel successfully completed the acquisition of a 9.91% stake in APL Apollo Tubes for approximately 5,825 crore rupees. The transaction involved purchasing 2.77 crore shares at a price of 2,100 rupees per share from a promoter-group entity through a block deal framework. Such strategic corporate transactions often result in significant ownership realignment within major listed industrial firms.",
+   "why": "Large corporate stake purchases indicate strategic long-term investments and provide insight into capital allocation among industrial giants.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/tata-steel-share-price-what-should-investors-do-after-apl-apollo-tubes-rs-5-825-crore-deal-buy-sell-or-hold-11795585659415.html"
   },
   {
-   "category": "Equity",
-   "title": "A 50 bps jumbo rate hike can lead to financial stability concerns,",
-   "summary": "SBI economists have lowered their rate hike expectations for the upcoming RBI policy review. They now anticipate a 0.25 per cent increase rather than the previously expected 0.50 per cent. This…",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/a-50-bps-jumbo-rate-hike-can-lead-to-financial-stability-concerns-hurt-growth-report/articleshow/136130764.cms"
+   "category": "US Markets",
+   "title": "Wall Street Ends Mixed as Technology and AI Shares Slide",
+   "summary": "US equity markets finished the session with mixed results as a renewed sell-off in artificial intelligence and technology shares weighed heavily on major indexes. While the tech-heavy Nasdaq and the S&P 500 closed lower following recent rallies, the Dow Jones Industrial Average managed to post gains of over 420 points. Investors remained cautious ahead of upcoming macroeconomic inflation releases and Federal Reserve policy clues.",
+   "why": "Global technology sector sentiment often spills over, influencing risk appetite and opening trends in emerging markets like India.",
+   "source": "Kotak Neo",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOd2cwbHRfcDZoTzRFZGVScFY2MDh6TXdNVHhvYmpaU2ZGSnhUZEk5eG5wTDVGMU9QSU5rdTNzTngzdVpOdDk2bkJ1RTFXdTBrM0xuaDVSbWdIYU9OQTZRaXlOU0hjcUhaTXBEX25yRVF3OEcxV3d3UjgxWUVWZTlJUV8xa0RuaS00S0p5c1hWVUdWVFVQejBpNU1OTGUwQmxQSjdreTc2ZDZjeHF5V1NObXAyVnpTTGhrS1VkRUdYUHdOTnFCM1h3NnhyRkJpdw?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Anthropic CEO Dario Amodei sells shares worth USD 280.41 million following IPO",
-   "summary": "Dario Amodei, CEO of Anthropic, sold shares worth USD 280.41 million after the company's IPO. He reported holding 202.8 million shares and additional shares through trusts. Anthropic's initial public…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ceo-dario-amodei-sells-shares-worth-usd-280-41-million-following-ipo/articleshow/136129119.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "IIFCL IPO: Govt plans to sell part of its stake, company to",
-   "summary": "The government aims to partially divest its shareholding in India Infrastructure Finance Company Ltd through an initial public offering. The IPO is expected to occur by the end of the current fiscal…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/iifcl-ipo-govt-plans-to-sell-part-of-its-stake-company-to-issue-fresh-shares/articleshow/136124476.cms"
+   "category": "US Markets",
+   "title": "Markets Await US Inflation and Growth Data Ahead of Fed Decision",
+   "summary": "Wall Street participants closely monitored upcoming US Personal Consumption Expenditures inflation data and third-quarter Gross Domestic Product figures. These key economic indicators are expected to shape market expectations regarding the Federal Reserve's upcoming interest rate decisions in December. Bond traders actively hedged portfolios against potential economic slowdown risks stemming from aggressive monetary tightening.",
+   "why": "US inflation and growth metrics dictate global interest rate trajectories, influencing foreign portfolio flows across international emerging markets.",
+   "source": "Kotak Neo",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMzRJdVRHRFk5NjA5c2FRRVkwZzllSzFiODNwbHhjeVZTaDk5R3pnR1dOVmpncTNlRmRubnVyd1lJRndqMy1GVC1LODNTMm9nVTF3U0FhTkw3aHFfcWk5U1gteV9JZl90WG1xMzVlSkM1SmkxaXplQ0FmRDdfcGplMUxrMjl4MDZFZnVzUFBIekhqTzBoM29mdURqampfaEFsaklKVWdfUlBMOVF5ZkE3VjJraXduZUtKWnk5cV83Y1U3a3lUaUE?oc=5"
   }
  ]
 }
