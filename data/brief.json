@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,794",
-   "change": 1.75
+   "value": "25,884",
+   "change": 2.11
   },
   {
    "name": "SENSEX",
-   "value": "83,864",
-   "change": 1.73
+   "value": "84,329",
+   "change": 2.3
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,594",
-   "change": 0.81
+   "value": "3,599",
+   "change": 0.96
   },
   {
    "name": "CRUDE WTI",
-   "value": "$84.0",
-   "change": 0.38
+   "value": "$84.5",
+   "change": 0.99
   },
   {
    "name": "USD/INR",
    "value": "92.44",
-   "change": 0.24
+   "change": 0.23
   },
   {
    "name": "S&P 500",
@@ -53,43 +53,67 @@
   },
   {
    "category": "Economy",
-   "title": "Wild Market Swings Are Colliding With a Fed Bent on Taming Inflation",
-   "summary": "Wild Market Swings Are Colliding With a Fed Bent on Taming Inflation  WSJ",
+   "title": "US Economy Surges as Hot Inflation Complicates the Next Federal Reserve Move",
+   "summary": "US Economy Surges as Hot Inflation Complicates the Next Federal Reserve Move  kalkine.co.uk",
    "why": "What the RBI and the government do reaches your money.",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNktjNDdMSmJmZDNsOE1CbkdBZVBNS2ZrVEJSUXQtazcwMUs3MHRwbk5xNmN4YmxhTC1OcUdlRVBDVmtiWXZYckVLQ1pOMFMxbXhPaXpsdjdMejlzLW5TMjYxYUVHQUJUamVMaERpbmIwSXd2bUoyMFJLWUcxV0JDZVVvUjE0UmRjaDdJTlJneE9CRnFrZ1dkZGdzeVA5MEtsSG93T0gySzktblJRWGZQUGlsUGVDXzNqRUtvV1pR?oc=5"
+   "source": "kalkine.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeWxYWWp1aHJzTVNWWFVaNHdYUFIzWXpJSS1wR1JzYl9mTFprR2d3VGlrejZQNWdxb05HLU1ETzNVaUMwNUxLc3UtTExfclk4Umd2Vm9EREJ4dUZjbGRvbUxmbkZGWFJNN1hrakQ1RjJPdm4zTkF0cU1QTEhOUURaZldNWGcyLXdwdW9MYlA2bkVLTy1lT19QTVAyajJrWUVWdDFmZnlwd05RcE52ZjFiZy00S0RjUzlx?oc=5"
   },
   {
    "category": "Commodity",
    "title": "India bonds tumble as Brent tops $95 per barrel, RBI flags food",
-   "summary": "Indian government bonds fell as oil prices surged, raising concerns about inflation and economic stability. The Reserve Bank of India highlighted rising food inflation pressures, indicating…",
+   "summary": "Indian government bonds experienced a decline as oil prices increased due to geopolitical tensions in the Middle East. The Reserve Bank of India emphasized broad-based food inflation pressures,…",
    "why": "Energy and metal prices move first, and the rest follows.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-tumble-as-brent-tops-95-per-barrel-rbi-flags-food-inflation-risks/articleshow/136179562.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-tumble-as-brent-tops-95-per-barrel-rbi-flags-food-inflation-risks/articleshow/136193320.cms"
   },
   {
    "category": "Commodity",
-   "title": "Gold prices crash ₹22,000 in a month: Is this the right time",
-   "summary": "MCX gold has fallen nearly  ₹22,000 per 10 grams in a month, easing costs for wedding-season buyers. Analysts see support around  ₹1.15 lakh– ₹1.17 lakh but differ on further downside. They recommend…",
+   "title": "Spike in oil prices partly reverses rupee rally, forward premiums surge",
+   "summary": "The Indian rupee has faced depreciation as a result of escalating oil prices combined with pressures from surrounding currencies. With Brent crude exceeding $96 per barrel, worries about India's…",
    "why": "Commodity prices feed into costs and inflation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/spike-in-oil-prices-partly-reverses-rupee-rally-forward-premiums-surge/articleshow/136188127.cms"
+  },
+  {
+   "category": "US Markets",
+   "title": "NSE is now world's third-largest listed exchange by market cap, overtakes Nasdaq,",
+   "summary": "NSE's market capitalisation stood at approximately $64.1 billion, placing it ahead of Deutsche Boerse, valued at $63.4 billion, London Stock Exchange Group at $62.4 billion, Nasdaq at $59.4 billion…",
+   "why": "When Wall Street moves, world markets notice.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/commodities/gold-prices-crash-rs-22-000-in-a-month-is-this-the-right-time-to-buy-to-make-profits-when-prices-go-up-experts-advice-11795679163869.html"
+   "url": "https://www.livemint.com/market/stock-market-news/nse-is-now-worlds-third-largest-listed-exchange-by-market-cap-overtakes-nasdaq-lse-which-two-exchanges-are-ahead-11795697484423.html"
   },
   {
    "category": "US Markets",
    "title": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap",
    "summary": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap or Breakout?  StoneX",
-   "why": "When Wall Street moves, world markets notice.",
+   "why": "US trading often leads the next morning in India.",
    "source": "StoneX",
    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdklPRnp5aF8zbVJaTnU0QUJXNWpVUnJPUjRxUzNoUjNCVjFsVW5mQWpLbWFJMUo2SXo3empTdkl3S253eUZiZzIxXzhwVzlEa1NNNl94X2J1V0lVRDNrTjVncGhNTnlRYktqeXZUbjg5QzF0bFJlRXo1WlBFWnExWEJXTllQRDlRQmZmb20tMjFrX0hnQllORXN4azdVcmFXMnhIVG9EN2lnNWFzNzJhdGZTMGZVUFNQWkplTW40UFJQc1c3NW16WHFpejlBLTVyclN2ZUduSU95UQ?oc=5"
   },
   {
-   "category": "US Markets",
-   "title": "Wall Street rebounds strongly after brutal rout, Dow ends higher & Nasdaq",
-   "summary": "Wall Street rebounds strongly after brutal rout, Dow ends higher & Nasdaq recovers By Investing.com  Investing.com India",
-   "why": "US trading often leads the next morning in India.",
-   "source": "Investing.com India",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPclVOZjdVc2JNTGZ3TF9pbGZtR3NEMjZJSHZnNlZzU3psYTEySThPbWhfeGQ3NmJKeWlpT1RzZ1FoRnhkWXYzM3hlSnl3OEh2MFNBU0dhUFpVR09FVmYwZU9PM0h0aEZZaDdZNW1rWElCbk80MmZCaWlmS3BBWG43WDNzaFl0eUx2RVJldnFQVHQ3UHhZZG1MRTdPbEVRQ3E5SVNTNlVvVUMxbzZjYjJCbHE3X2RnNElCN0REZm1LeVI1TWM2?oc=5"
+   "category": "Equity",
+   "title": "Ashiana Housing JV buys 10-acre land in Chennai for senior living project,",
+   "summary": "Ashiana Housing Ltd recently revealed its acquisition of nearly 10 acres in Chennai aimed at a senior living initiative. In collaboration with Arihant Foundations, the project estimates a saleable…",
+   "why": "Share prices move on news like this.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/ashiana-housing-jv-buys-10-acre-land-in-chennai-for-senior-living-project-eyes-rs-1100-cr-revenue/articleshow/136197134.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "Market Trading Guide: Tech Mahindra, Angel One among 5 stock recommendations for",
+   "summary": "Market experts recommend five stocks for Friday, including Tech Mahindra, Angel One, Tata Consumer, Kansai Nerolac and Agarwal Eye, outlining entry levels, stop losses and upside targets.",
+   "why": "A company's share price reacts to its own news first.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-tech-mahindra-angel-one-among-5-stock-recommendations-for-friday/slideshow/136196068.cms"
+  },
+  {
+   "category": "Equity",
+   "title": "NSE among 6 stocks hitting 52-week highs; stock rallies up to 35%",
+   "summary": "Six BSE 100 stocks, including NSE, DLF and Prestige Estates, hit fresh 52-week highs on Thursday. NSE led monthly gains, surging 35%, followed by Prestige Estates at 32%.",
+   "why": "News changes what investors think a business is worth.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nse-among-6-stocks-hitting-52-week-highs-stock-rallies-up-to-35-in-a-month/slideshow/136192775.cms"
   },
   {
    "category": "Equity",
@@ -98,30 +122,6 @@
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-sandisk-stock-falling-despite-surging-profits/slideshow/136179318.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Adani firms plan public bond sale to raise at least Rs 2,000",
-   "summary": "Adani Enterprises and Adani Power are planning public bond offerings to raise at least Rs 20 billion ($220 million), according to sources. The fundraising could help revive India's subdued public…",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/adani-firms-plan-public-bond-sale-to-raise-at-least-220-million/articleshow/136178950.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Eternal, Adani Enterprises among 10 stocks with highest FII buying in Q2.",
-   "summary": "In the September 2026 quarter, Foreign Institutional Investors (FIIs) boosted their stakes in various firms, notably in Eternal and Adani Enterprises, despite facing mixed performance trends in stock…",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/eternal-adani-enterprises-among-10-stocks-with-highest-fii-buying-in-q2-how-many-do-you-have/slideshow/136178864.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Why is Alphabet stock sliding? Key factors behind the sell-off",
-   "summary": "Alphabet shares plunge over 5% amid AI investment concerns, regulatory challenges, legal disputes, weakening chip demand expectations, Google's spending uncertainty and broader technology stock…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-alphabet-stock-sliding-key-factors-behind-the-sell-off/slideshow/136178516.cms"
   }
  ]
 }
