@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,819",
-   "change": 1.85
+   "value": "25,794",
+   "change": 1.75
   },
   {
    "name": "SENSEX",
-   "value": "83,938",
-   "change": 1.82
+   "value": "83,864",
+   "change": 1.73
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,604",
-   "change": 0.36
+   "value": "3,594",
+   "change": 0.81
   },
   {
    "name": "CRUDE WTI",
-   "value": "$84.1",
-   "change": 2.49
+   "value": "$84.0",
+   "change": 0.38
   },
   {
    "name": "USD/INR",
-   "value": "92.22",
-   "change": -0.73
+   "value": "92.44",
+   "change": 0.24
   },
   {
    "name": "S&P 500",
@@ -45,83 +45,83 @@
  "items": [
   {
    "category": "Economy",
-   "title": "US PCE Inflation Data and Q3 GDP Due Today; Key Numbers to",
-   "summary": "US PCE Inflation Data and Q3 GDP Due Today; Key Numbers to Watch Ahead of December Fed Rate Decision  Kotak Neo",
+   "title": "Gift Nifty Signals Higher Open for Sensex, Nifty on Thursday as Asia",
+   "summary": "Gift Nifty Signals Higher Open for Sensex, Nifty on Thursday as Asia Rebounds; US Inflation Runs Hot  HDFC Sky",
    "why": "Policy and economic news shape rates and the rupee.",
-   "source": "Kotak Neo",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMzRJdVRHRFk5NjA5c2FRRVkwZzllSzFiODNwbHhjeVZTaDk5R3pnR1dOVmpncTNlRmRubnVyd1lJRndqMy1GVC1LODNTMm9nVTF3U0FhTkw3aHFfcWk5U1gteV9JZl90WG1xMzVlSkM1SmkxaXplQ0FmRDdfcGplMUxrMjl4MDZFZnVzUFBIekhqTzBoM29mdURqampfaEFsaklKVWdfUlBMOVF5ZkE3VjJraXduZUtKWnk5cV83Y1U3a3lUaUE?oc=5"
+   "source": "HDFC Sky",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYWlxZXJqalhYb043ZWNqeG5PQWFMb3QyYmE2U1R1S0ZlSmZyV252WGhyd2NwR3JhU3hEWGdaWHNJOHdldVFsdkxxOFd0cXdjQ3BxdTc1Y1IzcjdLbTMzdmpQeEFyTXRsLXAzZ180YjdyZjFFSHI4TURjdmtOaUJMTGxVOUc3eDEtb016aGMxcjdEX2xEU2Y4TDRXMW84N3RFaEhJcTJ6bDNZRU0xMUxvS1doTWxWeUlqVFhVUUQxM3NTMnZHR0J3dnRzaHFfOW91U3ZSX1plQQ?oc=5"
   },
   {
    "category": "Economy",
-   "title": "WPI inflation rises to 9.92% in August 2026",
-   "summary": "WPI inflation rises to 9.92% in August 2026  DD News",
+   "title": "Wild Market Swings Are Colliding With a Fed Bent on Taming Inflation",
+   "summary": "Wild Market Swings Are Colliding With a Fed Bent on Taming Inflation  WSJ",
    "why": "What the RBI and the government do reaches your money.",
-   "source": "DD News",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB1QjUwQ3pFQTJqVzlZUUZ1UXJSYzFkYzM0cjUxdWEyUHNmeFMtXzV0SFA0WGZueGVKZjhDZi1tWE14Q1VtcUZQSGpkemxpQWp4ZjhMQmxUOHZiY3NXVEJwTUM5b2xnS2xaclhGVVV4cks2R3ptOERR?oc=5"
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNktjNDdMSmJmZDNsOE1CbkdBZVBNS2ZrVEJSUXQtazcwMUs3MHRwbk5xNmN4YmxhTC1OcUdlRVBDVmtiWXZYckVLQ1pOMFMxbXhPaXpsdjdMejlzLW5TMjYxYUVHQUJUamVMaERpbmIwSXd2bUoyMFJLWUcxV0JDZVVvUjE0UmRjaDdJTlJneE9CRnFrZ1dkZGdzeVA5MEtsSG93T0gySzktblJRWGZQUGlsUGVDXzNqRUtvV1pR?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "Copper slumps to lowest in 11 months as investors flee",
-   "summary": "Copper prices on the London Metal Exchange have plummeted to their lowest point in over 11 months, fueled by a shift away from technology and AI stocks, causing widespread market anxiety. Notably,…",
+   "title": "India bonds tumble as Brent tops $95 per barrel, RBI flags food",
+   "summary": "Indian government bonds fell as oil prices surged, raising concerns about inflation and economic stability. The Reserve Bank of India highlighted rising food inflation pressures, indicating…",
    "why": "Energy and metal prices move first, and the rest follows.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/copper-slumps-to-lowest-in-11-months-as-investors-flee/articleshow/136172100.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-tumble-as-brent-tops-95-per-barrel-rbi-flags-food-inflation-risks/articleshow/136179562.cms"
   },
   {
    "category": "Commodity",
-   "title": "RBI raises share of domestically held gold reserves, data shows",
-   "summary": "As of September, the Reserve Bank of India has expanded its domestic gold reserves to 880.52 metric tonnes. This figure comprises 740.13 metric tonnes held in the country and 140.39 metric tonnes…",
+   "title": "Gold prices crash ₹22,000 in a month: Is this the right time",
+   "summary": "MCX gold has fallen nearly  ₹22,000 per 10 grams in a month, easing costs for wedding-season buyers. Analysts see support around  ₹1.15 lakh– ₹1.17 lakh but differ on further downside. They recommend…",
    "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/rbi-raises-share-of-domestically-held-gold-reserves-data-shows/articleshow/136165807.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq, S&amp;P 500 end lower but rebound sharply from session lows: Stock",
-   "summary": "Nasdaq, S&amp;P 500 end lower but rebound sharply from session lows: Stock Market Highlights",
-   "why": "When Wall Street moves, world markets notice.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-alphabet-amazon-anthropic-dell-inflation-fed-rate-hike-gold-treasury-yield-news-25th-november-2026/liveblog/136163404.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "Nasdaq 100 plunges nearly 5%, briefly enters bear-market zone as AI fears",
-   "summary": "US stocks fell sharply as investors sold AI-related shares over concerns about heavy investment, borrowing costs and future returns. The Nasdaq 100 briefly entered bear-market territory, while…",
-   "why": "US trading often leads the next morning in India.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nasdaq-100-plunges-nearly-5-briefly-enters-bear-market-zone-as-ai-fears-and-fresh-tariffs-hit-sentiment-11795626875336.html"
+   "url": "https://www.livemint.com/market/commodities/gold-prices-crash-rs-22-000-in-a-month-is-this-the-right-time-to-buy-to-make-profits-when-prices-go-up-experts-advice-11795679163869.html"
+  },
+  {
+   "category": "US Markets",
+   "title": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap",
+   "summary": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap or Breakout?  StoneX",
+   "why": "When Wall Street moves, world markets notice.",
+   "source": "StoneX",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdklPRnp5aF8zbVJaTnU0QUJXNWpVUnJPUjRxUzNoUjNCVjFsVW5mQWpLbWFJMUo2SXo3empTdkl3S253eUZiZzIxXzhwVzlEa1NNNl94X2J1V0lVRDNrTjVncGhNTnlRYktqeXZUbjg5QzF0bFJlRXo1WlBFWnExWEJXTllQRDlRQmZmb20tMjFrX0hnQllORXN4azdVcmFXMnhIVG9EN2lnNWFzNzJhdGZTMGZVUFNQWkplTW40UFJQc1c3NW16WHFpejlBLTVyclN2ZUduSU95UQ?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "Wall Street rebounds strongly after brutal rout, Dow ends higher & Nasdaq",
+   "summary": "Wall Street rebounds strongly after brutal rout, Dow ends higher & Nasdaq recovers By Investing.com  Investing.com India",
+   "why": "US trading often leads the next morning in India.",
+   "source": "Investing.com India",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPclVOZjdVc2JNTGZ3TF9pbGZtR3NEMjZJSHZnNlZzU3psYTEySThPbWhfeGQ3NmJKeWlpT1RzZ1FoRnhkWXYzM3hlSnl3OEh2MFNBU0dhUFpVR09FVmYwZU9PM0h0aEZZaDdZNW1rWElCbk80MmZCaWlmS3BBWG43WDNzaFl0eUx2RVJldnFQVHQ3UHhZZG1MRTdPbEVRQ3E5SVNTNlVvVUMxbzZjYjJCbHE3X2RnNElCN0REZm1LeVI1TWM2?oc=5"
   },
   {
    "category": "Equity",
-   "title": "Carlyle pares 7.4% stake in Piramal Pharma for over Rs 2,211 crore",
-   "summary": "The Carlyle Group has divested 7.4 percent of its stake in Piramal Pharma through an open market deal, selling approximately 9.86 crore shares at an average rate of Rs 224.17 each. As a result, its…",
+   "title": "Why is SanDisk stock falling despite surging profits?",
+   "summary": "SanDisk shares tumble amid fading AI optimism, declining NAND price forecasts and semiconductor sector weakness. Despite strong earnings and data centre demand, investors fear potential memory-chip…",
    "why": "Share prices move on news like this.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/carlyle-pares-7-4-stake-in-piramal-pharma-for-over-rs-2211-crore/articleshow/136165837.cms"
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-sandisk-stock-falling-despite-surging-profits/slideshow/136179318.cms"
   },
   {
    "category": "Equity",
-   "title": "Two in five Indian family offices, UHNIs have engaged with crypto amid",
-   "summary": "Around 41 percent of high-net-worth investors in India are delving into the world of cryptocurrencies and virtual digital assets, despite many only possessing a fundamental comprehension of this…",
+   "title": "Adani firms plan public bond sale to raise at least Rs 2,000",
+   "summary": "Adani Enterprises and Adani Power are planning public bond offerings to raise at least Rs 20 billion ($220 million), according to sources. The fundraising could help revive India's subdued public…",
    "why": "A company's share price reacts to its own news first.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/cryptocurrency/crypto-news/two-in-five-indian-family-offices-uhnis-have-engaged-with-crypto-amid-regulatory-caution/articleshow/136163899.cms"
+   "url": "https://economictimes.indiatimes.com/markets/bonds/adani-firms-plan-public-bond-sale-to-raise-at-least-220-million/articleshow/136178950.cms"
   },
   {
    "category": "Equity",
-   "title": "SEBI eases KYC norms, centralises supplementary client data to simplify onboarding",
-   "summary": "SEBI has revealed new measures aimed at simplifying the client onboarding process for investors. By centralising supplementary KYC details with KYC Registration Agencies, investors can avoid…",
+   "title": "Eternal, Adani Enterprises among 10 stocks with highest FII buying in Q2.",
+   "summary": "In the September 2026 quarter, Foreign Institutional Investors (FIIs) boosted their stakes in various firms, notably in Eternal and Adani Enterprises, despite facing mixed performance trends in stock…",
    "why": "News changes what investors think a business is worth.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-eases-kyc-norms-centralises-supplementary-client-data-to-simplify-onboarding/articleshow/136162936.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/eternal-adani-enterprises-among-10-stocks-with-highest-fii-buying-in-q2-how-many-do-you-have/slideshow/136178864.cms"
   },
   {
    "category": "Equity",
-   "title": "JPMorgan Sees $450 Billion AI Debt Blitz in 2027 Before Plateau",
-   "summary": "Companies will tap public high-grade debt markets for $450 billion next year to finance their artificial intelligence-related capital expenditures, even as a growth plateau looms for the burgeoning…",
+   "title": "Why is Alphabet stock sliding? Key factors behind the sell-off",
+   "summary": "Alphabet shares plunge over 5% amid AI investment concerns, regulatory challenges, legal disputes, weakening chip demand expectations, Google's spending uncertainty and broader technology stock…",
    "why": "Share prices move on news like this.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/jpmorgan-sees-450-billion-ai-debt-blitz-in-2027-before-plateau-11795643437075.html"
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-alphabet-stock-sliding-key-factors-behind-the-sell-off/slideshow/136178516.cms"
   }
  ]
 }
