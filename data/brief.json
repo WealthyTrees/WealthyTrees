@@ -1,5 +1,5 @@
 {
- "date": "Thursday, 26 November 2026",
+ "date": "Friday, 27 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,599",
-   "change": 0.96
+   "value": "3,593",
+   "change": 0.81
   },
   {
    "name": "CRUDE WTI",
-   "value": "$84.5",
-   "change": 0.99
+   "value": "$84.9",
+   "change": 1.47
   },
   {
    "name": "USD/INR",
@@ -86,10 +86,10 @@
   {
    "category": "US Markets",
    "title": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap",
-   "summary": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap or Breakout?  StoneX",
+   "summary": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap or Breakout?  FOREX.com",
    "why": "US trading often leads the next morning in India.",
-   "source": "StoneX",
-   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdklPRnp5aF8zbVJaTnU0QUJXNWpVUnJPUjRxUzNoUjNCVjFsVW5mQWpLbWFJMUo2SXo3empTdkl3S253eUZiZzIxXzhwVzlEa1NNNl94X2J1V0lVRDNrTjVncGhNTnlRYktqeXZUbjg5QzF0bFJlRXo1WlBFWnExWEJXTllQRDlRQmZmb20tMjFrX0hnQllORXN4azdVcmFXMnhIVG9EN2lnNWFzNzJhdGZTMGZVUFNQWkplTW40UFJQc1c3NW16WHFpejlBLTVyclN2ZUduSU95UQ?oc=5"
+   "source": "FOREX.com",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQYlR1RXR0UGJ5VWVCWHBhNmNzcTVweFYyYkpQWFV0WXlTTXhaZ0FhNk8zcFhqZHV4cjZBNDJQai1PMmlhdmVwZWgwNXdiZTJVc0tqZC02NkxjM3R5ZUJ1TlpudFFwM2pYY3ppNTYyeC1McFBCV1RTeW4xbVItbWxuSmloNkhWOTUydVR2aVhSUEVJR0NYRmlrQ0d4MHgxZzZiZ1JVaXp2MHBGUFktbjktXzZuMFFzV3lFUXRiU0dUUmNLZ0tDUWpjeTFWSldwY0NBOFA4R1J2RmhkcnRoNDRZYkNCdw?oc=5"
   },
   {
    "category": "Equity",
