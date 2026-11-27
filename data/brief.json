@@ -1,5 +1,5 @@
 {
- "date": "Friday, 27 November 2026",
+ "date": "Saturday, 28 November 2026",
  "ticker": [
   {
    "name": "NIFTY 50",
@@ -13,13 +13,13 @@
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,658",
-   "change": 2.61
+   "value": "3,668",
+   "change": 2.91
   },
   {
    "name": "CRUDE WTI",
-   "value": "$82.9",
-   "change": -0.93
+   "value": "$83.1",
+   "change": -0.72
   },
   {
    "name": "USD/INR",
@@ -28,84 +28,84 @@
   },
   {
    "name": "S&P 500",
-   "value": "7,291",
-   "change": 1.51
+   "value": "7,297",
+   "change": 1.6
   },
   {
    "name": "NASDAQ",
-   "value": "24,059",
-   "change": 2.01
+   "value": "24,130",
+   "change": 2.31
   },
   {
    "name": "DOW",
-   "value": "50,816",
-   "change": 1.26
+   "value": "50,775",
+   "change": 1.18
   }
  ],
  "items": [
   {
    "category": "Equity",
-   "title": "Profit Booking Snaps Four-Week Market Rally",
-   "summary": "Indian equities experienced a notable correction following a strong four-week rally, with the market succumbing to profit-taking. Major indices retreated as investors locked in previous gains while awaiting upcoming GDP growth statistics. Meanwhile, global technology shares recovered and metals remained subdued.",
-   "why": "Profit booking happens when traders sell assets to lock in gains after a rapid price increase, which often causes a short-term market pullback.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-bse-sensex-nse-nifty-shares-indian-equities-technology-ai-11795785437907.html"
+   "title": "Domestic Indices Tumble Nearly 1,000 Points on Profit Booking",
+   "summary": "Local share benchmarks experienced a sharp downturn, erasing recent gains as investors rushed to lock in profits following a strong multi-week rally. The Sensex plummeted by nearly 1,000 points while the Nifty 50 slipped below the 25,650 threshold during the trading session. This abrupt pullback followed a strong upward movement over the prior fortnight, catching many recent participants off guard as broader market sentiment shifted swiftly.",
+   "why": "Profit booking happens when traders sell assets to secure realized gains after a rapid price increase, which frequently triggers sudden corrections in overheated markets.",
+   "source": "The Times of India",
+   "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPNkhJTEZQZWR5UGtmNWl6MzdIM0hqM3lRbWZzT0xsZ1J0LVplVXNZejNGU1dueVdQRXlVRkExQzllbzlJZ0RRQmxvbHdCbmEtRWxEU1M0WXRLSDlaS2Y4aFMtSl9LSnRDN2lsWGd4dlBicHlkTjNpd2M4MGF0SjVmbHdNOGtwVDBsS2xFZG8zV0tPVW0tOFBNdTZUY2I2WmtPZE1PYmV3OHZGLU9SLXhJeGM1YVJKa0NtZm9WX2pqLWNRVVVSUnFzOXR5dVZtSzN4YjJOY2dHZ1NhZmFvRmtkVkcwQWVkaXV4dmhVemV6WFk4V1FyR1ZtZVBia0czLU96Z0pCYjdEbHlyUGw3MUg0STA3bURTS0ppMGRUeDdlNTlyX3NRLVpF0gGsAkFVX3lxTE5nM18zX0ZQVm9IOE56clFkZGpCVGRBN2lDelNiZnU5Z2V3X3JLbG9XZEtKbzN5VjR1ems3eEZmTktaM3VWN3JzT1B6TllmUk5TRU9zQzgzUHBIS0k1SHVHY2VwclVNcUFjcUZzN0ZJdVFHb2VPOFAtWXg0eVBWYnZMcHFZTTRuVEhKQVRvcW5kcnN6bDN3Y1BlaWFodVVwXy05YWUtazZQd2FOMHA1elZVSUI5T1h4WV9yREw2RFE3U3JkTHVPV2k2T0Q2alRRNER6dl9qREtxdDZYWUhJdHRLV19zbnpyNk5zNGVhX29mWWJEV0VEUHRXM0F1WkdHVGJnM080M3ZRSXBVVDFTeHliSmF3a3AwSkZ3N1o2a3Z4Y2dHNDlqNlQ1ZmZwUA?oc=5"
   },
   {
    "category": "Economy",
-   "title": "SEBI Aims to Speed Up Foreign Portfolio Onboarding",
-   "summary": "The market regulator plans to overhaul its rulebook to accelerate capital inflows into the nation. Under the proposed changes, foreign portfolio investor onboarding time would be drastically reduced from several months down to just five business days. The initiative is part of broader efforts to streamline market access and support economic growth.",
-   "why": "Faster onboarding removes bureaucratic hurdles for international institutional funds, encouraging greater foreign capital allocation into domestic markets.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/sebi-to-recast-rulebook-to-fund-india-growth-tuhin-kanta-pandey-11795784087961.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Foreign Investors Allowed in Physical Commodity Contracts",
-   "summary": "Regulatory authorities have revised their framework to permit foreign portfolio investors to trade in physically settled non-agricultural commodity derivatives. Previously, participation was strictly limited to cash-settled non-agricultural contracts and associated indices. This update expands the range of instruments accessible to international market participants.",
-   "why": "Allowing physical settlement options broadens the scope of commodity trading strategies for overseas investors, potentially deepening market liquidity.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/sebi-allows-fpis-to-trade-physically-settled-non-agri-commodity-derivatives-11795786275549.html"
-  },
-  {
-   "category": "Economy",
-   "title": "Bond Yields Rise Amid Oil Spike and Rate Hike Bets",
-   "summary": "Government bonds saw a notable decline as surging oil prices and rising global yields weighed on sentiment. The benchmark bond yield climbed to 7.2650%, marking its highest level in a week. Investors are increasingly pricing in potential monetary tightening by central banks due to persistent inflationary pressures.",
-   "why": "Bond prices move inversely to yields; when inflation expectations or borrowing costs rise, existing fixed-rate bonds lose appeal, pushing yields up.",
+   "title": "Government Bond Yields Rise Amid Crude Oil and Global Pressures",
+   "summary": "Sovereign debt instruments faced selling pressure this week, pushing benchmark yields higher as imported energy costs escalated alongside rising global borrowing rates. The local benchmark bond yield climbed to a one-week high of 7.2650% amid concerns over domestic fiscal conditions. This upward movement reflects growing apprehension among market participants regarding macroeconomic stability and potential monetary tightening.",
+   "why": "Bond prices and yields move inversely; when yields rise, it indicates falling bond prices and higher borrowing costs for both the government and corporations.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-slump-as-oil-spike-adds-to-rbi-hike-bets/articleshow/136221243.cms"
   },
   {
+   "category": "Commodity",
+   "title": "OPEC+ Likely to Maintain Oil Production Quotas Steady",
+   "summary": "Major petroleum-producing nations are anticipated to keep their current output volumes unchanged for the first quarter despite ongoing geopolitical friction in the Middle East. Discrepancies in member production estimates have added complexity to supply assessments as global energy markets monitor inventory levels. Energy watchers continue to evaluate how these steady quotas will influence worldwide fuel pricing and local import bills.",
+   "why": "Consistent production targets help stabilize crude oil supply expectations, which directly impact inflation and energy import costs for emerging economies like India.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/opec-set-to-keep-oil-production-targets-steady-report/articleshow/136232084.cms"
+  },
+  {
    "category": "Economy",
-   "title": "Central Bank Restores Daily Cash Reserve Ratio Mandate",
-   "summary": "Financial institutions face tighter liquidity conditions as the Reserve Bank restored the requirement to maintain 90 percent of the cash reserve ratio on a daily basis. This policy shift aims to manage short-term banking system liquidity more effectively. Banks must now carefully monitor their daily cash balances to meet the stricter compliance threshold.",
-   "why": "The cash reserve ratio dictates the minimum deposit percentage banks must hold as reserves, directly influencing the money supply and banking liquidity.",
+   "title": "Local Currency Slips Past 92.60 Against the US Dollar",
+   "summary": "The domestic currency depreciated significantly during early trade, losing 24 paise to touch 92.62 against the greenback amid rising imported energy expenses. This downward slide was compounded by strong foreign capital outflows and broader strengthening of international reserve currencies. Policymakers monitor these exchange rate fluctuations closely to manage imported inflation risks.",
+   "why": "A weaker local currency makes imported items like crude oil and electronics more expensive, which can increase domestic inflationary pressures.",
    "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOanZPdG9TTWJMbW81dFF1WlhBVm9JNm1Rb3k1cGhRazB5LVVOWjBqOWl1VENGOVJabUhHZGkycXJLZkg3OFd1WjJWVjdpeVJjTFU2eHR3dWVuVXI2UlA5VUM1cEJ3YXpaMjh1ZWpxZnJvNXY5S2hYNmhrWjBvbERxcWRTWS0zYlgxNjlpLW5vZEtGT0xJSzFMRlh5dkd5cjdlX0pzZzdzdnUwWE8tSUxqRFVya2RiTzBTczQySzh3VXppWkZ0WEM2Z0JhM1NJeEVB0gHWAUFVX3lxTFBORzdpcm5SNUMteHBrNTlWVjBiV0FFWDJUN0ZrR05MZE5PLVU3VkRhdm5uSWI1bmNUT2oySU56OHlHME1wRGZnLVpidTY3QUotdXpJZVljOTFqbVNEeVQtWVo0Y3lKZGJKdFBtYmZ6bXZzZGwyd0VzT2ZwSkxEa3gwMUtPN0xnN3pxNGV3azUtSjB6YUF6Z3hNc3hDYndxZjNuS1lraUV4alVETTFQQWo1dnlkMnJfcjE1NmhGMUYwSl9DZmxsYXhtOTluaXdCTmgydEF0SlE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOYlBQT1BvbnR3Q1dhNlltaGQ0QTZLRjVaa0l0RDhWemhTZUZmdGVMQ0xVck0wTTk3RkwtaTBUZXI4c3lLWFJFNndfUDZNeXI5alZKakhLMGlEeVRYT0FESTk0amtmdXVXOVlrQk9leXAweGhZZzEyZlV5V1JfNFlwMUNIM293Q1hxeHFSSExlQWJCeDhtZkF2MWJCZ2duZ0hMWm1vVk9FT0ttMVFJX0U0Z25NY0JveGNfVHplX21iUHJtMHJFdmRzeF8zZDM5Z2NIMktTSkhB0gHWAUFVX3lxTE5iUFBPUG9udHdDV2E2WW1oZDRBNktGNVprSXREOFZ6aFNlRmZ0ZUxDTFVyTTBNOTdGTC1pMFRlcjhzeUtYUkU2d19QNk15cjlqVkpqSEswaUR5VFhPQURJOTRqa2Z1dVc5WWtCT2V5cDB4aFlnMTJmVXlXUl80WXAxQ0gzb3dDWHF4cVJITGVBYkJ4OG1mQXYxYkJnZ25nSExabW9WT0VPS20xUUlfRTRnbk1jQm94Y19UemVfbWJQcm0wckV2ZHN4XzNkMzlnY0gyS1NKSEE?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Analysts Project Aggressive Rate Hike by Reserve Bank",
-   "summary": "Financial analysts have adjusted their policy outlook, with prominent forecasting groups now anticipating a 50-basis-point interest rate increase in December. Rising inflation risks and external economic pressures have prompted expectations of stronger monetary action. Higher benchmark rates typically translate to increased borrowing costs for consumers and businesses.",
-   "why": "Central banks use rate hikes to cool down rising inflation, though higher rates can also slow economic momentum and increase loan EMIs.",
-   "source": "Moneycontrol.com",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNbC14V3djdVFzTkw3bEpnLVFNcTVMMUNIVzV4eDJVUjcyTkdWa2pDclJUaW10U2J2VlFvRFRlMjUteVlDcEtLbm5KTUJQMXhoRlJJekJMSEU3ZWl3MzFwRks3ZnNPWHQ0MWlIRGpjM05kQ01sUi16V0lxY1FLb1NGMzE1SjNpVjRRMWZMaFBEZnFTRjg5dUVCVllzdi1ySTVhMHN2LWVoM21sNjg0SERKazVLZjMwNjZJUTREZHp2aWRCa29jcVVVcXJR?oc=5"
+   "title": "Financial Institutions Anticipate Potential Rate Increases by Central Bank",
+   "summary": "Global financial analysts have raised expectations for upcoming monetary policy adjustments, with some forecasting a substantial repo rate increase to curb rising price pressures. Persistent inflation risks and shifting regional liquidity conditions have driven expectations of tighter monetary policy during the central bank's upcoming review. Market participants are closely analyzing short-term debt instruments and swap rates for clues on future borrowing costs.",
+   "why": "Central banks use benchmark interest rate adjustments to manage money supply and keep inflation within targeted boundaries, directly influencing consumer loan and deposit rates.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQWmVNVS1zM1E0ZFhmQW05b3VOR0wyQUdfM3lMdjdXOGYyWVBVZGtWVExJY21LYUxQMzJPd0FsRHFuX0VFaWVjUVFOYS1SbXFxQlV3UWhacHhIN0FpbXBNZGExQUFnU1dfNU1ITWt1alFfektwR0NERkY1WVQ0cTU3VThhakw4ZmM2Yk11d0VaaWdhM1BUazVudkFmLXNKazB4Q0xHY3VfYVIxakx0Z2ZQcmpPanNvWDRfellROWhqakFkSU1IOHNuX2p0a0JTRlB1N2tFYTNkV3FrZFp3X0VJRE40Mm5HejJ0cUFndzJ6OFlfaFlUWFVr0gH8AUFVX3lxTE94M3h2eEo5S3VqZmtDaENWZkZ2ZEhHTEwzRmljYTc1a284N25ieGxsQi1UTzduU3ZYX2pycTl4Sjk1elFhYzRxRWJZbkg2YzJ5R0p2cjFocnhSel9wTURmSU9ZeVNEbjNfaElRWkxUelg5Q2xoSTloYXpxOEU5OEZ4cTcyMVJvOWF6dlRGcUo5SlNTamdlTk5CR0ppbVEwSGxrZHNUc3BtUGZ6ZGd5RnhpdXdBSWdXRGFORmxIZGdVcXpDTG1oYVRHall2MlZRSnpyMklOVDlsM09HR29MZ1BsU3oyUTlZejRsUThLLW9wYjVZQTNjWFVvSkZZRA?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Rebounds as Investors Buy Battered Tech Shares",
-   "summary": "United States equities advanced as market participants returned following the Thanksgiving holiday break to acquire previously beaten-down artificial intelligence stocks. The Nasdaq 100 advanced by 1.5 percent and the S&P 500 rose by 1.1 percent during the session. Despite the daily recovery, major benchmarks remained on course for broader weekly adjustments.",
-   "why": "Tech stock rebounds reflect shifting risk appetite on Wall Street, where growth-oriented sectors heavily influence overall index movements.",
+   "title": "Wall Street Registers Weekly Gains Following Volatile AI Sector Rebound",
+   "summary": "United States equities finished higher at the end of the week, driven by a sharp recovery in heavily battered artificial intelligence stocks after a turbulent trading period. Major indices climbed back from earlier steep losses as investors weighed upcoming employment statistics and potential central bank policy paths. This recovery helped restore confidence across global equity markets following days of erratic price swings.",
+   "why": "US market movements significantly influence international investor sentiment and capital allocation patterns across global emerging markets.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUWJJc3ROZk0wcEN4cGlsTjNfUmVCcmh6bnZrNXkzVjAwdVMwOC1ZQUM2bUVUMHBSbGVSdEFqNTFIUC1XM3lfYTdaUFNUNWhUdlhVVjNCMEJmaG1LaEEwRDF2TndBbk9fTkRucTJPYkhza0hEMk5tWmV1MHI4YUZ2Z3lIOW01dFJ2SGJHSFJSSUR1ZU9wMThUbDlhNXA?oc=5"
+  },
+  {
+   "category": "US Markets",
+   "title": "US Dollar Approaches Strongest Monthly Streak on Safe-Haven Demand",
+   "summary": "The American currency climbed toward its longest monthly winning streak in two years, supported by rising borrowing costs and cautious investor sentiment. Disruptions in the technology and artificial intelligence sectors spurred increased demand for defensive reserve assets, lifting the dollar index. This persistent strength has created headwinds for commodities and various emerging market currencies.",
+   "why": "A rising dollar index typically reflects increased global risk aversion and draws capital away from riskier assets and emerging market equities.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/sandisk-amd-and-broadcom-shares-rebound-as-investors-return-to-battered-ai-shares-what-changed-on-wall-street-11795793954207.html"
+   "url": "https://www.livemint.com/market/dollar-rises-toward-best-monthly-streak-since-2024-on-ai-risk-11795814323879.html"
   },
   {
-   "category": "US Markets",
-   "title": "Precious Metals Mixed as Federal Reserve Outlook Persists",
-   "summary": "Gold drifted lower while silver managed gains during holiday-thinned trading sessions as participants evaluated ongoing US monetary policy signals. Expectations regarding future central bank interest rate decisions continued to influence bullion valuations. Traders closely monitor macroeconomic indicators to gauge the timing of potential policy shifts.",
-   "why": "Precious metals are sensitive to interest rate expectations because higher rates increase the opportunity cost of holding non-yielding assets.",
-   "source": "Kitco",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeG5mODVrQkQyYUR6RjI2N25WejFPYUNfbVJNVFRTeVhXWndLWVdmNUNlcmRlM0JWZUdXWU0ydmdFNXZPU2JQNVJWZ2hCbFRTcUlpNjdXN2FpU0lybGlPVC1uR2pmYXI5THlqd3BRR0o1Vzh1Um8tOWNBRGE3NndHc09iNnl1RFFLZjNNRDhlOVNmSDhBanFzLTZUWTdkNklsT1RNV0NFWVl4TGhpVTVJTlpWSzZZemxWY2dDQQ?oc=5"
+   "category": "Commodity",
+   "title": "Industrial Metal Prices Rally Following Policy Support Announcements",
+   "summary": "Copper values experienced a notable upward surge after international policy measures aimed at bolstering capital markets were unveiled by major Asian authorities. This industrial metal rally provided a positive spillover effect for broader global equity markets, counteracting recent downward trends. Analysts continue to track industrial commodity movements as barometers of manufacturing demand.",
+   "why": "Copper is widely viewed as a leading economic indicator because its consumption is closely tied to global manufacturing, construction, and infrastructure activity.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/copper-sweeps-higher-as-china-offers-stock-market-support/articleshow/136232015.cms"
   }
  ]
 }
