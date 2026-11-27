@@ -3,28 +3,28 @@
  "ticker": [
   {
    "name": "NIFTY 50",
-   "value": "25,884",
-   "change": 2.11
+   "value": "25,669",
+   "change": -0.58
   },
   {
    "name": "SENSEX",
-   "value": "84,329",
-   "change": 2.3
+   "value": "83,531",
+   "change": -0.49
   },
   {
    "name": "GOLD $/oz",
-   "value": "3,593",
-   "change": 0.81
+   "value": "3,706",
+   "change": 3.97
   },
   {
    "name": "CRUDE WTI",
-   "value": "$84.9",
-   "change": 1.47
+   "value": "$85.7",
+   "change": 2.46
   },
   {
    "name": "USD/INR",
-   "value": "92.44",
-   "change": 0.23
+   "value": "92.89",
+   "change": 0.5
   },
   {
    "name": "S&P 500",
@@ -44,84 +44,68 @@
  ],
  "items": [
   {
-   "category": "Economy",
-   "title": "Gift Nifty Signals Higher Open for Sensex, Nifty on Thursday as Asia",
-   "summary": "Gift Nifty Signals Higher Open for Sensex, Nifty on Thursday as Asia Rebounds; US Inflation Runs Hot  HDFC Sky",
-   "why": "Policy and economic news shape rates and the rupee.",
-   "source": "HDFC Sky",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYWlxZXJqalhYb043ZWNqeG5PQWFMb3QyYmE2U1R1S0ZlSmZyV252WGhyd2NwR3JhU3hEWGdaWHNJOHdldVFsdkxxOFd0cXdjQ3BxdTc1Y1IzcjdLbTMzdmpQeEFyTXRsLXAzZ180YjdyZjFFSHI4TURjdmtOaUJMTGxVOUc3eDEtb016aGMxcjdEX2xEU2Y4TDRXMW84N3RFaEhJcTJ6bDNZRU0xMUxvS1doTWxWeUlqVFhVUUQxM3NTMnZHR0J3dnRzaHFfOW91U3ZSX1plQQ?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "US Economy Surges as Hot Inflation Complicates the Next Federal Reserve Move",
-   "summary": "US Economy Surges as Hot Inflation Complicates the Next Federal Reserve Move  kalkine.co.uk",
-   "why": "What the RBI and the government do reaches your money.",
-   "source": "kalkine.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeWxYWWp1aHJzTVNWWFVaNHdYUFIzWXpJSS1wR1JzYl9mTFprR2d3VGlrejZQNWdxb05HLU1ETzNVaUMwNUxLc3UtTExfclk4Umd2Vm9EREJ4dUZjbGRvbUxmbkZGWFJNN1hrakQ1RjJPdm4zTkF0cU1QTEhOUURaZldNWGcyLXdwdW9MYlA2bkVLTy1lT19QTVAyajJrWUVWdDFmZnlwd05RcE52ZjFiZy00S0RjUzlx?oc=5"
+   "category": "Equity",
+   "title": "Indian Benchmarks Retreat as IT and HDFC Bank Face Pressure",
+   "summary": "Key Indian equity indices halted their recent winning streak as profit-taking emerged in information technology heavyweights and major lenders like HDFC Bank. The downward movement was further compounded by a depreciation in the Indian rupee against the US dollar. Investors locked in gains following prior sessions of positive momentum, leading to a broader pullback across Dalal Street.",
+   "why": "Profit booking occurs when investors sell shares to lock in gains after a sustained price rally, which naturally causes market indices to dip temporarily.",
+   "source": "Fortune India",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVk1kSHltQzVZTENEalNEVlZCYmRuRG5aOG5TU1gyQlplc2h4Y1dJS0RQVWlERXdDWjJOOFlJX20xTjVRRkVBX2l2MGF2aTcxRmZiUWo1YTRfWmJpSkJtZUxJTV9lMUkzekpzMEpGdG9lMTRHQVZWcjNMWi1iRkpVY3lzR1Fhb2lVOXJNaVFPUlhOa2djTUVlWXJTM09ieEE1Tm9KUmktLUhJblVqSkk2YUJYTlBZNkZrTFl1UDRMV19va2VEQ3RtTkNMOExUZG_SAdwBQVVfeXFMTzJkU1Q4TzVsVEtHZmRjTm5QSEwxOUFVVFk2SEhELXNMYXplejdUbzZ4QnFBeXR3SzFwMW1QQkhMdkxEN3RRTHdRQXd0eGc3MEpTNHA3NDgxMDQ0NllETWEwcGg2S2lLU0l0dkdGT0VHYWs2VFE0d2xCUjA3dm95SnB6Yk1OOEJGOXBHVTBRU3NIdVVjZ045ZjVSLU1JWWdkQ196ZTFRSVd1NUFVUWVjSDhXS1JtbWxFX3lfUjBCLTRnOU1aczFXQnlaVVYtTjVXNVZaOEtqTjd3WFptNQ?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "India bonds tumble as Brent tops $95 per barrel, RBI flags food",
-   "summary": "Indian government bonds experienced a decline as oil prices increased due to geopolitical tensions in the Middle East. The Reserve Bank of India emphasized broad-based food inflation pressures,…",
-   "why": "Energy and metal prices move first, and the rest follows.",
+   "title": "Precious Metals Rebound Sharply from Recent Multi-Month Lows",
+   "summary": "Bullion markets staged a notable recovery on the domestic front, with gold jumping around 2% and silver surging roughly 5%. This strong upward movement follows a steep correction in November where gold had declined roughly 13% and silver had plunged nearly 20% due to external pressures. The rebound offered relief to precious metal traders after a prolonged phase of multi-month lows.",
+   "why": "A rebound in commodities often follows oversold conditions, where prices drop too fast, prompting bargain hunters to re-enter the market.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-tumble-as-brent-tops-95-per-barrel-rbi-flags-food-inflation-risks/articleshow/136193320.cms"
+   "url": "https://economictimes.indiatimes.com/markets/stocks/live-blog/live-updates-gold-rate-today-27th-november-24k-22k-20k-18-carat-mcx-gold-silver-price-in-delhi-hyderabad-chennai-bengaluru-citywise/liveblog/136208041.cms"
   },
   {
-   "category": "Commodity",
-   "title": "Spike in oil prices partly reverses rupee rally, forward premiums surge",
-   "summary": "The Indian rupee has faced depreciation as a result of escalating oil prices combined with pressures from surrounding currencies. With Brent crude exceeding $96 per barrel, worries about India's…",
-   "why": "Commodity prices feed into costs and inflation.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/spike-in-oil-prices-partly-reverses-rupee-rally-forward-premiums-surge/articleshow/136188127.cms"
-  },
-  {
-   "category": "US Markets",
-   "title": "NSE is now world's third-largest listed exchange by market cap, overtakes Nasdaq,",
-   "summary": "NSE's market capitalisation stood at approximately $64.1 billion, placing it ahead of Deutsche Boerse, valued at $63.4 billion, London Stock Exchange Group at $62.4 billion, Nasdaq at $59.4 billion…",
-   "why": "When Wall Street moves, world markets notice.",
+   "category": "Economy",
+   "title": "Rupee Weakness and Inflation Fears Weigh on Domestic Equities",
+   "summary": "Domestic indices experienced notable selling pressure, pushing the Nifty down near the 25,700 mark and causing the Sensex to slide significantly. Market experts attributed this correction to a combination of a weakening Indian rupee, renewed inflation anxieties, and growing speculation regarding potential monetary tightening. These macroeconomic headwinds dampened broader investor sentiment across various sectors.",
+   "why": "Macroeconomic factors like currency depreciation and rising inflation increase operational costs for businesses and reduce foreign investor appetite.",
    "source": "Mint",
-   "url": "https://www.livemint.com/market/stock-market-news/nse-is-now-worlds-third-largest-listed-exchange-by-market-cap-overtakes-nasdaq-lse-which-two-exchanges-are-ahead-11795697484423.html"
+   "url": "https://www.livemint.com/market/stock-market-news/why-is-indian-stock-market-falling-today-nifty-down-to-near-25-700-sensex-crashes-700-points-top-3-reasons-explained-11795761327368.html"
+  },
+  {
+   "category": "Equity",
+   "title": "NSE Retail Investor Base Expands Significantly Since March 2020",
+   "summary": "Data released by the National Stock Exchange highlighted a massive surge in retail participation within the domestic equity ecosystem. The overall investor base has multiplied by 4.4 times, reaching 13.5 crore individuals compared to levels recorded in March 2020. This expansion illustrates a structural shift in how individual households direct their savings toward capital markets over recent years.",
+   "why": "A growing retail investor base increases market liquidity and broadens domestic financial participation beyond institutional players.",
+   "source": "Upstox",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNMTdiUnV3Zlh3THVmeU14Rk9LZGNlOXRLYnVvaEZqYmZxMWlzR0hJejBvRExxVEEtYVZwOXhwajAyV0lXSzBmc0JRYmlwUE41SUNQQktSRkFCLWItR3hZemR2ejMwQVg4cnZzcndVSnRYU2paWmlPeWxnRGc4M3N4LWlnOVBRcmF5T0lNT0pQWWxPLW5IdG9OWFlaZTNPNVd3aVFQM2tjZHVaZGRuOHJZcGhwRGk0YWVkZE9xTVJ4eWVYMl9rNHBzYjdqUE1JbHhTSDJrTHp0ejJpTmVaekt1S0FPM1ZEYWY1NU05OEVhek9udw?oc=5"
+  },
+  {
+   "category": "Equity",
+   "title": "Banking Sector Outperforms as Nifty Bank Climbs Strongly",
+   "summary": "Banking equities led a robust market acceleration, with the Nifty Bank index jumping nearly 18% over a one-month period to outpace the broader Nifty 50 benchmark. All fourteen constituents of the banking index advanced during this stretch, supported by improving corporate earnings reports, healthy credit growth, and expectations of stronger net interest margins. Major lenders like HDFC Bank, SBI, and ICICI Bank contributed prominently to this sectoral rally.",
+   "why": "Sectoral outperformance happens when specific industries benefit from favorable credit cycles and strong underlying earnings growth ahead of the broader market.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/banking-stocks-hit-the-accelerator-nifty-bank-index-up-18-in-1-month-hdfc-bank-sbi-icici-bank-9-best-stocks-to-buy-11795758901361.html"
+  },
+  {
+   "category": "Economy",
+   "title": "Government Bond Yields Rise Amid Persistent Inflation Concerns",
+   "summary": "Indian government bonds witnessed a decline in early trading sessions as elevated global crude oil prices stoked fresh concerns over domestic inflation. The yield on the benchmark 6.94% 2036 government bond moved significantly higher as market participants turned cautious ahead of scheduled debt sales. Higher oil import costs frequently complicate domestic fiscal planning and monetary management.",
+   "why": "Bond prices and yields move inversely; when selling pressure increases and yields rise, existing bondholders face capital depreciation.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-decline-ahead-of-fresh-debt-sale-as-elevated-oil-prices-fan-inflation-worries/articleshow/136211546.cms"
   },
   {
    "category": "US Markets",
-   "title": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap",
-   "summary": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap or Breakout?  FOREX.com",
-   "why": "US trading often leads the next morning in India.",
-   "source": "FOREX.com",
-   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQYlR1RXR0UGJ5VWVCWHBhNmNzcTVweFYyYkpQWFV0WXlTTXhaZ0FhNk8zcFhqZHV4cjZBNDJQai1PMmlhdmVwZWgwNXdiZTJVc0tqZC02NkxjM3R5ZUJ1TlpudFFwM2pYY3ppNTYyeC1McFBCV1RTeW4xbVItbWxuSmloNkhWOTUydVR2aVhSUEVJR0NYRmlrQ0d4MHgxZzZiZ1JVaXp2MHBGUFktbjktXzZuMFFzV3lFUXRiU0dUUmNLZ0tDUWpjeTFWSldwY0NBOFA4R1J2RmhkcnRoNDRZYkNCdw?oc=5"
+   "title": "Wall Street Futures Advance as Technology Stocks Lead Recovery",
+   "summary": "US stock futures climbed notably as markets reopened following the Thanksgiving holiday closure. Nasdaq futures jumped about 1% as a robust rebound in technology shares helped drive positive momentum across Wall Street. Investors returned to active trading with a focus on risk assets following the holiday break.",
+   "why": "Stock futures track expected market openings, and a strong tech rebound often sets a positive tone for broader global equity sessions.",
+   "source": "TradingView",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbjBjcFczUEdNdkpXUFJHYldpUUpSMlpNM2IwTG9oRS1WNDg5SDZsa3VqT3NLT0tLdkdhdjIyOFRMNzBMMFJQTTYwbVAtWGNWQy1BS1ZtRW5Rdm5fSDJLaUdlTWNRSEd1VE1UOUE3WkRlWk5kRGFjM0ZHMWdaOVNZNmgwcGVUbnltM2ZUbVlOX3g5SmVrSG1UZmR1UTh0WTVIRmpDdG9BVHpFcmN5enYxcU90d3BacE1oS0w0RF93YVQyYWVWNmc?oc=5"
   },
   {
-   "category": "Equity",
-   "title": "Ashiana Housing JV buys 10-acre land in Chennai for senior living project,",
-   "summary": "Ashiana Housing Ltd recently revealed its acquisition of nearly 10 acres in Chennai aimed at a senior living initiative. In collaboration with Arihant Foundations, the project estimates a saleable…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/ashiana-housing-jv-buys-10-acre-land-in-chennai-for-senior-living-project-eyes-rs-1100-cr-revenue/articleshow/136197134.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Market Trading Guide: Tech Mahindra, Angel One among 5 stock recommendations for",
-   "summary": "Market experts recommend five stocks for Friday, including Tech Mahindra, Angel One, Tata Consumer, Kansai Nerolac and Agarwal Eye, outlining entry levels, stop losses and upside targets.",
-   "why": "A company's share price reacts to its own news first.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-tech-mahindra-angel-one-among-5-stock-recommendations-for-friday/slideshow/136196068.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "NSE among 6 stocks hitting 52-week highs; stock rallies up to 35%",
-   "summary": "Six BSE 100 stocks, including NSE, DLF and Prestige Estates, hit fresh 52-week highs on Thursday. NSE led monthly gains, surging 35%, followed by Prestige Estates at 32%.",
-   "why": "News changes what investors think a business is worth.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/stocks/news/nse-among-6-stocks-hitting-52-week-highs-stock-rallies-up-to-35-in-a-month/slideshow/136192775.cms"
-  },
-  {
-   "category": "Equity",
-   "title": "Why is SanDisk stock falling despite surging profits?",
-   "summary": "SanDisk shares tumble amid fading AI optimism, declining NAND price forecasts and semiconductor sector weakness. Despite strong earnings and data centre demand, investors fear potential memory-chip…",
-   "why": "Share prices move on news like this.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-sandisk-stock-falling-despite-surging-profits/slideshow/136179318.cms"
+   "category": "US Markets",
+   "title": "Federal Reserve Faces Rate Hike Pressure Amid Sticky Inflation",
+   "summary": "US monetary policymakers face renewed expectations of a potential interest rate hike as economic growth and inflation figures surpass consensus forecasts. Hotter-than-expected price pressures and resilient economic activity have forced traders to re-evaluate the trajectory of future central bank actions. This shifting monetary outlook has sustained strength in the US dollar and introduced volatility into global financial markets.",
+   "why": "Higher interest rates increase borrowing costs across the economy, which can cool economic activity and influence global capital flows.",
+   "source": "AzerNews",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBZQms1Ri1tNEd6TVJiSVd1ZTdtQ2xIejNYMl9CNV9EXzA0aldiVFRiSkcwb2lsbUMyZ3NlXzZ3b0tEN1NCVkVQVjRqdGM5c1JlSk1Jblhqaw?oc=5"
   }
  ]
 }
