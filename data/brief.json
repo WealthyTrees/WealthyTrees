@@ -4,12 +4,12 @@
   {
    "name": "NIFTY 50",
    "value": "25,607",
-   "change": -0.82
+   "change": -1.07
   },
   {
    "name": "SENSEX",
    "value": "83,339",
-   "change": -0.71
+   "change": -1.17
   },
   {
    "name": "GOLD $/oz",
@@ -23,8 +23,8 @@
   },
   {
    "name": "USD/INR",
-   "value": "92.98",
-   "change": 0.59
+   "value": "92.99",
+   "change": 0.6
   },
   {
    "name": "S&P 500",
@@ -45,67 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Domestic Indices Tumble Nearly 1,000 Points on Profit Booking",
-   "summary": "Local share benchmarks experienced a sharp downturn, erasing recent gains as investors rushed to lock in profits following a strong multi-week rally. The Sensex plummeted by nearly 1,000 points while the Nifty 50 slipped below the 25,650 threshold during the trading session. This abrupt pullback followed a strong upward movement over the prior fortnight, catching many recent participants off guard as broader market sentiment shifted swiftly.",
-   "why": "Profit booking happens when traders sell assets to secure realized gains after a rapid price increase, which frequently triggers sudden corrections in overheated markets.",
-   "source": "The Times of India",
-   "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPNkhJTEZQZWR5UGtmNWl6MzdIM0hqM3lRbWZzT0xsZ1J0LVplVXNZejNGU1dueVdQRXlVRkExQzllbzlJZ0RRQmxvbHdCbmEtRWxEU1M0WXRLSDlaS2Y4aFMtSl9LSnRDN2lsWGd4dlBicHlkTjNpd2M4MGF0SjVmbHdNOGtwVDBsS2xFZG8zV0tPVW0tOFBNdTZUY2I2WmtPZE1PYmV3OHZGLU9SLXhJeGM1YVJKa0NtZm9WX2pqLWNRVVVSUnFzOXR5dVZtSzN4YjJOY2dHZ1NhZmFvRmtkVkcwQWVkaXV4dmhVemV6WFk4V1FyR1ZtZVBia0czLU96Z0pCYjdEbHlyUGw3MUg0STA3bURTS0ppMGRUeDdlNTlyX3NRLVpF0gGsAkFVX3lxTE5nM18zX0ZQVm9IOE56clFkZGpCVGRBN2lDelNiZnU5Z2V3X3JLbG9XZEtKbzN5VjR1ems3eEZmTktaM3VWN3JzT1B6TllmUk5TRU9zQzgzUHBIS0k1SHVHY2VwclVNcUFjcUZzN0ZJdVFHb2VPOFAtWXg0eVBWYnZMcHFZTTRuVEhKQVRvcW5kcnN6bDN3Y1BlaWFodVVwXy05YWUtazZQd2FOMHA1elZVSUI5T1h4WV9yREw2RFE3U3JkTHVPV2k2T0Q2alRRNER6dl9qREtxdDZYWUhJdHRLV19zbnpyNk5zNGVhX29mWWJEV0VEUHRXM0F1WkdHVGJnM080M3ZRSXBVVDFTeHliSmF3a3AwSkZ3N1o2a3Z4Y2dHNDlqNlQ1ZmZwUA?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Government Bond Yields Rise Amid Crude Oil and Global Pressures",
-   "summary": "Sovereign debt instruments faced selling pressure this week, pushing benchmark yields higher as imported energy costs escalated alongside rising global borrowing rates. The local benchmark bond yield climbed to a one-week high of 7.2650% amid concerns over domestic fiscal conditions. This upward movement reflects growing apprehension among market participants regarding macroeconomic stability and potential monetary tightening.",
-   "why": "Bond prices and yields move inversely; when yields rise, it indicates falling bond prices and higher borrowing costs for both the government and corporations.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-slump-as-oil-spike-adds-to-rbi-hike-bets/articleshow/136221243.cms"
+   "title": "Indian Benchmark Indices Snap Four-Week Winning Streak",
+   "summary": "Indian equity benchmarks ended lower on the week, breaking a four-week winning streak driven by earlier momentum. Indices such as the Sensex and Nifty slipped as selling pressure and profit-booking emerged across multiple sectors. This downturn reflects a shift in market sentiment following recent gains and increased macroeconomic headwinds.",
+   "why": "Tracking benchmark trends helps investors understand broader market cycles and momentum shifts between bullish and bearish phases.",
+   "source": "Telangana Today",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWU82Tkxxb3JQa0R4MVhLSDdoUXZudHRBYTZlalJLN3lEOVlZQ1ROZWVEcllfUmxpdVQtcDJ3UGJBUU5VcWNUTmVhWlY3U2NUdEx0aDVvUFdnMjM5MTU2dFNtU2pHYUhZS1lsTnpIMjBCa0J3NFBBMUlISXpzd1JMUkJKV3cwVHZ0RXpYNVNWeTRmX3ZVSkRSbk1SdjJPRUhMWHJsOEFjZHQ?oc=5"
   },
   {
    "category": "Commodity",
-   "title": "OPEC+ Likely to Maintain Oil Production Quotas Steady",
-   "summary": "Major petroleum-producing nations are anticipated to keep their current output volumes unchanged for the first quarter despite ongoing geopolitical friction in the Middle East. Discrepancies in member production estimates have added complexity to supply assessments as global energy markets monitor inventory levels. Energy watchers continue to evaluate how these steady quotas will influence worldwide fuel pricing and local import bills.",
-   "why": "Consistent production targets help stabilize crude oil supply expectations, which directly impact inflation and energy import costs for emerging economies like India.",
+   "title": "Crude Oil Prices Slide on Fading Geopolitical Risk Premiums",
+   "summary": "Crude oil prices experienced a sharp drop from their September peaks as immediate war risk premiums subsided. Market participants focused increasingly on growing non-OPEC production and potential demand slowdowns that could lead to oversupply. This downward movement in energy costs plays a critical role in influencing domestic import bills and inflation metrics.",
+   "why": "Crude oil is a primary macro input that impacts transportation costs, corporate earnings, and national trade balances.",
    "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/opec-set-to-keep-oil-production-targets-steady-report/articleshow/136232084.cms"
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/from-war-premium-to-demand-concerns-what-is-driving-the-sharp-fall-in-crude-oil-prices/articleshow/136238953.cms"
+  },
+  {
+   "category": "Commodity",
+   "title": "Gold Prices Rebound Despite Strong Dollar and Yields",
+   "summary": "Precious metal prices recovered ground after touching multi-month lows as participants engaged in bargain hunting and short covering. Despite headwinds from a resilient US dollar and elevated Treasury yields, the metal found support near a 15-month low. This price action highlights ongoing safe-haven demand amidst fluctuating global currency valuations.",
+   "why": "Gold often acts as a traditional hedge against currency depreciation and economic uncertainty for retail and institutional investors.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-pares-gains-as-fed-hike-risks-linger-eyes-first-weekly-rise-in-three-weeks/articleshow/136237788.cms"
   },
   {
    "category": "Economy",
-   "title": "Local Currency Slips Past 92.60 Against the US Dollar",
-   "summary": "The domestic currency depreciated significantly during early trade, losing 24 paise to touch 92.62 against the greenback amid rising imported energy expenses. This downward slide was compounded by strong foreign capital outflows and broader strengthening of international reserve currencies. Policymakers monitor these exchange rate fluctuations closely to manage imported inflation risks.",
-   "why": "A weaker local currency makes imported items like crude oil and electronics more expensive, which can increase domestic inflationary pressures.",
+   "title": "Bond Market Remains Cautious Ahead of RBI Policy Decision",
+   "summary": "Domestic debt markets displayed heightened caution as analysts factored in persistent inflationary pressures and potential central bank action. Market observers anticipate a rate hike of 25 basis points in the upcoming monetary policy review. Such adjustments directly influence borrowing costs and the yield curve for government securities.",
+   "why": "Bond yields dictate the cost of debt for both government and corporate borrowers, influencing overall economic liquidity.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/bond-market-to-stay-cautious-ahead-of-rbi-policy-equirus/articleshow/136240295.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "RBI Restores 90% Daily CRR Mandate Amid Tightening Liquidity",
+   "summary": "The central bank decided to restore the requirement for commercial banks to maintain a 90% daily Cash Reserve Ratio on a daily basis. This policy adjustment comes in response to evolving liquidity conditions within the banking system. Managing cash reserve ratios helps regulators control money supply and steer short-term interest rates.",
+   "why": "CRR adjustments are vital monetary policy tools used by central banks to regulate banking sector liquidity and credit growth.",
    "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOYlBQT1BvbnR3Q1dhNlltaGQ0QTZLRjVaa0l0RDhWemhTZUZmdGVMQ0xVck0wTTk3RkwtaTBUZXI4c3lLWFJFNndfUDZNeXI5alZKakhLMGlEeVRYT0FESTk0amtmdXVXOVlrQk9leXAweGhZZzEyZlV5V1JfNFlwMUNIM293Q1hxeHFSSExlQWJCeDhtZkF2MWJCZ2duZ0hMWm1vVk9FT0ttMVFJX0U0Z25NY0JveGNfVHplX21iUHJtMHJFdmRzeF8zZDM5Z2NIMktTSkhB0gHWAUFVX3lxTE5iUFBPUG9udHdDV2E2WW1oZDRBNktGNVprSXREOFZ6aFNlRmZ0ZUxDTFVyTTBNOTdGTC1pMFRlcjhzeUtYUkU2d19QNk15cjlqVkpqSEswaUR5VFhPQURJOTRqa2Z1dVc5WWtCT2V5cDB4aFlnMTJmVXlXUl80WXAxQ0gzb3dDWHF4cVJITGVBYkJ4OG1mQXYxYkJnZ25nSExabW9WT0VPS20xUUlfRTRnbk1jQm94Y19UemVfbWJQcm0wckV2ZHN4XzNkMzlnY0gyS1NKSEE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOanZPdG9TTWJMbW81dFF1WlhBVm9JNm1Rb3k1cGhRazB5LVVOWjBqOWl1VENGOVJabUhHZGkycXJLZkg3OFd1WjJWVjdpeVJjTFU2eHR3dWVuVXI2UlA5VUM1cEJ3YXpaMjh1ZWpxZnJvNXY5S2hYNmhrWjBvbERxcWRTWS0zYlgxNjlpLW5vZEtGT0xJSzFMRlh5dkd5cjdlX0pzZzdzdnUwWE8tSUxqRFVya2RiTzBTczQySzh3VXppWkZ0WEM2Z0JhM1NJeEVB0gHWAUFVX3lxTFBORzdpcm5SNUMteHBrNTlWVjBiV0FFWDJUN0ZrR05MZE5PLVU3VkRhdm5uSWI1bmNUT2oySU56OHlHME1wRGZnLVpidTY3QUotdXpJZVljOTFqbVNEeVQtWVo0Y3lKZGJKdFBtYmZ6bXZzZGwyd0VzT2ZwSkxEa3gwMUtPN0xnN3pxNGV3azUtSjB6YUF6Z3hNc3hDYndxZjNuS1lraUV4alVETTFQQWo1dnlkMnJfcjE1NmhGMUYwSl9DZmxsYXhtOTluaXdCTmgydEF0SlE?oc=5"
   },
   {
    "category": "Economy",
-   "title": "Financial Institutions Anticipate Potential Rate Increases by Central Bank",
-   "summary": "Global financial analysts have raised expectations for upcoming monetary policy adjustments, with some forecasting a substantial repo rate increase to curb rising price pressures. Persistent inflation risks and shifting regional liquidity conditions have driven expectations of tighter monetary policy during the central bank's upcoming review. Market participants are closely analyzing short-term debt instruments and swap rates for clues on future borrowing costs.",
-   "why": "Central banks use benchmark interest rate adjustments to manage money supply and keep inflation within targeted boundaries, directly influencing consumer loan and deposit rates.",
-   "source": "The Economic Times",
-   "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQWmVNVS1zM1E0ZFhmQW05b3VOR0wyQUdfM3lMdjdXOGYyWVBVZGtWVExJY21LYUxQMzJPd0FsRHFuX0VFaWVjUVFOYS1SbXFxQlV3UWhacHhIN0FpbXBNZGExQUFnU1dfNU1ITWt1alFfektwR0NERkY1WVQ0cTU3VThhakw4ZmM2Yk11d0VaaWdhM1BUazVudkFmLXNKazB4Q0xHY3VfYVIxakx0Z2ZQcmpPanNvWDRfellROWhqakFkSU1IOHNuX2p0a0JTRlB1N2tFYTNkV3FrZFp3X0VJRE40Mm5HejJ0cUFndzJ6OFlfaFlUWFVr0gH8AUFVX3lxTE94M3h2eEo5S3VqZmtDaENWZkZ2ZEhHTEwzRmljYTc1a284N25ieGxsQi1UTzduU3ZYX2pycTl4Sjk1elFhYzRxRWJZbkg2YzJ5R0p2cjFocnhSel9wTURmSU9ZeVNEbjNfaElRWkxUelg5Q2xoSTloYXpxOEU5OEZ4cTcyMVJvOWF6dlRGcUo5SlNTamdlTk5CR0ppbVEwSGxrZHNUc3BtUGZ6ZGd5RnhpdXdBSWdXRGFORmxIZGdVcXpDTG1oYVRHall2MlZRSnpyMklOVDlsM09HR29MZ1BsU3oyUTlZejRsUThLLW9wYjVZQTNjWFVvSkZZRA?oc=5"
+   "title": "Central Bank Allows Rupee Appreciation Amid Strong Inflows",
+   "summary": "India's monetary authority permitted the local currency to strengthen as robust foreign portfolio inflows provided an opportunity to build foreign exchange reserves. While strong capital inflows support the currency, rising global energy costs continue to exert opposing pressure. Balancing these flows helps maintain external trade stability.",
+   "why": "Foreign capital inflows influence domestic currency strength, import purchasing power, and central bank reserve accumulation.",
+   "source": "Tekedia",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSkhFdjgtTjJoakZsazM5Uk55cG5VNlRKemdVcWUtZERvODZOUFFkSlRhaTNYQ0VnZTVKQ2RMRTZ3Q3RMU0RTRlQ5ZFROTHNubldvMXZOeW5pUnJKa3A1VFRJS1lMYVRLSmEzQUtGNFlfbTJWT0lpTDZOUzFTODZDSFdUajlndXhwcVBJTXRjbkpEbkoxbVNIcDBlNExZTGl0c3V3ZXFXS1J6US1hOHN3N1E0T2xUeTl5bFE?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Registers Weekly Gains Following Volatile AI Sector Rebound",
-   "summary": "United States equities finished higher at the end of the week, driven by a sharp recovery in heavily battered artificial intelligence stocks after a turbulent trading period. Major indices climbed back from earlier steep losses as investors weighed upcoming employment statistics and potential central bank policy paths. This recovery helped restore confidence across global equity markets following days of erratic price swings.",
-   "why": "US market movements significantly influence international investor sentiment and capital allocation patterns across global emerging markets.",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUWJJc3ROZk0wcEN4cGlsTjNfUmVCcmh6bnZrNXkzVjAwdVMwOC1ZQUM2bUVUMHBSbGVSdEFqNTFIUC1XM3lfYTdaUFNUNWhUdlhVVjNCMEJmaG1LaEEwRDF2TndBbk9fTkRucTJPYkhza0hEMk5tWmV1MHI4YUZ2Z3lIOW01dFJ2SGJHSFJSSUR1ZU9wMThUbDlhNXA?oc=5"
+   "title": "Wall Street Rebounds Strongly Led by AI Sector Recovery",
+   "summary": "US equities concluded a volatile, holiday-shortened trading week on a positive note, powered by a notable comeback in artificial intelligence shares. Major indices including the Nasdaq registered solid gains of over two percent as risk appetite returned. This recovery helped offset earlier weekly losses caused by shifting monetary policy expectations.",
+   "why": "US market movements, particularly in technology shares, often set the directional tone for global equity sentiment.",
+   "source": "BusinessToday Malaysia",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTnE2TmNJSDdzd1ZXemRjTlNkWmZndDhzckRMTXBOUU5DdHR4Y3dxa0N1RHp4RXM5ckNZTFkzTldXOVlscThEcWJJcmdtSFR3VWdpX1lTU2pNT1ZUX2IyeTdQN0xqUHVhazR1TERBbEJnMV9fdVM2bWR1OGNZckp0b2V1NzZVRll0ZXBhOG9yUjhTNUVDcVhTaDRJcjc?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Dollar Approaches Strongest Monthly Streak on Safe-Haven Demand",
-   "summary": "The American currency climbed toward its longest monthly winning streak in two years, supported by rising borrowing costs and cautious investor sentiment. Disruptions in the technology and artificial intelligence sectors spurred increased demand for defensive reserve assets, lifting the dollar index. This persistent strength has created headwinds for commodities and various emerging market currencies.",
-   "why": "A rising dollar index typically reflects increased global risk aversion and draws capital away from riskier assets and emerging market equities.",
-   "source": "Mint",
-   "url": "https://www.livemint.com/market/dollar-rises-toward-best-monthly-streak-since-2024-on-ai-risk-11795814323879.html"
-  },
-  {
-   "category": "Commodity",
-   "title": "Industrial Metal Prices Rally Following Policy Support Announcements",
-   "summary": "Copper values experienced a notable upward surge after international policy measures aimed at bolstering capital markets were unveiled by major Asian authorities. This industrial metal rally provided a positive spillover effect for broader global equity markets, counteracting recent downward trends. Analysts continue to track industrial commodity movements as barometers of manufacturing demand.",
-   "why": "Copper is widely viewed as a leading economic indicator because its consumption is closely tied to global manufacturing, construction, and infrastructure activity.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/copper-sweeps-higher-as-china-offers-stock-market-support/articleshow/136232015.cms"
+   "title": "US Third-Quarter GDP Revised Up to 4.3% Amid Persistent Inflation",
+   "summary": "Economic growth in the United States for the third quarter was revised upward to an annualized rate of 4.3%, according to recent government data. However, inflation readings remained stubbornly above the central bank's target level. Consequently, financial markets priced in near-certain odds of a subsequent interest rate adjustment by the Federal Reserve.",
+   "why": "US growth and inflation data dictate global monetary policy trajectories and influence foreign institutional investment flows.",
+   "source": "BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIcnVrX3Vnb29aWG1Pb3ZjdVlJeVhFV3k3bVJ0YkF6bk1Sa2lKSEhxWEJSdnItLTVUWnhBM2E3MFl1SFozTUJHZjFVRU80QzZPRlJlWFQxY1lJbjYtQnZaNS14TGRhMmRIcTlvZEFNMVhRcmc0WEE?oc=5"
   }
  ]
 }
