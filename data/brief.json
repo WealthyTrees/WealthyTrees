@@ -45,67 +45,67 @@
  "items": [
   {
    "category": "Equity",
-   "title": "Indian Benchmark Indices Snap Four-Week Winning Streak",
-   "summary": "Indian equity benchmarks ended lower on the week, breaking a four-week winning streak driven by earlier momentum. Indices such as the Sensex and Nifty slipped as selling pressure and profit-booking emerged across multiple sectors. This downturn reflects a shift in market sentiment following recent gains and increased macroeconomic headwinds.",
-   "why": "Tracking benchmark trends helps investors understand broader market cycles and momentum shifts between bullish and bearish phases.",
-   "source": "Telangana Today",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWU82Tkxxb3JQa0R4MVhLSDdoUXZudHRBYTZlalJLN3lEOVlZQ1ROZWVEcllfUmxpdVQtcDJ3UGJBUU5VcWNUTmVhWlY3U2NUdEx0aDVvUFdnMjM5MTU2dFNtU2pHYUhZS1lsTnpIMjBCa0J3NFBBMUlISXpzd1JMUkJKV3cwVHZ0RXpYNVNWeTRmX3ZVSkRSbk1SdjJPRUhMWHJsOEFjZHQ?oc=5"
+   "title": "Nifty Faces Resistance Near 26,000 Mark",
+   "summary": "The main equity benchmarks faced selling pressure over the previous week, resulting in a 0.75% decline for the Nifty. Market participants noted that the index is encountering a strong technical hurdle between the 26,000 and 26,300 levels. Analysts anticipate that the market will undergo further consolidation as it digests recent valuations and broader economic signals. This range has become a critical zone for traders monitoring near-term index movements.",
+   "why": "Resistance zones help market participants identify areas where selling pressure may outpace buying interest, shaping near-term trading strategies.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/dalal-street-week-ahead-nifty-faces-crucial-2600026300-hurdle-eyes-further-consolidation/articleshow/136244642.cms"
+  },
+  {
+   "category": "Economy",
+   "title": "Bond Markets Cautious Ahead of RBI Policy Decision",
+   "summary": "Fixed-income investors are maintaining a defensive stance as they await the upcoming central bank monetary policy announcement. Market analysts from Equirus point out that persistent inflationary pressures and expectations of potential rate adjustments are keeping yields sensitive. Traders are pricing in a possible 25 basis point hike by the Reserve Bank of India to counter rising price trends. Consequently, bond yields have experienced heightened volatility during this period.",
+   "why": "Bond yields move inversely to prices; anticipation of policy rate changes directly impacts borrowing costs across the wider economy.",
+   "source": "Economic Times",
+   "url": "https://economictimes.indiatimes.com/markets/bonds/bond-market-to-stay-cautious-ahead-of-rbi-policy-equirus/articleshow/136240295.cms"
   },
   {
    "category": "Commodity",
-   "title": "Crude Oil Prices Slide on Fading Geopolitical Risk Premiums",
-   "summary": "Crude oil prices experienced a sharp drop from their September peaks as immediate war risk premiums subsided. Market participants focused increasingly on growing non-OPEC production and potential demand slowdowns that could lead to oversupply. This downward movement in energy costs plays a critical role in influencing domestic import bills and inflation metrics.",
-   "why": "Crude oil is a primary macro input that impacts transportation costs, corporate earnings, and national trade balances.",
+   "title": "Crude Oil Prices Drop on Easing Geopolitical Premiums",
+   "summary": "Global petroleum prices experienced a significant downward correction compared to their peaks in September. The decline was primarily driven by the fading of war-related risk premiums and growing concerns over adequate global supplies. Additionally, slowing demand growth and rising output from non-OPEC producers contributed to the downward trend. This shift has relieved some external pressure on energy-importing nations.",
+   "why": "Crude oil is a major import for India, and lower energy prices help moderate domestic inflation and trade deficit pressures.",
    "source": "Economic Times",
    "url": "https://economictimes.indiatimes.com/markets/commodities/news/from-war-premium-to-demand-concerns-what-is-driving-the-sharp-fall-in-crude-oil-prices/articleshow/136238953.cms"
   },
   {
    "category": "Commodity",
-   "title": "Gold Prices Rebound Despite Strong Dollar and Yields",
-   "summary": "Precious metal prices recovered ground after touching multi-month lows as participants engaged in bargain hunting and short covering. Despite headwinds from a resilient US dollar and elevated Treasury yields, the metal found support near a 15-month low. This price action highlights ongoing safe-haven demand amidst fluctuating global currency valuations.",
-   "why": "Gold often acts as a traditional hedge against currency depreciation and economic uncertainty for retail and institutional investors.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-pares-gains-as-fed-hike-risks-linger-eyes-first-weekly-rise-in-three-weeks/articleshow/136237788.cms"
+   "title": "Lenders Seek Extra Collateral as Gold Prices Slip",
+   "summary": "Financial institutions offering bullion-backed financing are adjusting their requirements following recent declines in precious metal valuations. When market values drop, loans can exceed their permitted loan-to-value limits, prompting lenders to request additional collateral or partial loan repayments. Borrowers must now manage tighter terms to maintain their credit accounts. This protective measure ensures lenders remain adequately covered against ongoing asset price fluctuations.",
+   "why": "Loan-to-value ratios safeguard lenders from asset depreciation, directly linking collateral values to a borrower's required cash or asset commitments.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/commodities/why-your-gold-loan-terms-may-get-tougher-lenders-demand-extra-collateral-as-bullion-prices-fall-and-repayments-slip-11795867754945.html"
   },
   {
-   "category": "Economy",
-   "title": "Bond Market Remains Cautious Ahead of RBI Policy Decision",
-   "summary": "Domestic debt markets displayed heightened caution as analysts factored in persistent inflationary pressures and potential central bank action. Market observers anticipate a rate hike of 25 basis points in the upcoming monetary policy review. Such adjustments directly influence borrowing costs and the yield curve for government securities.",
-   "why": "Bond yields dictate the cost of debt for both government and corporate borrowers, influencing overall economic liquidity.",
-   "source": "Economic Times",
-   "url": "https://economictimes.indiatimes.com/markets/bonds/bond-market-to-stay-cautious-ahead-of-rbi-policy-equirus/articleshow/136240295.cms"
-  },
-  {
-   "category": "Economy",
-   "title": "RBI Restores 90% Daily CRR Mandate Amid Tightening Liquidity",
-   "summary": "The central bank decided to restore the requirement for commercial banks to maintain a 90% daily Cash Reserve Ratio on a daily basis. This policy adjustment comes in response to evolving liquidity conditions within the banking system. Managing cash reserve ratios helps regulators control money supply and steer short-term interest rates.",
-   "why": "CRR adjustments are vital monetary policy tools used by central banks to regulate banking sector liquidity and credit growth.",
-   "source": "Business Standard",
-   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOanZPdG9TTWJMbW81dFF1WlhBVm9JNm1Rb3k1cGhRazB5LVVOWjBqOWl1VENGOVJabUhHZGkycXJLZkg3OFd1WjJWVjdpeVJjTFU2eHR3dWVuVXI2UlA5VUM1cEJ3YXpaMjh1ZWpxZnJvNXY5S2hYNmhrWjBvbERxcWRTWS0zYlgxNjlpLW5vZEtGT0xJSzFMRlh5dkd5cjdlX0pzZzdzdnUwWE8tSUxqRFVya2RiTzBTczQySzh3VXppWkZ0WEM2Z0JhM1NJeEVB0gHWAUFVX3lxTFBORzdpcm5SNUMteHBrNTlWVjBiV0FFWDJUN0ZrR05MZE5PLVU3VkRhdm5uSWI1bmNUT2oySU56OHlHME1wRGZnLVpidTY3QUotdXpJZVljOTFqbVNEeVQtWVo0Y3lKZGJKdFBtYmZ6bXZzZGwyd0VzT2ZwSkxEa3gwMUtPN0xnN3pxNGV3azUtSjB6YUF6Z3hNc3hDYndxZjNuS1lraUV4alVETTFQQWo1dnlkMnJfcjE1NmhGMUYwSl9DZmxsYXhtOTluaXdCTmgydEF0SlE?oc=5"
-  },
-  {
-   "category": "Economy",
-   "title": "Central Bank Allows Rupee Appreciation Amid Strong Inflows",
-   "summary": "India's monetary authority permitted the local currency to strengthen as robust foreign portfolio inflows provided an opportunity to build foreign exchange reserves. While strong capital inflows support the currency, rising global energy costs continue to exert opposing pressure. Balancing these flows helps maintain external trade stability.",
-   "why": "Foreign capital inflows influence domestic currency strength, import purchasing power, and central bank reserve accumulation.",
-   "source": "Tekedia",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSkhFdjgtTjJoakZsazM5Uk55cG5VNlRKemdVcWUtZERvODZOUFFkSlRhaTNYQ0VnZTVKQ2RMRTZ3Q3RMU0RTRlQ5ZFROTHNubldvMXZOeW5pUnJKa3A1VFRJS1lMYVRLSmEzQUtGNFlfbTJWT0lpTDZOUzFTODZDSFdUajlndXhwcVBJTXRjbkpEbkoxbVNIcDBlNExZTGl0c3V3ZXFXS1J6US1hOHN3N1E0T2xUeTl5bFE?oc=5"
+   "category": "Equity",
+   "title": "SEBI Examines Dedicated Platform for Pre-IPO Shares",
+   "summary": "Market regulator SEBI is currently reviewing the creation of a specialized exchange platform focused on pre-IPO shares. This initiative comes in response to the massive expansion of public offerings over the past few years, which has heightened interest in unlisted shares. A formal consultation paper outlining the framework is expected to be released soon. The move aims to bring greater structure and transparency to transactions before companies officially list.",
+   "why": "Regulated platforms for unlisted assets improve transparency and investor protection in the early stages of corporate growth.",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/stock-market-news/sebi-planning-a-new-exchange-for-pre-ipo-shares-consultation-paper-to-be-released-soon-says-chairman-tuhin-kanta-11795865814182.html"
   },
   {
    "category": "US Markets",
-   "title": "Wall Street Rebounds Strongly Led by AI Sector Recovery",
-   "summary": "US equities concluded a volatile, holiday-shortened trading week on a positive note, powered by a notable comeback in artificial intelligence shares. Major indices including the Nasdaq registered solid gains of over two percent as risk appetite returned. This recovery helped offset earlier weekly losses caused by shifting monetary policy expectations.",
-   "why": "US market movements, particularly in technology shares, often set the directional tone for global equity sentiment.",
-   "source": "BusinessToday Malaysia",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTnE2TmNJSDdzd1ZXemRjTlNkWmZndDhzckRMTXBOUU5DdHR4Y3dxa0N1RHp4RXM5ckNZTFkzTldXOVlscThEcWJJcmdtSFR3VWdpX1lTU2pNT1ZUX2IyeTdQN0xqUHVhazR1TERBbEJnMV9fdVM2bWR1OGNZckp0b2V1NzZVRll0ZXBhOG9yUjhTNUVDcVhTaDRJcjc?oc=5"
+   "title": "Wall Street Concludes Holiday Week with Gains",
+   "summary": "United States stock indices wrapped up a shortened trading week following the Thanksgiving holiday with positive momentum. Major benchmarks, including the S&P 500 and the Nasdaq, climbed as buying interest returned to key sectors. Investors balanced ongoing inflation reports against corporate earnings performance during the session. The positive close helped offset some of the volatility experienced earlier in the week.",
+   "why": "Wall Street movements heavily influence global investor sentiment and cross-border capital flows into emerging markets like India.",
+   "source": "The Economic Times",
+   "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPQzJ6V1RTRGJqNkM2UDZXcWQ5MUVDV2tnQzV1dDNZbGREUzZQTi1HTXd3QkU4cDl6cHpFUW5TMWk4S3hEcEh3SEk2NGZTSkdMWThQLWhzbEYtNXFnNFZxT1ZnUFdKSVRpYXg5Si1fSHVPYVBzbGVXc2dERmR2VTg5NnJfQzh0T28yazNTUU45dC1GSGUtMnB1Y0hNaUltdHRRUlY4VnpUMVY5REhqMzBpWlR2VjBCRDhJQ0hJZ1dIalZrcThqYkhCdjlZRGN2MkxITU1MWi13SndPQzlMdk03dFZNcm1COW5RbW1aV3BRVUphVzc3MGlqOHVUTWItMWJRSzRIdkVNUXh3VVBuYVNiT19ndGozQWJrYjMwVlNoUEdzNUxfM2Zv?oc=5"
   },
   {
    "category": "US Markets",
-   "title": "US Third-Quarter GDP Revised Up to 4.3% Amid Persistent Inflation",
-   "summary": "Economic growth in the United States for the third quarter was revised upward to an annualized rate of 4.3%, according to recent government data. However, inflation readings remained stubbornly above the central bank's target level. Consequently, financial markets priced in near-certain odds of a subsequent interest rate adjustment by the Federal Reserve.",
-   "why": "US growth and inflation data dictate global monetary policy trajectories and influence foreign institutional investment flows.",
-   "source": "BigGo Finance",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIcnVrX3Vnb29aWG1Pb3ZjdVlJeVhFV3k3bVJ0YkF6bk1Sa2lKSEhxWEJSdnItLTVUWnhBM2E3MFl1SFozTUJHZjFVRU80QzZPRlJlWFQxY1lJbjYtQnZaNS14TGRhMmRIcTlvZEFNMVhRcmc0WEE?oc=5"
+   "title": "Artificial Intelligence Stocks Guide US Market Rebound",
+   "summary": "United States exchanges finished a turbulent week on a high note, with technology shares leading the recovery. Artificial intelligence related equities drew renewed investor attention, helping push major indices upward despite prior market corrections. Market participants continued to weigh technological growth potential against broader economic data. This sector remains a primary driver of overall momentum on Wall Street.",
+   "why": "Technology and AI stocks serve as a bellwether for global risk appetite and heavily impact large-cap index valuations.",
+   "source": "CNBC TV18",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUkJiUXZHZTlnRmR1aldsTWhjUkFKN1Y1bHVRMTljRkIxd1JpSzZYRzdJem5nOWpJZ0pVcEl5blEwSzVMTGNKaVMwc1JhYkJDWDlMay1jek0tWFdiYVIyenhKczZISkFMQlNLdHlPS2dDLTZsYkNZbEU4VkZlbzByN05BdnNmYXNGZ19mZzdLZmtmRk1YMnlvTEQzdlczaGtPTVVoTkhtUllJY1gzZDZyQzN3VHpsYnRxNzBobTNfLXYzRmhCNDdiQW4zSdIB0AFBVV95cUxNcGRSQXVaYXJHWEFpaTZRNTB4VXVud1JHSEZMVjQxX1czZXVhRnJvM3o0SXA5RWh0MG1sUnJLQVdMNFVHY0JJNjBZdlZtUXlKc0xZUXdJc1VKZWlOd1FmNHEzYWZBUGl1X1RzcElzSTJNVzVwLUYweVFBQlRhX1E5Y0JIcmhZeGFBMmNpVmJ0UWlpMWlqSlZNVUdySEF6S3I1ZDhkM0gwWmhSLWJzM1FNTlpzUXpGR3dhQkRrc2dic1dWQjZRQ3ZoLXhGdS0xbXJF?oc=5"
+  },
+  {
+   "category": "Economy",
+   "title": "Finance Ministry Flags Potential Oil Import Risks",
+   "summary": "India's Finance Ministry has highlighted potential vulnerabilities regarding petroleum imports due to geopolitical chokepoints. Concerns focus on threats around the Strait of Hormuz, which could disrupt freight shipping lanes and elevate import costs. Such disruptions pose upside risks to domestic inflation and trade balances. Authorities continue to monitor these external supply routes closely to safeguard macroeconomic stability.",
+   "why": "Geopolitical choke points directly threaten supply chain continuity, influencing imported inflation and the domestic current account deficit.",
+   "source": "Free Press Journal",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQNnp3MV9aWTJ2amZqOWhkNFZ1RjBKNS1qTVgzQndlRlgzaEp5LVVRNnNRU0VVNzRLeU5jQTBTb3Nja0hUekVXeVNyLTh2UlVUUDluUEZHV0FaakhQZjlNaTFwZXNsX3djSTRBaDk1ejFWT0o3Wkk0Q002QXhyZ05kUmZSV0lKN0VFTTMwR1FDUW1BR1NXbE5vaWtSalhYX0ppT1RYd3Nfam90NWVoM1doa3Y3bWxBcmtab0hkWmFvWnI4bERFbkVNTG94b2lCYVcwNnhldzY3RVNBejjSAeABQVVfeXFMUC1FcjgxdWdoVVhVSUl3eFpVWjUzc0twSGV3a0xRdEpjTjBYWGpqTk1YSzNzS3dPUGdVbkp3SEV3bVpZMXRFakdmdDBGTjZMdDZ6UTJHT0VNeU9hQ0d1RHlTM0lVc0l1VmFIQ24weEVpcG5LeWJ3Z1NEcVpqRnkzTG5tVE5XWWdYRGx1X291cEJkelNJOTU1UEJxanlNVGxUWGJlMzdnSm9NTXNDc0FjTlBEN0FJSno3OTVkWVFmTWR3OHd3Tm9PcUIwMGVUUGpZeUNmVnhfYjhTakRQSmRWal8?oc=5"
   }
  ]
 }
